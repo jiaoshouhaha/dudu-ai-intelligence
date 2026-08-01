@@ -1,0 +1,20 @@
+{
+  "name": "signal-ai-news",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-news.mjs",
+    "fetch:fixture": "node scripts/fetch-news.mjs --fixture",
+    "serve": "node scripts/serve.mjs",
+    "test": "node --test",
+    "check": "node --check public/app.js && node --check scripts/fetch-news.mjs"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+

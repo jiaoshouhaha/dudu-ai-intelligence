@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="每小时更新的全球 AI 新闻情报站" />
+    <title>SIGNAL/AI · AI 新闻情报站</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23171714'/%3E%3Cpath d='M14 18h36v8H26v6h20v8H26v6h24v8H14z' fill='%23f3efe5'/%3E%3Ccircle cx='50' cy='18' r='7' fill='%23eb5a2c'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="SIGNAL AI 首页">SIGNAL<span>/AI</span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <button class="nav-link active" data-view="today">今日头版</button>
+        <button class="nav-link" data-view="latest">最新</button>
+        <button class="nav-link" data-category="models">模型</button>
+        <button class="nav-link" data-category="products">产品</button>
+        <button class="nav-link" data-category="business">商业</button>
+        <button class="nav-link" data-category="research">研究</button>
+        <button class="nav-link" data-category="policy">政策</button>
+      </nav>
+      <div class="header-actions">
+        <button id="languageToggle" class="text-button" aria-label="切换语言">中 / EN</button>
+        <button id="searchToggle" class="icon-button" aria-label="打开搜索">⌕</button>
+      </div>
+    </header>
+
+    <section id="searchPanel" class="search-panel" hidden>
+      <label for="searchInput">搜索新闻、来源或关键词</label>
+      <input id="searchInput" type="search" autocomplete="off" placeholder="例如：多模态、OpenAI、agent…" />
+    </section>
+
+    <main>
+      <section class="date-strip">
+        <span id="todayLabel">—</span>
+        <span id="updateLabel">正在读取最新数据…</span>
+      </section>
+
+      <aside id="statusBanner" class="status-banner" hidden></aside>
+
+      <section id="leadSection" class="lead-grid" aria-labelledby="leadTitle">
+        <article id="leadStory" class="lead-story skeleton"></article>
+        <aside id="importantList" class="important-list"></aside>
+      </section>
+
+      <section id="trendBar" class="trend-bar" aria-label="趋势主题"></section>
+
+      <section class="feed-section">
+        <div class="feed-heading">
+          <div>
+            <p class="eyebrow">THE NEWSWIRE</p>
+            <h2 id="feedTitle">最新动态</h2>
+          </div>
+          <div class="controls">
+            <select id="sourceFilter" aria-label="按来源类型筛选">
+              <option value="all">全部来源</option>
+              <option value="official">官方发布</option>
+              <option value="media">媒体</option>
+              <option value="paper">论文</option>
+              <option value="community">社区</option>
+            </select>
+            <select id="sortSelect" aria-label="排序方式">
+              <option value="importance">按重要度</option>
+              <option value="time">按时间</option>
+            </select>
+          </div>
+        </div>
+        <div id="activeFilters" class="active-filters"></div>
+        <div id="newsGrid" class="news-grid" aria-live="polite"></div>
+        <div id="emptyState" class="empty-state" hidden>
+          <strong>没有匹配的新闻</strong>
+          <p>换一个关键词或清除筛选条件试试。</p>
+          <button id="clearFilters" class="primary-button">清除筛选</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>SIGNAL/AI · 个人 AI 情报站</span>
+      <span>只展示摘要，版权归原作者与来源所有</span>
+    </footer>
+
+    <template id="cardTemplate">
+      <article class="news-card">
+        <div class="card-meta"><span class="score"></span><span class="category"></span><time></time></div>
+        <h3><a class="title-link" target="_blank" rel="noopener noreferrer"></a></h3>
+        <p class="summary"></p>
+        <p class="reason"></p>
+        <div class="card-footer">
+          <span class="source-name"></span>
+          <div>
+            <button class="save-button" aria-label="收藏">☆</button>
+            <button class="read-button">标为已读</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
