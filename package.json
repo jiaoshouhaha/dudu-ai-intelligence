@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "fetch": "node scripts/fetch-news.mjs",
-    "fetch:fixture": "node scripts/fetch-news.mjs --fixture",
+    "fetch": "NODE_USE_ENV_PROXY=1 node scripts/fetch-news.mjs",
+    "fetch:fixture": "NODE_USE_ENV_PROXY=1 node scripts/fetch-news.mjs --fixture",
     "serve": "node scripts/serve.mjs",
     "test": "node --test",
     "check": "node --check public/app.js && node --check scripts/fetch-news.mjs"
@@ -17,4 +17,3 @@
     "node": ">=20"
   }
 }
-

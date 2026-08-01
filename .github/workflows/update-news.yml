@@ -23,6 +23,9 @@ jobs:
       AI_DAILY_LIMIT: ${{ vars.AI_DAILY_LIMIT }}
       MAX_NEW_ITEMS_PER_RUN: '80'
       RETENTION_DAYS: '365'
+      TRANSLATION_BASE_URL: ${{ vars.TRANSLATION_BASE_URL }}
+      TRANSLATION_CONCURRENCY: '3'
+      NODE_USE_ENV_PROXY: '1'
     steps:
       - uses: actions/checkout@v4
         with:

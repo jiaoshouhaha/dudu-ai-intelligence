@@ -1,5 +1,5 @@
 const state = {
-  items: [], trends: [], status: null, language: localStorage.getItem('signal-language') || 'zh',
+  items: [], trends: [], status: null, language: 'zh',
   category: 'all', sourceType: 'all', sort: 'importance', query: '',
   saved: new Set(JSON.parse(localStorage.getItem('signal-saved') || '[]')),
   read: new Set(JSON.parse(localStorage.getItem('signal-read') || '[]'))
@@ -17,23 +17,21 @@ const categoryNames = {
 const $ = (selector) => document.querySelector(selector);
 const els = {
   lead: $('#leadStory'), important: $('#importantList'), grid: $('#newsGrid'), template: $('#cardTemplate'),
-  language: $('#languageToggle'), searchToggle: $('#searchToggle'), searchPanel: $('#searchPanel'), search: $('#searchInput'),
+  searchToggle: $('#searchToggle'), searchPanel: $('#searchPanel'), search: $('#searchInput'),
   source: $('#sourceFilter'), sort: $('#sortSelect'), active: $('#activeFilters'), empty: $('#emptyState'),
   status: $('#statusBanner'), trend: $('#trendBar'), update: $('#updateLabel'), today: $('#todayLabel'), feedTitle: $('#feedTitle')
 };
 
 function localized(item, field) {
-  const candidate = item[`${field}${state.language === 'zh' ? 'Zh' : 'En'}`];
-  return candidate || item[`${field}Original`] || '';
+  return item[`${field}Zh`] || '';
 }
 
 function formatTime(value) {
   const date = new Date(value);
-  return new Intl.DateTimeFormat(state.language === 'zh' ? 'zh-CN' : 'en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(date);
+  return new Intl.DateTimeFormat('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(date);
 }
 
 function persist() {
-  localStorage.setItem('signal-language', state.language);
   localStorage.setItem('signal-saved', JSON.stringify([...state.saved]));
   localStorage.setItem('signal-read', JSON.stringify([...state.read]));
 }
@@ -62,7 +60,7 @@ function renderLead() {
     <h1 id="leadTitle"><a href="${escapeAttr(lead.originalUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(localized(lead, 'title'))}</a></h1>
     <p class="lead-summary">${escapeHtml(localized(lead, 'summary') || labels[state.language].noTranslation)}</p>
     <p class="importance-reason"><strong>${labels[state.language].why}</strong>${escapeHtml(state.language === 'zh' ? lead.importanceReasonZh : lead.importanceReasonEn)}</p>
-    <div class="story-meta"><strong>${escapeHtml(lead.sources[0]?.name || '')}</strong><span>${formatTime(lead.publishedAt)}</span><span>${lead.sources.length} source${lead.sources.length > 1 ? 's' : ''}</span><a href="${escapeAttr(lead.originalUrl)}" target="_blank" rel="noopener noreferrer">${state.language === 'zh' ? '阅读全文 ↗' : 'Read original ↗'}</a></div>`;
+    <div class="story-meta"><strong>${escapeHtml(lead.sources[0]?.name || '')}</strong><span>${formatTime(lead.publishedAt)}</span><span>${lead.sources.length} 个来源</span><a href="${escapeAttr(lead.originalUrl)}" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>`;
   els.important.innerHTML = `<h2>${labels[state.language].important.toUpperCase()}</h2>${ranked.slice(1, 4).map((item) => `
     <article class="important-item"><span class="item-score">${item.importance} · ${categoryNames[state.language][item.category] || item.category}</span><h3><a href="${escapeAttr(item.originalUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(localized(item, 'title'))}</a></h3><p>${escapeHtml(item.sources[0]?.name || '')} · ${formatTime(item.publishedAt)}</p></article>`).join('')}`;
 }
@@ -127,7 +125,6 @@ function render() {
 function escapeHtml(value = '') { const div = document.createElement('div'); div.textContent = String(value); return div.innerHTML; }
 function escapeAttr(value = '') { return escapeHtml(value).replace(/`/g, '&#96;'); }
 
-els.language.addEventListener('click', () => { state.language = state.language === 'zh' ? 'en' : 'zh'; persist(); render(); });
 els.searchToggle.addEventListener('click', () => { els.searchPanel.hidden = !els.searchPanel.hidden; if (!els.searchPanel.hidden) els.search.focus(); });
 els.search.addEventListener('input', (event) => { state.query = event.target.value; renderGrid(); });
 els.source.addEventListener('change', (event) => { state.sourceType = event.target.value; renderGrid(); });

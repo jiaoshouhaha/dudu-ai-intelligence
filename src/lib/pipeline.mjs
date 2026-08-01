@@ -4,6 +4,7 @@ import { normalizeItem } from './normalize.mjs';
 import { dedupeItems } from './dedupe.mjs';
 import { scoreEvent } from './score.mjs';
 import { aiConfig, enrichEvents, finalizeFallback } from './ai-client.mjs';
+import { translateEventsToChinese, translationConfig } from './translate.mjs';
 import { readExistingData, writeDataFiles } from './storage.mjs';
 
 async function fetchSource(source, options) {
@@ -44,7 +45,9 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
   const newEvents = freshEvents.filter((event) => !existingIds.has(event.id)).slice(0, maxNew);
   const enriched = await enrichEvents(newEvents, aiConfig());
   const refreshedExisting = existing.map((event) => finalizeFallback(event));
-  const merged = [...enriched, ...refreshedExisting.filter((old) => !enriched.some((item) => item.id === old.id))];
+  const mergedBeforeTranslation = [...enriched, ...refreshedExisting.filter((old) => !enriched.some((item) => item.id === old.id))];
+  const translated = await translateEventsToChinese(mergedBeforeTranslation, translationConfig(), fetchImpl);
+  const merged = translated.filter((event) => event.titleZh && event.summaryZh);
   const finishedAt = new Date().toISOString();
   const status = {
     startedAt,
@@ -55,6 +58,7 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
     failedSources: results.filter((result) => !result.ok).length,
     fetchedItems: normalized.length,
     newEvents: enriched.length,
+    pendingTranslation: translated.length - merged.length,
     totalEvents: merged.length,
     sources: results.map(({ items: _items, ...result }) => result)
   };
@@ -65,4 +69,3 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
 export async function loadSources(file) {
   return JSON.parse(await fs.readFile(file, 'utf8'));
 }
-

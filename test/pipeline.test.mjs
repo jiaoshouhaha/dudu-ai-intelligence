@@ -9,6 +9,7 @@ import { dedupeItems } from '../src/lib/dedupe.mjs';
 import { scoreEvent } from '../src/lib/score.mjs';
 import { finalizeFallback, validateAiPayload } from '../src/lib/ai-client.mjs';
 import { runPipeline } from '../src/lib/pipeline.mjs';
+import { translateEventToChinese } from '../src/lib/translate.mjs';
 
 const fixture = await fs.readFile(new URL('./fixtures/sample-rss.xml', import.meta.url), 'utf8');
 const source = { id: 'test', name: 'Test Feed', type: 'official', authority: 95, category: 'models', language: 'en', enabled: true, url: 'https://example.com/rss' };
@@ -54,6 +55,18 @@ test('fallback preserves original English and rule score without an API key', ()
   assert.equal(event.processingError, null);
 });
 
+test('no-key translator writes Chinese title and summary while preserving the original URL', async () => {
+  const event = { titleOriginal: 'New AI model', summaryOriginal: 'It improves reasoning.', originalLanguage: 'en', originalUrl: 'https://example.com/original' };
+  const fetchImpl = async () => ({
+    ok: true,
+    json: async () => [[['新人工智能模型\n', ''], ['[SIGNAL_SPLIT]\n', ''], ['它提高了推理能力。', '']]]
+  });
+  const translated = await translateEventToChinese(event, { baseUrl: 'https://translate.test', timeoutMs: 1000, retries: 0 }, fetchImpl);
+  assert.equal(translated.titleZh, '新人工智能模型');
+  assert.equal(translated.summaryZh, '它提高了推理能力。');
+  assert.equal(translated.originalUrl, 'https://example.com/original');
+});
+
 test('pipeline isolates a failed source and writes valid data files', async () => {
   const rootDir = await fs.mkdtemp(path.join(os.tmpdir(), 'signal-ai-'));
   const sources = [source, { ...source, id: 'broken', url: 'https://broken.example/rss' }];
@@ -61,11 +74,18 @@ test('pipeline isolates a failed source and writes valid data files', async () =
     if (url.includes('broken')) throw new Error('network unavailable');
     return { ok: true, text: async () => fixture };
   };
-  const { status, items } = await runPipeline({ rootDir, sources, fetchImpl, now: new Date('2026-08-01T03:00:00Z') });
+  const originalTranslationBaseUrl = process.env.TRANSLATION_BASE_URL;
+  process.env.TRANSLATION_BASE_URL = 'https://translate.test';
+  const pipelineFetch = async (url) => {
+    if (String(url).startsWith('https://translate.test')) return { ok: true, json: async () => [[['中文标题\n', ''], ['[SIGNAL_SPLIT]\n', ''], ['中文摘要', '']]] };
+    return fetchImpl(url);
+  };
+  const { status, items } = await runPipeline({ rootDir, sources, fetchImpl: pipelineFetch, now: new Date('2026-08-01T03:00:00Z') });
+  if (originalTranslationBaseUrl == null) delete process.env.TRANSLATION_BASE_URL;
+  else process.env.TRANSLATION_BASE_URL = originalTranslationBaseUrl;
   assert.equal(status.successfulSources, 1);
   assert.equal(status.failedSources, 1);
   assert.equal(items.length, 3);
   const output = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'index.json'), 'utf8'));
   assert.equal(output.items.length, 3);
 });
-
