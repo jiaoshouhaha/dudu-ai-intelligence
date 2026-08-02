@@ -56,7 +56,7 @@ GitHub Actions 在每小时第 17 分钟运行抓取流水线。成功后将数�
 - 评分模式：`rules` 或 `ai`
 - 处理状态与错误信息
 
-数据按 `data/news/YYYY-MM-DD.json` 分片。`data/index.json` 提供首页轻量索引，`data/search.json` 提供一年内搜索数据，`data/trends.json` 提供趋势汇总，`data/status.json` 提供更新时间和来源健康状态。
+数据写入北京时间当天的 `data/news/YYYY-MM-DD.json`。`data/index.json`、`data/search.json` 和 `data/trends.json` 只包含当天新闻，`data/status.json` 提供更新时间和来源健康状态。跨日运行时删除其他日期分片。
 
 ## 重要度评分
 
@@ -72,14 +72,14 @@ AI 响应必须符合固定 JSON Schema，并返回中英文标题、摘要、�
 
 ## 模型服务接口
 
-模型层使用兼容 OpenAI Chat Completions 协议的适配器，不绑定单一厂商：
+模型层使用 DeepSeek OpenAI Chat Completions 兼容接口：
 
-- `AI_API_KEY`
-- `AI_BASE_URL`
-- `AI_MODEL`
-- `AI_DAILY_LIMIT`
+- `DEEPSEEK_API_KEY`
+- `DEEPSEEK_BASE_URL=https://api.deepseek.com`
+- `DEEPSEEK_MODEL=deepseek-v4-flash`
+- `DEEPSEEK_DAILY_LIMIT`
 
-默认推荐阿里云百炼按量 API。未配置变量时，使用 Transformers.js 运行量化英中翻译模型，并把翻译结果缓存在数据文件中，避免重复推理。密钥只允许存在于本地 `.env` 与 GitHub Actions Secrets。
+DeepSeek 负责中文翻译、摘要、分类、关键词、重要度和评分理由，并以 JSON 模式输出。未配置密钥时，使用无密钥翻译回退与规则评分，并把翻译结果缓存在数据文件中。密钥只允许存在于本地 `.env` 与 GitHub Actions Secrets。
 
 ## 首页与视觉设计
 

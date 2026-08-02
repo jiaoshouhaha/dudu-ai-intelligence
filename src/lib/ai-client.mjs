@@ -4,12 +4,12 @@ const VALID_CATEGORIES = new Set(['models', 'products', 'business', 'research', 
 
 export function aiConfig(env = process.env) {
   return {
-    apiKey: env.AI_API_KEY || '',
-    baseUrl: (env.AI_BASE_URL || 'https://dashscope.aliyuncs.com/compatible-mode/v1').replace(/\/$/, ''),
-    model: env.AI_MODEL || 'qwen-flash',
-    timeoutMs: Number(env.AI_TIMEOUT_MS || 30000),
-    dailyLimit: Number(env.AI_DAILY_LIMIT || 100),
-    concurrency: Number(env.AI_CONCURRENCY || 2)
+    apiKey: env.DEEPSEEK_API_KEY || '',
+    baseUrl: (env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com').replace(/\/$/, ''),
+    model: env.DEEPSEEK_MODEL || 'deepseek-v4-flash',
+    timeoutMs: Number(env.DEEPSEEK_TIMEOUT_MS || 30000),
+    dailyLimit: Number(env.DEEPSEEK_DAILY_LIMIT || 100),
+    concurrency: Number(env.DEEPSEEK_CONCURRENCY || 2)
   };
 }
 
@@ -56,12 +56,14 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
       headers: { 'content-type': 'application/json', authorization: `Bearer ${config.apiKey}` },
       body: JSON.stringify({
         model: config.model,
+        thinking: { type: 'disabled' },
         temperature: 0.1,
+        max_tokens: 1600,
         response_format: { type: 'json_object' },
         messages: [
           {
             role: 'system',
-            content: 'You are an AI news editor. Return JSON only with titleZh,titleEn,summaryZh,summaryEn,category,keywords,importance,reasonZh,reasonEn. category must be models,products,business,research,policy,opensource,other. importance is 1-100. Be factual and concise; do not invent details.'
+            content: 'You are a Chinese AI news editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,keywords,importance,reasonZh,reasonEn. category must be models,products,business,research,policy,opensource,other. importance is 1-100. Translate accurately, summarize in concise Chinese, and do not invent details.'
           },
           { role: 'user', content: JSON.stringify(prompt) }
         ]
@@ -126,4 +128,3 @@ export function finalizeFallback(event, error = null) {
     processingError: error ? String(error.message || error).slice(0, 240) : null
   };
 }
-

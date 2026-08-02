@@ -1,10 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-function dayKey(iso) {
-  return iso.slice(0, 10);
-}
-
 export async function readExistingData(dataDir) {
   try {
     const search = JSON.parse(await fs.readFile(path.join(dataDir, 'search.json'), 'utf8'));
@@ -21,19 +17,18 @@ export function validateEvent(event) {
   if (event.importance < 1 || event.importance > 100) throw new Error(`Event ${event.id} has invalid score`);
 }
 
-export async function writeDataFiles(dataDir, items, status, retentionDays = 365) {
+export async function writeDataFiles(dataDir, items, status, todayKey) {
   items.forEach(validateEvent);
-  await fs.mkdir(path.join(dataDir, 'news'), { recursive: true });
+  const newsDir = path.join(dataDir, 'news');
+  await fs.mkdir(newsDir, { recursive: true });
+  const retained = items.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 
-  const cutoff = Date.now() - retentionDays * 864e5;
-  const retained = items
-    .filter((item) => new Date(item.publishedAt).valueOf() >= cutoff)
-    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-
-  const byDay = Map.groupBy(retained, (item) => dayKey(item.publishedAt));
-  for (const [day, dayItems] of byDay) {
-    await atomicJson(path.join(dataDir, 'news', `${day}.json`), { generatedAt: status.finishedAt, items: dayItems });
+  for (const file of await fs.readdir(newsDir)) {
+    if (/^\d{4}-\d{2}-\d{2}\.json$/.test(file) && file !== `${todayKey}.json`) {
+      await fs.unlink(path.join(newsDir, file));
+    }
   }
+  await atomicJson(path.join(newsDir, `${todayKey}.json`), { generatedAt: status.finishedAt, date: todayKey, items: retained });
 
   const indexItems = retained.slice(0, 180);
   const categories = Object.entries(Object.groupBy(retained.slice(0, 120), (item) => item.category))
@@ -62,4 +57,3 @@ async function atomicJson(file, value) {
   await fs.writeFile(temp, `${JSON.stringify(value, null, 2)}\n`);
   await fs.rename(temp, file);
 }
-

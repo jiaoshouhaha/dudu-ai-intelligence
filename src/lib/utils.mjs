@@ -44,6 +44,18 @@ export function isoDate(value, fallback = new Date()) {
   return Number.isNaN(parsed.valueOf()) ? fallback.toISOString() : parsed.toISOString();
 }
 
+export function dateKeyInTimeZone(value, timeZone = 'Asia/Shanghai') {
+  const date = value instanceof Date ? value : new Date(value);
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).formatToParts(date);
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
 export function tokenizeTitle(value) {
   return new Set(
     stripHtml(value)
@@ -60,4 +72,3 @@ export function jaccard(left, right) {
   for (const item of left) if (right.has(item)) intersection += 1;
   return intersection / (left.size + right.size - intersection);
 }
-

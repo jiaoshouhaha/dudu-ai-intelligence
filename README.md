@@ -31,14 +31,14 @@ pnpm serve
 export TRANSLATION_BASE_URL="兼容端点"
 ```
 
-## 可选 AI 增强
+## 可选 DeepSeek 增强
 
-复制 `.env.example` 中的变量到你自己的环境。程序使用兼容 OpenAI Chat Completions 的接口，推荐国内可访问的阿里云百炼按量 API：
+复制 `.env.example` 中的变量到你自己的环境。DeepSeek V4 Flash 会生成中文标题、摘要、分类、关键词和重要度理由：
 
 ```bash
-export AI_API_KEY="你的密钥"
-export AI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"
-export AI_MODEL="qwen-flash"
+export DEEPSEEK_API_KEY="你的密钥"
+export DEEPSEEK_BASE_URL="https://api.deepseek.com"
+export DEEPSEEK_MODEL="deepseek-v4-flash"
 pnpm fetch
 ```
 
@@ -48,21 +48,23 @@ pnpm fetch
 
 `.github/workflows/update-news.yml` 会在每小时第 17 分钟运行，也支持从 Actions 页面手动触发。
 
-启用 AI 增强时，在仓库设置中添加：
+启用 DeepSeek 增强时，在仓库设置中添加：
 
-- Actions Secret：`AI_API_KEY`
-- Actions Variable：`AI_BASE_URL`
-- Actions Variable：`AI_MODEL`
-- 可选 Actions Variable：`AI_DAILY_LIMIT`
+- Actions Secret：`DEEPSEEK_API_KEY`
+- Actions Variable：`DEEPSEEK_BASE_URL`
+- Actions Variable：`DEEPSEEK_MODEL`
+- 可选 Actions Variable：`DEEPSEEK_DAILY_LIMIT`
 
 不添加任何变量时，工作流仍会使用规则评分正常更新。
 
 ## 数据与隐私
 
-- `data/news/YYYY-MM-DD.json`：日期分片
-- `data/index.json`：首页索引
-- `data/search.json`：一年内搜索数据
+- `data/news/YYYY-MM-DD.json`：北京时间当天分片
+- `data/index.json`：当天首页索引
+- `data/search.json`：当天搜索数据
 - `data/trends.json`：趋势汇总
 - `data/status.json`：来源健康状态
 
 网站只展示 RSS 提供的元数据与中文短摘要，并始终链接原文。收藏和已读状态只保存在浏览器本地。
+
+每天北京时间零点后，下一次运行会自动清理旧日期分片；页面只展示当天发布的新闻。

@@ -6,6 +6,7 @@ import { scoreEvent } from './score.mjs';
 import { aiConfig, enrichEvents, finalizeFallback } from './ai-client.mjs';
 import { translateEventsToChinese, translationConfig } from './translate.mjs';
 import { readExistingData, writeDataFiles } from './storage.mjs';
+import { dateKeyInTimeZone } from './utils.mjs';
 
 async function fetchSource(source, options) {
   const started = Date.now();
@@ -36,10 +37,15 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
     now
   };
   const enabledSources = sources.filter((source) => source.enabled !== false);
+  const todayKey = dateKeyInTimeZone(now, 'Asia/Shanghai');
   const results = await Promise.all(enabledSources.map((source) => fetchSource(source, options)));
-  const normalized = results.flatMap((result) => result.items).map(normalizeItem);
+  const normalized = results
+    .flatMap((result) => result.items)
+    .map(normalizeItem)
+    .filter((item) => dateKeyInTimeZone(item.publishedAt, 'Asia/Shanghai') === todayKey);
   const freshEvents = dedupeItems(normalized).map((event) => scoreEvent(event, now));
-  const existing = await readExistingData(resolvedDataDir);
+  const existing = (await readExistingData(resolvedDataDir))
+    .filter((event) => dateKeyInTimeZone(event.publishedAt, 'Asia/Shanghai') === todayKey);
   const existingIds = new Set(existing.map((item) => item.id));
   const maxNew = Number(process.env.MAX_NEW_ITEMS_PER_RUN || 80);
   const newEvents = freshEvents.filter((event) => !existingIds.has(event.id)).slice(0, maxNew);
@@ -52,7 +58,9 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
   const status = {
     startedAt,
     finishedAt,
-    mode: aiConfig().apiKey ? 'ai' : 'rules',
+    date: todayKey,
+    timezone: 'Asia/Shanghai',
+    mode: aiConfig().apiKey ? 'deepseek' : 'rules',
     sourceCount: enabledSources.length,
     successfulSources: results.filter((result) => result.ok).length,
     failedSources: results.filter((result) => !result.ok).length,
@@ -62,7 +70,7 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
     totalEvents: merged.length,
     sources: results.map(({ items: _items, ...result }) => result)
   };
-  const retained = await writeDataFiles(resolvedDataDir, merged, status, Number(process.env.RETENTION_DAYS || 365));
+  const retained = await writeDataFiles(resolvedDataDir, merged, status, todayKey);
   return { status, items: retained };
 }
 

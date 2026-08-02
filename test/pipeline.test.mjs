@@ -7,9 +7,10 @@ import { parseFeed } from '../src/lib/feed-parser.mjs';
 import { normalizeItem, normalizeUrl } from '../src/lib/normalize.mjs';
 import { dedupeItems } from '../src/lib/dedupe.mjs';
 import { scoreEvent } from '../src/lib/score.mjs';
-import { finalizeFallback, validateAiPayload } from '../src/lib/ai-client.mjs';
+import { aiConfig, enrichEvent, finalizeFallback, validateAiPayload } from '../src/lib/ai-client.mjs';
 import { runPipeline } from '../src/lib/pipeline.mjs';
 import { translateEventToChinese } from '../src/lib/translate.mjs';
+import { dateKeyInTimeZone } from '../src/lib/utils.mjs';
 
 const fixture = await fs.readFile(new URL('./fixtures/sample-rss.xml', import.meta.url), 'utf8');
 const source = { id: 'test', name: 'Test Feed', type: 'official', authority: 95, category: 'models', language: 'en', enabled: true, url: 'https://example.com/rss' };
@@ -48,6 +49,37 @@ test('AI payload validation clamps score and normalizes unknown categories', () 
   assert.equal(value.category, 'other');
 });
 
+test('DeepSeek defaults use V4 Flash and the official endpoint', () => {
+  const config = aiConfig({});
+  assert.equal(config.baseUrl, 'https://api.deepseek.com');
+  assert.equal(config.model, 'deepseek-v4-flash');
+  assert.equal(config.apiKey, '');
+});
+
+test('DeepSeek request disables thinking and asks for structured Chinese output', async () => {
+  let request;
+  const fetchImpl = async (url, options) => {
+    request = { url: String(url), body: JSON.parse(options.body) };
+    return {
+      ok: true,
+      json: async () => ({ choices: [{ message: { content: JSON.stringify({ titleZh: '中文标题', titleEn: 'English title', summaryZh: '中文摘要', summaryEn: 'English summary', category: 'models', keywords: ['模型'], importance: 91, reasonZh: '影响广泛', reasonEn: 'Broad impact' }) } }] })
+    };
+  };
+  const event = { titleOriginal: 'AI model launch', summaryOriginal: 'A model was released.', category: 'models', sources: [{ name: 'Official' }], publishedAt: '2026-08-01T17:00:00Z', importance: 80 };
+  const result = await enrichEvent(event, { apiKey: 'test-key', baseUrl: 'https://api.deepseek.com', model: 'deepseek-v4-flash', timeoutMs: 1000 }, fetchImpl);
+  assert.equal(request.url, 'https://api.deepseek.com/chat/completions');
+  assert.equal(request.body.model, 'deepseek-v4-flash');
+  assert.deepEqual(request.body.thinking, { type: 'disabled' });
+  assert.deepEqual(request.body.response_format, { type: 'json_object' });
+  assert.equal(result.titleZh, '中文标题');
+  assert.equal(result.scoringMode, 'ai');
+});
+
+test('Beijing calendar date is used across the UTC day boundary', () => {
+  assert.equal(dateKeyInTimeZone('2026-08-01T15:59:59Z'), '2026-08-01');
+  assert.equal(dateKeyInTimeZone('2026-08-01T16:00:00Z'), '2026-08-02');
+});
+
 test('fallback preserves original English and rule score without an API key', () => {
   const event = finalizeFallback({ titleOriginal: 'Original', summaryOriginal: 'Summary', originalLanguage: 'en', scoringMode: 'rules' });
   assert.equal(event.titleEn, 'Original');
@@ -69,6 +101,8 @@ test('no-key translator writes Chinese title and summary while preserving the or
 
 test('pipeline isolates a failed source and writes valid data files', async () => {
   const rootDir = await fs.mkdtemp(path.join(os.tmpdir(), 'signal-ai-'));
+  await fs.mkdir(path.join(rootDir, 'data', 'news'), { recursive: true });
+  await fs.writeFile(path.join(rootDir, 'data', 'news', '2026-07-31.json'), '{}');
   const sources = [source, { ...source, id: 'broken', url: 'https://broken.example/rss' }];
   const fetchImpl = async (url) => {
     if (url.includes('broken')) throw new Error('network unavailable');
@@ -88,4 +122,6 @@ test('pipeline isolates a failed source and writes valid data files', async () =
   assert.equal(items.length, 3);
   const output = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'index.json'), 'utf8'));
   assert.equal(output.items.length, 3);
+  await assert.rejects(fs.access(path.join(rootDir, 'data', 'news', '2026-07-31.json')));
+  await fs.access(path.join(rootDir, 'data', 'news', '2026-08-01.json'));
 });
