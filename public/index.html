@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="每小时更新的全球 AI 新闻情报站" />
+    <meta name="description" content="自动收集、翻译并筛选全球 AI 新闻的中文情报站" />
     <title>SIGNAL/AI · AI 新闻情报站</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23171714'/%3E%3Cpath d='M14 18h36v8H26v6h20v8H26v6h24v8H14z' fill='%23f3efe5'/%3E%3Ccircle cx='50' cy='18' r='7' fill='%23eb5a2c'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#" aria-label="SIGNAL AI 首页">SIGNAL<span>/AI</span></a>
-      <nav class="main-nav" aria-label="主导航">
-        <button class="nav-link active" data-view="today">今日头版</button>
+      <a class="brand" href="#top" aria-label="SIGNAL AI 首页">SIGNAL<span>/AI</span></a>
+      <nav class="main-nav" aria-label="新闻分类">
+        <button class="nav-link active" data-view="today">今日概览</button>
         <button class="nav-link" data-view="latest">最新</button>
         <button class="nav-link" data-category="models">模型</button>
         <button class="nav-link" data-category="products">产品</button>
@@ -20,78 +20,74 @@
         <button class="nav-link" data-category="research">研究</button>
         <button class="nav-link" data-category="policy">政策</button>
       </nav>
-      <div class="header-actions">
-        <button id="searchToggle" class="icon-button" aria-label="打开搜索">⌕</button>
-      </div>
+      <a class="header-search" href="#newsFeed">搜索新闻 ↓</a>
     </header>
 
-    <section id="searchPanel" class="search-panel" hidden>
-      <label for="searchInput">搜索新闻、来源或关键词</label>
-      <input id="searchInput" type="search" autocomplete="off" placeholder="例如：多模态、OpenAI、agent…" />
-    </section>
-
-    <main>
-      <section class="date-strip">
+    <main id="top">
+      <section class="date-strip content-width">
         <span id="todayLabel">—</span>
         <span id="updateLabel">正在读取最新数据…</span>
       </section>
 
-      <aside id="statusBanner" class="status-banner" hidden></aside>
-
-      <section id="leadSection" class="lead-grid" aria-labelledby="leadTitle">
-        <article id="leadStory" class="lead-story skeleton"></article>
-        <aside id="importantList" class="important-list"></aside>
+      <section class="dashboard content-width" aria-label="新闻数据概览">
+        <article class="metric"><span>最新收录</span><strong id="totalMetric">—</strong><small>滚动 36 小时</small></article>
+        <article class="metric"><span>重点新闻</span><strong id="importantMetric">—</strong><small id="importantMetricNote">重要度 80+</small></article>
+        <article class="metric"><span>最后更新</span><strong id="updatedMetric">—</strong><small id="updatedMetricExact">等待数据</small></article>
+        <article class="metric metric-accent"><span>下次抓取</span><strong id="nextMetric">—</strong><small>北京时间自动运行</small></article>
       </section>
 
-      <section id="trendBar" class="trend-bar" aria-label="趋势主题"></section>
+      <aside id="statusBanner" class="status-banner content-width" hidden></aside>
 
-      <section class="feed-section">
+      <section id="leadSection" class="lead-grid content-width" aria-labelledby="leadTitle">
+        <article id="leadStory" class="lead-story skeleton"></article>
+        <aside id="importantList" class="important-list" aria-label="热点排行"></aside>
+      </section>
+
+      <section class="discovery content-width" aria-label="新闻分类与趋势">
+        <div id="categoryCounts" class="category-counts"></div>
+        <div id="trendBar" class="trend-bar"></div>
+      </section>
+
+      <section id="newsFeed" class="feed-section content-width">
         <div class="feed-heading">
           <div>
-            <p class="eyebrow">THE NEWSWIRE</p>
+            <p class="eyebrow">实时新闻流</p>
             <h2 id="feedTitle">最新动态</h2>
+            <p id="resultCount" class="result-count"></p>
           </div>
-          <div class="controls">
-            <select id="sourceFilter" aria-label="按来源类型筛选">
-              <option value="all">全部来源</option>
-              <option value="official">官方发布</option>
-              <option value="media">媒体</option>
-              <option value="paper">论文</option>
-              <option value="community">社区</option>
-            </select>
-            <select id="sortSelect" aria-label="排序方式">
-              <option value="importance">按重要度</option>
-              <option value="time">按时间</option>
-            </select>
+          <div class="feed-tools">
+            <label class="search-field">
+              <span class="sr-only">搜索新闻、来源或关键词</span>
+              <input id="searchInput" type="search" autocomplete="off" placeholder="搜索新闻、来源或关键词…" />
+            </label>
+            <div class="controls">
+              <select id="sourceFilter" aria-label="按来源类型筛选">
+                <option value="all">全部来源</option><option value="official">官方发布</option><option value="media">媒体</option><option value="paper">论文</option><option value="community">社区</option>
+              </select>
+              <select id="sortSelect" aria-label="排序方式">
+                <option value="importance">按重要度</option><option value="time">按时间</option>
+              </select>
+            </div>
           </div>
         </div>
         <div id="activeFilters" class="active-filters"></div>
-        <div id="newsGrid" class="news-grid" aria-live="polite"></div>
+        <div id="newsGrid" class="news-stream" aria-live="polite"></div>
         <div id="emptyState" class="empty-state" hidden>
-          <strong>没有匹配的新闻</strong>
-          <p>换一个关键词或清除筛选条件试试。</p>
-          <button id="clearFilters" class="primary-button">清除筛选</button>
+          <strong>没有匹配的新闻</strong><p>换一个关键词或清除筛选条件试试。</p><button id="clearFilters" class="primary-button">清除筛选</button>
         </div>
       </section>
     </main>
 
-    <footer>
-      <span>SIGNAL/AI · 个人 AI 情报站</span>
-      <span>只展示摘要，版权归原作者与来源所有</span>
-    </footer>
+    <footer class="content-width"><span>SIGNAL/AI · 中文 AI 情报站</span><span>只展示中文摘要并保留原文链接</span></footer>
 
     <template id="cardTemplate">
-      <article class="news-card">
-        <div class="card-meta"><span class="score"></span><span class="category"></span><time></time></div>
-        <h3><a class="title-link" target="_blank" rel="noopener noreferrer"></a></h3>
-        <p class="summary"></p>
-        <p class="reason"></p>
-        <div class="card-footer">
-          <span class="source-name"></span>
-          <div>
-            <button class="save-button" aria-label="收藏">☆</button>
-            <button class="read-button">标为已读</button>
-          </div>
+      <article class="news-item">
+        <div class="news-rail"><span class="importance-label"></span><strong class="score"></strong><time></time></div>
+        <div class="news-body">
+          <div class="item-meta"><span class="category"></span><span class="source-name"></span><span class="source-type"></span></div>
+          <h3><a class="title-link" target="_blank" rel="noopener noreferrer"></a></h3>
+          <p class="summary"></p><p class="reason"></p>
+          <div class="card-footer"><a class="original-link" target="_blank" rel="noopener noreferrer">查看原文 ↗</a><div><button class="save-button" aria-label="收藏新闻">☆</button><button class="read-button">标为已读</button></div></div>
         </div>
       </article>
     </template>
