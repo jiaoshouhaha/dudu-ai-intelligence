@@ -35,9 +35,12 @@ export function dedupeItems(items, threshold = 0.72) {
       sourceType: item.sourceType,
       authority: item.authority,
       publishedAt: item.publishedAt,
+      discoveredAt: item.discoveredAt || null,
+      contentType: item.contentTypeHint || null,
+      evidenceLevel: item.evidenceLevelHint || null,
+      attribution: item.attribution || null,
       sources: [source]
     });
   }
   return events;
 }
-

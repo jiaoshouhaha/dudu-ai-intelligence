@@ -44,8 +44,14 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
     .map(([name, categoryItems]) => ({ name, count: categoryItems.length }))
     .sort((a, b) => b.count - a.count);
   const keywords = new Map();
+  const models = new Map();
+  const topics = new Map();
+  const contentTypes = new Map();
   for (const item of retained.slice(0, 160)) {
     for (const keyword of item.keywords || []) keywords.set(keyword, (keywords.get(keyword) || 0) + 1);
+    for (const model of item.models || []) models.set(model, (models.get(model) || 0) + 1);
+    for (const topic of item.topics || []) topics.set(topic, (topics.get(topic) || 0) + 1);
+    if (item.contentType) contentTypes.set(item.contentType, (contentTypes.get(item.contentType) || 0) + 1);
   }
 
   await Promise.all([
@@ -55,11 +61,18 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
     atomicJson(path.join(dataDir, 'trends.json'), {
       generatedAt: status.finishedAt,
       categories,
-      keywords: [...keywords.entries()].map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count).slice(0, 12)
+      keywords: rankCounts(keywords, 16),
+      models: rankCounts(models, 16),
+      topics: rankCounts(topics, 24),
+      contentTypes: rankCounts(contentTypes, 12)
     }),
     atomicJson(path.join(dataDir, 'status.json'), status)
   ]);
   return retained;
+}
+
+function rankCounts(map, limit) {
+  return [...map.entries()].map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count).slice(0, limit);
 }
 
 async function atomicJson(file, value) {

@@ -7,6 +7,7 @@ import { aiConfig, enrichEvents, finalizeFallback } from './ai-client.mjs';
 import { translateEventsToChinese, translationConfig } from './translate.mjs';
 import { readExistingData, readSeenData, writeDataFiles } from './storage.mjs';
 import { dateKeyInTimeZone, jaccard, tokenizeTitle } from './utils.mjs';
+import { parseAihotItems } from './source-adapters.mjs';
 
 async function fetchSource(source, options) {
   const started = Date.now();
@@ -18,7 +19,9 @@ async function fetchSource(source, options) {
       signal: controller.signal
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const items = parseFeed(await response.text(), source, options.now);
+    const items = source.format === 'aihot-json'
+      ? parseAihotItems(await response.json(), source)
+      : parseFeed(await response.text(), source, options.now);
     return { sourceId: source.id, ok: true, count: items.length, durationMs: Date.now() - started, items };
   } catch (error) {
     return { sourceId: source.id, ok: false, count: 0, durationMs: Date.now() - started, error: String(error.message || error), items: [] };

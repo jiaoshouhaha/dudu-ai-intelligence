@@ -3,72 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="自动收集、翻译并筛选全球 AI 新闻的中文情报站" />
+    <meta name="description" content="自动收集、翻译和整理全球 AI 新闻、工具与实用方法" />
     <title>嘟嘟的 AI 情报站</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23171714'/%3E%3Cpath d='M14 18h36v8H26v6h20v8H26v6h24v8H14z' fill='%23f3efe5'/%3E%3Ccircle cx='50' cy='18' r='7' fill='%23eb5a2c'/%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191915'/%3E%3Cpath d='M14 17h36v8H26v7h20v8H26v7h24v8H14z' fill='%23f3f0e8'/%3E%3Ccircle cx='50' cy='17' r='7' fill='%23ed5b2a'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header">
+    <button id="menuToggle" class="mobile-menu" aria-label="打开分类菜单" aria-expanded="false">☰</button>
+    <div id="sidebarBackdrop" class="sidebar-backdrop" hidden></div>
+
+    <aside id="sidebar" class="sidebar" aria-label="主菜单">
       <a class="brand" href="#top" aria-label="嘟嘟的 AI 情报站首页">嘟嘟的<span>AI 情报站</span></a>
-      <nav class="main-nav" aria-label="新闻分类">
-        <button class="nav-link active" data-view="latest">最新</button>
-        <button class="nav-link" data-category="models">模型</button>
-        <button class="nav-link" data-category="products">产品</button>
-        <button class="nav-link" data-category="business">商业</button>
-        <button class="nav-link" data-category="research">研究</button>
-        <button class="nav-link" data-category="policy">政策</button>
+      <p class="brand-note">新闻 · 工具 · 方法 · 观点</p>
+
+      <nav id="sideNav" class="side-nav">
+        <p class="nav-group">情报流</p>
+        <button class="side-link active" data-view="all"><span>⌁</span>首页<em data-count="all">0</em></button>
+        <button class="side-link" data-view="latest"><span>◷</span>最新动态<em data-count="latest">0</em></button>
+        <button class="side-link" data-view="selected"><span>✦</span>今日精选<em data-count="selected">0</em></button>
+
+        <p class="nav-group">分类</p>
+        <button class="side-link" data-category="models"><span>◈</span>模型动态<em data-count="models">0</em></button>
+        <button class="side-link" data-category="products"><span>▣</span>AI 产品<em data-count="products">0</em></button>
+        <button class="side-link" data-category="agent"><span>⌘</span>Agent 与编程<em data-count="agent">0</em></button>
+        <button class="side-link" data-category="tips"><span>⚡</span>实用技巧<em data-count="tips">0</em></button>
+        <button class="side-link" data-category="opensource"><span>◇</span>开源项目<em data-count="opensource">0</em></button>
+        <button class="side-link" data-category="research"><span>⌬</span>研究论文<em data-count="research">0</em></button>
+        <button class="side-link" data-category="policy"><span>§</span>政策监管<em data-count="policy">0</em></button>
+        <button class="side-link" data-category="business"><span>↗</span>商业融资<em data-count="business">0</em></button>
+        <button class="side-link" data-category="opinion"><span>“</span>人物观点<em data-count="opinion">0</em></button>
+        <button class="side-link" data-view="saved"><span>☆</span>我的收藏<em data-count="saved">0</em></button>
       </nav>
-      <a class="header-search" href="#newsFeed">搜索 ↓</a>
-    </header>
 
-    <main id="top">
-      <section class="date-strip content-width">
-        <span id="todayLabel">—</span>
-        <span id="updateLabel">正在读取最新数据…</span>
-      </section>
+      <div class="sidebar-status">
+        <span id="healthDot" class="health-dot"></span>
+        <div><strong id="sideStatus">正在读取数据</strong><small id="sideUpdated">—</small></div>
+      </div>
+    </aside>
 
-      <aside id="statusBanner" class="status-banner content-width" hidden></aside>
+    <main id="top" class="main-shell">
+      <header class="topbar">
+        <div>
+          <p id="todayLabel" class="today-label">—</p>
+          <h1 id="pageTitle">全部情报</h1>
+          <p id="pageDescription">按发布时间查看最新 AI 新闻、工具和实践方法</p>
+        </div>
+        <label class="search-field">
+          <span class="sr-only">搜索新闻、模型、来源或主题</span>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="搜索新闻、模型、来源或主题…" />
+        </label>
+      </header>
 
-      <section id="newsFeed" class="feed-section content-width">
-        <div class="feed-heading">
+      <aside id="statusBanner" class="status-banner" hidden></aside>
+
+      <section class="filters" aria-label="筛选与排序">
+        <div id="modelFilters" class="chip-row" aria-label="模型筛选"></div>
+        <div class="filter-controls">
+          <p id="resultCount">正在读取…</p>
           <div>
-            <h1 id="feedTitle">新闻时间线</h1>
-            <p id="resultCount" class="result-count"></p>
-          </div>
-          <div class="feed-tools">
-            <label class="search-field">
-              <span class="sr-only">搜索新闻、来源或关键词</span>
-              <input id="searchInput" type="search" autocomplete="off" placeholder="搜索新闻、来源或关键词…" />
-            </label>
-            <div class="controls">
-              <select id="sourceFilter" aria-label="按来源类型筛选">
-                <option value="all">全部来源</option><option value="official">官方发布</option><option value="media">媒体</option><option value="paper">论文</option><option value="community">社区</option>
-              </select>
-              <select id="sortSelect" aria-label="排序方式">
-                <option value="importance">按重要度</option><option value="time">按时间</option>
-              </select>
-            </div>
+            <select id="sourceFilter" aria-label="按来源类型筛选">
+              <option value="all">全部来源</option>
+              <option value="official">官方发布</option>
+              <option value="practitioner">实践作者</option>
+              <option value="media">专业媒体</option>
+              <option value="paper">论文</option>
+              <option value="community">社区</option>
+              <option value="aggregator">发现来源</option>
+            </select>
+            <select id="sortSelect" aria-label="排序方式">
+              <option value="time">最新发布</option>
+              <option value="importance">综合价值</option>
+            </select>
           </div>
         </div>
-        <div id="categoryCounts" class="category-counts" aria-label="按分类筛选"></div>
         <div id="activeFilters" class="active-filters"></div>
+      </section>
+
+      <section class="timeline-section" aria-labelledby="timelineTitle">
+        <h2 id="timelineTitle" class="sr-only">新闻时间线</h2>
         <div id="newsGrid" class="news-stream" aria-live="polite"></div>
         <div id="emptyState" class="empty-state" hidden>
-          <strong>没有匹配的新闻</strong><p>换一个关键词或清除筛选条件试试。</p><button id="clearFilters" class="primary-button">清除筛选</button>
+          <strong>这个分类暂时没有内容</strong><p>可以切换到首页，或清除搜索和筛选条件。</p><button id="clearFilters" class="primary-button">查看全部情报</button>
         </div>
       </section>
-    </main>
 
-    <footer class="content-width"><span>嘟嘟的 AI 情报站</span><span>只展示中文摘要并保留原文链接</span></footer>
+      <footer><span>嘟嘟的 AI 情报站</span><span>发现数据来源：<a href="https://aihot.virxact.com/" target="_blank" rel="noopener noreferrer">AI HOT</a> · 内容保留第三方原文链接</span></footer>
+    </main>
 
     <template id="cardTemplate">
       <article class="news-item">
         <div class="news-rail"><span class="timeline-dot" aria-hidden="true"></span><time></time></div>
         <div class="news-body">
-          <div class="item-meta"><span class="source-name"></span><span class="category"></span><span class="importance-label"></span><span class="score"></span></div>
+          <div class="item-meta"><span class="source-name"></span><span class="content-type"></span><span class="evidence"></span><span class="score"></span></div>
           <h3><a class="title-link" target="_blank" rel="noopener noreferrer"></a></h3>
-          <p class="summary"></p><p class="reason"></p>
+          <p class="summary"></p>
+          <p class="reason"></p>
+          <div class="tag-row"></div>
           <div class="card-footer"><a class="original-link" target="_blank" rel="noopener noreferrer">查看原文 ↗</a><div><button class="save-button" aria-label="收藏新闻">☆</button><button class="read-button">标为已读</button></div></div>
         </div>
       </article>

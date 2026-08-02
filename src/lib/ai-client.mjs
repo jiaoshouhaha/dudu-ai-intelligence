@@ -1,6 +1,13 @@
 import { clamp } from './utils.mjs';
 
-const VALID_CATEGORIES = new Set(['models', 'products', 'business', 'research', 'policy', 'opensource', 'other']);
+const VALID_CATEGORIES = new Set(['models', 'products', 'agent', 'tips', 'business', 'research', 'policy', 'opensource', 'opinion', 'other']);
+const VALID_CONTENT_TYPES = new Set(['official', 'practical', 'opensource', 'paper', 'benchmark', 'industry', 'opinion']);
+const VALID_EVIDENCE_LEVELS = new Set(['primary', 'verified', 'practitioner', 'unverified']);
+const MODEL_PATTERNS = [
+  ['GPT / Codex', /\bgpt\b|codex|openai/i], ['Claude', /claude|anthropic/i], ['Gemini', /gemini|deepmind/i],
+  ['DeepSeek', /deepseek/i], ['Qwen', /qwen|通义千问/i], ['Kimi', /\bkimi\b|moonshot|月之暗面/i],
+  ['GLM', /\bglm\b|智谱/i], ['Llama', /llama|meta ai/i], ['Grok', /\bgrok\b|\bxai\b/i]
+];
 
 export function aiConfig(env = process.env) {
   return {
@@ -19,6 +26,8 @@ export function validateAiPayload(payload) {
   for (const key of required) if (payload[key] == null) throw new Error(`AI response missing ${key}`);
   if (!VALID_CATEGORIES.has(payload.category)) payload.category = 'other';
   if (!Array.isArray(payload.keywords)) payload.keywords = [];
+  const contentType = VALID_CONTENT_TYPES.has(payload.contentType) ? payload.contentType : 'industry';
+  const evidenceLevel = VALID_EVIDENCE_LEVELS.has(payload.evidenceLevel) ? payload.evidenceLevel : 'unverified';
   return {
     titleZh: String(payload.titleZh).slice(0, 240),
     titleEn: String(payload.titleEn).slice(0, 240),
@@ -26,6 +35,10 @@ export function validateAiPayload(payload) {
     summaryEn: String(payload.summaryEn).slice(0, 800),
     category: payload.category,
     keywords: payload.keywords.map(String).slice(0, 8),
+    topics: Array.isArray(payload.topics) ? payload.topics.map(String).slice(0, 8) : payload.keywords.map(String).slice(0, 8),
+    models: Array.isArray(payload.models) ? payload.models.map(String).slice(0, 6) : [],
+    contentType,
+    evidenceLevel,
     importance: clamp(Math.round(Number(payload.importance) || 1), 1, 100),
     reasonZh: String(payload.reasonZh).slice(0, 300),
     reasonEn: String(payload.reasonEn).slice(0, 300)
@@ -63,7 +76,7 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
         messages: [
           {
             role: 'system',
-            content: 'You are a Chinese AI news editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,keywords,importance,reasonZh,reasonEn. category must be models,products,business,research,policy,opensource,other. importance is 1-100. Translate accurately, summarize in concise Chinese, and do not invent details.'
+            content: 'You are a Chinese AI intelligence editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,contentType,topics,models,evidenceLevel,keywords,importance,reasonZh,reasonEn. category must be models,products,agent,tips,business,research,policy,opensource,opinion,other. contentType must be official,practical,opensource,paper,benchmark,industry,opinion. evidenceLevel must be primary,verified,practitioner,unverified. Practical configurations, reproducible workflows, code and cost-saving methods are valuable. Lower scores for hype or unsupported claims. importance is 1-100. Translate accurately, summarize in concise Chinese, and do not invent details.'
           },
           { role: 'user', content: JSON.stringify(prompt) }
         ]
@@ -83,6 +96,10 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
       summaryEn: result.summaryEn,
       category: result.category,
       keywords: result.keywords,
+      topics: result.topics,
+      models: result.models,
+      contentType: result.contentType,
+      evidenceLevel: result.evidenceLevel,
       importance: result.importance,
       importanceReasonZh: result.reasonZh,
       importanceReasonEn: result.reasonEn,
@@ -118,6 +135,10 @@ export async function enrichEvents(events, config = aiConfig()) {
 
 export function finalizeFallback(event, error = null) {
   const isZh = event.originalLanguage === 'zh';
+  const corpus = `${event.titleOriginal || ''} ${event.summaryOriginal || ''}`;
+  const models = event.models?.length ? event.models : MODEL_PATTERNS.filter(([, pattern]) => pattern.test(corpus)).map(([name]) => name);
+  const contentType = event.contentType || (event.category === 'tips' ? 'practical' : event.category === 'opensource' ? 'opensource' : event.category === 'research' ? 'paper' : event.category === 'opinion' ? 'opinion' : event.sourceType === 'official' ? 'official' : 'industry');
+  const evidenceLevel = event.evidenceLevel || (event.sourceType === 'official' || event.sourceType === 'paper' ? 'primary' : contentType === 'practical' ? 'practitioner' : 'unverified');
   return {
     ...event,
     titleZh: event.titleZh || (isZh ? event.titleOriginal : ''),
@@ -125,6 +146,10 @@ export function finalizeFallback(event, error = null) {
     summaryZh: event.summaryZh || (isZh ? event.summaryOriginal : ''),
     summaryEn: event.summaryEn || (!isZh ? event.summaryOriginal : ''),
     keywords: event.keywords || [],
+    topics: event.topics?.length ? event.topics : (event.keywords || []).slice(0, 8),
+    models: models.slice(0, 6),
+    contentType,
+    evidenceLevel,
     processingError: error ? String(error.message || error).slice(0, 240) : null
   };
 }

@@ -11,6 +11,7 @@ import { aiConfig, enrichEvent, finalizeFallback, validateAiPayload } from '../s
 import { runPipeline } from '../src/lib/pipeline.mjs';
 import { translateEventToChinese } from '../src/lib/translate.mjs';
 import { dateKeyInTimeZone } from '../src/lib/utils.mjs';
+import { parseAihotItems } from '../src/lib/source-adapters.mjs';
 
 const fixture = await fs.readFile(new URL('./fixtures/sample-rss.xml', import.meta.url), 'utf8');
 const source = { id: 'test', name: 'Test Feed', type: 'official', authority: 95, category: 'models', language: 'en', enabled: true, url: 'https://example.com/rss' };
@@ -47,6 +48,17 @@ test('AI payload validation clamps score and normalizes unknown categories', () 
   const value = validateAiPayload({ titleZh: '中', titleEn: 'EN', summaryZh: '摘要', summaryEn: 'Summary', category: 'unknown', keywords: ['agent'], importance: 120, reasonZh: '理由', reasonEn: 'Reason' });
   assert.equal(value.importance, 100);
   assert.equal(value.category, 'other');
+  assert.equal(value.contentType, 'industry');
+  assert.equal(value.evidenceLevel, 'unverified');
+});
+
+test('parses AI HOT discovery items while preserving the original link and attribution', () => {
+  const [item] = parseAihotItems({ items: [{ id: 'ayi-1', title: 'Codex 省额度工作流', summary: '使用 Sol 调度 Luna。', source: { name: 'X：AYI' }, links: { original: 'https://x.com/AYi_AInotes/status/1', aihot: 'https://aihot.example/items/1' }, publishedAt: '2026-08-02T10:47:27Z', discoveredAt: '2026-08-02T11:00:00Z', category: 'tip', score: 75, attribution: { name: 'AI HOT', url: 'https://aihot.example/items/1' } }] }, { id: 'aihot', name: 'AI HOT', authority: 76 });
+  assert.equal(item.url, 'https://x.com/AYi_AInotes/status/1');
+  assert.equal(item.category, 'tips');
+  assert.equal(item.contentTypeHint, 'practical');
+  assert.equal(item.evidenceLevelHint, 'practitioner');
+  assert.equal(item.attribution.name, 'AI HOT');
 });
 
 test('DeepSeek defaults use V4 Flash and the official endpoint', () => {
@@ -62,7 +74,7 @@ test('DeepSeek request disables thinking and asks for structured Chinese output'
     request = { url: String(url), body: JSON.parse(options.body) };
     return {
       ok: true,
-      json: async () => ({ choices: [{ message: { content: JSON.stringify({ titleZh: '中文标题', titleEn: 'English title', summaryZh: '中文摘要', summaryEn: 'English summary', category: 'models', keywords: ['模型'], importance: 91, reasonZh: '影响广泛', reasonEn: 'Broad impact' }) } }] })
+      json: async () => ({ choices: [{ message: { content: JSON.stringify({ titleZh: '中文标题', titleEn: 'English title', summaryZh: '中文摘要', summaryEn: 'English summary', category: 'models', contentType: 'official', topics: ['推理'], models: ['DeepSeek'], evidenceLevel: 'primary', keywords: ['模型'], importance: 91, reasonZh: '影响广泛', reasonEn: 'Broad impact' }) } }] })
     };
   };
   const event = { titleOriginal: 'AI model launch', summaryOriginal: 'A model was released.', category: 'models', sources: [{ name: 'Official' }], publishedAt: '2026-08-01T17:00:00Z', importance: 80 };
@@ -73,6 +85,8 @@ test('DeepSeek request disables thinking and asks for structured Chinese output'
   assert.deepEqual(request.body.response_format, { type: 'json_object' });
   assert.equal(result.titleZh, '中文标题');
   assert.equal(result.scoringMode, 'ai');
+  assert.deepEqual(result.models, ['DeepSeek']);
+  assert.equal(result.evidenceLevel, 'primary');
 });
 
 test('Beijing calendar date is used across the UTC day boundary', () => {
