@@ -2,7 +2,11 @@ name: Update AI news
 
 on:
   schedule:
-    - cron: '17 * * * *'
+    # UTC times correspond to Asia/Shanghai 01:00, 07:00, 12:30 and 19:00.
+    - cron: '0 17 * * *'
+    - cron: '0 23 * * *'
+    - cron: '30 4 * * *'
+    - cron: '0 11 * * *'
   workflow_dispatch:
 
 permissions:
@@ -22,6 +26,7 @@ jobs:
       DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
       DEEPSEEK_DAILY_LIMIT: ${{ vars.DEEPSEEK_DAILY_LIMIT }}
       MAX_NEW_ITEMS_PER_RUN: '80'
+      NEWS_WINDOW_HOURS: '36'
       TRANSLATION_BASE_URL: ${{ vars.TRANSLATION_BASE_URL }}
       TRANSLATION_CONCURRENCY: '3'
       NODE_USE_ENV_PROXY: '1'

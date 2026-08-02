@@ -10,6 +10,15 @@ export async function readExistingData(dataDir) {
   }
 }
 
+export async function readSeenData(dataDir) {
+  try {
+    const seen = JSON.parse(await fs.readFile(path.join(dataDir, 'seen.json'), 'utf8'));
+    return seen?.events && typeof seen.events === 'object' ? seen.events : {};
+  } catch {
+    return {};
+  }
+}
+
 export function validateEvent(event) {
   const required = ['id', 'titleOriginal', 'originalUrl', 'publishedAt', 'importance', 'sources'];
   for (const key of required) if (event[key] == null) throw new Error(`Event ${event.id || 'unknown'} missing ${key}`);
@@ -17,7 +26,7 @@ export function validateEvent(event) {
   if (event.importance < 1 || event.importance > 100) throw new Error(`Event ${event.id} has invalid score`);
 }
 
-export async function writeDataFiles(dataDir, items, status, todayKey) {
+export async function writeDataFiles(dataDir, items, status, todayKey, seenEvents = {}) {
   items.forEach(validateEvent);
   const newsDir = path.join(dataDir, 'news');
   await fs.mkdir(newsDir, { recursive: true });
@@ -42,6 +51,7 @@ export async function writeDataFiles(dataDir, items, status, todayKey) {
   await Promise.all([
     atomicJson(path.join(dataDir, 'index.json'), { generatedAt: status.finishedAt, items: indexItems }),
     atomicJson(path.join(dataDir, 'search.json'), { generatedAt: status.finishedAt, items: retained }),
+    atomicJson(path.join(dataDir, 'seen.json'), { generatedAt: status.finishedAt, retentionDays: 7, events: seenEvents }),
     atomicJson(path.join(dataDir, 'trends.json'), {
       generatedAt: status.finishedAt,
       categories,

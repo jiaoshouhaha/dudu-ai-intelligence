@@ -124,4 +124,27 @@ test('pipeline isolates a failed source and writes valid data files', async () =
   assert.equal(output.items.length, 3);
   await assert.rejects(fs.access(path.join(rootDir, 'data', 'news', '2026-07-31.json')));
   await fs.access(path.join(rootDir, 'data', 'news', '2026-08-01.json'));
+  const seen = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'seen.json'), 'utf8'));
+  assert.equal(Object.keys(seen.events).length, 3);
+
+  const repeated = await runPipeline({ rootDir, sources, fetchImpl: pipelineFetch, now: new Date('2026-08-01T04:00:00Z') });
+  assert.equal(repeated.status.newEvents, 0);
+  assert.equal(repeated.items.length, 3);
+});
+
+test('failed translations remain retryable and are not added to seen registry', async () => {
+  const rootDir = await fs.mkdtemp(path.join(os.tmpdir(), 'signal-ai-retry-'));
+  const originalTranslationBaseUrl = process.env.TRANSLATION_BASE_URL;
+  process.env.TRANSLATION_BASE_URL = 'https://translate.test';
+  const fetchImpl = async (url) => {
+    if (String(url).startsWith('https://translate.test')) return { ok: false, status: 503 };
+    return { ok: true, text: async () => fixture };
+  };
+  const { status, items } = await runPipeline({ rootDir, sources: [source], fetchImpl, now: new Date('2026-08-01T03:00:00Z') });
+  if (originalTranslationBaseUrl == null) delete process.env.TRANSLATION_BASE_URL;
+  else process.env.TRANSLATION_BASE_URL = originalTranslationBaseUrl;
+  assert.equal(status.pendingTranslation, 3);
+  assert.equal(items.length, 0);
+  const seen = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'seen.json'), 'utf8'));
+  assert.equal(Object.keys(seen.events).length, 0);
 });

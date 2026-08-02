@@ -46,7 +46,7 @@ pnpm fetch
 
 ## GitHub 每小时更新
 
-`.github/workflows/update-news.yml` 会在每小时第 17 分钟运行，也支持从 Actions 页面手动触发。
+`.github/workflows/update-news.yml` 会按北京时间每天 01:00、07:00、12:30 和 19:00 运行，也支持从 Actions 页面手动触发。
 
 启用 DeepSeek 增强时，在仓库设置中添加：
 
@@ -59,12 +59,13 @@ pnpm fetch
 
 ## 数据与隐私
 
-- `data/news/YYYY-MM-DD.json`：北京时间当天分片
-- `data/index.json`：当天首页索引
-- `data/search.json`：当天搜索数据
+- `data/news/YYYY-MM-DD.json`：最近一次滚动快照
+- `data/index.json`：最近 36 小时首页索引
+- `data/search.json`：最近 36 小时搜索数据
+- `data/seen.json`：最近 7 天已见事件 ID，用于跨运行去重
 - `data/trends.json`：趋势汇总
 - `data/status.json`：来源健康状态
 
 网站只展示 RSS 提供的元数据与中文短摘要，并始终链接原文。收藏和已读状态只保存在浏览器本地。
 
-每天北京时间零点后，下一次运行会自动清理旧日期分片；页面只展示当天发布的新闻。
+页面展示最近 36 小时发布的新闻，并标注原始发布时间。即使昨天发布的内容今天才进入来源，也能进入滚动窗口。新闻退出页面后，其事件 ID 仍保留 7 天，避免再次翻译或重复发布。

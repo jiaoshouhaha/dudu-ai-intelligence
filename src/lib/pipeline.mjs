@@ -5,8 +5,8 @@ import { dedupeItems } from './dedupe.mjs';
 import { scoreEvent } from './score.mjs';
 import { aiConfig, enrichEvents, finalizeFallback } from './ai-client.mjs';
 import { translateEventsToChinese, translationConfig } from './translate.mjs';
-import { readExistingData, writeDataFiles } from './storage.mjs';
-import { dateKeyInTimeZone } from './utils.mjs';
+import { readExistingData, readSeenData, writeDataFiles } from './storage.mjs';
+import { dateKeyInTimeZone, jaccard, tokenizeTitle } from './utils.mjs';
 
 async function fetchSource(source, options) {
   const started = Date.now();
@@ -38,28 +38,44 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
   };
   const enabledSources = sources.filter((source) => source.enabled !== false);
   const todayKey = dateKeyInTimeZone(now, 'Asia/Shanghai');
+  const windowHours = Number(process.env.NEWS_WINDOW_HOURS || 36);
+  const windowCutoff = now.valueOf() - windowHours * 36e5;
   const results = await Promise.all(enabledSources.map((source) => fetchSource(source, options)));
   const normalized = results
     .flatMap((result) => result.items)
     .map(normalizeItem)
-    .filter((item) => dateKeyInTimeZone(item.publishedAt, 'Asia/Shanghai') === todayKey);
+    .filter((item) => new Date(item.publishedAt).valueOf() >= windowCutoff && new Date(item.publishedAt).valueOf() <= now.valueOf() + 5 * 60e3);
   const freshEvents = dedupeItems(normalized).map((event) => scoreEvent(event, now));
   const existing = (await readExistingData(resolvedDataDir))
-    .filter((event) => dateKeyInTimeZone(event.publishedAt, 'Asia/Shanghai') === todayKey);
+    .filter((event) => new Date(event.publishedAt).valueOf() >= windowCutoff);
+  const seen = await readSeenData(resolvedDataDir);
+  const seenCutoff = now.valueOf() - 7 * 864e5;
+  const retainedSeen = Object.fromEntries(Object.entries(seen).filter(([, lastSeenAt]) => new Date(lastSeenAt).valueOf() >= seenCutoff));
   const existingIds = new Set(existing.map((item) => item.id));
   const maxNew = Number(process.env.MAX_NEW_ITEMS_PER_RUN || 80);
-  const newEvents = freshEvents.filter((event) => !existingIds.has(event.id)).slice(0, maxNew);
+  const matchesExisting = (event) => existing.some((old) =>
+    old.id === event.id ||
+    old.normalizedUrl === event.normalizedUrl ||
+    jaccard(tokenizeTitle(old.titleOriginal), tokenizeTitle(event.titleOriginal)) >= 0.72
+  );
+  const duplicateEvents = freshEvents.filter((event) => matchesExisting(event));
+  const newEvents = freshEvents
+    .filter((event) => !existingIds.has(event.id) && !retainedSeen[event.id] && !matchesExisting(event))
+    .slice(0, maxNew);
   const enriched = await enrichEvents(newEvents, aiConfig());
   const refreshedExisting = existing.map((event) => finalizeFallback(event));
   const mergedBeforeTranslation = [...enriched, ...refreshedExisting.filter((old) => !enriched.some((item) => item.id === old.id))];
   const translated = await translateEventsToChinese(mergedBeforeTranslation, translationConfig(), fetchImpl);
   const merged = translated.filter((event) => event.titleZh && event.summaryZh);
+  const seenAt = now.toISOString();
+  for (const event of [...merged, ...duplicateEvents]) retainedSeen[event.id] = seenAt;
   const finishedAt = new Date().toISOString();
   const status = {
     startedAt,
     finishedAt,
     date: todayKey,
     timezone: 'Asia/Shanghai',
+    windowHours,
     mode: aiConfig().apiKey ? 'deepseek' : 'rules',
     sourceCount: enabledSources.length,
     successfulSources: results.filter((result) => result.ok).length,
@@ -70,7 +86,7 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
     totalEvents: merged.length,
     sources: results.map(({ items: _items, ...result }) => result)
   };
-  const retained = await writeDataFiles(resolvedDataDir, merged, status, todayKey);
+  const retained = await writeDataFiles(resolvedDataDir, merged, status, todayKey, retainedSeen);
   return { status, items: retained };
 }
 
