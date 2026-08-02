@@ -21,10 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-      DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
-      DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
-      DEEPSEEK_DAILY_LIMIT: ${{ vars.DEEPSEEK_DAILY_LIMIT }}
       MAX_NEW_ITEMS_PER_RUN: '80'
       NEWS_WINDOW_HOURS: '36'
       TRANSLATION_BASE_URL: ${{ vars.TRANSLATION_BASE_URL }}
@@ -52,6 +48,11 @@ jobs:
 
       - name: Fetch and process news
         run: pnpm fetch
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          DEEPSEEK_DAILY_LIMIT: ${{ vars.DEEPSEEK_DAILY_LIMIT }}
 
       - name: Commit updated data
         run: |
