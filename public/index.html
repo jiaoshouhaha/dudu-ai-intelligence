@@ -12,15 +12,14 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="SIGNAL AI 首页">SIGNAL<span>/AI</span></a>
       <nav class="main-nav" aria-label="新闻分类">
-        <button class="nav-link active" data-view="today">今日概览</button>
-        <button class="nav-link" data-view="latest">最新</button>
+        <button class="nav-link active" data-view="latest">最新</button>
         <button class="nav-link" data-category="models">模型</button>
         <button class="nav-link" data-category="products">产品</button>
         <button class="nav-link" data-category="business">商业</button>
         <button class="nav-link" data-category="research">研究</button>
         <button class="nav-link" data-category="policy">政策</button>
       </nav>
-      <a class="header-search" href="#newsFeed">搜索新闻 ↓</a>
+      <a class="header-search" href="#newsFeed">搜索 ↓</a>
     </header>
 
     <main id="top">
@@ -29,30 +28,12 @@
         <span id="updateLabel">正在读取最新数据…</span>
       </section>
 
-      <section class="dashboard content-width" aria-label="新闻数据概览">
-        <article class="metric"><span>最新收录</span><strong id="totalMetric">—</strong><small>滚动 36 小时</small></article>
-        <article class="metric"><span>重点新闻</span><strong id="importantMetric">—</strong><small id="importantMetricNote">重要度 80+</small></article>
-        <article class="metric"><span>最后更新</span><strong id="updatedMetric">—</strong><small id="updatedMetricExact">等待数据</small></article>
-        <article class="metric metric-accent"><span>下次抓取</span><strong id="nextMetric">—</strong><small>北京时间自动运行</small></article>
-      </section>
-
       <aside id="statusBanner" class="status-banner content-width" hidden></aside>
-
-      <section id="leadSection" class="lead-grid content-width" aria-labelledby="leadTitle">
-        <article id="leadStory" class="lead-story skeleton"></article>
-        <aside id="importantList" class="important-list" aria-label="热点排行"></aside>
-      </section>
-
-      <section class="discovery content-width" aria-label="新闻分类与趋势">
-        <div id="categoryCounts" class="category-counts"></div>
-        <div id="trendBar" class="trend-bar"></div>
-      </section>
 
       <section id="newsFeed" class="feed-section content-width">
         <div class="feed-heading">
           <div>
-            <p class="eyebrow">实时新闻流</p>
-            <h2 id="feedTitle">最新动态</h2>
+            <h1 id="feedTitle">新闻时间线</h1>
             <p id="resultCount" class="result-count"></p>
           </div>
           <div class="feed-tools">
@@ -70,6 +51,7 @@
             </div>
           </div>
         </div>
+        <div id="categoryCounts" class="category-counts" aria-label="按分类筛选"></div>
         <div id="activeFilters" class="active-filters"></div>
         <div id="newsGrid" class="news-stream" aria-live="polite"></div>
         <div id="emptyState" class="empty-state" hidden>
@@ -82,9 +64,9 @@
 
     <template id="cardTemplate">
       <article class="news-item">
-        <div class="news-rail"><span class="importance-label"></span><strong class="score"></strong><time></time></div>
+        <div class="news-rail"><span class="timeline-dot" aria-hidden="true"></span><time></time></div>
         <div class="news-body">
-          <div class="item-meta"><span class="category"></span><span class="source-name"></span><span class="source-type"></span></div>
+          <div class="item-meta"><span class="source-name"></span><span class="category"></span><span class="importance-label"></span><span class="score"></span></div>
           <h3><a class="title-link" target="_blank" rel="noopener noreferrer"></a></h3>
           <p class="summary"></p><p class="reason"></p>
           <div class="card-footer"><a class="original-link" target="_blank" rel="noopener noreferrer">查看原文 ↗</a><div><button class="save-button" aria-label="收藏新闻">☆</button><button class="read-button">标为已读</button></div></div>
