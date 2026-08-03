@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="嘟嘟的 AI 情报站中文新闻详情" />
+    <title>新闻详情 · 嘟嘟的 AI 情报站</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191915'/%3E%3Cpath d='M14 17h36v8H26v7h20v8H26v7h24v8H14z' fill='%23f3f0e8'/%3E%3Ccircle cx='50' cy='17' r='7' fill='%23ed5b2a'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./detail.css" />
+  </head>
+  <body>
+    <aside class="detail-sidebar">
+      <a class="detail-brand" href="./index.html">嘟嘟的<span>AI 情报站</span></a>
+      <p>中文情报详情</p>
+      <a class="back-link" href="./index.html">← 返回新闻时间线</a>
+      <div class="sidebar-note">自动翻译和整理公开信息<br />重要决策请核对原始来源</div>
+    </aside>
+
+    <main class="detail-shell">
+      <div id="loadingState" class="detail-state">正在读取中文详情…</div>
+      <div id="errorState" class="detail-state error" hidden>
+        <strong>没有找到这条新闻</strong>
+        <p id="errorMessage">链接可能已过期，或新闻已移出当前时间窗口。</p>
+        <a href="./index.html">返回首页</a>
+      </div>
+
+      <article id="detailArticle" hidden>
+        <nav class="mobile-back"><a href="./index.html">← 返回情报站</a></nav>
+        <header class="article-header">
+          <div id="articleMeta" class="article-meta"></div>
+          <h1 id="articleTitle"></h1>
+          <p id="articleLead" class="article-lead"></p>
+          <div id="articleTags" class="article-tags"></div>
+        </header>
+
+        <aside id="limitedNotice" class="source-notice" hidden>这篇解读基于来源公开摘要整理，细节有限；如需核对完整上下文，请查看原文。</aside>
+
+        <section class="detail-section">
+          <p class="section-kicker">01</p>
+          <h2>事情是什么</h2>
+          <div id="detailContent" class="detail-copy"></div>
+        </section>
+
+        <section id="keyPointsSection" class="detail-section">
+          <p class="section-kicker">02</p>
+          <h2>关键要点</h2>
+          <ul id="keyPoints" class="key-points"></ul>
+        </section>
+
+        <section class="detail-section">
+          <p class="section-kicker">03</p>
+          <h2>为什么值得关注</h2>
+          <p id="impactContent" class="detail-copy"></p>
+        </section>
+
+        <section id="actionSection" class="detail-section action-section" hidden>
+          <p class="section-kicker">04</p>
+          <h2>可以怎么做</h2>
+          <ol id="actionSteps" class="action-steps"></ol>
+        </section>
+
+        <footer class="article-footer">
+          <div>
+            <strong id="sourceName"></strong>
+            <span id="publishTime"></span>
+          </div>
+          <a id="originalLink" class="original-button" target="_blank" rel="noopener noreferrer">查看原文 ↗</a>
+        </footer>
+      </article>
+    </main>
+
+    <script type="module" src="./detail.js"></script>
+  </body>
+</html>

@@ -3,6 +3,7 @@ import { clamp } from './utils.mjs';
 const VALID_CATEGORIES = new Set(['models', 'products', 'agent', 'tips', 'business', 'research', 'policy', 'opensource', 'opinion', 'other']);
 const VALID_CONTENT_TYPES = new Set(['official', 'practical', 'opensource', 'paper', 'benchmark', 'industry', 'opinion']);
 const VALID_EVIDENCE_LEVELS = new Set(['primary', 'verified', 'practitioner', 'unverified']);
+const VALID_DETAIL_COMPLETENESS = new Set(['full', 'summary', 'limited']);
 const MODEL_PATTERNS = [
   ['GPT / Codex', /\bgpt\b|codex|openai/i], ['Claude', /claude|anthropic/i], ['Gemini', /gemini|deepmind/i],
   ['DeepSeek', /deepseek/i], ['Qwen', /qwen|通义千问/i], ['Kimi', /\bkimi\b|moonshot|月之暗面/i],
@@ -28,6 +29,9 @@ export function validateAiPayload(payload) {
   if (!Array.isArray(payload.keywords)) payload.keywords = [];
   const contentType = VALID_CONTENT_TYPES.has(payload.contentType) ? payload.contentType : 'industry';
   const evidenceLevel = VALID_EVIDENCE_LEVELS.has(payload.evidenceLevel) ? payload.evidenceLevel : 'unverified';
+  const cleanList = (value, limit, itemLimit) => Array.isArray(value)
+    ? value.map((item) => String(item).trim().slice(0, itemLimit)).filter(Boolean).slice(0, limit)
+    : [];
   return {
     titleZh: String(payload.titleZh).slice(0, 240),
     titleEn: String(payload.titleEn).slice(0, 240),
@@ -39,6 +43,11 @@ export function validateAiPayload(payload) {
     models: Array.isArray(payload.models) ? payload.models.map(String).slice(0, 6) : [],
     contentType,
     evidenceLevel,
+    detailZh: String(payload.detailZh || payload.summaryZh).slice(0, 2400),
+    keyPointsZh: cleanList(payload.keyPointsZh, 5, 300),
+    impactZh: String(payload.impactZh || payload.reasonZh).slice(0, 800),
+    actionStepsZh: cleanList(payload.actionStepsZh, 5, 400),
+    detailCompleteness: VALID_DETAIL_COMPLETENESS.has(payload.detailCompleteness) ? payload.detailCompleteness : 'summary',
     importance: clamp(Math.round(Number(payload.importance) || 1), 1, 100),
     reasonZh: String(payload.reasonZh).slice(0, 300),
     reasonEn: String(payload.reasonEn).slice(0, 300)
@@ -71,12 +80,12 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
         model: config.model,
         thinking: { type: 'disabled' },
         temperature: 0.1,
-        max_tokens: 1600,
+        max_tokens: 2800,
         response_format: { type: 'json_object' },
         messages: [
           {
             role: 'system',
-            content: 'You are a Chinese AI intelligence editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,contentType,topics,models,evidenceLevel,keywords,importance,reasonZh,reasonEn. category must be models,products,agent,tips,business,research,policy,opensource,opinion,other. contentType must be official,practical,opensource,paper,benchmark,industry,opinion. evidenceLevel must be primary,verified,practitioner,unverified. Practical configurations, reproducible workflows, code and cost-saving methods are valuable. Lower scores for hype or unsupported claims. importance is 1-100. Translate accurately, summarize in concise Chinese, and do not invent details.'
+            content: 'You are a Chinese AI intelligence editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,contentType,topics,models,evidenceLevel,keywords,importance,reasonZh,reasonEn,detailZh,keyPointsZh,impactZh,actionStepsZh,detailCompleteness. category must be models,products,agent,tips,business,research,policy,opensource,opinion,other. contentType must be official,practical,opensource,paper,benchmark,industry,opinion. evidenceLevel must be primary,verified,practitioner,unverified. detailZh is a clear 2-4 paragraph Chinese explanation of what happened, its background and known facts. keyPointsZh is 2-5 concise factual points. impactZh explains practical impact for readers, developers or the industry. actionStepsZh contains 0-5 actionable steps only when the source supports them, especially for practical tips; otherwise return an empty array. detailCompleteness must be full,summary,limited based on source material richness. Practical configurations, reproducible workflows, code and cost-saving methods are valuable. Lower scores for hype or unsupported claims. importance is 1-100. Translate accurately. Use only facts present in the input, explicitly reflect limited source material, and never invent details.'
           },
           { role: 'user', content: JSON.stringify(prompt) }
         ]
@@ -100,6 +109,11 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
       models: result.models,
       contentType: result.contentType,
       evidenceLevel: result.evidenceLevel,
+      detailZh: result.detailZh,
+      keyPointsZh: result.keyPointsZh,
+      impactZh: result.impactZh,
+      actionStepsZh: result.actionStepsZh,
+      detailCompleteness: result.detailCompleteness,
       importance: result.importance,
       importanceReasonZh: result.reasonZh,
       importanceReasonEn: result.reasonEn,
@@ -150,6 +164,11 @@ export function finalizeFallback(event, error = null) {
     models: models.slice(0, 6),
     contentType,
     evidenceLevel,
+    detailZh: event.detailZh || '',
+    keyPointsZh: Array.isArray(event.keyPointsZh) ? event.keyPointsZh : [],
+    impactZh: event.impactZh || event.importanceReasonZh || '',
+    actionStepsZh: Array.isArray(event.actionStepsZh) ? event.actionStepsZh : [],
+    detailCompleteness: VALID_DETAIL_COMPLETENESS.has(event.detailCompleteness) ? event.detailCompleteness : 'limited',
     processingError: error ? String(error.message || error).slice(0, 240) : null
   };
 }

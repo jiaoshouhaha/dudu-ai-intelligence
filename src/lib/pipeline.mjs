@@ -65,8 +65,14 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
   const newEvents = freshEvents
     .filter((event) => !existingIds.has(event.id) && !retainedSeen[event.id] && !matchesExisting(event))
     .slice(0, maxNew);
-  const enriched = await enrichEvents(newEvents, aiConfig());
-  const refreshedExisting = existing.map((event) => finalizeFallback(event));
+  const detailBackfill = existing
+    .filter((event) => !event.detailZh)
+    .slice(0, Math.max(0, maxNew - newEvents.length));
+  const enrichedCandidates = await enrichEvents([...newEvents, ...detailBackfill], aiConfig());
+  const enriched = enrichedCandidates.slice(0, newEvents.length);
+  const backfilledDetails = enrichedCandidates.slice(newEvents.length);
+  const backfillById = new Map(backfilledDetails.map((event) => [event.id, event]));
+  const refreshedExisting = existing.map((event) => backfillById.get(event.id) || finalizeFallback(event));
   const mergedBeforeTranslation = [...enriched, ...refreshedExisting.filter((old) => !enriched.some((item) => item.id === old.id))];
   const translated = await translateEventsToChinese(mergedBeforeTranslation, translationConfig(), fetchImpl);
   const merged = translated.filter((event) => event.titleZh && event.summaryZh);
@@ -85,6 +91,7 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
     failedSources: results.filter((result) => !result.ok).length,
     fetchedItems: normalized.length,
     newEvents: enriched.length,
+    detailBackfilled: backfilledDetails.filter((event) => event.detailZh).length,
     pendingTranslation: translated.length - merged.length,
     totalEvents: merged.length,
     sources: results.map(({ items: _items, ...result }) => result)

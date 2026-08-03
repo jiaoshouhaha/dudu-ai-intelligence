@@ -50,6 +50,16 @@ test('AI payload validation clamps score and normalizes unknown categories', () 
   assert.equal(value.category, 'other');
   assert.equal(value.contentType, 'industry');
   assert.equal(value.evidenceLevel, 'unverified');
+  assert.equal(value.detailZh, '摘要');
+  assert.equal(value.detailCompleteness, 'summary');
+});
+
+test('AI payload validation keeps structured Chinese detail fields', () => {
+  const value = validateAiPayload({ titleZh: '中', titleEn: 'EN', summaryZh: '摘要', summaryEn: 'Summary', category: 'tips', keywords: ['agent'], importance: 80, reasonZh: '理由', reasonEn: 'Reason', detailZh: '第一段。\n\n第二段。', keyPointsZh: ['要点一', '', '要点二'], impactZh: '可以降低成本。', actionStepsZh: ['创建配置', '运行测试'], detailCompleteness: 'full' });
+  assert.equal(value.detailZh, '第一段。\n\n第二段。');
+  assert.deepEqual(value.keyPointsZh, ['要点一', '要点二']);
+  assert.deepEqual(value.actionStepsZh, ['创建配置', '运行测试']);
+  assert.equal(value.detailCompleteness, 'full');
 });
 
 test('parses AI HOT discovery items while preserving the original link and attribution', () => {
@@ -74,7 +84,7 @@ test('DeepSeek request disables thinking and asks for structured Chinese output'
     request = { url: String(url), body: JSON.parse(options.body) };
     return {
       ok: true,
-      json: async () => ({ choices: [{ message: { content: JSON.stringify({ titleZh: '中文标题', titleEn: 'English title', summaryZh: '中文摘要', summaryEn: 'English summary', category: 'models', contentType: 'official', topics: ['推理'], models: ['DeepSeek'], evidenceLevel: 'primary', keywords: ['模型'], importance: 91, reasonZh: '影响广泛', reasonEn: 'Broad impact' }) } }] })
+      json: async () => ({ choices: [{ message: { content: JSON.stringify({ titleZh: '中文标题', titleEn: 'English title', summaryZh: '中文摘要', summaryEn: 'English summary', category: 'models', contentType: 'official', topics: ['推理'], models: ['DeepSeek'], evidenceLevel: 'primary', keywords: ['模型'], importance: 91, reasonZh: '影响广泛', reasonEn: 'Broad impact', detailZh: '这是更详细的中文介绍。', keyPointsZh: ['关键点'], impactZh: '影响开发者。', actionStepsZh: [], detailCompleteness: 'summary' }) } }] })
     };
   };
   const event = { titleOriginal: 'AI model launch', summaryOriginal: 'A model was released.', category: 'models', sources: [{ name: 'Official' }], publishedAt: '2026-08-01T17:00:00Z', importance: 80 };
@@ -87,6 +97,8 @@ test('DeepSeek request disables thinking and asks for structured Chinese output'
   assert.equal(result.scoringMode, 'ai');
   assert.deepEqual(result.models, ['DeepSeek']);
   assert.equal(result.evidenceLevel, 'primary');
+  assert.equal(result.detailZh, '这是更详细的中文介绍。');
+  assert.deepEqual(result.keyPointsZh, ['关键点']);
 });
 
 test('Beijing calendar date is used across the UTC day boundary', () => {
