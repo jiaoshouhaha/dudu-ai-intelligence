@@ -23,7 +23,7 @@ export function aiConfig(env = process.env) {
 
 export function validateAiPayload(payload) {
   if (!payload || typeof payload !== 'object') throw new Error('AI response is not an object');
-  const required = ['titleZh', 'titleEn', 'summaryZh', 'summaryEn', 'category', 'keywords', 'importance', 'reasonZh', 'reasonEn'];
+  const required = ['titleZh', 'titleEn', 'summaryZh', 'summaryEn', 'category', 'importance', 'reasonZh', 'reasonEn'];
   for (const key of required) if (payload[key] == null) throw new Error(`AI response missing ${key}`);
   if (!VALID_CATEGORIES.has(payload.category)) payload.category = 'other';
   if (!Array.isArray(payload.keywords)) payload.keywords = [];
