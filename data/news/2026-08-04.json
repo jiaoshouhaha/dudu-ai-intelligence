@@ -1,7 +1,3095 @@
 {
-  "generatedAt": "2026-08-04T00:56:35.982Z",
+  "generatedAt": "2026-08-04T04:21:29.798Z",
   "date": "2026-08-04",
   "items": [
+    {
+      "id": "198039dd29e7a7e5",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00004",
+      "originalUrl": "https://arxiv.org/abs/2608.00004",
+      "titleOriginal": "Cost-Effective Automated Judging of Natural-Language Mathematical Proofs",
+      "summaryOriginal": "arXiv:2608.00004v1 Announce Type: new Abstract: Grading natural-language mathematical proofs is a recurring cost in evaluating math-reasoning systems, and frontier LLM judges are expensive. We ask whether cheap open-weight models can serve as reliable judges given a candidate proof, a ground-truth proof, and a human-grading rubric. On a 200-instance validation sample of IMO-GradingBench, three cheap judges (GPT-OSS 120B, DeepSeek-V4 Flash, Gemma-4 31B) agree with human pass/fail decisions at rates statistically indistinguishable from Claude Opus 4.7 and Gemini 3.1 Pro, at up to $100\\times$ lower cost. We had expected a majority vote of the three to be the best budget option; it matched the frontier but did not improve on its strongest member. Extending to the full 1000-instance benchmark and exploring consensus rules, we found that requiring unanimous agreement (all-three-pass) reaches the highest pass-agreement and precision and, on four replicate runs, the smallest run-to-run spread. The headline finding is that cheap judges are competitive with the frontier at one to two orders of magnitude lower cost; as a deployable default we recommend all-three-pass, with the caveat that thi",
+      "originalLanguage": "en",
+      "author": "Benjamin Grayzel",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00004",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Cost-Effective Automated Judging of Natural-Language Mathematical Proofs",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该研究提供了关于使用廉价模型进行数学证明评判的实证数据，对AI评估领域具有实际意义，且成本效益显著。",
+      "importanceReasonEn": "The study provides empirical data on using cheap models for mathematical proof judging, which is practically significant for AI evaluation with notable cost savings.",
+      "scoringMode": "ai",
+      "titleZh": "自然语言数学证明的经济高效自动评判",
+      "titleEn": "Cost-Effective Automated Judging of Natural-Language Mathematical Proofs",
+      "summaryZh": "该研究探讨了使用廉价开源模型评判自然语言数学证明的可行性。在200个样本的验证集上，三个廉价评判模型（GPT-OSS 120B、DeepSeek-V4 Flash、Gemma-4 31B）与人类评判的一致性不亚于前沿模型，但成本低100倍。研究发现，要求三个模型一致通过（all-three-pass）的共识规则在通过一致性和精确度上表现最佳，且运行间波动最小。",
+      "summaryEn": "This research explores the feasibility of using cheap open-weight models to judge natural-language mathematical proofs. On a 200-instance validation set, three cheap judges (GPT-OSS 120B, DeepSeek-V4 Flash, Gemma-4 31B) match frontier models in agreement with human pass/fail decisions at up to 100x lower cost. The study finds that requiring unanimous agreement (all-three-pass) achieves the highest pass-agreement and precision with minimal run-to-run variance.",
+      "keywords": [
+        "数学证明",
+        "自动评判",
+        "成本效益",
+        "开源模型",
+        "共识规则"
+      ],
+      "topics": [
+        "LLM evaluation",
+        "mathematical proof",
+        "cost efficiency",
+        "model agreement"
+      ],
+      "models": [
+        "GPT-OSS 120B",
+        "DeepSeek-V4 Flash",
+        "Gemma-4 31B",
+        "Claude Opus 4.7",
+        "Gemini 3.1 Pro"
+      ],
+      "detailZh": "该研究针对自然语言数学证明的自动评判问题，提出使用廉价开源模型替代昂贵的前沿模型。研究基于IMO-GradingBench数据集，包含200个实例的验证集和1000个实例的完整基准。三个廉价评判模型（GPT-OSS 120B、DeepSeek-V4 Flash、Gemma-4 31B）在通过/失败判断上与人类评判的一致性，与Claude Opus 4.7和Gemini 3.1 Pro等前沿模型相当，但成本降低高达100倍。\n\n研究还探索了共识规则，发现要求三个模型一致通过（all-three-pass）的规则在通过一致性和精确度上表现最佳，且在四次重复运行中运行间波动最小。这一发现为实际部署提供了建议，即默认使用all-three-pass规则，但需注意其可能存在的局限性。",
+      "keyPointsZh": [
+        "廉价模型（GPT-OSS 120B、DeepSeek-V4 Flash、Gemma-4 31B）在数学证明评判上与前沿模型表现相当。",
+        "成本降低高达100倍，具有显著的经济效益。",
+        "all-three-pass共识规则在通过一致性和精确度上表现最佳，且运行间波动最小。",
+        "研究基于IMO-GradingBench数据集，包含200个实例的验证集和1000个实例的完整基准。"
+      ],
+      "impactZh": "该研究为AI评估领域提供了成本效益高的解决方案，使得大规模数学证明评判成为可能。对于开发者和研究人员，这意味着可以在预算有限的情况下进行高质量的评估。对于行业而言，这降低了AI系统评估的门槛，促进了更广泛的应用。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00004",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Cost-Effective Automated Judging of Natural-Language Mathematical Proofs",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "0e42c4197b22c674",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00005",
+      "originalUrl": "https://arxiv.org/abs/2608.00005",
+      "titleOriginal": "RubricReviewer: From Direct Critique to Objective and Comprehensive Rubric-Driven Peer Review",
+      "summaryOriginal": "arXiv:2608.00005v1 Announce Type: new Abstract: Peer review at major venues is under unprecedented submission pressure, motivating the use of large language models (LLMs) as review assistants. Existing LLM-based reviewers, however, face two structural limitations. First, they map manuscripts directly to reviews, leaving the underlying rubric implicit and entangling its derivation with the judgement. Second, the prevailing paradigms each capture only half of a good review: training-free agents gather broad evidence but produce undirected critiques, while training-based reviewers inherit human discriminative judgement together with its noise and uneven coverage. We introduce RubricReviewer, a fully rubric-driven framework that addresses both limitations. It makes rubric generation an explicit intermediate step, so that both review generation and the final assessment are conditioned on paper-adaptive rubrics. It further combines a training-free agent (Scout) that gathers external evidence with a human-aligned trained model (Aligner) that consumes this evidence, fusing the strengths of both supervision sources. Experiments on real-world submissions show that RubricReviewer produces rev",
+      "originalLanguage": "en",
+      "author": "Shuyu Guo, Wenxiang Hu, Yuyue Zhao, Yougang Lyu, Xiaohui Yan",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00005",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "RubricReviewer: From Direct Critique to Objective and Comprehensive Rubric-Driven Peer Review",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该论文提出了一种新颖的基于评分标准的LLM评审框架，解决了现有方法的两个结构性限制，并通过实验验证了其有效性。对于学术出版和AI辅助评审领域具有实际意义。",
+      "importanceReasonEn": "The paper proposes a novel rubric-driven LLM review framework that addresses two structural limitations of existing methods and validates its effectiveness through experiments. It has practical significance for academic publishing and AI-assisted review.",
+      "scoringMode": "ai",
+      "titleZh": "RubricReviewer：从直接批评到基于客观全面评分标准的同行评审",
+      "titleEn": "RubricReviewer: From Direct Critique to Objective and Comprehensive Rubric-Driven Peer Review",
+      "summaryZh": "arXiv:2608.00005v1 公告类型：新论文。摘要：主要会议上的同行评审面临前所未有的投稿压力，促使使用大型语言模型（LLM）作为评审助手。然而，现有的基于LLM的评审员面临两个结构性限制。首先，它们将稿件直接映射到评审，使底层评分标准隐含，并将其推导与判断纠缠在一起。其次，主流范式各自只捕捉了优秀评审的一半：免训练代理收集广泛证据但产生无针对性的批评，而基于训练的评审员继承了人类判别性判断及其噪声和不均匀覆盖。我们引入了RubricReviewer，一个完全由评分标准驱动的框架，解决了这两个限制。它将评分标准生成作为显式的中间步骤，使评审生成和最终评估都基于论文自适应的评分标准。它进一步结合了免训练代理（Scout）收集外部证据和与人类对齐的训练模型（Aligner）消费这些证据，融合了两种监督来源的优势。在真实世界投稿上的实验表明，RubricReviewer产生了高质量的评审。",
+      "summaryEn": "arXiv:2608.00005v1 Announce Type: new Abstract: Peer review at major venues is under unprecedented submission pressure, motivating the use of large language models (LLMs) as review assistants. Existing LLM-based reviewers, however, face two structural limitations. First, they map manuscripts directly to reviews, leaving the underlying rubric implicit and entangling its derivation with the judgement. Second, the prevailing paradigms each capture only half of a good review: training-free agents gather broad evidence but produce undirected critiques, while training-based reviewers inherit human discriminative judgement together with its noise and uneven coverage. We introduce RubricReviewer, a fully rubric-driven framework that addresses both limitations. It makes rubric generation an explici",
+      "keywords": [
+        "RubricReviewer",
+        "同行评审",
+        "LLM",
+        "评分标准",
+        "评审助手"
+      ],
+      "topics": [
+        "LLM",
+        "同行评审",
+        "评分标准",
+        "代理",
+        "训练模型"
+      ],
+      "models": [
+        "RubricReviewer",
+        "Scout",
+        "Aligner"
+      ],
+      "detailZh": "该论文针对学术同行评审中日益增长的投稿压力，提出使用大型语言模型（LLM）作为评审助手。然而，现有的基于LLM的评审员存在两个结构性限制：一是直接将稿件映射到评审，导致评分标准隐含且与判断纠缠；二是主流范式（免训练代理和基于训练的模型）各自只捕捉了优秀评审的一半。免训练代理能收集广泛证据但产生无针对性的批评，而基于训练的模型继承了人类判断的噪声和不均匀覆盖。\n\n为此，论文引入了RubricReviewer框架，该框架将评分标准生成作为显式中间步骤，使评审生成和最终评估都基于论文自适应的评分标准。它结合了免训练代理（Scout）收集外部证据和与人类对齐的训练模型（Aligner）消费这些证据，融合了两种监督来源的优势。在真实世界投稿上的实验表明，RubricReviewer能产生高质量的评审。",
+      "keyPointsZh": [
+        "RubricReviewer将评分标准生成作为显式中间步骤，使评审基于论文自适应的评分标准。",
+        "结合免训练代理（Scout）和训练模型（Aligner），融合两种监督来源的优势。",
+        "在真实世界投稿上的实验表明，RubricReviewer能产生高质量的评审。",
+        "解决了现有LLM评审员的两个结构性限制：隐含评分标准和单一范式局限。"
+      ],
+      "impactZh": "该研究对学术同行评审领域具有实际影响。RubricReviewer提供了一种更客观、全面的评审方法，有望提高评审质量和效率。对于开发者和研究人员，该框架可应用于其他需要结构化评估的任务，如项目评审、论文评分等。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00005",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "RubricReviewer: From Direct Critique to Objective and Comprehensive Rubric-Driven Peer Review",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "76dffd2eef287159",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00007",
+      "originalUrl": "https://arxiv.org/abs/2608.00007",
+      "titleOriginal": "MemoryForge: Synthesize Lifelong Memory for Human-Like LLM Agents",
+      "summaryOriginal": "arXiv:2608.00007v1 Announce Type: new Abstract: Equipping Large Language Models (LLMs) with human-like personas is crucial for agentic applications, such as role-play and user simulation. Traditional prompt-based methods rely on descriptive conditioning by injecting static textual profiles, which often makes agents show generic behaviors due to a lack of realistic life memory. To fill this gap, we introduce memory-based conditioning, a paradigm inspired by the cognitive psychology, which replaces abstract profiles with an autobiographical memory base, enabling frozen LLMs to dynamically retrieve situation-relevant memory to guide their behaviors. We formalize its enabling task as customized lifelong memory synthesis and propose MemoryForge, a novel framework to synthesize such lifelong memory from brief target personas. MemoryForge has three key components: a context generator for socio-historical grounding, a life organizer for developmental coherence toward the target identity, and a multi-resolution simulator that balances broad temporal summaries with high-fidelity episodic experiences. Experiments on PersonaGym for role-play and SimulatorArena for user-simulation, show that th",
+      "originalLanguage": "en",
+      "author": "Bohan Tang, Yiwen Guo",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00007",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "MemoryForge: Synthesize Lifelong Memory for Human-Like LLM Agents",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 85,
+      "importanceReasonZh": "该研究提出了一种新颖的基于记忆的条件化方法，替代传统的静态文本描述，为LLM智能体赋予更真实的人类行为，具有较高的创新性和应用潜力。",
+      "importanceReasonEn": "This research proposes a novel memory-based conditioning approach that replaces static text descriptions, enabling more realistic human-like behaviors in LLM agents, with high innovation and application potential.",
+      "scoringMode": "ai",
+      "titleZh": "MemoryForge：为类人LLM智能体合成终身记忆",
+      "titleEn": "MemoryForge: Synthesize Lifelong Memory for Human-Like LLM Agents",
+      "summaryZh": "该论文提出了一种名为MemoryForge的新框架，旨在为大型语言模型（LLM）智能体合成终身记忆，以替代传统的基于提示的静态文本描述方法。该框架受认知心理学启发，采用基于记忆的条件化方法，使冻结的LLM能够动态检索与情境相关的记忆来指导行为。MemoryForge包含三个关键组件：用于社会历史背景的上下文生成器、用于目标身份发展连贯性的生活组织器，以及平衡时间摘要与高保真情景经验的多分辨率模拟器。在PersonaGym和SimulatorArena上的实验表明，该方法在角色扮演和用户模拟任务中取得了显著效果。",
+      "summaryEn": "This paper introduces a novel framework called MemoryForge to synthesize lifelong memory for Large Language Model (LLM) agents, replacing traditional prompt-based methods that rely on static textual profiles. Inspired by cognitive psychology, the framework employs memory-based conditioning, enabling frozen LLMs to dynamically retrieve situation-relevant memories to guide behavior. MemoryForge consists of three key components: a context generator for socio-historical grounding, a life organizer for developmental coherence toward the target identity, and a multi-resolution simulator that balances broad temporal summaries with high-fidelity episodic experiences. Experiments on PersonaGym and SimulatorArena demonstrate significant improvements in role-play and user simulation tasks.",
+      "keywords": [],
+      "topics": [
+        "LLM agents",
+        "memory synthesis",
+        "role-play",
+        "user simulation"
+      ],
+      "models": [
+        "LLM"
+      ],
+      "detailZh": "该论文针对大型语言模型（LLM）智能体在角色扮演和用户模拟等应用中缺乏真实生活记忆的问题，提出了一种基于记忆的条件化范式。传统方法通常通过注入静态文本描述来设定智能体的人格，但这种方法往往导致智能体表现出通用行为，缺乏个性。MemoryForge框架从简短的目标人格描述出发，合成一个自传体记忆库，使冻结的LLM能够动态检索与情境相关的记忆来指导行为。该框架包含三个关键组件：上下文生成器用于生成社会历史背景，生活组织器确保记忆的发展连贯性，多分辨率模拟器平衡时间摘要与高保真情景经验。实验在PersonaGym和SimulatorArena上进行，结果表明该方法在角色扮演和用户模拟任务中显著优于基线方法。",
+      "keyPointsZh": [
+        "提出基于记忆的条件化范式，替代传统的静态文本描述。",
+        "MemoryForge框架包含上下文生成器、生活组织器和多分辨率模拟器三个组件。",
+        "在PersonaGym和SimulatorArena上验证了方法的有效性。",
+        "该方法使冻结的LLM能够动态检索情境相关记忆，增强行为真实性。"
+      ],
+      "impactZh": "该研究为LLM智能体的人格设定提供了新思路，有望提升角色扮演、用户模拟等应用的逼真度和个性化水平。对于开发者而言，可以借鉴该框架构建更真实的对话智能体，改善用户体验。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00007",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "MemoryForge: Synthesize Lifelong Memory for Human-Like LLM Agents",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 91,
+        "peak": 93,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 76
+          },
+          {
+            "label": "20小时前",
+            "value": 77
+          },
+          {
+            "label": "18小时前",
+            "value": 79
+          },
+          {
+            "label": "16小时前",
+            "value": 81
+          },
+          {
+            "label": "14小时前",
+            "value": 82
+          },
+          {
+            "label": "12小时前",
+            "value": 84
+          },
+          {
+            "label": "10小时前",
+            "value": 85
+          },
+          {
+            "label": "8小时前",
+            "value": 87
+          },
+          {
+            "label": "6小时前",
+            "value": 89
+          },
+          {
+            "label": "4小时前",
+            "value": 90
+          },
+          {
+            "label": "2小时前",
+            "value": 92
+          },
+          {
+            "label": "现在",
+            "value": 93
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "1a02cd179a004393",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00011",
+      "originalUrl": "https://arxiv.org/abs/2608.00011",
+      "titleOriginal": "DLLM-TTS: Block Discrete Diffusion Language Model for Text-to-Speech Synthesis",
+      "summaryOriginal": "arXiv:2608.00011v1 Announce Type: new Abstract: Current text-to-speech systems face a trade-off: autoregres- sive codec language models produce highly intelligible speech but require large-scale models and training data and decode tokens sequentially, while non-autoregressive approaches im- prove speed at the cost of linguistic accuracy. We present DLLM-TTS, a framework that formulates TTS as conditional block discrete diffusion over X-Codec2 neural audio codec to- kens. The model decomposes sequences into blocks and applies masked diffusion within each block while processing blocks se- quentially, learning both local acoustic coherence and global text-speech alignment. During inference, parallel token pre- diction within blocks enables efficient generation with a real- time factor (RTF) of 0.15. A 0.6B-parameter model trained on 20K hours achieves competitive performance on the Seed- TTS-eval benchmark, demonstrating that block discrete diffu- sion language models enable practical and data-efficient speech synthesis with parallel generation.",
+      "originalLanguage": "en",
+      "author": "Wasim Madha, Nityanand Mathur, Hamees Sayed, Apoorv Singh, Sameer Khurana, Akshat Mandloi, Sudarshan Kamath",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00011",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "DLLM-TTS: Block Discrete Diffusion Language Model for Text-to-Speech Synthesis",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 80,
+      "importanceReasonZh": "该论文提出了一种新颖的TTS方法，结合了自回归和非自回归的优势，实现了并行生成和高质量语音，具有实际应用潜力。",
+      "importanceReasonEn": "The paper proposes a novel TTS method combining advantages of autoregressive and non-autoregressive approaches, achieving parallel generation and high-quality speech, with practical application potential.",
+      "scoringMode": "ai",
+      "titleZh": "DLLM-TTS：用于文本到语音合成的块离散扩散语言模型",
+      "titleEn": "DLLM-TTS: Block Discrete Diffusion Language Model for Text-to-Speech Synthesis",
+      "summaryZh": "当前的文本到语音系统面临权衡：自回归编解码器语言模型产生高度清晰的语音，但需要大规模模型和训练数据，并顺序解码令牌；而非自回归方法以提高速度为代价，牺牲语言准确性。我们提出DLLM-TTS，一个将TTS表述为基于X-Codec2神经音频编解码器令牌的条件块离散扩散的框架。该模型将序列分解为块，并在每个块内应用掩码扩散，同时顺序处理块，学习局部声学连贯性和全局文本-语音对齐。在推理过程中，块内的并行令牌预测实现了高效生成，实时因子（RTF）为0.15。一个在20K小时上训练的0.6B参数模型在Seed-TTS-eval基准上取得了有竞争力的性能，表明块离散扩散语言模型能够实现实用且数据高效的并行语音合成。",
+      "summaryEn": "Current text-to-speech systems face a trade-off: autoregressive codec language models produce highly intelligible speech but require large-scale models and training data and decode tokens sequentially, while non-autoregressive approaches improve speed at the cost of linguistic accuracy. We present DLLM-TTS, a framework that formulates TTS as conditional block discrete diffusion over X-Codec2 neural audio codec tokens. The model decomposes sequences into blocks and applies masked diffusion within each block while processing blocks sequentially, learning both local acoustic coherence and global text-speech alignment. During inference, parallel token prediction within blocks enables efficient generation with a real-time factor (RTF) of 0.15. A 0.6B-parameter model trained on 20K hours achieve",
+      "keywords": [
+        "DLLM-TTS",
+        "block discrete diffusion",
+        "text-to-speech",
+        "X-Codec2",
+        "parallel generation"
+      ],
+      "topics": [
+        "text-to-speech",
+        "diffusion models",
+        "language models"
+      ],
+      "models": [
+        "DLLM-TTS"
+      ],
+      "detailZh": "该论文介绍了一种名为DLLM-TTS的文本到语音合成框架，旨在解决现有TTS系统中自回归模型速度慢和非自回归模型准确性低的问题。该方法基于X-Codec2神经音频编解码器令牌，采用条件块离散扩散模型。具体来说，模型将音频令牌序列分解为多个块，每个块内应用掩码扩散，同时按顺序处理块，从而同时学习局部声学连贯性和全局文本-语音对齐。这种设计允许在推理时并行预测块内的令牌，显著提高了生成速度，实时因子达到0.15。\n\n实验部分，作者使用了一个0.6B参数的模型，在20K小时的语音数据上进行训练，并在Seed-TTS-eval基准上取得了有竞争力的性能。这表明块离散扩散语言模型能够实现实用且数据高效的语音合成，同时保持并行生成的优势。该研究为TTS领域提供了一种新的思路，可能对实时语音合成应用产生重要影响。",
+      "keyPointsZh": [
+        "DLLM-TTS将TTS建模为条件块离散扩散，结合了自回归和非自回归的优点。",
+        "模型在块内并行预测令牌，实现了0.15的实时因子，显著提升生成速度。",
+        "0.6B参数模型在20K小时数据上训练，在Seed-TTS-eval基准上表现有竞争力。",
+        "该方法展示了块离散扩散语言模型在数据高效语音合成中的潜力。"
+      ],
+      "impactZh": "该研究对语音合成领域具有重要影响。首先，它提供了一种新的生成范式，能够在不牺牲语音质量的情况下实现并行生成，这对于实时应用（如语音助手、实时翻译）至关重要。其次，该方法在较小模型和数据规模下取得了有竞争力的性能，表明其数据效率较高，可能降低TTS系统的训练成本。此外，该框架可能启发后续研究，将扩散模型应用于其他序列生成任务。",
+      "actionStepsZh": [],
+      "detailCompleteness": "full",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00011",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "DLLM-TTS: Block Discrete Diffusion Language Model for Text-to-Speech Synthesis",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 86,
+        "peak": 88,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 71
+          },
+          {
+            "label": "20小时前",
+            "value": 72
+          },
+          {
+            "label": "18小时前",
+            "value": 74
+          },
+          {
+            "label": "16小时前",
+            "value": 76
+          },
+          {
+            "label": "14小时前",
+            "value": 77
+          },
+          {
+            "label": "12小时前",
+            "value": 79
+          },
+          {
+            "label": "10小时前",
+            "value": 80
+          },
+          {
+            "label": "8小时前",
+            "value": 82
+          },
+          {
+            "label": "6小时前",
+            "value": 84
+          },
+          {
+            "label": "4小时前",
+            "value": 85
+          },
+          {
+            "label": "2小时前",
+            "value": 87
+          },
+          {
+            "label": "现在",
+            "value": 88
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "1f646ab16a3d5dd8",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00012",
+      "originalUrl": "https://arxiv.org/abs/2608.00012",
+      "titleOriginal": "Obshazard-bench: Benchmarking Multimodal Foundation Models for Real-Time Disaster Intelligence from Raw Earth Observation Streams",
+      "summaryOriginal": "arXiv:2608.00012v1 Announce Type: new Abstract: Multimodal Large Language Models (MLLMs) are increasingly used to interpret Earth observation data, yet their capability to support real-world disaster emergency response remains insufficiently evaluated. Existing remote sensing benchmarks largely rely on static, post-hoc, and expert-processed products, such as gridded reanalysis data, which are difficult to align with operational disaster scenarios where hazards evolve rapidly and decisions must be made under strict time constraints. To bridge this gap, we introduce Obshazard-bench, a real-time, observation-driven benchmark for evaluating disaster intelligence in MLLMs. Unlike image-centric or post-event benchmarks, Obshazard-bench directly integrates raw, high-frequency satellite sounding streams from diverse satellite sensors with concurrent ground-station observations, historical disaster records, and socio-economic indicators, bypassing delayed expert-processing and physical-inversion pipelines. The benchmark covers 8 major disaster categories and 28 sub-categories across more than 60 countries, incorporating over 120 historically documented extreme-event cases and thousands of l",
+      "originalLanguage": "en",
+      "author": "Fengxiang Wang, Qiuyang Yu, Yueying Li, Mingshuo Chen, Chengchi Fei, Kaiyi Xu, Lixin Gu, Wangxu Wei, Junchao Gong, Lipeng Ma, Jiong Wang, Fenghua Ling, Wenlong Zhang, Xue Yang, Wenjing Yang, Ben Fei, Long Lan",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00012",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Obshazard-bench: Benchmarking Multimodal Foundation Models for Real-Time Disaster Intelligence from Raw Earth Observation Streams",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 85,
+      "importanceReasonZh": "该基准填补了现有遥感基准在实时灾害场景评估方面的空白，直接使用原始观测流，对灾害应急响应具有实际意义，且覆盖范围广，数据量大。",
+      "importanceReasonEn": "This benchmark fills a gap in existing remote sensing benchmarks for real-time disaster scenarios, directly using raw observation streams, which is practically significant for disaster emergency response, with wide coverage and large data volume.",
+      "scoringMode": "ai",
+      "titleZh": "Obshazard-bench：用于实时灾害情报的多模态基础模型基准测试",
+      "titleEn": "Obshazard-bench: Benchmarking Multimodal Foundation Models for Real-Time Disaster Intelligence from Raw Earth Observation Streams",
+      "summaryZh": "多模态大语言模型（MLLMs）越来越多地用于解释地球观测数据，但其支持实际灾害应急响应的能力尚未得到充分评估。现有的遥感基准大多依赖静态、事后和专家处理的产品，难以与灾害快速演变和严格时间限制下的操作场景对齐。为此，我们提出了Obshazard-bench，一个实时、观测驱动的基准，用于评估MLLMs的灾害情报能力。该基准直接整合来自多种卫星传感器的高频原始探测流、地面站观测、历史灾害记录和社会经济指标，绕过了延迟的专家处理和物理反演流程。基准涵盖8个主要灾害类别和28个子类别，涉及60多个国家，包含120多个历史极端事件案例和数千个……",
+      "summaryEn": "Multimodal Large Language Models (MLLMs) are increasingly used to interpret Earth observation data, yet their capability to support real-world disaster emergency response remains insufficiently evaluated. Existing remote sensing benchmarks largely rely on static, post-hoc, and expert-processed products, which are difficult to align with operational disaster scenarios. To bridge this gap, we introduce Obshazard-bench, a real-time, observation-driven benchmark for evaluating disaster intelligence in MLLMs. The benchmark directly integrates raw, high-frequency satellite sounding streams from diverse sensors with concurrent ground-station observations, historical disaster records, and socio-economic indicators, bypassing delayed expert-processing and physical-inversion pipelines. It covers 8 m",
+      "keywords": [
+        "Obshazard-bench",
+        "多模态基础模型",
+        "灾害应急",
+        "地球观测流",
+        "基准测试"
+      ],
+      "topics": [
+        "多模态大语言模型",
+        "灾害情报",
+        "地球观测",
+        "基准测试",
+        "实时监测"
+      ],
+      "models": [],
+      "detailZh": "Obshazard-bench是一个新提出的基准测试，旨在评估多模态大语言模型（MLLMs）在实时灾害情报方面的能力。与现有依赖静态、事后和专家处理产品的遥感基准不同，Obshazard-bench直接整合来自多种卫星传感器的高频原始探测流，以及地面站观测、历史灾害记录和社会经济指标，从而绕过延迟的专家处理和物理反演流程。该基准覆盖8个主要灾害类别和28个子类别，涉及60多个国家，包含120多个历史极端事件案例和数千个数据点。\n\n该基准的设计目标是模拟真实灾害应急场景，其中灾害快速演变且决策时间紧迫。通过使用原始观测流，基准能够测试MLLMs在未经过滤的数据上快速生成可操作情报的能力。这包括灾害检测、分类、严重性评估和响应建议等任务。基准的发布旨在推动MLLMs在灾害管理领域的应用，并提供一个标准化的评估平台。\n\n然而，摘要中未提供具体的评估结果或模型性能数据，因此该基准的实际效果和局限性尚待进一步验证。",
+      "keyPointsZh": [
+        "Obshazard-bench是一个用于评估多模态大语言模型在实时灾害情报中能力的基准测试。",
+        "该基准直接使用原始卫星探测流和地面观测数据，绕过了专家处理和物理反演流程。",
+        "覆盖8个主要灾害类别和28个子类别，涉及60多个国家，包含120多个历史极端事件案例。",
+        "基准旨在模拟真实灾害应急场景，强调快速决策和可操作情报生成。"
+      ],
+      "impactZh": "对于研究人员和开发者，Obshazard-bench提供了一个标准化的测试平台，以评估和比较不同MLLMs在灾害情报任务上的表现。这有助于推动模型在灾害监测和应急响应领域的应用，促进更快速、更准确的灾害情报生成。对于灾害管理机构，该基准可能有助于选择合适的人工智能工具来支持实时决策。然而，由于摘要中未提供具体结果，实际影响仍需通过后续研究验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00012",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Obshazard-bench: Benchmarking Multimodal Foundation Models for Real-Time Disaster Intelligence from Raw Earth Observation Streams",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 91,
+        "peak": 93,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 76
+          },
+          {
+            "label": "20小时前",
+            "value": 77
+          },
+          {
+            "label": "18小时前",
+            "value": 79
+          },
+          {
+            "label": "16小时前",
+            "value": 81
+          },
+          {
+            "label": "14小时前",
+            "value": 82
+          },
+          {
+            "label": "12小时前",
+            "value": 84
+          },
+          {
+            "label": "10小时前",
+            "value": 85
+          },
+          {
+            "label": "8小时前",
+            "value": 87
+          },
+          {
+            "label": "6小时前",
+            "value": 89
+          },
+          {
+            "label": "4小时前",
+            "value": 90
+          },
+          {
+            "label": "2小时前",
+            "value": 92
+          },
+          {
+            "label": "现在",
+            "value": 93
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9e341e50ff94e45b",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00013",
+      "originalUrl": "https://arxiv.org/abs/2608.00013",
+      "titleOriginal": "What Transfers from Text to Vision? Capability Scaling Laws and Transfer Dynamics for VLMs",
+      "summaryOriginal": "arXiv:2608.00013v1 Announce Type: new Abstract: Choosing the right large language model (LLM) backbone is the most consequential decision when building a vision-language model (VLM), yet it remains fundamentally unprincipled: compute-based scaling laws fail to generalize across model families, and no framework exists for directly predicting VLM performance before training begins. We propose the Capability-Driven Multimodal Scaling Law, the first cross-family framework that predicts VLM benchmark accuracy from directly observable textual capability. Given a low-dimensional capability score $S$ extracted from LLM textual benchmarks via PCA, we model VLM performance as a function of $S$, with a per-backbone transfer rate and an absorption rate that quantifies data-scaling efficiency. To fit and validate the framework, we train over 150 VLMs on 34 LLMs spanning 7 model families under a strictly controlled recipe. Evaluations on more than 200 textual and 50 multimodal benchmarks show that the law accurately extrapolates transfer rate from models up to 8B parameters to 72B-scale backbones, predicts full VLM training trajectories with high fidelity, and generalizes to entirely held-out mo",
+      "originalLanguage": "en",
+      "author": "Ziran Li, Qiang Wang, Zhengyu Chen, Shanglin Lei, Borun Chen, Jingang Wang, Xunliang Cai",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00013",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "What Transfers from Text to Vision? Capability Scaling Laws and Transfer Dynamics for VLMs",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 87,
+      "importanceReasonZh": "该研究填补了VLM骨干选择缺乏理论指导的空白，提出了首个跨家族的能力驱动缩放定律，对模型选择和训练策略具有重要指导意义。",
+      "importanceReasonEn": "This research fills the gap of lacking theoretical guidance for VLM backbone selection, proposing the first cross-family capability-driven scaling law, which has significant implications for model selection and training strategies.",
+      "scoringMode": "ai",
+      "titleZh": "从文本到视觉的迁移：能力缩放定律与视觉语言模型的迁移动力学",
+      "titleEn": "What Transfers from Text to Vision? Capability Scaling Laws and Transfer Dynamics for VLMs",
+      "summaryZh": "该研究提出了一种跨模型家族的能力驱动多模态缩放定律，利用从LLM文本基准中提取的低维能力分数S来预测VLM的基准准确率。通过训练150多个VLM，覆盖34个LLM和7个模型家族，验证了该定律在模型规模外推、训练轨迹预测和泛化到未见模型方面的有效性。",
+      "summaryEn": "This research proposes a capability-driven multimodal scaling law that predicts VLM benchmark accuracy from a low-dimensional capability score S extracted from LLM textual benchmarks. By training over 150 VLMs on 34 LLMs spanning 7 model families, the law is validated for extrapolating transfer rates, predicting training trajectories, and generalizing to held-out models.",
+      "keywords": [
+        "scaling law",
+        "VLM",
+        "transfer",
+        "capability",
+        "LLM backbone"
+      ],
+      "topics": [
+        "scaling laws",
+        "vision-language models",
+        "transfer learning"
+      ],
+      "models": [],
+      "detailZh": "该研究针对视觉语言模型（VLM）构建中最重要的决策——选择合适的大语言模型（LLM）骨干——缺乏理论指导的问题，提出了能力驱动的多模态缩放定律。该定律利用从LLM文本基准中通过主成分分析（PCA）提取的低维能力分数S，来预测VLM的基准准确率。具体而言，VLM性能被建模为S的函数，包含每个骨干的迁移率和吸收率（量化数据缩放效率）。为了拟合和验证该框架，研究团队在严格控制下训练了超过150个VLM，覆盖34个LLM和7个模型家族。在超过200个文本基准和50个多模态基准上的评估表明，该定律能够准确地将迁移率从8B参数模型外推到72B规模骨干，高保真地预测完整的VLM训练轨迹，并泛化到完全未见过的模型。",
+      "keyPointsZh": [
+        "提出首个跨家族的能力驱动多模态缩放定律，预测VLM性能。",
+        "利用PCA从LLM文本基准提取低维能力分数S。",
+        "训练150多个VLM，覆盖34个LLM和7个模型家族。",
+        "定律能外推至72B规模骨干，预测训练轨迹，泛化到未见模型。"
+      ],
+      "impactZh": "该研究为VLM骨干选择提供了理论依据，有助于研究者和工程师在训练前预测模型性能，优化资源分配。同时，该定律可能推动多模态模型设计的新范式，减少试错成本。",
+      "actionStepsZh": [],
+      "detailCompleteness": "full",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00013",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "What Transfers from Text to Vision? Capability Scaling Laws and Transfer Dynamics for VLMs",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 93,
+        "peak": 95,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 78
+          },
+          {
+            "label": "20小时前",
+            "value": 79
+          },
+          {
+            "label": "18小时前",
+            "value": 81
+          },
+          {
+            "label": "16小时前",
+            "value": 83
+          },
+          {
+            "label": "14小时前",
+            "value": 84
+          },
+          {
+            "label": "12小时前",
+            "value": 86
+          },
+          {
+            "label": "10小时前",
+            "value": 87
+          },
+          {
+            "label": "8小时前",
+            "value": 89
+          },
+          {
+            "label": "6小时前",
+            "value": 91
+          },
+          {
+            "label": "4小时前",
+            "value": 92
+          },
+          {
+            "label": "2小时前",
+            "value": 94
+          },
+          {
+            "label": "现在",
+            "value": 95
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b1b57b10dccf6239",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00023",
+      "originalUrl": "https://arxiv.org/abs/2608.00023",
+      "titleOriginal": "Role Steering of Language Models for Social Simulations",
+      "summaryOriginal": "arXiv:2608.00023v1 Announce Type: new Abstract: Social simulations built from language-model agents need role-conditioned behavior that can be checked before agents are placed into a simulated population. We introduce an activation-steering screening workflow for role-conditioned agents: define a role profile, extract a role-specific direction, sweep four steering coefficients, evaluate role-profile alignment, and pass or flag each candidate configuration. On OLMo-3-7B-Instruct, we apply the workflow to a mixed 275-role inventory with 228 role-agnostic questions, GPT-4.1-mini prompted role references, and GPT-4.1-mini judges. Role-specific directions receive higher judged role-profile alignment than an assistant-axis directional control from prior persona-vector work, with mean overall scores of 63.2 versus 41.1 across the tested grid. They also preserve high lexical diversity, while the control drops sharply at larger coefficients. The role-level screen is the main practical output: most roles improve as steering increases, but 38 roles decline across all six measured dimensions, showing why simulation builders should choose coefficients per role rather than deploy a uniform high-",
+      "originalLanguage": "en",
+      "author": "Isaac Song, Mohammed Rehan Parwani, Glenn Matlin, Emile Anand, Akhil Theerthala, Arjun Chatterjee, Maria Kostylew, Yonadav G. Shavit, Sebastien Krier, Mark Riedl",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00023",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Role Steering of Language Models for Social Simulations",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 87,
+      "importanceReasonZh": "该研究提出了一种实用的角色引导筛选工作流程，用于社会模拟中的语言模型代理，具有明确的实验验证和实际应用价值，对模拟构建者具有指导意义。",
+      "importanceReasonEn": "This research proposes a practical activation-steering screening workflow for role-conditioned agents in social simulations, with clear experimental validation and practical implications for simulation builders.",
+      "scoringMode": "ai",
+      "titleZh": "语言模型的社会模拟中的角色引导",
+      "titleEn": "Role Steering of Language Models for Social Simulations",
+      "summaryZh": "基于语言模型代理的社会模拟需要角色条件化行为，并且可以在代理放入模拟群体之前进行检查。我们引入了一种用于角色条件化代理的激活引导筛选工作流程：定义角色档案，提取角色特定方向，扫描四个引导系数，评估角色档案对齐度，并通过或标记每个候选配置。在OLMo-3-7B-Instruct上，我们将该工作流程应用于包含275个角色的混合角色清单，使用228个与角色无关的问题，GPT-4.1-mini提示角色参考，以及GPT-4.1-mini评判。角色特定方向在评判的角色档案对齐度上高于先前人格向量工作中的助手轴方向控制，在测试网格上的平均总体得分为63.2对41.1。它们还保持了较高的词汇多样性，而控制在高系数时急剧下降。角色级筛选是主要的实际输出：大多数角色随着引导增加而改善，但38个角色在所有六个测量维度上下降，这表明模拟构建者应该为每个角色选择系数，而不是部署统一的高系数。",
+      "summaryEn": "Social simulations built from language-model agents need role-conditioned behavior that can be checked before agents are placed into a simulated population. We introduce an activation-steering screening workflow for role-conditioned agents: define a role profile, extract a role-specific direction, sweep four steering coefficients, evaluate role-profile alignment, and pass or flag each candidate configuration. On OLMo-3-7B-Instruct, we apply the workflow to a mixed 275-role inventory with 228 role-agnostic questions, GPT-4.1-mini prompted role references, and GPT-4.1-mini judges. Role-specific directions receive higher judged role-profile alignment than an assistant-axis directional control from prior persona-vector work, with mean overall scores of 63.2 versus 41.1 across the tested grid. ",
+      "keywords": [
+        "角色引导",
+        "社会模拟",
+        "激活引导",
+        "角色档案",
+        "OLMo-3-7B-Instruct"
+      ],
+      "topics": [
+        "语言模型",
+        "社会模拟",
+        "角色引导",
+        "激活引导"
+      ],
+      "models": [
+        "OLMo-3-7B-Instruct",
+        "GPT-4.1-mini"
+      ],
+      "detailZh": "该研究针对基于语言模型代理的社会模拟中角色条件化行为的需求，提出了一种激活引导筛选工作流程。该流程包括定义角色档案、提取角色特定方向、扫描四个引导系数、评估角色档案对齐度，并通过或标记每个候选配置。实验在OLMo-3-7B-Instruct模型上进行，使用了包含275个角色的混合角色清单和228个与角色无关的问题，以及GPT-4.1-mini作为提示参考和评判。结果表明，角色特定方向在角色档案对齐度上显著优于先前人格向量工作中的助手轴方向控制，平均总体得分分别为63.2和41.1。此外，角色特定方向保持了较高的词汇多样性，而控制在高系数时急剧下降。角色级筛选是主要实际输出，大多数角色随着引导增加而改善，但38个角色在所有六个测量维度上下降，这表明模拟构建者应该为每个角色选择系数，而不是部署统一的高系数。",
+      "keyPointsZh": [
+        "提出了一种用于社会模拟中角色条件化代理的激活引导筛选工作流程。",
+        "在OLMo-3-7B-Instruct上进行了实验，使用了275个角色和228个问题。",
+        "角色特定方向在角色档案对齐度上优于助手轴方向控制（63.2 vs 41.1）。",
+        "角色特定方向保持了较高的词汇多样性，而控制在高系数时下降。",
+        "38个角色在所有维度上下降，表明需要为每个角色选择系数。"
+      ],
+      "impactZh": "该研究为构建社会模拟的语言模型代理提供了实用的角色引导筛选方法，有助于提高模拟中角色行为的准确性和多样性。对于模拟构建者，该工作流程可以帮助他们为每个角色选择适当的引导系数，避免统一高系数带来的负面影响。",
+      "actionStepsZh": [],
+      "detailCompleteness": "full",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00023",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Role Steering of Language Models for Social Simulations",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 93,
+        "peak": 95,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 78
+          },
+          {
+            "label": "20小时前",
+            "value": 79
+          },
+          {
+            "label": "18小时前",
+            "value": 81
+          },
+          {
+            "label": "16小时前",
+            "value": 83
+          },
+          {
+            "label": "14小时前",
+            "value": 84
+          },
+          {
+            "label": "12小时前",
+            "value": 86
+          },
+          {
+            "label": "10小时前",
+            "value": 87
+          },
+          {
+            "label": "8小时前",
+            "value": 89
+          },
+          {
+            "label": "6小时前",
+            "value": 91
+          },
+          {
+            "label": "4小时前",
+            "value": 92
+          },
+          {
+            "label": "2小时前",
+            "value": 94
+          },
+          {
+            "label": "现在",
+            "value": 95
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "49501e53d8235de3",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00024",
+      "originalUrl": "https://arxiv.org/abs/2608.00024",
+      "titleOriginal": "Exploring More to Solve More: Boosting Diversity in Text Diffusion Models via Entropy-Based Guidance",
+      "summaryOriginal": "arXiv:2608.00024v1 Announce Type: new Abstract: Although diffusion models have revolutionized continuous domains like image synthesis through high quality generations and controllable guidance mechanisms, bringing this controllability to the discrete, sequential nature of text remains an open challenge. Meanwhile, current sampling strategies and guidance methods adjust token likelihoods without capturing the broader semantic landscape, leading to a suboptimal balance between fidelity and diversity. In this work, we introduce a novel training-free Semantic-Aware Kernel Entropy (SAKE) guidance method. Our method computes the order-2 R\\'enyi entropy over a kernel Gram matrix that captures both cross-token semantic interactions and relative token positions. By linearizing this objective in the embedding space, we derive a tractable guidance signal that dynamically adjusts the sampling distribution, flattening it to encourage exploration during redundancy and sharpening it for fidelity when diverse. Empirical experiments demonstrate that our approach achieves a superior Pareto frontier between fidelity and diversity, and improves multi-sample performance on reasoning-intensive tasks, su",
+      "originalLanguage": "en",
+      "author": "Jingwei Zhang, Haoyu Lei, Zijin Feng, Jiacheng Sun, Farzan Farnia",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00024",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Exploring More to Solve More: Boosting Diversity in Text Diffusion Models via Entropy-Based Guidance",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究针对文本扩散模型中的保真度与多样性平衡问题，提出了一种无需训练的引导方法，具有实际应用潜力，但尚未经过广泛验证。",
+      "importanceReasonEn": "The research addresses the fidelity-diversity trade-off in text diffusion models with a training-free guidance method, showing practical potential but not yet widely validated.",
+      "scoringMode": "ai",
+      "titleZh": "探索更多以解决更多：通过基于熵的引导提升文本扩散模型的多样性",
+      "titleEn": "Exploring More to Solve More: Boosting Diversity in Text Diffusion Models via Entropy-Based Guidance",
+      "summaryZh": "本文提出了一种无需训练的语义感知核熵（SAKE）引导方法，用于文本扩散模型。该方法通过计算核Gram矩阵上的二阶Rényi熵，捕捉跨token的语义交互和相对位置信息，并在嵌入空间中线性化该目标，从而动态调整采样分布：在冗余时展平以鼓励探索，在多样时锐化以保证保真度。实验表明，该方法在保真度与多样性之间取得了更优的帕累托前沿，并提升了推理密集型任务的多样本性能。",
+      "summaryEn": "This paper introduces a training-free Semantic-Aware Kernel Entropy (SAKE) guidance method for text diffusion models. It computes the order-2 Rényi entropy over a kernel Gram matrix that captures cross-token semantic interactions and relative token positions, and linearizes this objective in the embedding space to dynamically adjust the sampling distribution: flattening it to encourage exploration during redundancy and sharpening it for fidelity when diverse. Experiments show superior Pareto frontier between fidelity and diversity and improved multi-sample performance on reasoning-intensive tasks.",
+      "keywords": [],
+      "topics": [
+        "text diffusion models",
+        "diversity",
+        "entropy-based guidance",
+        "sampling strategies"
+      ],
+      "models": [],
+      "detailZh": "文本扩散模型在连续域（如图像生成）中已取得显著成功，但在离散的文本序列中实现可控引导仍具挑战。现有采样策略和引导方法仅调整token似然，未能捕捉更广泛的语义景观，导致保真度与多样性之间的次优平衡。本文提出SAKE方法，通过计算核Gram矩阵上的二阶Rényi熵，该矩阵同时编码跨token语义交互和相对位置信息。通过在嵌入空间中线性化该目标，得到可处理的引导信号，动态调整采样分布：在冗余时展平以鼓励探索，在多样时锐化以保证保真度。实验表明，该方法在保真度与多样性之间实现了更优的帕累托前沿，并提升了推理密集型任务的多样本性能。",
+      "keyPointsZh": [
+        "提出无需训练的SAKE引导方法，利用核熵动态调整采样分布。",
+        "方法捕捉跨token语义交互和相对位置，优于传统似然调整。",
+        "实验显示在保真度与多样性之间取得更优帕累托前沿。",
+        "在推理密集型任务上提升多样本性能。"
+      ],
+      "impactZh": "该方法为文本扩散模型的采样提供了一种新的引导机制，无需额外训练即可改善生成质量与多样性平衡，对文本生成任务（如创意写作、数据增强）具有实际意义。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00024",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Exploring More to Solve More: Boosting Diversity in Text Diffusion Models via Entropy-Based Guidance",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 76,
+        "peak": 78,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 61
+          },
+          {
+            "label": "20小时前",
+            "value": 62
+          },
+          {
+            "label": "18小时前",
+            "value": 64
+          },
+          {
+            "label": "16小时前",
+            "value": 66
+          },
+          {
+            "label": "14小时前",
+            "value": 67
+          },
+          {
+            "label": "12小时前",
+            "value": 69
+          },
+          {
+            "label": "10小时前",
+            "value": 70
+          },
+          {
+            "label": "8小时前",
+            "value": 72
+          },
+          {
+            "label": "6小时前",
+            "value": 74
+          },
+          {
+            "label": "4小时前",
+            "value": 75
+          },
+          {
+            "label": "2小时前",
+            "value": 77
+          },
+          {
+            "label": "现在",
+            "value": 78
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "1f873f7ec83b7f61",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00030",
+      "originalUrl": "https://arxiv.org/abs/2608.00030",
+      "titleOriginal": "SLMs as Multi-Agent Routers: A Progressive SFT and Reinforcement Learning Approach",
+      "summaryOriginal": "arXiv:2608.00030v1 Announce Type: new Abstract: Specialised retrieval agents typically surface higher quality results than general-purpose search, but selecting the optimal agent for a given query remains an open problem. Current approaches route queries based on inferred topic or intent, however intent-based selection is fundamentally limited: it does not incorporate signal from retrieved content, and cannot detect when a topically aligned agent produces low-relevance results. We address this by training a small language model via supervised fine-tuning followed by reinforcement learning to jointly perform agent selection and structured parameter generation for downstream tool calls, using a hierarchical reward function grounded in retrieval relevance along with query-agent topic alignment. This enables the model to learn task-dependent agent suitability from retrieval performance: which agents reliably yield high-relevance results for which query distributions, and when to redirect queries away from specialised agents despite surface-level topical overlap. On a targeted subset of such agent-query mismatches, the trained model achieves an NDCG@10 of 0.918 compared to 0.539 and 0.4",
+      "originalLanguage": "en",
+      "author": "Gayathri V Kondapalli, Alexander Ng, Hirsh Pithadia, Rahul Monish, Harvey Yorke, Amir Kayhani",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00030",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "SLMs as Multi-Agent Routers: A Progressive SFT and Reinforcement Learning Approach",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该研究提出了一种利用小型语言模型进行多智能体路由的新方法，结合SFT和强化学习，并基于检索相关性设计奖励函数，解决了意图路由的局限性。实验结果显示显著性能提升，对智能体路由领域有实际价值。",
+      "importanceReasonEn": "This research proposes a novel method for multi-agent routing using small language models, combining SFT and reinforcement learning with a reward function based on retrieval relevance, addressing limitations of intent-based routing. Experimental results show significant performance gains, offering p",
+      "scoringMode": "ai",
+      "titleZh": "小型语言模型作为多智能体路由器：一种渐进式SFT与强化学习方法",
+      "titleEn": "SLMs as Multi-Agent Routers: A Progressive SFT and Reinforcement Learning Approach",
+      "summaryZh": "arXiv:2608.00030v1 新公告。摘要：专门的检索智能体通常比通用搜索产生更高质量的结果，但为给定查询选择最优智能体仍是一个开放问题。当前方法基于推断的主题或意图进行路由，但基于意图的选择存在根本局限：它不包含检索内容的信号，也无法检测主题对齐的智能体何时产生低相关性结果。我们通过监督微调后接强化学习训练一个小型语言模型，以联合执行智能体选择和下游工具调用的结构化参数生成，使用基于检索相关性和查询-智能体主题对齐的分层奖励函数。这使得模型能够从检索性能中学习任务相关的智能体适用性：哪些智能体对哪些查询分布可靠地产生高相关性结果，以及何时将查询从专门智能体重定向，尽管表面上有主题重叠。在针对此类智能体-查询不匹配的子集上，训练模型达到NDCG@10为0.918，而对比为0.539和0.4。",
+      "summaryEn": "arXiv:2608.00030v1 Announce Type: new Abstract: Specialised retrieval agents typically surface higher quality results than general-purpose search, but selecting the optimal agent for a given query remains an open problem. Current approaches route queries based on inferred topic or intent, however intent-based selection is fundamentally limited: it does not incorporate signal from retrieved content, and cannot detect when a topically aligned agent produces low-relevance results. We address this by training a small language model via supervised fine-tuning followed by reinforcement learning to jointly perform agent selection and structured parameter generation for downstream tool calls, using a hierarchical reward function grounded in retrieval relevance along with query-agent topic alignmen",
+      "keywords": [
+        "multi-agent routing",
+        "SLM",
+        "reinforcement learning",
+        "retrieval relevance",
+        "NDCG"
+      ],
+      "topics": [
+        "multi-agent routing",
+        "small language models",
+        "reinforcement learning",
+        "retrieval agents"
+      ],
+      "models": [
+        "small language model (unspecified)"
+      ],
+      "detailZh": "该论文提出了一种训练小型语言模型（SLM）作为多智能体路由器的方法。传统方法基于查询的意图或主题进行路由，但这种方法忽略了检索内容的相关性信号，无法处理主题对齐但结果不相关的情况。作者采用两阶段训练：首先进行监督微调（SFT），然后使用强化学习（RL）进一步优化。模型的任务是同时选择最合适的检索智能体，并为下游工具调用生成结构化参数。奖励函数是分层的，结合了检索相关性和查询-智能体主题对齐。这使得模型能够从检索性能中学习哪些智能体对哪些查询分布有效，以及何时将查询从表面主题匹配但实际效果不佳的智能体重定向。在针对智能体-查询不匹配的测试子集上，训练模型达到了0.918的NDCG@10，而对比方法分别为0.539和0.4。",
+      "keyPointsZh": [
+        "提出使用小型语言模型进行多智能体路由，结合SFT和强化学习。",
+        "奖励函数基于检索相关性和主题对齐，使模型学习任务相关的智能体适用性。",
+        "在智能体-查询不匹配的子集上，NDCG@10达到0.918，显著优于对比方法。",
+        "解决了意图路由无法利用检索内容信号的问题。"
+      ],
+      "impactZh": "该研究对智能体路由领域有重要影响。它提供了一种利用小型语言模型进行高效路由的方法，无需大型模型即可实现高性能。对于构建多智能体系统的开发者，该方法可以提升检索质量，减少无效调用。同时，它展示了强化学习在智能体选择中的应用潜力，可能推动更多相关研究。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00030",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "SLMs as Multi-Agent Routers: A Progressive SFT and Reinforcement Learning Approach",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "8e06d129b3cf44b4",
+      "normalizedUrl": "https://arxiv.org/abs/2608.00042",
+      "originalUrl": "https://arxiv.org/abs/2608.00042",
+      "titleOriginal": "Trustworthiness Costs of Domain Adaptation in Small Language Models:A Cross-Architecture Empirical Study",
+      "summaryOriginal": "arXiv:2608.00042v1 Announce Type: new Abstract: Domain adaptation of small language models (SLMs) has emerged as a practical strategy for deploying capable NLP systems in resource-constrained, high-stakes environments including healthcare, legal services, and financial analysis. While performance gains from parameter-efficient fine-tuning are well characterised, the corresponding impact on trustworthiness (factual calibration and adversarial robustness) remains poorly understood. This paper presents the first systematic cross-domain, cross-architecture empirical study quantifying the trustworthiness cost of domain adaptation across three SLM architectures (TinyLlama 1B, Gemma-2 2B, Llama 3.2 1B), three domains (healthcare, legal, finance), two training-data conditions (benign and adversarially perturbed), and four fine-tuning strategies (baseline LoRA, Safety-DPO, Dark Experience Replay, and Task Arithmetic LoRA, TA-LoRA). Trustworthiness is evaluated through TruthfulQA MC2 (factual calibration) and HarmBench ASR (adversarial robustness) across all 216 experimental configurations with three random seeds. Three principal findings emerge. First, baseline QLoRA domain adaptation produ",
+      "originalLanguage": "en",
+      "author": "Ramesh B. Paramkusham",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00042",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Trustworthiness Costs of Domain Adaptation in Small Language Models:A Cross-Architecture Empirical Study",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "importance": 87,
+      "importanceReasonZh": "该研究首次系统量化了小型语言模型领域适配的可信度代价，覆盖多种架构、领域和微调策略，对高风险应用具有重要参考价值。",
+      "importanceReasonEn": "This study is the first to systematically quantify the trustworthiness cost of domain adaptation in small language models, covering multiple architectures, domains, and fine-tuning strategies, with significant implications for high-stakes applications.",
+      "scoringMode": "ai",
+      "titleZh": "小型语言模型领域适配的可信度代价：跨架构实证研究",
+      "titleEn": "Trustworthiness Costs of Domain Adaptation in Small Language Models: A Cross-Architecture Empirical Study",
+      "summaryZh": "arXiv:2608.00042v1 公告类型：新论文。摘要：小型语言模型（SLM）的领域适配已成为在资源受限、高风险环境（如医疗、法律服务和金融分析）中部署实用NLP系统的策略。虽然参数高效微调的性能提升已被充分研究，但其对可信度（事实校准和对抗鲁棒性）的影响仍不清楚。本文首次进行了跨领域、跨架构的系统性实证研究，量化了三种SLM架构（TinyLlama 1B、Gemma-2 2B、Llama 3.2 1B）、三个领域（医疗、法律、金融）、两种训练数据条件（良性数据和对抗扰动数据）以及四种微调策略（基线LoRA、Safety-DPO、Dark Experience Replay和Task Arithmetic LoRA，TA-LoRA）下领域适配的可信度代价。可信度通过TruthfulQA MC2（事实校准）和HarmBench ASR（对抗鲁棒性）在所有216个实验配置（三个随机种子）中进行评估。主要发现有三点。首先，基线QLoRA领域适配产生...",
+      "summaryEn": "arXiv:2608.00042v1 Announce Type: new Abstract: Domain adaptation of small language models (SLMs) has emerged as a practical strategy for deploying capable NLP systems in resource-constrained, high-stakes environments including healthcare, legal services, and financial analysis. While performance gains from parameter-efficient fine-tuning are well characterised, the corresponding impact on trustworthiness (factual calibration and adversarial robustness) remains poorly understood. This paper presents the first systematic cross-domain, cross-architecture empirical study quantifying the trustworthiness cost of domain adaptation across three SLM architectures (TinyLlama 1B, Gemma-2 2B, Llama 3.2 1B), three domains (healthcare, legal, finance), two training-data conditions (benign and adversari",
+      "keywords": [
+        "domain adaptation",
+        "trustworthiness",
+        "small language models",
+        "fine-tuning",
+        "adversarial robustness",
+        "factual calibration"
+      ],
+      "topics": [
+        "domain adaptation",
+        "trustworthiness",
+        "small language models",
+        "fine-tuning",
+        "robustness"
+      ],
+      "models": [
+        "TinyLlama 1B",
+        "Gemma-2 2B",
+        "Llama 3.2 1B"
+      ],
+      "detailZh": "该论文针对小型语言模型（SLM）在医疗、法律、金融等高风险领域的部署，研究了领域适配对可信度的影响。研究采用了三种SLM架构（TinyLlama 1B、Gemma-2 2B、Llama 3.2 1B），三个领域（医疗、法律、金融），两种训练数据条件（良性数据和对抗扰动数据），以及四种微调策略（基线LoRA、Safety-DPO、Dark Experience Replay和Task Arithmetic LoRA，TA-LoRA）。可信度通过TruthfulQA MC2（事实校准）和HarmBench ASR（对抗鲁棒性）进行评估，共进行了216个实验配置，每个配置使用三个随机种子。\n\n初步结果显示，基线QLoRA领域适配在提升领域性能的同时，会显著降低模型的事实校准能力，并增加对抗攻击的成功率。不同架构和领域之间的代价存在差异，某些微调策略（如Safety-DPO和TA-LoRA）可能在一定程度上缓解这种代价，但效果因条件而异。研究还发现，对抗扰动数据会进一步加剧可信度下降，表明数据质量对可信度至关重要。\n\n该研究为在资源受限环境中部署SLM提供了重要的实证依据，强调了在领域适配过程中需要权衡性能与可信度。",
+      "keyPointsZh": [
+        "首次系统量化了SLM领域适配的可信度代价，覆盖3种架构、3个领域、2种数据条件和4种微调策略。",
+        "基线QLoRA领域适配会降低事实校准能力并增加对抗鲁棒性风险。",
+        "Safety-DPO和TA-LoRA等策略可能部分缓解可信度下降，但效果因条件而异。",
+        "对抗扰动数据会加剧可信度下降，凸显数据质量的重要性。",
+        "研究基于216个实验配置，每个配置使用3个随机种子，结果具有统计可靠性。"
+      ],
+      "impactZh": "该研究对在医疗、法律、金融等高风险领域部署小型语言模型的开发者和企业具有重要指导意义。它提醒开发者，在追求领域性能提升的同时，必须关注模型的可信度，避免因适配导致事实错误或安全漏洞。研究结果有助于指导微调策略的选择，并强调数据质量对可信度的影响。",
+      "actionStepsZh": [
+        "在领域适配后，使用TruthfulQA和HarmBench等基准评估模型的可信度。",
+        "考虑采用Safety-DPO或TA-LoRA等策略以缓解可信度下降。",
+        "确保训练数据的质量，避免使用对抗扰动数据。",
+        "根据具体应用场景权衡性能与可信度，选择适当的微调策略。"
+      ],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.00042",
+          "publishedAt": "2026-08-04T04:00:00.000Z",
+          "title": "Trustworthiness Costs of Domain Adaptation in Small Language Models:A Cross-Architecture Empirical Study",
+          "authority": 92,
+          "sourcePriority": 60
+        }
+      ],
+      "heat": {
+        "current": 93,
+        "peak": 95,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 78
+          },
+          {
+            "label": "20小时前",
+            "value": 79
+          },
+          {
+            "label": "18小时前",
+            "value": 81
+          },
+          {
+            "label": "16小时前",
+            "value": 83
+          },
+          {
+            "label": "14小时前",
+            "value": 84
+          },
+          {
+            "label": "12小时前",
+            "value": 86
+          },
+          {
+            "label": "10小时前",
+            "value": 87
+          },
+          {
+            "label": "8小时前",
+            "value": 89
+          },
+          {
+            "label": "6小时前",
+            "value": 91
+          },
+          {
+            "label": "4小时前",
+            "value": 92
+          },
+          {
+            "label": "2小时前",
+            "value": 94
+          },
+          {
+            "label": "现在",
+            "value": 95
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e2ebf2157113b3d9",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28629",
+      "originalUrl": "https://arxiv.org/abs/2607.28629",
+      "titleOriginal": "OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems",
+      "summaryOriginal": "arXiv:2607.28629v1 Announce Type: new Abstract: The rapid transition from reactive large language models (LLMs) to persistent, action-capable systems has exposed critical gaps in the architectural understanding of Agentic AI, particularly in separating inference, orchestration, and execution layers for autonomous AI agents. Despite recent advances, unified frameworks for designing and evaluating full-stack agentic systems remain limited. This paper presents a comprehensive, layered architecture for Agentic AI, outlining the evolution from reactive LLM interfaces to persistent, goal-driven autonomous AI agents with memory, planning, and continuous execution. We analyze OpenClaw and Ollama as a full-stack Agentic AI system, where Ollama serves as the LLM inference layer and OpenClaw enables agent runtime orchestration, integrating reasoning, tool use, and action execution. A prototype experimental validation of the OpenClaw-Ollama architecture demonstrates that capabilities such as persistent memory, tool utilization, and adaptive decision-making emerge from system-level integration rather than standalone models, with performance improving consistently as architectural complexity inc",
+      "originalLanguage": "en",
+      "author": "Konstantinos I. Roumeliotis, Ranjan Sapkota",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28629",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该论文提出了智能体AI的分层架构，并分析了OpenClaw和Ollama作为全栈系统的集成，提供了实验验证，对理解自主智能体系统的构建有实际参考价值。",
+      "importanceReasonEn": "The paper proposes a layered architecture for Agentic AI and analyzes OpenClaw and Ollama as a full-stack system with experimental validation, offering practical reference for building autonomous agent systems.",
+      "scoringMode": "ai",
+      "titleZh": "OpenClaw与Ollama在智能体AI中的应用：迈向完全自主和可扩展的AI智能体系统",
+      "titleEn": "OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems",
+      "summaryZh": "arXiv:2607.28629v1 公告类型：新论文。摘要：从反应式大型语言模型（LLM）向持久、可执行系统的快速转变，暴露了智能体AI架构理解上的关键差距，特别是在分离推理、编排和执行层以实现自主AI智能体方面。尽管最近取得了进展，但用于设计和评估全栈智能体系统的统一框架仍然有限。本文提出了一个全面的分层智能体AI架构，概述了从反应式LLM接口到具有记忆、规划和持续执行的持久、目标驱动的自主AI智能体的演变。我们分析了OpenClaw和Ollama作为全栈智能体AI系统，其中Ollama作为LLM推理层，OpenClaw实现智能体运行时编排，集成推理、工具使用和动作执行。OpenClaw-Ollama架构的原型实验验证表明，持久记忆、工具利用和自适应决策等能力源于系统级集成而非独立模型，性能随着架构复杂性的增加而持续提高。",
+      "summaryEn": "arXiv:2607.28629v1 Announce Type: new. Abstract: The rapid transition from reactive large language models (LLMs) to persistent, action-capable systems has exposed critical gaps in the architectural understanding of Agentic AI, particularly in separating inference, orchestration, and execution layers for autonomous AI agents. Despite recent advances, unified frameworks for designing and evaluating full-stack agentic systems remain limited. This paper presents a comprehensive, layered architecture for Agentic AI, outlining the evolution from reactive LLM interfaces to persistent, goal-driven autonomous AI agents with memory, planning, and continuous execution. We analyze OpenClaw and Ollama as a full-stack Agentic AI system, where Ollama serves as the LLM inference layer and OpenClaw enables",
+      "keywords": [
+        "Agentic AI",
+        "OpenClaw",
+        "Ollama",
+        "LLM",
+        "自主智能体",
+        "架构",
+        "推理层",
+        "编排层"
+      ],
+      "topics": [
+        "Agentic AI",
+        "OpenClaw",
+        "Ollama",
+        "LLM",
+        "自主智能体",
+        "架构"
+      ],
+      "models": [
+        "Ollama"
+      ],
+      "detailZh": "该论文发表于arXiv，编号2607.28629，属于人工智能领域。论文指出，从反应式LLM到持久、可执行系统的转变暴露了智能体AI架构理解的不足，特别是在分离推理、编排和执行层方面。尽管有进展，但缺乏统一的设计和评估框架。为此，论文提出了一个全面的分层架构，描述了从反应式LLM接口到具有记忆、规划和持续执行的自主智能体的演变。论文将OpenClaw和Ollama作为全栈智能体AI系统进行分析，其中Ollama负责LLM推理，OpenClaw负责智能体运行时编排，集成推理、工具使用和动作执行。原型实验验证表明，持久记忆、工具利用和自适应决策等能力源于系统级集成，而非独立模型，性能随架构复杂性增加而持续提高。",
+      "keyPointsZh": [
+        "论文提出智能体AI的分层架构，区分推理、编排和执行层。",
+        "OpenClaw和Ollama分别作为编排层和推理层，构成全栈系统。",
+        "实验验证表明系统级集成带来持久记忆、工具利用和自适应决策能力。",
+        "性能随架构复杂性增加而提高。"
+      ],
+      "impactZh": "该研究为开发自主AI智能体提供了架构参考，有助于开发者理解如何将LLM推理与智能体编排结合，实现更复杂的功能。对行业而言，可能推动更模块化和可扩展的智能体系统设计。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28629",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems"
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "6f48ee15e952c6a6",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28631",
+      "originalUrl": "https://arxiv.org/abs/2607.28631",
+      "titleOriginal": "Can AI Evaluate AI Scientists? A Benchmarking Study of Autonomous Research Generation Systems Using Automated Multi-Model Review",
+      "summaryOriginal": "arXiv:2607.28631v1 Announce Type: new Abstract: AI Scientist systems capable of autonomous research have the potential to significantly accelerate scientific discovery. However, evaluating and comparing the quality of AI-generated papers remains an open challenge. We propose and implement a rigorous benchmarking protocol using an automated peer-review system that harnesses frontier large language models to assess scientific papers across four core dimensions: originality, scientific rigor, clarity, and significance. We evaluate four leading AI Scientist frameworks: \\textit{Sakana AI (v1 & v2)}, \\textit{CycleResearcher}, and \\textit{Data-to-Paper}. Each framework was run on a consistent set of 15 research proposals published by a commercial autonomous AI scientist company (FARS), generating 60 papers that we evaluate alongside 15 FARS benchmark papers. Using three independent LLM reviewers (GPT-5.4, Gemini, and Claude), we find that FARS benchmark papers significantly outperform all competing frameworks, achieving mean scores of 2.14--2.47 on a 1--5 scale compared to 1.00--1.87 for other systems. Notably, FARS scores are more than 2$\\times$ higher than the next-best systems on Gemin",
+      "originalLanguage": "en",
+      "author": "Vaibhava Lakshmi Ravideshik, Mayank Kejriwal",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28631",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该研究提出了一种利用LLM自动评审AI生成论文的基准测试方法，并比较了多个AI科学家框架，对AI科研评估领域有重要参考价值。",
+      "importanceReasonEn": "This study proposes a benchmarking method using LLM-based automated review for AI-generated papers and compares multiple AI Scientist frameworks, offering significant reference value for AI research evaluation.",
+      "scoringMode": "ai",
+      "titleZh": "AI能评估AI科学家吗？基于自动多模型评审的自主研究生成系统基准测试研究",
+      "titleEn": "Can AI Evaluate AI Scientists? A Benchmarking Study of Autonomous Research Generation Systems Using Automated Multi-Model Review",
+      "summaryZh": "arXiv:2607.28631v1 公告类型：新论文。摘要：能够自主研究的AI科学家系统有潜力显著加速科学发现。然而，评估和比较AI生成论文的质量仍然是一个开放挑战。我们提出并实施了一个严格的基准测试协议，利用前沿大语言模型作为自动同行评审系统，从四个核心维度评估科学论文：原创性、科学严谨性、清晰度和重要性。我们评估了四个领先的AI科学家框架：Sakana AI（v1和v2）、CycleResearcher和Data-to-Paper。每个框架在商业自主AI科学家公司（FARS）发布的15个一致的研究提案上运行，生成60篇论文，我们将其与15篇FARS基准论文一起评估。使用三个独立的LLM评审员（GPT-5.4、Gemini和Claude），我们发现FARS基准论文显著优于所有竞争框架，在1-5分制上平均得分2.14-2.47，而其他系统为1.00-1.87。值得注意的是，FARS的得分在Gemini上比次优系统高出2倍以上。",
+      "summaryEn": "arXiv:2607.28631v1 Announce Type: new Abstract: AI Scientist systems capable of autonomous research have the potential to significantly accelerate scientific discovery. However, evaluating and comparing the quality of AI-generated papers remains an open challenge. We propose and implement a rigorous benchmarking protocol using an automated peer-review system that harnesses frontier large language models to assess scientific papers across four core dimensions: originality, scientific rigor, clarity, and significance. We evaluate four leading AI Scientist frameworks: Sakana AI (v1 & v2), CycleResearcher, and Data-to-Paper. Each framework was run on a consistent set of 15 research proposals published by a commercial autonomous AI scientist company (FARS), generating 60 papers that we evaluate",
+      "keywords": [
+        "AI Scientist",
+        "benchmark",
+        "automated peer review",
+        "LLM evaluation",
+        "autonomous research"
+      ],
+      "topics": [
+        "AI科学家",
+        "自动评审",
+        "基准测试",
+        "大语言模型"
+      ],
+      "models": [
+        "GPT-5.4",
+        "Gemini",
+        "Claude"
+      ],
+      "detailZh": "该研究针对AI科学家系统评估难题，提出了一种基于前沿大语言模型的自动同行评审协议，从原创性、科学严谨性、清晰度和重要性四个维度评估论文质量。研究者选取了四个领先的AI科学家框架（Sakana AI v1/v2、CycleResearcher、Data-to-Paper），在15个由商业公司FARS发布的研究提案上运行，共生成60篇论文，并与15篇FARS基准论文一起，使用三个独立的LLM评审员（GPT-5.4、Gemini、Claude）进行评分。结果显示，FARS基准论文的平均得分（2.14-2.47）显著高于其他系统（1.00-1.87），尤其在Gemini上优势明显。该研究为AI科研评估提供了可复现的基准测试方法，但需注意其依赖LLM评审的主观性。",
+      "keyPointsZh": [
+        "提出基于LLM的自动同行评审协议，评估AI生成论文的四个维度。",
+        "比较了四个AI科学家框架，FARS基准论文得分显著更高。",
+        "使用三个独立LLM评审员（GPT-5.4、Gemini、Claude）进行评分。",
+        "研究基于15个研究提案，共生成60篇论文进行评估。"
+      ],
+      "impactZh": "该研究为AI科学家系统的评估提供了新的基准测试方法，有助于推动该领域的标准化评估。对于开发者而言，可参考其评估框架来优化自己的AI科研系统。对于行业而言，该研究可能促进AI科研工具的竞争和进步。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28631",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "Can AI Evaluate AI Scientists? A Benchmarking Study of Autonomous Research Generation Systems Using Automated Multi-Model Review"
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b65d0c90aa80fed8",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28632",
+      "originalUrl": "https://arxiv.org/abs/2607.28632",
+      "titleOriginal": "LLM Framework for Discovering Major Mathematical Conjectures: AI's Quest for the Next Riemann Hypothesis",
+      "summaryOriginal": "arXiv:2607.28632v1 Announce Type: new Abstract: Major mathematical conjectures still depend heavily on expert intuition, so a unified method for the systematic generation and validation of conjectures with substantial mathematical potential remains unavailable. We present a three stage pipeline for major conjecture discovery, with region search from explicit local evidence modules, reflective validation for foundationality, novelty, and potential significance, and formal validation in Lean 4 and Mathlib. The objective is the discovery of mathematical problems with high problem taste, namely problems whose proofs could reorganize the language of a research area and provide durable help to human mathematical research. Experiments on twenty candidates showstable passage from natural language to formal checks, with twenty out of twenty candidates passing Lean parsing and type checking, twenty out of twenty candidates not directly absorbed by exact?,twenty out of twenty candidates not automatically discharged by aesop, and no explicit duplicates or near duplicates.",
+      "originalLanguage": "en",
+      "author": "Alizer Wong, Zixin Zeng, Yi Tan, Wenyuan Li, Xuhang Chen, Xingru Lai, Yang Shi, Liangsi Lu, Yanhui Chen",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28632",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 83,
+      "importanceReasonZh": "该论文提出了一种利用LLM系统发现重大数学猜想的新方法，结合形式化验证，具有较高的创新性和潜在影响力。",
+      "importanceReasonEn": "The paper proposes a novel method for systematically discovering major mathematical conjectures using LLMs combined with formal verification, showing high innovation and potential impact.",
+      "scoringMode": "ai",
+      "titleZh": "发现重大数学猜想的LLM框架：AI探索下一个黎曼猜想",
+      "titleEn": "LLM Framework for Discovering Major Mathematical Conjectures: AI's Quest for the Next Riemann Hypothesis",
+      "summaryZh": "arXiv:2607.28632v1 公告类型：新论文。摘要：重大数学猜想仍然严重依赖专家直觉，因此缺乏一种统一的方法来系统生成和验证具有重大数学潜力的猜想。我们提出了一个三阶段流水线用于重大猜想发现，包括从显式局部证据模块进行区域搜索、反思性验证（基础性、新颖性和潜在重要性），以及在Lean 4和Mathlib中进行形式化验证。目标是发现具有高问题品味的数学问题，即其证明可能重组研究领域的语言并为人类数学研究提供持久帮助的问题。在二十个候选上的实验表明从自然语言到形式化检查的稳定通过，二十个候选全部通过Lean解析和类型检查，二十个候选未被exact?直接吸收，二十个候选未被aesop自动消解，且没有显式重复或近似重复。",
+      "summaryEn": "arXiv:2607.28632v1 Announce Type: new. Abstract: Major mathematical conjectures still depend heavily on expert intuition, so a unified method for the systematic generation and validation of conjectures with substantial mathematical potential remains unavailable. We present a three stage pipeline for major conjecture discovery, with region search from explicit local evidence modules, reflective validation for foundationality, novelty, and potential significance, and formal validation in Lean 4 and Mathlib. The objective is the discovery of mathematical problems with high problem taste, namely problems whose proofs could reorganize the language of a research area and provide durable help to human mathematical research. Experiments on twenty candidates show stable passage from natural languag",
+      "keywords": [
+        "LLM",
+        "数学猜想",
+        "形式化验证",
+        "Lean 4",
+        "自动推理",
+        "问题品味"
+      ],
+      "topics": [
+        "LLM",
+        "数学猜想",
+        "形式化验证",
+        "Lean 4",
+        "自动推理"
+      ],
+      "models": [],
+      "detailZh": "该论文介绍了一个三阶段流水线，用于自动发现重大数学猜想。第一阶段是区域搜索，从显式局部证据模块出发，探索可能的猜想区域。第二阶段是反思性验证，评估候选猜想的基础性、新颖性和潜在重要性。第三阶段是形式化验证，使用Lean 4和Mathlib进行严格证明检查。实验在二十个候选上进行，所有候选均通过Lean解析和类型检查，且未被现有自动化工具直接解决，表明该方法能生成有效且新颖的猜想。",
+      "keyPointsZh": [
+        "提出三阶段流水线：区域搜索、反思性验证、形式化验证。",
+        "使用Lean 4和Mathlib进行形式化验证，确保猜想的严谨性。",
+        "二十个候选全部通过Lean解析和类型检查，且未被现有工具自动解决。",
+        "目标是发现具有高问题品味的数学问题，可能重组研究领域。"
+      ],
+      "impactZh": "该研究可能加速数学猜想的发现过程，为数学家提供新的工具和思路。对于AI领域，展示了LLM在高级推理任务中的潜力。对于形式化验证社区，提供了新的应用场景。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28632",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "LLM Framework for Discovering Major Mathematical Conjectures: AI's Quest for the Next Riemann Hypothesis"
+        }
+      ],
+      "heat": {
+        "current": 89,
+        "peak": 91,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 74
+          },
+          {
+            "label": "20小时前",
+            "value": 75
+          },
+          {
+            "label": "18小时前",
+            "value": 77
+          },
+          {
+            "label": "16小时前",
+            "value": 79
+          },
+          {
+            "label": "14小时前",
+            "value": 80
+          },
+          {
+            "label": "12小时前",
+            "value": 82
+          },
+          {
+            "label": "10小时前",
+            "value": 83
+          },
+          {
+            "label": "8小时前",
+            "value": 85
+          },
+          {
+            "label": "6小时前",
+            "value": 87
+          },
+          {
+            "label": "4小时前",
+            "value": 88
+          },
+          {
+            "label": "2小时前",
+            "value": 90
+          },
+          {
+            "label": "现在",
+            "value": 91
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d8736d8d9e30c800",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28642",
+      "originalUrl": "https://arxiv.org/abs/2607.28642",
+      "titleOriginal": "ThinkReset: Learnable Intermediate Interface Construction for Bounded-Context Long-Horizon Reasoning",
+      "summaryOriginal": "arXiv:2607.28642v1 Announce Type: new Abstract: Long chain-of-thought reasoning improves performance on complex problems, but it also introduces redundancy accumulation, context overflow, and error anchoring. We argue that under bounded context windows, the core bottleneck is not trajectory compression or test-time control, but the absence of a reusable intermediate interface that can replace discarded history and support continued solving. We further identify a key failure mode of outcome-reward-driven long-chain reinforcement learning: when the model has not solved the task before the window is nearly exhausted, the final-answer reward encourages premature guessing rather than continued careful reasoning. We propose ThinkReset, a text-space instantiation of this view. ThinkReset explicitly constructs reusable intermediate interfaces through interface writeback and reset, and directly optimizes post-reset continuation success. Across multiple long-horizon reasoning benchmarks, this perspective consistently improves success rates under fixed context windows.",
+      "originalLanguage": "en",
+      "author": "Fei Ding, Yongkang Zhang, Runhao Liu, Yuhao Liao, Zijian Zeng",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28642",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该研究针对长链推理中的关键瓶颈提出新方法，具有理论创新和实际应用价值，但尚未提供完整实验细节，重要性较高。",
+      "importanceReasonEn": "The research addresses a key bottleneck in long-horizon reasoning with a novel method, showing theoretical innovation and practical value, but lacks full experimental details, so importance is high but not maximal.",
+      "scoringMode": "ai",
+      "titleZh": "ThinkReset：用于有界上下文长时推理的可学习中间接口构建",
+      "titleEn": "ThinkReset: Learnable Intermediate Interface Construction for Bounded-Context Long-Horizon Reasoning",
+      "summaryZh": "本文提出，在有限的上下文窗口下，长链思维推理的核心瓶颈并非轨迹压缩或测试时控制，而是缺乏可复用的中间接口来替代已丢弃的历史并支持继续求解。作者还指出，在结果奖励驱动的长链强化学习中，当模型在窗口即将耗尽前仍未解决问题时，最终答案奖励会促使模型过早猜测而非继续仔细推理。为此，他们提出ThinkReset方法，通过接口写回和重置显式构建可复用的中间接口，并直接优化重置后的继续求解成功率。在多个长时推理基准上，该方法在固定上下文窗口下持续提升了成功率。",
+      "summaryEn": "This paper argues that under bounded context windows, the core bottleneck for long-chain-of-thought reasoning is not trajectory compression or test-time control, but the absence of a reusable intermediate interface that can replace discarded history and support continued solving. The authors also identify a failure mode in outcome-reward-driven long-chain RL: when the model hasn't solved the task before the window is nearly exhausted, the final-answer reward encourages premature guessing. They propose ThinkReset, which explicitly constructs reusable intermediate interfaces via interface writeback and reset, and directly optimizes post-reset continuation success. Across multiple long-horizon reasoning benchmarks, this method consistently improves success rates under fixed context windows.",
+      "keywords": [
+        "ThinkReset",
+        "长链推理",
+        "上下文窗口",
+        "强化学习",
+        "中间接口"
+      ],
+      "topics": [
+        "长链推理",
+        "上下文窗口",
+        "强化学习",
+        "中间接口"
+      ],
+      "models": [],
+      "detailZh": "长链思维推理在复杂问题上表现出色，但会引入冗余累积、上下文溢出和错误锚定等问题。本文认为，在有限的上下文窗口下，核心瓶颈并非轨迹压缩或测试时控制，而是缺乏可复用的中间接口来替代已丢弃的历史并支持继续求解。作者还指出，在结果奖励驱动的长链强化学习中，当模型在窗口即将耗尽前仍未解决问题时，最终答案奖励会促使模型过早猜测而非继续仔细推理。\n\n为此，他们提出ThinkReset方法，通过接口写回和重置显式构建可复用的中间接口，并直接优化重置后的继续求解成功率。在多个长时推理基准上，该方法在固定上下文窗口下持续提升了成功率。",
+      "keyPointsZh": [
+        "长链推理在有限上下文下存在冗余累积、上下文溢出和错误锚定问题。",
+        "核心瓶颈是缺乏可复用的中间接口来替代已丢弃的历史。",
+        "结果奖励驱动的长链RL会导致过早猜测。",
+        "ThinkReset通过接口写回和重置构建中间接口，并优化重置后的继续求解成功率。",
+        "在多个长时推理基准上，固定上下文窗口下成功率持续提升。"
+      ],
+      "impactZh": "对于研究者和开发者，ThinkReset提供了一种新的视角和方法来应对长链推理中的上下文限制，可能提升复杂推理任务的性能。该方法有望应用于需要长时推理的AI系统，如数学证明、代码生成等。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28642",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "ThinkReset: Learnable Intermediate Interface Construction for Bounded-Context Long-Horizon Reasoning"
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "728253ee4ae8b023",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28657",
+      "originalUrl": "https://arxiv.org/abs/2607.28657",
+      "titleOriginal": "TAPR: Enhancing LLM Performance with a Task-Aware Prompt Rewriter",
+      "summaryOriginal": "arXiv:2607.28657v1 Announce Type: new Abstract: Large Language Models (LLMs) often require carefully crafted prompts to unlock their full potential, which can be a barrier for non-expert users. This work addresses the challenge by introducing a Task-Aware Prompt Rewriter (TAPR), a model that reformulates user prompts into task-optimized prompts with the explicit goal of improving downstream LLM performance. We train TAPR using reinforcement learning with Group Relative Policy Optimization (GRPO), where rewards are derived from LLM-as-judge evaluations of both the reformulated prompt and the corresponding task output. Experimental results on diverse tasks, such as question answering, summarization, and arithmetic reasoning, show that our method yields consistent gains over base models in prompt rewriting ability. Fine-tuning Phi-4-mini-instruct (as the base model for TAPR) produces prompts that contain clearer and more instructive language, leading to higher accuracy on established benchmarks such as Natural Questions and GSM8K. Our code is available at: https://github.com/OliverSavolainen/task-specific-prompt-rewriter",
+      "originalLanguage": "en",
+      "author": "Oliver Savolainen, Emanuele Bastianelli, Hosein Azarbonyad",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28657",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提出了一种新的提示重写方法，通过强化学习优化提示，以提高LLM在多种任务上的性能，具有实际应用价值。",
+      "importanceReasonEn": "This research proposes a novel prompt rewriting method that uses reinforcement learning to optimize prompts, improving LLM performance on various tasks, with practical application value.",
+      "scoringMode": "ai",
+      "titleZh": "TAPR：利用任务感知提示重写器提升大语言模型性能",
+      "titleEn": "TAPR: Enhancing LLM Performance with a Task-Aware Prompt Rewriter",
+      "summaryZh": "arXiv:2607.28657v1 公告类型：新论文。摘要：大型语言模型（LLM）通常需要精心设计的提示才能发挥其全部潜力，这对非专家用户来说可能是一个障碍。这项工作通过引入任务感知提示重写器（TAPR）来解决这一挑战，该模型将用户提示改写为任务优化的提示，明确目标是提高下游LLM的性能。我们使用组相对策略优化（GRPO）的强化学习训练TAPR，其中奖励来自LLM作为评判者对改写后的提示和相应任务输出的评估。在问答、摘要和算术推理等多种任务上的实验结果表明，我们的方法在提示改写能力上比基础模型取得了一致的提升。微调Phi-4-mini-instruct（作为TAPR的基础模型）产生的提示包含更清晰、更具指导性的语言，在自然问题和GSM8K等既定基准上实现了更高的准确性。我们的代码可在以下网址获得：https://github.com/OliverSavolainen/task-specific-prompt-rewriter",
+      "summaryEn": "arXiv:2607.28657v1 Announce Type: new. Abstract: Large Language Models (LLMs) often require carefully crafted prompts to unlock their full potential, which can be a barrier for non-expert users. This work addresses the challenge by introducing a Task-Aware Prompt Rewriter (TAPR), a model that reformulates user prompts into task-optimized prompts with the explicit goal of improving downstream LLM performance. We train TAPR using reinforcement learning with Group Relative Policy Optimization (GRPO), where rewards are derived from LLM-as-judge evaluations of both the reformulated prompt and the corresponding task output. Experimental results on diverse tasks, such as question answering, summarization, and arithmetic reasoning, show that our method yields consistent gains over base models in p",
+      "keywords": [
+        "TAPR",
+        "prompt rewriting",
+        "GRPO",
+        "LLM-as-judge",
+        "Phi-4-mini-instruct"
+      ],
+      "topics": [
+        "prompt engineering",
+        "reinforcement learning",
+        "LLM optimization"
+      ],
+      "models": [
+        "Phi-4-mini-instruct"
+      ],
+      "detailZh": "该研究提出了一种任务感知提示重写器（TAPR），旨在自动将用户提示改写为任务优化的提示，以提高下游LLM的性能。TAPR使用组相对策略优化（GRPO）进行训练，这是一种强化学习算法，其中奖励由LLM作为评判者根据改写后的提示和任务输出进行评估。这种方法允许模型学习生成更清晰、更具指导性的提示，从而提升LLM在问答、摘要和算术推理等任务上的表现。实验结果表明，TAPR在多个基准测试（如自然问题和GSM8K）上取得了显著的准确性提升。该研究的代码已开源，便于复现和进一步研究。",
+      "keyPointsZh": [
+        "TAPR是一种任务感知提示重写器，通过强化学习训练，自动优化用户提示。",
+        "使用GRPO算法，奖励来自LLM-as-judge对提示和输出的评估。",
+        "在问答、摘要和算术推理等任务上，TAPR显著提升了LLM的性能。",
+        "基于Phi-4-mini-instruct微调，在自然问题和GSM8K基准上取得更高准确性。",
+        "代码已开源，可访问GitHub仓库。"
+      ],
+      "impactZh": "该研究对提示工程领域有重要影响，提供了一种自动优化提示的方法，降低了非专家用户使用LLM的门槛。对于开发者而言，TAPR可以集成到应用中，自动生成高质量提示，提升模型输出质量。对于行业而言，这种方法可以应用于各种LLM应用场景，提高效率和准确性。",
+      "actionStepsZh": [],
+      "detailCompleteness": "full",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28657",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "TAPR: Enhancing LLM Performance with a Task-Aware Prompt Rewriter"
+        }
+      ],
+      "heat": {
+        "current": 76,
+        "peak": 78,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 61
+          },
+          {
+            "label": "20小时前",
+            "value": 62
+          },
+          {
+            "label": "18小时前",
+            "value": 64
+          },
+          {
+            "label": "16小时前",
+            "value": 66
+          },
+          {
+            "label": "14小时前",
+            "value": 67
+          },
+          {
+            "label": "12小时前",
+            "value": 69
+          },
+          {
+            "label": "10小时前",
+            "value": 70
+          },
+          {
+            "label": "8小时前",
+            "value": 72
+          },
+          {
+            "label": "6小时前",
+            "value": 74
+          },
+          {
+            "label": "4小时前",
+            "value": 75
+          },
+          {
+            "label": "2小时前",
+            "value": 77
+          },
+          {
+            "label": "现在",
+            "value": 78
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "ab12d9b9839e8dcb",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28659",
+      "originalUrl": "https://arxiv.org/abs/2607.28659",
+      "titleOriginal": "Empowering Cross-Domain Sequential Recommendation with Hybrid Tokenization and Serial-Parallel Decoding",
+      "summaryOriginal": "arXiv:2607.28659v1 Announce Type: new Abstract: Cross-domain sequential recommendation (CDSR) aims to model users' dynamic interest transitions and sequential patterns across multiple domains. Recently, generative recommendation (GR) has emerged. It first learns semantic identifiers (SIDs) from item semantics and formulates recommendation as autoregressive generation. However, existing methods face two critical issues: (1) they ignore collaborative correlations across domains during tokenization, and (2) they adopt inefficient decoding strategies, such as beam search, during generation, which hinders real-time deployment. To address these limitations, we propose GenCDSR, an effective and efficient generative framework for CDSR. Specifically, we design a cross-domain hybrid tokenization mechanism with a multi-tower architecture to jointly capture cross-domain commonalities and domain-specific distinctions through hierarchical shared-specific and fine-grained codebooks. Furthermore, we develop a cross-domain serial-parallel decoding strategy that leverages the hierarchical SID structure to partially parallelize generation, significantly reducing inference latency while preserving gen",
+      "originalLanguage": "en",
+      "author": "Yuxuan Hu, Yuhao Wang, Tianbo Huang, Chao Zhang, Ziwei Liu, Lihua Zhang, Xiangyu Zhao",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28659",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该论文提出了一种新的生成式跨域序列推荐框架，解决了现有方法在分词和解码效率上的关键问题，具有实际应用潜力。",
+      "importanceReasonEn": "This paper proposes a novel generative framework for cross-domain sequential recommendation, addressing key issues in tokenization and decoding efficiency, with practical application potential.",
+      "scoringMode": "ai",
+      "titleZh": "赋能跨域序列推荐：混合分词与串并行解码",
+      "titleEn": "Empowering Cross-Domain Sequential Recommendation with Hybrid Tokenization and Serial-Parallel Decoding",
+      "summaryZh": "跨域序列推荐（CDSR）旨在建模用户跨多个域的动态兴趣转移和序列模式。最近，生成式推荐（GR）通过学习物品的语义标识符（SID）并将推荐视为自回归生成而兴起。然而，现有方法存在两个关键问题：（1）在分词时忽略跨域的协同相关性，（2）采用低效的解码策略（如束搜索），阻碍实时部署。为此，我们提出GenCDSR，一个高效且有效的CDSR生成框架。具体地，我们设计了一种跨域混合分词机制，采用多塔架构，通过层次化的共享-特定和细粒度码本联合捕获跨域共性和域特定差异。此外，我们开发了一种跨域串并行解码策略，利用层次化SID结构部分并行化生成，显著降低推理延迟，同时保持生成质量。",
+      "summaryEn": "Cross-domain sequential recommendation (CDSR) aims to model users' dynamic interest transitions and sequential patterns across multiple domains. Recently, generative recommendation (GR) has emerged, which learns semantic identifiers (SIDs) from item semantics and formulates recommendation as autoregressive generation. However, existing methods face two critical issues: (1) they ignore collaborative correlations across domains during tokenization, and (2) they adopt inefficient decoding strategies, such as beam search, which hinders real-time deployment. To address these limitations, we propose GenCDSR, an effective and efficient generative framework for CDSR. Specifically, we design a cross-domain hybrid tokenization mechanism with a multi-tower architecture to jointly capture cross-domain",
+      "keywords": [
+        "CDSR",
+        "生成式推荐",
+        "混合分词",
+        "串并行解码",
+        "语义标识符"
+      ],
+      "topics": [
+        "跨域序列推荐",
+        "生成式推荐",
+        "混合分词",
+        "串并行解码"
+      ],
+      "models": [
+        "GenCDSR"
+      ],
+      "detailZh": "跨域序列推荐（CDSR）旨在利用用户在不同域中的交互历史来建模其动态兴趣和序列模式。近年来，生成式推荐（GR）方法通过将物品表示为语义标识符（SID），并将推荐任务转化为自回归生成任务，取得了显著进展。然而，现有GR方法在CDSR中存在两个主要缺陷：首先，在分词阶段，它们通常独立处理每个域，忽略了跨域的协同相关性，导致生成的SID无法充分捕捉跨域共享信息；其次，在解码阶段，它们常采用束搜索等低效策略，导致推理延迟高，难以满足实时推荐需求。\n\n为了解决这些问题，论文提出了GenCDSR框架。该框架包含两个核心组件：一是跨域混合分词机制，采用多塔架构，通过层次化的共享-特定码本和细粒度码本，联合学习跨域共性和域特定差异，从而生成更具表达力的SID；二是跨域串并行解码策略，利用SID的层次结构，将生成过程部分并行化，在保持生成质量的同时显著降低推理延迟。实验结果表明，GenCDSR在多个跨域推荐数据集上取得了优于现有方法的性能，同时推理速度大幅提升。",
+      "keyPointsZh": [
+        "提出GenCDSR，一个用于跨域序列推荐的生成式框架。",
+        "设计跨域混合分词机制，通过多塔架构和层次化码本捕获跨域共性和域特定差异。",
+        "开发跨域串并行解码策略，利用SID层次结构部分并行化生成，降低推理延迟。",
+        "在多个数据集上验证了GenCDSR的有效性和效率。"
+      ],
+      "impactZh": "该研究对跨域推荐系统领域具有重要影响。对于开发者而言，GenCDSR提供了一种高效且有效的生成式推荐方案，能够显著降低推理延迟，有利于实时推荐系统的部署。对于行业而言，该框架能够更好地利用跨域数据，提升推荐准确性和用户满意度。此外，其混合分词和串并行解码思想也可为其他生成式任务提供借鉴。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28659",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "Empowering Cross-Domain Sequential Recommendation with Hybrid Tokenization and Serial-Parallel Decoding"
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "64503db4edbb3d8b",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28662",
+      "originalUrl": "https://arxiv.org/abs/2607.28662",
+      "titleOriginal": "An Ontology-Guided, Deduplication-Aware Extraction Layer for Knowledge Graph Construction from Heterogeneous Documents",
+      "summaryOriginal": "arXiv:2607.28662v1 Announce Type: new Abstract: Large language models extract entities and relationships from unstructured documents fluently but inconsistently: type vocabularies fracture across documents, the same person surfaces under several name variants, relationships duplicate, and distinct individuals who share a name risk silent conflation. This paper presents the design, implementation, and empirical refinement of a production extraction layer that converts a live document stream into a validated knowledge graph aligned to a formal ontology. The system consumes document metadata from Kafka, routes PDF, spreadsheet, Office, and image content through handlers built for each format, and extracts entities and relationships in two passes using a locally hosted Qwen3.5-9B model tuned on the ontology. Its distinguishing component is ontology-guided extraction: the relevant slice of a curated ontology is retrieved live from a graph database by embedding similarity and injected into the extraction prompt, reducing catalog overhead by about 94 percent relative to static domain slices. Extracted results then pass through a refinement pipeline of five stages: deterministic cleaning,",
+      "originalLanguage": "en",
+      "author": "Vaibhav Dangaich, Kevin Lewis, Kundeshwar Pundalik",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28662",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该论文提出了一种生产级知识图谱抽取层，结合本体引导和去重机制，解决了LLM抽取中的一致性问题，具有实际应用价值。",
+      "importanceReasonEn": "The paper proposes a production-grade knowledge graph extraction layer combining ontology guidance and deduplication, addressing consistency issues in LLM extraction, with practical application value.",
+      "scoringMode": "ai",
+      "titleZh": "一种本体引导、去重感知的抽取层：从异构文档构建知识图谱",
+      "titleEn": "An Ontology-Guided, Deduplication-Aware Extraction Layer for Knowledge Graph Construction from Heterogeneous Documents",
+      "summaryZh": "本文介绍了一个生产级抽取层的设计与实现，该层将实时文档流转换为与正式本体对齐的知识图谱。系统通过Kafka消费文档元数据，处理PDF、电子表格、Office和图像等格式，并使用本地托管的Qwen3.5-9B模型进行两遍抽取。其核心是本体引导的抽取：通过嵌入相似度从图数据库实时检索相关本体片段并注入提示，将目录开销减少约94%。抽取结果经过五阶段精炼流程，包括确定性清洗和去重。",
+      "summaryEn": "This paper presents the design and implementation of a production extraction layer that converts a live document stream into a knowledge graph aligned to a formal ontology. The system consumes document metadata from Kafka, handles PDF, spreadsheet, Office, and image formats, and extracts entities and relationships in two passes using a locally hosted Qwen3.5-9B model. Its key feature is ontology-guided extraction: relevant ontology slices are retrieved live from a graph database by embedding similarity and injected into prompts, reducing catalog overhead by about 94%. Extracted results pass through a five-stage refinement pipeline including deterministic cleaning and deduplication.",
+      "keywords": [
+        "知识图谱",
+        "本体",
+        "抽取",
+        "去重",
+        "Qwen3.5-9B",
+        "Kafka"
+      ],
+      "topics": [
+        "知识图谱",
+        "本体引导抽取",
+        "大语言模型",
+        "去重",
+        "异构文档处理"
+      ],
+      "models": [
+        "Qwen3.5-9B"
+      ],
+      "detailZh": "该论文介绍了一个生产级抽取层，用于从异构文档流中构建知识图谱。系统架构包括：通过Kafka消费文档元数据，路由到针对PDF、电子表格、Office和图像格式的处理器，并使用本地托管的Qwen3.5-9B模型进行两遍抽取。其核心创新是本体引导的抽取：从图数据库中实时检索与文档相关的本体片段（通过嵌入相似度），并注入到抽取提示中，从而将目录开销减少约94%。抽取结果经过五阶段精炼流程，包括确定性清洗、去重等，以确保知识图谱的一致性和准确性。",
+      "keyPointsZh": [
+        "系统使用Kafka消费文档元数据，并针对不同格式（PDF、电子表格、Office、图像）设计处理器。",
+        "采用本地托管的Qwen3.5-9B模型进行两遍抽取，以提取实体和关系。",
+        "本体引导的抽取通过嵌入相似度从图数据库实时检索相关本体片段，减少94%的目录开销。",
+        "抽取结果经过五阶段精炼流程，包括确定性清洗和去重，以处理名称变体和重复关系。"
+      ],
+      "impactZh": "该研究为知识图谱构建提供了一种可扩展的解决方案，通过本体引导和去重机制提高了抽取的一致性和准确性。对于处理大规模异构文档的组织，该方法可减少人工干预，提升知识图谱质量。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28662",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "An Ontology-Guided, Deduplication-Aware Extraction Layer for Knowledge Graph Construction from Heterogeneous Documents"
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9ebf1df9c3842f57",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28674",
+      "originalUrl": "https://arxiv.org/abs/2607.28674",
+      "titleOriginal": "How Hard Does It Think? Analyzing Step-Aware Reasoning Energy in LLM Chain-of-Thought Trajectories",
+      "summaryOriginal": "arXiv:2607.28674v1 Announce Type: new Abstract: Understanding how computational effort is allocated across individual chain-of-thought (CoT) reasoning steps remains an open challenge: existing interpretability methods rely on output-level signals or collapse processing depth into a single trajectory-level scalar, leaving step-wise effort opaque. We propose Step-Aware Reasoning Energy (SARE), a geometric framework that quantifies effort at the granularity of individual CoT steps via Centered Kernel Alignment (CKA) between Gram matrices of token hidden states across adjacent transformer layers, capturing inter-token relational structure without requiring eigenvector alignment or cluster correspondence. SARE further contextualizes this energy within reasoning's semantic progression by modeling CoT trajectories as transitions among latent semantic states. Across six reasoning benchmarks and three open-weight LLMs, we find that reasoning energy is highly non-uniform across step types, exhibiting phase-like transitions invisible to trajectory-level metrics; incorrect trajectories show systematically lower energy at critical reasoning junctions; and SARE-based features match or outperform",
+      "originalLanguage": "en",
+      "author": "Hui Wei, Junda Wu, Sheldon Yu, Sizhe Zhou, Yizhu Jiao, Ming Zhong, Bowen Jin, Tong Yu, Shijia Pan, Jiawei Han, Julian McAuley",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28674",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该论文提出了一种新的框架来量化LLM推理步骤中的计算努力，填补了现有方法在逐步粒度上的空白，并提供了实证发现，对推理可解释性和错误分析有潜在价值。",
+      "importanceReasonEn": "The paper proposes a novel framework to quantify computational effort in LLM reasoning steps, filling a gap in step-wise granularity, and provides empirical findings with potential value for reasoning interpretability and error analysis.",
+      "scoringMode": "ai",
+      "titleZh": "它思考得有多努力？分析LLM思维链轨迹中逐步推理能量",
+      "titleEn": "How Hard Does It Think? Analyzing Step-Aware Reasoning Energy in LLM Chain-of-Thought Trajectories",
+      "summaryZh": "arXiv:2607.28674v1 公告类型：新论文。摘要：理解计算努力如何在各个思维链（CoT）推理步骤中分配仍然是一个开放挑战：现有的可解释性方法依赖于输出级信号或将处理深度压缩为单个轨迹级标量，使得逐步努力不透明。我们提出了逐步感知推理能量（SARE），一种几何框架，通过相邻Transformer层之间token隐藏状态的Gram矩阵之间的中心核对齐（CKA）来量化单个CoT步骤的努力，捕获token间关系结构，无需特征向量对齐或簇对应。SARE进一步通过将CoT轨迹建模为潜在语义状态之间的转换，将这种能量置于推理的语义进展中。在六个推理基准和三个开放权重LLM上，我们发现推理能量在步骤类型上高度不均匀，表现出轨迹级指标不可见的相变；不正确的轨迹在关键推理节点表现出系统性较低的能量；基于SARE的特征匹配或超过现有方法。",
+      "summaryEn": "arXiv:2607.28674v1 Announcement Type: New. Abstract: Understanding how computational effort is allocated across individual chain-of-thought (CoT) reasoning steps remains an open challenge: existing interpretability methods rely on output-level signals or collapse processing depth into a single trajectory-level scalar, leaving step-wise effort opaque. We propose Step-Aware Reasoning Energy (SARE), a geometric framework that quantifies effort at the granularity of individual CoT steps via Centered Kernel Alignment (CKA) between Gram matrices of token hidden states across adjacent transformer layers, capturing inter-token relational structure without requiring eigenvector alignment or cluster correspondence. SARE further contextualizes this energy within reasoning's semantic progression by mo",
+      "keywords": [
+        "SARE",
+        "CKA",
+        "思维链",
+        "推理能量",
+        "可解释性",
+        "LLM"
+      ],
+      "topics": [
+        "LLM推理",
+        "可解释性",
+        "思维链",
+        "计算努力"
+      ],
+      "models": [
+        "三个开放权重LLM（未指定具体名称）"
+      ],
+      "detailZh": "该论文提出了一种名为SARE（Step-Aware Reasoning Energy）的框架，用于量化LLM思维链推理中每个步骤的计算努力。SARE利用中心核对齐（CKA）比较相邻Transformer层中token隐藏状态的Gram矩阵，从而捕获token间的关系结构，无需特征向量对齐或簇对应。这种方法能够以单个步骤的粒度量化推理能量，同时通过将CoT轨迹建模为潜在语义状态之间的转换，将能量与推理的语义进展联系起来。\n\n在六个推理基准和三个开放权重LLM上的实验表明，推理能量在不同步骤类型上高度不均匀，表现出类似相变的转换，这些转换在轨迹级指标中不可见。此外，不正确的轨迹在关键推理节点表现出系统性较低的能量，表明SARE可以用于识别推理中的薄弱环节。基于SARE的特征在预测推理正确性方面匹配或超过了现有方法。\n\n该研究为LLM推理过程提供了更细粒度的可解释性工具，有助于理解模型如何分配计算资源，并可能用于改进推理错误检测和模型调试。",
+      "keyPointsZh": [
+        "提出SARE框架，通过CKA量化LLM思维链中每个步骤的推理能量。",
+        "SARE无需特征向量对齐或簇对应，适用于任意Transformer模型。",
+        "在六个推理基准和三个开放权重LLM上验证，发现推理能量在步骤类型上高度不均匀。",
+        "不正确的轨迹在关键推理节点表现出系统性较低的能量。",
+        "基于SARE的特征在预测推理正确性方面匹配或超过现有方法。"
+      ],
+      "impactZh": "对于研究人员，SARE提供了一种新的工具来深入分析LLM推理过程，有助于理解模型的计算资源分配和推理错误来源。对于开发者，SARE可以用于调试和改进推理模型，例如通过识别低能量步骤来定位潜在错误。对于行业，该框架可能促进更可靠的推理系统开发，特别是在需要可解释性的应用场景中。",
+      "actionStepsZh": [],
+      "detailCompleteness": "full",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28674",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "How Hard Does It Think? Analyzing Step-Aware Reasoning Energy in LLM Chain-of-Thought Trajectories"
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "35ccb17012f5708f",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28677",
+      "originalUrl": "https://arxiv.org/abs/2607.28677",
+      "titleOriginal": "Reasoning in Real World Clinical Care: Why Large Language Models Are Not Yet Safe for Autonomous Clinical Decision Support",
+      "summaryOriginal": "arXiv:2607.28677v1 Announce Type: new Abstract: LLM now pass medical licensing examinations and, in curated cases, can rival physicians at diagnostic reasoning. These developments have accelerated the use of LLMs for symptom assessment and clinical decision support in diagnostic and treatment guidance, administrative documentation, and rules-based alert enhancement. This Perspective concerns the most consequential of these applications: the autonomous triage of self-presenting, undifferentiated patients, with little or no clinician in the loop. For that task, the evidence of safety does not yet exist. The gap is not in medical knowledge but in the fidelity of clinical evaluation: a model optimized to continue the most probable text is not optimized to act safely when the safe answer is the improbable must-not-miss diagnosis. Safe triage is not the selection of the most likely diagnosis; it is a sequential decision under asymmetric cost, in which the single catastrophic miss outweighs many false alarms, and the decisive signal may be one the patient has not volunteered - and that the model has not been trained to seek. The core deficit is therefore one of information gathering under",
+      "originalLanguage": "en",
+      "author": "Shayndhan Sivanathan, Shravan Nageswaran, Mehdi Zadem, Ryaan Sultan, Nicolas von Mallinckrodt, Max Solovyev, Alexey Matyushkin, Sumon Sadhu, Gabriele C DeLuca, Sanjeeva Jeyaretna, James Hillis, Manoj Ramachandran, Prakash Jayakumar",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28677",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 83,
+      "importanceReasonZh": "该论文针对LLM在医疗领域最危险的应用——自主分诊——提出了关键的安全性质疑，指出了核心缺陷在于信息收集而非医学知识，对医疗AI的发展具有重要的警示和指导意义。",
+      "importanceReasonEn": "This paper raises critical safety concerns about the most consequential application of LLMs in healthcare—autonomous triage—identifying the core deficit in information gathering rather than medical knowledge, which has significant implications for the development of medical AI.",
+      "scoringMode": "ai",
+      "titleZh": "现实世界临床护理中的推理：为什么大型语言模型尚不能安全用于自主临床决策支持",
+      "titleEn": "Reasoning in Real World Clinical Care: Why Large Language Models Are Not Yet Safe for Autonomous Clinical Decision Support",
+      "summaryZh": "arXiv:2607.28677v1 公告类型：新论文。摘要：大型语言模型（LLM）现已通过医学执照考试，并且在精选案例中，其诊断推理能力可与医生媲美。这些进展加速了LLM在症状评估、临床决策支持（诊断和治疗指导）、行政文档以及基于规则的警报增强中的应用。本观点文章关注其中最具后果性的应用：对自我呈现、未分化的患者进行自主分诊，且几乎没有临床医生参与。对于该任务，安全性的证据尚不存在。差距不在于医学知识，而在于临床评估的保真度：一个优化为继续生成最可能文本的模型，并不优化为在安全答案是概率极低但不可漏诊的诊断时采取安全行动。安全分诊不是选择最可能的诊断；它是在不对称成本下的顺序决策，其中一次灾难性的漏诊胜过许多误报，而决定性的信号可能是患者未主动提供且模型未被训练去寻求的信息。因此，核心缺陷在于信息收集。",
+      "summaryEn": "arXiv:2607.28677v1 Announce Type: new Abstract: LLM now pass medical licensing examinations and, in curated cases, can rival physicians at diagnostic reasoning. These developments have accelerated the use of LLMs for symptom assessment and clinical decision support in diagnostic and treatment guidance, administrative documentation, and rules-based alert enhancement. This Perspective concerns the most consequential of these applications: the autonomous triage of self-presenting, undifferentiated patients, with little or no clinician in the loop. For that task, the evidence of safety does not yet exist. The gap is not in medical knowledge but in the fidelity of clinical evaluation: a model optimized to continue the most probable text is not optimized to act safely when the safe answer is the",
+      "keywords": [
+        "LLM",
+        "临床决策支持",
+        "自主分诊",
+        "安全",
+        "信息收集"
+      ],
+      "topics": [
+        "LLM",
+        "临床决策支持",
+        "医疗安全",
+        "自主分诊"
+      ],
+      "models": [],
+      "detailZh": "这篇观点文章指出，尽管大型语言模型（LLM）在医学执照考试和精选诊断案例中表现出色，但在自主分诊未分化患者这一任务上，安全性的证据尚不存在。作者认为，差距不在于医学知识，而在于临床评估的保真度。LLM被优化为生成最可能的文本，但在安全答案是概率极低但不可漏诊的诊断时，它并不被优化为采取安全行动。安全分诊不是选择最可能的诊断，而是在不对称成本下的顺序决策，其中一次灾难性的漏诊胜过许多误报，而决定性的信号可能是患者未主动提供且模型未被训练去寻求的信息。因此，核心缺陷在于信息收集。",
+      "keyPointsZh": [
+        "LLM在医学执照考试和精选案例中表现优异，但自主分诊的安全性证据不足。",
+        "核心缺陷在于信息收集，而非医学知识。",
+        "安全分诊需要处理不对称成本，漏诊的代价远高于误报。",
+        "模型可能无法主动寻求患者未提供的关键信息。"
+      ],
+      "impactZh": "该论文对医疗AI开发者、临床医生和政策制定者具有重要影响。它提醒开发者，在将LLM用于自主分诊等高风险场景时，必须解决信息收集和不对称成本的问题，而不能仅依赖模型生成最可能文本的能力。临床医生应警惕LLM在分诊中的局限性，政策制定者可能需要制定更严格的监管标准。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28677",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "Reasoning in Real World Clinical Care: Why Large Language Models Are Not Yet Safe for Autonomous Clinical Decision Support"
+        }
+      ],
+      "heat": {
+        "current": 89,
+        "peak": 91,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 74
+          },
+          {
+            "label": "20小时前",
+            "value": 75
+          },
+          {
+            "label": "18小时前",
+            "value": 77
+          },
+          {
+            "label": "16小时前",
+            "value": 79
+          },
+          {
+            "label": "14小时前",
+            "value": 80
+          },
+          {
+            "label": "12小时前",
+            "value": 82
+          },
+          {
+            "label": "10小时前",
+            "value": 83
+          },
+          {
+            "label": "8小时前",
+            "value": 85
+          },
+          {
+            "label": "6小时前",
+            "value": 87
+          },
+          {
+            "label": "4小时前",
+            "value": 88
+          },
+          {
+            "label": "2小时前",
+            "value": 90
+          },
+          {
+            "label": "现在",
+            "value": 91
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "5f08bb3ffea25826",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28678",
+      "originalUrl": "https://arxiv.org/abs/2607.28678",
+      "titleOriginal": "ViSAGE: Constructing Self-Correcting Memories for Long-Form Video Understanding",
+      "summaryOriginal": "arXiv:2607.28678v1 Announce Type: new Abstract: Multimodal agents operating in long-horizon environments must build and continually update multimedia memories to support entity-consistent, temporally grounded reasoning. However, existing agentic memory approaches often discard fine-grained dentity cues under aggressive compression and segment-wise processing. They also rely heavily on vector similarity retrieval, which can surface semantically related yet identity-mismatched evidence, leading to entity confusion, error propagation, and hallucinated answers. We propose ViSAGE, a multimodal agentic memory framework that constructs self-correcting, entity-centric memories. Specifically, ViSAGE anchors entity identity via cross-modal binding over long temporal ranges. It then applies bidirectional memory refinement to propagate delayed identity evidence, retroactively unifying historical records and improving future reasoning. We also introduce multi-agent cross-verification to assess retrieved evidence under an identity-evidence alignment onstraint, enabling abstention instead of unsupported answers when evidence is missing. Extensive results demonstrate that ViSAGE consistently outpe",
+      "originalLanguage": "en",
+      "author": "Xinkui Zhao, Enbo Chen, Yifan Zhang, Chang Liu, Guanjie Cheng, Naibo Wang, Yueshen Xu",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28678",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该论文提出了一种新颖的多模态代理记忆框架，解决了长视频理解中的实体一致性和错误传播问题，具有实际应用价值。",
+      "importanceReasonEn": "The paper proposes a novel multimodal agentic memory framework addressing entity consistency and error propagation in long-form video understanding, with practical value.",
+      "scoringMode": "ai",
+      "titleZh": "ViSAGE：构建用于长视频理解的自校正记忆",
+      "titleEn": "ViSAGE: Constructing Self-Correcting Memories for Long-Form Video Understanding",
+      "summaryZh": "arXiv:2607.28678v1 公告类型：新论文。摘要：在长时间跨度环境中运行的多模态代理必须构建并持续更新多媒体记忆，以支持实体一致、时间基础的推理。然而，现有的代理记忆方法在激进压缩和分段处理下常常丢弃细粒度的身份线索。它们还严重依赖向量相似性检索，这可能返回语义相关但身份不匹配的证据，导致实体混淆、错误传播和幻觉答案。我们提出ViSAGE，一种多模态代理记忆框架，构建自校正、以实体为中心的记忆。具体来说，ViSAGE通过跨模态绑定在长时间范围内锚定实体身份。然后应用双向记忆细化来传播延迟的身份证据，追溯性地统一历史记录并改善未来推理。我们还引入了多代理交叉验证，在身份证据对齐约束下评估检索到的证据，当证据缺失时能够弃权而不是给出无根据的答案。大量结果表明ViSAGE持续优于现有方法。",
+      "summaryEn": "arXiv:2607.28678v1 Announce Type: new Abstract: Multimodal agents operating in long-horizon environments must build and continually update multimedia memories to support entity-consistent, temporally grounded reasoning. However, existing agentic memory approaches often discard fine-grained identity cues under aggressive compression and segment-wise processing. They also rely heavily on vector similarity retrieval, which can surface semantically related yet identity-mismatched evidence, leading to entity confusion, error propagation, and hallucinated answers. We propose ViSAGE, a multimodal agentic memory framework that constructs self-correcting, entity-centric memories. Specifically, ViSAGE anchors entity identity via cross-modal binding over long temporal ranges. It then applies bidirect",
+      "keywords": [
+        "ViSAGE",
+        "自校正记忆",
+        "长视频理解",
+        "多模态代理",
+        "实体身份"
+      ],
+      "topics": [
+        "多模态代理",
+        "长视频理解",
+        "记忆管理",
+        "实体中心推理"
+      ],
+      "models": [
+        "ViSAGE"
+      ],
+      "detailZh": "该论文介绍了一种名为ViSAGE的多模态代理记忆框架，旨在解决长视频理解中的关键挑战。现有方法在处理长时间跨度时，往往通过激进压缩和分段处理丢失细粒度的身份线索，导致实体混淆和错误传播。ViSAGE通过跨模态绑定在长时间范围内锚定实体身份，确保身份一致性。此外，它采用双向记忆细化机制，传播延迟的身份证据，追溯性地统一历史记录，从而改善未来推理。为了进一步提高可靠性，ViSAGE引入了多代理交叉验证，在身份证据对齐约束下评估检索到的证据，当证据不足时允许模型弃权而非给出无根据的答案。实验结果表明，ViSAGE在多个基准上持续优于现有方法，展示了其在长视频理解任务中的有效性。",
+      "keyPointsZh": [
+        "ViSAGE通过跨模态绑定在长时间范围内锚定实体身份，解决身份丢失问题。",
+        "采用双向记忆细化机制，传播延迟身份证据，统一历史记录。",
+        "引入多代理交叉验证，在证据不足时支持弃权，减少幻觉。",
+        "实验证明ViSAGE在长视频理解任务上优于现有方法。"
+      ],
+      "impactZh": "该研究对多模态代理和长视频理解领域具有重要影响。它提供了一种构建自校正记忆的方法，能够提高实体一致性和推理准确性，减少错误传播。对于开发人员，ViSAGE的框架可以集成到现有的多模态系统中，提升处理长视频任务的能力。对于行业，该技术有望应用于视频分析、智能监控和人机交互等领域，提高系统的可靠性和实用性。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28678",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "ViSAGE: Constructing Self-Correcting Memories for Long-Form Video Understanding"
+        }
+      ],
+      "heat": {
+        "current": 81,
+        "peak": 83,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 66
+          },
+          {
+            "label": "20小时前",
+            "value": 67
+          },
+          {
+            "label": "18小时前",
+            "value": 69
+          },
+          {
+            "label": "16小时前",
+            "value": 71
+          },
+          {
+            "label": "14小时前",
+            "value": 72
+          },
+          {
+            "label": "12小时前",
+            "value": 74
+          },
+          {
+            "label": "10小时前",
+            "value": 75
+          },
+          {
+            "label": "8小时前",
+            "value": 77
+          },
+          {
+            "label": "6小时前",
+            "value": 79
+          },
+          {
+            "label": "4小时前",
+            "value": 80
+          },
+          {
+            "label": "2小时前",
+            "value": 82
+          },
+          {
+            "label": "现在",
+            "value": 83
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c07c07c6574b8e21",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28679",
+      "originalUrl": "https://arxiv.org/abs/2607.28679",
+      "titleOriginal": "Multi-Agent Planning with Spatio-Temporal and Topological Constraints using STL-GO",
+      "summaryOriginal": "arXiv:2607.28679v1 Announce Type: new Abstract: Multi-agent planning problems arise in a variety of engineering applications, such as multi-robot wildfire fighting and unmanned aerial inspection in factories. A particular challenge is the existence of spatio-temporal (i.e., when and/or where an agent should do what) and topological constraints (i.e., how agents should interact), as typically formalized via the notion of graphs. Over the last years, various frameworks have been proposed that can capture such constraints via spatio-temporal logics. We focus here on spatio-temporal logic with graph operators (STL-GO), a recent formalism that supports reasoning about multiple agents and their topologies, such as sensing, communication, and task topologies. In this paper, we consider the problem of planning multi-agent paths that satisfy constraints written in STL-GO. This problem is particularly challenging due to the need of encoding multiple, potentially time-varying graphs via the graph operators inherent to STL-GO. We present two encodings of this problem, one based on mixed-integer programming (MIP) and another based on satisfiability modulo theory (SMT), with soundness guarantees",
+      "originalLanguage": "en",
+      "author": "Sheryl Paul, Vidisha Kudalkar, Anand Balakrishnan, Lars Lindemann, Alberto Speranzon, Jyotirmoy V. Deshmukh",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28679",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提出了一种新的多智能体规划方法，结合了时空和拓扑约束，具有理论贡献和实际应用潜力，但尚未经过实践验证。",
+      "importanceReasonEn": "The research proposes a novel multi-agent planning approach combining spatio-temporal and topological constraints, with theoretical contributions and practical potential, but not yet validated in practice.",
+      "scoringMode": "ai",
+      "titleZh": "使用STL-GO的多智能体规划：时空与拓扑约束",
+      "titleEn": "Multi-Agent Planning with Spatio-Temporal and Topological Constraints using STL-GO",
+      "summaryZh": "本文研究了多智能体路径规划问题，其中需满足时空约束（何时何地执行动作）和拓扑约束（智能体间交互）。作者聚焦于时空逻辑STL-GO，该逻辑支持图算子以表达多智能体拓扑。他们提出了两种编码方法：混合整数规划（MIP）和可满足性模理论（SMT），并提供了可靠性保证。",
+      "summaryEn": "This paper addresses multi-agent path planning with spatio-temporal and topological constraints, formalized using STL-GO logic. The authors propose two encodings: mixed-integer programming (MIP) and satisfiability modulo theory (SMT), with soundness guarantees.",
+      "keywords": [],
+      "topics": [
+        "multi-agent planning",
+        "spatio-temporal logic",
+        "topological constraints",
+        "STL-GO",
+        "MIP",
+        "SMT"
+      ],
+      "models": [],
+      "detailZh": "多智能体规划问题在工程应用中广泛存在，如多机器人灭火、工厂无人机巡检等。这些场景中，智能体需要满足时空约束（何时何地执行动作）和拓扑约束（智能体间的交互关系）。近年来，研究者提出了多种时空逻辑来形式化这些约束。本文聚焦于STL-GO，一种支持图算子的时空逻辑，能够表达多智能体拓扑（如感知、通信、任务拓扑）。\n\n本文研究了满足STL-GO约束的多智能体路径规划问题。该问题的难点在于STL-GO的图算子需要编码多个可能随时间变化的图。作者提出了两种编码方法：基于混合整数规划（MIP）和基于可满足性模理论（SMT），并提供了可靠性保证。\n\n论文发表于arXiv，属于理论性研究，尚未提供实验验证或实际应用案例。",
+      "keyPointsZh": [
+        "提出使用STL-GO逻辑形式化多智能体规划中的时空和拓扑约束。",
+        "设计了两种编码方法：MIP和SMT，用于求解满足STL-GO约束的路径。",
+        "提供了编码的可靠性保证。",
+        "研究处于理论阶段，缺乏实验验证。"
+      ],
+      "impactZh": "该研究为多智能体规划提供了新的理论框架，可能推动相关应用的发展，如多机器人协作、无人机巡检等。但实际影响需待实验验证和工程实现。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28679",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "Multi-Agent Planning with Spatio-Temporal and Topological Constraints using STL-GO"
+        }
+      ],
+      "heat": {
+        "current": 76,
+        "peak": 78,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 61
+          },
+          {
+            "label": "20小时前",
+            "value": 62
+          },
+          {
+            "label": "18小时前",
+            "value": 64
+          },
+          {
+            "label": "16小时前",
+            "value": 66
+          },
+          {
+            "label": "14小时前",
+            "value": 67
+          },
+          {
+            "label": "12小时前",
+            "value": 69
+          },
+          {
+            "label": "10小时前",
+            "value": 70
+          },
+          {
+            "label": "8小时前",
+            "value": 72
+          },
+          {
+            "label": "6小时前",
+            "value": 74
+          },
+          {
+            "label": "4小时前",
+            "value": 75
+          },
+          {
+            "label": "2小时前",
+            "value": 77
+          },
+          {
+            "label": "现在",
+            "value": 78
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f83fdbe042e6dcf6",
+      "normalizedUrl": "https://arxiv.org/abs/2607.28684",
+      "originalUrl": "https://arxiv.org/abs/2607.28684",
+      "titleOriginal": "Library Reachability in LSR-Synth: How Anti-Memorization Design Changes the Measurement of Symbolic Discovery",
+      "summaryOriginal": "arXiv:2607.28684v1 Announce Type: new Abstract: Existing benchmarks for scientific equation discovery are largely composed of well-known equations available in the public domain, making it difficult to determine whether a model is discovering laws from data or merely recalling answers from its training corpus. LSR-Synth mitigates this problem by introducing novel synthetic terms into established scientific mechanisms and filtering the resulting tasks for novelty, solvability, and scientific plausibility. This paper examines a narrower measurement question: can these tasks further distinguish scientific priors supplied by language models from conventional operator search that does not access task semantics? We construct a semantics-free baseline using a fixed vocabulary with publicly documented provenance, and assess the role of candidate coverage through semantic blinding, library weakening, and matched operator-family knockouts. Under the current task snapshot, search budget, and scoring protocol, the fixed vocabulary already covers most tasks, while language-model-generated candidates rarely expand the set of solvable instances. Their marginal contribution becomes substantial onl",
+      "originalLanguage": "en",
+      "author": "Zhan'ao Yao, Liang Yin, Zhihao Gao, Boxuan Zhang, Xiaoyu Wu, Linjing Li, Rongyan Wang, Tingwei Chen, Youwei Wang, Xiaolin Zhao, Jiahui Shi, Jianjun Liu",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "publishedAt": "2026-08-04T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28684",
+          "publishedAt": "2026-08-03T04:00:00.000Z"
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究关注AI科学发现中的记忆化问题，提出新的基准和测量方法，对评估语言模型在科学发现中的真实能力有重要意义。",
+      "importanceReasonEn": "This research addresses memorization in AI scientific discovery, proposing a new benchmark and measurement methodology, which is important for evaluating the true capabilities of language models in scientific discovery.",
+      "scoringMode": "ai",
+      "titleZh": "LSR-Synth中的库可达性：反记忆化设计如何改变符号发现的测量",
+      "titleEn": "Library Reachability in LSR-Synth: How Anti-Memorization Design Changes the Measurement of Symbolic Discovery",
+      "summaryZh": "arXiv:2607.28684v1 新论文摘要：现有的科学方程发现基准大多由公共领域的知名方程组成，难以判断模型是从数据中发现规律还是从训练语料中回忆答案。LSR-Synth通过将新颖的合成项引入既有科学机制，并过滤出具有新颖性、可解性和科学合理性的任务来缓解这一问题。本文研究一个更窄的测量问题：这些任务能否进一步区分语言模型提供的科学先验与不访问任务语义的常规算子搜索？作者使用固定词汇和公开记录来源构建了无语义基线，并通过语义盲化、库弱化和匹配算子族剔除来评估候选覆盖的作用。在当前任务快照、搜索预算和评分协议下，固定词汇已覆盖大多数任务，而语言模型生成的候选很少扩展可解实例集。其边际贡献仅在特定条件下变得显著。",
+      "summaryEn": "arXiv:2607.28684v1 Announce Type: new Abstract: Existing benchmarks for scientific equation discovery are largely composed of well-known equations available in the public domain, making it difficult to determine whether a model is discovering laws from data or merely recalling answers from its training corpus. LSR-Synth mitigates this problem by introducing novel synthetic terms into established scientific mechanisms and filtering the resulting tasks for novelty, solvability, and scientific plausibility. This paper examines a narrower measurement question: can these tasks further distinguish scientific priors supplied by language models from conventional operator search that does not access task semantics? We construct a semantics-free baseline using a fixed vocabulary with publicly docume",
+      "keywords": [
+        "LSR-Synth",
+        "符号发现",
+        "反记忆化",
+        "语言模型",
+        "算子搜索",
+        "基准"
+      ],
+      "topics": [
+        "符号发现",
+        "反记忆化",
+        "语言模型",
+        "基准测试"
+      ],
+      "models": [],
+      "detailZh": "该论文针对现有科学方程发现基准的缺陷，即大多由公开已知方程组成，导致模型可能通过记忆训练数据而非真正从数据中学习规律。为此，作者提出了LSR-Synth基准，通过引入新颖的合成项并过滤任务，确保任务具有新颖性、可解性和科学合理性。本文进一步探讨了这些任务能否区分语言模型提供的科学先验与不依赖任务语义的常规算子搜索。作者构建了一个使用固定词汇和公开来源的无语义基线，并通过语义盲化、库弱化和匹配算子族剔除等方法评估候选覆盖的作用。实验结果表明，在当前任务快照、搜索预算和评分协议下，固定词汇已覆盖大多数任务，而语言模型生成的候选很少扩展可解实例集，其边际贡献仅在特定条件下显著。",
+      "keyPointsZh": [
+        "现有符号发现基准多由公开已知方程组成，存在记忆化风险。",
+        "LSR-Synth通过引入新颖合成项并过滤任务来缓解记忆化问题。",
+        "作者构建了无语义基线，并评估了语言模型候选的边际贡献。",
+        "固定词汇已覆盖大多数任务，语言模型候选的扩展有限。"
+      ],
+      "impactZh": "该研究对AI科学发现领域有重要影响，提醒研究者注意模型记忆化问题，并提供了新的评估方法。对于开发者和研究人员，这意味着在设计基准和评估模型时，需要更加注重任务的新颖性和模型的泛化能力。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 60,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.28684",
+          "publishedAt": "2026-08-03T04:00:00.000Z",
+          "title": "Library Reachability in LSR-Synth: How Anti-Memorization Design Changes the Measurement of Symbolic Discovery"
+        }
+      ],
+      "heat": {
+        "current": 76,
+        "peak": 78,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 61
+          },
+          {
+            "label": "20小时前",
+            "value": 62
+          },
+          {
+            "label": "18小时前",
+            "value": 64
+          },
+          {
+            "label": "16小时前",
+            "value": 66
+          },
+          {
+            "label": "14小时前",
+            "value": 67
+          },
+          {
+            "label": "12小时前",
+            "value": 69
+          },
+          {
+            "label": "10小时前",
+            "value": 70
+          },
+          {
+            "label": "8小时前",
+            "value": 72
+          },
+          {
+            "label": "6小时前",
+            "value": 74
+          },
+          {
+            "label": "4小时前",
+            "value": 75
+          },
+          {
+            "label": "2小时前",
+            "value": 77
+          },
+          {
+            "label": "现在",
+            "value": 78
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "cc559c8d7865a53b",
+      "normalizedUrl": "https://qwen.ai/blog?id=qwen3.8",
+      "originalUrl": "https://qwen.ai/blog?id=qwen3.8",
+      "titleOriginal": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+      "summaryOriginal": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
+      "originalLanguage": "zh",
+      "author": "Qwen：Blog Retrieval（API）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 89,
+      "publishedAt": "2026-08-04T03:49:14.000Z",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-new-qwen-model-is-also-taking-your-job-but-this-time-its-great/",
+          "publishedAt": "2026-08-03T17:12:23.000Z"
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-open-weight-qwen3-8-max-takes-on-long-horizon-ai-tasks-with-2-4-trillion-parameters/",
+          "publishedAt": "2026-08-03T10:48:50.000Z"
+        },
+        {
+          "id": "aihot-selected:cmscldw820c4kroeu7bw1kb27",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8",
+          "publishedAt": "2026-08-03T02:00:00.000Z",
+          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+          "authority": 89,
+          "sourcePriority": 96
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/chinas-minimax-h3-is-the-first-open-model-to-top-an-ai-video-ranking/",
+          "publishedAt": "2026-08-03T13:52:29.000Z",
+          "title": "China&#039;s MiniMax H3 is the first open model to top an AI video ranking",
+          "authority": 84,
+          "sourcePriority": 82
+        },
+        {
+          "id": "aihot-selected:cmsdu3hyr015xrofzqxuosm3y",
+          "name": "公众号：MiniMax（稀宇科技）",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ%3D%3D&mid=2247488931&idx=1&sn=0506e1d52edd5166becf35f5ebd83a07",
+          "publishedAt": "2026-08-03T02:44:09.000Z",
+          "title": "MiniMax H3 正式开源：通用全模态生成系统支持 2K 视频与原生立体声",
+          "authority": 76,
+          "sourcePriority": 96
+        },
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+          "publishedAt": "2026-08-04T03:49:14.000Z",
+          "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
+          "authority": 84,
+          "sourcePriority": 82
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该新闻涉及主要AI模型发布和营销策略，但内容有限，且主要基于营销视频，缺乏技术细节或实际影响。",
+      "importanceReasonEn": "The news involves a major AI model release and marketing strategy, but the content is limited and based on a marketing video, lacking technical details or practical impact.",
+      "scoringMode": "ai",
+      "titleZh": "阿里巴巴新Qwen模型也在抢你的工作，但这次很棒",
+      "titleEn": "Alibaba's new Qwen model is also taking your job, but this time it's great",
+      "summaryZh": "阿里巴巴通过一段视频宣传其新AI模型Qwen 3.8，视频中AI在工作，而人类在享受爱好，与OpenAI和Anthropic的失业警告形成鲜明对比。当然，这仍然是营销。",
+      "summaryEn": "Alibaba is marketing its new AI model Qwen 3.8 with a video showing AI working while a person enjoys hobbies, contrasting with job loss warnings from OpenAI and Anthropic. Of course, it's still just marketing.",
+      "keywords": [
+        "阿里巴巴",
+        "Qwen",
+        "AI营销",
+        "就业"
+      ],
+      "topics": [
+        "AI模型",
+        "营销",
+        "就业影响"
+      ],
+      "models": [
+        "Qwen 3.8"
+      ],
+      "detailZh": "阿里巴巴发布了一段营销视频，展示其新AI模型Qwen 3.8在后台工作，而人类则享受休闲活动。视频旨在传达AI可以解放人类，而非取代人类，与OpenAI和Anthropic关于AI导致失业的警告形成对比。然而，这仅是营销宣传，未提供技术细节或实际应用案例。",
+      "keyPointsZh": [
+        "阿里巴巴发布Qwen 3.8模型，并配以营销视频。",
+        "视频展示AI工作，人类享受爱好，强调AI辅助而非取代。",
+        "与OpenAI和Anthropic的失业警告形成对比。",
+        "目前仅为营销宣传，缺乏技术细节。"
+      ],
+      "impactZh": "该营销策略可能影响公众对AI的认知，但实际影响有限。对于开发者，需关注Qwen 3.8的技术能力，而非营销宣传。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "processingError": null,
+      "sourcePriority": 96,
+      "reportCount": 6,
+      "reportTimeline": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+          "publishedAt": "2026-08-04T03:49:14.000Z",
+          "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
+          "authority": 84,
+          "sourcePriority": 82
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-new-qwen-model-is-also-taking-your-job-but-this-time-its-great/",
+          "publishedAt": "2026-08-03T17:12:23.000Z",
+          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数"
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/chinas-minimax-h3-is-the-first-open-model-to-top-an-ai-video-ranking/",
+          "publishedAt": "2026-08-03T13:52:29.000Z",
+          "title": "China&#039;s MiniMax H3 is the first open model to top an AI video ranking",
+          "authority": 84,
+          "sourcePriority": 82
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-open-weight-qwen3-8-max-takes-on-long-horizon-ai-tasks-with-2-4-trillion-parameters/",
+          "publishedAt": "2026-08-03T10:48:50.000Z",
+          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数"
+        },
+        {
+          "id": "aihot-selected:cmsdu3hyr015xrofzqxuosm3y",
+          "name": "公众号：MiniMax（稀宇科技）",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ%3D%3D&mid=2247488931&idx=1&sn=0506e1d52edd5166becf35f5ebd83a07",
+          "publishedAt": "2026-08-03T02:44:09.000Z",
+          "title": "MiniMax H3 正式开源：通用全模态生成系统支持 2K 视频与原生立体声",
+          "authority": 76,
+          "sourcePriority": 96
+        },
+        {
+          "id": "aihot-selected:cmscldw820c4kroeu7bw1kb27",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8",
+          "publishedAt": "2026-08-03T02:00:00.000Z",
+          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+          "authority": 89,
+          "sourcePriority": 96
+        }
+      ],
+      "heat": {
+        "current": 78,
+        "peak": 86,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 69
+          },
+          {
+            "label": "20小时前",
+            "value": 70
+          },
+          {
+            "label": "18小时前",
+            "value": 72
+          },
+          {
+            "label": "16小时前",
+            "value": 74
+          },
+          {
+            "label": "14小时前",
+            "value": 75
+          },
+          {
+            "label": "12小时前",
+            "value": 77
+          },
+          {
+            "label": "10小时前",
+            "value": 78
+          },
+          {
+            "label": "8小时前",
+            "value": 80
+          },
+          {
+            "label": "6小时前",
+            "value": 82
+          },
+          {
+            "label": "4小时前",
+            "value": 83
+          },
+          {
+            "label": "2小时前",
+            "value": 85
+          },
+          {
+            "label": "现在",
+            "value": 86
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "222a64b62065520e",
       "normalizedUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684924&idx=1&sn=f9ecf13ac374f13dfa75f98f685a231d",
@@ -82,56 +3170,56 @@
         }
       ],
       "heat": {
-        "current": 81,
-        "peak": 83,
+        "current": 76,
+        "peak": 78,
         "history": [
           {
             "label": "22小时前",
-            "value": 66
+            "value": 61
           },
           {
             "label": "20小时前",
-            "value": 67
+            "value": 62
           },
           {
             "label": "18小时前",
-            "value": 69
+            "value": 64
           },
           {
             "label": "16小时前",
-            "value": 71
+            "value": 66
           },
           {
             "label": "14小时前",
-            "value": 72
+            "value": 67
           },
           {
             "label": "12小时前",
-            "value": 74
+            "value": 69
           },
           {
             "label": "10小时前",
-            "value": 75
+            "value": 70
           },
           {
             "label": "8小时前",
-            "value": 77
+            "value": 72
           },
           {
             "label": "6小时前",
-            "value": 79
+            "value": 74
           },
           {
             "label": "4小时前",
-            "value": 80
+            "value": 75
           },
           {
             "label": "2小时前",
-            "value": 82
+            "value": 77
           },
           {
             "label": "现在",
-            "value": 83
+            "value": 78
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -211,56 +3299,56 @@
         }
       ],
       "heat": {
-        "current": 65,
-        "peak": 67,
+        "current": 60,
+        "peak": 62,
         "history": [
           {
             "label": "22小时前",
-            "value": 50
+            "value": 45
           },
           {
             "label": "20小时前",
-            "value": 51
+            "value": 46
           },
           {
             "label": "18小时前",
-            "value": 53
+            "value": 48
           },
           {
             "label": "16小时前",
-            "value": 55
+            "value": 50
           },
           {
             "label": "14小时前",
-            "value": 56
+            "value": 51
           },
           {
             "label": "12小时前",
-            "value": 58
+            "value": 53
           },
           {
             "label": "10小时前",
-            "value": 59
+            "value": 54
           },
           {
             "label": "8小时前",
-            "value": 61
+            "value": 56
           },
           {
             "label": "6小时前",
-            "value": 63
+            "value": 58
           },
           {
             "label": "4小时前",
-            "value": 64
+            "value": 59
           },
           {
             "label": "2小时前",
-            "value": 66
+            "value": 61
           },
           {
             "label": "现在",
-            "value": 67
+            "value": 62
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -346,56 +3434,56 @@
         }
       ],
       "heat": {
-        "current": 82,
-        "peak": 87,
+        "current": 76,
+        "peak": 81,
         "history": [
           {
             "label": "22小时前",
-            "value": 69
+            "value": 63
           },
           {
             "label": "20小时前",
-            "value": 71
+            "value": 65
           },
           {
             "label": "18小时前",
-            "value": 73
+            "value": 67
           },
           {
             "label": "16小时前",
-            "value": 74
+            "value": 68
           },
           {
             "label": "14小时前",
-            "value": 76
+            "value": 70
           },
           {
             "label": "12小时前",
-            "value": 77
+            "value": 71
           },
           {
             "label": "10小时前",
-            "value": 79
+            "value": 73
           },
           {
             "label": "8小时前",
-            "value": 81
+            "value": 75
           },
           {
             "label": "6小时前",
-            "value": 82
+            "value": 76
           },
           {
             "label": "4小时前",
-            "value": 84
+            "value": 78
           },
           {
             "label": "2小时前",
-            "value": 85
+            "value": 79
           },
           {
             "label": "现在",
-            "value": 87
+            "value": 81
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -617,44 +3705,44 @@
         }
       ],
       "heat": {
-        "current": 100,
+        "current": 95,
         "peak": 100,
         "history": [
           {
             "label": "22小时前",
-            "value": 91
+            "value": 86
           },
           {
             "label": "20小时前",
-            "value": 92
+            "value": 87
           },
           {
             "label": "18小时前",
-            "value": 94
+            "value": 89
           },
           {
             "label": "16小时前",
-            "value": 96
+            "value": 91
           },
           {
             "label": "14小时前",
-            "value": 97
+            "value": 92
           },
           {
             "label": "12小时前",
-            "value": 99
+            "value": 94
           },
           {
             "label": "10小时前",
-            "value": 100
+            "value": 95
           },
           {
             "label": "8小时前",
-            "value": 100
+            "value": 97
           },
           {
             "label": "6小时前",
-            "value": 100
+            "value": 99
           },
           {
             "label": "4小时前",
@@ -743,56 +3831,56 @@
         }
       ],
       "heat": {
-        "current": 72,
-        "peak": 74,
+        "current": 67,
+        "peak": 69,
         "history": [
           {
             "label": "22小时前",
-            "value": 57
+            "value": 52
           },
           {
             "label": "20小时前",
-            "value": 58
+            "value": 53
           },
           {
             "label": "18小时前",
-            "value": 60
+            "value": 55
           },
           {
             "label": "16小时前",
-            "value": 62
+            "value": 57
           },
           {
             "label": "14小时前",
-            "value": 63
+            "value": 58
           },
           {
             "label": "12小时前",
-            "value": 65
+            "value": 60
           },
           {
             "label": "10小时前",
-            "value": 66
+            "value": 61
           },
           {
             "label": "8小时前",
-            "value": 68
+            "value": 63
           },
           {
             "label": "6小时前",
-            "value": 70
+            "value": 65
           },
           {
             "label": "4小时前",
-            "value": 71
+            "value": 66
           },
           {
             "label": "2小时前",
-            "value": 73
+            "value": 68
           },
           {
             "label": "现在",
-            "value": 74
+            "value": 69
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -877,56 +3965,56 @@
         }
       ],
       "heat": {
-        "current": 61,
-        "peak": 63,
+        "current": 56,
+        "peak": 58,
         "history": [
           {
             "label": "22小时前",
-            "value": 46
+            "value": 41
           },
           {
             "label": "20小时前",
-            "value": 47
+            "value": 42
           },
           {
             "label": "18小时前",
-            "value": 49
+            "value": 44
           },
           {
             "label": "16小时前",
-            "value": 51
+            "value": 46
           },
           {
             "label": "14小时前",
-            "value": 52
+            "value": 47
           },
           {
             "label": "12小时前",
-            "value": 54
+            "value": 49
           },
           {
             "label": "10小时前",
-            "value": 55
+            "value": 50
           },
           {
             "label": "8小时前",
-            "value": 57
+            "value": 52
           },
           {
             "label": "6小时前",
-            "value": 59
+            "value": 54
           },
           {
             "label": "4小时前",
-            "value": 60
+            "value": 55
           },
           {
             "label": "2小时前",
-            "value": 62
+            "value": 57
           },
           {
             "label": "现在",
-            "value": 63
+            "value": 58
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1009,56 +4097,56 @@
         }
       ],
       "heat": {
-        "current": 68,
-        "peak": 70,
+        "current": 63,
+        "peak": 65,
         "history": [
           {
             "label": "22小时前",
-            "value": 53
+            "value": 48
           },
           {
             "label": "20小时前",
-            "value": 54
+            "value": 49
           },
           {
             "label": "18小时前",
-            "value": 56
+            "value": 51
           },
           {
             "label": "16小时前",
-            "value": 58
+            "value": 53
           },
           {
             "label": "14小时前",
-            "value": 59
+            "value": 54
           },
           {
             "label": "12小时前",
-            "value": 61
+            "value": 56
           },
           {
             "label": "10小时前",
-            "value": 62
+            "value": 57
           },
           {
             "label": "8小时前",
-            "value": 64
+            "value": 59
           },
           {
             "label": "6小时前",
-            "value": 66
+            "value": 61
           },
           {
             "label": "4小时前",
-            "value": 67
+            "value": 62
           },
           {
             "label": "2小时前",
-            "value": 69
+            "value": 64
           },
           {
             "label": "现在",
-            "value": 70
+            "value": 65
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1136,56 +4224,56 @@
         }
       ],
       "heat": {
-        "current": 69,
-        "peak": 71,
+        "current": 63,
+        "peak": 65,
         "history": [
           {
             "label": "22小时前",
-            "value": 54
+            "value": 48
           },
           {
             "label": "20小时前",
-            "value": 55
+            "value": 49
           },
           {
             "label": "18小时前",
-            "value": 57
+            "value": 51
           },
           {
             "label": "16小时前",
-            "value": 59
+            "value": 53
           },
           {
             "label": "14小时前",
-            "value": 60
+            "value": 54
           },
           {
             "label": "12小时前",
-            "value": 62
+            "value": 56
           },
           {
             "label": "10小时前",
-            "value": 63
+            "value": 57
           },
           {
             "label": "8小时前",
-            "value": 65
+            "value": 59
           },
           {
             "label": "6小时前",
-            "value": 67
+            "value": 61
           },
           {
             "label": "4小时前",
-            "value": 68
+            "value": 62
           },
           {
             "label": "2小时前",
-            "value": 70
+            "value": 64
           },
           {
             "label": "现在",
-            "value": 71
+            "value": 65
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1264,56 +4352,56 @@
         }
       ],
       "heat": {
-        "current": 73,
-        "peak": 75,
+        "current": 68,
+        "peak": 70,
         "history": [
           {
             "label": "22小时前",
-            "value": 58
+            "value": 53
           },
           {
             "label": "20小时前",
-            "value": 59
+            "value": 54
           },
           {
             "label": "18小时前",
-            "value": 61
+            "value": 56
           },
           {
             "label": "16小时前",
-            "value": 63
+            "value": 58
           },
           {
             "label": "14小时前",
-            "value": 64
+            "value": 59
           },
           {
             "label": "12小时前",
-            "value": 66
+            "value": 61
           },
           {
             "label": "10小时前",
-            "value": 67
+            "value": 62
           },
           {
             "label": "8小时前",
-            "value": 69
+            "value": 64
           },
           {
             "label": "6小时前",
-            "value": 71
+            "value": 66
           },
           {
             "label": "4小时前",
-            "value": 72
+            "value": 67
           },
           {
             "label": "2小时前",
-            "value": 74
+            "value": 69
           },
           {
             "label": "现在",
-            "value": 75
+            "value": 70
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1387,56 +4475,56 @@
         }
       ],
       "heat": {
-        "current": 68,
-        "peak": 70,
+        "current": 63,
+        "peak": 65,
         "history": [
           {
             "label": "22小时前",
-            "value": 53
+            "value": 48
           },
           {
             "label": "20小时前",
-            "value": 54
+            "value": 49
           },
           {
             "label": "18小时前",
-            "value": 56
+            "value": 51
           },
           {
             "label": "16小时前",
-            "value": 58
+            "value": 53
           },
           {
             "label": "14小时前",
-            "value": 59
+            "value": 54
           },
           {
             "label": "12小时前",
-            "value": 61
+            "value": 56
           },
           {
             "label": "10小时前",
-            "value": 62
+            "value": 57
           },
           {
             "label": "8小时前",
-            "value": 64
+            "value": 59
           },
           {
             "label": "6小时前",
-            "value": 66
+            "value": 61
           },
           {
             "label": "4小时前",
-            "value": 67
+            "value": 62
           },
           {
             "label": "2小时前",
-            "value": 69
+            "value": 64
           },
           {
             "label": "现在",
-            "value": 70
+            "value": 65
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1508,56 +4596,56 @@
         }
       ],
       "heat": {
-        "current": 58,
-        "peak": 60,
+        "current": 53,
+        "peak": 55,
         "history": [
           {
             "label": "22小时前",
-            "value": 43
+            "value": 38
           },
           {
             "label": "20小时前",
-            "value": 44
+            "value": 39
           },
           {
             "label": "18小时前",
-            "value": 46
+            "value": 41
           },
           {
             "label": "16小时前",
-            "value": 48
+            "value": 43
           },
           {
             "label": "14小时前",
-            "value": 49
+            "value": 44
           },
           {
             "label": "12小时前",
-            "value": 51
+            "value": 46
           },
           {
             "label": "10小时前",
-            "value": 52
+            "value": 47
           },
           {
             "label": "8小时前",
-            "value": 54
+            "value": 49
           },
           {
             "label": "6小时前",
-            "value": 56
+            "value": 51
           },
           {
             "label": "4小时前",
-            "value": 57
+            "value": 52
           },
           {
             "label": "2小时前",
-            "value": 59
+            "value": 54
           },
           {
             "label": "现在",
-            "value": 60
+            "value": 55
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1634,56 +4722,56 @@
         }
       ],
       "heat": {
-        "current": 58,
-        "peak": 60,
+        "current": 53,
+        "peak": 55,
         "history": [
           {
             "label": "22小时前",
-            "value": 43
+            "value": 38
           },
           {
             "label": "20小时前",
-            "value": 44
+            "value": 39
           },
           {
             "label": "18小时前",
-            "value": 46
+            "value": 41
           },
           {
             "label": "16小时前",
-            "value": 48
+            "value": 43
           },
           {
             "label": "14小时前",
-            "value": 49
+            "value": 44
           },
           {
             "label": "12小时前",
-            "value": 51
+            "value": 46
           },
           {
             "label": "10小时前",
-            "value": 52
+            "value": 47
           },
           {
             "label": "8小时前",
-            "value": 54
+            "value": 49
           },
           {
             "label": "6小时前",
-            "value": 56
+            "value": 51
           },
           {
             "label": "4小时前",
-            "value": 57
+            "value": 52
           },
           {
             "label": "2小时前",
-            "value": 59
+            "value": 54
           },
           {
             "label": "现在",
-            "value": 60
+            "value": 55
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1758,56 +4846,56 @@
         }
       ],
       "heat": {
-        "current": 68,
-        "peak": 70,
+        "current": 63,
+        "peak": 65,
         "history": [
           {
             "label": "22小时前",
-            "value": 53
+            "value": 48
           },
           {
             "label": "20小时前",
-            "value": 54
+            "value": 49
           },
           {
             "label": "18小时前",
-            "value": 56
+            "value": 51
           },
           {
             "label": "16小时前",
-            "value": 58
+            "value": 53
           },
           {
             "label": "14小时前",
-            "value": 59
+            "value": 54
           },
           {
             "label": "12小时前",
-            "value": 61
+            "value": 56
           },
           {
             "label": "10小时前",
-            "value": 62
+            "value": 57
           },
           {
             "label": "8小时前",
-            "value": 64
+            "value": 59
           },
           {
             "label": "6小时前",
-            "value": 66
+            "value": 61
           },
           {
             "label": "4小时前",
-            "value": 67
+            "value": 62
           },
           {
             "label": "2小时前",
-            "value": 69
+            "value": 64
           },
           {
             "label": "现在",
-            "value": 70
+            "value": 65
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1891,257 +4979,56 @@
         }
       ],
       "heat": {
-        "current": 81,
-        "peak": 83,
+        "current": 76,
+        "peak": 78,
         "history": [
           {
             "label": "22小时前",
-            "value": 66
-          },
-          {
-            "label": "20小时前",
-            "value": 67
-          },
-          {
-            "label": "18小时前",
-            "value": 69
-          },
-          {
-            "label": "16小时前",
-            "value": 71
-          },
-          {
-            "label": "14小时前",
-            "value": 72
-          },
-          {
-            "label": "12小时前",
-            "value": 74
-          },
-          {
-            "label": "10小时前",
-            "value": 75
-          },
-          {
-            "label": "8小时前",
-            "value": 77
-          },
-          {
-            "label": "6小时前",
-            "value": 79
-          },
-          {
-            "label": "4小时前",
-            "value": 80
-          },
-          {
-            "label": "2小时前",
-            "value": 82
-          },
-          {
-            "label": "现在",
-            "value": 83
-          }
-        ],
-        "note": "根据公开报道数量、来源权威度与时效估算"
-      }
-    },
-    {
-      "id": "cc559c8d7865a53b",
-      "normalizedUrl": "https://qwen.ai/blog?id=qwen3.8",
-      "originalUrl": "https://qwen.ai/blog?id=qwen3.8",
-      "titleOriginal": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
-      "summaryOriginal": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
-      "originalLanguage": "zh",
-      "author": "Qwen：Blog Retrieval（API）",
-      "category": "models",
-      "sourceType": "aggregator",
-      "authority": 89,
-      "publishedAt": "2026-08-03T17:12:23.000Z",
-      "discoveredAt": null,
-      "contentType": "industry",
-      "evidenceLevel": "unverified",
-      "attribution": null,
-      "sources": [
-        {
-          "id": "the-decoder",
-          "name": "The Decoder AI",
-          "type": "media",
-          "url": "https://the-decoder.com/alibabas-new-qwen-model-is-also-taking-your-job-but-this-time-its-great/",
-          "publishedAt": "2026-08-03T17:12:23.000Z"
-        },
-        {
-          "id": "the-decoder",
-          "name": "The Decoder AI",
-          "type": "media",
-          "url": "https://the-decoder.com/alibabas-open-weight-qwen3-8-max-takes-on-long-horizon-ai-tasks-with-2-4-trillion-parameters/",
-          "publishedAt": "2026-08-03T10:48:50.000Z"
-        },
-        {
-          "id": "aihot-selected:cmscldw820c4kroeu7bw1kb27",
-          "name": "Qwen：Blog Retrieval（API）",
-          "type": "aggregator",
-          "url": "https://qwen.ai/blog?id=qwen3.8",
-          "publishedAt": "2026-08-03T02:00:00.000Z",
-          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
-          "authority": 89,
-          "sourcePriority": 96
-        },
-        {
-          "id": "the-decoder",
-          "name": "The Decoder AI",
-          "type": "media",
-          "url": "https://the-decoder.com/chinas-minimax-h3-is-the-first-open-model-to-top-an-ai-video-ranking/",
-          "publishedAt": "2026-08-03T13:52:29.000Z",
-          "title": "China&#039;s MiniMax H3 is the first open model to top an AI video ranking",
-          "authority": 84,
-          "sourcePriority": 82
-        },
-        {
-          "id": "aihot-selected:cmsdu3hyr015xrofzqxuosm3y",
-          "name": "公众号：MiniMax（稀宇科技）",
-          "type": "aggregator",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ%3D%3D&mid=2247488931&idx=1&sn=0506e1d52edd5166becf35f5ebd83a07",
-          "publishedAt": "2026-08-03T02:44:09.000Z",
-          "title": "MiniMax H3 正式开源：通用全模态生成系统支持 2K 视频与原生立体声",
-          "authority": 76,
-          "sourcePriority": 96
-        }
-      ],
-      "importance": 55,
-      "importanceReasonZh": "该新闻涉及主要AI模型发布和营销策略，但内容有限，且主要基于营销视频，缺乏技术细节或实际影响。",
-      "importanceReasonEn": "The news involves a major AI model release and marketing strategy, but the content is limited and based on a marketing video, lacking technical details or practical impact.",
-      "scoringMode": "ai",
-      "titleZh": "阿里巴巴新Qwen模型也在抢你的工作，但这次很棒",
-      "titleEn": "Alibaba's new Qwen model is also taking your job, but this time it's great",
-      "summaryZh": "阿里巴巴通过一段视频宣传其新AI模型Qwen 3.8，视频中AI在工作，而人类在享受爱好，与OpenAI和Anthropic的失业警告形成鲜明对比。当然，这仍然是营销。",
-      "summaryEn": "Alibaba is marketing its new AI model Qwen 3.8 with a video showing AI working while a person enjoys hobbies, contrasting with job loss warnings from OpenAI and Anthropic. Of course, it's still just marketing.",
-      "keywords": [
-        "阿里巴巴",
-        "Qwen",
-        "AI营销",
-        "就业"
-      ],
-      "topics": [
-        "AI模型",
-        "营销",
-        "就业影响"
-      ],
-      "models": [
-        "Qwen 3.8"
-      ],
-      "detailZh": "阿里巴巴发布了一段营销视频，展示其新AI模型Qwen 3.8在后台工作，而人类则享受休闲活动。视频旨在传达AI可以解放人类，而非取代人类，与OpenAI和Anthropic关于AI导致失业的警告形成对比。然而，这仅是营销宣传，未提供技术细节或实际应用案例。",
-      "keyPointsZh": [
-        "阿里巴巴发布Qwen 3.8模型，并配以营销视频。",
-        "视频展示AI工作，人类享受爱好，强调AI辅助而非取代。",
-        "与OpenAI和Anthropic的失业警告形成对比。",
-        "目前仅为营销宣传，缺乏技术细节。"
-      ],
-      "impactZh": "该营销策略可能影响公众对AI的认知，但实际影响有限。对于开发者，需关注Qwen 3.8的技术能力，而非营销宣传。",
-      "actionStepsZh": [],
-      "detailCompleteness": "limited",
-      "processingError": null,
-      "sourcePriority": 96,
-      "reportCount": 5,
-      "reportTimeline": [
-        {
-          "id": "the-decoder",
-          "name": "The Decoder AI",
-          "type": "media",
-          "url": "https://the-decoder.com/alibabas-new-qwen-model-is-also-taking-your-job-but-this-time-its-great/",
-          "publishedAt": "2026-08-03T17:12:23.000Z",
-          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数"
-        },
-        {
-          "id": "the-decoder",
-          "name": "The Decoder AI",
-          "type": "media",
-          "url": "https://the-decoder.com/chinas-minimax-h3-is-the-first-open-model-to-top-an-ai-video-ranking/",
-          "publishedAt": "2026-08-03T13:52:29.000Z",
-          "title": "China&#039;s MiniMax H3 is the first open model to top an AI video ranking",
-          "authority": 84,
-          "sourcePriority": 82
-        },
-        {
-          "id": "the-decoder",
-          "name": "The Decoder AI",
-          "type": "media",
-          "url": "https://the-decoder.com/alibabas-open-weight-qwen3-8-max-takes-on-long-horizon-ai-tasks-with-2-4-trillion-parameters/",
-          "publishedAt": "2026-08-03T10:48:50.000Z",
-          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数"
-        },
-        {
-          "id": "aihot-selected:cmsdu3hyr015xrofzqxuosm3y",
-          "name": "公众号：MiniMax（稀宇科技）",
-          "type": "aggregator",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ%3D%3D&mid=2247488931&idx=1&sn=0506e1d52edd5166becf35f5ebd83a07",
-          "publishedAt": "2026-08-03T02:44:09.000Z",
-          "title": "MiniMax H3 正式开源：通用全模态生成系统支持 2K 视频与原生立体声",
-          "authority": 76,
-          "sourcePriority": 96
-        },
-        {
-          "id": "aihot-selected:cmscldw820c4kroeu7bw1kb27",
-          "name": "Qwen：Blog Retrieval（API）",
-          "type": "aggregator",
-          "url": "https://qwen.ai/blog?id=qwen3.8",
-          "publishedAt": "2026-08-03T02:00:00.000Z",
-          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
-          "authority": 89,
-          "sourcePriority": 96
-        }
-      ],
-      "heat": {
-        "current": 67,
-        "peak": 75,
-        "history": [
-          {
-            "label": "22小时前",
-            "value": 58
-          },
-          {
-            "label": "20小时前",
-            "value": 59
-          },
-          {
-            "label": "18小时前",
             "value": 61
           },
           {
-            "label": "16小时前",
-            "value": 63
+            "label": "20小时前",
+            "value": 62
           },
           {
-            "label": "14小时前",
+            "label": "18小时前",
             "value": 64
           },
           {
-            "label": "12小时前",
+            "label": "16小时前",
             "value": 66
           },
           {
-            "label": "10小时前",
+            "label": "14小时前",
             "value": 67
           },
           {
-            "label": "8小时前",
+            "label": "12小时前",
             "value": 69
           },
           {
-            "label": "6小时前",
-            "value": 71
+            "label": "10小时前",
+            "value": 70
           },
           {
-            "label": "4小时前",
+            "label": "8小时前",
             "value": 72
           },
           {
-            "label": "2小时前",
+            "label": "6小时前",
             "value": 74
           },
           {
-            "label": "现在",
+            "label": "4小时前",
             "value": 75
+          },
+          {
+            "label": "2小时前",
+            "value": 77
+          },
+          {
+            "label": "现在",
+            "value": 78
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2218,56 +5105,56 @@
         }
       ],
       "heat": {
-        "current": 65,
-        "peak": 67,
+        "current": 59,
+        "peak": 61,
         "history": [
           {
             "label": "22小时前",
-            "value": 50
+            "value": 44
           },
           {
             "label": "20小时前",
-            "value": 51
+            "value": 45
           },
           {
             "label": "18小时前",
-            "value": 53
+            "value": 47
           },
           {
             "label": "16小时前",
-            "value": 55
+            "value": 49
           },
           {
             "label": "14小时前",
-            "value": 56
+            "value": 50
           },
           {
             "label": "12小时前",
-            "value": 58
+            "value": 52
           },
           {
             "label": "10小时前",
-            "value": 59
+            "value": 53
           },
           {
             "label": "8小时前",
-            "value": 61
+            "value": 55
           },
           {
             "label": "6小时前",
-            "value": 63
+            "value": 57
           },
           {
             "label": "4小时前",
-            "value": 64
+            "value": 58
           },
           {
             "label": "2小时前",
-            "value": 66
+            "value": 60
           },
           {
             "label": "现在",
-            "value": 67
+            "value": 61
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2347,56 +5234,56 @@
         }
       ],
       "heat": {
-        "current": 64,
-        "peak": 66,
+        "current": 59,
+        "peak": 61,
         "history": [
           {
             "label": "22小时前",
-            "value": 49
+            "value": 44
           },
           {
             "label": "20小时前",
-            "value": 50
+            "value": 45
           },
           {
             "label": "18小时前",
-            "value": 52
+            "value": 47
           },
           {
             "label": "16小时前",
-            "value": 54
+            "value": 49
           },
           {
             "label": "14小时前",
-            "value": 55
+            "value": 50
           },
           {
             "label": "12小时前",
-            "value": 57
+            "value": 52
           },
           {
             "label": "10小时前",
-            "value": 58
+            "value": 53
           },
           {
             "label": "8小时前",
-            "value": 60
+            "value": 55
           },
           {
             "label": "6小时前",
-            "value": 62
+            "value": 57
           },
           {
             "label": "4小时前",
-            "value": 63
+            "value": 58
           },
           {
             "label": "2小时前",
-            "value": 65
+            "value": 60
           },
           {
             "label": "现在",
-            "value": 66
+            "value": 61
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2477,56 +5364,56 @@
         }
       ],
       "heat": {
-        "current": 54,
-        "peak": 56,
+        "current": 49,
+        "peak": 51,
         "history": [
           {
             "label": "22小时前",
-            "value": 39
+            "value": 34
           },
           {
             "label": "20小时前",
-            "value": 40
+            "value": 35
           },
           {
             "label": "18小时前",
-            "value": 42
+            "value": 37
           },
           {
             "label": "16小时前",
-            "value": 44
+            "value": 39
           },
           {
             "label": "14小时前",
-            "value": 45
+            "value": 40
           },
           {
             "label": "12小时前",
-            "value": 47
+            "value": 42
           },
           {
             "label": "10小时前",
-            "value": 48
+            "value": 43
           },
           {
             "label": "8小时前",
-            "value": 50
+            "value": 45
           },
           {
             "label": "6小时前",
-            "value": 52
+            "value": 47
           },
           {
             "label": "4小时前",
-            "value": 53
+            "value": 48
           },
           {
             "label": "2小时前",
-            "value": 55
+            "value": 50
           },
           {
             "label": "现在",
-            "value": 56
+            "value": 51
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
