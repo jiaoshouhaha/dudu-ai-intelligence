@@ -89,6 +89,31 @@ export function hasReleaseSignal(value) {
   return /launch|release|announce|available|publish|introduc|model|new|flagship|open.?weight|parameter|发布|上线|开源|推出|亮相|更新|预览|正式版|权重|参数/i.test(stripHtml(value));
 }
 
+export function extractImageUrls(value) {
+  const urls = new Set();
+  const add = (candidate, hint = '') => {
+    if (typeof candidate !== 'string' || !/^https?:\/\//i.test(candidate)) return;
+    const clean = candidate.replace(/&amp;/gi, '&').replace(/&quot;/gi, '"').trim();
+    if (!clean) return;
+    const imageLike = /image|thumbnail|poster|\.png(?:[?#]|$)|\.jpe?g(?:[?#]|$)|\.webp(?:[?#]|$)|\.gif(?:[?#]|$)|\.svg(?:[?#]|$)/i.test(`${hint} ${clean}`);
+    if (imageLike) urls.add(clean);
+  };
+  const visit = (node, hint = '') => {
+    if (node == null) return;
+    if (typeof node === 'string') {
+      for (const match of node.matchAll(/<img[^>]+(?:src|data-src)=["']([^"']+)["']/gi)) add(match[1], 'image');
+      for (const match of node.matchAll(/https?:\/\/[^\s"'<>]+/gi)) add(match[0], hint);
+      return;
+    }
+    if (Array.isArray(node)) return node.forEach((entry) => visit(entry, hint));
+    if (typeof node === 'object') {
+      for (const [key, child] of Object.entries(node)) visit(child, `${hint} ${key}`);
+    }
+  };
+  visit(value);
+  return [...urls].slice(0, 8);
+}
+
 export function jaccard(left, right) {
   if (!left.size || !right.size) return 0;
   let intersection = 0;

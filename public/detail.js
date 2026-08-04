@@ -24,6 +24,66 @@ function addParagraphs(element, text) {
   }));
 }
 
+function renderSourceMedia(item) {
+  const images = [...new Set((item.images || []).filter((url) => /^https?:\/\//i.test(url)))].slice(0, 8);
+  const section = $('#mediaSection');
+  const grid = $('#mediaGrid');
+  grid.replaceChildren(...images.map((url, index) => {
+    const figure = document.createElement('figure');
+    figure.className = 'media-figure';
+    const image = document.createElement('img');
+    image.src = url;
+    image.alt = `${item.titleZh || item.titleOriginal} · 原文配图 ${index + 1}`;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.addEventListener('error', () => {
+      figure.remove();
+      section.hidden = !grid.children.length;
+    });
+    const caption = document.createElement('figcaption');
+    caption.textContent = `原文配图 ${index + 1}`;
+    figure.append(image, caption);
+    return figure;
+  }));
+  section.hidden = images.length === 0;
+}
+
+function renderVisual(item) {
+  const visual = item.visual;
+  const section = $('#visualSection');
+  const data = Array.isArray(visual?.data) ? visual.data.filter((point) => Number.isFinite(Number(point.value))) : [];
+  if (!visual || visual.type === 'none' || data.length < 2) {
+    section.hidden = true;
+    return;
+  }
+  $('#visualTitle').textContent = visual.titleZh || '数据图表';
+  $('#visualNote').textContent = [visual.noteZh, visual.unit ? `单位：${visual.unit}` : ''].filter(Boolean).join(' · ') || '根据原文明确数字整理，不包含推测值。';
+  const values = data.map((point) => Number(point.value));
+  const min = Math.min(0, ...values);
+  const max = Math.max(...values);
+  const range = Math.max(1, max - min);
+  $('#visualChart').replaceChildren(...data.map((point) => {
+    const value = Number(point.value);
+    const row = document.createElement('div');
+    row.className = 'visual-row';
+    const label = document.createElement('span');
+    label.className = 'visual-label';
+    label.textContent = point.label;
+    const track = document.createElement('span');
+    track.className = 'visual-track';
+    const fill = document.createElement('span');
+    fill.className = 'visual-fill';
+    fill.style.width = `${Math.max(4, ((value - min) / range) * 100)}%`;
+    track.append(fill);
+    const number = document.createElement('strong');
+    number.className = 'visual-value';
+    number.textContent = point.display || `${value}${visual.unit || ''}`;
+    row.append(label, track, number);
+    return row;
+  }));
+  section.hidden = false;
+}
+
 function renderIntelligence(item) {
   const heat = item.heat || {};
   const history = Array.isArray(heat.history) ? heat.history : [];
@@ -88,6 +148,8 @@ function render(item) {
   $('#impactContent').textContent = impact;
   addTextList($('#actionSteps'), steps);
   $('#actionSection').hidden = steps.length === 0;
+  renderSourceMedia(item);
+  renderVisual(item);
   renderIntelligence(item);
   $('#limitedNotice').hidden = item.detailCompleteness !== 'limited' && Boolean(item.detailZh);
   $('#sourceName').textContent = `来源：${source}`;

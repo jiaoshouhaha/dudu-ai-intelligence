@@ -34,6 +34,12 @@
           <div id="articleTags" class="article-tags"></div>
         </header>
 
+        <section id="mediaSection" class="article-media" hidden>
+          <div class="media-heading"><span>SOURCE MEDIA</span><strong>原文图表与配图</strong></div>
+          <div id="mediaGrid" class="media-grid"></div>
+          <p class="media-note">图片来自公开来源，仅用于帮助理解；完整上下文请查看原文。</p>
+        </section>
+
         <aside id="limitedNotice" class="source-notice" hidden>这篇解读基于来源公开摘要整理，细节有限；如需核对完整上下文，请查看原文。</aside>
 
         <section class="detail-section">
@@ -54,8 +60,17 @@
           <p id="impactContent" class="detail-copy"></p>
         </section>
 
-        <section class="detail-section intelligence-section">
+        <section id="visualSection" class="detail-section visual-section" hidden>
           <p class="section-kicker">04</p>
+          <div>
+            <h2 id="visualTitle">数据图表</h2>
+            <p id="visualNote" class="section-note"></p>
+            <div id="visualChart" class="visual-chart"></div>
+          </div>
+        </section>
+
+        <section class="detail-section intelligence-section">
+          <p class="section-kicker">05</p>
           <div>
             <h2>事件热度走势</h2>
             <p class="section-note">根据公开报道数量、来源权威度与发布时间估算，仅用于判断关注度变化。</p>
@@ -65,7 +80,7 @@
         </section>
 
         <section class="detail-section intelligence-section">
-          <p class="section-kicker">05</p>
+          <p class="section-kicker">06</p>
           <div>
             <h2>报道时间线</h2>
             <p id="reportCount" class="section-note"></p>
@@ -74,7 +89,7 @@
         </section>
 
         <section id="actionSection" class="detail-section action-section" hidden>
-          <p class="section-kicker">06</p>
+          <p class="section-kicker">07</p>
           <h2>可以怎么做</h2>
           <ol id="actionSteps" class="action-steps"></ol>
         </section>
@@ -89,6 +104,11 @@
       </article>
     </main>
 
+    <script>
+      if (location.protocol === 'file:') {
+        document.getElementById('loadingState').innerHTML = '本地文件无法读取新闻数据。请打开 <a href="https://jiaoshouhaha.github.io/dudu-ai-intelligence/">嘟嘟的 AI 情报站线上地址</a>，或先运行 <code>pnpm run serve</code>。';
+      }
+    </script>
     <script type="module" src="./detail.js"></script>
   </body>
 </html>

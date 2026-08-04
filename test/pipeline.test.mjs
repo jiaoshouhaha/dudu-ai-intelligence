@@ -10,7 +10,7 @@ import { scoreEvent } from '../src/lib/score.mjs';
 import { aiConfig, enrichEvent, finalizeFallback, validateAiPayload } from '../src/lib/ai-client.mjs';
 import { runPipeline } from '../src/lib/pipeline.mjs';
 import { translateEventToChinese } from '../src/lib/translate.mjs';
-import { dateKeyInTimeZone } from '../src/lib/utils.mjs';
+import { dateKeyInTimeZone, extractImageUrls } from '../src/lib/utils.mjs';
 import { parseAihotItems } from '../src/lib/source-adapters.mjs';
 
 const fixture = await fs.readFile(new URL('./fixtures/sample-rss.xml', import.meta.url), 'utf8');
@@ -22,6 +22,12 @@ test('parses RSS fields and strips HTML', () => {
   assert.equal(items[0].sourceName, 'Test Feed');
   assert.match(items[0].description, /released a new model/);
   assert.equal(items[0].publishedAt, '2026-08-01T01:30:00.000Z');
+});
+
+test('extracts source images from RSS HTML and media fields', () => {
+  const xml = `<rss><channel><item><title>Chart story</title><link>https://example.com/chart</link><description><![CDATA[<p>Summary</p><img src="https://cdn.example.com/chart.png" />]]></description><media:content xmlns:media="media" url="https://cdn.example.com/figure.webp" type="image/webp" /></item></channel></rss>`;
+  const [item] = parseFeed(xml, source);
+  assert.deepEqual(item.images, ['https://cdn.example.com/chart.png', 'https://cdn.example.com/figure.webp']);
 });
 
 test('normalizes tracking parameters without removing meaningful query params', () => {
@@ -68,6 +74,14 @@ test('AI payload validation keeps structured Chinese detail fields', () => {
   assert.deepEqual(value.keyPointsZh, ['要点一', '要点二']);
   assert.deepEqual(value.actionStepsZh, ['创建配置', '运行测试']);
   assert.equal(value.detailCompleteness, 'full');
+});
+
+test('AI payload keeps only explicit numeric visual summaries', () => {
+  const value = validateAiPayload({ titleZh: '中', titleEn: 'EN', summaryZh: '摘要', summaryEn: 'Summary', category: 'models', importance: 80, reasonZh: '理由', reasonEn: 'Reason', visual: { type: 'comparison', titleZh: '价格对比', unit: '$/百万 tokens', data: [{ label: '模型 A', value: 2 }, { label: '模型 B', value: 6 }] } });
+  assert.equal(value.visual.type, 'comparison');
+  assert.equal(value.visual.data.length, 2);
+  const empty = validateAiPayload({ titleZh: '中', titleEn: 'EN', summaryZh: '摘要', summaryEn: 'Summary', category: 'models', importance: 80, reasonZh: '理由', reasonEn: 'Reason', visual: { type: 'bar', data: [{ label: '只有一个', value: 2 }] } });
+  assert.equal(empty.visual, null);
 });
 
 test('parses AI HOT discovery items while preserving the original link and attribution', () => {

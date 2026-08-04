@@ -18,7 +18,8 @@ export function dedupeItems(items, threshold = 0.72) {
       publishedAt: item.publishedAt,
       title: item.title,
       authority: item.authority,
-      sourcePriority: item.sourcePriority || item.authority || 0
+      sourcePriority: item.sourcePriority || item.authority || 0,
+      images: item.images || []
     };
 
     if (match) {
@@ -26,6 +27,7 @@ export function dedupeItems(items, threshold = 0.72) {
       match.publishedAt = match.publishedAt < item.publishedAt ? item.publishedAt : match.publishedAt;
       match.authority = Math.max(match.authority, item.authority);
       match.sourcePriority = Math.max(match.sourcePriority || 0, item.sourcePriority || item.authority || 0);
+      match.images = [...new Set([...(match.images || []), ...(item.images || [])])].slice(0, 8);
       const prefersOfficialLink = /(?:qwen\.ai|openai\.com|deepseek\.com|anthropic\.com|deepmind\.google|blog\.google)/i.test(item.url || '') &&
         !/(?:qwen\.ai|openai\.com|deepseek\.com|anthropic\.com|deepmind\.google|blog\.google)/i.test(match.originalUrl || '');
       if ((item.sourceType === 'official' && match.sourceType !== 'official') || prefersOfficialLink) {
@@ -55,6 +57,7 @@ export function dedupeItems(items, threshold = 0.72) {
       sourceType: item.sourceType,
       authority: item.authority,
       sourcePriority: item.sourcePriority || item.authority || 0,
+      images: [...new Set(item.images || [])].slice(0, 8),
       publishedAt: item.publishedAt,
       discoveredAt: item.discoveredAt || null,
       contentType: item.contentTypeHint || null,

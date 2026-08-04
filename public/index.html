@@ -109,6 +109,13 @@
       </article>
     </template>
 
+    <script>
+      if (location.protocol === 'file:') {
+        const banner = document.getElementById('statusBanner');
+        banner.hidden = false;
+        banner.textContent = '你打开的是本地 HTML 文件，浏览器无法读取新闻数据；请访问线上站点，或在项目目录运行 pnpm run serve。';
+      }
+    </script>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

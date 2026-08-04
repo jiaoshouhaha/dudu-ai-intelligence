@@ -1,5 +1,5 @@
 import { XMLParser } from 'fast-xml-parser';
-import { asArray, isoDate, stripHtml, text } from './utils.mjs';
+import { asArray, extractImageUrls, isoDate, stripHtml, text } from './utils.mjs';
 
 const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '', trimValues: true });
 
@@ -23,6 +23,15 @@ export function parseFeed(xml, source, now = new Date()) {
       const description = stripHtml(
         text(item.description) || text(item.summary) || text(item.content) || text(item['content:encoded'])
       ).slice(0, 1200);
+      const images = extractImageUrls([
+        item.description,
+        item.summary,
+        item.content,
+        item['content:encoded'],
+        item['media:content'],
+        item['media:thumbnail'],
+        item.enclosure
+      ]);
       const publishedAt = isoDate(
         text(item.pubDate) || text(item.published) || text(item.updated) || text(item['dc:date']),
         now
@@ -37,6 +46,7 @@ export function parseFeed(xml, source, now = new Date()) {
         language: source.language,
         title,
         description,
+        images,
         author: text(item.author) || text(item['dc:creator']),
         url,
         publishedAt

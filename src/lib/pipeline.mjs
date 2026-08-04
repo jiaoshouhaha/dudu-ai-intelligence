@@ -93,6 +93,7 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
       publishedAt: new Date(old.publishedAt) > new Date(incoming.publishedAt) ? old.publishedAt : incoming.publishedAt,
       authority: Math.max(old.authority || 0, incoming.authority || 0),
       sourcePriority: Math.max(old.sourcePriority || 0, incoming.sourcePriority || 0),
+      images: [...new Set([...(old.images || []), ...(incoming.images || [])])].slice(0, 8),
       sources
     };
   };

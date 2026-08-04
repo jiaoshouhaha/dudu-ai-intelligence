@@ -4,6 +4,7 @@ const VALID_CATEGORIES = new Set(['models', 'products', 'agent', 'tips', 'busine
 const VALID_CONTENT_TYPES = new Set(['official', 'practical', 'opensource', 'paper', 'benchmark', 'industry', 'opinion']);
 const VALID_EVIDENCE_LEVELS = new Set(['primary', 'verified', 'practitioner', 'unverified']);
 const VALID_DETAIL_COMPLETENESS = new Set(['full', 'summary', 'limited']);
+const VALID_VISUAL_TYPES = new Set(['none', 'bar', 'comparison', 'metrics', 'line']);
 const MODEL_PATTERNS = [
   ['GPT / Codex', /\bgpt\b|codex|openai/i], ['Claude', /claude|anthropic/i], ['Gemini', /gemini|deepmind/i],
   ['DeepSeek', /deepseek/i], ['Qwen', /qwen|通义千问/i], ['Kimi', /\bkimi\b|moonshot|月之暗面/i],
@@ -32,6 +33,25 @@ export function validateAiPayload(payload) {
   const cleanList = (value, limit, itemLimit) => Array.isArray(value)
     ? value.map((item) => String(item).trim().slice(0, itemLimit)).filter(Boolean).slice(0, limit)
     : [];
+  const visualInput = payload.visual || payload.visualSummary;
+  const visualType = VALID_VISUAL_TYPES.has(visualInput?.type) ? visualInput.type : 'none';
+  const visualData = visualType === 'none' || !Array.isArray(visualInput?.data) ? [] : visualInput.data
+    .map((point) => ({
+      label: String(point?.label || '').trim().slice(0, 60),
+      value: Number(point?.value),
+      display: String(point?.display || '').trim().slice(0, 40)
+    }))
+    .filter((point) => point.label && Number.isFinite(point.value))
+    .slice(0, 8);
+  const visual = visualData.length >= 2 && visualType !== 'none'
+    ? {
+        type: visualType,
+        titleZh: String(visualInput.titleZh || visualInput.title || '数据对比').slice(0, 100),
+        unit: String(visualInput.unit || '').slice(0, 20),
+        noteZh: String(visualInput.noteZh || visualInput.note || '').slice(0, 240),
+        data: visualData
+      }
+    : null;
   return {
     titleZh: String(payload.titleZh).slice(0, 240),
     titleEn: String(payload.titleEn).slice(0, 240),
@@ -48,6 +68,7 @@ export function validateAiPayload(payload) {
     impactZh: String(payload.impactZh || payload.reasonZh).slice(0, 800),
     actionStepsZh: cleanList(payload.actionStepsZh, 5, 400),
     detailCompleteness: VALID_DETAIL_COMPLETENESS.has(payload.detailCompleteness) ? payload.detailCompleteness : 'summary',
+    visual,
     importance: clamp(Math.round(Number(payload.importance) || 1), 1, 100),
     reasonZh: String(payload.reasonZh).slice(0, 300),
     reasonEn: String(payload.reasonEn).slice(0, 300)
@@ -85,7 +106,7 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
         messages: [
           {
             role: 'system',
-            content: 'You are a Chinese AI intelligence editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,contentType,topics,models,evidenceLevel,keywords,importance,reasonZh,reasonEn,detailZh,keyPointsZh,impactZh,actionStepsZh,detailCompleteness. category must be models,products,agent,tips,business,research,policy,opensource,opinion,other. contentType must be official,practical,opensource,paper,benchmark,industry,opinion. evidenceLevel must be primary,verified,practitioner,unverified. detailZh is a clear 2-4 paragraph Chinese explanation of what happened, its background and known facts. keyPointsZh is 2-5 concise factual points. impactZh explains practical impact for readers, developers or the industry. actionStepsZh contains 0-5 actionable steps only when the source supports them, especially for practical tips; otherwise return an empty array. detailCompleteness must be full,summary,limited based on source material richness. Practical configurations, reproducible workflows, code and cost-saving methods are valuable. Lower scores for hype or unsupported claims. importance is 1-100. Translate accurately. Use only facts present in the input, explicitly reflect limited source material, and never invent details.'
+            content: 'You are a Chinese AI intelligence editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,contentType,topics,models,evidenceLevel,keywords,importance,reasonZh,reasonEn,detailZh,keyPointsZh,impactZh,actionStepsZh,detailCompleteness,visual. category must be models,products,agent,tips,business,research,policy,opensource,opinion,other. contentType must be official,practical,opensource,paper,benchmark,industry,opinion. evidenceLevel must be primary,verified,practitioner,unverified. detailZh is a clear 2-4 paragraph Chinese explanation of what happened, its background and known facts. keyPointsZh is 2-5 concise factual points. impactZh explains practical impact for readers, developers or the industry. actionStepsZh contains 0-5 actionable steps only when the source supports them, especially for practical tips; otherwise return an empty array. detailCompleteness must be full,summary,limited based on source material richness. visual must be an object with type bar,comparison,metrics,line or none; create it only when the input explicitly contains at least two comparable numeric facts (prices, scores, parameter counts, percentages, dates or counts), use data as label/value pairs, and never infer or invent numbers. Use type none when there is no reliable comparison. Practical configurations, reproducible workflows, code and cost-saving methods are valuable. Lower scores for hype or unsupported claims. importance is 1-100. Translate accurately. Use only facts present in the input, explicitly reflect limited source material, and never invent details.'
           },
           { role: 'user', content: JSON.stringify(prompt) }
         ]
@@ -114,6 +135,7 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
       impactZh: result.impactZh,
       actionStepsZh: result.actionStepsZh,
       detailCompleteness: result.detailCompleteness,
+      visual: result.visual,
       importance: result.importance,
       importanceReasonZh: result.reasonZh,
       importanceReasonEn: result.reasonEn,
@@ -169,6 +191,7 @@ export function finalizeFallback(event, error = null) {
     impactZh: event.impactZh || event.importanceReasonZh || '',
     actionStepsZh: Array.isArray(event.actionStepsZh) ? event.actionStepsZh : [],
     detailCompleteness: VALID_DETAIL_COMPLETENESS.has(event.detailCompleteness) ? event.detailCompleteness : 'limited',
+    visual: event.visual || null,
     processingError: error ? String(error.message || error).slice(0, 240) : null
   };
 }

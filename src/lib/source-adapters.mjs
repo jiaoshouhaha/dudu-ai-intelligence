@@ -1,3 +1,5 @@
+import { extractImageUrls } from './utils.mjs';
+
 const AIHOT_CATEGORY_MAP = {
   'ai-models': 'models',
   'ai-products': 'products',
@@ -19,6 +21,7 @@ export function parseAihotItems(payload, source) {
       language: 'zh',
       title: item.title || item.originalTitle || '',
       description: item.summary || item.originalTitle || '',
+      images: extractImageUrls([item.images, item.image, item.media, item.attachments, item.summary]),
       author: item.source?.name || '',
       url: item.links?.original || item.links?.aihot || '',
       publishedAt: item.publishedAt || item.discoveredAt,
