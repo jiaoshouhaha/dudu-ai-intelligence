@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="嘟嘟的 AI 情报站六个月新闻归档" />
+    <title>六个月归档 · 嘟嘟的 AI 情报站</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./mobile-fix.css" />
+    <link rel="stylesheet" href="./archive.css" />
+  </head>
+  <body>
+    <button id="menuToggle" class="mobile-menu" aria-label="打开分类菜单">☰</button>
+    <div id="sidebarBackdrop" class="sidebar-backdrop" hidden></div>
+    <aside id="sidebar" class="sidebar" aria-label="主菜单">
+      <a class="brand" href="./index.html">嘟嘟的<span>AI 情报站</span></a>
+      <p class="brand-note">新闻 · 工具 · 方法 · 观点</p>
+      <nav class="side-nav">
+        <p class="nav-group">情报流</p>
+        <a class="side-link" href="./index.html"><span>⌁</span>首页</a>
+        <a class="side-link" href="./topics.html"><span>⌘</span>主题地图</a>
+        <a class="side-link active" href="./archive.html"><span>▦</span>六个月归档</a>
+      </nav>
+      <div class="sidebar-status"><span class="health-dot ok"></span><div><strong>持续更新</strong><small>归档保留最近 180 天</small></div></div>
+    </aside>
+    <main class="archive-shell">
+      <header class="archive-header"><p class="eyebrow">ARCHIVE · 180 DAYS</p><h1>六个月新闻归档</h1><p>按月份和北京时间日期保存每天的 AI 动态，点进新闻即可查看中文详情。</p></header>
+      <div id="archiveState" class="archive-state">正在读取归档…</div>
+      <section id="archiveMonths" class="archive-months"></section>
+    </main>
+    <script type="module" src="./archive.js"></script>
+  </body>
+</html>

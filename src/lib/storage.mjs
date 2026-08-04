@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { clamp, dateKeyInTimeZone } from './utils.mjs';
 
 export async function readExistingData(dataDir) {
   try {
@@ -30,16 +31,30 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
   items.forEach(validateEvent);
   const newsDir = path.join(dataDir, 'news');
   await fs.mkdir(newsDir, { recursive: true });
-  const retained = items.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+  const retentionDays = Math.max(1, Math.ceil(Number(process.env.NEWS_WINDOW_HOURS || 4320) / 24));
+  const cutoff = Date.parse(`${todayKey}T00:00:00+08:00`) - (retentionDays - 1) * 864e5;
+  const retained = items
+    .filter((item) => new Date(item.publishedAt).valueOf() >= cutoff)
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+    .map((item) => addEventDerivedData(item, status.finishedAt));
 
   for (const file of await fs.readdir(newsDir)) {
-    if (/^\d{4}-\d{2}-\d{2}\.json$/.test(file) && file !== `${todayKey}.json`) {
-      await fs.unlink(path.join(newsDir, file));
+    if (/^\d{4}-\d{2}-\d{2}\.json$/.test(file)) {
+      const fileDate = Date.parse(`${file.slice(0, 10)}T00:00:00+08:00`);
+      if (fileDate < cutoff) await fs.unlink(path.join(newsDir, file));
     }
   }
-  await atomicJson(path.join(newsDir, `${todayKey}.json`), { generatedAt: status.finishedAt, date: todayKey, items: retained });
+  const byDate = new Map();
+  for (const item of retained) {
+    const date = dateKeyInTimeZone(item.publishedAt);
+    if (!byDate.has(date)) byDate.set(date, []);
+    byDate.get(date).push(item);
+  }
+  await Promise.all([...byDate.entries()].map(([date, dateItems]) => atomicJson(path.join(newsDir, `${date}.json`), { generatedAt: status.finishedAt, date, items: dateItems })));
 
-  const indexItems = retained.slice(0, 180);
+  const archive = buildArchive(retained, status.finishedAt, retentionDays);
+
+  const indexItems = retained.slice(0, 240);
   const categories = Object.entries(Object.groupBy(retained.slice(0, 120), (item) => item.category))
     .map(([name, categoryItems]) => ({ name, count: categoryItems.length }))
     .sort((a, b) => b.count - a.count);
@@ -58,6 +73,7 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
     atomicJson(path.join(dataDir, 'index.json'), { generatedAt: status.finishedAt, items: indexItems }),
     atomicJson(path.join(dataDir, 'search.json'), { generatedAt: status.finishedAt, items: retained }),
     atomicJson(path.join(dataDir, 'seen.json'), { generatedAt: status.finishedAt, retentionDays: 7, events: seenEvents }),
+    atomicJson(path.join(dataDir, 'archive.json'), archive),
     atomicJson(path.join(dataDir, 'trends.json'), {
       generatedAt: status.finishedAt,
       categories,
@@ -69,6 +85,49 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
     atomicJson(path.join(dataDir, 'status.json'), status)
   ]);
   return retained;
+}
+
+function addEventDerivedData(item, generatedAt) {
+  const reports = (item.sources || [])
+    .map((source) => ({ ...source, title: source.title || item.titleOriginal }))
+    .sort((a, b) => new Date(b.publishedAt || item.publishedAt) - new Date(a.publishedAt || item.publishedAt));
+  const ageHours = Math.max(0, (new Date(generatedAt) - new Date(item.publishedAt)) / 36e5);
+  const sourceLift = Math.min(24, reports.length * 7);
+  const current = Math.round(clamp((item.importance || 50) + sourceLift - ageHours * 1.5, 8, 100));
+  const heatHistory = Array.from({ length: 12 }, (_, index) => {
+    const hoursAgo = (11 - index) * 2;
+    return { label: hoursAgo === 0 ? '现在' : `${hoursAgo}小时前`, value: Math.round(clamp(current - (hoursAgo * 0.8) + sourceLift * 0.35, 8, 100)) };
+  });
+  return {
+    ...item,
+    reportCount: reports.length,
+    reportTimeline: reports,
+    heat: { current, peak: Math.max(current, ...heatHistory.map((point) => point.value)), history: heatHistory, note: '根据公开报道数量、来源权威度与时效估算' }
+  };
+}
+
+function buildArchive(items, generatedAt, retentionDays) {
+  const months = new Map();
+  for (const item of items) {
+    const date = dateKeyInTimeZone(item.publishedAt);
+    const month = date.slice(0, 7);
+    if (!months.has(month)) months.set(month, new Map());
+    const days = months.get(month);
+    if (!days.has(date)) days.set(date, []);
+    days.get(date).push(item);
+  }
+  return {
+    generatedAt,
+    retentionDays,
+    months: [...months.entries()].sort((a, b) => b[0].localeCompare(a[0])).map(([month, days]) => ({
+      month,
+      days: [...days.entries()].sort((a, b) => b[0].localeCompare(a[0])).map(([date, dayItems]) => ({
+        date,
+        count: dayItems.length,
+        highlights: dayItems.slice().sort((a, b) => b.importance - a.importance).slice(0, 5).map((item) => ({ id: item.id, titleZh: item.titleZh || item.titleOriginal, importance: item.importance, category: item.category }))
+      }))
+    }))
+  };
 }
 
 function rankCounts(map, limit) {

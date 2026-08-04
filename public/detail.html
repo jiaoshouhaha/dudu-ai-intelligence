@@ -7,6 +7,7 @@
     <title>新闻详情 · 嘟嘟的 AI 情报站</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191915'/%3E%3Cpath d='M14 17h36v8H26v7h20v8H26v7h24v8H14z' fill='%23f3f0e8'/%3E%3Ccircle cx='50' cy='17' r='7' fill='%23ed5b2a'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./detail.css" />
+    <link rel="stylesheet" href="./detail-enhancements.css" />
   </head>
   <body>
     <aside class="detail-sidebar">
@@ -53,8 +54,27 @@
           <p id="impactContent" class="detail-copy"></p>
         </section>
 
-        <section id="actionSection" class="detail-section action-section" hidden>
+        <section class="detail-section intelligence-section">
           <p class="section-kicker">04</p>
+          <div>
+            <h2>事件热度走势</h2>
+            <p class="section-note">根据公开报道数量、来源权威度与发布时间估算，仅用于判断关注度变化。</p>
+            <div id="heatSummary" class="heat-summary"></div>
+            <div id="heatChart" class="heat-chart" aria-label="事件热度估算走势"></div>
+          </div>
+        </section>
+
+        <section class="detail-section intelligence-section">
+          <p class="section-kicker">05</p>
+          <div>
+            <h2>报道时间线</h2>
+            <p id="reportCount" class="section-note"></p>
+            <div id="reportTimeline" class="report-timeline"></div>
+          </div>
+        </section>
+
+        <section id="actionSection" class="detail-section action-section" hidden>
+          <p class="section-kicker">06</p>
           <h2>可以怎么做</h2>
           <ol id="actionSteps" class="action-steps"></ol>
         </section>

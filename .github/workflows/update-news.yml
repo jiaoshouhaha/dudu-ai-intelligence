@@ -2,11 +2,8 @@ name: Update AI news
 
 on:
   schedule:
-    # UTC times correspond to Asia/Shanghai 01:00, 07:00, 12:30 and 19:00.
-    - cron: '0 17 * * *'
-    - cron: '0 23 * * *'
-    - cron: '30 4 * * *'
-    - cron: '0 11 * * *'
+    # GitHub cron is best-effort. Running off the top of the hour reduces queue delays.
+    - cron: '2,32 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -22,9 +19,9 @@ jobs:
     timeout-minutes: 15
     env:
       # Keep each scheduled run inexpensive even as the discovery source pool grows.
-      MAX_NEW_ITEMS_PER_RUN: '30'
-      DEEPSEEK_DAILY_LIMIT: '30'
-      NEWS_WINDOW_HOURS: '36'
+      MAX_NEW_ITEMS_PER_RUN: '12'
+      DEEPSEEK_DAILY_LIMIT: '12'
+      NEWS_WINDOW_HOURS: '4320'
       TRANSLATION_BASE_URL: ${{ vars.TRANSLATION_BASE_URL }}
       TRANSLATION_CONCURRENCY: '3'
       NODE_USE_ENV_PROXY: '1'

@@ -24,6 +24,48 @@ function addParagraphs(element, text) {
   }));
 }
 
+function renderIntelligence(item) {
+  const heat = item.heat || {};
+  const history = Array.isArray(heat.history) ? heat.history : [];
+  $('#heatSummary').textContent = `当前估算 ${heat.current || item.importance || '—'} · 峰值 ${heat.peak || heat.current || item.importance || '—'}`;
+  $('#heatChart').replaceChildren(...history.map((point) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'heat-bar-wrap';
+    const bar = document.createElement('span');
+    bar.className = 'heat-bar';
+    bar.style.height = `${Math.max(8, Number(point.value || 0))}%`;
+    bar.title = `${point.label}：${point.value}`;
+    const label = document.createElement('small');
+    label.textContent = point.label;
+    wrapper.append(bar, label);
+    return wrapper;
+  }));
+  const reports = item.reportTimeline?.length ? item.reportTimeline : (item.sources || []);
+  $('#reportCount').textContent = `${reports.length} 条公开报道 · 最新在前`;
+  $('#reportTimeline').replaceChildren(...reports.map((report) => {
+    const row = document.createElement('article');
+    row.className = 'report-row';
+    const time = document.createElement('time');
+    time.textContent = formatTime(report.publishedAt || item.publishedAt);
+    const body = document.createElement('div');
+    const title = document.createElement('strong');
+    title.textContent = report.title || item.titleZh || item.titleOriginal;
+    const source = document.createElement('span');
+    source.textContent = report.name || '公开来源';
+    body.append(title, source);
+    if (report.url) {
+      const link = document.createElement('a');
+      link.href = report.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = '原文 ↗';
+      body.append(link);
+    }
+    row.append(time, body);
+    return row;
+  }));
+}
+
 function render(item) {
   const source = item.sources?.[0]?.name || '未知来源';
   const detail = item.detailZh || item.summaryZh || '这条新闻的中文详情尚在生成中。';
@@ -46,6 +88,7 @@ function render(item) {
   $('#impactContent').textContent = impact;
   addTextList($('#actionSteps'), steps);
   $('#actionSection').hidden = steps.length === 0;
+  renderIntelligence(item);
   $('#limitedNotice').hidden = item.detailCompleteness !== 'limited' && Boolean(item.detailZh);
   $('#sourceName').textContent = `来源：${source}`;
   $('#publishTime').textContent = `发布时间：${formatTime(item.publishedAt)}`;
@@ -81,7 +124,11 @@ if (!id) {
     const response = await fetch('./data/index.json');
     if (!response.ok) throw new Error(`数据请求失败（${response.status}）`);
     const data = await response.json();
-    const item = (data.items || []).find((entry) => entry.id === id);
+    let item = (data.items || []).find((entry) => entry.id === id);
+    if (!item) {
+      const archiveResponse = await fetch('./data/search.json');
+      if (archiveResponse.ok) item = ((await archiveResponse.json()).items || []).find((entry) => entry.id === id);
+    }
     if (!item) showError('链接可能已过期，或新闻已移出当前时间窗口。');
     else render(item);
   } catch (error) {

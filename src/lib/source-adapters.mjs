@@ -14,6 +14,7 @@ export function parseAihotItems(payload, source) {
       sourceName: item.source?.name || source.name,
       sourceType: item.category === 'tip' ? 'practitioner' : 'aggregator',
       authority: Math.max(source.authority || 70, Number(item.score) || 0),
+      sourcePriority: source.priority || source.authority || 0,
       category: AIHOT_CATEGORY_MAP[item.category] || source.category || 'other',
       language: 'zh',
       title: item.title || item.originalTitle || '',

@@ -32,6 +32,7 @@ export function parseFeed(xml, source, now = new Date()) {
         sourceName: source.name,
         sourceType: source.type,
         authority: source.authority,
+        sourcePriority: source.priority || source.authority || 0,
         category: source.category,
         language: source.language,
         title,
@@ -43,4 +44,3 @@ export function parseFeed(xml, source, now = new Date()) {
     })
     .filter((item) => item.title && /^https?:\/\//i.test(item.url));
 }
-

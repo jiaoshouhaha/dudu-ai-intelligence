@@ -36,6 +36,14 @@ test('deduplicates the same story and retains multiple sources', () => {
   assert.equal(events[0].sources.length, 2);
 });
 
+test('merges cross-language model release reports and prefers an official link', () => {
+  const english = normalizeItem({ ...source, title: 'Qwen3.8-Max launches with open weights', description: 'A new flagship model release.', url: 'https://the-decoder.com/qwen-release', publishedAt: '2026-08-01T03:00:00Z' });
+  const chinese = normalizeItem({ ...source, sourceId: 'qwen-official', sourceName: 'Qwen official', sourceType: 'aggregator', sourcePriority: 105, title: '通义千问发布 Qwen3.8-Max，权重即将开源', description: 'Qwen 新模型发布。', url: 'https://qwen.ai/blog?id=qwen3.8', publishedAt: '2026-08-01T02:00:00Z' });
+  const [event] = dedupeItems([english, chinese]);
+  assert.equal(event.sources.length, 2);
+  assert.equal(event.originalUrl, 'https://qwen.ai/blog?id=qwen3.8');
+});
+
 test('rule score is bounded and includes a transparent reason', () => {
   const event = dedupeItems(parseFeed(fixture, source).map(normalizeItem))[0];
   const scored = scoreEvent(event, new Date('2026-08-01T03:00:00Z'));
@@ -148,8 +156,11 @@ test('pipeline isolates a failed source and writes valid data files', async () =
   assert.equal(items.length, 3);
   const output = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'index.json'), 'utf8'));
   assert.equal(output.items.length, 3);
-  await assert.rejects(fs.access(path.join(rootDir, 'data', 'news', '2026-07-31.json')));
+  await fs.access(path.join(rootDir, 'data', 'news', '2026-07-31.json'));
   await fs.access(path.join(rootDir, 'data', 'news', '2026-08-01.json'));
+  const archive = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'archive.json'), 'utf8'));
+  assert.equal(archive.retentionDays, 180);
+  assert.equal(archive.months[0].days[0].date, '2026-08-01');
   const seen = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'seen.json'), 'utf8'));
   assert.equal(Object.keys(seen.events).length, 3);
 

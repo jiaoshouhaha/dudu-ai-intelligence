@@ -66,6 +66,29 @@ export function tokenizeTitle(value) {
   );
 }
 
+const MODEL_ENTITY_PATTERNS = [
+  ['qwen3.8-max', /qwen\s*3[._-]?8\s*[- ]?max|qwen3\.8|max/i],
+  ['qwen', /qwen|通义千问/i],
+  ['deepseek', /deepseek|深度求索/i],
+  ['gpt', /\bgpt(?:[- .]?\d+(?:\.\d+)?)?|chatgpt|codex|openai/i],
+  ['claude', /claude|anthropic/i],
+  ['gemini', /gemini|deepmind/i],
+  ['grok', /grok|xai/i],
+  ['kimi', /\bkimi\b|moonshot|月之暗面/i],
+  ['glm', /\bglm\b|智谱/i],
+  ['llama', /llama|meta ai/i],
+  ['minimax', /minimax|mini max/i]
+];
+
+export function modelEntities(value) {
+  const corpus = stripHtml(value);
+  return new Set(MODEL_ENTITY_PATTERNS.filter(([, pattern]) => pattern.test(corpus)).map(([name]) => name));
+}
+
+export function hasReleaseSignal(value) {
+  return /launch|release|announce|available|publish|introduc|model|new|flagship|open.?weight|parameter|发布|上线|开源|推出|亮相|更新|预览|正式版|权重|参数/i.test(stripHtml(value));
+}
+
 export function jaccard(left, right) {
   if (!left.size || !right.size) return 0;
   let intersection = 0;
