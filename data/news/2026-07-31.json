@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T17:15:36.974Z",
+  "generatedAt": "2026-08-04T19:11:07.069Z",
   "date": "2026-07-31",
   "items": [
     {
@@ -276,6 +276,186 @@
       },
       "images": [],
       "visual": null
+    },
+    {
+      "id": "c7515e0fa4368a55",
+      "normalizedUrl": "https://simonwillison.net/2026/Jul/30/llm-rc2",
+      "originalUrl": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
+      "titleOriginal": "llm 0.32rc2",
+      "summaryOriginal": "Release: llm 0.32rc2 Hot on the heels of RC1 , this fixes a dependency issue and also adds two neat new features: The default model for users who have not set their own default is now GPT-5.6 Luna . It was previously GPT-4o mini . Luna is a much better and more recent model, albeit slightly more expensive - $0.20 per million input tokens and $1.20 per million output tokens, compared to $0.15/$0.60 for 4o mini. You can switch back to 4o mini using llm models default gpt-4o-mini , or switch to GPT-5 nano , an even cheaper default model ($0.05/$0.40), using llm models default gpt-5-nano . #1576 New llm openai endpoint command for running prompts, chats and model listings against arbitrary OpenAI-compatible endpoints without first configuring a model. These calls are not logged. #1565 The llm openai endpoint command is really cool. I got frustrated at the lack of an obvious CLI tool for trying out prompts against arbitrary OpenAI Chat Completions imitation endpoints, so I decided to add that to LLM itself. You don't even have to install LLM to use this. Here's a uvx one-liner for running a prompt - with tools - against an LM Studio local model: uvx --pre llm openai endpoint http://127.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "publishedAt": "2026-07-30T22:52:06.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
+          "publishedAt": "2026-07-30T22:52:06.000Z",
+          "title": "llm 0.32rc2",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": []
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该版本提供了实用的新命令和默认模型更新，对开发者有直接帮助，但内容较为具体，影响范围有限。",
+      "importanceReasonEn": "The release offers a practical new command and default model update, directly helpful to developers, but the content is specific and limited in scope.",
+      "scoringMode": "ai",
+      "titleZh": "llm 0.32rc2 发布",
+      "titleEn": "llm 0.32rc2 Release",
+      "summaryZh": "llm 0.32rc2 紧随 RC1 发布，修复了依赖问题，并新增两个功能：默认模型改为 GPT-5.6 Luna（之前是 GPT-4o mini），价格略高但性能更好；新增 `llm openai endpoint` 命令，可对任意兼容 OpenAI 的端点运行提示、聊天和模型列表，无需预先配置模型，且调用不会被记录。",
+      "summaryEn": "llm 0.32rc2 follows RC1, fixing a dependency issue and adding two features: the default model is now GPT-5.6 Luna (previously GPT-4o mini), slightly more expensive but better; and a new `llm openai endpoint` command for running prompts, chats, and model listings against arbitrary OpenAI-compatible endpoints without prior configuration, with calls not logged.",
+      "keywords": [
+        "llm",
+        "0.32rc2",
+        "GPT-5.6 Luna",
+        "openai endpoint",
+        "默认模型"
+      ],
+      "topics": [
+        "llm",
+        "OpenAI",
+        "CLI",
+        "模型默认值"
+      ],
+      "models": [
+        "GPT-5.6 Luna",
+        "GPT-4o mini",
+        "GPT-5 nano"
+      ],
+      "detailZh": "llm 0.32rc2 是 llm 工具的一个候选发布版本，紧随 RC1 之后，主要修复了一个依赖问题，并引入了两个新特性。第一个特性是默认模型的变更：对于未设置自定义默认模型的用户，默认模型从 GPT-4o mini 改为 GPT-5.6 Luna。Luna 是更新、性能更好的模型，但价格略高：每百万输入 token 0.20 美元，每百万输出 token 1.20 美元，而 GPT-4o mini 分别为 0.15 美元和 0.60 美元。用户可以通过 `llm models default gpt-4o-mini` 切换回 4o mini，或使用 `llm models default gpt-5-nano` 切换到更便宜的 GPT-5 nano（每百万输入 0.05 美元，每百万输出 0.40 美元）。\n\n第二个特性是新增了 `llm openai endpoint` 命令，允许用户对任意兼容 OpenAI Chat Completions 的端点运行提示、聊天和模型列表，无需预先配置模型。这些调用不会被记录。该命令非常实用，例如可以使用 uvx 一行命令对 LM Studio 本地模型运行带工具的提示：`uvx --pre llm openai endpoint http://127.0.0.1:...`。",
+      "keyPointsZh": [
+        "默认模型从 GPT-4o mini 改为 GPT-5.6 Luna，价格略高但性能更好。",
+        "新增 `llm openai endpoint` 命令，支持任意 OpenAI 兼容端点，无需配置模型。",
+        "调用 `llm openai endpoint` 不会被记录。",
+        "可通过 `llm models default` 命令切换默认模型。"
+      ],
+      "impactZh": "对于使用 llm 工具的开发者，默认模型的变更可能影响成本和使用体验，但可以轻松切换。新增的 `llm openai endpoint` 命令提供了极大的灵活性，方便测试不同的 OpenAI 兼容服务，无需繁琐配置，尤其适合本地模型或第三方端点。",
+      "actionStepsZh": [
+        "如需保持原默认模型，运行 `llm models default gpt-4o-mini`。",
+        "如需更便宜的默认模型，运行 `llm models default gpt-5-nano`。",
+        "尝试使用 `llm openai endpoint` 命令测试任意 OpenAI 兼容端点，例如 LM Studio 本地模型。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "data": [
+          {
+            "label": "GPT-5.6 Luna 输入价格",
+            "value": 0.2,
+            "display": ""
+          },
+          {
+            "label": "GPT-4o mini 输入价格",
+            "value": 0.15,
+            "display": ""
+          },
+          {
+            "label": "GPT-5 nano 输入价格",
+            "value": 0.05,
+            "display": ""
+          },
+          {
+            "label": "GPT-5.6 Luna 输出价格",
+            "value": 1.2,
+            "display": ""
+          },
+          {
+            "label": "GPT-4o mini 输出价格",
+            "value": 0.6,
+            "display": ""
+          },
+          {
+            "label": "GPT-5 nano 输出价格",
+            "value": 0.4,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
+          "publishedAt": "2026-07-30T22:52:06.000Z",
+          "title": "llm 0.32rc2",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 8,
+        "peak": 10,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 8
+          },
+          {
+            "label": "20小时前",
+            "value": 8
+          },
+          {
+            "label": "18小时前",
+            "value": 8
+          },
+          {
+            "label": "16小时前",
+            "value": 8
+          },
+          {
+            "label": "14小时前",
+            "value": 8
+          },
+          {
+            "label": "12小时前",
+            "value": 8
+          },
+          {
+            "label": "10小时前",
+            "value": 8
+          },
+          {
+            "label": "8小时前",
+            "value": 8
+          },
+          {
+            "label": "6小时前",
+            "value": 8
+          },
+          {
+            "label": "4小时前",
+            "value": 8
+          },
+          {
+            "label": "2小时前",
+            "value": 9
+          },
+          {
+            "label": "现在",
+            "value": 10
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
     }
   ]
 }

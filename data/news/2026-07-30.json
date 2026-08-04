@@ -1,7 +1,296 @@
 {
-  "generatedAt": "2026-08-04T17:15:36.974Z",
+  "generatedAt": "2026-08-04T19:11:07.069Z",
   "date": "2026-07-30",
   "items": [
+    {
+      "id": "d4d674821fc308ad",
+      "normalizedUrl": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server",
+      "originalUrl": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything",
+      "titleOriginal": "llm-chat-completions-server 0.1a0",
+      "summaryOriginal": "Release: llm-chat-completions-server 0.1a0 A key goal of the new content-addressable logs in LLM 0.32rc1 was being able to support OpenAI Chat Completion style requests where each incoming message extends the previous conversation, like this: curl http://localhost:8002/v1/chat/completions \\ -H 'Content-Type: application/json' \\ -d '{ \"model\": \"qwen3.5-4b\", \"messages\": [ {\"role\": \"user\", \"content\": \"Capital of France?\"}, {\"role\": \"assistant\", \"content\": \"Paris.\"}, {\"role\": \"user\", \"content\": \"Germany?\"} ] }' Here the conversation state is tracked by the client, so each of these requests gets longer and longer. The new schema design in LLM is designed to de-duplicate these using hashes of the individual message parts. To test that out, I built this plugin: uv tool install llm --pre llm install llm-chat-completions-server llm chat-completions-server -p 9001 Running this starts a localhost server on port 9001 that exposes your full collection of LLM models (from any plugins you have installed) using a ChatGPT Completions compatible endpoint. GPT-5.6 Sol wrote the whole thing - it turns out it knows the OpenAI Chat Completions API shape really well. Tags: projects , openai , llm",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "publishedAt": "2026-07-30T15:43:16.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything",
+          "publishedAt": "2026-07-30T15:43:16.000Z",
+          "title": "llm-chat-completions-server 0.1a0",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": []
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该发布为 LLM 工具链提供了实用的 OpenAI 兼容端点，方便开发者集成，但信息有限，且依赖特定预发布版本。",
+      "importanceReasonEn": "This release provides a practical OpenAI-compatible endpoint for the LLM toolchain, useful for developers, but information is limited and depends on a specific pre-release version.",
+      "scoringMode": "ai",
+      "titleZh": "llm-chat-completions-server 0.1a0 发布",
+      "titleEn": "llm-chat-completions-server 0.1a0 Release",
+      "summaryZh": "llm-chat-completions-server 0.1a0 发布。该插件利用 LLM 0.32rc1 中新的内容可寻址日志，支持 OpenAI Chat Completion 风格的请求，每个传入消息扩展之前的对话。通过 uv 工具安装并启动后，可在本地端口 9001 上提供与 ChatGPT Completions 兼容的端点，暴露所有已安装插件中的 LLM 模型。该插件由 GPT-5.6 Sol 编写。",
+      "summaryEn": "Release of llm-chat-completions-server 0.1a0. This plugin leverages the new content-addressable logs in LLM 0.32rc1 to support OpenAI Chat Completion style requests where each incoming message extends the previous conversation. Install and run via uv tool, it starts a localhost server on port 9001 exposing all LLM models from installed plugins via a ChatGPT Completions compatible endpoint. The plugin was written by GPT-5.6 Sol.",
+      "keywords": [
+        "llm-chat-completions-server",
+        "content-addressable logs",
+        "OpenAI Chat Completions",
+        "plugin",
+        "localhost server"
+      ],
+      "topics": [
+        "llm",
+        "openai",
+        "chat-completions",
+        "plugin"
+      ],
+      "models": [
+        "qwen3.5-4b"
+      ],
+      "detailZh": "llm-chat-completions-server 0.1a0 是一个新发布的插件，旨在利用 LLM 0.32rc1 中引入的内容可寻址日志功能。该功能允许高效处理 OpenAI Chat Completion 风格的请求，其中每个传入消息都会扩展之前的对话。例如，客户端可以发送包含多轮消息的请求，服务器会利用哈希去重，避免重复存储。\n\n安装和使用非常简单：通过 uv tool install llm --pre 安装预发布版本，然后使用 llm install llm-chat-completions-server 安装插件，最后运行 llm chat-completions-server -p 9001 启动本地服务器。该服务器在端口 9001 上提供与 ChatGPT Completions 兼容的端点，并暴露所有已安装插件中的模型。插件由 GPT-5.6 Sol 编写，表明 AI 辅助开发在工具构建中的应用。",
+      "keyPointsZh": [
+        "llm-chat-completions-server 0.1a0 发布，支持 OpenAI Chat Completions 兼容端点。",
+        "利用 LLM 0.32rc1 的内容可寻址日志实现消息去重。",
+        "安装命令：uv tool install llm --pre && llm install llm-chat-completions-server。",
+        "启动命令：llm chat-completions-server -p 9001。",
+        "插件由 GPT-5.6 Sol 编写。"
+      ],
+      "impactZh": "对于使用 LLM 的开发者，该插件提供了一种简单的方式，将本地模型暴露为 OpenAI 兼容 API，便于集成到现有工具链中。同时，内容可寻址日志的设计可能提高多轮对话处理的效率。",
+      "actionStepsZh": [
+        "安装预发布版 LLM：uv tool install llm --pre",
+        "安装插件：llm install llm-chat-completions-server",
+        "启动服务器：llm chat-completions-server -p 9001",
+        "使用 OpenAI 客户端或 curl 发送请求到 http://localhost:9001/v1/chat/completions"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything",
+          "publishedAt": "2026-07-30T15:43:16.000Z",
+          "title": "llm-chat-completions-server 0.1a0",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 8,
+        "peak": 10,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 8
+          },
+          {
+            "label": "20小时前",
+            "value": 8
+          },
+          {
+            "label": "18小时前",
+            "value": 8
+          },
+          {
+            "label": "16小时前",
+            "value": 8
+          },
+          {
+            "label": "14小时前",
+            "value": 8
+          },
+          {
+            "label": "12小时前",
+            "value": 8
+          },
+          {
+            "label": "10小时前",
+            "value": 8
+          },
+          {
+            "label": "8小时前",
+            "value": 8
+          },
+          {
+            "label": "6小时前",
+            "value": 8
+          },
+          {
+            "label": "4小时前",
+            "value": 8
+          },
+          {
+            "label": "2小时前",
+            "value": 9
+          },
+          {
+            "label": "现在",
+            "value": 10
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "fa00ad32cbe948ce",
+      "normalizedUrl": "https://simonwillison.net/2026/Jul/30/llm-rc1",
+      "originalUrl": "https://simonwillison.net/2026/Jul/30/llm-rc1/#atom-everything",
+      "titleOriginal": "llm 0.32rc1",
+      "summaryOriginal": "Release: llm 0.32rc1 This RC for LLM 0.32 finishes the work that started in LLM 0.32a0 - it adds a new schema design that does a much better job of capturing the details of the prompts and responses returned by the latest model families. The most important change is the use of content-addressable hash IDs for stored messages. This allows de-duplication in the database, and means that LLM can now represent trees of messages for forked conversations. Since it involves a significant schema change - new tables only, and old data should not be affected at all - it's worth running a backup of your existing logs.db before upgrading to the RC: llm logs backup logs-backup.db The RC also adds support for gpt-5.6-sol , gpt-5.6-terra , and gpt-5.6-luna . Tags: llm",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "publishedAt": "2026-07-30T15:30:20.000Z",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc1/#atom-everything",
+          "publishedAt": "2026-07-30T15:30:20.000Z",
+          "title": "llm 0.32rc1",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": []
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该版本引入了重要的数据库模式变更，对使用 llm 工具的用户有直接影响，且提供了备份建议，属于实用信息。",
+      "importanceReasonEn": "This release introduces significant database schema changes that directly affect users of the llm tool, and provides backup advice, making it practical information.",
+      "scoringMode": "ai",
+      "titleZh": "llm 0.32rc1 发布",
+      "titleEn": "llm 0.32rc1 Release",
+      "summaryZh": "llm 0.32rc1 是 LLM 0.32 的候选版本，完成了从 0.32a0 开始的工作。它引入了新的数据库模式，更好地捕获最新模型家族的提示和响应细节。最重要的变化是使用内容可寻址哈希 ID 存储消息，实现数据库去重，并支持分叉对话的消息树。由于涉及重大模式变更（仅新增表，旧数据不受影响），建议在升级前备份现有 logs.db。此外，该版本还增加了对 gpt-5.6-sol、gpt-5.6-terra 和 gpt-5.6-luna 的支持。",
+      "summaryEn": "llm 0.32rc1 is a release candidate for LLM 0.32, completing work started in 0.32a0. It introduces a new database schema that better captures details of prompts and responses from the latest model families. The most important change is the use of content-addressable hash IDs for stored messages, enabling de-duplication and supporting trees of messages for forked conversations. Since it involves a significant schema change (new tables only, old data unaffected), it's recommended to back up existing logs.db before upgrading. The RC also adds support for gpt-5.6-sol, gpt-5.6-terra, and gpt-5.6-luna.",
+      "keywords": [
+        "llm",
+        "0.32rc1",
+        "schema",
+        "content-addressable",
+        "hash",
+        "backup",
+        "gpt-5.6"
+      ],
+      "topics": [
+        "llm",
+        "release",
+        "schema",
+        "database",
+        "gpt-5.6"
+      ],
+      "models": [
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna"
+      ],
+      "detailZh": "llm 0.32rc1 是 LLM 0.32 的候选版本，完成了从 0.32a0 开始的工作。它引入了新的数据库模式，更好地捕获最新模型家族的提示和响应细节。最重要的变化是使用内容可寻址哈希 ID 存储消息，实现数据库去重，并支持分叉对话的消息树。由于涉及重大模式变更（仅新增表，旧数据不受影响），建议在升级前备份现有 logs.db。此外，该版本还增加了对 gpt-5.6-sol、gpt-5.6-terra 和 gpt-5.6-luna 的支持。",
+      "keyPointsZh": [
+        "llm 0.32rc1 是候选版本，完成 0.32a0 开始的工作。",
+        "新数据库模式使用内容可寻址哈希 ID 存储消息，实现去重并支持消息树。",
+        "升级前建议备份 logs.db：llm logs backup logs-backup.db。",
+        "新增对 gpt-5.6-sol、gpt-5.6-terra 和 gpt-5.6-luna 的支持。"
+      ],
+      "impactZh": "对于使用 llm 工具的用户，升级到 0.32rc1 后数据库结构将变化，但旧数据不受影响。新功能支持更复杂的对话结构，可能改善使用体验。建议在升级前备份数据库以防万一。",
+      "actionStepsZh": [
+        "升级前运行 llm logs backup logs-backup.db 备份数据库。",
+        "升级到 llm 0.32rc1。",
+        "测试新模型 gpt-5.6-sol、gpt-5.6-terra 和 gpt-5.6-luna。"
+      ],
+      "detailCompleteness": "full",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc1/#atom-everything",
+          "publishedAt": "2026-07-30T15:30:20.000Z",
+          "title": "llm 0.32rc1",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 8,
+        "peak": 10,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 8
+          },
+          {
+            "label": "20小时前",
+            "value": 8
+          },
+          {
+            "label": "18小时前",
+            "value": 8
+          },
+          {
+            "label": "16小时前",
+            "value": 8
+          },
+          {
+            "label": "14小时前",
+            "value": 8
+          },
+          {
+            "label": "12小时前",
+            "value": 8
+          },
+          {
+            "label": "10小时前",
+            "value": 8
+          },
+          {
+            "label": "8小时前",
+            "value": 8
+          },
+          {
+            "label": "6小时前",
+            "value": 8
+          },
+          {
+            "label": "4小时前",
+            "value": 8
+          },
+          {
+            "label": "2小时前",
+            "value": 9
+          },
+          {
+            "label": "现在",
+            "value": 10
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "859cdcef3df01ae8",
       "normalizedUrl": "https://huggingface.co/blog/Dharma-AI/gpu-management",
