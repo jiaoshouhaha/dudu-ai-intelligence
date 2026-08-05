@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T20:12:31.822Z",
+  "generatedAt": "2026-08-05T21:51:37.847Z",
   "date": "2026-07-10",
   "items": [
     {
@@ -244,6 +244,146 @@
           "title": "How Deutsche Telekom is rewiring telecommunications with AI",
           "authority": 100,
           "sourcePriority": 100,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 8,
+        "peak": 10,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 8
+          },
+          {
+            "label": "20小时前",
+            "value": 8
+          },
+          {
+            "label": "18小时前",
+            "value": 8
+          },
+          {
+            "label": "16小时前",
+            "value": 8
+          },
+          {
+            "label": "14小时前",
+            "value": 8
+          },
+          {
+            "label": "12小时前",
+            "value": 8
+          },
+          {
+            "label": "10小时前",
+            "value": 8
+          },
+          {
+            "label": "8小时前",
+            "value": 8
+          },
+          {
+            "label": "6小时前",
+            "value": 8
+          },
+          {
+            "label": "4小时前",
+            "value": 8
+          },
+          {
+            "label": "2小时前",
+            "value": 9
+          },
+          {
+            "label": "现在",
+            "value": 10
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9dd06ff2acc7e68a",
+      "normalizedUrl": "https://huggingface.co/blog/torch-attention-profile",
+      "originalUrl": "https://huggingface.co/blog/torch-attention-profile",
+      "titleOriginal": "Profiling in PyTorch (Part 3): Attention is all you profile",
+      "summaryOriginal": "",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "opensource",
+      "sourceType": "official",
+      "authority": 94,
+      "sourcePriority": 95,
+      "images": [],
+      "publishedAt": "2026-07-10T00:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "huggingface",
+          "name": "Hugging Face",
+          "type": "official",
+          "url": "https://huggingface.co/blog/torch-attention-profile",
+          "publishedAt": "2026-07-10T00:00:00.000Z",
+          "title": "Profiling in PyTorch (Part 3): Attention is all you profile",
+          "authority": 94,
+          "sourcePriority": 95,
+          "images": []
+        }
+      ],
+      "importance": 65,
+      "importanceReasonZh": "该文章提供了针对注意力机制的性能分析实用指南，对开发者优化模型性能有直接帮助，但内容较为具体，影响范围有限。",
+      "importanceReasonEn": "The article provides practical guidance on profiling attention mechanisms, directly helping developers optimize model performance, but the content is specific and has limited scope.",
+      "scoringMode": "ai",
+      "titleZh": "PyTorch 性能分析（第三部分）：注意力机制的性能剖析",
+      "titleEn": "Profiling in PyTorch (Part 3): Attention is all you profile",
+      "summaryZh": "本文是 PyTorch 性能分析系列文章的第三部分，重点介绍如何对注意力机制进行性能剖析。文章提供了使用 PyTorch Profiler 分析注意力层性能的实用方法，包括如何识别瓶颈、优化内存使用和提升计算效率。",
+      "summaryEn": "This is the third part of a series on profiling in PyTorch, focusing on profiling attention mechanisms. It provides practical methods for using PyTorch Profiler to analyze attention layer performance, including identifying bottlenecks, optimizing memory usage, and improving computational efficiency.",
+      "keywords": [
+        "PyTorch Profiler",
+        "注意力机制",
+        "性能优化",
+        "内存分析",
+        "计算效率"
+      ],
+      "topics": [
+        "PyTorch",
+        "性能分析",
+        "注意力机制"
+      ],
+      "models": [],
+      "detailZh": "本文是 PyTorch 性能分析系列文章的第三部分，重点介绍如何对注意力机制进行性能剖析。文章首先回顾了注意力机制的基本结构，然后详细说明了如何使用 PyTorch Profiler 来测量注意力层的计算时间和内存占用。作者通过示例代码展示了如何分析注意力层中的各个操作（如矩阵乘法、softmax 等）的性能瓶颈，并提出了优化建议，例如使用更高效的内存布局、减少不必要的张量拷贝、以及利用 torch.utils.bottleneck 等工具进行深入分析。文章还讨论了如何结合 TensorBoard 可视化性能数据，以便更直观地理解性能特征。",
+      "keyPointsZh": [
+        "使用 PyTorch Profiler 可以详细分析注意力层的计算和内存性能。",
+        "通过分析各个操作的耗时，可以识别注意力机制中的性能瓶颈。",
+        "优化内存布局和减少张量拷贝可以显著提升注意力层的效率。",
+        "结合 TensorBoard 可视化性能数据有助于直观理解性能特征。"
+      ],
+      "impactZh": "对于使用 PyTorch 开发 Transformer 模型的开发者，本文提供了实用的性能分析技巧，有助于优化模型训练和推理速度，降低资源消耗。",
+      "actionStepsZh": [
+        "使用 torch.profiler 对注意力层进行性能剖析，记录操作耗时和内存使用。",
+        "分析 profiler 输出，识别耗时最长的操作，如矩阵乘法或 softmax。",
+        "尝试优化内存布局，例如使用 channels_last 格式，减少内存访问开销。",
+        "避免不必要的张量拷贝，尽量使用原地操作或视图。",
+        "利用 TensorBoard 插件可视化性能数据，辅助分析。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "huggingface",
+          "name": "Hugging Face",
+          "type": "official",
+          "url": "https://huggingface.co/blog/torch-attention-profile",
+          "publishedAt": "2026-07-10T00:00:00.000Z",
+          "title": "Profiling in PyTorch (Part 3): Attention is all you profile",
+          "authority": 94,
+          "sourcePriority": 95,
           "images": []
         }
       ],
