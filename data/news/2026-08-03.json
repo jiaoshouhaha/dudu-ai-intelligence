@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T09:14:27.378Z",
+  "generatedAt": "2026-08-07T10:29:34.911Z",
   "date": "2026-08-03",
   "items": [
     {
@@ -3116,24 +3116,42 @@
           "sourcePriority": 60
         }
       ],
-      "importance": 80,
-      "importanceReasonZh": "来自高权威一手或研究来源；可能对行业或产品生态产生较广影响；包含明显的新发布或技术进展",
-      "importanceReasonEn": "Rule-based score from source authority, impact, novelty, recency and corroboration.",
-      "scoringMode": "rules",
-      "titleZh": "法学硕士真的能理解项目难度级别吗？使用法学硕士自动生成项目的影响",
+      "importance": 70,
+      "importanceReasonZh": "该研究提供了关于 LLM 在题目难度预测上的实证数据，对教育领域应用 LLM 有直接参考价值，但研究基于单一测试，且 LLM 性能未超越专用模型，重要性中等偏高。",
+      "importanceReasonEn": "This study provides empirical data on LLM performance in item difficulty prediction, directly relevant to educational applications, but it is based on a single test and LLMs did not surpass specialized models, so importance is moderately high.",
+      "scoringMode": "ai",
+      "titleZh": "LLM 能否真正理解题目难度等级？对使用 LLM 自动生成试题的启示",
       "titleEn": "Can LLMs Really Understand Item Difficulty Levels? Implications for Automated Item Generation Using LLMs",
-      "summaryZh": "arXiv:2607.28634v1 公告类型：新 摘要：项目难度的估计在形成性评估和大规模高风险总结性评估中都起着关键作用。本研究探讨了大型语言模型 (LLM) 如何使用大规模阅读和写作测试中的项目来预测项目难度级别。该研究调查了多个法学硕士的各种提示策略和参数设置。将 LLM 的性能与仅编码器的语言模型和基于特征的监督机器学习模型进行了比较。温度为 0 的零样本 GPT-4.1 产生了最高的项目难度级别预测精度，二次加权 kappa (QWK) 为 0.578。",
-      "summaryEn": "arXiv:2607.28634v1 Announce Type: new Abstract: The estimation of item difficulty plays a key role in both formative assessment and large-scale high-stakes summative assessments. This study explores how large language models (LLMs) perform in predicting item difficulty levels using items from a large-scale Reading and Writing test. The study investigated various prompting strategies and parameter settings across multiple LLMs. LLM performance was compared with encoder-only language models and feature-based supervised machine learning models. Zero-shot GPT-4.1 with a temperature of 0 yielded the highest item difficulty level prediction accuracy, with a quadratic weighted kappa (QWK) of 0.578. However, LLMs' prediction accuracy was lower than that of ConvBERT (QWK = 0.625), which outperformed the best feature-based supervised machine learning model. Further analysis showed that all LLMs struggled to label hard items; in particular, the current advanced GPT-5.4 tended to underestimate item difficulty levels. Dimension reduction of embeddings showed that item embeddings from different difficulty levels were mixed together, indicating that semantic information from items alone is likely",
-      "keywords": [],
-      "topics": [],
-      "models": [
-        "GPT / Codex"
+      "summaryZh": "该研究探讨了大型语言模型（LLM）在预测题目难度等级方面的表现，使用了大规模阅读与写作测试中的题目。研究比较了多种提示策略和参数设置，并将 LLM 的性能与仅编码器语言模型及基于特征的监督机器学习模型进行了对比。零样本 GPT-4.1（温度为 0）取得了最高的难度等级预测准确率，二次加权 kappa（QWK）为 0.578。然而，LLM 的预测准确率低于 ConvBERT（QWK = 0.625），后者优于最佳的基于特征的监督机器学习模型。进一步分析显示，所有 LLM 都难以标记难题，尤其是 GPT-5.4 倾向于低估题目难度。嵌入降维显示不同难度等级的题目嵌入混合在一起，表明仅凭题目的语义信息可能不足以区分难度。",
+      "summaryEn": "This study explores how large language models (LLMs) perform in predicting item difficulty levels using items from a large-scale Reading and Writing test. The study investigated various prompting strategies and parameter settings across multiple LLMs. LLM performance was compared with encoder-only language models and feature-based supervised machine learning models. Zero-shot GPT-4.1 with a temperature of 0 yielded the highest item difficulty level prediction accuracy, with a quadratic weighted kappa (QWK) of 0.578. However, LLMs' prediction accuracy was lower than that of ConvBERT (QWK = 0.625), which outperformed the best feature-based supervised machine learning model. Further analysis showed that all LLMs struggled to label hard items; in particular, the current advanced GPT-5.4 tended",
+      "keywords": [
+        "item difficulty",
+        "LLM",
+        "automated item generation",
+        "educational assessment",
+        "QWK"
       ],
-      "detailZh": "",
-      "keyPointsZh": [],
-      "impactZh": "来自高权威一手或研究来源；可能对行业或产品生态产生较广影响；包含明显的新发布或技术进展",
+      "topics": [
+        "LLM",
+        "题目难度预测",
+        "自动试题生成",
+        "教育评估"
+      ],
+      "models": [
+        "GPT-4.1",
+        "GPT-5.4",
+        "ConvBERT"
+      ],
+      "detailZh": "该研究旨在评估大型语言模型（LLM）在预测题目难度等级方面的能力，这对于形成性评估和大规模高风险总结性评估都至关重要。研究者使用了来自大规模阅读与写作测试的题目，并测试了多种提示策略和参数设置，涉及多个 LLM。他们将 LLM 的性能与仅编码器语言模型（如 ConvBERT）以及基于特征的监督机器学习模型进行了比较。结果显示，零样本 GPT-4.1（温度为 0）在预测难度等级方面取得了最高的准确率，QWK 为 0.578。然而，这一表现低于 ConvBERT 的 QWK 0.625，后者也优于最佳的基于特征的监督机器学习模型。进一步分析表明，所有 LLM 在标记难题方面都存在困难，尤其是 GPT-5.4 倾向于低估难度。嵌入降维分析显示，不同难度等级的题目嵌入混合在一起，表明仅凭题目的语义信息可能不足以区分难度等级。",
+      "keyPointsZh": [
+        "零样本 GPT-4.1（温度 0）在 LLM 中取得最高 QWK 0.578。",
+        "ConvBERT 的 QWK 为 0.625，优于所有 LLM 和基于特征的模型。",
+        "所有 LLM 在标记难题上表现不佳，GPT-5.4 倾向于低估难度。",
+        "嵌入降维显示不同难度等级的题目嵌入混合，语义信息不足以区分难度。"
+      ],
+      "impactZh": "该研究对教育领域使用 LLM 自动生成试题具有启示意义：LLM 可能无法准确评估题目难度，尤其是在难题上。这可能导致自动生成的试题难度分布不合理，影响评估的有效性。教育者和开发者应谨慎依赖 LLM 进行难度预测，并考虑结合其他方法或人工审核。",
       "actionStepsZh": [],
-      "detailCompleteness": "limited",
+      "detailCompleteness": "full",
       "processingError": null,
       "translationMode": "public-endpoint",
       "translationError": null,
@@ -3205,7 +3223,24 @@
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
       },
-      "visual": null
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "data": [
+          {
+            "label": "GPT-4.1 (zero-shot)",
+            "value": 0.578,
+            "display": ""
+          },
+          {
+            "label": "ConvBERT",
+            "value": 0.625,
+            "display": ""
+          }
+        ]
+      }
     },
     {
       "id": "cdd1120dc63d166c",
@@ -3236,20 +3271,40 @@
           "sourcePriority": 60
         }
       ],
-      "importance": 80,
-      "importanceReasonZh": "来自高权威一手或研究来源；可能对行业或产品生态产生较广影响；包含明显的新发布或技术进展",
-      "importanceReasonEn": "Rule-based score from source authority, impact, novelty, recency and corroboration.",
-      "scoringMode": "rules",
-      "titleZh": "使用 GMM 和 LLM 通过目标数据增强进行不平衡数据聚类",
+      "importance": 70,
+      "importanceReasonZh": "该研究提出了一种结合GMM和LLM的无监督数据增强方法，针对不平衡文本数据聚类问题，具有创新性和实用性，但缺乏具体实验数据，因此重要性中等偏高。",
+      "importanceReasonEn": "The research proposes an unsupervised data augmentation method combining GMM and LLM for imbalanced text clustering, which is innovative and practical, but lacks specific experimental data, so importance is moderately high.",
+      "scoringMode": "ai",
+      "titleZh": "通过GMM和LLM进行针对性数据增强的不平衡数据聚类",
       "titleEn": "Imbalanced Data Clustering via Targeted Data Augmentation Using GMM and LLM",
-      "summaryZh": "arXiv:2607.28635v1 公告类型：新 摘要：在自然语言处理 (NLP) 中，处理代表性不足的主题具有挑战性，特别是在聚类可能无法充分捕获少数主题的无监督任务中。为了应对这一挑战，我们的论文提出了一种新颖的无监督数据增强方法，该方法集成了高斯混合模型（GMM）和大型语言模型（LLM）。由于其灵活性和鲁棒性，GMM 可以检测与数据中代表性不足的区域相对应的聚类，而 LLM 创建合成文档来丰富这些聚类并改善其表示。对各种不平衡文本数据集的实验表明我们的方法",
-      "summaryEn": "arXiv:2607.28635v1 Announce Type: new Abstract: In Natural Language Processing (NLP), dealing with underrepresented topics is challenging, especially in unsupervised tasks where clustering might not adequately capture minority topics. To tackle this challenge, our paper presents a novel unsupervised data augmentation method that integrates Gaussian Mixture Models (GMMs) and Large Language Models (LLMs). Due to their flexibility and robustness, GMMs can detect clusters corresponding to underrepresented areas in the data, while LLMs create synthetic documents to enrich these clusters and improve their representation. Experiments on various imbalanced text datasets demonstrate that our approach preserves clustering performance in all cases and often enhances cluster interpretability, offering a robust and scalable solution for improving data representation in unsupervised NLP tasks.",
-      "keywords": [],
-      "topics": [],
-      "models": [],
-      "detailZh": "",
-      "keyPointsZh": [],
-      "impactZh": "来自高权威一手或研究来源；可能对行业或产品生态产生较广影响；包含明显的新发布或技术进展",
+      "summaryZh": "在自然语言处理中，处理代表性不足的主题具有挑战性，尤其是在无监督任务中，聚类可能无法充分捕捉少数主题。为了解决这一挑战，本文提出了一种新颖的无监督数据增强方法，该方法结合了高斯混合模型和大语言模型。由于GMM的灵活性和鲁棒性，它可以检测数据中对应代表性不足区域的聚类，而LLM则生成合成文档以丰富这些聚类并改善其表示。在各种不平衡文本数据集上的实验表明，我们的方法在所有情况下都保持了聚类性能，并且经常增强聚类的可解释性，为改善无监督NLP任务中的数据表示提供了一种稳健且可扩展的解决方案。",
+      "summaryEn": "In Natural Language Processing (NLP), dealing with underrepresented topics is challenging, especially in unsupervised tasks where clustering might not adequately capture minority topics. To tackle this challenge, our paper presents a novel unsupervised data augmentation method that integrates Gaussian Mixture Models (GMMs) and Large Language Models (LLMs). Due to their flexibility and robustness, GMMs can detect clusters corresponding to underrepresented areas in the data, while LLMs create synthetic documents to enrich these clusters and improve their representation. Experiments on various imbalanced text datasets demonstrate that our approach preserves clustering performance in all cases and often enhances cluster interpretability, offering a robust and scalable solution for improving da",
+      "keywords": [
+        "imbalanced data",
+        "clustering",
+        "data augmentation",
+        "GMM",
+        "LLM",
+        "unsupervised learning"
+      ],
+      "topics": [
+        "数据增强",
+        "不平衡数据",
+        "聚类",
+        "高斯混合模型",
+        "大语言模型"
+      ],
+      "models": [
+        "GMM",
+        "LLM"
+      ],
+      "detailZh": "本文针对自然语言处理中无监督聚类任务对少数主题代表性不足的问题，提出了一种新的无监督数据增强方法。该方法利用高斯混合模型（GMM）检测数据中对应少数主题的聚类，然后使用大语言模型（LLM）生成合成文本来丰富这些聚类，从而改善其表示。实验在多个不平衡文本数据集上进行，结果表明该方法在所有情况下都能保持聚类性能，并经常增强聚类的可解释性。",
+      "keyPointsZh": [
+        "提出结合GMM和LLM的无监督数据增强方法。",
+        "GMM用于检测代表性不足的聚类，LLM生成合成数据。",
+        "在不平衡文本数据集上保持聚类性能并增强可解释性。"
+      ],
+      "impactZh": "该方法为处理不平衡文本数据聚类提供了一种新思路，可应用于主题建模、文档分类等场景，有助于提高少数主题的识别能力。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "processingError": null,
@@ -3355,26 +3410,41 @@
         }
       ],
       "importance": 80,
-      "importanceReasonZh": "来自高权威一手或研究来源；可能对行业或产品生态产生较广影响；包含明显的新发布或技术进展",
-      "importanceReasonEn": "Rule-based score from source authority, impact, novelty, recency and corroboration.",
-      "scoringMode": "rules",
-      "titleZh": "模型链：针对偏差稳健的 LLM 法官的跨模型审计",
+      "importanceReasonZh": "该研究提出了一种新颖的跨模型审计方法，并提供了实证证据，表明审计者身份对偏见缓解效果有显著影响，对LLM评估领域具有重要参考价值。",
+      "importanceReasonEn": "The study proposes a novel cross-model auditing method and provides empirical evidence that auditor identity significantly affects bias mitigation effectiveness, offering important reference for the LLM evaluation field.",
+      "scoringMode": "ai",
+      "titleZh": "模型链：用于偏见鲁棒性LLM法官的跨模型审计",
       "titleEn": "Chain-of-Models: Cross-Model Auditing for Bias-Robust LLM Judges",
-      "summaryZh": "arXiv:2607.28636v1 公告类型：新 摘要：法学硕士越来越多地充当自动法官，但他们的判断仍然容易受到认知偏差的影响。现有的缓解措施主要依赖于即时驱动的去偏差，这种方法对于偏差类型来说很脆弱，或者依靠人工评估，而这种方法无法扩展。我们研究\\emph{模型链}（CoM），这是一种自动审计管道，其中第二个模型在产生最终判断之前检查第一个模型的推理轨迹。关键的设计问题是审计员是否应该是同一模型、同族模型还是不同族模型。通过来自 6 个系列的 9 个模型、4 个认知偏差和 4 个事实数据集，我们发现审计师身份很重要",
-      "summaryEn": "arXiv:2607.28636v1 Announce Type: new Abstract: LLMs increasingly serve as automated judges, but their judgments remain vulnerable to cognitive biases. Existing mitigations mostly rely on prompt-driven debiasing, which is brittle across bias types, or human evaluation, which does not scale. We study \\emph{Chain-of-Models} (CoM), an automated audit pipeline in which a second model inspects the first model's reasoning trace before producing the final judgment. The key design question is whether the auditor should be the same model, a same-family model, or a different-family model. Across 9 models from 6 families, 4 cognitive biases, and 4 factual datasets, we find that auditor identity matters in two ways. First, standalone bias resistance does not predict audit effectiveness: Kimi-K2.5 is the strongest standalone model on several biases, yet is a weak auditor for Qwen2.5-72B's biased traces. Second, the best auditor is bias-specific: GPT-4o is strongest on bandwagon, authority, and distraction, while GLM-5 is strongest on sycophancy. We operationalize these findings with a per-bias auditor selection rule that, given the bias type, scores candidates along functional diversity, per-bi",
-      "keywords": [],
-      "topics": [],
-      "models": [
-        "GPT / Codex",
-        "Qwen",
-        "Kimi",
-        "GLM"
+      "summaryZh": "arXiv:2607.28636v1 公告类型：新论文。摘要：LLM越来越多地作为自动法官，但其判断仍易受认知偏见影响。现有缓解措施大多依赖提示驱动的去偏，这在偏见类型上很脆弱，或依赖人工评估，这无法扩展。我们研究了模型链（CoM），一种自动化审计流程，其中第二个模型在产生最终判断之前检查第一个模型的推理轨迹。关键设计问题是审计者应该是同一模型、同族模型还是不同族模型。在来自6个家族的9个模型、4种认知偏见和4个事实数据集上，我们发现审计者身份在两个方面很重要。首先，独立的偏见抵抗能力不能预测审计效果：Kimi-K2.5在几种偏见上是最强的独立模型，但却是Qwen2.5-72B偏见轨迹的弱审计者。其次，最佳审计者是特定于偏见的：GPT-4o在从众、权威和干扰方面最强，而GLM-5在谄媚方面最强。我们通过一个按偏见选择的审计者选择规则来操作这些发现，该规则根据偏见类型，沿着功能多样性、每偏见表现等对候选者进行评分。",
+      "summaryEn": "arXiv:2607.28636v1 Announce Type: new Abstract: LLMs increasingly serve as automated judges, but their judgments remain vulnerable to cognitive biases. Existing mitigations mostly rely on prompt-driven debiasing, which is brittle across bias types, or human evaluation, which does not scale. We study Chain-of-Models (CoM), an automated audit pipeline in which a second model inspects the first model's reasoning trace before producing the final judgment. The key design question is whether the auditor should be the same model, a same-family model, or a different-family model. Across 9 models from 6 families, 4 cognitive biases, and 4 factual datasets, we find that auditor identity matters in two ways. First, standalone bias resistance does not predict audit effectiveness: Kimi-K2.5 is the stro",
+      "keywords": [
+        "Chain-of-Models",
+        "LLM法官",
+        "认知偏见",
+        "跨模型审计",
+        "偏见鲁棒性"
       ],
-      "detailZh": "",
-      "keyPointsZh": [],
-      "impactZh": "来自高权威一手或研究来源；可能对行业或产品生态产生较广影响；包含明显的新发布或技术进展",
+      "topics": [
+        "LLM评估",
+        "偏见缓解",
+        "模型审计"
+      ],
+      "models": [
+        "Kimi-K2.5",
+        "Qwen2.5-72B",
+        "GPT-4o",
+        "GLM-5"
+      ],
+      "detailZh": "该论文提出了一种名为Chain-of-Models（CoM）的自动化审计流程，用于减少LLM法官在评估中的认知偏见。CoM通过让第二个模型检查第一个模型的推理轨迹，然后产生最终判断。研究者探讨了审计者身份（同一模型、同族模型或不同族模型）对审计效果的影响。实验涉及来自6个家族的9个模型、4种认知偏见（从众、权威、干扰、谄媚）和4个事实数据集。主要发现包括：独立的偏见抵抗能力不能预测审计效果，例如Kimi-K2.5在多个偏见上表现最强，但作为Qwen2.5-72B的审计者时效果较弱；最佳审计者因偏见类型而异，GPT-4o在从众、权威和干扰方面最强，而GLM-5在谄媚方面最强。研究者还提出了一个按偏见类型选择审计者的规则，该规则基于功能多样性和每偏见表现对候选者进行评分。",
+      "keyPointsZh": [
+        "CoM是一种自动化审计流程，通过第二个模型检查第一个模型的推理轨迹来减少偏见。",
+        "审计者身份对审计效果有显著影响，且独立偏见抵抗能力不能预测审计效果。",
+        "最佳审计者因偏见类型而异：GPT-4o在从众、权威和干扰方面最强，GLM-5在谄媚方面最强。",
+        "提出了一个按偏见类型选择审计者的规则，基于功能多样性和每偏见表现。"
+      ],
+      "impactZh": "该研究为LLM评估中的偏见缓解提供了新的思路，即通过跨模型审计来增强鲁棒性。对于开发者和研究者而言，这意味着在选择审计模型时需要考虑偏见类型和模型多样性，而不是仅仅依赖模型的独立性能。这有助于构建更可靠的自动化评估系统。",
       "actionStepsZh": [],
-      "detailCompleteness": "limited",
+      "detailCompleteness": "summary",
       "processingError": null,
       "translationMode": "public-endpoint",
       "translationError": null,
@@ -3477,24 +3547,44 @@
           "sourcePriority": 60
         }
       ],
-      "importance": 80,
-      "importanceReasonZh": "来自高权威一手或研究来源；可能对行业或产品生态产生较广影响；包含明显的新发布或技术进展",
-      "importanceReasonEn": "Rule-based score from source authority, impact, novelty, recency and corroboration.",
-      "scoringMode": "rules",
-      "titleZh": "ZeroR@CHiPSAL 2026：尼泊尔模因分类的两阶段视觉语言适应与对比学习",
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种针对低资源语言（尼泊尔语）表情包分类的新方法，结合了先进的视觉-语言模型和两阶段训练策略，并在共享任务中取得了优异成绩，对多模态理解研究有参考价值。",
+      "importanceReasonEn": "The paper proposes a novel approach for meme classification in a low-resource language (Nepali), combining a state-of-the-art VLM with a two-stage training strategy, achieving strong results in a shared task, which is valuable for multimodal understanding research.",
+      "scoringMode": "ai",
+      "titleZh": "ZeroR@CHiPSAL 2026：基于对比学习的尼泊尔表情包分类两阶段视觉-语言适配",
       "titleEn": "ZeroR@CHiPSAL 2026: Two-Stage Vision-Language Adaptation with Contrastive Learning for Nepali Meme Classification",
-      "summaryZh": "arXiv:2607.28637v1 公告类型：新 摘要：本文介绍了我们的 CHiPSAL 2026 共享任务系统，该任务涉及尼泊尔模因中的多模式仇恨言论和情绪检测。我们解决这两个子任务：二元仇恨言论分类和三类情感分析。我们的方法使用 Qwen3-VL-8B-Instruct 来适应仇恨模因检测的鲁棒适应 (RA-HMD) 框架，Qwen3-VL-8B-Instruct 是一种具有原生梵文支持的最先进的视觉语言模型。我们采用两阶段训练流程：(1) 使用 MLP 投影头进行 LoRA 微调以进行生成分类，(2) 使用有监督的 InfoNCE 损失进行对比骨干微调。我们通过少数群体来解决阶级失衡",
-      "summaryEn": "arXiv:2607.28637v1 Announce Type: new Abstract: This paper presents our system for the CHiPSAL 2026 shared task on multimodal hate speech and sentiment detection in Nepali memes. We address both subtasks: binary hate speech classification and three-class sentiment analysis. Our approach adapts the Robust Adaptation of Hateful Meme Detection (RA-HMD) framework using Qwen3-VL-8B-Instruct, a state-of-the-art vision-language model with native Devanagari support. We employ a two-stage training pipeline: (1) LoRA fine-tuning with an MLP projection head for generative classification, and (2) contrastive backbone fine-tuning with supervised InfoNCE loss. We handle class imbalance through minority oversampling, image augmentation, and focal loss. At inference, we ensemble Stage 1 token probabilities with Stage 2 classifier scores using validation-tuned weights. Our end-to-end approach eliminates error propagation from separate OCR and translation pipelines by leveraging the model's native Devanagari understanding. Our system achieved \\textbf{2nd place} on hate speech detection (F1: 0.797) and \\textbf{4th place} on sentiment analysis (F1: 0.518). We provide detailed ablations, error analysis",
-      "keywords": [],
-      "topics": [],
-      "models": [
-        "Qwen"
+      "summaryZh": "本文介绍了我们参与CHiPSAL 2026共享任务（尼泊尔表情包多模态仇恨言论与情感检测）的系统。我们处理两个子任务：二分类仇恨言论检测和三分类情感分析。我们的方法基于RA-HMD框架，使用Qwen3-VL-8B-Instruct（一种原生支持天城文的先进视觉-语言模型）。我们采用两阶段训练流程：（1）使用MLP投影头的LoRA微调进行生成式分类；（2）使用监督InfoNCE损失进行对比骨干微调。我们通过少数类过采样、图像增强和焦点损失处理类别不平衡。推理时，我们使用验证调优权重集成阶段1的令牌概率和阶段2的分类器分数。我们的端到端方法通过利用模型原生天城文理解，消除了单独OCR和翻译流程的错误传播。我们的系统在仇恨言论检测中排名第二（F1：0.797），在情感分析中排名第四（F1：0.518）。我们提供了详细的消融研究和错误分析。",
+      "summaryEn": "This paper presents our system for the CHiPSAL 2026 shared task on multimodal hate speech and sentiment detection in Nepali memes. We address both subtasks: binary hate speech classification and three-class sentiment analysis. Our approach adapts the RA-HMD framework using Qwen3-VL-8B-Instruct, a state-of-the-art vision-language model with native Devanagari support. We employ a two-stage training pipeline: (1) LoRA fine-tuning with an MLP projection head for generative classification, and (2) contrastive backbone fine-tuning with supervised InfoNCE loss. We handle class imbalance through minority oversampling, image augmentation, and focal loss. At inference, we ensemble Stage 1 token probabilities with Stage 2 classifier scores using validation-tuned weights. Our end-to-end approach elimi",
+      "keywords": [
+        "CHiPSAL 2026",
+        "尼泊尔表情包",
+        "仇恨言论检测",
+        "情感分析",
+        "对比学习",
+        "LoRA",
+        "Qwen3-VL"
       ],
-      "detailZh": "",
-      "keyPointsZh": [],
-      "impactZh": "来自高权威一手或研究来源；可能对行业或产品生态产生较广影响；包含明显的新发布或技术进展",
+      "topics": [
+        "多模态仇恨言论检测",
+        "情感分析",
+        "视觉-语言模型",
+        "对比学习",
+        "尼泊尔语"
+      ],
+      "models": [
+        "Qwen3-VL-8B-Instruct"
+      ],
+      "detailZh": "该论文介绍了作者团队在CHiPSAL 2026共享任务中提交的系统，任务是对尼泊尔语表情包进行仇恨言论检测（二分类）和情感分析（三分类）。作者采用了基于RA-HMD框架的改进方法，使用Qwen3-VL-8B-Instruct作为基础模型，该模型原生支持天城文，从而避免了传统OCR和翻译流程中的错误传播。训练流程分为两个阶段：第一阶段使用LoRA微调模型，并添加MLP投影头进行生成式分类；第二阶段使用监督InfoNCE损失对骨干网络进行对比微调。为了处理类别不平衡，作者采用了少数类过采样、图像增强和焦点损失。推理时，将第一阶段令牌概率与第二阶段分类器分数进行加权集成，权重在验证集上调整。最终，该系统在仇恨言论检测任务中排名第二（F1=0.797），在情感分析任务中排名第四（F1=0.518）。论文还提供了详细的消融研究和错误分析，但摘要中未给出具体细节。",
+      "keyPointsZh": [
+        "系统在CHiPSAL 2026仇恨言论检测任务中排名第二，F1为0.797。",
+        "系统在情感分析任务中排名第四，F1为0.518。",
+        "采用两阶段训练：LoRA微调+MLP投影头，以及对比学习微调。",
+        "使用Qwen3-VL-8B-Instruct，原生支持天城文，避免OCR/翻译错误。",
+        "通过过采样、图像增强和焦点损失处理类别不平衡。"
+      ],
+      "impactZh": "该研究展示了如何利用先进的视觉-语言模型和两阶段训练策略，在低资源语言（如尼泊尔语）的多模态任务中取得良好性能。其方法可推广到其他低资源语言的多模态理解任务，为相关研究提供了参考。对于开发者而言，该系统的端到端设计避免了传统流水线的错误累积，提高了效率。",
       "actionStepsZh": [],
-      "detailCompleteness": "limited",
+      "detailCompleteness": "summary",
       "processingError": null,
       "translationMode": "public-endpoint",
       "translationError": null,
@@ -3566,7 +3656,24 @@
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
       },
-      "visual": null
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "data": [
+          {
+            "label": "仇恨言论检测 F1",
+            "value": 0.797,
+            "display": ""
+          },
+          {
+            "label": "情感分析 F1",
+            "value": 0.518,
+            "display": ""
+          }
+        ]
+      }
     },
     {
       "id": "159f2453ef598237",
