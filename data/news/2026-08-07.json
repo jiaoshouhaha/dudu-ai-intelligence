@@ -1,7 +1,1757 @@
 {
-  "generatedAt": "2026-08-07T03:56:41.716Z",
+  "generatedAt": "2026-08-07T05:48:27.467Z",
   "date": "2026-08-07",
   "items": [
+    {
+      "id": "54c87fd71c8a6759",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05160",
+      "originalUrl": "https://arxiv.org/abs/2608.05160",
+      "titleOriginal": "The Ignition Index: Measuring Global Workspace Dynamics in Language Models",
+      "summaryOriginal": "arXiv:2608.05160v1 Announce Type: new Abstract: We introduce the Ignition Index (I), a validated scalar metric that operationalizes Global Workspace Theory's (GWT) all-or-none ignition prediction in transformer language models. The metric fits a four-parameter sigmoid to per-layer linear probe accuracy as a function of input signal strength, extracting steepness parameter beta-hat: high values indicate abrupt, ignition-like transitions; low values indicate graded build-up. Across 11 models spanning five architecture families, shuffled-label controls demonstrate 9.6-fold selectivity for genuine linguistic structure over spurious probe capacity (p < 0.001, Mann-Whitney U-test). We find: (1) Feedforward transformers exceed SSMs by 89% in aggregate beta-hat (p < 1e-13, Cohen's d = 0.52), with Mamba exhibiting near-linear profiles consistent with absent global broadcast. (2) Huginn-3.5B exhibits 2.12-fold higher ignition along its iteration axis than its depth axis, demonstrating that recurrent architectures manifest workspace-like transitions along the recurrence dimension. (3) Pythia-410M shows a PELT-detected phase transition at training step 256 (+67%), preceding induction-head form",
+      "originalLanguage": "en",
+      "author": "Saman Rahbar",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05160",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "The Ignition Index: Measuring Global Workspace Dynamics in Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该论文提出了一种新的可验证指标，用于测量语言模型中的全局工作空间动态，并提供了跨架构的实证比较，对理解模型内部机制有重要价值。",
+      "importanceReasonEn": "The paper proposes a novel validated metric for measuring global workspace dynamics in language models and provides empirical comparisons across architectures, which is valuable for understanding model internals.",
+      "scoringMode": "ai",
+      "titleZh": "点火指数：衡量语言模型中的全局工作空间动态",
+      "titleEn": "The Ignition Index: Measuring Global Workspace Dynamics in Language Models",
+      "summaryZh": "本文介绍了点火指数（I），这是一个经过验证的标量指标，用于操作化变压器语言模型中全局工作空间理论（GWT）的全或无点火预测。该指标将四参数S形函数拟合到每层线性探针准确率随输入信号强度的变化，提取陡峭参数β-hat：高值表示突然的点火式转变，低值表示渐进式构建。在跨越五个架构家族的11个模型中，打乱标签对照显示对真实语言结构的选择性是虚假探针能力的9.6倍（p < 0.001，Mann-Whitney U检验）。研究发现：（1）前馈变压器在聚合β-hat上超过SSM 89%（p < 1e-13，Cohen's d = 0.52），其中Mamba表现出接近线性的轮廓，与缺乏全局广播一致。（2）Huginn-3.5B沿其迭代轴的点火强度是深度轴的2.12倍，表明循环架构在循环维度上表现出类似工作空间的转变。（3）Pythia-410M在训练步骤256处显示PELT检测到的相变（+67%），先于归纳头形成。",
+      "summaryEn": "This paper introduces the Ignition Index (I), a validated scalar metric that operationalizes Global Workspace Theory's (GWT) all-or-none ignition prediction in transformer language models. The metric fits a four-parameter sigmoid to per-layer linear probe accuracy as a function of input signal strength, extracting steepness parameter beta-hat: high values indicate abrupt, ignition-like transitions; low values indicate graded build-up. Across 11 models spanning five architecture families, shuffled-label controls demonstrate 9.6-fold selectivity for genuine linguistic structure over spurious probe capacity (p < 0.001, Mann-Whitney U-test). Findings: (1) Feedforward transformers exceed SSMs by 89% in aggregate beta-hat (p < 1e-13, Cohen's d = 0.52), with Mamba exhibiting near-linear profiles ",
+      "keywords": [
+        "Ignition Index",
+        "Global Workspace Theory",
+        "transformer",
+        "SSM",
+        "phase transition",
+        "probe"
+      ],
+      "topics": [
+        "Global Workspace Theory",
+        "Language Models",
+        "Interpretability",
+        "Probing",
+        "Phase Transitions"
+      ],
+      "models": [
+        "Huginn-3.5B",
+        "Pythia-410M",
+        "Mamba"
+      ],
+      "detailZh": "该研究旨在通过引入点火指数（Ignition Index）来操作化全局工作空间理论（GWT）中的全或无点火预测。GWT认为，信息在全局工作空间中广播时会发生突然的、全或无的转变。研究者将四参数S形函数拟合到每层线性探针准确率随输入信号强度的变化，提取陡峭参数β-hat作为点火指数。高β-hat表示突然的点火式转变，低β-hat表示渐进式构建。\n\n研究在11个模型上进行了实验，涵盖五个架构家族，包括前馈变压器和状态空间模型（SSM）。通过打乱标签对照，验证了该指标对真实语言结构的选择性，其选择性是虚假探针能力的9.6倍（p < 0.001）。主要发现包括：前馈变压器在聚合β-hat上比SSM高89%，表明SSM（如Mamba）缺乏全局广播；Huginn-3.5B沿迭代轴的点火强度是深度轴的2.12倍，表明循环架构在循环维度上表现出类似工作空间的转变；Pythia-410M在训练步骤256处出现相变（+67%），先于归纳头形成。\n\n这些发现为理解不同架构中信息处理机制提供了新的视角，并可能对模型设计和解释性研究产生影响。",
+      "keyPointsZh": [
+        "提出点火指数（I），基于四参数S形拟合的陡峭参数β-hat，用于测量语言模型中的全或无点火转变。",
+        "在11个模型、5个架构家族上验证，打乱标签对照显示9.6倍选择性（p < 0.001）。",
+        "前馈变压器比SSM在聚合β-hat上高89%，Mamba表现出接近线性的轮廓，表明缺乏全局广播。",
+        "Huginn-3.5B沿迭代轴的点火强度是深度轴的2.12倍，表明循环架构在循环维度上表现出类似工作空间的转变。",
+        "Pythia-410M在训练步骤256处出现相变（+67%），先于归纳头形成。"
+      ],
+      "impactZh": "该研究为语言模型的内部信息处理机制提供了新的度量工具，有助于理解不同架构（如变压器和SSM）在全局工作空间动态上的差异。对于模型设计者，这可能指导选择或设计具有更好全局广播能力的架构；对于解释性研究，提供了一种量化模型内部状态转变的方法。",
+      "actionStepsZh": [],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "data": [
+          {
+            "label": "Feedforward Transformers",
+            "value": 89,
+            "display": ""
+          },
+          {
+            "label": "SSMs",
+            "value": 0,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05160",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "The Ignition Index: Measuring Global Workspace Dynamics in Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 79,
+        "peak": 81,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 64
+          },
+          {
+            "label": "20小时前",
+            "value": 65
+          },
+          {
+            "label": "18小时前",
+            "value": 67
+          },
+          {
+            "label": "16小时前",
+            "value": 69
+          },
+          {
+            "label": "14小时前",
+            "value": 70
+          },
+          {
+            "label": "12小时前",
+            "value": 72
+          },
+          {
+            "label": "10小时前",
+            "value": 73
+          },
+          {
+            "label": "8小时前",
+            "value": 75
+          },
+          {
+            "label": "6小时前",
+            "value": 77
+          },
+          {
+            "label": "4小时前",
+            "value": 78
+          },
+          {
+            "label": "2小时前",
+            "value": 80
+          },
+          {
+            "label": "现在",
+            "value": 81
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "fe33cf384f4d754c",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05168",
+      "originalUrl": "https://arxiv.org/abs/2608.05168",
+      "titleOriginal": "Woodpecker Distillation: Weak Models Diagnose Reasoning Bugs in Strong Models",
+      "summaryOriginal": "arXiv:2608.05168v1 Announce Type: new Abstract: Large language models often fail on reasoning tasks despite possessing the capability to solve them. We argue that many such failures arise from localized reasoning bugs in intermediate steps rather than from global incompetence. We show that these bugs are frequently repairable: inserting a short patch generated by a weak probe model after the same strong-model reasoning prefix can redirect the trajectory toward a correct solution. However, this corrective effect is not reliably internalized by directly fine-tuning on weak patches or repaired trajectories, suggesting that the useful signal lies not in the intervention text itself, but in how it reshapes the model's future reasoning distribution. We therefore propose Woodpecker Distillation, a weak-to-strong training framework that learns from contrastive local interventions. Our method contrasts successful and unsuccessful weak-model patches at the same prefix, constructs a corrective teacher distribution from their induced future token predictions, and distills this signal into the strong model. Experiments on mathematical reasoning benchmarks show that Woodpecker Distillation consi",
+      "originalLanguage": "en",
+      "author": "Dayu Wang, Jiaye Yang, Weikang Li, Jiahui Liang, Yang Li, Deguo Xia, Jizhou Huang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05168",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Woodpecker Distillation: Weak Models Diagnose Reasoning Bugs in Strong Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提出了一种新颖的弱到强蒸馏方法，通过对比局部干预来修复推理错误，对提升大模型推理能力有潜在价值，但摘要信息有限，且未提供具体实验数据。",
+      "importanceReasonEn": "The research proposes a novel weak-to-strong distillation method that repairs reasoning errors via contrastive local interventions, potentially valuable for improving LLM reasoning, but the abstract is limited and lacks specific experimental data.",
+      "scoringMode": "ai",
+      "titleZh": "啄木鸟蒸馏：弱模型诊断强模型中的推理错误",
+      "titleEn": "Woodpecker Distillation: Weak Models Diagnose Reasoning Bugs in Strong Models",
+      "summaryZh": "大型语言模型在推理任务上经常失败，尽管它们具备解决问题的能力。我们认为，许多此类失败源于中间步骤中的局部推理错误，而非整体能力不足。我们表明，这些错误通常是可修复的：在相同的强模型推理前缀之后插入由弱探针模型生成的短补丁，可以将轨迹重定向到正确的解决方案。然而，这种纠正效果并不能通过直接对弱补丁或修复后的轨迹进行微调而可靠地内化，这表明有用的信号不在于干预文本本身，而在于它如何重塑模型未来的推理分布。因此，我们提出了啄木鸟蒸馏，一种从对比性局部干预中学习的弱到强训练框架。我们的方法在相同前缀下对比成功和失败的弱模型补丁，从它们诱导的未来令牌预测中构建纠正性教师分布，并将该信号蒸馏到强模型中。在数学推理基准上的实验表明，啄木鸟蒸馏持续...",
+      "summaryEn": "Large language models often fail on reasoning tasks despite possessing the capability to solve them. We argue that many such failures arise from localized reasoning bugs in intermediate steps rather than from global incompetence. We show that these bugs are frequently repairable: inserting a short patch generated by a weak probe model after the same strong-model reasoning prefix can redirect the trajectory toward a correct solution. However, this corrective effect is not reliably internalized by directly fine-tuning on weak patches or repaired trajectories, suggesting that the useful signal lies not in the intervention text itself, but in how it reshapes the model's future reasoning distribution. We therefore propose Woodpecker Distillation, a weak-to-strong training framework that learns ",
+      "keywords": [
+        "Woodpecker Distillation",
+        "weak-to-strong",
+        "reasoning bugs",
+        "contrastive interventions",
+        "mathematical reasoning"
+      ],
+      "topics": [
+        "弱到强蒸馏",
+        "推理错误修复",
+        "对比学习"
+      ],
+      "models": [],
+      "detailZh": "该论文指出，大型语言模型在推理任务上的失败往往源于中间步骤的局部错误，而非整体能力不足。作者发现，这些错误通常可以通过在相同推理前缀后插入由弱模型生成的短补丁来修复，从而将推理轨迹引向正确解。然而，直接对弱补丁或修复后的轨迹进行微调并不能可靠地将这种纠正效果内化，说明有效信号在于干预如何重塑模型的未来推理分布，而非干预文本本身。为此，他们提出了啄木鸟蒸馏框架，通过对比成功和失败的弱模型补丁，构建纠正性教师分布，并将该信号蒸馏到强模型中。实验在数学推理基准上进行，结果显示该方法持续优于基线，但摘要未提供具体数值。",
+      "keyPointsZh": [
+        "推理失败常源于中间步骤的局部错误，而非整体能力不足。",
+        "弱模型生成的短补丁可以修复强模型的推理轨迹。",
+        "直接微调弱补丁效果不佳，需对比成功与失败干预。",
+        "提出啄木鸟蒸馏框架，从对比性局部干预中学习。",
+        "在数学推理基准上表现持续优于基线。"
+      ],
+      "impactZh": "该方法为提升大模型推理能力提供了新思路，可能减少对大规模人工标注的依赖，并有助于开发更高效的推理纠错机制。对研究者和开发者而言，可借鉴其对比蒸馏思想改进模型训练。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05168",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Woodpecker Distillation: Weak Models Diagnose Reasoning Bugs in Strong Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 74,
+        "peak": 76,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 59
+          },
+          {
+            "label": "20小时前",
+            "value": 60
+          },
+          {
+            "label": "18小时前",
+            "value": 62
+          },
+          {
+            "label": "16小时前",
+            "value": 64
+          },
+          {
+            "label": "14小时前",
+            "value": 65
+          },
+          {
+            "label": "12小时前",
+            "value": 67
+          },
+          {
+            "label": "10小时前",
+            "value": 68
+          },
+          {
+            "label": "8小时前",
+            "value": 70
+          },
+          {
+            "label": "6小时前",
+            "value": 72
+          },
+          {
+            "label": "4小时前",
+            "value": 73
+          },
+          {
+            "label": "2小时前",
+            "value": 75
+          },
+          {
+            "label": "现在",
+            "value": 76
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "306c2ceeb2580421",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05203",
+      "originalUrl": "https://arxiv.org/abs/2608.05203",
+      "titleOriginal": "From Continuous Predictors to Clinical Thresholds: Early Evidence on Performance Trade-offs of Guideline-Based Categorisation for Ischaemic Stroke Outcome Prediction",
+      "summaryOriginal": "arXiv:2608.05203v1 Announce Type: new Abstract: Machine learning models achieve strong predictive accuracy for 90-day outcome prediction in acute ischaemic stroke, yet clinical adoption is limited by the misalignment of model explanations with clinicians' reasoning. Motivated by a clinician user study calling for clinical guideline-aligned cut-offs, we ask whether continuous predictors can be replaced by clinically informed categorical encodings without sacrificing performance. On a multi-centre European registry stratified into three treatment cohorts, we compare standard and fully categorised gradient-boosted models, the latter using stroke guideline-aligned, treatment-specific thresholds. The fully categorised models are statistically indistinguishable from their continuous counterparts in two of the treatment cohorts, with a significant drop in predictive accuracy in one cohort. Global feature importance rankings remain consistent, suggesting that discretising continuous predictors into guideline-based categories preserves the core hierarchy of prognostic factors across all treatment groups. Guideline-based categorisation is thus a viable design choice for stroke-outcome models",
+      "originalLanguage": "en",
+      "author": "Esra Zihni, Katryna Cisek, Hamzah Ziadeh, Hendrik Knoche, Robert Mikulik, John D. Kelleher",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05203",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "From Continuous Predictors to Clinical Thresholds: Early Evidence on Performance Trade-offs of Guideline-Based Categorisation for Ischaemic Stroke Outcome Prediction",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究针对临床应用中模型解释与医生推理不一致的问题，提出基于指南的分类方法，并提供了初步证据，对临床决策支持系统的设计有参考价值。",
+      "importanceReasonEn": "The study addresses the misalignment between model explanations and clinicians' reasoning by proposing guideline-based categorisation, providing early evidence that may inform the design of clinical decision support systems.",
+      "scoringMode": "ai",
+      "titleZh": "从连续预测因子到临床阈值：基于指南分类的缺血性卒中结局预测性能权衡的早期证据",
+      "titleEn": "From Continuous Predictors to Clinical Thresholds: Early Evidence on Performance Trade-offs of Guideline-Based Categorisation for Ischaemic Stroke Outcome Prediction",
+      "summaryZh": "该研究探讨了在急性缺血性卒中90天结局预测中，将连续预测因子替换为基于临床指南的分类编码是否会影响模型性能。研究基于多中心欧洲注册数据，分为三个治疗队列，比较了标准梯度提升模型和完全分类模型。结果显示，在两个治疗队列中，完全分类模型的性能与连续模型无显著差异，但在一个队列中性能显著下降。全局特征重要性排序保持一致，表明基于指南的分类保留了预后因素的核心层级。",
+      "summaryEn": "This study investigates whether replacing continuous predictors with guideline-based categorical encodings affects model performance in predicting 90-day outcomes for acute ischaemic stroke. Using a multi-centre European registry stratified into three treatment cohorts, the study compares standard and fully categorised gradient-boosted models. Results show that in two cohorts, the categorised models are statistically indistinguishable from continuous counterparts, but in one cohort there is a significant drop in accuracy. Global feature importance rankings remain consistent, suggesting that guideline-based categorisation preserves the core hierarchy of prognostic factors.",
+      "keywords": [
+        "ischaemic stroke",
+        "outcome prediction",
+        "guideline-based categorisation",
+        "continuous predictors",
+        "performance trade-offs"
+      ],
+      "topics": [
+        "stroke outcome prediction",
+        "clinical decision support",
+        "feature engineering",
+        "interpretability"
+      ],
+      "models": [
+        "gradient-boosted models"
+      ],
+      "detailZh": "机器学习模型在急性缺血性卒中90天结局预测中表现出较强的预测准确性，但临床采用受到限制，因为模型解释与临床医生的推理方式不一致。一项临床医生用户研究呼吁采用与临床指南一致的切点。本研究探讨是否可以用临床信息丰富的分类编码替代连续预测因子，而不牺牲性能。研究基于多中心欧洲注册数据，分为三个治疗队列，比较了标准梯度提升模型和完全分类模型（后者使用卒中指南对齐的、治疗特定的阈值）。结果显示，在两个治疗队列中，完全分类模型的性能与连续模型在统计上无显著差异，但在一个队列中预测准确性显著下降。全局特征重要性排名保持一致，表明将连续预测因子离散化为基于指南的类别保留了所有治疗组中预后因素的核心层级。因此，基于指南的分类是卒中结局模型可行的设计选择。",
+      "keyPointsZh": [
+        "研究比较了连续预测因子与基于指南的分类编码在卒中结局预测中的性能。",
+        "在两个治疗队列中，分类模型与连续模型性能无显著差异，在一个队列中显著下降。",
+        "全局特征重要性排名保持一致，表明分类保留了预后因素的核心层级。",
+        "基于指南的分类是卒中结局模型可行的设计选择。"
+      ],
+      "impactZh": "该研究为临床决策支持系统提供了实用指导，表明在保持预测性能的同时，可以采用与临床指南一致的分类特征，从而提高模型的可解释性和临床接受度。对于开发卒中预测模型的团队，可以考虑使用指南对齐的阈值进行特征工程，以促进临床采用。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05203",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "From Continuous Predictors to Clinical Thresholds: Early Evidence on Performance Trade-offs of Guideline-Based Categorisation for Ischaemic Stroke Outcome Prediction",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 74,
+        "peak": 76,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 59
+          },
+          {
+            "label": "20小时前",
+            "value": 60
+          },
+          {
+            "label": "18小时前",
+            "value": 62
+          },
+          {
+            "label": "16小时前",
+            "value": 64
+          },
+          {
+            "label": "14小时前",
+            "value": 65
+          },
+          {
+            "label": "12小时前",
+            "value": 67
+          },
+          {
+            "label": "10小时前",
+            "value": 68
+          },
+          {
+            "label": "8小时前",
+            "value": 70
+          },
+          {
+            "label": "6小时前",
+            "value": 72
+          },
+          {
+            "label": "4小时前",
+            "value": 73
+          },
+          {
+            "label": "2小时前",
+            "value": 75
+          },
+          {
+            "label": "现在",
+            "value": 76
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f0fe4b0027240689",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05206",
+      "originalUrl": "https://arxiv.org/abs/2608.05206",
+      "titleOriginal": "Otter: A Time-Aware, History-Conditioned Human Chess AI",
+      "summaryOriginal": "arXiv:2608.05206v1 Announce Type: new Abstract: Otter is a 15.3M-parameter human chess AI that predicts human move selection by modeling play as a time-aware, sequential process rather than treating each position in isolation. It combines two conditioning signals: (1) a move history encoder that conditions predictions on the last 20 moves, capturing opening preferences, positional drift, and intra-game behavioral tendencies; and (2) a time control module that modulates predictions based on clock pressure. Otter is trained on 6.1 billion positions from 117 million Lichess rapid games over 30 days on a single T4 GPU. Otter achieves 55.23% top-1 and 90.95% top-5 move-prediction accuracy, surpassing the prior state-of-the-art human chess model, Maia 2, with far fewer parameters and less training data. Across 11 Elo brackets ( =2000), accuracy peaks at 57.38% in the 1900-1999 bracket. These results show that modeling chess as a time-aware, sequential activity yields more human-accurate move prediction than position-only approaches, using a smaller model. Code, trained models, and complete training logs are publicly released.",
+      "originalLanguage": "en",
+      "author": "Tarun Kumar S",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05206",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Otter: A Time-Aware, History-Conditioned Human Chess AI",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提出了一种新颖的时间感知、历史条件化的人类国际象棋AI，以更小的模型和更少的数据超越了现有最先进模型，具有实际应用价值，但仅基于论文摘要，缺乏详细验证。",
+      "importanceReasonEn": "This research proposes a novel time-aware, history-conditioned human chess AI that surpasses the current state-of-the-art with a smaller model and less data, offering practical value, but it is based solely on the abstract and lacks detailed verification.",
+      "scoringMode": "ai",
+      "titleZh": "Otter：一种时间感知、历史条件化的人类国际象棋AI",
+      "titleEn": "Otter: A Time-Aware, History-Conditioned Human Chess AI",
+      "summaryZh": "arXiv:2608.05206v1 公告类型：新论文。摘要：Otter是一个1530万参数的人类国际象棋AI，通过将下棋建模为时间感知的序列过程，而非孤立地处理每个局面，来预测人类棋手的走子选择。它结合了两种条件信号：（1）移动历史编码器，根据最近20步棋来条件化预测，捕捉开局偏好、位置漂移和局内行为倾向；（2）时间控制模块，根据时钟压力调整预测。Otter在单个T4 GPU上训练30天，使用了来自117万局Lichess快棋对局的61亿个局面。Otter实现了55.23%的top-1和90.95%的top-5走子预测准确率，以更少的参数和更少的训练数据超越了先前最先进的人类国际象棋模型Maia 2。在11个Elo分段（=2000）中，准确率在1900-1999分段达到峰值57.38%。这些结果表明，将国际象棋建模为时间感知的序列活动，比仅基于局面的方法能产生更接近人类的走子预测，且模型更小。代码、训练模型和完整训练日志已公开发布。",
+      "summaryEn": "arXiv:2608.05206v1 Announce Type: new Abstract: Otter is a 15.3M-parameter human chess AI that predicts human move selection by modeling play as a time-aware, sequential process rather than treating each position in isolation. It combines two conditioning signals: (1) a move history encoder that conditions predictions on the last 20 moves, capturing opening preferences, positional drift, and intra-game behavioral tendencies; and (2) a time control module that modulates predictions based on clock pressure. Otter is trained on 6.1 billion positions from 117 million Lichess rapid games over 30 days on a single T4 GPU. Otter achieves 55.23% top-1 and 90.95% top-5 move-prediction accuracy, surpassing the prior state-of-the-art human chess model, Maia 2, with far fewer parameters and less traini",
+      "keywords": [
+        "Otter",
+        "国际象棋",
+        "AI",
+        "时间感知",
+        "历史条件",
+        "走子预测",
+        "Maia 2"
+      ],
+      "topics": [
+        "国际象棋AI",
+        "人类行为建模",
+        "时间感知模型"
+      ],
+      "models": [
+        "Otter",
+        "Maia 2"
+      ],
+      "detailZh": "Otter是一个1530万参数的人类国际象棋AI，旨在预测人类棋手的走子选择。与以往仅基于当前局面的模型不同，Otter将下棋视为一个时间感知的序列过程，结合了两种条件信号：移动历史编码器和时间控制模块。移动历史编码器利用最近20步棋来捕捉开局偏好、位置漂移和局内行为倾向；时间控制模块则根据时钟压力调整预测。\n\nOtter在单个T4 GPU上训练了30天，使用了来自117万局Lichess快棋对局的61亿个局面。实验结果显示，Otter实现了55.23%的top-1和90.95%的top-5走子预测准确率，超越了先前最先进的人类国际象棋模型Maia 2，且参数更少、训练数据更少。在11个Elo分段中，准确率在1900-1999分段达到峰值57.38%。\n\n这些结果表明，将国际象棋建模为时间感知的序列活动，比仅基于局面的方法能产生更接近人类的走子预测，且模型更小。代码、训练模型和完整训练日志已公开发布。",
+      "keyPointsZh": [
+        "Otter是一个1530万参数的人类国际象棋AI，结合移动历史和时间控制信号。",
+        "在单个T4 GPU上训练30天，使用61亿个局面。",
+        "top-1准确率55.23%，top-5准确率90.95%，超越Maia 2。",
+        "在1900-1999 Elo分段达到峰值准确率57.38%。",
+        "代码、模型和训练日志已公开。"
+      ],
+      "impactZh": "对于国际象棋AI研究者和开发者，Otter提供了一种更高效的人类行为建模方法，可能应用于棋类教学、游戏AI和人类行为分析。其时间感知和历史条件化的思路也可推广到其他序列决策任务。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "data": [
+          {
+            "label": "Otter top-1",
+            "value": 55.23,
+            "display": ""
+          },
+          {
+            "label": "Maia 2 top-1",
+            "value": 0,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05206",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Otter: A Time-Aware, History-Conditioned Human Chess AI",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 74,
+        "peak": 76,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 59
+          },
+          {
+            "label": "20小时前",
+            "value": 60
+          },
+          {
+            "label": "18小时前",
+            "value": 62
+          },
+          {
+            "label": "16小时前",
+            "value": 64
+          },
+          {
+            "label": "14小时前",
+            "value": 65
+          },
+          {
+            "label": "12小时前",
+            "value": 67
+          },
+          {
+            "label": "10小时前",
+            "value": 68
+          },
+          {
+            "label": "8小时前",
+            "value": 70
+          },
+          {
+            "label": "6小时前",
+            "value": 72
+          },
+          {
+            "label": "4小时前",
+            "value": 73
+          },
+          {
+            "label": "2小时前",
+            "value": 75
+          },
+          {
+            "label": "现在",
+            "value": 76
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d22735df639eab5d",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05212",
+      "originalUrl": "https://arxiv.org/abs/2608.05212",
+      "titleOriginal": "SearchAuditor: Auditing and Attributing Failures in Long-Horizon Search Agents",
+      "summaryOriginal": "arXiv:2608.05212v1 Announce Type: new Abstract: Deep search agents tackle challenging questions through long-horizon web interactions, a process that is both complex and fragile: small reasoning errors may propagate through long, noisy trajectories into fluent but incorrect answers. Diagnosing such failures is difficult, requiring the manual inspection of extremely long execution traces, which could be beyond human capacity. We therefore introduce SearchAuditBench, a benchmark that evaluates whether LLM auditors can localize, attribute, and repair these failures, thereby reducing the human burden. SearchAuditBench comprises 1,243 failed trajectories, averaging 73.1 messages and 65.1K tokens, collected from eight open-weight models on five deep-search benchmarks, each expert-annotated with the critical error step, a search-specific root cause, and a reference repair with grading rubrics. We further propose SearchAuditor, a multi-perspective auditing framework that effectively localizes, attributes, and repairs search-agent failures through evidence-grounded adjudication. Experimental results show that even the strongest baseline, when powered by a frontier model like GPT-5.5, attain",
+      "originalLanguage": "en",
+      "author": "Zhixiang Liang, Yifei Liu, Yidan Huang, Haozhe Zhao, Beichen Huang, Jiaqi Wang, Nan Duan, Qiong Cao",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05212",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "SearchAuditor: Auditing and Attributing Failures in Long-Horizon Search Agents",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 86,
+      "importanceReasonZh": "该研究针对长时程搜索代理的失败诊断难题，提出了新的基准和审计框架，具有较高的研究价值和实际意义。",
+      "importanceReasonEn": "This research addresses the challenge of diagnosing failures in long-horizon search agents, proposing a new benchmark and auditing framework with high research value and practical significance.",
+      "scoringMode": "ai",
+      "titleZh": "SearchAuditor：审计并归因长时程搜索代理的失败",
+      "titleEn": "SearchAuditor: Auditing and Attributing Failures in Long-Horizon Search Agents",
+      "summaryZh": "深度搜索代理通过长时间的网络交互来回答复杂问题，这一过程既复杂又脆弱：小的推理错误可能在冗长且嘈杂的轨迹中传播，最终导致流畅但不正确的答案。诊断此类失败非常困难，需要人工检查极长的执行轨迹，这可能超出人类能力。为此，我们引入了SearchAuditBench，一个评估LLM审计员能否定位、归因和修复这些失败的基准，从而减轻人工负担。SearchAuditBench包含1,243条失败轨迹，平均每条73.1条消息和65.1K个token，这些轨迹来自五个深度搜索基准上的八个开放权重模型，每条轨迹都经过专家标注，包括关键错误步骤、搜索特定的根本原因以及带有评分标准的参考修复。我们进一步提出了SearchAuditor，一个多视角审计框架，通过基于证据的裁决来有效定位、归因和修复搜索代理的失败。实验结果表明，即使是最强的基线，当由前沿模型（如GPT-5.5）驱动时，也能达到……",
+      "summaryEn": "Deep search agents tackle challenging questions through long-horizon web interactions, a process that is both complex and fragile: small reasoning errors may propagate through long, noisy trajectories into fluent but incorrect answers. Diagnosing such failures is difficult, requiring the manual inspection of extremely long execution traces, which could be beyond human capacity. We therefore introduce SearchAuditBench, a benchmark that evaluates whether LLM auditors can localize, attribute, and repair these failures, thereby reducing the human burden. SearchAuditBench comprises 1,243 failed trajectories, averaging 73.1 messages and 65.1K tokens, collected from eight open-weight models on five deep-search benchmarks, each expert-annotated with the critical error step, a search-specific root ",
+      "keywords": [
+        "SearchAuditBench",
+        "SearchAuditor",
+        "长时程搜索代理",
+        "失败审计",
+        "归因",
+        "修复"
+      ],
+      "topics": [
+        "AI审计",
+        "搜索代理",
+        "长时程任务",
+        "基准测试"
+      ],
+      "models": [
+        "GPT-5.5"
+      ],
+      "detailZh": "该论文介绍了一个名为SearchAuditBench的新基准，用于评估LLM审计员在长时程搜索代理中定位、归因和修复失败的能力。基准包含1,243条失败轨迹，平均每条73.1条消息和65.1K个token，这些轨迹来自八个开放权重模型在五个深度搜索基准上的表现，每条轨迹都经过专家标注，包括关键错误步骤、搜索特定的根本原因以及带有评分标准的参考修复。此外，论文提出了SearchAuditor，一个多视角审计框架，通过基于证据的裁决来有效定位、归因和修复搜索代理的失败。实验结果表明，即使是最强的基线，当由前沿模型如GPT-5.5驱动时，也能达到……（摘要截断）。",
+      "keyPointsZh": [
+        "SearchAuditBench包含1,243条失败轨迹，平均每条73.1条消息和65.1K个token。",
+        "轨迹来自八个开放权重模型在五个深度搜索基准上的表现。",
+        "每条轨迹都有专家标注的关键错误步骤、根本原因和参考修复。",
+        "SearchAuditor是一个多视角审计框架，通过证据裁决来定位、归因和修复失败。",
+        "实验结果显示，即使是最强基线，由GPT-5.5驱动时也能达到……（摘要截断）。"
+      ],
+      "impactZh": "该研究为长时程搜索代理的失败诊断提供了标准化基准和自动化审计框架，有望减少人工审查负担，提高搜索代理的可靠性和可维护性。对开发者和研究人员而言，SearchAuditBench可用于评估和改进审计模型，SearchAuditor可作为实际工具辅助调试。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05212",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "SearchAuditor: Auditing and Attributing Failures in Long-Horizon Search Agents",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 90,
+        "peak": 92,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 75
+          },
+          {
+            "label": "20小时前",
+            "value": 76
+          },
+          {
+            "label": "18小时前",
+            "value": 78
+          },
+          {
+            "label": "16小时前",
+            "value": 80
+          },
+          {
+            "label": "14小时前",
+            "value": 81
+          },
+          {
+            "label": "12小时前",
+            "value": 83
+          },
+          {
+            "label": "10小时前",
+            "value": 84
+          },
+          {
+            "label": "8小时前",
+            "value": 86
+          },
+          {
+            "label": "6小时前",
+            "value": 88
+          },
+          {
+            "label": "4小时前",
+            "value": 89
+          },
+          {
+            "label": "2小时前",
+            "value": 91
+          },
+          {
+            "label": "现在",
+            "value": 92
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "34e1ab3086ba9da2",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05218",
+      "originalUrl": "https://arxiv.org/abs/2608.05218",
+      "titleOriginal": "PD-GS: Phoneme-Driven 3DGS for Audio-Driven Talking Heads",
+      "summaryOriginal": "arXiv:2608.05218v1 Announce Type: new Abstract: 3D Gaussian Splatting (3DGS) enables fast, photorealistic talking-head rendering, yet accurate lip articulation remains elusive: mouth motion is often over-smoothed and may violate hard articulatory constraints such as bilabial closures, producing the notorious ``leaky mouth'' artifact. A key difficulty is that brief, discrete articulatory events are inferred from a continuous acoustic embedding under a regression objective, which biases predictions toward averaged mouth configurations. While modern self-supervised speech encoders provide rich prosodic and phonetic cues, they do not provide an explicit, frame-aligned linguistic target that reliably disambiguates closure-level events. We propose \\textbf{Phoneme-Driven Gaussian Splatting (PD-GS)}, which augments a 3DGS talker with time-aligned phoneme tokens obtained from an automatic ASR and forced-alignment pipeline. Our core component, the \\textbf{Linguistic Fusion Module (LFM)}, adaptively fuses continuous audio context with discrete phoneme embeddings through a learned gate, allowing the model to preserve smooth audio-driven dynamics while strengthening phoneme guidance on articula",
+      "originalLanguage": "en",
+      "author": "Ao Fu, Yi Zhou",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05218",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "PD-GS: Phoneme-Driven 3DGS for Audio-Driven Talking Heads",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种新颖的音频驱动说话头方法，通过引入音素对齐信息解决唇部同步中的关键问题，具有较高的研究价值和应用潜力。",
+      "importanceReasonEn": "The paper proposes a novel audio-driven talking head method that addresses key issues in lip synchronization by incorporating phoneme alignment information, showing high research value and application potential.",
+      "scoringMode": "ai",
+      "titleZh": "PD-GS：音素驱动的3DGS音频驱动说话头",
+      "titleEn": "PD-GS: Phoneme-Driven 3DGS for Audio-Driven Talking Heads",
+      "summaryZh": "3D高斯泼溅（3DGS）能够实现快速、逼真的说话头渲染，但准确的嘴唇发音仍然难以实现：嘴部运动常常过度平滑，可能违反硬性发音约束（如双唇闭合），产生著名的“漏嘴”伪影。一个关键难点是，短暂的离散发音事件是从连续音频嵌入中通过回归目标推断出来的，这会导致预测偏向于平均嘴型。虽然现代自监督语音编码器提供了丰富的韵律和语音线索，但它们没有提供明确的、帧对齐的语言学目标来可靠地区分闭合级别的事件。我们提出了音素驱动的高斯泼溅（PD-GS），它通过自动语音识别和强制对齐管道获得的时间对齐音素标记来增强3DGS说话头。我们的核心组件——语言融合模块（LFM）——通过学习的门控机制自适应地融合连续音频上下文和离散音素嵌入，使模型能够保留平滑的音频驱动动态，同时加强音素对发音的指导。",
+      "summaryEn": "3D Gaussian Splatting (3DGS) enables fast, photorealistic talking-head rendering, yet accurate lip articulation remains elusive: mouth motion is often over-smoothed and may violate hard articulatory constraints such as bilabial closures, producing the notorious 'leaky mouth' artifact. A key difficulty is that brief, discrete articulatory events are inferred from a continuous acoustic embedding under a regression objective, which biases predictions toward averaged mouth configurations. While modern self-supervised speech encoders provide rich prosodic and phonetic cues, they do not provide an explicit, frame-aligned linguistic target that reliably disambiguates closure-level events. We propose Phoneme-Driven Gaussian Splatting (PD-GS), which augments a 3DGS talker with time-aligned phoneme ",
+      "keywords": [
+        "3DGS",
+        "talking head",
+        "phoneme",
+        "lip sync",
+        "audio-driven"
+      ],
+      "topics": [
+        "3D Gaussian Splatting",
+        "Talking Head Generation",
+        "Phoneme Alignment",
+        "Audio-Driven Animation"
+      ],
+      "models": [
+        "PD-GS"
+      ],
+      "detailZh": "该论文提出了一种名为PD-GS（音素驱动高斯泼溅）的方法，用于音频驱动的说话头生成。传统基于3DGS的方法虽然能实现快速逼真的渲染，但在唇部发音准确性上存在不足，尤其是“漏嘴”伪影问题。作者指出，问题根源在于从连续音频嵌入中回归离散发音事件时，模型倾向于预测平均化的嘴型。为此，PD-GS利用自动语音识别（ASR）和强制对齐管道获得时间对齐的音素标记，并设计了一个语言融合模块（LFM），通过门控机制自适应地融合连续音频特征和离散音素嵌入。这样既能保留音频驱动的平滑动态，又能强化音素对发音的指导，从而改善唇部同步。",
+      "keyPointsZh": [
+        "PD-GS引入时间对齐的音素标记来增强3DGS说话头模型。",
+        "核心组件LFM通过门控机制融合音频和音素信息。",
+        "该方法旨在解决唇部运动过度平滑和“漏嘴”伪影问题。",
+        "使用ASR和强制对齐管道获取音素对齐。"
+      ],
+      "impactZh": "该方法有望提升音频驱动说话头生成的唇部同步质量，减少伪影，对虚拟数字人、影视制作、游戏等领域具有实际应用价值。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05218",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "PD-GS: Phoneme-Driven 3DGS for Audio-Driven Talking Heads",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 74,
+        "peak": 76,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 59
+          },
+          {
+            "label": "20小时前",
+            "value": 60
+          },
+          {
+            "label": "18小时前",
+            "value": 62
+          },
+          {
+            "label": "16小时前",
+            "value": 64
+          },
+          {
+            "label": "14小时前",
+            "value": 65
+          },
+          {
+            "label": "12小时前",
+            "value": 67
+          },
+          {
+            "label": "10小时前",
+            "value": 68
+          },
+          {
+            "label": "8小时前",
+            "value": 70
+          },
+          {
+            "label": "6小时前",
+            "value": 72
+          },
+          {
+            "label": "4小时前",
+            "value": 73
+          },
+          {
+            "label": "2小时前",
+            "value": 75
+          },
+          {
+            "label": "现在",
+            "value": 76
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "99225bb75cd70d73",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05224",
+      "originalUrl": "https://arxiv.org/abs/2608.05224",
+      "titleOriginal": "Small Foundation Models of Human Cognition and Behaviour",
+      "summaryOriginal": "arXiv:2608.05224v1 Announce Type: new Abstract: Large language models fine-tuned on human behavioural data have emerged as general-purpose cognitive proxies, but the scale this requires, and whether these models process task structure or exploit statistical shortcuts, remain open questions. We train fourteen models from 135M to 14B parameters across four architecture families on Psych-101, a dataset of 10.7 million trial-level choices from 160 experiments. In-distribution, scale barely matters. The models fall within a narrow band, as though against a ceiling, and 0.6B to 1B parameters suffice to match a 70B baseline on held-out participants. Out-of-distribution, that band opens into a markedly steeper scaling gradient, with larger models clearly advantaged in generalisation to novel task structure. To determine what information these models use, we run two diagnostics. We progressively strip four prompt channels -- task instructions, experimental stimuli, outcome feedback, and choice history -- across 27 experiments, and permute trial order. Masking the content of stimuli and feedback destroys 75.7% of learned information and pushes models below chance, demonstrating that choice h",
+      "originalLanguage": "en",
+      "author": "Nick Oh, Fernand Gobet",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05224",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Small Foundation Models of Human Cognition and Behaviour",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该研究提供了关于小规模模型在认知建模中有效性的实证数据，挑战了规模至上的假设，对资源受限的研究有实际意义。",
+      "importanceReasonEn": "This study provides empirical data on the effectiveness of small models in cognitive modeling, challenging scale-centric assumptions and offering practical implications for resource-constrained research.",
+      "scoringMode": "ai",
+      "titleZh": "人类认知与行为的小规模基础模型",
+      "titleEn": "Small Foundation Models of Human Cognition and Behaviour",
+      "summaryZh": "arXiv:2608.05224v1 公告类型：新论文。摘要：在人类行为数据上微调的大型语言模型已成为通用认知代理，但所需的规模以及这些模型是处理任务结构还是利用统计捷径，仍是开放问题。我们在Psych-101数据集上训练了14个模型，参数从1.35亿到140亿不等，涵盖四个架构家族，该数据集包含来自160个实验的1070万次试验级选择。在分布内，规模几乎不重要。模型表现集中在一个狭窄的区间内，仿佛遇到了天花板，0.6B到1B参数就足以匹配70B基线在保留参与者上的表现。在分布外，该区间打开为明显更陡峭的扩展梯度，更大的模型在泛化到新任务结构时明显占优。为了确定这些模型使用哪些信息，我们运行了两个诊断。我们逐步剥离四个提示通道——任务指令、实验刺激、结果反馈和选择历史——跨越27个实验，并打乱试验顺序。屏蔽刺激和反馈的内容破坏了75.7%的学习信息，并将模型推至低于随机水平，表明选择历史……",
+      "summaryEn": "arXiv:2608.05224v1 Announce Type: new Abstract: Large language models fine-tuned on human behavioural data have emerged as general-purpose cognitive proxies, but the scale this requires, and whether these models process task structure or exploit statistical shortcuts, remain open questions. We train fourteen models from 135M to 14B parameters across four architecture families on Psych-101, a dataset of 10.7 million trial-level choices from 160 experiments. In-distribution, scale barely matters. The models fall within a narrow band, as though against a ceiling, and 0.6B to 1B parameters suffice to match a 70B baseline on held-out participants. Out-of-distribution, that band opens into a markedly steeper scaling gradient, with larger models clearly advantaged in generalisation to novel task ",
+      "keywords": [
+        "small foundation models",
+        "human cognition",
+        "scaling",
+        "Psych-101",
+        "generalization"
+      ],
+      "topics": [
+        "small language models",
+        "cognitive modeling",
+        "scaling laws",
+        "Psych-101"
+      ],
+      "models": [
+        "135M",
+        "0.6B",
+        "1B",
+        "14B",
+        "70B"
+      ],
+      "detailZh": "该研究在Psych-101数据集上训练了14个不同规模的模型（从1.35亿到140亿参数），涵盖四个架构家族。Psych-101包含来自160个实验的1070万次试验级选择。研究发现，在分布内（即与训练数据相似的任务）模型性能几乎不随规模变化，所有模型表现接近，0.6B到1B参数的模型即可匹配70B基线在保留参与者上的表现。然而，在分布外（即新任务结构）时，规模效应显著，更大模型泛化能力更强。通过逐步剥离提示通道（任务指令、实验刺激、结果反馈、选择历史）并打乱试验顺序，研究者发现屏蔽刺激和反馈内容会破坏75.7%的学习信息，并将模型性能推至低于随机水平，表明模型主要依赖刺激和反馈信息，而非任务指令或选择历史。该研究揭示了小模型在认知任务中的潜力，并指出其依赖的关键信息通道。",
+      "keyPointsZh": [
+        "在Psych-101数据集上训练了14个模型，参数范围1.35亿至140亿。",
+        "分布内性能几乎不随规模变化，0.6B-1B参数即可匹配70B基线。",
+        "分布外泛化时，更大模型明显占优。",
+        "屏蔽刺激和反馈内容破坏75.7%的学习信息，模型性能低于随机。",
+        "模型主要依赖刺激和反馈，而非指令或历史。"
+      ],
+      "impactZh": "该研究表明，对于认知建模任务，小规模模型可能足够，降低了计算资源需求，使更多研究者能够参与。同时，揭示了模型依赖的关键信息，有助于设计更有效的提示和实验。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "data": [
+          {
+            "label": "0.6B-1B",
+            "value": 70,
+            "display": ""
+          },
+          {
+            "label": "70B",
+            "value": 70,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05224",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Small Foundation Models of Human Cognition and Behaviour",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 79,
+        "peak": 81,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 64
+          },
+          {
+            "label": "20小时前",
+            "value": 65
+          },
+          {
+            "label": "18小时前",
+            "value": 67
+          },
+          {
+            "label": "16小时前",
+            "value": 69
+          },
+          {
+            "label": "14小时前",
+            "value": 70
+          },
+          {
+            "label": "12小时前",
+            "value": 72
+          },
+          {
+            "label": "10小时前",
+            "value": 73
+          },
+          {
+            "label": "8小时前",
+            "value": 75
+          },
+          {
+            "label": "6小时前",
+            "value": 77
+          },
+          {
+            "label": "4小时前",
+            "value": 78
+          },
+          {
+            "label": "2小时前",
+            "value": 80
+          },
+          {
+            "label": "现在",
+            "value": 81
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "001b4685fa0ce005",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05225",
+      "originalUrl": "https://arxiv.org/abs/2608.05225",
+      "titleOriginal": "Project2Task: Graph-Guided Project-Level Planning for Autonomous Research",
+      "summaryOriginal": "arXiv:2608.05225v1 Announce Type: new Abstract: Research agents can increasingly search literature, propose hypotheses, generate code, run experiments, and draft manuscripts from a single topic. However, a research project is not merely a larger task: it is a long-horizon agenda that must be advanced through multiple bounded tasks with distinct but related objectives, parallel alternatives, and dependency-aware sequences. Existing single-task systems often treat the project as one oversized task, produce a flat set of vague or overlapping tasks, or leave task boundaries and execution order to manual coordination. We introduce Project2Task, a graph-guided project-level planning layer for autonomous research. Given a project brief, it represents candidate contributions as innovation atoms and organizes them in a directed lineage graph. A lightweight Bernoulli block-model objective selects among horizontal, vertical, and hybrid portfolio decompositions. Project2Task then generates bounded tasks with explicit contribution ownership, repairs overlaps and missing execution fields, and emits dependency-aware task contracts that specify objectives, inputs, expected artifacts, evaluation re",
+      "originalLanguage": "en",
+      "author": "Huirui Xu, Runtao Xu, Shuo Ren, Jiajun Zhang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05225",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Project2Task: Graph-Guided Project-Level Planning for Autonomous Research",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种新的研究智能体项目规划方法，具有创新性，但摘要信息有限，且未提供实验验证细节，因此重要性中等偏高。",
+      "importanceReasonEn": "The paper proposes a novel project planning method for research agents, which is innovative, but the abstract provides limited information and lacks experimental validation details, so importance is moderately high.",
+      "scoringMode": "ai",
+      "titleZh": "Project2Task：面向自主研究的图引导项目级规划",
+      "titleEn": "Project2Task: Graph-Guided Project-Level Planning for Autonomous Research",
+      "summaryZh": "arXiv:2608.05225v1 公告类型：新。摘要：研究智能体可以越来越多地根据单一主题搜索文献、提出假设、生成代码、运行实验并起草手稿。然而，研究项目不仅仅是更大的任务：它是一个长期议程，必须通过多个有界任务推进，这些任务具有不同但相关的目标、并行替代方案和依赖感知的顺序。现有的单任务系统通常将项目视为一个超大任务，产生一组扁平、模糊或重叠的任务，或将任务边界和执行顺序留给手动协调。我们引入了Project2Task，一个面向自主研究的图引导项目级规划层。给定项目简报，它将候选贡献表示为创新原子，并在有向谱系图中组织它们。一个轻量级的伯努利块模型目标在水平、垂直和混合组合分解之间进行选择。Project2Task然后生成具有明确贡献所有权的有界任务，修复重叠和缺失的执行字段，并发出依赖感知的任务契约，指定目标、输入、预期工件、评估标准等。",
+      "summaryEn": "arXiv:2608.05225v1 Announce Type: new. Abstract: Research agents can increasingly search literature, propose hypotheses, generate code, run experiments, and draft manuscripts from a single topic. However, a research project is not merely a larger task: it is a long-horizon agenda that must be advanced through multiple bounded tasks with distinct but related objectives, parallel alternatives, and dependency-aware sequences. Existing single-task systems often treat the project as one oversized task, produce a flat set of vague or overlapping tasks, or leave task boundaries and execution order to manual coordination. We introduce Project2Task, a graph-guided project-level planning layer for autonomous research. Given a project brief, it represents candidate contributions as innovation atoms a",
+      "keywords": [
+        "Project2Task",
+        "研究智能体",
+        "项目级规划",
+        "图引导",
+        "任务分解"
+      ],
+      "topics": [
+        "AI智能体",
+        "研究自动化",
+        "项目规划",
+        "图模型"
+      ],
+      "models": [],
+      "detailZh": "该论文介绍了一种名为Project2Task的图引导项目级规划层，用于自主研究。研究智能体能够从单一主题出发，进行文献搜索、假设提出、代码生成、实验运行和手稿起草。然而，研究项目是一个长期议程，需要多个有界任务协同推进，这些任务具有不同但相关的目标、并行替代方案和依赖感知的顺序。现有的单任务系统通常将项目视为一个超大任务，产生扁平、模糊或重叠的任务，或者需要手动协调任务边界和执行顺序。Project2Task通过将候选贡献表示为创新原子，并在有向谱系图中组织它们，来解决这些问题。它使用轻量级的伯努利块模型目标在水平、垂直和混合组合分解之间进行选择。然后，它生成具有明确贡献所有权的有界任务，修复重叠和缺失的执行字段，并发出依赖感知的任务契约，指定目标、输入、预期工件和评估标准。",
+      "keyPointsZh": [
+        "Project2Task是一个面向自主研究的图引导项目级规划层。",
+        "它将候选贡献表示为创新原子，并在有向谱系图中组织。",
+        "使用伯努利块模型目标选择水平、垂直或混合分解。",
+        "生成有界任务，修复重叠和缺失字段，并发出依赖感知的任务契约。"
+      ],
+      "impactZh": "该研究可能对自主研究智能体的发展产生重要影响，通过改进项目规划，使智能体能够更有效地处理长期研究项目。对于开发者和研究人员，这可能意味着更高效的研究自动化工具。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05225",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Project2Task: Graph-Guided Project-Level Planning for Autonomous Research",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 74,
+        "peak": 76,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 59
+          },
+          {
+            "label": "20小时前",
+            "value": 60
+          },
+          {
+            "label": "18小时前",
+            "value": 62
+          },
+          {
+            "label": "16小时前",
+            "value": 64
+          },
+          {
+            "label": "14小时前",
+            "value": 65
+          },
+          {
+            "label": "12小时前",
+            "value": 67
+          },
+          {
+            "label": "10小时前",
+            "value": 68
+          },
+          {
+            "label": "8小时前",
+            "value": 70
+          },
+          {
+            "label": "6小时前",
+            "value": 72
+          },
+          {
+            "label": "4小时前",
+            "value": 73
+          },
+          {
+            "label": "2小时前",
+            "value": 75
+          },
+          {
+            "label": "现在",
+            "value": 76
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "2c1d549ca4116368",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05151",
+      "originalUrl": "https://arxiv.org/abs/2608.05151",
+      "titleOriginal": "Simulator-Grounded Large Language Models for Industrial Causal Reasoning: Tool-Use, Structured Injection, and Plant-Portable Retrieval for Wastewater Treatment Decision Support",
+      "summaryOriginal": "arXiv:2608.05151v1 Announce Type: new Abstract: Wastewater operators need answers grounded in how their plant's variables interact and how fast effects propagate, not in generic pretraining text, when asking causal questions such as \"why is N2O rising?\" or \"what happens if I cut aeration by 20%?\". We compare three concrete ways to ground a frozen Qwen2.5-32B-Instruct model in an architecturally interpretable wastewater simulator (CCSS-IX): a live simulator oracle (Method 1), structured parameter injection (Method 2), and a Decoupled Recall-Reasoning (DRR) retriever (Method 3). On a 198-question causal benchmark the three reach 99.5%, 79%, and 75.8%, forming a deployment ladder above the strongest retrieval-augmented baseline at 48%. The DRR retriever has 110M parameters and trains per plant in ~17 seconds; after cross-plant transfer to a biologically distinct plant it still reaches 88%, while Method 2's static table cannot transfer. On a 60-question counterfactual benchmark only Method 3 handles queries about what happens after an intervention: +16.3 pp over Method 2, paired 95% CI [+7.1, +26.4] pp, with 100% on the timescale and operating-regime categories. On the AI2 Reasoning Ch",
+      "originalLanguage": "en",
+      "author": "Gary Simethy, Daniel Ortiz Arroyo, Petar Durdevic",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05151",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Simulator-Grounded Large Language Models for Industrial Causal Reasoning: Tool-Use, Structured Injection, and Plant-Portable Retrieval for Wastewater Treatment Decision Support",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该研究针对工业因果推理这一实际需求，比较了三种接地方法，提供了具体的性能数据和部署建议，对污水处理决策支持有直接应用价值。",
+      "importanceReasonEn": "This research addresses the practical need for industrial causal reasoning, compares three grounding methods with concrete performance data and deployment recommendations, and has direct application value for wastewater treatment decision support.",
+      "scoringMode": "ai",
+      "titleZh": "面向工业因果推理的模拟器接地大语言模型：工具使用、结构化注入与工厂便携式检索在污水处理决策支持中的应用",
+      "titleEn": "Simulator-Grounded Large Language Models for Industrial Causal Reasoning: Tool-Use, Structured Injection, and Plant-Portable Retrieval for Wastewater Treatment Decision Support",
+      "summaryZh": "arXiv:2608.05151v1 公告类型：新。摘要：污水处理操作员在询问因果问题（如“为什么N2O上升？”或“如果我将曝气减少20%会发生什么？”）时，需要基于其工厂变量如何相互作用以及效应传播速度的答案，而非通用预训练文本。我们比较了三种将冻结的Qwen2.5-32B-Instruct模型接地到架构可解释的污水处理模拟器（CCSS-IX）的具体方法：实时模拟器预言机（方法1）、结构化参数注入（方法2）和解耦召回-推理（DRR）检索器（方法3）。在198个问题的因果基准上，三种方法分别达到99.5%、79%和75.8%，形成了高于最强检索增强基线（48%）的部署阶梯。DRR检索器有1.1亿参数，每个工厂训练约17秒；跨工厂迁移到生物学上不同的工厂后仍达到88%，而方法2的静态表无法迁移。在60个问题的反事实基准上，只有方法3能处理干预后发生什么的查询：比方法2高16.3个百分点，配对95%置信区间[+7.1, +26.4]个百分点，在时间尺度和操作制度类别上达到100%。在AI2推理...",
+      "summaryEn": "arXiv:2608.05151v1 Announce Type: new. Abstract: Wastewater operators need answers grounded in how their plant's variables interact and how fast effects propagate, not in generic pretraining text, when asking causal questions such as \"why is N2O rising?\" or \"what happens if I cut aeration by 20%?\". We compare three concrete ways to ground a frozen Qwen2.5-32B-Instruct model in an architecturally interpretable wastewater simulator (CCSS-IX): a live simulator oracle (Method 1), structured parameter injection (Method 2), and a Decoupled Recall-Reasoning (DRR) retriever (Method 3). On a 198-question causal benchmark the three reach 99.5%, 79%, and 75.8%, forming a deployment ladder above the strongest retrieval-augmented baseline at 48%. The DRR retriever has 110M parameters and trains per pla",
+      "keywords": [
+        "simulator-grounded",
+        "causal reasoning",
+        "wastewater treatment",
+        "retrieval-augmented generation",
+        "counterfactual reasoning"
+      ],
+      "topics": [
+        "大语言模型",
+        "因果推理",
+        "污水处理",
+        "模拟器接地",
+        "检索增强"
+      ],
+      "models": [
+        "Qwen2.5-32B-Instruct"
+      ],
+      "detailZh": "该研究针对污水处理操作员在询问因果问题（如“为什么N2O上升？”或“如果我将曝气减少20%会发生什么？”）时，需要基于工厂变量相互作用和效应传播速度的答案，而非通用预训练文本。研究者比较了三种将冻结的Qwen2.5-32B-Instruct模型接地到架构可解释的污水处理模拟器（CCSS-IX）的方法：实时模拟器预言机（方法1）、结构化参数注入（方法2）和解耦召回-推理（DRR）检索器（方法3）。\n\n在198个问题的因果基准上，三种方法分别达到99.5%、79%和75.8%，均高于最强检索增强基线（48%）。DRR检索器有1.1亿参数，每个工厂训练约17秒；跨工厂迁移到生物学上不同的工厂后仍达到88%，而方法2的静态表无法迁移。在60个问题的反事实基准上，只有方法3能处理干预后发生什么的查询，比方法2高16.3个百分点，配对95%置信区间[+7.1, +26.4]个百分点，在时间尺度和操作制度类别上达到100%。\n\n该研究还涉及AI2推理挑战（摘要截断），但未提供更多细节。",
+      "keyPointsZh": [
+        "三种接地方法在198个因果问题上分别达到99.5%、79%和75.8%，均优于检索增强基线（48%）。",
+        "DRR检索器（1.1亿参数）训练快速（每工厂约17秒），且能跨工厂迁移（88%），而静态参数注入无法迁移。",
+        "在60个反事实问题上，只有DRR方法能处理干预后查询，比方法2高16.3个百分点。",
+        "研究针对污水处理决策支持，强调答案需基于工厂特定交互和效应传播速度。"
+      ],
+      "impactZh": "该研究为工业因果推理提供了实用的接地方法比较，特别是DRR检索器在训练效率和跨工厂迁移方面的优势，有助于污水处理厂部署可解释的AI决策支持系统。对于开发者和研究人员，该方法可推广到其他工业模拟器场景。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "data": [
+          {
+            "label": "Method 1 (Oracle)",
+            "value": 99.5,
+            "display": ""
+          },
+          {
+            "label": "Method 2 (Injection)",
+            "value": 79,
+            "display": ""
+          },
+          {
+            "label": "Method 3 (DRR)",
+            "value": 75.8,
+            "display": ""
+          },
+          {
+            "label": "RAG Baseline",
+            "value": 48,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05151",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Simulator-Grounded Large Language Models for Industrial Causal Reasoning: Tool-Use, Structured Injection, and Plant-Portable Retrieval for Wastewater Treatment Decision Support",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 79,
+        "peak": 81,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 64
+          },
+          {
+            "label": "20小时前",
+            "value": 65
+          },
+          {
+            "label": "18小时前",
+            "value": 67
+          },
+          {
+            "label": "16小时前",
+            "value": 69
+          },
+          {
+            "label": "14小时前",
+            "value": 70
+          },
+          {
+            "label": "12小时前",
+            "value": 72
+          },
+          {
+            "label": "10小时前",
+            "value": 73
+          },
+          {
+            "label": "8小时前",
+            "value": 75
+          },
+          {
+            "label": "6小时前",
+            "value": 77
+          },
+          {
+            "label": "4小时前",
+            "value": 78
+          },
+          {
+            "label": "2小时前",
+            "value": 80
+          },
+          {
+            "label": "现在",
+            "value": 81
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c68585afdad0bd6f",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05152",
+      "originalUrl": "https://arxiv.org/abs/2608.05152",
+      "titleOriginal": "Mean-Field Dynamics of Chain-of-Thought Reasoning in Large Language Models",
+      "summaryOriginal": "arXiv:2608.05152v1 Announce Type: new Abstract: Large language models (LLMs) with chain-of-thought reasoning have been widely applied in recent years, and theoretical explanations of their behavior may help deepen our understanding and guide model optimization. In this study, we introduce a framework that seeks statistical regularities and theoretical interpretations in LLM reasoning without simplifying the model architecture or making analogies to existing physical systems. We formulate LLM reasoning as a guided discovery process on a clue graph, and derive a one-dimensional ordinary differential equation for the fraction of discovered clues using the mean-field approximation. Experimentally, clue tokens are identified using the normalized surprisal of a student LLM on the outputs of a teacher LLM, and statistical regularities are obtained by averaging over many reasoning chains of thought. Our experiments show that the resulting statistical regularities are reproducible within the same dataset and can be fitted by the solving the proposed theoretical equation.",
+      "originalLanguage": "en",
+      "author": "Hao Ai",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05152",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Mean-Field Dynamics of Chain-of-Thought Reasoning in Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究为思维链推理提供理论框架，具有学术价值，但尚未验证实际应用，且来源单一。",
+      "importanceReasonEn": "The research provides a theoretical framework for chain-of-thought reasoning, with academic value but not yet validated in practice, and from a single source.",
+      "scoringMode": "ai",
+      "titleZh": "大语言模型思维链推理的均值场动力学",
+      "titleEn": "Mean-Field Dynamics of Chain-of-Thought Reasoning in Large Language Models",
+      "summaryZh": "本文提出一个框架，在不简化模型架构或类比物理系统的情况下，为LLM推理寻找统计规律和理论解释。将LLM推理视为线索图上的引导发现过程，利用均值场近似推导出已发现线索比例的常微分方程。实验通过学生LLM对教师LLM输出的归一化惊讶度识别线索标记，并对多条思维链求平均获得统计规律。实验表明，这些统计规律在同一数据集内可复现，并能用所提出的理论方程拟合。",
+      "summaryEn": "This paper proposes a framework to find statistical regularities and theoretical interpretations for LLM reasoning without simplifying model architecture or analogizing physical systems. It formulates LLM reasoning as a guided discovery process on a clue graph and derives a one-dimensional ODE for the fraction of discovered clues using mean-field approximation. Experiments identify clue tokens via normalized surprisal of a student LLM on teacher outputs, and average over reasoning chains to obtain statistical regularities. Results show these regularities are reproducible within the same dataset and can be fitted by the proposed theoretical equation.",
+      "keywords": [
+        "chain-of-thought",
+        "mean-field",
+        "LLM",
+        "reasoning",
+        "clue graph",
+        "surprisal"
+      ],
+      "topics": [
+        "chain-of-thought",
+        "mean-field theory",
+        "LLM reasoning",
+        "statistical regularities"
+      ],
+      "models": [],
+      "detailZh": "该研究来自arXiv预印本，提出了一种新的理论框架来理解大语言模型（LLM）的思维链推理。作者将推理过程建模为在“线索图”上的引导发现过程，并利用均值场近似推导出一个一维常微分方程，描述已发现线索比例随推理步骤的变化。这一方法不依赖对模型架构的简化或物理类比，而是直接从推理过程中提取统计规律。\n\n实验部分，作者使用学生LLM对教师LLM输出的归一化惊讶度来识别线索标记，并对多条思维链进行平均以获得统计规律。实验结果显示，这些统计规律在同一数据集内具有可复现性，并且能够通过所提出的理论方程进行拟合。这表明均值场方程可能捕捉到了思维链推理的某些内在动态特性。\n\n然而，该研究目前仅作为预印本发布，尚未经过同行评审，且实验细节和理论推导的完整性有限。其实际应用价值和对模型优化的指导意义仍需进一步验证。",
+      "keyPointsZh": [
+        "提出将LLM思维链推理建模为线索图上的引导发现过程。",
+        "利用均值场近似推导出已发现线索比例的常微分方程。",
+        "通过学生-教师模型和归一化惊讶度识别线索标记。",
+        "实验表明统计规律可复现且能被理论方程拟合。"
+      ],
+      "impactZh": "该研究为理解LLM思维链推理提供了新的理论视角，可能有助于未来模型优化和推理机制的解释。但当前阶段主要停留在理论层面，实际应用影响有限。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05152",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Mean-Field Dynamics of Chain-of-Thought Reasoning in Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 74,
+        "peak": 76,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 59
+          },
+          {
+            "label": "20小时前",
+            "value": 60
+          },
+          {
+            "label": "18小时前",
+            "value": 62
+          },
+          {
+            "label": "16小时前",
+            "value": 64
+          },
+          {
+            "label": "14小时前",
+            "value": 65
+          },
+          {
+            "label": "12小时前",
+            "value": 67
+          },
+          {
+            "label": "10小时前",
+            "value": 68
+          },
+          {
+            "label": "8小时前",
+            "value": 70
+          },
+          {
+            "label": "6小时前",
+            "value": 72
+          },
+          {
+            "label": "4小时前",
+            "value": 73
+          },
+          {
+            "label": "2小时前",
+            "value": 75
+          },
+          {
+            "label": "现在",
+            "value": 76
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "6759b664ce5ac10d",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05154",
+      "originalUrl": "https://arxiv.org/abs/2608.05154",
+      "titleOriginal": "RIG-RoPE: Relation- and Instance-Gated Rotary Positional Encoding with Duration-Aware Temporal Coordinates",
+      "summaryOriginal": "arXiv:2608.05154v1 Announce Type: new Abstract: Rotary positional encoding (RoPE) is a core component of modern language models and has been extended to multimodal LLMs through multidimensional variants such as multimodal RoPE (M-RoPE), which split positional channels into temporal, height, and width subspaces. This report identifies two limitations of static multidimensional position assignment in interleaved multimodal contexts. First, height/width rotations may be applied to token pairs whose spatial displacement is not a well-defined geometric object, producing cross-modal and inter-instance spatial interference. Second, temporal coordinates are often treated as equal-step counters, so a text token, an image block, and a video segment can advance the temporal phase by comparable amounts despite different information density. We propose RIG-RoPE, a relation- and instance-gated RoPE mechanism with duration-aware temporal coordinates. RIG-RoPE augments each token with a modality indicator, a visual instance identifier, and a scalar information-duration coordinate. It enables H/W rotations only for query-key pairs from the same visual instance; otherwise the unknown spatial displac",
+      "originalLanguage": "en",
+      "author": "Donggen Li",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05154",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "RIG-RoPE: Relation- and Instance-Gated Rotary Positional Encoding with Duration-Aware Temporal Coordinates",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种新的位置编码方法，针对多模态大语言模型中的静态位置分配问题，具有理论创新性和实际应用潜力，但尚未经过广泛验证。",
+      "importanceReasonEn": "The paper proposes a novel positional encoding method addressing static position assignment issues in multimodal LLMs, with theoretical innovation and practical potential, but not yet widely validated.",
+      "scoringMode": "ai",
+      "titleZh": "RIG-RoPE：基于关系与实例门控的旋转位置编码及持续时间感知的时间坐标",
+      "titleEn": "RIG-RoPE: Relation- and Instance-Gated Rotary Positional Encoding with Duration-Aware Temporal Coordinates",
+      "summaryZh": "arXiv:2608.05154v1 公告类型：新论文。摘要：旋转位置编码（RoPE）是现代语言模型的核心组件，并已通过多维变体（如多模态RoPE，M-RoPE）扩展到多模态大语言模型，将位置通道分为时间、高度和宽度子空间。本报告指出了在交错多模态上下文中静态多维位置分配的两个局限性。首先，高度/宽度旋转可能应用于空间位移不是明确定义的几何对象的标记对，产生跨模态和跨实例的空间干扰。其次，时间坐标通常被视为等步计数器，因此文本标记、图像块和视频片段可以以相当的数量推进时间相位，尽管信息密度不同。我们提出了RIG-RoPE，一种具有持续时间感知时间坐标的关系和实例门控RoPE机制。RIG-RoPE为每个标记增加模态指示符、视觉实例标识符和标量信息持续时间坐标。它仅对来自同一视觉实例的查询-键对启用H/W旋转；否则，未知的空间位移将...",
+      "summaryEn": "arXiv:2608.05154v1 Announcement Type: new. Abstract: Rotary positional encoding (RoPE) is a core component of modern language models and has been extended to multimodal LLMs through multidimensional variants such as multimodal RoPE (M-RoPE), which split positional channels into temporal, height, and width subspaces. This report identifies two limitations of static multidimensional position assignment in interleaved multimodal contexts. First, height/width rotations may be applied to token pairs whose spatial displacement is not a well-defined geometric object, producing cross-modal and inter-instance spatial interference. Second, temporal coordinates are often treated as equal-step counters, so a text token, an image block, and a video segment can advance the temporal phase by comparable a",
+      "keywords": [
+        "RoPE",
+        "multimodal",
+        "positional encoding",
+        "RIG-RoPE",
+        "duration-aware"
+      ],
+      "topics": [
+        "positional encoding",
+        "multimodal LLM",
+        "RoPE"
+      ],
+      "models": [],
+      "detailZh": "该论文由arXiv发布，编号2608.05154，属于计算与语言类别。论文指出，现有的多模态RoPE（M-RoPE）将位置通道分为时间、高度和宽度子空间，但在交错多模态上下文中存在两个问题：一是高度/宽度旋转可能应用于空间位移不明确的标记对，导致跨模态和跨实例的空间干扰；二是时间坐标通常被视为等步计数器，导致不同信息密度的标记（如文本、图像块、视频片段）推进时间相位的量相当。为此，论文提出RIG-RoPE机制，为每个标记增加模态指示符、视觉实例标识符和标量信息持续时间坐标，仅对同一视觉实例的查询-键对启用高度/宽度旋转，并采用持续时间感知的时间坐标。论文摘要未提供实验细节或结果，仅描述了方法动机和设计。",
+      "keyPointsZh": [
+        "RIG-RoPE针对多模态RoPE的静态位置分配问题提出改进。",
+        "通过关系门控和实例门控限制空间旋转的应用范围。",
+        "引入持续时间感知的时间坐标以反映信息密度差异。",
+        "论文为arXiv预印本，尚未提供实验验证。"
+      ],
+      "impactZh": "该研究可能对多模态大语言模型的位置编码设计产生影响，为处理交错文本、图像和视频提供更合理的相对位置建模，但实际效果需等待后续实验验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05154",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "RIG-RoPE: Relation- and Instance-Gated Rotary Positional Encoding with Duration-Aware Temporal Coordinates",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 74,
+        "peak": 76,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 59
+          },
+          {
+            "label": "20小时前",
+            "value": 60
+          },
+          {
+            "label": "18小时前",
+            "value": 62
+          },
+          {
+            "label": "16小时前",
+            "value": 64
+          },
+          {
+            "label": "14小时前",
+            "value": 65
+          },
+          {
+            "label": "12小时前",
+            "value": 67
+          },
+          {
+            "label": "10小时前",
+            "value": 68
+          },
+          {
+            "label": "8小时前",
+            "value": 70
+          },
+          {
+            "label": "6小时前",
+            "value": 72
+          },
+          {
+            "label": "4小时前",
+            "value": 73
+          },
+          {
+            "label": "2小时前",
+            "value": 75
+          },
+          {
+            "label": "现在",
+            "value": 76
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f721c78329358958",
+      "normalizedUrl": "https://arxiv.org/abs/2608.05155",
+      "originalUrl": "https://arxiv.org/abs/2608.05155",
+      "titleOriginal": "Beyond Sentiment: Comparing Traditional NLP and LLM-Based Multi-Dimensional Analysis for Political News Evaluation",
+      "summaryOriginal": "arXiv:2608.05155v1 Announce Type: new Abstract: Traditional sentiment analysis (SA) models, while effective for polarity classification, provide limited insight into the rhetorical, ideological, and framing dimensions of political discourse -- dimensions that are central to research in the social sciences and humanities (SSH). In this paper, we present a comparative study of RoBERTa-based sentiment analysis and an LLM-based multi-dimensional framing analysis platform applied to a corpus of 50 political news articles from 17 international media outlets. The results reveal a critical limitation we term neutral collapse: RoBERTa classifies 70% of articles as neutral, effectively flattening substantively rich political content into an analytically uninformative category. We find that 23% of neutral-classified articles exhibit negative probability scores above 0.30. By contrast, the LLM-based approach captures political bias direction and intensity, sensationalism, emotional appeal, and political framing -- yielding multi-dimensional analytical outputs aligned with SSH epistemologies. We argue that for political media analysis, traditional SA alone is insufficient, and that LLM-based mu",
+      "originalLanguage": "en",
+      "author": "Maryam Fooladi, Federico Bottino",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "publishedAt": "2026-08-07T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05155",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Beyond Sentiment: Comparing Traditional NLP and LLM-Based Multi-Dimensional Analysis for Political News Evaluation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提供了传统情感分析与LLM多维分析在政治新闻评估中的直接比较，揭示了传统方法的局限性，并提出了改进方向，对计算社会科学领域有参考价值。",
+      "importanceReasonEn": "This study provides a direct comparison between traditional sentiment analysis and LLM-based multi-dimensional analysis in political news evaluation, revealing limitations of traditional methods and proposing improvements, which is valuable for computational social science.",
+      "scoringMode": "ai",
+      "titleZh": "超越情感分析：传统NLP与基于LLM的多维分析在政治新闻评估中的比较",
+      "titleEn": "Beyond Sentiment: Comparing Traditional NLP and LLM-Based Multi-Dimensional Analysis for Political News Evaluation",
+      "summaryZh": "传统情感分析模型虽然能有效进行极性分类，但对政治话语中的修辞、意识形态和框架维度提供的洞察有限，而这些维度对社会科学和人文学科（SSH）的研究至关重要。本文对基于RoBERTa的情感分析和基于LLM的多维框架分析平台进行了比较研究，语料为来自17家国际媒体的50篇政治新闻文章。结果揭示了一个关键局限性，称为“中性坍缩”：RoBERTa将70%的文章归类为中性，实际上将内容丰富的政治内容扁平化为分析上无信息的类别。我们发现，23%的中性分类文章其负面概率得分高于0.30。相比之下，基于LLM的方法能够捕捉政治偏见方向和强度、煽情性、情感诉求和政治框架，产生与SSH认识论一致的多维分析输出。我们认为，对于政治媒体分析，传统情感分析单独使用是不够的，而基于LLM的多维分析是必要的。",
+      "summaryEn": "Traditional sentiment analysis (SA) models, while effective for polarity classification, provide limited insight into the rhetorical, ideological, and framing dimensions of political discourse -- dimensions that are central to research in the social sciences and humanities (SSH). In this paper, we present a comparative study of RoBERTa-based sentiment analysis and an LLM-based multi-dimensional framing analysis platform applied to a corpus of 50 political news articles from 17 international media outlets. The results reveal a critical limitation we term neutral collapse: RoBERTa classifies 70% of articles as neutral, effectively flattening substantively rich political content into an analytically uninformative category. We find that 23% of neutral-classified articles exhibit negative proba",
+      "keywords": [
+        "sentiment analysis",
+        "LLM",
+        "political news",
+        "framing analysis",
+        "neutral collapse",
+        "RoBERTa"
+      ],
+      "topics": [
+        "sentiment analysis",
+        "LLM",
+        "political news",
+        "framing analysis",
+        "RoBERTa"
+      ],
+      "models": [
+        "RoBERTa",
+        "LLM"
+      ],
+      "detailZh": "该研究由arXiv预印本发布，属于计算与语言领域。研究团队选取了来自17家国际媒体的50篇政治新闻文章，分别使用基于RoBERTa的情感分析模型和基于LLM的多维框架分析平台进行分析。结果显示，RoBERTa将70%的文章归类为中性，而其中23%的文章负面概率得分高于0.30，表明传统情感分析存在“中性坍缩”问题，即大量具有实质政治内容的信息被扁平化为无信息量的中性类别。相比之下，LLM方法能够捕捉政治偏见方向与强度、煽情性、情感诉求和政治框架等多维特征，更符合社会科学和人文学科的研究范式。研究结论认为，对于政治媒体分析，传统情感分析单独使用不足，需要结合LLM的多维分析。",
+      "keyPointsZh": [
+        "RoBERTa将70%的政治新闻文章归类为中性，存在“中性坍缩”问题。",
+        "23%的中性分类文章其负面概率得分高于0.30，表明传统情感分析遗漏了重要信息。",
+        "LLM方法能够捕捉政治偏见、煽情性、情感诉求和政治框架等多维特征。",
+        "研究语料包含来自17家国际媒体的50篇政治新闻文章。"
+      ],
+      "impactZh": "该研究对政治传播研究和计算社会科学领域具有实际影响。它提醒研究人员和从业者，传统情感分析在处理政治文本时可能不够充分，需要采用更精细的多维分析工具。对于开发新闻分析工具的公司或研究机构，该研究支持将LLM集成到分析流程中，以提供更丰富的洞察。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "data": [
+          {
+            "label": "中性分类比例",
+            "value": 70,
+            "display": ""
+          },
+          {
+            "label": "中性中负面概率>0.30的比例",
+            "value": 23,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.05155",
+          "publishedAt": "2026-08-07T04:00:00.000Z",
+          "title": "Beyond Sentiment: Comparing Traditional NLP and LLM-Based Multi-Dimensional Analysis for Political News Evaluation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": []
+        }
+      ],
+      "heat": {
+        "current": 74,
+        "peak": 76,
+        "history": [
+          {
+            "label": "22小时前",
+            "value": 59
+          },
+          {
+            "label": "20小时前",
+            "value": 60
+          },
+          {
+            "label": "18小时前",
+            "value": 62
+          },
+          {
+            "label": "16小时前",
+            "value": 64
+          },
+          {
+            "label": "14小时前",
+            "value": 65
+          },
+          {
+            "label": "12小时前",
+            "value": 67
+          },
+          {
+            "label": "10小时前",
+            "value": 68
+          },
+          {
+            "label": "8小时前",
+            "value": 70
+          },
+          {
+            "label": "6小时前",
+            "value": 72
+          },
+          {
+            "label": "4小时前",
+            "value": 73
+          },
+          {
+            "label": "2小时前",
+            "value": 75
+          },
+          {
+            "label": "现在",
+            "value": 76
+          }
+        ],
+        "note": "根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "7c5bff95ac40ce14",
       "normalizedUrl": "https://anthropic.com/news/improving-fable-5-s-biology-safeguards",
@@ -205,56 +1955,56 @@
         }
       ],
       "heat": {
-        "current": 92,
-        "peak": 100,
+        "current": 89,
+        "peak": 97,
         "history": [
           {
             "label": "22小时前",
-            "value": 83
+            "value": 80
           },
           {
             "label": "20小时前",
-            "value": 84
+            "value": 81
           },
           {
             "label": "18小时前",
-            "value": 86
+            "value": 83
           },
           {
             "label": "16小时前",
-            "value": 88
+            "value": 85
           },
           {
             "label": "14小时前",
-            "value": 89
+            "value": 86
           },
           {
             "label": "12小时前",
-            "value": 91
+            "value": 88
           },
           {
             "label": "10小时前",
-            "value": 92
+            "value": 89
           },
           {
             "label": "8小时前",
-            "value": 94
+            "value": 91
           },
           {
             "label": "6小时前",
-            "value": 96
+            "value": 93
           },
           {
             "label": "4小时前",
-            "value": 97
+            "value": 94
           },
           {
             "label": "2小时前",
-            "value": 99
+            "value": 96
           },
           {
             "label": "现在",
-            "value": 100
+            "value": 97
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -492,56 +2242,56 @@
         }
       ],
       "heat": {
-        "current": 76,
-        "peak": 84,
+        "current": 73,
+        "peak": 81,
         "history": [
           {
             "label": "22小时前",
-            "value": 67
+            "value": 64
           },
           {
             "label": "20小时前",
-            "value": 68
+            "value": 65
           },
           {
             "label": "18小时前",
-            "value": 70
+            "value": 67
           },
           {
             "label": "16小时前",
-            "value": 72
+            "value": 69
           },
           {
             "label": "14小时前",
-            "value": 73
+            "value": 70
           },
           {
             "label": "12小时前",
-            "value": 75
+            "value": 72
           },
           {
             "label": "10小时前",
-            "value": 76
+            "value": 73
           },
           {
             "label": "8小时前",
-            "value": 78
+            "value": 75
           },
           {
             "label": "6小时前",
-            "value": 80
+            "value": 77
           },
           {
             "label": "4小时前",
-            "value": 81
+            "value": 78
           },
           {
             "label": "2小时前",
-            "value": 83
+            "value": 80
           },
           {
             "label": "现在",
-            "value": 84
+            "value": 81
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -640,56 +2390,56 @@
         }
       ],
       "heat": {
-        "current": 80,
-        "peak": 82,
+        "current": 77,
+        "peak": 79,
         "history": [
           {
             "label": "22小时前",
-            "value": 65
+            "value": 62
           },
           {
             "label": "20小时前",
-            "value": 66
+            "value": 63
           },
           {
             "label": "18小时前",
-            "value": 68
+            "value": 65
           },
           {
             "label": "16小时前",
-            "value": 70
+            "value": 67
           },
           {
             "label": "14小时前",
-            "value": 71
+            "value": 68
           },
           {
             "label": "12小时前",
-            "value": 73
+            "value": 70
           },
           {
             "label": "10小时前",
-            "value": 74
+            "value": 71
           },
           {
             "label": "8小时前",
-            "value": 76
+            "value": 73
           },
           {
             "label": "6小时前",
-            "value": 78
+            "value": 75
           },
           {
             "label": "4小时前",
-            "value": 79
+            "value": 76
           },
           {
             "label": "2小时前",
-            "value": 81
+            "value": 78
           },
           {
             "label": "现在",
-            "value": 82
+            "value": 79
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1171,48 +2921,48 @@
         }
       ],
       "heat": {
-        "current": 96,
+        "current": 93,
         "peak": 100,
         "history": [
           {
             "label": "22小时前",
-            "value": 87
+            "value": 84
           },
           {
             "label": "20小时前",
-            "value": 88
+            "value": 85
           },
           {
             "label": "18小时前",
-            "value": 90
+            "value": 87
           },
           {
             "label": "16小时前",
-            "value": 92
+            "value": 89
           },
           {
             "label": "14小时前",
-            "value": 93
+            "value": 90
           },
           {
             "label": "12小时前",
-            "value": 95
+            "value": 92
           },
           {
             "label": "10小时前",
-            "value": 96
+            "value": 93
           },
           {
             "label": "8小时前",
-            "value": 98
+            "value": 95
           },
           {
             "label": "6小时前",
-            "value": 100
+            "value": 97
           },
           {
             "label": "4小时前",
-            "value": 100
+            "value": 98
           },
           {
             "label": "2小时前",
@@ -1339,56 +3089,56 @@
         }
       ],
       "heat": {
-        "current": 72,
-        "peak": 77,
+        "current": 69,
+        "peak": 74,
         "history": [
           {
             "label": "22小时前",
-            "value": 59
+            "value": 56
           },
           {
             "label": "20小时前",
-            "value": 61
+            "value": 58
           },
           {
             "label": "18小时前",
-            "value": 63
+            "value": 60
           },
           {
             "label": "16小时前",
-            "value": 64
+            "value": 61
           },
           {
             "label": "14小时前",
-            "value": 66
+            "value": 63
           },
           {
             "label": "12小时前",
-            "value": 67
+            "value": 64
           },
           {
             "label": "10小时前",
-            "value": 69
+            "value": 66
           },
           {
             "label": "8小时前",
-            "value": 71
+            "value": 68
           },
           {
             "label": "6小时前",
-            "value": 72
+            "value": 69
           },
           {
             "label": "4小时前",
-            "value": 74
+            "value": 71
           },
           {
             "label": "2小时前",
-            "value": 75
+            "value": 72
           },
           {
             "label": "现在",
-            "value": 77
+            "value": 74
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1476,56 +3226,56 @@
         }
       ],
       "heat": {
-        "current": 64,
-        "peak": 66,
+        "current": 61,
+        "peak": 63,
         "history": [
           {
             "label": "22小时前",
-            "value": 49
+            "value": 46
           },
           {
             "label": "20小时前",
-            "value": 50
+            "value": 47
           },
           {
             "label": "18小时前",
-            "value": 52
+            "value": 49
           },
           {
             "label": "16小时前",
-            "value": 54
+            "value": 51
           },
           {
             "label": "14小时前",
-            "value": 55
+            "value": 52
           },
           {
             "label": "12小时前",
-            "value": 57
+            "value": 54
           },
           {
             "label": "10小时前",
-            "value": 58
+            "value": 55
           },
           {
             "label": "8小时前",
-            "value": 60
+            "value": 57
           },
           {
             "label": "6小时前",
-            "value": 62
+            "value": 59
           },
           {
             "label": "4小时前",
-            "value": 63
+            "value": 60
           },
           {
             "label": "2小时前",
-            "value": 65
+            "value": 62
           },
           {
             "label": "现在",
-            "value": 66
+            "value": 63
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1614,56 +3364,56 @@
         }
       ],
       "heat": {
-        "current": 72,
-        "peak": 74,
+        "current": 69,
+        "peak": 71,
         "history": [
           {
             "label": "22小时前",
-            "value": 57
+            "value": 54
           },
           {
             "label": "20小时前",
-            "value": 58
+            "value": 55
           },
           {
             "label": "18小时前",
-            "value": 60
+            "value": 57
           },
           {
             "label": "16小时前",
-            "value": 62
+            "value": 59
           },
           {
             "label": "14小时前",
-            "value": 63
+            "value": 60
           },
           {
             "label": "12小时前",
-            "value": 65
+            "value": 62
           },
           {
             "label": "10小时前",
-            "value": 66
+            "value": 63
           },
           {
             "label": "8小时前",
-            "value": 68
+            "value": 65
           },
           {
             "label": "6小时前",
-            "value": 70
+            "value": 67
           },
           {
             "label": "4小时前",
-            "value": 71
+            "value": 68
           },
           {
             "label": "2小时前",
-            "value": 73
+            "value": 70
           },
           {
             "label": "现在",
-            "value": 74
+            "value": 71
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1750,56 +3500,56 @@
         }
       ],
       "heat": {
-        "current": 53,
-        "peak": 55,
+        "current": 50,
+        "peak": 52,
         "history": [
           {
             "label": "22小时前",
-            "value": 38
+            "value": 35
           },
           {
             "label": "20小时前",
-            "value": 39
+            "value": 36
           },
           {
             "label": "18小时前",
-            "value": 41
+            "value": 38
           },
           {
             "label": "16小时前",
-            "value": 43
+            "value": 40
           },
           {
             "label": "14小时前",
-            "value": 44
+            "value": 41
           },
           {
             "label": "12小时前",
-            "value": 46
+            "value": 43
           },
           {
             "label": "10小时前",
-            "value": 47
+            "value": 44
           },
           {
             "label": "8小时前",
-            "value": 49
+            "value": 46
           },
           {
             "label": "6小时前",
-            "value": 51
+            "value": 48
           },
           {
             "label": "4小时前",
-            "value": 52
+            "value": 49
           },
           {
             "label": "2小时前",
-            "value": 54
+            "value": 51
           },
           {
             "label": "现在",
-            "value": 55
+            "value": 52
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -1865,7 +3615,10 @@
         "TPU",
         "利益冲突"
       ],
-      "models": [],
+      "models": [
+        "Claude",
+        "Gemini"
+      ],
       "detailZh": "据报道，前谷歌Deepmind CEO Demis Hassabis已退出日常运营约一年，他更倾向于科学家角色而非管理者。研究人员抱怨无法充分使用谷歌自家的TPU芯片，而外部客户如Anthropic可以通过谷歌云购买相同硬件。这引发了关于内部资源分配和利益冲突的担忧。文章指出，Deepmind的人才流失可能源于芯片短缺、利益冲突和谷歌的官僚作风。具体细节和官方回应尚未公布。",
       "keyPointsZh": [
         "Demis Hassabis已退出Deepmind日常运营约一年。",
@@ -1895,56 +3648,56 @@
         }
       ],
       "heat": {
-        "current": 64,
-        "peak": 66,
+        "current": 61,
+        "peak": 63,
         "history": [
           {
             "label": "22小时前",
-            "value": 49
+            "value": 46
           },
           {
             "label": "20小时前",
-            "value": 50
+            "value": 47
           },
           {
             "label": "18小时前",
-            "value": 52
+            "value": 49
           },
           {
             "label": "16小时前",
-            "value": 54
+            "value": 51
           },
           {
             "label": "14小时前",
-            "value": 55
+            "value": 52
           },
           {
             "label": "12小时前",
-            "value": 57
+            "value": 54
           },
           {
             "label": "10小时前",
-            "value": 58
+            "value": 55
           },
           {
             "label": "8小时前",
-            "value": 60
+            "value": 57
           },
           {
             "label": "6小时前",
-            "value": 62
+            "value": 59
           },
           {
             "label": "4小时前",
-            "value": 63
+            "value": 60
           },
           {
             "label": "2小时前",
-            "value": 65
+            "value": 62
           },
           {
             "label": "现在",
-            "value": 66
+            "value": 63
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2033,56 +3786,56 @@
         }
       ],
       "heat": {
-        "current": 47,
-        "peak": 49,
+        "current": 44,
+        "peak": 46,
         "history": [
           {
             "label": "22小时前",
-            "value": 32
+            "value": 29
           },
           {
             "label": "20小时前",
-            "value": 33
+            "value": 30
           },
           {
             "label": "18小时前",
-            "value": 35
+            "value": 32
           },
           {
             "label": "16小时前",
-            "value": 37
+            "value": 34
           },
           {
             "label": "14小时前",
-            "value": 38
+            "value": 35
           },
           {
             "label": "12小时前",
-            "value": 40
+            "value": 37
           },
           {
             "label": "10小时前",
-            "value": 41
+            "value": 38
           },
           {
             "label": "8小时前",
-            "value": 43
+            "value": 40
           },
           {
             "label": "6小时前",
-            "value": 45
+            "value": 42
           },
           {
             "label": "4小时前",
-            "value": 46
+            "value": 43
           },
           {
             "label": "2小时前",
-            "value": 48
+            "value": 45
           },
           {
             "label": "现在",
-            "value": 49
+            "value": 46
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2192,56 +3945,56 @@
         }
       ],
       "heat": {
-        "current": 66,
-        "peak": 68,
+        "current": 64,
+        "peak": 66,
         "history": [
           {
             "label": "22小时前",
-            "value": 51
+            "value": 49
           },
           {
             "label": "20小时前",
-            "value": 52
+            "value": 50
           },
           {
             "label": "18小时前",
-            "value": 54
+            "value": 52
           },
           {
             "label": "16小时前",
-            "value": 56
+            "value": 54
           },
           {
             "label": "14小时前",
-            "value": 57
+            "value": 55
           },
           {
             "label": "12小时前",
-            "value": 59
+            "value": 57
           },
           {
             "label": "10小时前",
-            "value": 60
+            "value": 58
           },
           {
             "label": "8小时前",
-            "value": 62
+            "value": 60
           },
           {
             "label": "6小时前",
-            "value": 64
+            "value": 62
           },
           {
             "label": "4小时前",
-            "value": 65
+            "value": 63
           },
           {
             "label": "2小时前",
-            "value": 67
+            "value": 65
           },
           {
             "label": "现在",
-            "value": 68
+            "value": 66
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2328,56 +4081,56 @@
         }
       ],
       "heat": {
-        "current": 61,
-        "peak": 63,
+        "current": 59,
+        "peak": 61,
         "history": [
           {
             "label": "22小时前",
-            "value": 46
+            "value": 44
           },
           {
             "label": "20小时前",
-            "value": 47
+            "value": 45
           },
           {
             "label": "18小时前",
-            "value": 49
+            "value": 47
           },
           {
             "label": "16小时前",
-            "value": 51
+            "value": 49
           },
           {
             "label": "14小时前",
-            "value": 52
+            "value": 50
           },
           {
             "label": "12小时前",
-            "value": 54
+            "value": 52
           },
           {
             "label": "10小时前",
-            "value": 55
+            "value": 53
           },
           {
             "label": "8小时前",
-            "value": 57
+            "value": 55
           },
           {
             "label": "6小时前",
-            "value": 59
+            "value": 57
           },
           {
             "label": "4小时前",
-            "value": 60
+            "value": 58
           },
           {
             "label": "2小时前",
-            "value": 62
+            "value": 60
           },
           {
             "label": "现在",
-            "value": 63
+            "value": 61
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2462,56 +4215,56 @@
         }
       ],
       "heat": {
-        "current": 51,
-        "peak": 53,
+        "current": 48,
+        "peak": 50,
         "history": [
           {
             "label": "22小时前",
-            "value": 36
+            "value": 33
           },
           {
             "label": "20小时前",
-            "value": 37
+            "value": 34
           },
           {
             "label": "18小时前",
-            "value": 39
+            "value": 36
           },
           {
             "label": "16小时前",
-            "value": 41
+            "value": 38
           },
           {
             "label": "14小时前",
-            "value": 42
+            "value": 39
           },
           {
             "label": "12小时前",
-            "value": 44
+            "value": 41
           },
           {
             "label": "10小时前",
-            "value": 45
+            "value": 42
           },
           {
             "label": "8小时前",
-            "value": 47
+            "value": 44
           },
           {
             "label": "6小时前",
-            "value": 49
+            "value": 46
           },
           {
             "label": "4小时前",
-            "value": 50
+            "value": 47
           },
           {
             "label": "2小时前",
-            "value": 52
+            "value": 49
           },
           {
             "label": "现在",
-            "value": 53
+            "value": 50
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2603,56 +4356,56 @@
         }
       ],
       "heat": {
-        "current": 67,
-        "peak": 69,
+        "current": 65,
+        "peak": 67,
         "history": [
           {
             "label": "22小时前",
-            "value": 52
+            "value": 50
           },
           {
             "label": "20小时前",
-            "value": 53
+            "value": 51
           },
           {
             "label": "18小时前",
-            "value": 55
+            "value": 53
           },
           {
             "label": "16小时前",
-            "value": 57
+            "value": 55
           },
           {
             "label": "14小时前",
-            "value": 58
+            "value": 56
           },
           {
             "label": "12小时前",
-            "value": 60
+            "value": 58
           },
           {
             "label": "10小时前",
-            "value": 61
+            "value": 59
           },
           {
             "label": "8小时前",
-            "value": 63
+            "value": 61
           },
           {
             "label": "6小时前",
-            "value": 65
+            "value": 63
           },
           {
             "label": "4小时前",
-            "value": 66
+            "value": 64
           },
           {
             "label": "2小时前",
-            "value": 68
+            "value": 66
           },
           {
             "label": "现在",
-            "value": 69
+            "value": 67
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
@@ -2764,56 +4517,56 @@
         }
       ],
       "heat": {
-        "current": 62,
-        "peak": 64,
+        "current": 59,
+        "peak": 61,
         "history": [
           {
             "label": "22小时前",
-            "value": 47
+            "value": 44
           },
           {
             "label": "20小时前",
-            "value": 48
+            "value": 45
           },
           {
             "label": "18小时前",
-            "value": 50
+            "value": 47
           },
           {
             "label": "16小时前",
-            "value": 52
+            "value": 49
           },
           {
             "label": "14小时前",
-            "value": 53
+            "value": 50
           },
           {
             "label": "12小时前",
-            "value": 55
+            "value": 52
           },
           {
             "label": "10小时前",
-            "value": 56
+            "value": 53
           },
           {
             "label": "8小时前",
-            "value": 58
+            "value": 55
           },
           {
             "label": "6小时前",
-            "value": 60
+            "value": 57
           },
           {
             "label": "4小时前",
-            "value": 61
+            "value": 58
           },
           {
             "label": "2小时前",
-            "value": 63
+            "value": 60
           },
           {
             "label": "现在",
-            "value": 64
+            "value": 61
           }
         ],
         "note": "根据公开报道数量、来源权威度与时效估算"
