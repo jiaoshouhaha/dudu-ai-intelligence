@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T10:45:13.275Z",
+  "generatedAt": "2026-08-09T11:38:01.922Z",
   "date": "2026-08-09",
   "items": [
     {
@@ -134,7 +134,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-09T10:26:43.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -145,8 +145,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T11:02:22.461Z",
+            "label": "8/9 19:02",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 65,
             "reports": 1
           }
@@ -198,8 +204,8 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件展示了将现有自回归模型改造为扩散模型的可行性，大幅降低训练成本，对AI模型训练效率有重要启示。",
-      "importanceReasonEn": "This event demonstrates the feasibility of converting an existing autoregressive model into a diffusion model, significantly reducing training cost, with important implications for AI model training efficiency.",
+      "importanceReasonZh": "该研究展示了将现有自回归模型高效改造为扩散模型的可能性，大幅降低训练成本，同时实现高吞吐量生成，对高效文本生成研究具有重要参考价值。",
+      "importanceReasonEn": "This research demonstrates the possibility of efficiently converting an existing autoregressive model into a diffusion model, significantly reducing training cost while achieving high-throughput generation, offering important reference for efficient text generation research.",
       "scoringMode": "ai",
       "titleZh": "谷歌DiffusionGemma证明：构建文本扩散模型无需从头训练",
       "titleEn": "Google's DiffusionGemma proves you don't need to train from scratch to build a text diffusion model",
@@ -209,37 +215,33 @@
         "DiffusionGemma",
         "Gemma 4",
         "text diffusion",
-        "efficient training",
-        "parallel generation"
+        "parallel generation",
+        "training budget"
       ],
       "topics": [
         "diffusion models",
         "Gemma",
-        "Google DeepMind",
-        "efficient training"
+        "efficient training",
+        "text generation"
       ],
       "models": [
         "DiffusionGemma",
         "Gemma 4"
       ],
-      "detailZh": "谷歌DeepMind的研究人员没有从头训练一个全新的扩散模型，而是将现有的Gemma 4模型改造为扩散模型，称为DiffusionGemma。他们使用了不到原始训练预算10%的计算资源，实现了这一转换。DiffusionGemma能够并行生成256个token，而不是像传统自回归模型那样逐个生成，因此生成速度大幅提升，达到每秒约1500个token。然而，在基准测试中，DiffusionGemma的质量仍然落后于原始的Gemma 4自回归模型，尤其是在推理任务上表现不佳。这一成果表明，通过改造现有模型，可以以较低成本获得扩散模型的优势，但质量上仍有妥协。",
+      "detailZh": "谷歌DeepMind的研究人员没有从头训练一个全新的扩散模型，而是将现有的Gemma 4模型改造为文本扩散模型，命名为DiffusionGemma。他们使用了不到原始训练预算10%的计算资源，成功将自回归模型转换为扩散模型。DiffusionGemma能够并行生成256个token，而不是像传统自回归模型那样逐个生成，因此生成速度大幅提升，达到每秒约1500个token。然而，在基准测试中，DiffusionGemma的质量仍然落后于原始的Gemma 4自回归模型，尤其是在推理任务上表现差距明显。这一成果表明，通过改造现有模型，可以大幅降低训练成本，同时获得扩散模型在并行生成方面的优势。",
       "keyPointsZh": [
-        "DiffusionGemma基于Gemma 4改造，训练预算不到原始模型的10%。",
-        "DiffusionGemma并行生成256个token，速度约1500 tokens/秒。",
-        "质量在基准测试中落后于原始自回归模型，尤其在推理任务上。"
+        "DiffusionGemma基于Gemma 4改造，训练预算不到原来的10%。",
+        "并行生成256个token，速度约1500 tokens/秒。",
+        "质量在基准测试中落后于原始自回归模型，推理任务差距明显。"
       ],
-      "impactZh": "该事件表明，通过改造现有模型可以大幅降低训练成本，同时获得扩散模型的并行生成优势。这可能推动更多研究者和企业采用类似方法，加速扩散模型在文本生成领域的应用。",
+      "impactZh": "该研究为高效构建文本扩散模型提供了新思路，可能降低扩散模型的应用门槛，推动其在需要高吞吐量生成场景中的使用。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和研究者，这一方法提供了一种低成本构建扩散模型的途径，可能降低实验门槛。但需注意质量上的妥协，尤其在推理任务中。",
-      "howItWorksZh": "DiffusionGemma的改造过程涉及将Gemma 4的自回归架构调整为扩散模型架构，利用扩散模型的去噪过程进行并行生成。具体技术细节未在原文中详细说明，但通常涉及修改训练目标和推理过程。",
-      "interpretationZh": "报道指出DiffusionGemma在训练效率和生成速度上具有优势，但质量有所下降。这是基于基准测试的客观事实。合理推断是，扩散模型在并行生成方面有潜力，但当前在推理等复杂任务上仍不如自回归模型。",
-      "limitationsZh": "原文未提供DiffusionGemma的具体架构细节、训练数据或基准测试的完整结果，因此无法全面评估其性能。质量下降的程度和具体任务表现未详细说明。",
-      "actionStepsZh": [
-        "关注Google DeepMind后续发布的DiffusionGemma技术报告，以获取更多细节。",
-        "评估扩散模型在自身应用中的适用性，权衡速度与质量。",
-        "考虑在资源有限的情况下，尝试将现有模型改造为扩散模型以节省训练成本。"
-      ],
-      "detailCompleteness": "summary",
+      "userImpactZh": "对于AI开发者和研究者，该技术可能降低训练扩散模型的成本，并提高生成速度，但需注意质量权衡，尤其在推理密集型任务中。",
+      "howItWorksZh": "具体技术细节未在原文中详细说明，但根据摘要，研究人员通过某种方法将Gemma 4的自回归架构改造为扩散模型，可能涉及修改训练目标和推理过程，以实现并行生成多个token。",
+      "interpretationZh": "报道指出，DiffusionGemma在训练效率和生成速度上具有优势，但质量仍不及原始模型。这属于合理推断，因为摘要明确提到质量落后。",
+      "limitationsZh": "原文未提供具体技术细节、基准测试的详细数据或与原始模型的对比幅度，因此无法评估质量差距的具体程度。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
       "reportCount": 1,
@@ -264,7 +266,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-09T10:01:26.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -275,8 +277,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T10:49:43.961Z",
+            "label": "8/9 18:49",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 64,
             "reports": 1
           }
@@ -423,7 +431,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-09T09:26:28.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -434,14 +442,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-09T10:05:50.637Z",
-            "label": "8/9 18:05",
-            "value": 40,
+            "at": "2026-08-09T10:10:19.307Z",
+            "label": "8/9 18:10",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T10:54:10.614Z",
+            "label": "8/9 18:54",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 66,
             "reports": 1
           }
@@ -493,13 +507,13 @@
         }
       ],
       "importance": 75,
-      "importanceReasonZh": "该事件涉及谷歌AI战略的重大调整，可能影响全球AI竞争格局，且涉及核心人物离职传闻，具有较高新闻价值。",
-      "importanceReasonEn": "This event involves a major shift in Google's AI strategy, potentially impacting the global AI competitive landscape, and includes rumors of a key figure's departure, making it highly newsworthy.",
+      "importanceReasonZh": "该事件涉及谷歌AI战略的重大调整，可能影响全球AI竞争格局，且涉及核心人物离职传闻，具有较高关注度。",
+      "importanceReasonEn": "The event involves a major shift in Google's AI strategy, potentially affecting the global AI competitive landscape, and involves rumors of a key figure's departure, drawing significant attention.",
       "scoringMode": "ai",
-      "titleZh": "谷歌拆分DeepMind，押注全新开始，哈萨比斯或将离职",
-      "titleEn": "Google dismantles Deepmind and bets on a fresh start as Hassabis heads for the exit",
-      "summaryZh": "谷歌DeepMind正在失去自主权，创始人戴密斯·哈萨比斯可能在数月内离开该AI实验室。AI研究员Koray Kavukcuoglu将接管日常运营，但不担任CEO头衔，所有Gemini开发工作将迁至湾区。内部消息称，谷歌在训练前沿模型方面面临严重问题，尽管其云业务带来数十亿美元收入。问题是谷歌是故意押注基础设施，还是无法赶上领先者。",
-      "summaryEn": "Google Deepmind is losing its autonomy, and founder Demis Hassabis may leave the AI lab for good in the coming months. AI researcher Koray Kavukcuoglu will take over day-to-day operations without the CEO title, and all Gemini development is moving to the Bay Area. Internally, Google is apparently struggling with serious problems training frontier models, even as its cloud business generates billions. The question is whether the company is deliberately betting on infrastructure or simply can't catch the leaders.",
+      "titleZh": "谷歌拆分DeepMind，押注全新开始，哈萨比斯或将离场",
+      "titleEn": "Google dismantles DeepMind and bets on a fresh start as Hassabis heads for the exit",
+      "summaryZh": "谷歌DeepMind正在失去自主权，创始人德米斯·哈萨比斯可能在数月内离开AI实验室。AI研究员Koray Kavukcuoglu将接管日常运营，但不担任CEO头衔，所有Gemini开发工作将迁往湾区。内部消息称，谷歌在训练前沿模型方面面临严重问题，尽管其云业务带来数十亿美元收入。问题在于，谷歌是刻意押注基础设施，还是无法赶上领先者。",
+      "summaryEn": "Google DeepMind is losing its autonomy, and founder Demis Hassabis may leave the AI lab for good in the coming months. AI researcher Koray Kavukcuoglu will take over day-to-day operations without the CEO title, and all Gemini development is moving to the Bay Area. Internally, Google is apparently struggling with serious problems training frontier models, even as its cloud business generates billions. The question is whether the company is deliberately betting on infrastructure or simply can't catch the leaders.",
       "keywords": [
         "谷歌",
         "DeepMind",
@@ -516,20 +530,20 @@
         "AI实验室重组"
       ],
       "models": [],
-      "detailZh": "据The Decoder报道，谷歌正在对DeepMind进行重大重组，使其失去独立性。创始人戴密斯·哈萨比斯可能在数月内离开实验室。AI研究员Koray Kavukcuoglu将接管日常运营，但不会获得CEO头衔。所有Gemini开发工作将迁至湾区，表明谷歌正在集中资源。内部消息称，谷歌在训练前沿模型方面遇到严重问题，尽管其云业务收入丰厚。报道质疑谷歌是故意押注基础设施，还是无法赶上竞争对手。目前，谷歌官方尚未对此发表评论，信息主要来自内部匿名消息源。",
+      "detailZh": "据The Decoder报道，谷歌正在对DeepMind进行重大重组，使其失去独立性。创始人德米斯·哈萨比斯可能在数月内离开实验室，而AI研究员Koray Kavukcuoglu将接管日常运营，但不会获得CEO头衔。所有Gemini开发工作将迁至湾区，这标志着DeepMind在英国的总部地位被削弱。\n\n报道称，谷歌内部在训练前沿模型方面面临严重问题，尽管其云业务创造了数十亿美元收入。这一情况引发外界猜测：谷歌是刻意将重心转向基础设施，还是确实无法在模型竞赛中赶上OpenAI等领先者。\n\n文章指出，谷歌可能正在押注一个全新的开始，但具体细节尚不明确。目前，谷歌官方尚未对此发表评论，消息来源也未透露姓名，因此信息的准确性有待验证。\n\n该报道发布于2026年8月9日，但考虑到其来源为单一媒体且缺乏官方确认，读者应谨慎对待。",
       "keyPointsZh": [
-        "谷歌DeepMind将失去自主权，创始人哈萨比斯可能离职。",
-        "Koray Kavukcuoglu将接管日常运营，但不担任CEO。",
-        "所有Gemini开发工作将迁至湾区。",
-        "谷歌在训练前沿模型方面面临严重问题。",
-        "谷歌云业务收入丰厚，但AI模型训练落后。"
+        "谷歌DeepMind将失去自主权，哈萨比斯可能离职。",
+        "Koray Kavukcuoglu将接管日常运营，但无CEO头衔。",
+        "所有Gemini开发工作迁至湾区。",
+        "谷歌内部面临训练前沿模型的严重问题。",
+        "谷歌云业务收入达数十亿美元。"
       ],
-      "impactZh": "该事件可能重塑谷歌AI战略，影响其与OpenAI等竞争对手的竞争地位。若哈萨比斯离职，可能引发人才流失，进一步削弱谷歌AI创新能力。",
-      "readerImpactZh": "对于普通用户，谷歌AI产品的开发方向可能发生变化，Gemini的更新速度和质量可能受影响，但短期内用户可能感受不到明显差异。",
-      "userImpactZh": "对于AI开发者和团队，谷歌AI API和云服务的稳定性可能受影响，Gemini模型的迭代可能放缓，开发者需关注谷歌AI战略调整带来的潜在变化。",
+      "impactZh": "该事件可能重塑谷歌的AI战略方向，影响其与OpenAI等竞争对手的竞争态势。若哈萨比斯离职，可能引发人才流失，并影响DeepMind的长期研究文化。同时，Gemini开发迁移至湾区可能加速产品化，但也可能削弱英国AI生态。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和团队，谷歌Gemini模型的开发地点和领导层变动可能影响其API的稳定性、更新频率和未来方向。若谷歌内部训练问题属实，可能导致模型发布延迟或质量下降，进而影响依赖谷歌AI服务的用户。",
       "howItWorksZh": "",
-      "interpretationZh": "报道称谷歌正在重组DeepMind，但具体细节尚未证实。哈萨比斯离职和训练问题属于内部消息，未获官方确认。合理推断是谷歌可能调整AI战略，优先发展基础设施而非前沿模型，但需更多证据。",
-      "limitationsZh": "该报道基于匿名消息源，未经谷歌官方证实，存在不确定性。具体时间线和细节可能不准确。",
+      "interpretationZh": "报道称谷歌正在重组DeepMind，但消息来源未明确，且缺乏官方确认。合理推断是谷歌可能为了提升效率而整合资源，但具体动机不明。读者应区分事实与推测，目前仅能确认报道内容本身，无法验证其真实性。",
+      "limitationsZh": "该报道基于匿名消息源，未提供具体证据，谷歌官方未回应。因此，所有细节均未得到证实，包括哈萨比斯离职时间、Kavukcuoglu的任命以及Gemini迁移的具体情况。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -556,7 +570,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-09T08:56:12.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -567,14 +581,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-09T09:50:42.637Z",
+            "at": "2026-08-09T09:50:08.640Z",
             "label": "8/9 17:50",
-            "value": 40,
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T10:44:05.281Z",
+            "label": "8/9 18:44",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 66,
             "reports": 1
           }
@@ -699,7 +719,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-09T07:17:35.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -710,26 +730,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-09T08:09:29.568Z",
+            "at": "2026-08-09T08:09:40.384Z",
             "label": "8/9 16:09",
-            "value": 26,
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-09T09:01:24.137Z",
+            "at": "2026-08-09T09:01:45.768Z",
             "label": "8/9 17:01",
-            "value": 37,
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-09T09:53:18.706Z",
+            "at": "2026-08-09T09:53:51.153Z",
             "label": "8/9 17:53",
-            "value": 49,
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
+            "at": "2026-08-09T10:45:56.537Z",
             "label": "8/9 18:45",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 61,
             "reports": 1
           }
@@ -845,7 +871,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-09T05:25:02.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 63,
         "peak": 63,
         "history": [
@@ -856,38 +882,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-09T06:18:23.879Z",
+            "at": "2026-08-09T06:18:19.131Z",
             "label": "8/9 14:18",
-            "value": 22,
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-09T07:11:45.758Z",
+            "at": "2026-08-09T07:11:36.263Z",
             "label": "8/9 15:11",
-            "value": 30,
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-09T08:05:07.637Z",
-            "label": "8/9 16:05",
-            "value": 39,
+            "at": "2026-08-09T08:04:53.395Z",
+            "label": "8/9 16:04",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-09T08:58:29.516Z",
+            "at": "2026-08-09T08:58:10.526Z",
             "label": "8/9 16:58",
-            "value": 47,
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-09T09:51:51.395Z",
+            "at": "2026-08-09T09:51:27.658Z",
             "label": "8/9 17:51",
-            "value": 55,
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T10:44:44.790Z",
+            "label": "8/9 18:44",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 63,
             "reports": 1
           }
@@ -1510,7 +1542,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T22:46:14.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -1521,68 +1553,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T23:51:35.752Z",
-            "label": "8/9 07:51",
+            "at": "2026-08-08T23:56:23.811Z",
+            "label": "8/9 07:56",
             "value": 52,
             "reports": 25
           },
           {
-            "at": "2026-08-09T00:56:57.504Z",
-            "label": "8/9 08:56",
+            "at": "2026-08-09T01:06:33.622Z",
+            "label": "8/9 09:06",
             "value": 59,
             "reports": 25
           },
           {
-            "at": "2026-08-09T02:02:19.256Z",
-            "label": "8/9 10:02",
+            "at": "2026-08-09T02:16:43.433Z",
+            "label": "8/9 10:16",
             "value": 66,
             "reports": 25
           },
           {
-            "at": "2026-08-09T03:07:41.009Z",
-            "label": "8/9 11:07",
+            "at": "2026-08-09T03:26:53.244Z",
+            "label": "8/9 11:26",
             "value": 73,
             "reports": 25
           },
           {
-            "at": "2026-08-09T04:13:02.761Z",
-            "label": "8/9 12:13",
+            "at": "2026-08-09T04:37:03.055Z",
+            "label": "8/9 12:37",
             "value": 80,
             "reports": 25
           },
           {
-            "at": "2026-08-09T05:18:24.513Z",
-            "label": "8/9 13:18",
+            "at": "2026-08-09T05:47:12.866Z",
+            "label": "8/9 13:47",
             "value": 87,
             "reports": 25
           },
           {
-            "at": "2026-08-09T06:23:46.265Z",
-            "label": "8/9 14:23",
+            "at": "2026-08-09T06:57:22.677Z",
+            "label": "8/9 14:57",
             "value": 94,
             "reports": 25
           },
           {
-            "at": "2026-08-09T07:29:08.018Z",
-            "label": "8/9 15:29",
+            "at": "2026-08-09T08:07:32.488Z",
+            "label": "8/9 16:07",
             "value": 100,
             "reports": 25
           },
           {
-            "at": "2026-08-09T08:34:29.770Z",
-            "label": "8/9 16:34",
+            "at": "2026-08-09T09:17:42.299Z",
+            "label": "8/9 17:17",
             "value": 100,
             "reports": 25
           },
           {
-            "at": "2026-08-09T09:39:51.522Z",
-            "label": "8/9 17:39",
+            "at": "2026-08-09T10:27:52.110Z",
+            "label": "8/9 18:27",
             "value": 100,
             "reports": 25
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 100,
             "reports": 25
           }
@@ -1735,7 +1767,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T22:36:03.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -1746,68 +1778,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T23:42:20.297Z",
-            "label": "8/9 07:42",
+            "at": "2026-08-08T23:47:08.356Z",
+            "label": "8/9 07:47",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-09T00:48:37.595Z",
-            "label": "8/9 08:48",
+            "at": "2026-08-09T00:58:13.713Z",
+            "label": "8/9 08:58",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-09T01:54:54.893Z",
-            "label": "8/9 09:54",
+            "at": "2026-08-09T02:09:19.069Z",
+            "label": "8/9 10:09",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-09T03:01:12.190Z",
-            "label": "8/9 11:01",
+            "at": "2026-08-09T03:20:24.426Z",
+            "label": "8/9 11:20",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-09T04:07:29.488Z",
-            "label": "8/9 12:07",
+            "at": "2026-08-09T04:31:29.782Z",
+            "label": "8/9 12:31",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-09T05:13:46.786Z",
-            "label": "8/9 13:13",
+            "at": "2026-08-09T05:42:35.139Z",
+            "label": "8/9 13:42",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-09T06:20:04.084Z",
-            "label": "8/9 14:20",
+            "at": "2026-08-09T06:53:40.495Z",
+            "label": "8/9 14:53",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-09T07:26:21.381Z",
-            "label": "8/9 15:26",
+            "at": "2026-08-09T08:04:45.852Z",
+            "label": "8/9 16:04",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-09T08:32:38.679Z",
-            "label": "8/9 16:32",
+            "at": "2026-08-09T09:15:51.208Z",
+            "label": "8/9 17:15",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-09T09:38:55.977Z",
-            "label": "8/9 17:38",
+            "at": "2026-08-09T10:26:56.565Z",
+            "label": "8/9 18:26",
             "value": 62,
             "reports": 1
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 66,
             "reports": 1
           }
@@ -1916,7 +1948,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T21:24:02.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1927,68 +1959,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T22:36:52.115Z",
-            "label": "8/9 06:36",
+            "at": "2026-08-08T22:41:40.174Z",
+            "label": "8/9 06:41",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-08T23:49:42.231Z",
-            "label": "8/9 07:49",
+            "at": "2026-08-08T23:59:18.349Z",
+            "label": "8/9 07:59",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-09T01:02:32.347Z",
-            "label": "8/9 09:02",
+            "at": "2026-08-09T01:16:56.524Z",
+            "label": "8/9 09:16",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-09T02:15:22.463Z",
-            "label": "8/9 10:15",
+            "at": "2026-08-09T02:34:34.698Z",
+            "label": "8/9 10:34",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-09T03:28:12.579Z",
-            "label": "8/9 11:28",
+            "at": "2026-08-09T03:52:12.873Z",
+            "label": "8/9 11:52",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-09T04:41:02.695Z",
-            "label": "8/9 12:41",
+            "at": "2026-08-09T05:09:51.048Z",
+            "label": "8/9 13:09",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-09T05:53:52.811Z",
-            "label": "8/9 13:53",
+            "at": "2026-08-09T06:27:29.223Z",
+            "label": "8/9 14:27",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-09T07:06:42.927Z",
-            "label": "8/9 15:06",
+            "at": "2026-08-09T07:45:07.397Z",
+            "label": "8/9 15:45",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-09T08:19:33.043Z",
-            "label": "8/9 16:19",
+            "at": "2026-08-09T09:02:45.572Z",
+            "label": "8/9 17:02",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-09T09:32:23.159Z",
-            "label": "8/9 17:32",
+            "at": "2026-08-09T10:20:23.747Z",
+            "label": "8/9 18:20",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 64,
             "reports": 1
           }
@@ -2084,7 +2116,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T19:41:13.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -2095,68 +2127,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T21:03:23.934Z",
-            "label": "8/9 05:03",
+            "at": "2026-08-08T21:08:11.992Z",
+            "label": "8/9 05:08",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-08T22:25:34.868Z",
-            "label": "8/9 06:25",
+            "at": "2026-08-08T22:35:10.985Z",
+            "label": "8/9 06:35",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-08T23:47:45.802Z",
-            "label": "8/9 07:47",
+            "at": "2026-08-09T00:02:09.978Z",
+            "label": "8/9 08:02",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-09T01:09:56.736Z",
-            "label": "8/9 09:09",
+            "at": "2026-08-09T01:29:08.971Z",
+            "label": "8/9 09:29",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-09T02:32:07.670Z",
-            "label": "8/9 10:32",
+            "at": "2026-08-09T02:56:07.964Z",
+            "label": "8/9 10:56",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-09T03:54:18.604Z",
-            "label": "8/9 11:54",
+            "at": "2026-08-09T04:23:06.957Z",
+            "label": "8/9 12:23",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-09T05:16:29.538Z",
-            "label": "8/9 13:16",
+            "at": "2026-08-09T05:50:05.950Z",
+            "label": "8/9 13:50",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-09T06:38:40.472Z",
-            "label": "8/9 14:38",
+            "at": "2026-08-09T07:17:04.943Z",
+            "label": "8/9 15:17",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-09T08:00:51.406Z",
-            "label": "8/9 16:00",
+            "at": "2026-08-09T08:44:03.936Z",
+            "label": "8/9 16:44",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-09T09:23:02.340Z",
-            "label": "8/9 17:23",
+            "at": "2026-08-09T10:11:02.929Z",
+            "label": "8/9 18:11",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 58,
             "reports": 1
           }
@@ -2253,7 +2285,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T16:27:48.000Z",
-        "endedAt": "2026-08-09T10:45:13.275Z",
+        "endedAt": "2026-08-09T11:38:01.922Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -2264,68 +2296,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T18:07:33.934Z",
-            "label": "8/9 02:07",
+            "at": "2026-08-08T18:12:21.992Z",
+            "label": "8/9 02:12",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-08T19:47:19.868Z",
-            "label": "8/9 03:47",
+            "at": "2026-08-08T19:56:55.985Z",
+            "label": "8/9 03:56",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-08T21:27:05.802Z",
-            "label": "8/9 05:27",
+            "at": "2026-08-08T21:41:29.978Z",
+            "label": "8/9 05:41",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-08T23:06:51.736Z",
-            "label": "8/9 07:06",
+            "at": "2026-08-08T23:26:03.971Z",
+            "label": "8/9 07:26",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-09T00:46:37.670Z",
-            "label": "8/9 08:46",
+            "at": "2026-08-09T01:10:37.964Z",
+            "label": "8/9 09:10",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-09T02:26:23.604Z",
-            "label": "8/9 10:26",
+            "at": "2026-08-09T02:55:11.957Z",
+            "label": "8/9 10:55",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-09T04:06:09.538Z",
-            "label": "8/9 12:06",
+            "at": "2026-08-09T04:39:45.950Z",
+            "label": "8/9 12:39",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-09T05:45:55.472Z",
-            "label": "8/9 13:45",
+            "at": "2026-08-09T06:24:19.943Z",
+            "label": "8/9 14:24",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-09T07:25:41.406Z",
-            "label": "8/9 15:25",
+            "at": "2026-08-09T08:08:53.936Z",
+            "label": "8/9 16:08",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-09T09:05:27.340Z",
-            "label": "8/9 17:05",
+            "at": "2026-08-09T09:53:27.929Z",
+            "label": "8/9 17:53",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-09T10:45:13.275Z",
-            "label": "8/9 18:45",
+            "at": "2026-08-09T11:38:01.922Z",
+            "label": "8/9 19:38",
             "value": 58,
             "reports": 1
           }
