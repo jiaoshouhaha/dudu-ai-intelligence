@@ -54,7 +54,9 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
 
   const archive = buildArchive(retained, status.finishedAt, retentionDays);
 
-  const indexItems = retained.slice(0, 240);
+  const indexItems = retained
+    .filter((item) => !(item.contentType === 'paper' && item.importance < 78))
+    .slice(0, 240);
   const categories = Object.entries(Object.groupBy(retained.slice(0, 120), (item) => item.category))
     .map(([name, categoryItems]) => ({ name, count: categoryItems.length }))
     .sort((a, b) => b.count - a.count);
@@ -91,18 +93,39 @@ function addEventDerivedData(item, generatedAt) {
   const reports = (item.sources || [])
     .map((source) => ({ ...source, title: source.title || item.titleOriginal }))
     .sort((a, b) => new Date(b.publishedAt || item.publishedAt) - new Date(a.publishedAt || item.publishedAt));
-  const ageHours = Math.max(0, (new Date(generatedAt) - new Date(item.publishedAt)) / 36e5);
   const sourceLift = Math.min(24, reports.length * 7);
-  const current = Math.round(clamp((item.importance || 50) + sourceLift - ageHours * 1.5, 8, 100));
-  const heatHistory = Array.from({ length: 12 }, (_, index) => {
-    const hoursAgo = (11 - index) * 2;
-    return { label: hoursAgo === 0 ? '现在' : `${hoursAgo}小时前`, value: Math.round(clamp(current - (hoursAgo * 0.8) + sourceLift * 0.35, 8, 100)) };
+  const publishedMs = new Date(item.publishedAt).valueOf();
+  const generatedMs = new Date(generatedAt).valueOf();
+  const endMs = Math.max(publishedMs, generatedMs);
+  const durationMs = endMs - publishedMs;
+  const pointCount = durationMs < 5 * 60e3 ? 2 : Math.min(12, Math.max(2, Math.ceil(durationMs / 36e5) + 1));
+  const heatHistory = Array.from({ length: pointCount }, (_, index) => {
+    const atMs = publishedMs + (durationMs * index) / Math.max(1, pointCount - 1);
+    const reportsSeen = index === 0 ? 0 : reports.filter((report) => new Date(report.publishedAt || item.publishedAt).valueOf() <= atMs).length;
+    const progress = durationMs ? (atMs - publishedMs) / durationMs : 1;
+    const value = index === 0
+      ? 0
+      : Math.round(clamp(progress * ((item.importance || 50) * 0.55 + sourceLift * 1.6) + Math.min(45, reportsSeen * 14), 0, 100));
+    return {
+      at: new Date(atMs).toISOString(),
+      label: new Intl.DateTimeFormat('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' }).format(new Date(atMs)),
+      value,
+      reports: reportsSeen
+    };
   });
+  const current = heatHistory.at(-1)?.value || 0;
   return {
     ...item,
     reportCount: reports.length,
     reportTimeline: reports,
-    heat: { current, peak: Math.max(current, ...heatHistory.map((point) => point.value)), history: heatHistory, note: '根据公开报道数量、来源权威度与时效估算' }
+    heat: {
+      startedAt: item.publishedAt,
+      endedAt: new Date(endMs).toISOString(),
+      current,
+      peak: Math.max(current, ...heatHistory.map((point) => point.value)),
+      history: heatHistory,
+      note: '从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算'
+    }
   };
 }
 

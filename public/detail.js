@@ -24,6 +24,30 @@ function addParagraphs(element, text) {
   }));
 }
 
+function openMediaLightbox(url, caption) {
+  const lightbox = $('#mediaLightbox');
+  $('#mediaLightboxImage').src = url;
+  $('#mediaLightboxImage').alt = caption;
+  $('#mediaLightboxCaption').textContent = caption;
+  lightbox.hidden = false;
+  document.body.classList.add('lightbox-open');
+  $('#mediaLightboxClose').focus();
+}
+
+function closeMediaLightbox() {
+  $('#mediaLightbox').hidden = true;
+  $('#mediaLightboxImage').removeAttribute('src');
+  document.body.classList.remove('lightbox-open');
+}
+
+$('#mediaLightboxClose').addEventListener('click', closeMediaLightbox);
+$('#mediaLightbox').addEventListener('click', (event) => {
+  if (event.target.id === 'mediaLightbox') closeMediaLightbox();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !$('#mediaLightbox').hidden) closeMediaLightbox();
+});
+
 function renderSourceMedia(item) {
   const images = [...new Set((item.images || []).filter((url) => /^https?:\/\//i.test(url)))].slice(0, 8);
   const section = $('#mediaSection');
@@ -36,6 +60,15 @@ function renderSourceMedia(item) {
     image.alt = `${item.titleZh || item.titleOriginal} · 原文配图 ${index + 1}`;
     image.loading = 'lazy';
     image.decoding = 'async';
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.addEventListener('click', () => openMediaLightbox(url, caption.textContent));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openMediaLightbox(url, caption.textContent);
+      }
+    });
     image.addEventListener('error', () => {
       figure.remove();
       section.hidden = !grid.children.length;
@@ -81,20 +114,35 @@ function renderVisual(item) {
     row.append(label, track, number);
     return row;
   }));
+  const highest = data.reduce((best, point) => Number(point.value) > Number(best.value) ? point : best, data[0]);
+  const lowest = data.reduce((best, point) => Number(point.value) < Number(best.value) ? point : best, data[0]);
+  const difference = Number(highest.value) - Number(lowest.value);
+  $('#visualInsight').textContent = visual.insightZh || (difference
+    ? `从原文数字看，${highest.label}为 ${highest.display || highest.value}${visual.unit || ''}，${lowest.label}为 ${lowest.display || lowest.value}${visual.unit || ''}，相差 ${difference}${visual.unit || ''}。这里只做数值对照，不代表因果关系。`
+    : '原文给出的数字接近，图表主要用于并列查看。');
   section.hidden = false;
 }
 
 function renderIntelligence(item) {
   const heat = item.heat || {};
   const history = Array.isArray(heat.history) ? heat.history : [];
-  $('#heatSummary').textContent = `当前估算 ${heat.current || item.importance || '—'} · 峰值 ${heat.peak || heat.current || item.importance || '—'}`;
+  const currentHeat = Number.isFinite(Number(heat.current)) ? heat.current : item.importance;
+  const peakHeat = Number.isFinite(Number(heat.peak)) ? heat.peak : currentHeat;
+  $('#heatSummary').textContent = `当前估算 ${currentHeat ?? '—'} · 峰值 ${peakHeat ?? '—'}`;
+  if (history.length) {
+    $('#heatWindow').textContent = `从 ${formatTime(history[0].at || heat.startedAt || item.publishedAt)} 开始，到 ${formatTime(history.at(-1).at || heat.endedAt || item.publishedAt)}；第一格代表新闻发布时刻。`;
+  }
+  const values = history.map((point) => Number(point.value) || 0);
+  const minValue = Math.min(...values, 0);
+  const maxValue = Math.max(...values, 1);
+  const valueRange = Math.max(1, maxValue - minValue);
   $('#heatChart').replaceChildren(...history.map((point) => {
     const wrapper = document.createElement('div');
     wrapper.className = 'heat-bar-wrap';
     const bar = document.createElement('span');
     bar.className = 'heat-bar';
-    bar.style.height = `${Math.max(8, Number(point.value || 0))}%`;
-    bar.title = `${point.label}：${point.value}`;
+    bar.style.height = `${Math.max(4, 10 + ((Number(point.value || 0) - minValue) / valueRange) * 86)}%`;
+    bar.title = `${point.label || formatTime(point.at)}：${point.value}（${point.reports || 0} 条报道）`;
     const label = document.createElement('small');
     label.textContent = point.label;
     wrapper.append(bar, label);
@@ -126,6 +174,47 @@ function renderIntelligence(item) {
   }));
 }
 
+function renderRelevance(item) {
+  const reader = String(item.readerImpactZh || '').trim();
+  const user = String(item.userImpactZh || '').trim();
+  $('#readerImpactContent').textContent = reader;
+  $('#userImpactContent').textContent = user;
+  $('#readerImpactCard').hidden = !reader;
+  $('#userImpactCard').hidden = !user;
+  $('#relevanceSection').hidden = !reader && !user;
+  const how = String(item.howItWorksZh || '').trim();
+  addParagraphs($('#howItWorksContent'), how);
+  $('#howItWorksSection').hidden = !how;
+  const interpretation = String(item.interpretationZh || '').trim();
+  const limitations = String(item.limitationsZh || '').trim();
+  addParagraphs($('#interpretationContent'), interpretation);
+  addParagraphs($('#limitationsContent'), limitations ? `边界与待核实：${limitations}` : '');
+  $('#interpretationSection').hidden = !interpretation && !limitations;
+}
+
+function renderResourceLinks(item) {
+  const links = [...new Set((item.resourceLinks || []).filter((url) => /^https?:\/\//i.test(url) && url !== item.originalUrl))].slice(0, 12);
+  const section = $('#resourceSection');
+  const container = $('#resourceLinks');
+  container.replaceChildren(...links.map((url) => {
+    const link = document.createElement('a');
+    link.className = 'resource-link';
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    try {
+      const parsed = new URL(url);
+      const path = `${parsed.hostname}${parsed.pathname}`.replace(/\/$/, '');
+      link.textContent = /(?:github|gitlab)/i.test(parsed.hostname) ? `代码仓库 · ${path}` : /\.pdf(?:$|\?)/i.test(parsed.pathname) ? `PDF 文件 · ${path}` : path;
+    } catch {
+      link.textContent = url;
+    }
+    link.append(' ↗');
+    return link;
+  }));
+  section.hidden = links.length === 0;
+}
+
 function render(item) {
   const source = item.sources?.[0]?.name || '未知来源';
   const detail = item.detailZh || item.summaryZh || '这条新闻的中文详情尚在生成中。';
@@ -146,11 +235,13 @@ function render(item) {
   addTextList($('#keyPoints'), points);
   $('#keyPointsSection').hidden = points.length === 0;
   $('#impactContent').textContent = impact;
+  renderRelevance(item);
   addTextList($('#actionSteps'), steps);
   $('#actionSection').hidden = steps.length === 0;
   renderSourceMedia(item);
   renderVisual(item);
   renderIntelligence(item);
+  renderResourceLinks(item);
   $('#limitedNotice').hidden = item.detailCompleteness !== 'limited' && Boolean(item.detailZh);
   $('#sourceName').textContent = `来源：${source}`;
   $('#publishTime').textContent = `发布时间：${formatTime(item.publishedAt)}`;

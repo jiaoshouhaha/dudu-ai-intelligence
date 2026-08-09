@@ -49,6 +49,7 @@ export function validateAiPayload(payload) {
         titleZh: String(visualInput.titleZh || visualInput.title || '数据对比').slice(0, 100),
         unit: String(visualInput.unit || '').slice(0, 20),
         noteZh: String(visualInput.noteZh || visualInput.note || '').slice(0, 240),
+        insightZh: String(visualInput.insightZh || visualInput.insight || '').slice(0, 360),
         data: visualData
       }
     : null;
@@ -63,9 +64,14 @@ export function validateAiPayload(payload) {
     models: Array.isArray(payload.models) ? payload.models.map(String).slice(0, 6) : [],
     contentType,
     evidenceLevel,
-    detailZh: String(payload.detailZh || payload.summaryZh).slice(0, 2400),
+    detailZh: String(payload.detailZh || payload.summaryZh).slice(0, 3200),
     keyPointsZh: cleanList(payload.keyPointsZh, 5, 300),
     impactZh: String(payload.impactZh || payload.reasonZh).slice(0, 800),
+    readerImpactZh: String(payload.readerImpactZh || '').slice(0, 900),
+    userImpactZh: String(payload.userImpactZh || '').slice(0, 900),
+    howItWorksZh: String(payload.howItWorksZh || '').slice(0, 1800),
+    interpretationZh: String(payload.interpretationZh || '').slice(0, 1400),
+    limitationsZh: String(payload.limitationsZh || '').slice(0, 900),
     actionStepsZh: cleanList(payload.actionStepsZh, 5, 400),
     detailCompleteness: VALID_DETAIL_COMPLETENESS.has(payload.detailCompleteness) ? payload.detailCompleteness : 'summary',
     visual,
@@ -101,12 +107,12 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
         model: config.model,
         thinking: { type: 'disabled' },
         temperature: 0.1,
-        max_tokens: 2800,
+        max_tokens: 3500,
         response_format: { type: 'json_object' },
         messages: [
           {
             role: 'system',
-            content: 'You are a Chinese AI intelligence editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,contentType,topics,models,evidenceLevel,keywords,importance,reasonZh,reasonEn,detailZh,keyPointsZh,impactZh,actionStepsZh,detailCompleteness,visual. category must be models,products,agent,tips,business,research,policy,opensource,opinion,other. contentType must be official,practical,opensource,paper,benchmark,industry,opinion. evidenceLevel must be primary,verified,practitioner,unverified. detailZh is a clear 2-4 paragraph Chinese explanation of what happened, its background and known facts. keyPointsZh is 2-5 concise factual points. impactZh explains practical impact for readers, developers or the industry. actionStepsZh contains 0-5 actionable steps only when the source supports them, especially for practical tips; otherwise return an empty array. detailCompleteness must be full,summary,limited based on source material richness. visual must be an object with type bar,comparison,metrics,line or none; create it only when the input explicitly contains at least two comparable numeric facts (prices, scores, parameter counts, percentages, dates or counts), use data as label/value pairs, and never infer or invent numbers. Use type none when there is no reliable comparison. Practical configurations, reproducible workflows, code and cost-saving methods are valuable. Lower scores for hype or unsupported claims. importance is 1-100. Translate accurately. Use only facts present in the input, explicitly reflect limited source material, and never invent details.'
+            content: 'You are a Chinese AI intelligence editor. Return valid json only with titleZh,titleEn,summaryZh,summaryEn,category,contentType,topics,models,evidenceLevel,keywords,importance,reasonZh,reasonEn,detailZh,keyPointsZh,impactZh,readerImpactZh,userImpactZh,howItWorksZh,interpretationZh,limitationsZh,actionStepsZh,detailCompleteness,visual. category must be models,products,agent,tips,business,research,policy,opensource,opinion,other. contentType must be official,practical,opensource,paper,benchmark,industry,opinion. evidenceLevel must be primary,verified,practitioner,unverified. detailZh must be a clear 3-6 paragraph Chinese explanation of what happened, background, known facts and sequence. keyPointsZh is 2-5 concise factual points. impactZh explains why the event matters. readerImpactZh explains concrete effects for ordinary people only when there is a real effect; otherwise return an empty string. userImpactZh explains concrete effects for AI users, developers or teams only when there is a real effect; otherwise return an empty string. howItWorksZh explains how the product, technique or event actually works, using only source-supported details; for a practical workflow give reproducible steps or configuration concepts, and otherwise return an empty string. interpretationZh gives a neutral plain-language reading, clearly separating reported facts from reasonable inference; limitationsZh lists material caveats, uncertainty or what remains unverified, and otherwise return an empty string. actionStepsZh contains 0-5 useful, source-supported actions, not generic advice. detailCompleteness must be full,summary,limited based on source material richness. visual must be an object with type bar,comparison,metrics,line or none; create it only when the input explicitly contains at least two comparable numeric facts (prices, scores, parameter counts, percentages, dates or counts), use data as label/value pairs, never infer or invent numbers, and include insightZh only as a direct comparison of those values. Use type none when there is no reliable comparison. Practical configurations, reproducible workflows, code and cost-saving methods are valuable. Prefer broadly readable and useful news over highly technical paper detail; lower scores for hype, unsupported claims and papers with no practical takeaway. importance is 1-100. Translate accurately. Use only facts present in the input, explicitly reflect limited source material, and never invent details.'
           },
           { role: 'user', content: JSON.stringify(prompt) }
         ]
@@ -133,6 +139,11 @@ export async function enrichEvent(event, config = aiConfig(), fetchImpl = fetch)
       detailZh: result.detailZh,
       keyPointsZh: result.keyPointsZh,
       impactZh: result.impactZh,
+      readerImpactZh: result.readerImpactZh,
+      userImpactZh: result.userImpactZh,
+      howItWorksZh: result.howItWorksZh,
+      interpretationZh: result.interpretationZh,
+      limitationsZh: result.limitationsZh,
       actionStepsZh: result.actionStepsZh,
       detailCompleteness: result.detailCompleteness,
       visual: result.visual,
@@ -189,6 +200,11 @@ export function finalizeFallback(event, error = null) {
     detailZh: event.detailZh || '',
     keyPointsZh: Array.isArray(event.keyPointsZh) ? event.keyPointsZh : [],
     impactZh: event.impactZh || event.importanceReasonZh || '',
+    readerImpactZh: event.readerImpactZh || '',
+    userImpactZh: event.userImpactZh || '',
+    howItWorksZh: event.howItWorksZh || '',
+    interpretationZh: event.interpretationZh || '',
+    limitationsZh: event.limitationsZh || '',
     actionStepsZh: Array.isArray(event.actionStepsZh) ? event.actionStepsZh : [],
     detailCompleteness: VALID_DETAIL_COMPLETENESS.has(event.detailCompleteness) ? event.detailCompleteness : 'limited',
     visual: event.visual || null,

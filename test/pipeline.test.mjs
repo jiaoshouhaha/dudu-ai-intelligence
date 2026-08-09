@@ -10,7 +10,7 @@ import { scoreEvent } from '../src/lib/score.mjs';
 import { aiConfig, enrichEvent, finalizeFallback, validateAiPayload } from '../src/lib/ai-client.mjs';
 import { runPipeline } from '../src/lib/pipeline.mjs';
 import { translateEventToChinese } from '../src/lib/translate.mjs';
-import { dateKeyInTimeZone, extractImageUrls } from '../src/lib/utils.mjs';
+import { dateKeyInTimeZone, extractImageUrls, extractResourceLinks, titleSimilarity } from '../src/lib/utils.mjs';
 import { parseAihotItems } from '../src/lib/source-adapters.mjs';
 
 const fixture = await fs.readFile(new URL('./fixtures/sample-rss.xml', import.meta.url), 'utf8');
@@ -28,6 +28,17 @@ test('extracts source images from RSS HTML and media fields', () => {
   const xml = `<rss><channel><item><title>Chart story</title><link>https://example.com/chart</link><description><![CDATA[<p>Summary</p><img src="https://cdn.example.com/chart.png" />]]></description><media:content xmlns:media="media" url="https://cdn.example.com/figure.webp" type="image/webp" /></item></channel></rss>`;
   const [item] = parseFeed(xml, source);
   assert.deepEqual(item.images, ['https://cdn.example.com/chart.png', 'https://cdn.example.com/figure.webp']);
+});
+
+test('extracts useful document and demo links without treating images as resources', () => {
+  const links = extractResourceLinks('Read https://github.com/example/demo and https://example.com/guide.pdf, image https://cdn.example.com/chart.png');
+  assert.deepEqual(links, ['https://github.com/example/demo', 'https://example.com/guide.pdf']);
+});
+
+test('title similarity catches translated release variants with shared entities', () => {
+  const similarity = titleSimilarity('OpenAI launches GPT-5.6 model with open weights', 'OpenAI launches GPT-5.6 model and open weights');
+  assert.ok(similarity.intersection >= 3);
+  assert.ok(similarity.score >= 0.64);
 });
 
 test('normalizes tracking parameters without removing meaningful query params', () => {
@@ -69,10 +80,12 @@ test('AI payload validation clamps score and normalizes unknown categories', () 
 });
 
 test('AI payload validation keeps structured Chinese detail fields', () => {
-  const value = validateAiPayload({ titleZh: '中', titleEn: 'EN', summaryZh: '摘要', summaryEn: 'Summary', category: 'tips', keywords: ['agent'], importance: 80, reasonZh: '理由', reasonEn: 'Reason', detailZh: '第一段。\n\n第二段。', keyPointsZh: ['要点一', '', '要点二'], impactZh: '可以降低成本。', actionStepsZh: ['创建配置', '运行测试'], detailCompleteness: 'full' });
+  const value = validateAiPayload({ titleZh: '中', titleEn: 'EN', summaryZh: '摘要', summaryEn: 'Summary', category: 'tips', keywords: ['agent'], importance: 80, reasonZh: '理由', reasonEn: 'Reason', detailZh: '第一段。\n\n第二段。', keyPointsZh: ['要点一', '', '要点二'], impactZh: '可以降低成本。', readerImpactZh: '普通人可以直接使用。', userImpactZh: '开发者可复用配置。', howItWorksZh: '通过代理调度完成。', interpretationZh: '这意味着门槛下降。', limitationsZh: '仍需实测。', actionStepsZh: ['创建配置', '运行测试'], detailCompleteness: 'full' });
   assert.equal(value.detailZh, '第一段。\n\n第二段。');
   assert.deepEqual(value.keyPointsZh, ['要点一', '要点二']);
   assert.deepEqual(value.actionStepsZh, ['创建配置', '运行测试']);
+  assert.equal(value.readerImpactZh, '普通人可以直接使用。');
+  assert.equal(value.howItWorksZh, '通过代理调度完成。');
   assert.equal(value.detailCompleteness, 'full');
 });
 
@@ -175,6 +188,10 @@ test('pipeline isolates a failed source and writes valid data files', async () =
   const archive = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'archive.json'), 'utf8'));
   assert.equal(archive.retentionDays, 180);
   assert.equal(archive.months[0].days[0].date, '2026-08-01');
+  const generatedItem = output.items[0];
+  assert.ok(generatedItem.heat.history.length >= 2);
+  assert.equal(generatedItem.heat.history[0].at, generatedItem.publishedAt);
+  assert.ok(generatedItem.heat.history.every((point) => new Date(point.at).valueOf() >= new Date(generatedItem.publishedAt).valueOf()));
   const seen = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'seen.json'), 'utf8'));
   assert.equal(Object.keys(seen.events).length, 3);
 

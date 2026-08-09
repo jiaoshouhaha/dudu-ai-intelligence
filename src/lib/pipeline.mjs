@@ -6,7 +6,7 @@ import { scoreEvent } from './score.mjs';
 import { aiConfig, enrichEvents, finalizeFallback } from './ai-client.mjs';
 import { translateEventsToChinese, translationConfig } from './translate.mjs';
 import { readExistingData, readSeenData, writeDataFiles } from './storage.mjs';
-import { dateKeyInTimeZone, hasReleaseSignal, jaccard, modelEntities, tokenizeTitle } from './utils.mjs';
+import { dateKeyInTimeZone, hasReleaseSignal, modelEntities, titleSimilarity } from './utils.mjs';
 import { parseAihotItems } from './source-adapters.mjs';
 
 async function fetchSource(source, options) {
@@ -48,12 +48,21 @@ function candidateRank(event) {
 }
 
 export function selectCandidateEvents(events, maxNew) {
-  return [...events].sort((left, right) => {
+  const sorted = [...events].sort((left, right) => {
     const a = candidateRank(left);
     const b = candidateRank(right);
     for (let index = 0; index < a.length; index += 1) if (a[index] !== b[index]) return a[index] - b[index];
     return 0;
-  }).slice(0, maxNew);
+  });
+  const papers = sorted.filter((event) => event.sourceType === 'paper' || event.contentType === 'paper').slice(0, 2);
+  return [...sorted.filter((event) => event.sourceType !== 'paper' && event.contentType !== 'paper'), ...papers]
+    .sort((left, right) => {
+      const a = candidateRank(left);
+      const b = candidateRank(right);
+      for (let index = 0; index < a.length; index += 1) if (a[index] !== b[index]) return a[index] - b[index];
+      return 0;
+    })
+    .slice(0, maxNew);
 }
 
 export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = new Date(), fixtureXml = null }) {
@@ -77,7 +86,8 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
   const freshEvents = dedupeItems(normalized).map((event) => scoreEvent(event, now));
   const sameEvent = (left, right) => {
     if (left.id === right.id || left.normalizedUrl === right.normalizedUrl) return true;
-    if (jaccard(tokenizeTitle(left.titleOriginal), tokenizeTitle(right.titleOriginal)) >= 0.72) return true;
+    const similarity = titleSimilarity(left.titleOriginal, right.titleOriginal);
+    if (similarity.score >= 0.64 && similarity.intersection >= 3) return true;
     return [...modelEntities(left.titleOriginal)].some((name) => modelEntities(right.titleOriginal).has(name)) &&
       hasReleaseSignal(left.titleOriginal) && hasReleaseSignal(right.titleOriginal);
   };
@@ -94,6 +104,7 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
       authority: Math.max(old.authority || 0, incoming.authority || 0),
       sourcePriority: Math.max(old.sourcePriority || 0, incoming.sourcePriority || 0),
       images: [...new Set([...(old.images || []), ...(incoming.images || [])])].slice(0, 8),
+      resourceLinks: [...new Set([...(old.resourceLinks || []), ...(incoming.resourceLinks || [])])].slice(0, 12),
       sources
     };
   };
@@ -121,8 +132,8 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
     .filter((event) => !existingIds.has(event.id) && !retainedSeen[event.id] && !matchesExisting(event))
     , maxNew);
   const detailBackfill = existing
-    .filter((event) => !event.detailZh)
-    .slice(0, Math.max(0, maxNew - newEvents.length));
+    .filter((event) => !event.detailZh || !event.readerImpactZh || !event.howItWorksZh)
+    .slice(0, Math.min(2, Math.max(0, maxNew - newEvents.length)));
   const enrichedCandidates = await enrichEvents([...newEvents, ...detailBackfill], aiConfig());
   const enriched = enrichedCandidates.slice(0, newEvents.length);
   const backfilledDetails = enrichedCandidates.slice(newEvents.length);

@@ -1,11 +1,12 @@
-import { hasReleaseSignal, jaccard, modelEntities, stableId, tokenizeTitle } from './utils.mjs';
+import { hasReleaseSignal, modelEntities, stableId, titleSimilarity } from './utils.mjs';
 
 export function dedupeItems(items, threshold = 0.72) {
   const events = [];
   for (const item of items.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))) {
     const match = events.find((event) => {
       if (event.normalizedUrl === item.normalizedUrl || event.fingerprint === item.fingerprint) return true;
-      if (jaccard(tokenizeTitle(event.titleOriginal), tokenizeTitle(item.title)) >= threshold) return true;
+      const similarity = titleSimilarity(event.titleOriginal, item.title);
+      if (similarity.score >= Math.min(threshold, 0.64) && similarity.intersection >= 3) return true;
       const sharedModels = [...modelEntities(event.titleOriginal)].some((name) => modelEntities(item.title).has(name));
       return sharedModels && hasReleaseSignal(event.titleOriginal) && hasReleaseSignal(item.title);
     });
@@ -19,7 +20,8 @@ export function dedupeItems(items, threshold = 0.72) {
       title: item.title,
       authority: item.authority,
       sourcePriority: item.sourcePriority || item.authority || 0,
-      images: item.images || []
+      images: item.images || [],
+      resourceLinks: item.resourceLinks || []
     };
 
     if (match) {
@@ -28,6 +30,7 @@ export function dedupeItems(items, threshold = 0.72) {
       match.authority = Math.max(match.authority, item.authority);
       match.sourcePriority = Math.max(match.sourcePriority || 0, item.sourcePriority || item.authority || 0);
       match.images = [...new Set([...(match.images || []), ...(item.images || [])])].slice(0, 8);
+      match.resourceLinks = [...new Set([...(match.resourceLinks || []), ...(item.resourceLinks || [])])].slice(0, 12);
       const prefersOfficialLink = /(?:qwen\.ai|openai\.com|deepseek\.com|anthropic\.com|deepmind\.google|blog\.google)/i.test(item.url || '') &&
         !/(?:qwen\.ai|openai\.com|deepseek\.com|anthropic\.com|deepmind\.google|blog\.google)/i.test(match.originalUrl || '');
       if ((item.sourceType === 'official' && match.sourceType !== 'official') || prefersOfficialLink) {
@@ -58,6 +61,7 @@ export function dedupeItems(items, threshold = 0.72) {
       authority: item.authority,
       sourcePriority: item.sourcePriority || item.authority || 0,
       images: [...new Set(item.images || [])].slice(0, 8),
+      resourceLinks: [...new Set(item.resourceLinks || [])].slice(0, 12),
       publishedAt: item.publishedAt,
       discoveredAt: item.discoveredAt || null,
       contentType: item.contentTypeHint || null,

@@ -114,6 +114,35 @@ export function extractImageUrls(value) {
   return [...urls].slice(0, 8);
 }
 
+export function extractResourceLinks(value) {
+  const links = new Set();
+  const imagePattern = /\.(?:png|jpe?g|webp|gif|svg)(?:[?#]|$)/i;
+  const add = (candidate) => {
+    if (typeof candidate !== 'string' || !/^https?:\/\//i.test(candidate)) return;
+    const clean = candidate.replace(/[),.;，。！？）】]+$/, '').replace(/&amp;/gi, '&').trim();
+    if (clean && !imagePattern.test(clean)) links.add(clean);
+  };
+  const visit = (node) => {
+    if (node == null) return;
+    if (typeof node === 'string') {
+      for (const match of node.matchAll(/https?:\/\/[^\s"'<>]+/gi)) add(match[0]);
+      return;
+    }
+    if (Array.isArray(node)) return node.forEach(visit);
+    if (typeof node === 'object') Object.values(node).forEach(visit);
+  };
+  visit(value);
+  return [...links].slice(0, 12);
+}
+
+export function titleSimilarity(left, right) {
+  const a = tokenizeTitle(left);
+  const b = tokenizeTitle(right);
+  let intersection = 0;
+  for (const token of a) if (b.has(token)) intersection += 1;
+  return { score: jaccard(a, b), intersection };
+}
+
 export function jaccard(left, right) {
   if (!left.size || !right.size) return 0;
   let intersection = 0;

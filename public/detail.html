@@ -40,6 +40,14 @@
           <p class="media-note">图片来自公开来源，仅用于帮助理解；完整上下文请查看原文。</p>
         </section>
 
+        <div id="mediaLightbox" class="media-lightbox" hidden role="dialog" aria-modal="true" aria-label="放大查看图片">
+          <button id="mediaLightboxClose" class="media-lightbox-close" type="button" aria-label="关闭图片">×</button>
+          <figure>
+            <img id="mediaLightboxImage" alt="" />
+            <figcaption id="mediaLightboxCaption"></figcaption>
+          </figure>
+        </div>
+
         <aside id="limitedNotice" class="source-notice" hidden>这篇解读基于来源公开摘要整理，细节有限；如需核对完整上下文，请查看原文。</aside>
 
         <section class="detail-section">
@@ -60,27 +68,62 @@
           <p id="impactContent" class="detail-copy"></p>
         </section>
 
-        <section id="visualSection" class="detail-section visual-section" hidden>
+        <section id="relevanceSection" class="detail-section narrative-section" hidden>
           <p class="section-kicker">04</p>
+          <div>
+            <h2>和你有什么关系</h2>
+            <div class="relevance-grid">
+              <article id="readerImpactCard" class="relevance-card" hidden>
+                <span>普通人</span>
+                <p id="readerImpactContent"></p>
+              </article>
+              <article id="userImpactCard" class="relevance-card" hidden>
+                <span>AI 使用者 / 开发者</span>
+                <p id="userImpactContent"></p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="howItWorksSection" class="detail-section narrative-section" hidden>
+          <p class="section-kicker">05</p>
+          <div>
+            <h2>它具体是怎么做到的</h2>
+            <div id="howItWorksContent" class="detail-copy"></div>
+          </div>
+        </section>
+
+        <section id="interpretationSection" class="detail-section narrative-section" hidden>
+          <p class="section-kicker">06</p>
+          <div>
+            <h2>通俗解读与边界</h2>
+            <div id="interpretationContent" class="detail-copy"></div>
+            <div id="limitationsContent" class="detail-copy caveat-copy"></div>
+          </div>
+        </section>
+
+        <section id="visualSection" class="detail-section visual-section" hidden>
+          <p class="section-kicker">07</p>
           <div>
             <h2 id="visualTitle">数据图表</h2>
             <p id="visualNote" class="section-note"></p>
             <div id="visualChart" class="visual-chart"></div>
+            <p id="visualInsight" class="visual-insight"></p>
           </div>
         </section>
 
         <section class="detail-section intelligence-section">
-          <p class="section-kicker">05</p>
+          <p class="section-kicker">08</p>
           <div>
             <h2>事件热度走势</h2>
-            <p class="section-note">根据公开报道数量、来源权威度与发布时间估算，仅用于判断关注度变化。</p>
+            <p id="heatWindow" class="section-note">从新闻发布时间开始，根据公开报道数量、来源权威度与发布时间估算。</p>
             <div id="heatSummary" class="heat-summary"></div>
             <div id="heatChart" class="heat-chart" aria-label="事件热度估算走势"></div>
           </div>
         </section>
 
         <section class="detail-section intelligence-section">
-          <p class="section-kicker">06</p>
+          <p class="section-kicker">09</p>
           <div>
             <h2>报道时间线</h2>
             <p id="reportCount" class="section-note"></p>
@@ -89,9 +132,18 @@
         </section>
 
         <section id="actionSection" class="detail-section action-section" hidden>
-          <p class="section-kicker">07</p>
+          <p class="section-kicker">10</p>
           <h2>可以怎么做</h2>
           <ol id="actionSteps" class="action-steps"></ol>
+        </section>
+
+        <section id="resourceSection" class="detail-section resource-section" hidden>
+          <p class="section-kicker">11</p>
+          <div>
+            <h2>原文中的有用链接</h2>
+            <p class="section-note">只保留原文里可能有帮助的文档、代码、演示和文件入口。</p>
+            <div id="resourceLinks" class="resource-links"></div>
+          </div>
         </section>
 
         <footer class="article-footer">
