@@ -181,15 +181,16 @@ function renderRelevance(item) {
   $('#userImpactContent').textContent = user;
   $('#readerImpactCard').hidden = !reader;
   $('#userImpactCard').hidden = !user;
-  $('#relevanceSection').hidden = !reader && !user;
+  $('#relevanceGrid').hidden = !reader && !user;
   const how = String(item.howItWorksZh || '').trim();
   addParagraphs($('#howItWorksContent'), how);
-  $('#howItWorksSection').hidden = !how;
+  $('#howItWorksBlock').hidden = !how;
   const interpretation = String(item.interpretationZh || '').trim();
   const limitations = String(item.limitationsZh || '').trim();
   addParagraphs($('#interpretationContent'), interpretation);
   addParagraphs($('#limitationsContent'), limitations ? `边界与待核实：${limitations}` : '');
-  $('#interpretationSection').hidden = !interpretation && !limitations;
+  $('#interpretationBlock').hidden = !interpretation && !limitations;
+  $('#contextSection').hidden = !reader && !user && !how && !interpretation && !limitations;
 }
 
 function renderResourceLinks(item) {
