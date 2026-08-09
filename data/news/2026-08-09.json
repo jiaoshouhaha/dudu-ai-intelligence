@@ -1,7 +1,150 @@
 {
-  "generatedAt": "2026-08-09T07:36:57.660Z",
+  "generatedAt": "2026-08-09T08:55:17.025Z",
   "date": "2026-08-09",
   "items": [
+    {
+      "id": "162ad743b73db74b",
+      "normalizedUrl": "https://marktechpost.com/2026/08/09/imdb-sentiment-analysis-with-distilbert-lora-tf-idf-baselines-calibration-interpretability-robustness-testing-and-semi-supervised-learning",
+      "originalUrl": "https://www.marktechpost.com/2026/08/09/imdb-sentiment-analysis-with-distilbert-lora-tf-idf-baselines-calibration-interpretability-robustness-testing-and-semi-supervised-learning",
+      "titleOriginal": "用DistilBERT LoRA与TF-IDF基线做IMDb情感分析：校准、可解释性与半监督学习",
+      "summaryOriginal": "本教程基于Stanford IMDb数据集构建端到端情感分析流程，对比TF-IDF逻辑回归基线与LoRA微调的DistilBERT。模型评估涵盖准确率、macro-F1、ROC-AUC及期望校准误差，并分析置信错误、长度影响与词级遮挡显著性。最后利用未标注IMDb数据做置信度伪标注，比较半监督模型与基线，保存合并后的Transformer用于推理。",
+      "originalLanguage": "zh",
+      "author": "MarkTechPost（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmslhy76p03hdroo0l8dsaskb",
+        "https://www.marktechpost.com/2026/08/09/imdb-sentiment-analysis-with-distilbert-lora-tf-idf-baselines-calibration-interpretability-robustness-testing-and-semi-supervised-learning"
+      ],
+      "publishedAt": "2026-08-09T07:17:35.000Z",
+      "discoveredAt": "2026-08-09T07:44:10.959Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.virxact.com/items/cmslhy76p03hdroo0l8dsaskb"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmslhy76p03hdroo0l8dsaskb",
+          "name": "MarkTechPost（RSS）",
+          "type": "practitioner",
+          "url": "https://www.marktechpost.com/2026/08/09/imdb-sentiment-analysis-with-distilbert-lora-tf-idf-baselines-calibration-interpretability-robustness-testing-and-semi-supervised-learning",
+          "publishedAt": "2026-08-09T07:17:35.000Z",
+          "title": "用DistilBERT LoRA与TF-IDF基线做IMDb情感分析：校准、可解释性与半监督学习",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmslhy76p03hdroo0l8dsaskb",
+            "https://www.marktechpost.com/2026/08/09/imdb-sentiment-analysis-with-distilbert-lora-tf-idf-baselines-calibration-interpretability-robustness-testing-and-semi-supervised-learning"
+          ]
+        }
+      ],
+      "importance": 65,
+      "importanceReasonZh": "该教程提供了从基线到先进微调方法的完整对比，涵盖校准和可解释性，对实践者有直接参考价值，但缺乏具体数值结果，重要性中等。",
+      "importanceReasonEn": "The tutorial provides a complete comparison from baseline to advanced fine-tuning, covering calibration and interpretability, with direct reference value for practitioners, but lacks specific numerical results, so importance is moderate.",
+      "scoringMode": "ai",
+      "titleZh": "用DistilBERT LoRA与TF-IDF基线做IMDb情感分析：校准、可解释性与半监督学习",
+      "titleEn": "IMDb Sentiment Analysis with DistilBERT LoRA and TF-IDF Baseline: Calibration, Interpretability, and Semi-Supervised Learning",
+      "summaryZh": "本教程基于Stanford IMDb数据集构建端到端情感分析流程，对比TF-IDF逻辑回归基线与LoRA微调的DistilBERT。模型评估涵盖准确率、macro-F1、ROC-AUC及期望校准误差，并分析置信错误、长度影响与词级遮挡显著性。最后利用未标注IMDb数据做置信度伪标注，比较半监督模型与基线，保存合并后的Transformer用于推理。",
+      "summaryEn": "This tutorial builds an end-to-end sentiment analysis pipeline on the Stanford IMDb dataset, comparing a TF-IDF logistic regression baseline with a LoRA-finetuned DistilBERT. Model evaluation covers accuracy, macro-F1, ROC-AUC, and expected calibration error, along with analysis of confidence errors, length effects, and token-level occlusion saliency. Finally, unlabeled IMDb data is used for confidence-based pseudo-labeling, comparing semi-supervised models against the baseline, and saving the merged Transformer for inference.",
+      "keywords": [
+        "IMDb",
+        "sentiment analysis",
+        "LoRA",
+        "DistilBERT",
+        "TF-IDF",
+        "calibration",
+        "interpretability",
+        "semi-supervised"
+      ],
+      "topics": [
+        "sentiment analysis",
+        "DistilBERT",
+        "LoRA",
+        "TF-IDF",
+        "calibration",
+        "interpretability",
+        "semi-supervised learning"
+      ],
+      "models": [
+        "DistilBERT",
+        "TF-IDF Logistic Regression"
+      ],
+      "detailZh": "本教程基于Stanford IMDb数据集，构建了一个端到端的情感分析流程。首先，使用TF-IDF特征和逻辑回归建立一个基线模型，作为性能对比的基准。然后，采用LoRA（Low-Rank Adaptation）技术对DistilBERT进行微调，以高效地适应情感分析任务。模型评估包括准确率、macro-F1、ROC-AUC以及期望校准误差（ECE），以全面衡量模型性能。此外，教程还分析了置信错误（即模型高置信但预测错误的情况）以及文本长度对模型性能的影响。为了增强可解释性，使用词级遮挡（occlusion）方法生成显著性图，展示哪些词对模型预测贡献最大。最后，利用未标注的IMDb数据进行半监督学习，通过置信度阈值进行伪标注，将伪标注数据与原始训练数据合并，重新训练模型，并与基线模型进行比较。最终，保存合并后的Transformer模型用于推理。整个过程提供了详细的代码和步骤，适合实践者学习和应用。",
+      "keyPointsZh": [
+        "使用TF-IDF逻辑回归作为基线，与LoRA微调的DistilBERT进行对比。",
+        "评估指标包括准确率、macro-F1、ROC-AUC和期望校准误差（ECE）。",
+        "分析置信错误和文本长度对模型性能的影响。",
+        "通过词级遮挡生成显著性图，增强模型可解释性。",
+        "利用未标注IMDb数据通过置信度伪标注进行半监督学习，并比较模型性能。"
+      ],
+      "impactZh": "该教程为情感分析任务提供了一套完整的实践流程，展示了如何结合传统机器学习基线与现代Transformer微调方法，并引入校准和可解释性分析。这对于希望在实际应用中部署情感分析模型的开发者具有指导意义，有助于提升模型的可靠性和透明度。",
+      "readerImpactZh": "对于普通读者，本教程展示了情感分析模型如何工作以及如何评估其可靠性，但具体影响有限，因为内容偏向技术实践。",
+      "userImpactZh": "对于AI开发者和数据科学家，本教程提供了可复现的代码和流程，帮助他们快速构建和评估情感分析模型，并了解校准和可解释性的重要性。半监督学习部分展示了如何利用未标注数据提升模型性能，节省标注成本。",
+      "howItWorksZh": "教程首先使用TF-IDF将文本转换为数值特征，并训练逻辑回归模型作为基线。然后，使用LoRA技术对DistilBERT进行微调，LoRA通过低秩矩阵分解减少可训练参数，从而高效适应下游任务。模型评估使用准确率、macro-F1、ROC-AUC和ECE，其中ECE衡量预测置信度与真实正确率之间的校准程度。置信错误分析通过检查高置信但预测错误的样本来识别模型弱点。长度影响分析通过按文本长度分组评估性能。可解释性通过词级遮挡实现：逐个遮挡输入中的词，观察预测变化，生成显著性图。半监督学习部分，使用微调后的模型对未标注IMDb数据预测，保留置信度高于阈值的样本作为伪标注，与原始训练数据合并，重新训练模型。最后，将LoRA权重合并回DistilBERT并保存模型。",
+      "interpretationZh": "该教程提供了从传统方法到现代微调方法的完整对比，并强调了校准和可解释性，这是实际部署中常被忽视的方面。虽然教程没有给出具体数值结果，但方法本身是可靠的。半监督学习部分展示了利用未标注数据的潜力，但效果取决于置信度阈值的选择和模型校准质量。",
+      "limitationsZh": "教程未提供具体的性能数值，无法评估方法的效果。半监督学习部分依赖于置信度阈值，但未讨论阈值选择的影响。此外，词级遮挡显著性可能无法完全反映模型的决策过程，且未提及计算成本。",
+      "actionStepsZh": [
+        "按照教程步骤，使用TF-IDF逻辑回归建立基线模型。",
+        "使用LoRA微调DistilBERT，并评估准确率、macro-F1、ROC-AUC和ECE。",
+        "分析置信错误和长度影响，以识别模型弱点。",
+        "使用词级遮挡生成显著性图，增强可解释性。",
+        "利用未标注数据通过置信度伪标注进行半监督学习，并比较模型性能。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmslhy76p03hdroo0l8dsaskb",
+          "name": "MarkTechPost（RSS）",
+          "type": "practitioner",
+          "url": "https://www.marktechpost.com/2026/08/09/imdb-sentiment-analysis-with-distilbert-lora-tf-idf-baselines-calibration-interpretability-robustness-testing-and-semi-supervised-learning",
+          "publishedAt": "2026-08-09T07:17:35.000Z",
+          "title": "用DistilBERT LoRA与TF-IDF基线做IMDb情感分析：校准、可解释性与半监督学习",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmslhy76p03hdroo0l8dsaskb",
+            "https://www.marktechpost.com/2026/08/09/imdb-sentiment-analysis-with-distilbert-lora-tf-idf-baselines-calibration-interpretability-robustness-testing-and-semi-supervised-learning"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-09T07:17:35.000Z",
+        "endedAt": "2026-08-09T08:55:17.025Z",
+        "current": 61,
+        "peak": 61,
+        "history": [
+          {
+            "at": "2026-08-09T07:17:35.000Z",
+            "label": "8/9 15:17",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-09T08:06:26.012Z",
+            "label": "8/9 16:06",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-09T08:55:17.025Z",
+            "label": "8/9 16:55",
+            "value": 61,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "56caf651a58260e2",
       "normalizedUrl": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
@@ -617,7 +760,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T22:46:14.000Z",
-        "endedAt": "2026-08-09T07:36:57.660Z",
+        "endedAt": "2026-08-09T08:55:17.025Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -628,56 +771,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T23:45:12.184Z",
-            "label": "8/9 07:45",
-            "value": 54,
+            "at": "2026-08-08T23:41:36.093Z",
+            "label": "8/9 07:41",
+            "value": 52,
             "reports": 25
           },
           {
-            "at": "2026-08-09T00:44:10.368Z",
-            "label": "8/9 08:44",
-            "value": 62,
+            "at": "2026-08-09T00:36:58.186Z",
+            "label": "8/9 08:36",
+            "value": 59,
             "reports": 25
           },
           {
-            "at": "2026-08-09T01:43:08.553Z",
-            "label": "8/9 09:43",
-            "value": 71,
+            "at": "2026-08-09T01:32:20.279Z",
+            "label": "8/9 09:32",
+            "value": 66,
             "reports": 25
           },
           {
-            "at": "2026-08-09T02:42:06.737Z",
-            "label": "8/9 10:42",
-            "value": 79,
+            "at": "2026-08-09T02:27:42.372Z",
+            "label": "8/9 10:27",
+            "value": 73,
             "reports": 25
           },
           {
-            "at": "2026-08-09T03:41:04.922Z",
-            "label": "8/9 11:41",
-            "value": 88,
+            "at": "2026-08-09T03:23:04.465Z",
+            "label": "8/9 11:23",
+            "value": 80,
             "reports": 25
           },
           {
-            "at": "2026-08-09T04:40:03.106Z",
-            "label": "8/9 12:40",
-            "value": 96,
+            "at": "2026-08-09T04:18:26.559Z",
+            "label": "8/9 12:18",
+            "value": 87,
             "reports": 25
           },
           {
-            "at": "2026-08-09T05:39:01.291Z",
-            "label": "8/9 13:39",
+            "at": "2026-08-09T05:13:48.652Z",
+            "label": "8/9 13:13",
+            "value": 94,
+            "reports": 25
+          },
+          {
+            "at": "2026-08-09T06:09:10.745Z",
+            "label": "8/9 14:09",
             "value": 100,
             "reports": 25
           },
           {
-            "at": "2026-08-09T06:37:59.475Z",
-            "label": "8/9 14:37",
+            "at": "2026-08-09T07:04:32.838Z",
+            "label": "8/9 15:04",
             "value": 100,
             "reports": 25
           },
           {
-            "at": "2026-08-09T07:36:57.660Z",
-            "label": "8/9 15:36",
+            "at": "2026-08-09T07:59:54.931Z",
+            "label": "8/9 15:59",
+            "value": 100,
+            "reports": 25
+          },
+          {
+            "at": "2026-08-09T08:55:17.025Z",
+            "label": "8/9 16:55",
             "value": 100,
             "reports": 25
           }
@@ -830,7 +985,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T22:36:03.000Z",
-        "endedAt": "2026-08-09T07:36:57.660Z",
+        "endedAt": "2026-08-09T08:55:17.025Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -841,62 +996,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T23:30:08.466Z",
-            "label": "8/9 07:30",
+            "at": "2026-08-08T23:32:20.638Z",
+            "label": "8/9 07:32",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-09T00:24:13.932Z",
-            "label": "8/9 08:24",
+            "at": "2026-08-09T00:28:38.277Z",
+            "label": "8/9 08:28",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-09T01:18:19.398Z",
-            "label": "8/9 09:18",
-            "value": 30,
+            "at": "2026-08-09T01:24:55.915Z",
+            "label": "8/9 09:24",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-09T02:12:24.864Z",
-            "label": "8/9 10:12",
-            "value": 35,
+            "at": "2026-08-09T02:21:13.554Z",
+            "label": "8/9 10:21",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-09T03:06:30.330Z",
-            "label": "8/9 11:06",
-            "value": 40,
+            "at": "2026-08-09T03:17:31.193Z",
+            "label": "8/9 11:17",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-09T04:00:35.796Z",
-            "label": "8/9 12:00",
-            "value": 45,
+            "at": "2026-08-09T04:13:48.831Z",
+            "label": "8/9 12:13",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-09T04:54:41.262Z",
-            "label": "8/9 12:54",
-            "value": 51,
+            "at": "2026-08-09T05:10:06.470Z",
+            "label": "8/9 13:10",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-09T05:48:46.728Z",
-            "label": "8/9 13:48",
-            "value": 56,
+            "at": "2026-08-09T06:06:24.109Z",
+            "label": "8/9 14:06",
+            "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-09T06:42:52.194Z",
-            "label": "8/9 14:42",
-            "value": 61,
+            "at": "2026-08-09T07:02:41.747Z",
+            "label": "8/9 15:02",
+            "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-09T07:36:57.660Z",
-            "label": "8/9 15:36",
+            "at": "2026-08-09T07:58:59.386Z",
+            "label": "8/9 15:58",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-09T08:55:17.025Z",
+            "label": "8/9 16:55",
             "value": 66,
             "reports": 1
           }
@@ -955,36 +1116,37 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件涉及大型科技公司的基础设施投资与气候影响，具有较高的公众关注度和行业相关性。",
-      "importanceReasonEn": "The event involves infrastructure investment by a major tech company and its climate impact, which has high public interest and industry relevance.",
+      "importanceReasonZh": "该事件涉及大型科技公司的环境足迹，可能引发公众关注和监管讨论，对科技行业可持续发展有潜在影响。",
+      "importanceReasonEn": "The event involves the environmental footprint of a major tech company, potentially sparking public concern and regulatory discussion, with implications for sustainable development in the tech industry.",
       "scoringMode": "ai",
       "titleZh": "亚马逊计划中的数据中心或将成为美国最大气候污染源",
       "titleEn": "Planned Amazon data center could become the biggest climate polluter in the U.S.",
-      "summaryZh": "作为德克萨斯州计划中的数据中心的一部分，亚马逊投资建设现场发电厂，据报道该发电厂可能成为美国最大的气候污染源。",
+      "summaryZh": "作为德克萨斯州计划中的数据中心的一部分，亚马逊正在投资建设一座现场发电厂，据报道该发电厂可能成为美国最大的气候污染源。",
       "summaryEn": "As part of a planned Texas data center, Amazon is investing in an on-site power plant that could reportedly become the largest source of climate pollution in the United States.",
       "keywords": [
         "Amazon",
         "data center",
-        "climate pollution",
-        "Texas",
-        "power plant"
+        "climate",
+        "pollution",
+        "power plant",
+        "Texas"
       ],
       "topics": [
         "Amazon",
         "data center",
-        "climate",
-        "pollution",
+        "climate pollution",
+        "power plant",
         "Texas"
       ],
       "models": [],
-      "detailZh": "据报道，亚马逊计划在德克萨斯州建设一个大型数据中心，并为此投资建设一个现场发电厂。该发电厂可能成为美国最大的气候污染源。这一消息引发了关于科技公司能源消耗和碳排放的广泛讨论。目前，亚马逊尚未对此报道做出正式回应，具体细节如发电厂的规模、燃料类型和预计排放量尚未公布。该计划若实施，将对当地环境和全球气候目标产生重大影响。",
+      "detailZh": "据报道，亚马逊计划在德克萨斯州建设一个大型数据中心，并为此投资建设一座现场发电厂。该发电厂可能成为美国最大的气候污染源。目前，亚马逊尚未正式确认这些细节，但消息来源称，该发电厂将使用化石燃料，产生大量温室气体排放。这一计划与亚马逊此前承诺的碳中和目标相矛盾，可能引发环保组织和公众的批评。数据中心本身需要大量电力，而现场发电厂的建设旨在确保稳定的电力供应，但同时也带来了显著的环境代价。目前，该计划仍处于早期阶段，具体规模和环境影响尚未完全公开。",
       "keyPointsZh": [
-        "亚马逊计划在德克萨斯州建设数据中心，并配套现场发电厂。",
-        "该发电厂可能成为美国最大的气候污染源。",
-        "具体细节如规模、燃料和排放量尚未公布。",
-        "亚马逊尚未正式回应此报道。"
+        "亚马逊计划在德克萨斯州建设大型数据中心。",
+        "该数据中心将配套建设现场发电厂，可能成为美国最大气候污染源。",
+        "该计划与亚马逊的碳中和承诺相矛盾。",
+        "目前细节尚未完全公开，亚马逊未正式确认。"
       ],
-      "impactZh": "该事件可能加剧公众对科技公司环境责任的关注，并可能影响亚马逊的声誉和监管审查。",
+      "impactZh": "该事件可能加剧公众对科技公司环境责任的关注，促使监管机构审查大型数据中心的能源使用和排放。同时，可能影响亚马逊的品牌形象和投资者信心。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -1005,7 +1167,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T21:24:02.000Z",
-        "endedAt": "2026-08-09T07:36:57.660Z",
+        "endedAt": "2026-08-09T08:55:17.025Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1016,68 +1178,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T22:19:45.241Z",
-            "label": "8/9 06:19",
+            "at": "2026-08-08T22:26:52.456Z",
+            "label": "8/9 06:26",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-08T23:15:28.483Z",
-            "label": "8/9 07:15",
+            "at": "2026-08-08T23:29:42.913Z",
+            "label": "8/9 07:29",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-09T00:11:11.725Z",
-            "label": "8/9 08:11",
+            "at": "2026-08-09T00:32:33.370Z",
+            "label": "8/9 08:32",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-09T01:06:54.967Z",
-            "label": "8/9 09:06",
+            "at": "2026-08-09T01:35:23.827Z",
+            "label": "8/9 09:35",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-09T02:02:38.209Z",
-            "label": "8/9 10:02",
+            "at": "2026-08-09T02:38:14.284Z",
+            "label": "8/9 10:38",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-09T02:58:21.450Z",
-            "label": "8/9 10:58",
+            "at": "2026-08-09T03:41:04.740Z",
+            "label": "8/9 11:41",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-09T03:54:04.692Z",
-            "label": "8/9 11:54",
+            "at": "2026-08-09T04:43:55.197Z",
+            "label": "8/9 12:43",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-09T04:49:47.934Z",
-            "label": "8/9 12:49",
+            "at": "2026-08-09T05:46:45.654Z",
+            "label": "8/9 13:46",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-09T05:45:31.176Z",
-            "label": "8/9 13:45",
+            "at": "2026-08-09T06:49:36.111Z",
+            "label": "8/9 14:49",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-09T06:41:14.418Z",
-            "label": "8/9 14:41",
+            "at": "2026-08-09T07:52:26.568Z",
+            "label": "8/9 15:52",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-09T07:36:57.660Z",
-            "label": "8/9 15:36",
+            "at": "2026-08-09T08:55:17.025Z",
+            "label": "8/9 16:55",
             "value": 64,
             "reports": 1
           }
@@ -1085,11 +1247,11 @@
         "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
       },
       "resourceLinks": [],
-      "readerImpactZh": "如果该发电厂建成，可能增加当地空气污染，影响居民健康，并可能推高能源成本。",
-      "userImpactZh": "对于依赖亚马逊云服务的开发者和企业，该事件可能引发对供应链可持续性的担忧，但短期内服务不受影响。",
+      "readerImpactZh": "普通公众可能关注该数据中心对当地环境和气候的影响，以及科技公司是否兑现环保承诺。",
+      "userImpactZh": "对于依赖云服务的用户和开发者，该事件可能引发对云服务可持续性的担忧，但短期内服务不受影响。",
       "howItWorksZh": "",
-      "interpretationZh": "报道称亚马逊计划建设现场发电厂，但未提供具体数据。这可能是亚马逊为满足数据中心巨大电力需求而采取的措施，但具体环境影响需待更多信息确认。",
-      "limitationsZh": "该报道基于单一来源，未提供具体数据，且亚马逊未回应，因此信息有限且未经证实。"
+      "interpretationZh": "报道称亚马逊计划建设现场发电厂，但未提供具体细节，如燃料类型、发电量或排放数据。因此，该消息应视为初步报道，需等待官方确认和更多信息。",
+      "limitationsZh": "该报道基于未具名消息来源，缺乏官方确认和具体数据，因此存在不确定性。"
     },
     {
       "id": "39b28d95fcbaaeae",
@@ -1173,7 +1335,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T19:41:13.000Z",
-        "endedAt": "2026-08-09T07:36:57.660Z",
+        "endedAt": "2026-08-09T08:55:17.025Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1184,68 +1346,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T20:46:17.060Z",
-            "label": "8/9 04:46",
+            "at": "2026-08-08T20:53:24.275Z",
+            "label": "8/9 04:53",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-08T21:51:21.120Z",
-            "label": "8/9 05:51",
+            "at": "2026-08-08T22:05:35.550Z",
+            "label": "8/9 06:05",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-08T22:56:25.180Z",
-            "label": "8/9 06:56",
+            "at": "2026-08-08T23:17:46.825Z",
+            "label": "8/9 07:17",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-09T00:01:29.240Z",
-            "label": "8/9 08:01",
+            "at": "2026-08-09T00:29:58.100Z",
+            "label": "8/9 08:29",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-09T01:06:33.300Z",
-            "label": "8/9 09:06",
+            "at": "2026-08-09T01:42:09.375Z",
+            "label": "8/9 09:42",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-09T02:11:37.360Z",
-            "label": "8/9 10:11",
+            "at": "2026-08-09T02:54:20.650Z",
+            "label": "8/9 10:54",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-09T03:16:41.420Z",
-            "label": "8/9 11:16",
+            "at": "2026-08-09T04:06:31.925Z",
+            "label": "8/9 12:06",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-09T04:21:45.480Z",
-            "label": "8/9 12:21",
+            "at": "2026-08-09T05:18:43.200Z",
+            "label": "8/9 13:18",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-09T05:26:49.540Z",
-            "label": "8/9 13:26",
+            "at": "2026-08-09T06:30:54.475Z",
+            "label": "8/9 14:30",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-09T06:31:53.600Z",
-            "label": "8/9 14:31",
+            "at": "2026-08-09T07:43:05.750Z",
+            "label": "8/9 15:43",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-09T07:36:57.660Z",
-            "label": "8/9 15:36",
+            "at": "2026-08-09T08:55:17.025Z",
+            "label": "8/9 16:55",
             "value": 58,
             "reports": 1
           }
@@ -1342,7 +1504,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-08T16:27:48.000Z",
-        "endedAt": "2026-08-09T07:36:57.660Z",
+        "endedAt": "2026-08-09T08:55:17.025Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1353,68 +1515,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-08T17:50:27.060Z",
-            "label": "8/9 01:50",
+            "at": "2026-08-08T17:57:34.275Z",
+            "label": "8/9 01:57",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-08T19:13:06.120Z",
-            "label": "8/9 03:13",
+            "at": "2026-08-08T19:27:20.550Z",
+            "label": "8/9 03:27",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-08T20:35:45.180Z",
-            "label": "8/9 04:35",
+            "at": "2026-08-08T20:57:06.825Z",
+            "label": "8/9 04:57",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-08T21:58:24.240Z",
-            "label": "8/9 05:58",
+            "at": "2026-08-08T22:26:53.100Z",
+            "label": "8/9 06:26",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-08T23:21:03.300Z",
-            "label": "8/9 07:21",
+            "at": "2026-08-08T23:56:39.375Z",
+            "label": "8/9 07:56",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-09T00:43:42.360Z",
-            "label": "8/9 08:43",
+            "at": "2026-08-09T01:26:25.650Z",
+            "label": "8/9 09:26",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-09T02:06:21.420Z",
-            "label": "8/9 10:06",
+            "at": "2026-08-09T02:56:11.925Z",
+            "label": "8/9 10:56",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-09T03:29:00.480Z",
-            "label": "8/9 11:29",
+            "at": "2026-08-09T04:25:58.200Z",
+            "label": "8/9 12:25",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-09T04:51:39.540Z",
-            "label": "8/9 12:51",
+            "at": "2026-08-09T05:55:44.475Z",
+            "label": "8/9 13:55",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-09T06:14:18.600Z",
-            "label": "8/9 14:14",
+            "at": "2026-08-09T07:25:30.750Z",
+            "label": "8/9 15:25",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-09T07:36:57.660Z",
-            "label": "8/9 15:36",
+            "at": "2026-08-09T08:55:17.025Z",
+            "label": "8/9 16:55",
             "value": 58,
             "reports": 1
           }
