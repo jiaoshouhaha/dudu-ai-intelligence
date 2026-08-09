@@ -124,16 +124,17 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
   const retainedSeen = Object.fromEntries(Object.entries(seen).filter(([, lastSeenAt]) => new Date(lastSeenAt).valueOf() >= seenCutoff));
   const existingIds = new Set(existing.map((item) => item.id));
   const maxNew = Number(process.env.MAX_NEW_ITEMS_PER_RUN || 80);
+  const detailBackfillLimit = Math.min(2, maxNew);
   const matchesExisting = (event) => existing.some((old) =>
     sameEvent(old, event)
   );
   const duplicateEvents = freshEvents.filter((event) => matchesExisting(event));
   const newEvents = selectCandidateEvents(freshEvents
     .filter((event) => !existingIds.has(event.id) && !retainedSeen[event.id] && !matchesExisting(event))
-    , maxNew);
+    , Math.max(1, maxNew - detailBackfillLimit));
   const detailBackfill = existing
     .filter((event) => !event.detailZh || !event.readerImpactZh || !event.howItWorksZh)
-    .slice(0, Math.min(2, Math.max(0, maxNew - newEvents.length)));
+    .slice(0, detailBackfillLimit);
   const enrichedCandidates = await enrichEvents([...newEvents, ...detailBackfill], aiConfig());
   const enriched = enrichedCandidates.slice(0, newEvents.length);
   const backfilledDetails = enrichedCandidates.slice(newEvents.length);
