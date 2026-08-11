@@ -1,7 +1,161 @@
 {
-  "generatedAt": "2026-08-11T21:58:14.905Z",
+  "generatedAt": "2026-08-11T22:55:10.226Z",
   "date": "2026-08-12",
   "items": [
+    {
+      "id": "701a34aa4671b069",
+      "normalizedUrl": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces",
+      "originalUrl": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything",
+      "titleOriginal": "Stealing Reasoning Traces from Proprietary LLM APIs",
+      "summaryOriginal": "Stealing Reasoning Traces from Proprietary LLM APIs A vanity domain name ( stolen-thoughts.com ) for a neat paper : Anthropic, OpenAI, and Google return encrypted chain-of-thought blocks to clients that can be replayed across sessions, users, and models. We take a trace produced by a frontier model, replay it into a weaker sibling, jailbreak the weaker model, and recover the stronger model’s hidden reasoning in plaintext You can see an example of these encrypted blocks by running: curl https://api.openai.com/v1/responses \\ -H \" Content-Type: application/json \" \\ -H \" Authorization: Bearer $( llm keys get openai ) \" \\ -d ' { \"model\": \"gpt-5.6-luna\", \"input\": \"Solve step by step: What is the smallest positive integer divisible by every integer from 1 through 20?\", \"reasoning\": { \"effort\": \"medium\" }, \"include\": [\"reasoning.encrypted_content\"], \"store\": false, \"stream\": false } ' Here's the full output , which includes chunks that look like this: \"output\": [ { \"id\": \"rs_0a7479de7ebae170016a7ba1a0334c8198a95590217efe343c\", \"type\": \"reasoning\", \"content\": [], \"encrypted_content\": \"gAAAAABqe6GjepE1wDjbFCZg0BHB6ucGnN0jvzqygG... The paper's authors found that every model under the same fam",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "research",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://stolen-thoughts.com/",
+        "https://www.alphaxiv.org/abs/2608.09867",
+        "https://api.openai.com/v1/responses",
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices#migrating-away-from-prefilled-responses",
+        "https://news.ycombinator.com/item?id=49257876",
+        "https://simonwillison.net/tags/jailbreaking",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/openai",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/anthropic",
+        "https://simonwillison.net/tags/gemini"
+      ],
+      "publishedAt": "2026-08-11T22:40:45.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything",
+          "publishedAt": "2026-08-11T22:40:45.000Z",
+          "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [],
+          "resourceLinks": [
+            "https://stolen-thoughts.com/",
+            "https://www.alphaxiv.org/abs/2608.09867",
+            "https://api.openai.com/v1/responses",
+            "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices#migrating-away-from-prefilled-responses",
+            "https://news.ycombinator.com/item?id=49257876",
+            "https://simonwillison.net/tags/jailbreaking",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/openai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/anthropic",
+            "https://simonwillison.net/tags/gemini"
+          ]
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该事件揭示了专有LLM API中加密推理痕迹的安全漏洞，对AI安全领域有重要影响，且提供了具体攻击方法和示例，具有较高的新闻价值。",
+      "importanceReasonEn": "This event reveals a security vulnerability in encrypted reasoning traces of proprietary LLM APIs, with significant implications for AI security, and provides concrete attack methods and examples, making it highly newsworthy.",
+      "scoringMode": "ai",
+      "titleZh": "从专有LLM API中窃取推理痕迹",
+      "titleEn": "Stealing Reasoning Traces from Proprietary LLM APIs",
+      "summaryZh": "一篇论文展示了如何从Anthropic、OpenAI和Google的专有LLM API中窃取隐藏的推理痕迹。攻击者将前沿模型生成的加密推理块重放到较弱的同系列模型中，通过越狱较弱模型，恢复出较强模型的明文推理内容。论文还提供了使用OpenAI API的示例命令。",
+      "summaryEn": "A paper demonstrates how to steal hidden reasoning traces from proprietary LLM APIs by Anthropic, OpenAI, and Google. Attackers replay encrypted chain-of-thought blocks from frontier models into weaker sibling models, jailbreak the weaker model, and recover the stronger model's plaintext reasoning. The paper includes example commands using the OpenAI API.",
+      "keywords": [
+        "推理痕迹",
+        "加密",
+        "重放攻击",
+        "越狱",
+        "LLM API"
+      ],
+      "topics": [
+        "LLM安全",
+        "推理痕迹",
+        "API安全",
+        "模型越狱"
+      ],
+      "models": [
+        "gpt-5.6-luna"
+      ],
+      "detailZh": "该论文由安全研究人员发布，展示了如何从Anthropic、OpenAI和Google的专有LLM API中窃取隐藏的推理痕迹。攻击者首先从前沿模型（如GPT-5.6-luna）获取加密的推理块，然后将这些加密块重放到同一模型家族中较弱的模型（如较小的模型）中。通过越狱较弱模型，攻击者能够诱导其解密并输出原始推理内容，从而恢复较强模型的隐藏思维链。论文提供了使用OpenAI API的示例命令，展示了如何获取加密的推理内容。该攻击利用了模型家族中不同模型共享的加密机制，以及较弱模型更容易被越狱的特点。目前，该攻击的具体细节和影响范围尚未完全公开，但已引起广泛关注。",
+      "keyPointsZh": [
+        "论文展示了从专有LLM API窃取推理痕迹的方法。",
+        "攻击涉及将加密推理块重放到较弱模型并越狱。",
+        "示例命令使用OpenAI API的gpt-5.6-luna模型。",
+        "影响Anthropic、OpenAI和Google的模型。"
+      ],
+      "impactZh": "该事件揭示了专有LLM API中加密推理痕迹的安全漏洞，可能影响用户对AI服务的信任，并促使提供商加强安全措施。",
+      "readerImpactZh": "对于普通用户，此事件可能意味着他们的推理数据存在被泄露的风险，但实际影响有限，因为攻击需要特定技术条件。",
+      "userImpactZh": "对于AI开发者和团队，此漏洞可能影响依赖专有API进行敏感推理的应用，建议关注提供商的安全更新并采取额外保护措施。",
+      "howItWorksZh": "攻击者首先通过API请求获取加密的推理块（如使用include参数），然后将这些加密块作为输入提供给同一家族中较弱的模型，通过越狱提示诱导较弱模型解密并输出推理内容。具体步骤包括：1. 从前沿模型获取加密推理块；2. 将加密块输入较弱模型；3. 使用越狱技术使较弱模型输出明文推理。",
+      "interpretationZh": "该报道基于论文摘要，具体攻击细节尚未完全公开。合理推断是模型家族共享加密密钥或算法，且较弱模型的安全防护较弱。但需注意，该攻击可能仅适用于特定模型和配置，实际可行性有待验证。",
+      "limitationsZh": "论文细节未完全公开，攻击的普遍性和实际影响尚不明确。示例中的模型名称可能为虚构，且攻击可能已被提供商修复。",
+      "actionStepsZh": [
+        "关注Anthropic、OpenAI和Google的安全公告，及时更新API使用方式。",
+        "对于敏感推理任务，考虑使用本地模型或额外加密层。",
+        "在API调用中避免请求加密推理内容，除非必要。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything",
+          "publishedAt": "2026-08-11T22:40:45.000Z",
+          "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [],
+          "resourceLinks": [
+            "https://stolen-thoughts.com/",
+            "https://www.alphaxiv.org/abs/2608.09867",
+            "https://api.openai.com/v1/responses",
+            "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices#migrating-away-from-prefilled-responses",
+            "https://news.ycombinator.com/item?id=49257876",
+            "https://simonwillison.net/tags/jailbreaking",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/openai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/anthropic",
+            "https://simonwillison.net/tags/gemini"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-11T22:40:45.000Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
+        "current": 66,
+        "peak": 66,
+        "history": [
+          {
+            "at": "2026-08-11T22:40:45.000Z",
+            "label": "8/12 06:40",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
+            "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "a591185c5595ed6b",
       "normalizedUrl": "https://techcrunch.com/2026/08/11/accel-closes-oversubscribed-550m-india-fund-within-weeks-19-months-after-its-last",
@@ -36,13 +190,13 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件反映了印度创业生态的活跃度和投资者信心，对科技投资领域具有风向标意义。",
-      "importanceReasonEn": "This event reflects the vibrancy of India's startup ecosystem and investor confidence, serving as a bellwether for tech investment.",
+      "importanceReasonZh": "该事件反映了印度创业生态的活跃度以及顶级风投对印度市场的信心，对创业者和投资者具有参考价值。",
+      "importanceReasonEn": "This event reflects the vitality of India's startup ecosystem and top VCs' confidence in the Indian market, providing reference value for entrepreneurs and investors.",
       "scoringMode": "ai",
-      "titleZh": "Accel在19个月内超额认购5.5亿美元印度基金",
+      "titleZh": "Accel在19个月后关闭超额认购的5.5亿美元印度基金",
       "titleEn": "Accel closes oversubscribed $550M India fund within weeks, 19 months after its last",
-      "summaryZh": "美国风险投资公司Accel在短短几周内完成了5.5亿美元印度基金的募集，该基金超额认购。此时距离其上一支6.5亿美元印度基金仅19个月，且上一支基金仍有超过55%的资金可供部署。",
-      "summaryEn": "The U.S. VC firm Accel closed an oversubscribed $550 million India fund within weeks, just 19 months after its previous $650 million fund, which still has over 55% of capital available for deployment.",
+      "summaryZh": "美国风险投资公司Accel在短短几周内关闭了一只超额认购的5.5亿美元印度基金，距其上一只基金仅19个月。该公司仍有超过55%的上一只6.5亿美元印度基金可供部署。",
+      "summaryEn": "The U.S. VC firm Accel closed an oversubscribed $550 million India fund within weeks, just 19 months after its last fund. The firm still has more than 55% of its previous $650 million India fund available for deployment.",
       "keywords": [
         "Accel",
         "印度基金",
@@ -56,40 +210,21 @@
         "基金募集"
       ],
       "models": [],
-      "detailZh": "美国风险投资公司Accel宣布，其新设立的5.5亿美元印度基金在短短几周内完成募集，并实现超额认购。这一速度令人瞩目，因为距离其上一支6.5亿美元印度基金成立仅过去了19个月。更值得注意的是，上一支基金目前仍有超过55%的资金尚未部署，表明Accel在印度市场的投资节奏稳健，且新基金的募集并未受到旧基金剩余资金的影响。\n\nAccel是印度初创企业的重要投资者，曾投资过Flipkart、Swiggy等知名公司。此次新基金的快速关闭，显示出有限合伙人（LP）对印度科技市场的强烈兴趣，以及Accel在印度市场的品牌影响力。\n\n目前，Accel尚未公布新基金的具体投资方向，但预计将继续聚焦于早期和成长期的科技初创企业，涵盖消费互联网、软件即服务（SaaS）、金融科技等领域。\n\n这一事件也反映出印度创业生态的持续升温，尽管全球风险投资市场面临不确定性，但印度仍被视为高增长市场。",
+      "detailZh": "美国风险投资公司Accel宣布，在短短几周内关闭了一只超额认购的5.5亿美元印度基金，距其上一只基金仅19个月。这表明投资者对印度创业生态的强烈兴趣。Accel表示，该公司仍有超过55%的上一只6.5亿美元印度基金可供部署，这意味着新基金与现有基金将并行运作，为更多印度初创企业提供资金支持。Accel是印度早期投资领域的活跃参与者，曾投资Flipkart等知名公司。此次新基金的关闭，进一步巩固了其在印度市场的地位。",
       "keyPointsZh": [
-        "Accel在几周内完成5.5亿美元印度基金募集，超额认购。",
-        "新基金距离上一支6.5亿美元基金仅19个月。",
-        "上一支基金仍有超过55%资金未部署。",
-        "Accel是印度知名初创企业投资者。"
+        "Accel在几周内关闭了5.5亿美元的印度基金，超额认购。",
+        "距上一只基金仅19个月，显示对印度市场的持续看好。",
+        "上一只6.5亿美元基金仍有超过55%可供部署。"
       ],
-      "impactZh": "该事件表明印度创业生态的吸引力增强，可能带动更多风险投资进入印度市场，促进当地科技创新和就业。",
-      "readerImpactZh": "",
-      "userImpactZh": "对于在印度创业或计划融资的创业者，这可能意味着更多资金可用，但竞争也可能加剧。",
+      "impactZh": "该事件表明印度创业生态持续吸引全球资本，可能带动更多投资机构关注印度市场，为当地初创企业带来更多融资机会。",
+      "readerImpactZh": "对于关注创业和投资的读者，这可能意味着印度市场将出现更多高成长机会，但具体影响因人而异。",
+      "userImpactZh": "对于在印度创业或计划拓展印度市场的创业者，这可能意味着更容易获得顶级风投的支持，但竞争也可能加剧。",
       "howItWorksZh": "",
-      "interpretationZh": "根据报道，Accel新基金超额认购且快速关闭，表明投资者对印度市场的信心。但需注意，上一支基金仍有大量资金未部署，可能意味着Accel将采取更谨慎的投资节奏，或者新基金将用于不同阶段的投资。",
-      "limitationsZh": "报道未提供新基金的具体投资策略或LP构成，也未说明超额认购的具体倍数。",
+      "interpretationZh": "根据报道，Accel成功募集新基金，且上一只基金仍有大量资金未部署，这表明Accel对印度市场的长期承诺。但报道未提及新基金的具体投资策略或领域，因此无法推断其投资方向。",
+      "limitationsZh": "报道未提供新基金的具体投资领域、LP构成或投资策略，也未说明超额认购的具体倍数。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
-      "visual": {
-        "type": "comparison",
-        "titleZh": "数据对比",
-        "unit": "",
-        "noteZh": "",
-        "insightZh": "新基金规模较上一支减少约15%，但募集速度更快。",
-        "data": [
-          {
-            "label": "新基金规模",
-            "value": 550,
-            "display": ""
-          },
-          {
-            "label": "上一支基金规模",
-            "value": 650,
-            "display": ""
-          }
-        ]
-      },
+      "visual": null,
       "processingError": null,
       "reportCount": 1,
       "reportTimeline": [
@@ -108,7 +243,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T21:39:11.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -119,8 +254,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:17:10.613Z",
+            "label": "8/12 06:17",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
@@ -200,12 +341,12 @@
         }
       ],
       "importance": 71,
-      "importanceReasonZh": "制药行业对AI工具的需求激增，Chai Discovery作为领先者达成多笔交易，反映了行业趋势，对AI在生物领域的应用有重要指示意义。",
-      "importanceReasonEn": "The surge in pharma demand for AI tools, with Chai Discovery leading multiple deals, reflects an industry trend with significant implications for AI in biology.",
+      "importanceReasonZh": "制药行业对AI工具的兴趣激增，Chai Discovery作为领先者，其成功案例对行业有示范作用。",
+      "importanceReasonEn": "The surge of interest in AI tools in pharma, with Chai Discovery as a leader, has a demonstrative effect on the industry.",
       "scoringMode": "ai",
       "titleZh": "🔬生物AI的相位转变——Matthew McPartlon与Neil Patil谈Chai Discovery",
       "titleEn": "🔬The BioAI Phase Shift - Matthew McPartlon & Neil Patil, Chai Discovery",
-      "summaryZh": "制药行业突然开始为生物×AI工具付费，而Chai Discovery在今年夏天达成了四笔交易，处于领先地位。联合创始人Matt McPartlon和产品负责人Neil Patil解释了原因。",
+      "summaryZh": "制药行业突然开始为生物×AI工具付费，而Chai Discovery在这个夏天达成了四笔交易，处于领先地位。联合创始人Matt McPartlon和产品负责人Neil Patil解释了原因。",
       "summaryEn": "Pharma is suddenly paying for Bio × AI tools, and Chai is leading the pack with four deals closed this summer. Cofounder Matt McPartlon and Product leader Neil Patil explain why.",
       "keywords": [
         "BioAI",
@@ -221,19 +362,19 @@
         "Chai Discovery"
       ],
       "models": [],
-      "detailZh": "在最新一期的Latent Space播客中，Chai Discovery的联合创始人Matthew McPartlon和产品负责人Neil Patil讨论了生物AI领域的快速变化。他们指出，制药公司突然开始积极为生物×AI工具付费，而Chai Discovery在今年夏天已经达成了四笔交易，显示出市场对这类工具的强烈需求。McPartlon和Patil解释了这一转变背后的原因，包括AI在药物发现中的潜力、制药公司对效率提升的渴望，以及Chai Discovery在技术上的优势。他们还提到了公司如何通过提供可落地的解决方案来赢得客户信任。",
+      "detailZh": "在最近的播客访谈中，Chai Discovery的联合创始人Matthew McPartlon和产品负责人Neil Patil讨论了生物AI领域的显著转变。他们指出，制药公司现在愿意为生物×AI工具付费，这标志着行业态度的重大变化。Chai Discovery在这个夏天成功达成了四笔交易，显示出市场对其技术的认可。访谈中，他们深入探讨了为什么制药公司突然对AI工具感兴趣，以及Chai Discovery如何利用这一趋势。他们提到，AI在药物发现、临床试验设计等方面的应用潜力巨大，能够显著降低成本和时间。此外，他们还分享了Chai Discovery的技术优势，以及如何与制药公司合作，确保AI工具的实际应用效果。",
       "keyPointsZh": [
-        "制药公司突然开始为生物AI工具付费。",
-        "Chai Discovery今年夏天达成了四笔交易。",
-        "联合创始人Matthew McPartlon和产品负责人Neil Patil解释了这一趋势。",
-        "AI在药物发现中的潜力是推动需求的关键因素。"
+        "制药公司开始为生物AI工具付费，行业态度发生转变。",
+        "Chai Discovery在夏季达成四笔交易，处于领先地位。",
+        "AI在药物发现和临床试验中具有巨大潜力。",
+        "Chai Discovery与制药公司合作，确保工具的实际应用。"
       ],
-      "impactZh": "这一事件表明生物AI工具正从概念验证走向商业落地，制药行业的付费意愿增强，将加速AI在药物研发中的实际应用，可能改变药物发现的效率和成本结构。",
+      "impactZh": "这一事件表明生物AI领域正在从研究走向商业化，制药公司的付费意愿验证了AI工具的实际价值，可能加速AI在药物研发中的普及。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和生物技术团队，这意味着市场对可落地的生物AI解决方案需求旺盛，提供了商业机会，同时也要求产品必须解决实际问题并展示明确价值。",
+      "userImpactZh": "对于AI开发者和制药行业从业者，这预示着更多合作机会和商业需求，AI工具的应用将更加广泛。",
       "howItWorksZh": "",
-      "interpretationZh": "根据播客内容，制药公司对生物AI工具的兴趣显著增加，Chai Discovery的夏季交易是这一趋势的具体体现。可以合理推断，AI在药物发现中的潜力正被行业认可，但具体交易细节和产品性能尚未公开，需谨慎看待。",
-      "limitationsZh": "播客内容可能带有宣传性质，交易的具体金额、客户名称和产品效果未披露，因此无法独立验证其声称的市场领先地位。",
+      "interpretationZh": "根据访谈内容，制药公司对AI工具的兴趣增加是事实，但具体原因和Chai Discovery的技术细节未详细披露。可以合理推断，AI在降低研发成本和时间方面的潜力是主要驱动力，但需注意访谈可能带有宣传性质。",
+      "limitationsZh": "访谈内容有限，未提供具体交易细节、技术验证数据或客户反馈，因此无法全面评估Chai Discovery的实际效果。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -274,7 +415,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T21:03:50.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -285,8 +426,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T21:59:30.113Z",
+            "label": "8/12 05:59",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
@@ -399,7 +546,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T19:41:42.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 75,
         "peak": 75,
         "history": [
@@ -410,20 +557,26 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T20:27:12.968Z",
-            "label": "8/12 04:27",
-            "value": 34,
+            "at": "2026-08-11T20:30:04.056Z",
+            "label": "8/12 04:30",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:12:43.936Z",
-            "label": "8/12 05:12",
-            "value": 54,
+            "at": "2026-08-11T21:18:26.113Z",
+            "label": "8/12 05:18",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:06:48.169Z",
+            "label": "8/12 06:06",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 75,
             "reports": 1
           }
@@ -1240,7 +1393,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T19:15:35.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -1251,20 +1404,26 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T20:09:48.301Z",
-            "label": "8/12 04:09",
-            "value": 71,
+            "at": "2026-08-11T20:10:28.806Z",
+            "label": "8/12 04:10",
+            "value": 64,
             "reports": 32
           },
           {
-            "at": "2026-08-11T21:04:01.603Z",
-            "label": "8/12 05:04",
-            "value": 96,
+            "at": "2026-08-11T21:05:22.613Z",
+            "label": "8/12 05:05",
+            "value": 83,
             "reports": 32
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:00:16.419Z",
+            "label": "8/12 06:00",
+            "value": 100,
+            "reports": 32
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 100,
             "reports": 32
           }
@@ -1409,7 +1568,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T18:53:56.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1420,26 +1579,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T19:40:00.726Z",
-            "label": "8/12 03:40",
-            "value": 26,
+            "at": "2026-08-11T19:42:10.845Z",
+            "label": "8/12 03:42",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:26:05.452Z",
-            "label": "8/12 04:26",
-            "value": 39,
+            "at": "2026-08-11T20:30:25.690Z",
+            "label": "8/12 04:30",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:12:10.178Z",
-            "label": "8/12 05:12",
-            "value": 51,
+            "at": "2026-08-11T21:18:40.535Z",
+            "label": "8/12 05:18",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:06:55.380Z",
+            "label": "8/12 06:06",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
@@ -1532,7 +1697,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T18:49:12.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1543,26 +1708,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T19:36:27.726Z",
-            "label": "8/12 03:36",
-            "value": 26,
+            "at": "2026-08-11T19:38:23.645Z",
+            "label": "8/12 03:38",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:23:43.452Z",
-            "label": "8/12 04:23",
-            "value": 39,
+            "at": "2026-08-11T20:27:35.290Z",
+            "label": "8/12 04:27",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:10:59.178Z",
-            "label": "8/12 05:10",
-            "value": 51,
+            "at": "2026-08-11T21:16:46.935Z",
+            "label": "8/12 05:16",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:05:58.580Z",
+            "label": "8/12 06:05",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
@@ -1681,7 +1852,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T18:32:57.961Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1692,26 +1863,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T19:24:17.197Z",
-            "label": "8/12 03:24",
-            "value": 25,
+            "at": "2026-08-11T19:25:24.414Z",
+            "label": "8/12 03:25",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:15:36.433Z",
-            "label": "8/12 04:15",
-            "value": 36,
+            "at": "2026-08-11T20:17:50.867Z",
+            "label": "8/12 04:17",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:06:55.669Z",
-            "label": "8/12 05:06",
-            "value": 47,
+            "at": "2026-08-11T21:10:17.320Z",
+            "label": "8/12 05:10",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:02:43.773Z",
+            "label": "8/12 06:02",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 58,
             "reports": 1
           }
@@ -1828,7 +2005,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T18:20:44.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1839,26 +2016,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T19:15:06.726Z",
+            "at": "2026-08-11T19:15:37.245Z",
             "label": "8/12 03:15",
-            "value": 26,
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:09:29.452Z",
-            "label": "8/12 04:09",
-            "value": 39,
+            "at": "2026-08-11T20:10:30.490Z",
+            "label": "8/12 04:10",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:03:52.178Z",
-            "label": "8/12 05:03",
-            "value": 51,
+            "at": "2026-08-11T21:05:23.735Z",
+            "label": "8/12 05:05",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:00:16.980Z",
+            "label": "8/12 06:00",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
@@ -1990,7 +2173,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T18:01:22.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2001,26 +2184,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T19:00:35.226Z",
+            "at": "2026-08-11T19:00:07.645Z",
             "label": "8/12 03:00",
-            "value": 26,
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-11T19:59:48.452Z",
-            "label": "8/12 03:59",
-            "value": 39,
+            "at": "2026-08-11T19:58:53.290Z",
+            "label": "8/12 03:58",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:59:01.678Z",
-            "label": "8/12 04:59",
-            "value": 51,
+            "at": "2026-08-11T20:57:38.935Z",
+            "label": "8/12 04:57",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T21:56:24.580Z",
+            "label": "8/12 05:56",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
@@ -2119,7 +2308,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T17:41:22.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2130,32 +2319,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T18:32:44.581Z",
-            "label": "8/12 02:32",
-            "value": 24,
+            "at": "2026-08-11T18:33:40.037Z",
+            "label": "8/12 02:33",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-11T19:24:07.162Z",
-            "label": "8/12 03:24",
-            "value": 34,
+            "at": "2026-08-11T19:25:58.075Z",
+            "label": "8/12 03:25",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:15:29.743Z",
-            "label": "8/12 04:15",
-            "value": 44,
+            "at": "2026-08-11T20:18:16.113Z",
+            "label": "8/12 04:18",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:06:52.324Z",
-            "label": "8/12 05:06",
-            "value": 54,
+            "at": "2026-08-11T21:10:34.150Z",
+            "label": "8/12 05:10",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:02:52.188Z",
+            "label": "8/12 06:02",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
@@ -2312,7 +2507,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T17:38:49.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 97,
         "peak": 97,
         "history": [
@@ -2323,32 +2518,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T18:30:42.181Z",
-            "label": "8/12 02:30",
-            "value": 42,
+            "at": "2026-08-11T18:31:32.537Z",
+            "label": "8/12 02:31",
+            "value": 40,
             "reports": 2
           },
           {
-            "at": "2026-08-11T19:22:35.362Z",
-            "label": "8/12 03:22",
-            "value": 56,
+            "at": "2026-08-11T19:24:16.075Z",
+            "label": "8/12 03:24",
+            "value": 51,
             "reports": 2
           },
           {
-            "at": "2026-08-11T20:14:28.543Z",
-            "label": "8/12 04:14",
-            "value": 69,
+            "at": "2026-08-11T20:16:59.613Z",
+            "label": "8/12 04:16",
+            "value": 63,
             "reports": 2
           },
           {
-            "at": "2026-08-11T21:06:21.724Z",
-            "label": "8/12 05:06",
-            "value": 83,
+            "at": "2026-08-11T21:09:43.150Z",
+            "label": "8/12 05:09",
+            "value": 74,
             "reports": 2
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:02:26.688Z",
+            "label": "8/12 06:02",
+            "value": 86,
+            "reports": 2
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 97,
             "reports": 2
           }
@@ -2463,7 +2664,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T17:00:34.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 75,
         "peak": 75,
         "history": [
@@ -2474,32 +2675,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T18:00:06.181Z",
-            "label": "8/12 02:00",
-            "value": 26,
+            "at": "2026-08-11T17:59:40.037Z",
+            "label": "8/12 01:59",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-11T18:59:38.362Z",
-            "label": "8/12 02:59",
-            "value": 38,
+            "at": "2026-08-11T18:58:46.075Z",
+            "label": "8/12 02:58",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-11T19:59:10.543Z",
-            "label": "8/12 03:59",
-            "value": 50,
+            "at": "2026-08-11T19:57:52.113Z",
+            "label": "8/12 03:57",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:58:42.724Z",
-            "label": "8/12 04:58",
-            "value": 63,
+            "at": "2026-08-11T20:56:58.150Z",
+            "label": "8/12 04:56",
+            "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T21:56:04.188Z",
+            "label": "8/12 05:56",
+            "value": 65,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 75,
             "reports": 1
           }
@@ -2640,7 +2847,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T17:00:00.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 97,
         "peak": 97,
         "history": [
@@ -2651,32 +2858,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T17:59:38.981Z",
+            "at": "2026-08-11T17:59:11.704Z",
             "label": "8/12 01:59",
-            "value": 42,
+            "value": 40,
             "reports": 2
           },
           {
-            "at": "2026-08-11T18:59:17.962Z",
-            "label": "8/12 02:59",
-            "value": 56,
+            "at": "2026-08-11T18:58:23.408Z",
+            "label": "8/12 02:58",
+            "value": 51,
             "reports": 2
           },
           {
-            "at": "2026-08-11T19:58:56.943Z",
-            "label": "8/12 03:58",
-            "value": 69,
+            "at": "2026-08-11T19:57:35.113Z",
+            "label": "8/12 03:57",
+            "value": 63,
             "reports": 2
           },
           {
-            "at": "2026-08-11T20:58:35.924Z",
-            "label": "8/12 04:58",
-            "value": 83,
+            "at": "2026-08-11T20:56:46.817Z",
+            "label": "8/12 04:56",
+            "value": 74,
             "reports": 2
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T21:55:58.521Z",
+            "label": "8/12 05:55",
+            "value": 86,
+            "reports": 2
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 97,
             "reports": 2
           }
@@ -2821,7 +3034,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T16:41:17.281Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -2832,38 +3045,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T17:34:06.885Z",
+            "at": "2026-08-11T17:34:41.987Z",
             "label": "8/12 01:34",
-            "value": 23,
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-11T18:26:56.489Z",
-            "label": "8/12 02:26",
-            "value": 31,
+            "at": "2026-08-11T18:28:06.693Z",
+            "label": "8/12 02:28",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-11T19:19:46.093Z",
-            "label": "8/12 03:19",
-            "value": 40,
+            "at": "2026-08-11T19:21:31.400Z",
+            "label": "8/12 03:21",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:12:35.697Z",
-            "label": "8/12 04:12",
-            "value": 49,
+            "at": "2026-08-11T20:14:56.106Z",
+            "label": "8/12 04:14",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:05:25.301Z",
-            "label": "8/12 05:05",
-            "value": 58,
+            "at": "2026-08-11T21:08:20.813Z",
+            "label": "8/12 05:08",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:01:45.519Z",
+            "label": "8/12 06:01",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 66,
             "reports": 1
           }
@@ -2976,7 +3195,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T16:31:23.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2987,38 +3206,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T17:25:51.650Z",
-            "label": "8/12 01:25",
-            "value": 22,
+            "at": "2026-08-11T17:26:12.603Z",
+            "label": "8/12 01:26",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-11T18:20:20.301Z",
-            "label": "8/12 02:20",
-            "value": 31,
+            "at": "2026-08-11T18:21:02.207Z",
+            "label": "8/12 02:21",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-11T19:14:48.952Z",
-            "label": "8/12 03:14",
-            "value": 39,
+            "at": "2026-08-11T19:15:51.811Z",
+            "label": "8/12 03:15",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:09:17.603Z",
-            "label": "8/12 04:09",
-            "value": 47,
+            "at": "2026-08-11T20:10:41.414Z",
+            "label": "8/12 04:10",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:03:46.254Z",
-            "label": "8/12 05:03",
-            "value": 55,
+            "at": "2026-08-11T21:05:31.018Z",
+            "label": "8/12 05:05",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T22:00:20.622Z",
+            "label": "8/12 06:00",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
@@ -3307,7 +3532,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T16:25:20.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -3318,38 +3543,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T17:20:49.150Z",
-            "label": "8/12 01:20",
-            "value": 58,
+            "at": "2026-08-11T17:21:01.460Z",
+            "label": "8/12 01:21",
+            "value": 56,
             "reports": 7
           },
           {
-            "at": "2026-08-11T18:16:18.301Z",
+            "at": "2026-08-11T18:16:42.921Z",
             "label": "8/12 02:16",
-            "value": 71,
+            "value": 67,
             "reports": 7
           },
           {
-            "at": "2026-08-11T19:11:47.452Z",
-            "label": "8/12 03:11",
-            "value": 83,
+            "at": "2026-08-11T19:12:24.382Z",
+            "label": "8/12 03:12",
+            "value": 78,
             "reports": 7
           },
           {
-            "at": "2026-08-11T20:07:16.603Z",
-            "label": "8/12 04:07",
-            "value": 96,
+            "at": "2026-08-11T20:08:05.843Z",
+            "label": "8/12 04:08",
+            "value": 89,
             "reports": 7
           },
           {
-            "at": "2026-08-11T21:02:45.754Z",
-            "label": "8/12 05:02",
+            "at": "2026-08-11T21:03:47.304Z",
+            "label": "8/12 05:03",
             "value": 100,
             "reports": 7
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T21:59:28.765Z",
+            "label": "8/12 05:59",
+            "value": 100,
+            "reports": 7
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 100,
             "reports": 7
           }
@@ -3485,7 +3716,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T16:00:00.000Z",
-        "endedAt": "2026-08-11T21:58:14.905Z",
+        "endedAt": "2026-08-11T22:55:10.226Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3496,38 +3727,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T16:59:42.484Z",
+            "at": "2026-08-11T16:59:18.603Z",
             "label": "8/12 00:59",
-            "value": 22,
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-11T17:59:24.968Z",
-            "label": "8/12 01:59",
-            "value": 31,
+            "at": "2026-08-11T17:58:37.207Z",
+            "label": "8/12 01:58",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-11T18:59:07.452Z",
-            "label": "8/12 02:59",
-            "value": 39,
+            "at": "2026-08-11T18:57:55.811Z",
+            "label": "8/12 02:57",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-11T19:58:49.936Z",
-            "label": "8/12 03:58",
-            "value": 47,
+            "at": "2026-08-11T19:57:14.414Z",
+            "label": "8/12 03:57",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-11T20:58:32.420Z",
-            "label": "8/12 04:58",
-            "value": 55,
+            "at": "2026-08-11T20:56:33.018Z",
+            "label": "8/12 04:56",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-11T21:58:14.905Z",
-            "label": "8/12 05:58",
+            "at": "2026-08-11T21:55:51.622Z",
+            "label": "8/12 05:55",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T22:55:10.226Z",
+            "label": "8/12 06:55",
             "value": 64,
             "reports": 1
           }
