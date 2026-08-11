@@ -1,7 +1,225 @@
 {
-  "generatedAt": "2026-08-11T02:21:12.776Z",
+  "generatedAt": "2026-08-11T04:04:00.844Z",
   "date": "2026-08-11",
   "items": [
+    {
+      "id": "c8c1b994b5e28240",
+      "normalizedUrl": "https://arxiv.org/abs/2608.07474",
+      "originalUrl": "https://arxiv.org/abs/2608.07474",
+      "titleOriginal": "Flow-by-Flow:Content-Judgment Bypass for Governing AI Output in High-Loss Domains",
+      "summaryOriginal": "arXiv:2608.07474v1 Announce Type: new Abstract: Prior work showed that human-in-the-loop oversight becomes structurally untenable in high-loss domains when AI output velocity V exceeds human cognitive capacity C_max. The operative constraint, however, is not V alone but V x L, where L denotes per-item cognitive load. L consists of triage, judgment, and response, which respond asymmetrically to AI capability improvement. Triage cost does not decline as models become more capable, because semantic indeterminacy is inherent in general-purpose design. Response cost is invariant to accuracy improvements. Only judgment cost faces downward pressure, and this pressure often operates by inducing omission rather than genuine reduction. Capability improvement therefore restructures L rather than reducing it. Governance mechanisms based on evaluating whether AI output is correct either delegate that evaluation to AI and inherit hallucination risk, or delegate it to humans and face the V x L ceiling. We propose Flow-by-Flow, a governance paradigm that controls supervisory load without evaluating content. A cognitive cost score based on formal, countable features imposes nonlinear costs on high-",
+      "originalLanguage": "en",
+      "author": "Hiroki Naito",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-11T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.07474",
+          "publishedAt": "2026-08-11T04:00:00.000Z",
+          "title": "Flow-by-Flow:Content-Judgment Bypass for Governing AI Output in High-Loss Domains",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究针对AI治理中的关键瓶颈（人类监督不可行性）提出创新范式，具有理论价值，但尚未有实际应用验证。",
+      "importanceReasonEn": "The research addresses a critical bottleneck in AI governance (human oversight infeasibility) with an innovative paradigm, but lacks practical validation.",
+      "scoringMode": "ai",
+      "titleZh": "逐流治理：高损失领域AI输出的内容判断绕过机制",
+      "titleEn": "Flow-by-Flow: Content-Judgment Bypass for Governing AI Output in High-Loss Domains",
+      "summaryZh": "本文提出，在高损失领域，当AI输出速度V超过人类认知容量C_max时，人类参与监督在结构上不可行。关键约束是V×L，其中L是每项认知负荷，包括分类、判断和响应。随着AI能力提升，分类成本不降，响应成本不变，只有判断成本可能下降，但往往通过诱导省略而非真正减少。因此，能力提升重构L而非减少L。基于评估AI输出正确性的治理机制要么委托给AI（继承幻觉风险），要么委托给人类（面临V×L上限）。作者提出Flow-by-Flow治理范式，通过基于形式化可计数特征的认知成本评分，在不评估内容的情况下控制监督负荷。",
+      "summaryEn": "This paper argues that human-in-the-loop oversight becomes structurally untenable in high-loss domains when AI output velocity V exceeds human cognitive capacity C_max. The key constraint is V×L, where L is per-item cognitive load, comprising triage, judgment, and response. As AI capability improves, triage cost does not decline, response cost is invariant, and only judgment cost faces downward pressure, often by inducing omission rather than genuine reduction. Thus, capability improvement restructures L rather than reducing it. Governance mechanisms based on evaluating correctness either delegate to AI (inheriting hallucination risk) or to humans (facing the V×L ceiling). The authors propose Flow-by-Flow, a governance paradigm that controls supervisory load without evaluating content, usi",
+      "keywords": [
+        "Flow-by-Flow",
+        "AI治理",
+        "认知负荷",
+        "高损失领域",
+        "内容判断绕过"
+      ],
+      "topics": [
+        "AI治理",
+        "人类监督",
+        "认知负荷",
+        "高损失领域"
+      ],
+      "models": [],
+      "detailZh": "本文指出，在高损失领域（如医疗、金融、司法等），AI输出速度V可能远超人类认知容量C_max，导致人类监督在结构上不可行。作者强调，真正的约束不是V本身，而是V乘以每项认知负荷L。L由三部分组成：分类（triage）、判断（judgment）和响应（response）。随着AI能力提升，分类成本不会下降，因为通用设计中的语义不确定性是固有的；响应成本对准确性改进不敏感；只有判断成本面临下行压力，但这种压力往往通过诱导省略（即跳过判断）而非真正减少认知负荷来实现。因此，能力提升只是重构了L的结构，而非减少总量。\n\n基于评估AI输出正确性的治理机制存在两难：若将评估委托给AI，则继承幻觉风险；若委托给人类，则面临V×L上限。为此，作者提出Flow-by-Flow治理范式，通过基于形式化、可计数特征的认知成本评分，对高负荷项施加非线性成本，从而在不评估内容的情况下控制监督负荷。该范式旨在将有限的监督资源集中在最需要的地方，同时避免对内容本身的判断。\n\n论文还讨论了该范式的理论基础和潜在应用场景，但未提供具体实验数据或案例验证。",
+      "keyPointsZh": [
+        "高损失领域中，人类监督的瓶颈是V×L，而非单纯的速度V。",
+        "认知负荷L由分类、判断、响应组成，能力提升对三者的影响不对称。",
+        "基于正确性评估的治理机制面临AI幻觉或人类容量上限的两难。",
+        "Flow-by-Flow通过认知成本评分控制监督负荷，不评估内容。"
+      ],
+      "impactZh": "该研究为AI治理提供了新的理论框架，可能影响高损失领域（如医疗、金融）的监管设计，但尚需实践验证。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和治理者，该范式可能提供一种新的监督成本控制思路，但当前仅为理论，无直接可操作方案。",
+      "howItWorksZh": "",
+      "interpretationZh": "论文提出的Flow-by-Flow范式在理论上具有创新性，但缺乏实证支持。其核心思想是绕过内容判断，通过形式化特征控制监督负荷，这可能在特定场景下有效，但实际效果和可行性仍需进一步研究。",
+      "limitationsZh": "论文仅为理论探讨，未提供实验数据或案例验证；Flow-by-Flow的具体实现细节和适用条件尚不明确。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.07474",
+          "publishedAt": "2026-08-11T04:00:00.000Z",
+          "title": "Flow-by-Flow:Content-Judgment Bypass for Governing AI Output in High-Loss Domains",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-11T04:00:00.000Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-11T04:00:00.000Z",
+            "label": "8/11 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "3e05e1d0d8b37841",
+      "normalizedUrl": "https://arxiv.org/abs/2608.07480",
+      "originalUrl": "https://arxiv.org/abs/2608.07480",
+      "titleOriginal": "Emotion in an active inference model of human driving",
+      "summaryOriginal": "arXiv:2608.07480v1 Announce Type: new Abstract: Active inference has emerged as a principled framework for modeling adaptive behavior by balancing goal-directed action with uncertainty reduction. It has been successfully applied across biological and artificial systems, including recent work on human driving. However, existing active inference models of driving have yet to address an important determinant of behavior in traffic: affective state, which significantly influences decision-making. Prior work in non-traffic domains has explored active inference agents in which emotions are represented along the axes of valence and arousal in the circumplex model. However, this work has been limited to simplified settings with discrete state spaces. In this work, we propose an expanded formulation of valence and arousal that can be extracted from a more complex active inference model of driving with continuous states. In particular, we condition affective estimates not only on the current state but also on predicted future outcomes. We evaluate the proposed approach in two interactive driving scenarios and show that the resulting emotion signals correspond to affective patterns reported i",
+      "originalLanguage": "en",
+      "author": "Julian F. Schumann, Johan Engstr\\\"om, Ran Wei, Jens Kober, Martijn Wisse, Arkady Zgonnikov",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-11T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.07480",
+          "publishedAt": "2026-08-11T04:00:00.000Z",
+          "title": "Emotion in an active inference model of human driving",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该研究将情感建模引入主动推理驾驶模型，扩展了现有框架，对自动驾驶和人类行为建模有潜在价值，但属于学术论文，实际应用尚远。",
+      "importanceReasonEn": "This research introduces emotion modeling into active inference driving models, extending existing frameworks, with potential value for autonomous driving and human behavior modeling, but it is an academic paper with practical applications still distant.",
+      "scoringMode": "ai",
+      "titleZh": "人类驾驶主动推理模型中的情绪",
+      "titleEn": "Emotion in an active inference model of human driving",
+      "summaryZh": "主动推理已成为建模自适应行为的原则性框架，通过平衡目标导向行动与不确定性减少。它已成功应用于生物和人工系统，包括最近的人类驾驶工作。然而，现有的驾驶主动推理模型尚未解决交通行为的一个重要决定因素：情感状态，它显著影响决策。先前在非交通领域的工作探索了主动推理代理，其中情绪沿圆周模型中的效价和唤醒轴表示。然而，这项工作仅限于具有离散状态空间的简化设置。在这项工作中，我们提出了效价和唤醒的扩展公式，可以从具有连续状态的更复杂的驾驶主动推理模型中提取。特别是，我们不仅根据当前状态，还根据预测的未来结果来调节情感估计。我们在两个交互式驾驶场景中评估了所提出的方法，并表明由此产生的情绪信号与报告的情感模式相对应。",
+      "summaryEn": "Active inference has emerged as a principled framework for modeling adaptive behavior by balancing goal-directed action with uncertainty reduction. It has been successfully applied across biological and artificial systems, including recent work on human driving. However, existing active inference models of driving have yet to address an important determinant of behavior in traffic: affective state, which significantly influences decision-making. Prior work in non-traffic domains has explored active inference agents in which emotions are represented along the axes of valence and arousal in the circumplex model. However, this work has been limited to simplified settings with discrete state spaces. In this work, we propose an expanded formulation of valence and arousal that can be extracted f",
+      "keywords": [
+        "active inference",
+        "emotion",
+        "driving",
+        "valence",
+        "arousal",
+        "continuous states"
+      ],
+      "topics": [
+        "active inference",
+        "emotion modeling",
+        "autonomous driving",
+        "affective computing"
+      ],
+      "models": [],
+      "detailZh": "主动推理是一种基于自由能原理的认知框架，认为智能体通过最小化预测误差来行动和感知。该框架已成功应用于模拟人类驾驶行为，但现有模型忽略了情感状态对决策的影响。情感在交通中起着重要作用，例如愤怒或焦虑可能导致激进驾驶。先前的研究在非交通领域使用圆周模型（效价和唤醒）表示情感，但仅限于离散状态空间。本工作提出了一种扩展的效价和唤醒公式，可从连续状态的驾驶模型中提取。具体来说，情感估计不仅基于当前状态，还基于预测的未来结果。作者在两个交互式驾驶场景中评估了该方法，结果表明产生的情绪信号与已知的情感模式一致。该研究为将情感因素纳入自动驾驶系统的决策过程提供了理论基础。",
+      "keyPointsZh": [
+        "现有主动推理驾驶模型未考虑情感状态。",
+        "提出基于连续状态和未来预测的效价和唤醒扩展公式。",
+        "在两个交互式驾驶场景中验证了情绪信号的有效性。"
+      ],
+      "impactZh": "该研究可能推动自动驾驶系统更好地理解人类驾驶员的情感状态，从而改善人机交互和安全性。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI研究者和自动驾驶开发者，该研究提供了将情感建模融入主动推理框架的方法，可能启发更人性化的驾驶辅助系统。",
+      "howItWorksZh": "该方法基于主动推理框架，通过预测未来结果来估计情感状态。具体而言，效价和唤醒被定义为当前状态和预测未来结果的函数。在驾驶场景中，模型模拟驾驶员的行为，并根据预测的碰撞风险、交通状况等因素计算情感信号。",
+      "interpretationZh": "该研究提出了一种新颖的方法来量化驾驶中的情感状态，但结果仅基于模拟场景，尚未在真实驾驶数据中验证。",
+      "limitationsZh": "研究仅在模拟环境中评估，未涉及真实驾驶数据；情感模型可能简化了复杂的情感体验。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.07480",
+          "publishedAt": "2026-08-11T04:00:00.000Z",
+          "title": "Emotion in an active inference model of human driving",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-11T04:00:00.000Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-08-11T04:00:00.000Z",
+            "label": "8/11 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
+            "value": 58,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "98befe61037c605f",
       "normalizedUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685081&idx=1&sn=13a05578a3959c047209c8e74b56fa48",
@@ -105,7 +323,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T00:12:00.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -116,20 +334,26 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T00:55:04.258Z",
-            "label": "8/11 08:55",
-            "value": 31,
+            "at": "2026-08-11T01:10:00.211Z",
+            "label": "8/11 09:10",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:38:08.517Z",
-            "label": "8/11 09:38",
-            "value": 47,
+            "at": "2026-08-11T02:08:00.422Z",
+            "label": "8/11 10:08",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T03:06:00.633Z",
+            "label": "8/11 11:06",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 64,
             "reports": 1
           }
@@ -171,18 +395,18 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "OpenAI作为AI领域的领头羊，其重大财务动作对行业和员工有显著影响，但消息未经官方证实，且摘要与标题关联性弱。",
-      "importanceReasonEn": "OpenAI, as a leader in AI, its major financial moves have significant impact on the industry and employees, but the news is unverified and the summary is weakly related to the title.",
+      "importanceReasonZh": "该事件涉及OpenAI的重大财务活动，对员工和公司估值有影响，但信息有限且未经验证。",
+      "importanceReasonEn": "The event involves a major financial activity at OpenAI, impacting employees and company valuation, but information is limited and unverified.",
       "scoringMode": "ai",
       "titleZh": "据报道，OpenAI完成70亿美元员工要约收购",
       "titleEn": "OpenAI reportedly completed a $7 billion employee tender offer",
-      "summaryZh": "旧金山房地产市场再次陷入困境。",
+      "summaryZh": "旧金山的住房市场再次陷入困境。",
       "summaryEn": "San Francisco's housing market is in trouble again.",
       "keywords": [
         "OpenAI",
         "tender offer",
-        "员工",
-        "70亿美元"
+        "70亿美元",
+        "员工"
       ],
       "topics": [
         "OpenAI",
@@ -190,19 +414,19 @@
         "融资"
       ],
       "models": [],
-      "detailZh": "据报道，OpenAI已完成一笔70亿美元的员工要约收购。要约收购允许员工向公司或外部投资者出售其持有的股票，从而获得流动性。这一举措在私营公司中较为常见，尤其是在估值较高的科技公司中，旨在奖励员工并留住人才。然而，该消息尚未得到OpenAI官方证实，且来源仅提及“据报道”，因此细节和确切条款仍不清楚。此外，摘要部分提到旧金山房地产市场，与标题内容关联性较弱，可能暗示该交易对当地经济或房地产有潜在影响，但缺乏具体数据支持。",
+      "detailZh": "据报道，OpenAI已完成一项价值70亿美元的员工要约收购。该交易允许员工出售其持有的公司股份，从而获得流动性。这一举措在私营公司中较为常见，尤其是在估值较高的科技公司中，旨在奖励员工并缓解其持股压力。然而，目前关于该交易的具体细节，如收购价格、参与员工范围以及交易结构等，尚未公开。此外，该消息的来源为TechCrunch AI，但未提供更多官方确认或详细说明。值得注意的是，该报道的摘要提到了旧金山的住房市场，这可能与OpenAI总部所在地的房地产影响有关，但具体关联尚不明确。",
       "keyPointsZh": [
-        "OpenAI据报道完成70亿美元员工要约收购。",
-        "要约收购为员工提供股票流动性。",
-        "消息未经官方证实，细节有限。",
-        "摘要提及旧金山房地产市场，但关联性不明。"
+        "OpenAI据报道完成了70亿美元的员工要约收购。",
+        "该交易允许员工出售股份，获得流动性。",
+        "具体细节如收购价格和参与范围尚未公开。",
+        "消息来源为TechCrunch AI，未获官方确认。"
       ],
-      "impactZh": "该事件可能对OpenAI的员工激励和人才保留产生积极影响，同时反映公司估值和财务状况。但鉴于消息未经证实，实际影响需等待官方确认。",
+      "impactZh": "该事件可能对OpenAI的员工激励和公司估值产生积极影响，但具体影响需待更多细节披露。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI从业者和投资者，该消息可能暗示OpenAI的估值和财务健康度，但需谨慎对待未经证实的信息。",
-      "howItWorksZh": "要约收购通常由公司发起，允许员工在特定时间内以特定价格出售股票。具体流程包括定价、分配和交易执行，但本报道未提供细节。",
-      "interpretationZh": "报道称OpenAI完成要约收购，但未提供官方确认。合理推断是公司希望为员工提供流动性，同时可能吸引和留住人才。然而，摘要与标题的脱节表明信息可能不完整或存在误导。",
-      "limitationsZh": "消息来源单一，未经官方证实，具体条款和影响未知。摘要与标题关联性弱，可能包含无关信息。",
+      "userImpactZh": "对于AI从业者或投资者，该交易可能反映OpenAI的财务健康状况和员工信心，但具体影响有限。",
+      "howItWorksZh": "",
+      "interpretationZh": "该报道仅提供了交易完成的消息，未提供具体细节。合理推断是OpenAI正在通过要约收购为员工提供流动性，这通常发生在公司估值上升时。但需注意，该消息未经官方证实，且摘要内容与标题关联性不强，可能为误报或部分信息。",
+      "limitationsZh": "该报道信息有限，未提供交易的具体条款、官方确认或背景细节。摘要内容与标题不匹配，可能影响信息准确性。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -224,7 +448,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-11T00:03:18.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -235,20 +459,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T00:49:16.258Z",
-            "label": "8/11 08:49",
-            "value": 31,
+            "at": "2026-08-11T00:51:26.568Z",
+            "label": "8/11 08:51",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:35:14.517Z",
-            "label": "8/11 09:35",
-            "value": 47,
+            "at": "2026-08-11T01:39:35.137Z",
+            "label": "8/11 09:39",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T02:27:43.706Z",
+            "label": "8/11 10:27",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T03:15:52.275Z",
+            "label": "8/11 11:15",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 64,
             "reports": 1
           }
@@ -983,7 +1219,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T23:56:15.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -994,20 +1230,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T00:44:34.258Z",
-            "label": "8/11 08:44",
-            "value": 71,
+            "at": "2026-08-11T00:45:48.168Z",
+            "label": "8/11 08:45",
+            "value": 60,
             "reports": 29
           },
           {
-            "at": "2026-08-11T01:32:53.517Z",
-            "label": "8/11 09:32",
-            "value": 96,
+            "at": "2026-08-11T01:35:21.337Z",
+            "label": "8/11 09:35",
+            "value": 76,
             "reports": 29
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T02:24:54.506Z",
+            "label": "8/11 10:24",
+            "value": 91,
+            "reports": 29
+          },
+          {
+            "at": "2026-08-11T03:14:27.675Z",
+            "label": "8/11 11:14",
+            "value": 100,
+            "reports": 29
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 100,
             "reports": 29
           }
@@ -1194,7 +1442,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T23:56:03.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 72,
         "peak": 72,
         "history": [
@@ -1205,20 +1453,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-11T00:44:26.258Z",
-            "label": "8/11 08:44",
-            "value": 33,
+            "at": "2026-08-11T00:45:38.568Z",
+            "label": "8/11 08:45",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:32:49.517Z",
-            "label": "8/11 09:32",
-            "value": 53,
+            "at": "2026-08-11T01:35:14.137Z",
+            "label": "8/11 09:35",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T02:24:49.706Z",
+            "label": "8/11 10:24",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T03:14:25.275Z",
+            "label": "8/11 11:14",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 72,
             "reports": 1
           }
@@ -1336,7 +1596,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T23:08:50.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1347,26 +1607,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T23:56:55.694Z",
-            "label": "8/11 07:56",
-            "value": 25,
+            "at": "2026-08-11T00:07:52.168Z",
+            "label": "8/11 08:07",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:45:01.388Z",
-            "label": "8/11 08:45",
-            "value": 36,
+            "at": "2026-08-11T01:06:54.337Z",
+            "label": "8/11 09:06",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:33:07.082Z",
-            "label": "8/11 09:33",
-            "value": 47,
+            "at": "2026-08-11T02:05:56.506Z",
+            "label": "8/11 10:05",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T03:04:58.675Z",
+            "label": "8/11 11:04",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 58,
             "reports": 1
           }
@@ -1479,7 +1745,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T21:56:21.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 72,
         "peak": 72,
         "history": [
@@ -1490,32 +1756,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T22:49:19.355Z",
-            "label": "8/11 06:49",
-            "value": 26,
+            "at": "2026-08-10T22:48:52.406Z",
+            "label": "8/11 06:48",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:42:17.710Z",
-            "label": "8/11 07:42",
-            "value": 37,
+            "at": "2026-08-10T23:41:23.812Z",
+            "label": "8/11 07:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:35:16.065Z",
-            "label": "8/11 08:35",
-            "value": 49,
+            "at": "2026-08-11T00:33:55.218Z",
+            "label": "8/11 08:33",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:28:14.420Z",
-            "label": "8/11 09:28",
-            "value": 60,
+            "at": "2026-08-11T01:26:26.625Z",
+            "label": "8/11 09:26",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T02:18:58.031Z",
+            "label": "8/11 10:18",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T03:11:29.437Z",
+            "label": "8/11 11:11",
+            "value": 64,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 72,
             "reports": 1
           }
@@ -1557,8 +1835,8 @@
         }
       ],
       "importance": 60,
-      "importanceReasonZh": "该事件涉及科技巨头CEO的公开宣言，可能影响公众对AI的看法，但内容为观点性文章，缺乏具体事实细节。",
-      "importanceReasonEn": "The event involves a tech CEO's public manifesto that may influence public perception of AI, but the content is opinion-based and lacks specific factual details.",
+      "importanceReasonZh": "该事件涉及科技巨头CEO的公开宣言，可能影响公众对AI的认知，但内容为观点性文章，缺乏具体事实细节。",
+      "importanceReasonEn": "The event involves a tech CEO's public manifesto, potentially influencing public perception of AI, but the content is opinion-based with limited factual details.",
       "scoringMode": "ai",
       "titleZh": "马克·扎克伯格的AI宣言正是人们不喜欢AI的原因",
       "titleEn": "Mark Zuckerberg's AI manifesto is exactly why people don't like AI",
@@ -1578,19 +1856,18 @@
         "公众反应"
       ],
       "models": [],
-      "detailZh": "周一，马克·扎克伯格发布了一份长达6500字的宣言，重点阐述了Meta AI正在构建的“个人超级智能”系统的可能性。宣言内容主要围绕个人AI的潜力，但文章标题和摘要暗示，这份宣言可能恰恰是公众不喜欢AI的原因。文章可能批评了扎克伯格对AI的过度乐观或脱离实际的愿景，但具体细节未在摘要中提供。目前仅知宣言发布的事实，以及文章对其的负面评价，但缺乏具体内容、公众反应或数据支持。",
+      "detailZh": "周一，马克·扎克伯格发布了一份长达6500字的宣言，重点阐述了他对“个人超级智能”的愿景，这是Meta AI正在构建的系统。宣言主要聚焦于AI如何个性化地服务于个人，可能包括个人助理、定制化推荐等功能。然而，这篇文章被TechCrunch评论为“正是人们不喜欢AI的原因”，暗示其内容可能过于宏大或脱离实际，未能解决公众对AI的担忧，如隐私、就业替代等问题。目前，关于宣言的具体内容、Meta AI的技术细节以及公众反应的具体数据均未在来源中提供。",
       "keyPointsZh": [
-        "扎克伯格发布6500字AI宣言，聚焦个人超级智能。",
-        "宣言由Meta AI推动，强调个人AI的可能性。",
-        "文章标题暗示宣言可能加剧公众对AI的反感。",
-        "摘要未提供具体细节，仅表明观点性批评。"
+        "扎克伯格发布6500字AI宣言，主题为个人超级智能。",
+        "宣言由TechCrunch评论，标题暗示其内容可能引发公众反感。",
+        "来源未提供宣言具体内容或Meta AI技术细节。"
       ],
-      "impactZh": "该事件可能影响公众对AI的信任和接受度，尤其是当科技领袖的言论被视为脱离实际时。但具体影响需更多信息。",
+      "impactZh": "该事件可能影响公众对AI的信任度，尤其是当科技领袖的愿景与公众实际担忧脱节时。但具体影响尚不明确。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "根据现有信息，扎克伯格发布宣言是事实，但文章对其的批评是观点。摘要未提供宣言的具体内容，因此无法判断批评是否合理。合理推断是，文章可能认为扎克伯格的愿景过于宏大或忽视公众关切，但缺乏证据。",
-      "limitationsZh": "摘要信息有限，未提供宣言的具体内容、公众反应或数据支持，因此无法全面评估。",
+      "interpretationZh": "根据来源，扎克伯格发布宣言是事实，但宣言的具体内容和公众反应未详细说明。TechCrunch的评论标题表明其观点认为该宣言可能加剧公众对AI的负面情绪，但这属于评论者的解读，而非客观事实。",
+      "limitationsZh": "来源仅提供标题和摘要，缺乏宣言全文、具体数据或公众反应证据，因此无法全面评估事件。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -1612,7 +1889,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T20:53:02.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1623,38 +1900,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T21:47:43.796Z",
-            "label": "8/11 05:47",
-            "value": 21,
+            "at": "2026-08-10T21:46:54.355Z",
+            "label": "8/11 05:46",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-10T22:42:25.592Z",
-            "label": "8/11 06:42",
-            "value": 29,
+            "at": "2026-08-10T22:40:46.711Z",
+            "label": "8/11 06:40",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:37:07.388Z",
-            "label": "8/11 07:37",
+            "at": "2026-08-10T23:34:39.066Z",
+            "label": "8/11 07:34",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T00:28:31.422Z",
+            "label": "8/11 08:28",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:31:49.184Z",
-            "label": "8/11 08:31",
-            "value": 43,
+            "at": "2026-08-11T01:22:23.777Z",
+            "label": "8/11 09:22",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:26:30.980Z",
-            "label": "8/11 09:26",
-            "value": 51,
+            "at": "2026-08-11T02:16:16.133Z",
+            "label": "8/11 10:16",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T03:10:08.488Z",
+            "label": "8/11 11:10",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 58,
             "reports": 1
           }
@@ -1749,7 +2038,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T20:04:24.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -1760,44 +2049,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T20:58:13.825Z",
-            "label": "8/11 04:58",
-            "value": 21,
+            "at": "2026-08-10T21:04:21.105Z",
+            "label": "8/11 05:04",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-10T21:52:03.650Z",
-            "label": "8/11 05:52",
-            "value": 27,
+            "at": "2026-08-10T22:04:18.211Z",
+            "label": "8/11 06:04",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-10T22:45:53.475Z",
-            "label": "8/11 06:45",
-            "value": 34,
+            "at": "2026-08-10T23:04:15.316Z",
+            "label": "8/11 07:04",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:39:43.300Z",
-            "label": "8/11 07:39",
-            "value": 41,
+            "at": "2026-08-11T00:04:12.422Z",
+            "label": "8/11 08:04",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:33:33.125Z",
-            "label": "8/11 08:33",
-            "value": 48,
+            "at": "2026-08-11T01:04:09.527Z",
+            "label": "8/11 09:04",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:27:22.950Z",
-            "label": "8/11 09:27",
-            "value": 54,
+            "at": "2026-08-11T02:04:06.633Z",
+            "label": "8/11 10:04",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T03:04:03.738Z",
+            "label": "8/11 11:04",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 61,
             "reports": 1
           }
@@ -1902,7 +2197,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T20:00:00.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1913,44 +2208,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T20:54:27.539Z",
-            "label": "8/11 04:54",
-            "value": 20,
+            "at": "2026-08-10T20:53:46.760Z",
+            "label": "8/11 04:53",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-10T21:48:55.078Z",
-            "label": "8/11 05:48",
-            "value": 27,
+            "at": "2026-08-10T21:47:33.520Z",
+            "label": "8/11 05:47",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-10T22:43:22.618Z",
-            "label": "8/11 06:43",
-            "value": 33,
+            "at": "2026-08-10T22:41:20.281Z",
+            "label": "8/11 06:41",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:37:50.157Z",
-            "label": "8/11 07:37",
+            "at": "2026-08-10T23:35:07.041Z",
+            "label": "8/11 07:35",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T00:28:53.802Z",
+            "label": "8/11 08:28",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:32:17.697Z",
-            "label": "8/11 08:32",
-            "value": 46,
+            "at": "2026-08-11T01:22:40.562Z",
+            "label": "8/11 09:22",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:26:45.236Z",
-            "label": "8/11 09:26",
-            "value": 52,
+            "at": "2026-08-11T02:16:27.323Z",
+            "label": "8/11 10:16",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T03:10:14.083Z",
+            "label": "8/11 11:10",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 58,
             "reports": 1
           }
@@ -2107,7 +2414,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T19:30:00.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2118,44 +2425,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T20:28:44.682Z",
-            "label": "8/11 04:28",
-            "value": 21,
+            "at": "2026-08-10T20:27:06.760Z",
+            "label": "8/11 04:27",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-10T21:27:29.364Z",
-            "label": "8/11 05:27",
-            "value": 28,
+            "at": "2026-08-10T21:24:13.520Z",
+            "label": "8/11 05:24",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-10T22:26:14.046Z",
-            "label": "8/11 06:26",
-            "value": 35,
+            "at": "2026-08-10T22:21:20.281Z",
+            "label": "8/11 06:21",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:24:58.729Z",
-            "label": "8/11 07:24",
+            "at": "2026-08-10T23:18:27.041Z",
+            "label": "8/11 07:18",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T00:15:33.802Z",
+            "label": "8/11 08:15",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:23:43.411Z",
-            "label": "8/11 08:23",
-            "value": 49,
+            "at": "2026-08-11T01:12:40.562Z",
+            "label": "8/11 09:12",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:22:28.093Z",
-            "label": "8/11 09:22",
-            "value": 57,
+            "at": "2026-08-11T02:09:47.323Z",
+            "label": "8/11 10:09",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T03:06:54.083Z",
+            "label": "8/11 11:06",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 64,
             "reports": 1
           }
@@ -2273,7 +2592,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T18:20:39.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2284,56 +2603,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T19:14:02.752Z",
-            "label": "8/11 03:14",
-            "value": 20,
+            "at": "2026-08-10T19:18:59.184Z",
+            "label": "8/11 03:18",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-10T20:07:26.505Z",
-            "label": "8/11 04:07",
-            "value": 25,
+            "at": "2026-08-10T20:17:19.368Z",
+            "label": "8/11 04:17",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-10T21:00:50.258Z",
-            "label": "8/11 05:00",
-            "value": 31,
+            "at": "2026-08-10T21:15:39.553Z",
+            "label": "8/11 05:15",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-10T21:54:14.011Z",
-            "label": "8/11 05:54",
-            "value": 36,
+            "at": "2026-08-10T22:13:59.737Z",
+            "label": "8/11 06:13",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-10T22:47:37.764Z",
-            "label": "8/11 06:47",
-            "value": 42,
+            "at": "2026-08-10T23:12:19.922Z",
+            "label": "8/11 07:12",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:41:01.517Z",
-            "label": "8/11 07:41",
-            "value": 47,
+            "at": "2026-08-11T00:10:40.106Z",
+            "label": "8/11 08:10",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:34:25.270Z",
-            "label": "8/11 08:34",
-            "value": 53,
+            "at": "2026-08-11T01:09:00.290Z",
+            "label": "8/11 09:09",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:27:49.023Z",
-            "label": "8/11 09:27",
-            "value": 58,
+            "at": "2026-08-11T02:07:20.475Z",
+            "label": "8/11 10:07",
+            "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T03:05:40.659Z",
+            "label": "8/11 11:05",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 64,
             "reports": 1
           }
@@ -2575,7 +2900,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T17:46:50.781Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -2586,56 +2911,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T18:43:59.891Z",
-            "label": "8/11 02:43",
-            "value": 54,
+            "at": "2026-08-10T18:42:57.150Z",
+            "label": "8/11 02:42",
+            "value": 52,
             "reports": 5
           },
           {
-            "at": "2026-08-10T19:41:09.002Z",
-            "label": "8/11 03:41",
-            "value": 62,
+            "at": "2026-08-10T19:39:03.519Z",
+            "label": "8/11 03:39",
+            "value": 59,
             "reports": 5
           },
           {
-            "at": "2026-08-10T20:38:18.112Z",
-            "label": "8/11 04:38",
-            "value": 71,
+            "at": "2026-08-10T20:35:09.889Z",
+            "label": "8/11 04:35",
+            "value": 66,
             "reports": 5
           },
           {
-            "at": "2026-08-10T21:35:27.223Z",
-            "label": "8/11 05:35",
-            "value": 79,
+            "at": "2026-08-10T21:31:16.258Z",
+            "label": "8/11 05:31",
+            "value": 73,
             "reports": 5
           },
           {
-            "at": "2026-08-10T22:32:36.333Z",
-            "label": "8/11 06:32",
-            "value": 88,
+            "at": "2026-08-10T22:27:22.627Z",
+            "label": "8/11 06:27",
+            "value": 80,
             "reports": 5
           },
           {
-            "at": "2026-08-10T23:29:45.444Z",
-            "label": "8/11 07:29",
-            "value": 96,
+            "at": "2026-08-10T23:23:28.997Z",
+            "label": "8/11 07:23",
+            "value": 87,
             "reports": 5
           },
           {
-            "at": "2026-08-11T00:26:54.554Z",
-            "label": "8/11 08:26",
+            "at": "2026-08-11T00:19:35.366Z",
+            "label": "8/11 08:19",
+            "value": 94,
+            "reports": 5
+          },
+          {
+            "at": "2026-08-11T01:15:41.735Z",
+            "label": "8/11 09:15",
             "value": 100,
             "reports": 5
           },
           {
-            "at": "2026-08-11T01:24:03.665Z",
-            "label": "8/11 09:24",
+            "at": "2026-08-11T02:11:48.105Z",
+            "label": "8/11 10:11",
             "value": 100,
             "reports": 5
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T03:07:54.474Z",
+            "label": "8/11 11:07",
+            "value": 100,
+            "reports": 5
+          },
+          {
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 100,
             "reports": 5
           }
@@ -2758,7 +3095,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T17:00:00.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2769,62 +3106,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T17:56:07.277Z",
-            "label": "8/11 01:56",
+            "at": "2026-08-10T18:00:21.894Z",
+            "label": "8/11 02:00",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-10T18:52:14.555Z",
-            "label": "8/11 02:52",
-            "value": 24,
+            "at": "2026-08-10T19:00:43.789Z",
+            "label": "8/11 03:00",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-10T19:48:21.832Z",
-            "label": "8/11 03:48",
-            "value": 29,
+            "at": "2026-08-10T20:01:05.684Z",
+            "label": "8/11 04:01",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-10T20:44:29.110Z",
-            "label": "8/11 04:44",
-            "value": 34,
+            "at": "2026-08-10T21:01:27.579Z",
+            "label": "8/11 05:01",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-10T21:40:36.388Z",
-            "label": "8/11 05:40",
-            "value": 39,
+            "at": "2026-08-10T22:01:49.474Z",
+            "label": "8/11 06:01",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-10T22:36:43.665Z",
-            "label": "8/11 06:36",
-            "value": 44,
+            "at": "2026-08-10T23:02:11.369Z",
+            "label": "8/11 07:02",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:32:50.943Z",
-            "label": "8/11 07:32",
-            "value": 49,
+            "at": "2026-08-11T00:02:33.264Z",
+            "label": "8/11 08:02",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:28:58.220Z",
-            "label": "8/11 08:28",
-            "value": 54,
+            "at": "2026-08-11T01:02:55.159Z",
+            "label": "8/11 09:02",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:25:05.498Z",
-            "label": "8/11 09:25",
+            "at": "2026-08-11T02:03:17.054Z",
+            "label": "8/11 10:03",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T03:03:38.949Z",
+            "label": "8/11 11:03",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 64,
             "reports": 1
           }
@@ -2923,7 +3266,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T16:25:36.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2934,62 +3277,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T17:25:09.677Z",
-            "label": "8/11 01:25",
+            "at": "2026-08-10T17:29:05.531Z",
+            "label": "8/11 01:29",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-10T18:24:43.355Z",
-            "label": "8/11 02:24",
-            "value": 24,
+            "at": "2026-08-10T18:32:35.062Z",
+            "label": "8/11 02:32",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-10T19:24:17.032Z",
-            "label": "8/11 03:24",
-            "value": 29,
+            "at": "2026-08-10T19:36:04.593Z",
+            "label": "8/11 03:36",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-10T20:23:50.710Z",
-            "label": "8/11 04:23",
-            "value": 34,
+            "at": "2026-08-10T20:39:34.125Z",
+            "label": "8/11 04:39",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-10T21:23:24.388Z",
-            "label": "8/11 05:23",
-            "value": 39,
+            "at": "2026-08-10T21:43:03.656Z",
+            "label": "8/11 05:43",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-10T22:22:58.065Z",
-            "label": "8/11 06:22",
-            "value": 44,
+            "at": "2026-08-10T22:46:33.187Z",
+            "label": "8/11 06:46",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:22:31.743Z",
-            "label": "8/11 07:22",
-            "value": 49,
+            "at": "2026-08-10T23:50:02.718Z",
+            "label": "8/11 07:50",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:22:05.420Z",
-            "label": "8/11 08:22",
-            "value": 54,
+            "at": "2026-08-11T00:53:32.250Z",
+            "label": "8/11 08:53",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:21:39.098Z",
-            "label": "8/11 09:21",
+            "at": "2026-08-11T01:57:01.781Z",
+            "label": "8/11 09:57",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-11T03:00:31.312Z",
+            "label": "8/11 11:00",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 64,
             "reports": 1
           }
@@ -3094,7 +3443,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-10T16:20:13.000Z",
-        "endedAt": "2026-08-11T02:21:12.776Z",
+        "endedAt": "2026-08-11T04:04:00.844Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3105,68 +3454,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-10T17:14:51.161Z",
-            "label": "8/11 01:14",
+            "at": "2026-08-10T17:24:11.894Z",
+            "label": "8/11 01:24",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-10T18:09:29.322Z",
-            "label": "8/11 02:09",
+            "at": "2026-08-10T18:28:10.789Z",
+            "label": "8/11 02:28",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-10T19:04:07.484Z",
-            "label": "8/11 03:04",
+            "at": "2026-08-10T19:32:09.684Z",
+            "label": "8/11 03:32",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-10T19:58:45.645Z",
-            "label": "8/11 03:58",
+            "at": "2026-08-10T20:36:08.579Z",
+            "label": "8/11 04:36",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-10T20:53:23.807Z",
-            "label": "8/11 04:53",
+            "at": "2026-08-10T21:40:07.474Z",
+            "label": "8/11 05:40",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-10T21:48:01.968Z",
-            "label": "8/11 05:48",
+            "at": "2026-08-10T22:44:06.369Z",
+            "label": "8/11 06:44",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-10T22:42:40.130Z",
-            "label": "8/11 06:42",
+            "at": "2026-08-10T23:48:05.264Z",
+            "label": "8/11 07:48",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-10T23:37:18.291Z",
-            "label": "8/11 07:37",
+            "at": "2026-08-11T00:52:04.159Z",
+            "label": "8/11 08:52",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-11T00:31:56.453Z",
-            "label": "8/11 08:31",
+            "at": "2026-08-11T01:56:03.054Z",
+            "label": "8/11 09:56",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-11T01:26:34.614Z",
-            "label": "8/11 09:26",
+            "at": "2026-08-11T03:00:01.949Z",
+            "label": "8/11 11:00",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-11T02:21:12.776Z",
-            "label": "8/11 10:21",
+            "at": "2026-08-11T04:04:00.844Z",
+            "label": "8/11 12:04",
             "value": 64,
             "reports": 1
           }
