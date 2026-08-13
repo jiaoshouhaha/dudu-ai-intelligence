@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T07:00:59.825Z",
+  "generatedAt": "2026-08-13T08:41:00.019Z",
   "date": "2026-08-13",
   "items": [
     {
@@ -113,7 +113,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T04:32:24.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -124,20 +124,350 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T05:21:55.941Z",
-            "label": "8/13 13:21",
-            "value": 31,
+            "at": "2026-08-13T05:22:07.203Z",
+            "label": "8/13 13:22",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:11:27.883Z",
+            "at": "2026-08-13T06:11:50.407Z",
             "label": "8/13 14:11",
-            "value": 47,
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T07:01:33.611Z",
+            "label": "8/13 15:01",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T07:51:16.815Z",
+            "label": "8/13 15:51",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "80f64000971bffb0",
+      "normalizedUrl": "https://arxiv.org/abs/2608.11232",
+      "originalUrl": "https://arxiv.org/abs/2608.11232",
+      "titleOriginal": "Backtrader-Bench: Benchmarking LLM Agents on Algorithmic Trading with Self-Generated MCQs",
+      "summaryOriginal": "arXiv:2608.11232v1 Announce Type: new Abstract: Evaluating LLM coding agents in algorithmic trading is difficult because static benchmarks risk data contamination and numerical backtest outputs require ground truth from actual code execution. We present Backtrader-Bench, a framework with two complementary pipelines. A deterministic multiple-choice question (MCQ) pipeline generates questions from backtest configurations across five trading strategies, 33 templates, and three difficulty tiers, with an independent checker that re-derives every answer. A generator-solver filtering pipeline autonomously mines harder questions: a generator writes questions verified by executable code, converts them to MCQs, and discards any that a no-tool solver can answer without code execution. We evaluate 11 models without tools (10 runs each) and four with-tools configurations on a 30-question curated set. Tool-augmented agents reach 90.0% accuracy in a single pass (GPT-5.5 and Opus 4.7), outperforming the best no-tools baselines (73.0%, averaged over 10 runs) by 17 percentage points. On 38 separately mined questions, no-tools accuracy drops further, with half the models falling to roughly random-cha",
+      "originalLanguage": "en",
+      "author": "Ruoxi Zhao, Maziar Raissi",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-13T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.11232",
+          "publishedAt": "2026-08-13T04:00:00.000Z",
+          "title": "Backtrader-Bench: Benchmarking LLM Agents on Algorithmic Trading with Self-Generated MCQs",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种新的基准测试框架，解决了LLM在算法交易领域评估中的数据污染和地面真值问题，具有实际应用价值，且提供了具体的性能对比数据。",
+      "importanceReasonEn": "The paper proposes a new benchmark framework that addresses data contamination and ground truth issues in evaluating LLMs for algorithmic trading, with practical value and concrete performance comparisons.",
+      "scoringMode": "ai",
+      "titleZh": "Backtrader-Bench：基于自生成多项选择题的算法交易LLM智能体基准测试",
+      "titleEn": "Backtrader-Bench: Benchmarking LLM Agents on Algorithmic Trading with Self-Generated MCQs",
+      "summaryZh": "arXiv:2608.11232v1 公告类型：新论文。摘要：评估算法交易中的LLM编码智能体很困难，因为静态基准存在数据污染风险，且数值回测输出需要真实代码执行的地面真值。我们提出了Backtrader-Bench，一个具有两条互补流程的框架。确定性多项选择题（MCQ）流程从五种交易策略、33个模板和三个难度级别的回测配置中生成问题，并有一个独立检查器重新推导每个答案。生成器-求解器过滤流程自主挖掘更难的问题：生成器编写由可执行代码验证的问题，将其转换为MCQ，并丢弃任何无工具求解器无需代码执行即可回答的问题。我们在30道精选问题上评估了11个无工具模型（每个10次运行）和四个带工具配置。工具增强智能体在单次通过中达到90.0%的准确率（GPT-5.5和Opus 4.7），比最佳无工具基线（73.0%，10次运行平均）高出17个百分点。在38道单独挖掘的问题上，无工具准确率进一步下降，一半模型降至接近随机水平。",
+      "summaryEn": "arXiv:2608.11232v1 Announce Type: new Abstract: Evaluating LLM coding agents in algorithmic trading is difficult because static benchmarks risk data contamination and numerical backtest outputs require ground truth from actual code execution. We present Backtrader-Bench, a framework with two complementary pipelines. A deterministic multiple-choice question (MCQ) pipeline generates questions from backtest configurations across five trading strategies, 33 templates, and three difficulty tiers, with an independent checker that re-derives every answer. A generator-solver filtering pipeline autonomously mines harder questions: a generator writes questions verified by executable code, converts them to MCQs, and discards any that a no-tool solver can answer without code execution. We evaluate 11 ",
+      "keywords": [
+        "Backtrader-Bench",
+        "算法交易",
+        "LLM智能体",
+        "基准测试",
+        "MCQ",
+        "代码执行"
+      ],
+      "topics": [
+        "LLM智能体",
+        "算法交易",
+        "基准测试",
+        "多项选择题",
+        "代码执行"
+      ],
+      "models": [
+        "GPT-5.5",
+        "Opus 4.7"
+      ],
+      "detailZh": "该论文介绍了Backtrader-Bench，一个用于评估LLM编码智能体在算法交易任务中表现的基准测试框架。研究背景是，现有的静态基准容易受到数据污染的影响，且数值回测结果需要真实代码执行来获得地面真值，这使得评估变得困难。Backtrader-Bench包含两条互补的流程：确定性MCQ流程和生成器-求解器过滤流程。确定性MCQ流程从五种交易策略、33个模板和三个难度级别中生成问题，并有一个独立检查器重新推导每个答案，确保答案的准确性。生成器-求解器过滤流程则通过生成器编写问题，由可执行代码验证，并转换为MCQ，然后丢弃那些无工具求解器无需代码执行即可回答的问题，从而挖掘更难的问题。研究评估了11个无工具模型（每个运行10次）和四个带工具配置，在30道精选问题上，工具增强智能体（GPT-5.5和Opus 4.7）在单次通过中达到90.0%的准确率，比最佳无工具基线（73.0%）高出17个百分点。在38道单独挖掘的问题上，无工具准确率进一步下降，一半模型降至接近随机水平。这表明工具的使用显著提升了性能，且该基准能够有效区分模型能力。",
+      "keyPointsZh": [
+        "Backtrader-Bench是一个用于算法交易LLM智能体的基准测试框架，包含确定性MCQ和生成器-求解器过滤两条流程。",
+        "确定性MCQ流程从5种策略、33个模板和3个难度级别生成问题，并有独立检查器验证答案。",
+        "生成器-求解器过滤流程自动挖掘更难的问题，丢弃无需代码执行即可回答的问题。",
+        "在30道精选问题上，工具增强智能体（GPT-5.5和Opus 4.7）达到90.0%准确率，比最佳无工具基线（73.0%）高17个百分点。",
+        "在38道挖掘问题上，无工具准确率下降，一半模型接近随机水平。"
+      ],
+      "impactZh": "该基准测试为算法交易领域的LLM智能体评估提供了新方法，有助于推动该领域的发展，并为其他需要代码执行的领域提供参考。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和交易系统开发者，该基准提供了一种评估LLM智能体在算法交易中能力的方法，有助于选择和改进模型。",
+      "howItWorksZh": "Backtrader-Bench的确定性MCQ流程从回测配置中生成问题，使用独立检查器重新推导答案。生成器-求解器过滤流程中，生成器编写问题，由可执行代码验证，并转换为MCQ，然后丢弃无工具求解器可回答的问题。评估时，模型在无工具或有工具配置下回答MCQ，准确率作为性能指标。",
+      "interpretationZh": "论文报告了工具增强智能体在算法交易MCQ上的显著优势，但需注意这些结果基于特定数据集和模型，可能不具普遍性。",
+      "limitationsZh": "论文未提供完整数据，仅摘要，具体实验细节和模型配置未知。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "工具增强智能体准确率比最佳无工具基线高17个百分点。",
+        "data": [
+          {
+            "label": "工具增强智能体准确率",
+            "value": 90,
+            "display": ""
+          },
+          {
+            "label": "最佳无工具基线准确率",
+            "value": 73,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.11232",
+          "publishedAt": "2026-08-13T04:00:00.000Z",
+          "title": "Backtrader-Bench: Benchmarking LLM Agents on Algorithmic Trading with Self-Generated MCQs",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-13T04:00:00.000Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-13T04:00:00.000Z",
+            "label": "8/13 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-13T04:56:12.003Z",
+            "label": "8/13 12:56",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T05:52:24.007Z",
+            "label": "8/13 13:52",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T06:48:36.011Z",
+            "label": "8/13 14:48",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T07:44:48.015Z",
+            "label": "8/13 15:44",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "8d3c23768d164547",
+      "normalizedUrl": "https://arxiv.org/abs/2608.11233",
+      "originalUrl": "https://arxiv.org/abs/2608.11233",
+      "titleOriginal": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
+      "summaryOriginal": "arXiv:2608.11233v1 Announce Type: new Abstract: A dense, pretrained language model can be retrofitted with recurrent depth and learn an iterative latent transition that persists after outcome-only annealing. Qwen2.5-0.5B-Instruct is split into a Prelude, a weight-tied Recurrent Block, and a Coda, with an identity-preserving one-loop path and a re-entry bridge on later loops. At loop 1 the retrofit remains non-inferior to its base on a preregistered ARC battery. Three findings. First, the mechanism is a reusable procedure rather than terminal-answer lookup, and installs at two budgets: 6M trained parameters over frozen base weights and 180M full-block. With intermediate-step supervision, the model computes one task step per loop and persists when only final answers are graded. The adapter matched the full block overall (83.8% versus 84.0%), led through depth 11, and trailed beyond. Verbal fine-tuning reached 79-86% on controlled verbal renderings (zero-shot transfer was minimal), and adapter verbal training begun from the installed mechanism outpaced matched fresh training by 18.6 points, including on a held-out test set. Second, the operation extrapolates to roughly 1.5 times its s",
+      "originalLanguage": "en",
+      "author": "Mark Shapiro",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-13T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.11233",
+          "publishedAt": "2026-08-13T04:00:00.000Z",
+          "title": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提出了一种将循环深度改造到预训练语言模型中的方法，展示了在保持性能的同时实现迭代计算的能力，对模型架构和微调策略有潜在影响。",
+      "importanceReasonEn": "This research proposes a method to retrofit recurrent depth into a pretrained language model, demonstrating the ability to perform iterative computation while maintaining performance, with potential implications for model architecture and fine-tuning strategies.",
+      "scoringMode": "ai",
+      "titleZh": "将循环深度改造到预训练语言模型中：在两个参数预算下的安装、外推、迁移与保持",
+      "titleEn": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
+      "summaryZh": "arXiv:2608.11233v1 公告类型：新论文。摘要：一个密集的预训练语言模型可以被改造为具有循环深度，并学习一种迭代的潜在转换，这种转换在仅对最终答案进行退火后仍然持续。Qwen2.5-0.5B-Instruct 被分割为前奏、权重共享的循环块和尾声，并具有保持恒等的一循环路径和后续循环的重入桥。在循环1时，改造后的模型在预注册的ARC测试组上不劣于其基础模型。有三个发现。首先，该机制是一种可重用的程序而非终端答案查找，并在两个预算下安装：冻结基础权重上的600万训练参数和1.8亿全块。在中间步骤监督下，模型每个循环计算一个任务步骤，并且当仅对最终答案评分时仍然持续。适配器整体上匹配了全块（83.8%对84.0%），在深度11之前领先，之后落后。口头微调在受控口头表述上达到79-86%（零样本迁移最小），而从已安装机制开始的适配器口头训练比匹配的新训练高出18.6个百分点，包括在保留测试集上。其次，该操作外推到大约其规模的1.5倍。",
+      "summaryEn": "arXiv:2608.11233v1 Announce Type: new. Abstract: A dense, pretrained language model can be retrofitted with recurrent depth and learn an iterative latent transition that persists after outcome-only annealing. Qwen2.5-0.5B-Instruct is split into a Prelude, a weight-tied Recurrent Block, and a Coda, with an identity-preserving one-loop path and a re-entry bridge on later loops. At loop 1 the retrofit remains non-inferior to its base on a preregistered ARC battery. Three findings. First, the mechanism is a reusable procedure rather than terminal-answer lookup, and installs at two budgets: 6M trained parameters over frozen base weights and 180M full-block. With intermediate-step supervision, the model computes one task step per loop and persists when only final answers are graded. The adapter ",
+      "keywords": [
+        "recurrent depth",
+        "retrofitting",
+        "language model",
+        "ARC",
+        "Qwen2.5",
+        "adapter",
+        "fine-tuning"
+      ],
+      "topics": [
+        "recurrent depth",
+        "language model",
+        "retrofitting",
+        "ARC",
+        "Qwen2.5"
+      ],
+      "models": [
+        "Qwen2.5-0.5B-Instruct"
+      ],
+      "detailZh": "该研究来自arXiv，公告类型为“new”。研究将Qwen2.5-0.5B-Instruct模型分割为前奏（Prelude）、权重共享的循环块（Recurrent Block）和尾声（Coda），并设计了一条保持恒等的一循环路径和后续循环的重入桥。在循环1时，改造后的模型在预注册的ARC测试组上不劣于基础模型。研究有三个主要发现。首先，该机制是一种可重用的程序而非终端答案查找，并在两个预算下安装：冻结基础权重上的600万训练参数和1.8亿全块。在中间步骤监督下，模型每个循环计算一个任务步骤，并且当仅对最终答案评分时仍然持续。适配器整体上匹配了全块（83.8%对84.0%），在深度11之前领先，之后落后。口头微调在受控口头表述上达到79-86%（零样本迁移最小），而从已安装机制开始的适配器口头训练比匹配的新训练高出18.6个百分点，包括在保留测试集上。其次，该操作外推到大约其规模的1.5倍。",
+      "keyPointsZh": [
+        "将Qwen2.5-0.5B-Instruct改造为循环深度，在ARC测试上不劣于基础模型。",
+        "两种参数预算：600万训练参数（冻结基础权重）和1.8亿全块。",
+        "适配器整体性能与全块相当（83.8%对84.0%），深度11之前领先。",
+        "口头微调达到79-86%，从已安装机制开始的训练比新训练高18.6个百分点。",
+        "操作外推到约1.5倍规模。"
+      ],
+      "impactZh": "该研究展示了将循环深度改造到预训练语言模型中的可行性，为模型架构设计提供了新思路，可能影响未来模型的设计和微调策略。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，该方法可能提供一种在现有模型上增加迭代计算能力的方式，而无需从头训练，从而节省计算资源。",
+      "howItWorksZh": "该方法将预训练模型分割为前奏、循环块和尾声，循环块权重共享，并设计恒等路径和重入桥。训练时使用中间步骤监督，使模型每个循环计算一个任务步骤。适配器方法在冻结基础权重上训练少量参数，全块方法则训练整个循环块。",
+      "interpretationZh": "该研究报道了将循环深度改造到预训练模型中的方法，并提供了实验数据支持。需要注意的是，该研究基于单一模型（Qwen2.5-0.5B-Instruct）和单一任务（ARC），结果可能不具普遍性。",
+      "limitationsZh": "研究仅基于一个模型和一个任务，外推性有限。摘要被截断，可能缺少部分细节。",
+      "actionStepsZh": [
+        "阅读完整论文以获取详细方法和实验设置。",
+        "考虑在类似模型上尝试该改造方法，验证其可迁移性。",
+        "关注后续研究，看是否有更多任务和模型的验证。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "适配器整体性能与全块相当，仅差0.2个百分点。",
+        "data": [
+          {
+            "label": "Adapter",
+            "value": 83.8,
+            "display": ""
+          },
+          {
+            "label": "Full block",
+            "value": 84,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.11233",
+          "publishedAt": "2026-08-13T04:00:00.000Z",
+          "title": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-13T04:00:00.000Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-13T04:00:00.000Z",
+            "label": "8/13 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-13T04:56:12.003Z",
+            "label": "8/13 12:56",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T05:52:24.007Z",
+            "label": "8/13 13:52",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T06:48:36.011Z",
+            "label": "8/13 14:48",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T07:44:48.015Z",
+            "label": "8/13 15:44",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -178,23 +508,21 @@
           "resourceLinks": []
         }
       ],
-      "importance": 75,
-      "importanceReasonZh": "该论文提出了一种用低成本代理模型替代LLM智能体进行大规模社会模拟的方法，并提供了理论框架和实验验证，对计算社会科学和AI模拟领域具有实用价值，且成本极低。",
-      "importanceReasonEn": "The paper proposes a method to replace LLM agents with low-cost surrogate models for large-scale social simulations, providing a theoretical framework and experimental validation, which is practically valuable for computational social science and AI simulation, and is extremely low-cost.",
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种用低成本代理模型替代LLM智能体来模拟大规模智能体社会的方法，并引入了分类法来预测误差趋势，具有实际应用价值，但尚未经过同行评审，且依赖特定假设。",
+      "importanceReasonEn": "The paper proposes a method to replace LLM agents with low-cost surrogate models to simulate large-scale agent societies, introducing a taxonomy to predict error trends, which has practical value but is not yet peer-reviewed and relies on specific assumptions.",
       "scoringMode": "ai",
       "titleZh": "穷人的智能体建模：在笔记本电脑上模拟大型LLM智能体社会",
       "titleEn": "Poor Man's Agentic Modeling: Simulating Large LLM-Agent Societies on a Laptop",
-      "summaryZh": "arXiv:2608.11215v1 新论文。模拟许多大型语言模型（LLM）智能体的社会成本高昂，但通常提出的问题是宏观的：相行为、典型事实以及随智能体数量N的缩放，而非单个智能体的认知。作者将一个统计物理观察转化为方法：用从几百到几千次廉价查询拟合的低参数模型替换每个LLM智能体，然后在笔记本电脑上以任意N运行社会。该方法是否有效在模拟运行前就已决定，主要取决于每个智能体的感知。他们引入了一个[交互顺序×记忆]分类法，将感知和记忆映射到有效理论和代理误差的预测N趋势。他们在忠实重实现的LLM宏观经济EconAgent和另外七个命名的LLM模拟上验证了该方法，智能体决策克隆自真实的LLM引出（主要是DeepSeek），成本仅几美元；预测的误差趋势逐格成立，两个被反驳的预测（均针对强饱和响应并追溯到其曲率）也被理论定量匹配，无需额外拟合。",
-      "summaryEn": "arXiv:2608.11215v1 new paper. Simulating societies of many large language model (LLM) agents is expensive, yet the questions asked are usually macroscopic: phase behaviour, stylised facts, and scaling with the number of agents N, not the cognition of any single agent. The authors turn a statistical-physics observation into a method: replace each LLM agent by a low-parameter model fitted from a few hundred to a few thousand cheap queries, then run the society at any N on a laptop. Whether this works is decided before the simulation runs, chiefly by what each agent perceives. They introduce an [interaction order x memory] taxonomy that maps perception and memory to an effective theory and a predicted N-trend of the surrogate error. They validate it on a faithful reimplementation of the LLM m",
+      "summaryZh": "arXiv:2608.11215v1 公告类型：新论文。摘要：模拟由许多大型语言模型（LLM）智能体组成的社会成本高昂，但此类模拟通常提出的问题是宏观的：相行为、典型事实以及随智能体数量N的缩放，而非单个智能体的认知。我们将一个统计物理观察转化为一种方法：用从几百到几千次廉价查询中拟合的低参数模型替换每个LLM智能体，然后在笔记本电脑上以任意N运行社会。这是否有效在模拟运行之前就已决定，主要取决于每个智能体感知的内容。我们引入了一个[交互顺序×记忆]分类法，将感知和记忆映射到有效理论和代理误差的预测N趋势。我们在忠实重实现的LLM宏观经济EconAgent以及另外七个命名的LLM模拟上验证了该方法，智能体决策克隆自真实的LLM引出（主要是DeepSeek），成本仅几美元；预测的误差趋势逐格成立，两个被反驳的预测（均针对强饱和响应并追溯到其曲率）也由理论定量匹配，无需额外调整。",
+      "summaryEn": "arXiv:2608.11215v1 Announce Type: new. Abstract: Simulating societies of many large language model (LLM) agents is expensive, yet the questions asked of such simulations are usually macroscopic: phase behaviour, stylised facts, and scaling with the number of agents N, not the cognition of any single agent. We turn a statistical-physics observation into a method: replace each LLM agent by a low-parameter model fitted from a few hundred to a few thousand cheap queries, then run the society at any N on a laptop. Whether this works is decided before the simulation runs, chiefly by what each agent perceives. We introduce an [interaction order x memory] taxonomy that maps perception and memory to an effective theory and a predicted N-trend of the surrogate error. We validate it on a faithful rei",
       "keywords": [
         "LLM agents",
         "agent-based modeling",
         "surrogate models",
         "statistical physics",
         "EconAgent",
-        "interaction order",
-        "memory",
-        "taxonomy"
+        "DeepSeek"
       ],
       "topics": [
         "LLM agents",
@@ -206,23 +534,24 @@
       "models": [
         "DeepSeek"
       ],
-      "detailZh": "该论文针对模拟大量LLM智能体社会成本高昂的问题，提出了一种基于统计物理观察的方法。核心思想是：由于宏观问题（如相行为、典型事实、随N的缩放）不依赖于单个智能体的认知，因此可以用低参数模型替代每个LLM智能体。这些低参数模型从几百到几千次廉价查询中拟合得到，然后可以在笔记本电脑上以任意N运行整个社会。\n\n作者引入了一个[交互顺序×记忆]分类法，将智能体的感知和记忆映射到有效理论和代理误差的预测N趋势。该分类法帮助决定在模拟运行前该方法是否有效。\n\n他们在忠实重实现的LLM宏观经济EconAgent以及另外七个命名的LLM模拟上进行了验证。智能体决策克隆自真实的LLM引出（主要是DeepSeek），成本仅几美元。结果显示，预测的误差趋势逐格成立，两个被反驳的预测（针对强饱和响应并追溯到其曲率）也被理论定量匹配，无需额外拟合。\n\n该方法的优势在于大幅降低了计算成本，使得在普通笔记本电脑上模拟大规模LLM智能体社会成为可能。",
+      "detailZh": "该论文提出了一种名为“穷人的智能体建模”的方法，旨在解决模拟大量LLM智能体社会的高昂成本问题。作者观察到，尽管单个智能体的认知复杂，但宏观问题（如相行为、典型事实、随N的缩放）通常不依赖于单个智能体的细节。因此，他们建议用低参数模型替代每个LLM智能体，这些模型从几百到几千次廉价查询中拟合得到，从而可以在笔记本电脑上运行任意规模的模拟。\n\n论文引入了一个[交互顺序×记忆]分类法，将智能体的感知和记忆特性映射到有效理论和代理误差的预测N趋势。作者在忠实重实现的EconAgent以及另外七个命名的LLM模拟上验证了该方法，智能体决策克隆自真实的LLM引出（主要是DeepSeek），成本仅几美元。\n\n验证结果显示，预测的误差趋势在分类法的每个单元格中成立，但有两个预测被反驳，均涉及强饱和响应，并追溯到其曲率。作者指出，这两个反驳的预测本身也由理论定量匹配，无需额外调整。\n\n论文的贡献在于提供了一种低成本、可扩展的模拟方法，并给出了何时有效的理论指导。然而，该方法依赖于代理模型能够捕捉关键行为，且验证仅限于特定模拟和模型。",
       "keyPointsZh": [
-        "提出用低参数代理模型替代LLM智能体进行大规模社会模拟，成本极低。",
-        "引入[交互顺序×记忆]分类法，预测代理误差的N趋势。",
-        "在EconAgent和七个其他LLM模拟上验证，误差趋势预测准确。",
-        "两个被反驳的预测被理论定量匹配，无需额外拟合。"
+        "提出用低参数代理模型替代LLM智能体，以低成本模拟大规模智能体社会。",
+        "引入[交互顺序×记忆]分类法，预测代理误差随N的趋势。",
+        "在EconAgent和七个其他模拟上验证，误差趋势预测基本成立。",
+        "两个被反驳的预测均涉及强饱和响应，且由理论定量匹配。",
+        "智能体决策克隆自DeepSeek等真实LLM，成本仅几美元。"
       ],
-      "impactZh": "该研究可能显著降低大规模LLM智能体社会模拟的计算门槛，使更多研究者能够在普通硬件上进行此类研究，推动计算社会科学和AI模拟领域的发展。",
+      "impactZh": "该研究可能显著降低大规模LLM智能体模拟的计算成本，使更多研究者能够在普通硬件上进行此类模拟，从而推动多智能体系统、经济学和社会学模拟等领域的研究。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI研究者和开发者，该方法提供了一种低成本、可复现的方式来进行大规模智能体模拟，无需昂贵的计算资源，有助于在资源受限的环境下开展研究。",
-      "howItWorksZh": "该方法的核心步骤包括：1) 从真实的LLM（如DeepSeek）中引出少量智能体决策数据（几百到几千次查询）；2) 用这些数据拟合每个智能体的低参数代理模型；3) 使用代理模型在笔记本电脑上运行任意N的社会模拟。作者还提供了[交互顺序×记忆]分类法，用于预测代理误差的N趋势，从而在模拟前判断方法的有效性。",
-      "interpretationZh": "该论文提出了一种实用的方法，用低成本代理模型替代LLM智能体进行大规模社会模拟。作者通过实验验证了其有效性，并提供了理论框架。需要注意的是，该方法依赖于智能体的感知和记忆特性，对于某些强饱和响应的情况，理论预测可能不准确，但作者通过曲率分析进行了修正。",
-      "limitationsZh": "该方法依赖于智能体的感知和记忆特性，对于某些强饱和响应的情况，理论预测可能不准确，但作者通过曲率分析进行了修正。此外，验证主要基于DeepSeek模型，其他LLM的适用性尚待验证。",
+      "userImpactZh": "对于AI开发者和研究者，该方法提供了一种低成本、可扩展的模拟工具，可用于测试多智能体系统的宏观行为，而无需大量计算资源。",
+      "howItWorksZh": "该方法的核心是用低参数模型（如逻辑回归或简单神经网络）拟合每个LLM智能体的决策函数。具体步骤包括：1) 从目标LLM（如DeepSeek）中抽取少量查询，获取智能体在不同状态下的决策；2) 用这些数据拟合一个低参数模型；3) 在模拟中，用该代理模型替代LLM，以任意N运行社会。论文还引入了分类法，根据交互顺序和记忆长度预测代理误差的缩放趋势，从而在运行前判断方法的有效性。",
+      "interpretationZh": "论文报告了代理模型在多个模拟中的误差趋势预测基本准确，但存在两个例外，均与强饱和响应有关。这表明方法在大多数情况下有效，但在响应高度非线性时可能失效。作者声称理论可以定量解释这些例外，但需要进一步验证。",
+      "limitationsZh": "论文尚未经过同行评审，且验证仅限于特定模拟和模型（主要是DeepSeek）。代理模型的拟合质量可能依赖于任务复杂度，且方法假设宏观行为不依赖于单个智能体的细节，这在某些情况下可能不成立。",
       "actionStepsZh": [
-        "阅读论文以获取详细的分类法和验证细节。",
-        "考虑在资源受限的环境中使用该方法进行大规模智能体模拟。",
-        "尝试使用其他LLM（如GPT-4）进行类似验证，以评估方法的通用性。"
+        "阅读论文全文以获取详细的分类法和验证结果。",
+        "考虑在类似的多智能体模拟中尝试代理模型方法，以降低计算成本。",
+        "关注后续同行评审和复现研究，以确认方法的可靠性。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -244,9 +573,9 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T04:00:00.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
-        "current": 66,
-        "peak": 66,
+        "endedAt": "2026-08-13T08:41:00.019Z",
+        "current": 64,
+        "peak": 64,
         "history": [
           {
             "at": "2026-08-13T04:00:00.000Z",
@@ -255,27 +584,33 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T04:45:14.956Z",
-            "label": "8/13 12:45",
-            "value": 27,
+            "at": "2026-08-13T04:56:12.003Z",
+            "label": "8/13 12:56",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:30:29.912Z",
-            "label": "8/13 13:30",
-            "value": 40,
+            "at": "2026-08-13T05:52:24.007Z",
+            "label": "8/13 13:52",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:15:44.868Z",
-            "label": "8/13 14:15",
-            "value": 53,
+            "at": "2026-08-13T06:48:36.011Z",
+            "label": "8/13 14:48",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
-            "value": 66,
+            "at": "2026-08-13T07:44:48.015Z",
+            "label": "8/13 15:44",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
+            "value": 64,
             "reports": 1
           }
         ],
@@ -316,12 +651,12 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该基准针对AI代理自主研究这一新兴领域，提供了可量化的评估方法，且结果显示了代理在开放式研究任务中的潜力，对AI研究和应用有实际意义。",
-      "importanceReasonEn": "This benchmark targets the emerging field of autonomous research by AI agents, providing a quantifiable evaluation method, and results show potential in open-ended research tasks, with practical significance for AI research and applications.",
+      "importanceReasonZh": "该基准填补了AI代理在开放式研究任务中评估的空白，提供了可复现的闭环评估方法，对世界模型和自主代理研究有重要价值。",
+      "importanceReasonEn": "This benchmark fills a gap in evaluating AI agents on open-ended research tasks, providing a reproducible closed-loop evaluation method, which is valuable for world model and autonomous agent research.",
       "scoringMode": "ai",
       "titleZh": "AutoWorldModel-Bench：面向自动化世界模型研究的状态中心基准",
       "titleEn": "AutoWorldModel-Bench: A State-Centric Benchmark for Automated World-Model Research",
-      "summaryZh": "世界建模是一个尚未定论的领域：架构、训练目标和状态表示以复杂的方式相互作用，没有单一配方能在所有环境中占主导地位。这使其成为AI编码代理作为自主研究者的理想测试平台——在这种设置中，改进方向不是预先指定的，这与当前主导代理基准的工程到规格任务不同。我们引入了AutoWorldModel-Bench，一个闭环基准，其中前沿编码代理在固定计算预算下自主改进提供的世界模型入门代码。该基准涵盖八个游戏环境，采用统一的结构化状态表示——从每个游戏中提取的真实实体状态，通过共享张量格式消费——这隔离了动力学建模与感知，并实现了分钟级迭代。在64个会话中，Codex-5.4和Claude Opus 4.6在63个会话中改进了他们的入门代码；在91%的会话中，获胜编辑是非平凡的研究式修改——新的目标、表示、回滚过程或架构更改——而不是超参数调整。我们的基准",
+      "summaryZh": "世界建模是一个尚未定论的领域：架构、训练目标和状态表示之间相互作用复杂，没有单一方案能在所有环境中占优。这使得它成为AI编码代理作为自主研究者的理想测试平台——在这种设置中，改进方向不是预先指定的，这与当前主导代理基准的工程规范任务不同。我们引入了AutoWorldModel-Bench，一个闭环基准，其中前沿编码代理在固定计算预算下自主改进提供的世界模型起点。该基准涵盖八个游戏环境，采用统一的结构化状态表示——从每个游戏中提取的真实实体状态，并通过共享张量格式消费——这隔离了动力学建模与感知，并实现了分钟级迭代。在64个会话中，Codex-5.4和Claude Opus 4.6在63个会话中改进了起点；在91%的会话中，获胜编辑是非平凡的研究式修改——新的目标、表示、回滚过程或架构更改——而不是超参数调整。",
       "summaryEn": "World modeling is an unsettled field: architectures, training objectives, and state representations interact in complex ways, and no single recipe dominates across environments. This makes it an ideal testbed for AI coding agents acting as autonomous researchers--a setting in which the improvement direction is not specified in advance, unlike the engineering-to-spec tasks that dominate current agent benchmarks. We introduce AutoWorldModel-Bench, a closed-loop benchmark in which frontier coding agents autonomously improve a provided world-model starter under a fixed compute budget. The benchmark spans eight game environments under a unified structured-state representation--ground-truth entity state extracted from each game and consumed through a shared tensor format--which isolates dynamics",
       "keywords": [
         "world model",
@@ -340,23 +675,23 @@
         "Codex-5.4",
         "Claude Opus 4.6"
       ],
-      "detailZh": "AutoWorldModel-Bench是一个新的基准测试，旨在评估AI编码代理作为自主研究者的能力。世界建模领域尚未有统一的方法，不同的架构、训练目标和状态表示在不同环境中表现各异。该基准提供了一个闭环环境，其中代理需要在固定计算预算下改进给定的世界模型入门代码。基准包含八个游戏环境，使用统一的结构化状态表示，即从每个游戏中提取真实实体状态，并通过共享张量格式消费。这种设计将动力学建模与感知分离，使得每次运行只需几分钟。在64个会话中，Codex-5.4和Claude Opus 4.6在63个会话中成功改进了入门代码。值得注意的是，在91%的会话中，获胜的编辑是非平凡的研究式修改，如新的目标函数、表示方法、回滚过程或架构更改，而非简单的超参数调整。这表明前沿编码代理能够进行类似研究者的探索，而不仅仅是执行预定义工程任务。",
+      "detailZh": "AutoWorldModel-Bench是一个新的基准，旨在评估AI编码代理作为自主研究者的能力。世界建模领域尚未定论，架构、训练目标和状态表示之间存在复杂交互，没有单一方案能在所有环境中占优。这使得它成为测试AI代理能否自主改进模型的理想平台，因为改进方向不是预先指定的，与当前主导代理基准的工程规范任务不同。\n\n该基准采用闭环设置，代理在固定计算预算下自主改进提供的世界模型起点。基准涵盖八个游戏环境，使用统一的结构化状态表示，即从每个游戏中提取真实实体状态，并通过共享张量格式消费。这种设计隔离了动力学建模与感知，使每次运行只需几分钟，便于快速迭代。\n\n在64个会话中，Codex-5.4和Claude Opus 4.6在63个会话中改进了起点。在91%的会话中，获胜编辑是非平凡的研究式修改，如新的目标、表示、回滚过程或架构更改，而不是简单的超参数调整。这表明前沿编码代理能够进行有意义的研究式探索。\n\n该基准为评估AI代理在开放式研究任务中的表现提供了新方法，可能推动世界模型和自主代理研究的发展。",
       "keyPointsZh": [
-        "AutoWorldModel-Bench是一个闭环基准，用于评估AI代理自主改进世界模型的能力。",
+        "AutoWorldModel-Bench是一个闭环基准，用于评估AI编码代理自主改进世界模型的能力。",
         "基准涵盖八个游戏环境，使用统一的结构化状态表示，隔离动力学建模与感知。",
-        "在64个会话中，代理在63个会话中改进入门代码，91%的获胜编辑是研究式修改。",
-        "该基准旨在推动AI代理在开放式研究任务中的发展。"
+        "在64个会话中，代理在63个会话中改进了起点，91%的获胜编辑是非平凡的研究式修改。",
+        "该基准填补了开放式研究任务中代理评估的空白。"
       ],
-      "impactZh": "该基准为AI代理在开放式研究任务中的能力提供了新的评估标准，可能推动AI在科学发现和算法创新方面的应用。",
+      "impactZh": "该基准为AI代理在开放式研究任务中的评估提供了新标准，可能推动世界模型和自主代理研究的发展，并影响未来AI研究自动化的方向。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和研究人员，该基准提供了一种评估和提升AI代理自主研究能力的方法，可能促进更高效的模型改进和自动化研究工具的发展。",
-      "howItWorksZh": "基准的工作流程如下：首先，从八个游戏环境中提取真实实体状态，转换为统一的张量格式。然后，提供一个世界模型入门代码，代理需要在固定计算预算下改进它。代理的改进通过闭环评估，即运行模型并评估其性能。每次运行只需几分钟，因为状态表示是结构化的，无需处理原始像素。代理可以修改目标函数、表示、回滚过程或架构。最终，通过比较改进前后的性能来评估代理的表现。",
-      "interpretationZh": "该基准的结果表明，前沿编码代理能够进行类似研究者的探索，而不仅仅是执行预定义工程任务。然而，这仅基于两个模型和64个会话，样本量有限。此外，基准的设计可能偏向于某些类型的改进，且未涉及感知部分，因此结果可能不完全反映真实世界建模的复杂性。",
-      "limitationsZh": "该基准仅使用了两个模型（Codex-5.4和Claude Opus 4.6），样本量有限。基准设计隔离了感知，可能低估了感知与动力学建模交互的复杂性。此外，获胜编辑的评估标准可能偏向于研究式修改，但未提供具体定义。",
+      "userImpactZh": "对于AI研究者和开发者，该基准提供了一种评估和比较AI代理自主研究能力的方法，可能启发新的研究工具和自动化研究流程。",
+      "howItWorksZh": "基准采用闭环评估：代理接收一个世界模型起点，在固定计算预算下进行修改，然后通过环境交互评估改进效果。状态表示使用从游戏提取的真实实体状态，通过共享张量格式输入模型，从而隔离感知问题。代理可以修改目标函数、表示、回滚过程或架构，每次运行只需几分钟，支持快速迭代。",
+      "interpretationZh": "该基准表明，前沿编码代理能够自主进行非平凡的研究式修改，而不仅仅是超参数调整。这暗示AI代理在开放式研究任务中具有潜力，但结果基于特定环境和代理，可能不适用于所有情况。",
+      "limitationsZh": "基准仅涵盖八个游戏环境，可能无法代表所有世界建模任务。代理的表现可能依赖于起点模型和计算预算。结果基于特定代理（Codex-5.4和Claude Opus 4.6），其他代理可能表现不同。",
       "actionStepsZh": [
-        "阅读论文以获取基准的详细实现和评估方法。",
-        "考虑使用AutoWorldModel-Bench来评估自己的AI代理在自主研究任务中的能力。",
-        "关注该领域后续研究，以了解代理在更复杂环境中的表现。"
+        "阅读论文以了解基准的详细设计和评估方法。",
+        "考虑使用AutoWorldModel-Bench评估自己的AI代理或世界模型。",
+        "关注该基准的后续扩展和应用。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -378,7 +713,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T04:00:00.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -389,26 +724,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T04:45:14.956Z",
-            "label": "8/13 12:45",
-            "value": 26,
+            "at": "2026-08-13T04:56:12.003Z",
+            "label": "8/13 12:56",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:30:29.912Z",
-            "label": "8/13 13:30",
-            "value": 39,
+            "at": "2026-08-13T05:52:24.007Z",
+            "label": "8/13 13:52",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:15:44.868Z",
-            "label": "8/13 14:15",
-            "value": 51,
+            "at": "2026-08-13T06:48:36.011Z",
+            "label": "8/13 14:48",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T07:44:48.015Z",
+            "label": "8/13 15:44",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -528,7 +869,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T04:00:00.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -539,26 +880,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T04:45:14.956Z",
-            "label": "8/13 12:45",
-            "value": 26,
+            "at": "2026-08-13T04:56:12.003Z",
+            "label": "8/13 12:56",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:30:29.912Z",
-            "label": "8/13 13:30",
-            "value": 39,
+            "at": "2026-08-13T05:52:24.007Z",
+            "label": "8/13 13:52",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:15:44.868Z",
-            "label": "8/13 14:15",
-            "value": 51,
+            "at": "2026-08-13T06:48:36.011Z",
+            "label": "8/13 14:48",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T07:44:48.015Z",
+            "label": "8/13 15:44",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -664,7 +1011,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T04:00:00.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -675,26 +1022,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T04:45:14.956Z",
-            "label": "8/13 12:45",
-            "value": 26,
+            "at": "2026-08-13T04:56:12.003Z",
+            "label": "8/13 12:56",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:30:29.912Z",
-            "label": "8/13 13:30",
-            "value": 39,
+            "at": "2026-08-13T05:52:24.007Z",
+            "label": "8/13 13:52",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:15:44.868Z",
-            "label": "8/13 14:15",
-            "value": 51,
+            "at": "2026-08-13T06:48:36.011Z",
+            "label": "8/13 14:48",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T07:44:48.015Z",
+            "label": "8/13 15:44",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -1090,7 +1443,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T01:53:47.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -1101,38 +1454,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T02:44:59.137Z",
-            "label": "8/13 10:44",
-            "value": 57,
+            "at": "2026-08-13T02:51:57.431Z",
+            "label": "8/13 10:51",
+            "value": 55,
             "reports": 8
           },
           {
-            "at": "2026-08-13T03:36:11.275Z",
-            "label": "8/13 11:36",
-            "value": 69,
+            "at": "2026-08-13T03:50:07.862Z",
+            "label": "8/13 11:50",
+            "value": 65,
             "reports": 8
           },
           {
-            "at": "2026-08-13T04:27:23.412Z",
-            "label": "8/13 12:27",
-            "value": 81,
+            "at": "2026-08-13T04:48:18.293Z",
+            "label": "8/13 12:48",
+            "value": 76,
             "reports": 8
           },
           {
-            "at": "2026-08-13T05:18:35.550Z",
-            "label": "8/13 13:18",
-            "value": 93,
+            "at": "2026-08-13T05:46:28.725Z",
+            "label": "8/13 13:46",
+            "value": 86,
             "reports": 8
           },
           {
-            "at": "2026-08-13T06:09:47.687Z",
-            "label": "8/13 14:09",
+            "at": "2026-08-13T06:44:39.156Z",
+            "label": "8/13 14:44",
+            "value": 96,
+            "reports": 8
+          },
+          {
+            "at": "2026-08-13T07:42:49.587Z",
+            "label": "8/13 15:42",
             "value": 100,
             "reports": 8
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 100,
             "reports": 8
           }
@@ -1281,7 +1640,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T01:20:54.259Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1292,38 +1651,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T02:17:35.186Z",
-            "label": "8/13 10:17",
-            "value": 22,
+            "at": "2026-08-13T02:15:54.979Z",
+            "label": "8/13 10:15",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:14:16.114Z",
-            "label": "8/13 11:14",
-            "value": 31,
+            "at": "2026-08-13T03:10:55.699Z",
+            "label": "8/13 11:10",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:10:57.042Z",
-            "label": "8/13 12:10",
+            "at": "2026-08-13T04:05:56.419Z",
+            "label": "8/13 12:05",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T05:00:57.139Z",
+            "label": "8/13 13:00",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:07:37.969Z",
-            "label": "8/13 13:07",
-            "value": 47,
+            "at": "2026-08-13T05:55:57.859Z",
+            "label": "8/13 13:55",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:04:18.897Z",
-            "label": "8/13 14:04",
-            "value": 55,
+            "at": "2026-08-13T06:50:58.579Z",
+            "label": "8/13 14:50",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T07:45:59.299Z",
+            "label": "8/13 15:45",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -1486,7 +1857,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T23:59:23.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1497,50 +1868,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T00:52:05.103Z",
-            "label": "8/13 08:52",
+            "at": "2026-08-13T00:57:20.446Z",
+            "label": "8/13 08:57",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:44:47.206Z",
-            "label": "8/13 09:44",
-            "value": 26,
+            "at": "2026-08-13T01:55:17.893Z",
+            "label": "8/13 09:55",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:37:29.309Z",
-            "label": "8/13 10:37",
-            "value": 33,
+            "at": "2026-08-13T02:53:15.339Z",
+            "label": "8/13 10:53",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:30:11.412Z",
-            "label": "8/13 11:30",
-            "value": 39,
+            "at": "2026-08-13T03:51:12.786Z",
+            "label": "8/13 11:51",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:22:53.515Z",
-            "label": "8/13 12:22",
-            "value": 45,
+            "at": "2026-08-13T04:49:10.232Z",
+            "label": "8/13 12:49",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:15:35.618Z",
-            "label": "8/13 13:15",
-            "value": 51,
+            "at": "2026-08-13T05:47:07.679Z",
+            "label": "8/13 13:47",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:08:17.721Z",
-            "label": "8/13 14:08",
-            "value": 57,
+            "at": "2026-08-13T06:45:05.125Z",
+            "label": "8/13 14:45",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T07:43:02.572Z",
+            "label": "8/13 15:43",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -1917,7 +2294,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T22:26:37.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -1928,56 +2305,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T23:23:46.202Z",
-            "label": "8/13 07:23",
-            "value": 54,
+            "at": "2026-08-12T23:22:28.183Z",
+            "label": "8/13 07:22",
+            "value": 52,
             "reports": 10
           },
           {
-            "at": "2026-08-13T00:20:55.405Z",
-            "label": "8/13 08:20",
-            "value": 62,
+            "at": "2026-08-13T00:18:19.367Z",
+            "label": "8/13 08:18",
+            "value": 59,
             "reports": 10
           },
           {
-            "at": "2026-08-13T01:18:04.608Z",
-            "label": "8/13 09:18",
-            "value": 71,
+            "at": "2026-08-13T01:14:10.550Z",
+            "label": "8/13 09:14",
+            "value": 66,
             "reports": 10
           },
           {
-            "at": "2026-08-13T02:15:13.811Z",
-            "label": "8/13 10:15",
-            "value": 79,
+            "at": "2026-08-13T02:10:01.734Z",
+            "label": "8/13 10:10",
+            "value": 73,
             "reports": 10
           },
           {
-            "at": "2026-08-13T03:12:23.013Z",
-            "label": "8/13 11:12",
-            "value": 88,
+            "at": "2026-08-13T03:05:52.917Z",
+            "label": "8/13 11:05",
+            "value": 80,
             "reports": 10
           },
           {
-            "at": "2026-08-13T04:09:32.216Z",
-            "label": "8/13 12:09",
-            "value": 96,
+            "at": "2026-08-13T04:01:44.101Z",
+            "label": "8/13 12:01",
+            "value": 87,
             "reports": 10
           },
           {
-            "at": "2026-08-13T05:06:41.419Z",
-            "label": "8/13 13:06",
+            "at": "2026-08-13T04:57:35.284Z",
+            "label": "8/13 12:57",
+            "value": 94,
+            "reports": 10
+          },
+          {
+            "at": "2026-08-13T05:53:26.468Z",
+            "label": "8/13 13:53",
             "value": 100,
             "reports": 10
           },
           {
-            "at": "2026-08-13T06:03:50.622Z",
-            "label": "8/13 14:03",
+            "at": "2026-08-13T06:49:17.651Z",
+            "label": "8/13 14:49",
             "value": 100,
             "reports": 10
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T07:45:08.835Z",
+            "label": "8/13 15:45",
+            "value": 100,
+            "reports": 10
+          },
+          {
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 100,
             "reports": 10
           }
@@ -2110,7 +2499,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T20:15:51.977Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -2121,68 +2510,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T21:14:30.872Z",
-            "label": "8/13 05:14",
+            "at": "2026-08-12T21:23:36.344Z",
+            "label": "8/13 05:23",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:13:09.767Z",
-            "label": "8/13 06:13",
+            "at": "2026-08-12T22:31:20.711Z",
+            "label": "8/13 06:31",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:11:48.662Z",
-            "label": "8/13 07:11",
+            "at": "2026-08-12T23:39:05.079Z",
+            "label": "8/13 07:39",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:10:27.558Z",
-            "label": "8/13 08:10",
+            "at": "2026-08-13T00:46:49.446Z",
+            "label": "8/13 08:46",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:09:06.453Z",
-            "label": "8/13 09:09",
+            "at": "2026-08-13T01:54:33.814Z",
+            "label": "8/13 09:54",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:07:45.348Z",
-            "label": "8/13 10:07",
+            "at": "2026-08-13T03:02:18.181Z",
+            "label": "8/13 11:02",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:06:24.243Z",
-            "label": "8/13 11:06",
+            "at": "2026-08-13T04:10:02.549Z",
+            "label": "8/13 12:10",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:05:03.139Z",
-            "label": "8/13 12:05",
+            "at": "2026-08-13T05:17:46.916Z",
+            "label": "8/13 13:17",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:03:42.034Z",
-            "label": "8/13 13:03",
+            "at": "2026-08-13T06:25:31.284Z",
+            "label": "8/13 14:25",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:02:20.929Z",
-            "label": "8/13 14:02",
+            "at": "2026-08-13T07:33:15.651Z",
+            "label": "8/13 15:33",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 58,
             "reports": 1
           }
@@ -2283,7 +2672,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T20:10:40.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2294,68 +2683,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T21:09:47.256Z",
-            "label": "8/13 05:09",
+            "at": "2026-08-12T21:18:52.729Z",
+            "label": "8/13 05:18",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:08:54.513Z",
-            "label": "8/13 06:08",
+            "at": "2026-08-12T22:27:05.458Z",
+            "label": "8/13 06:27",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:08:01.770Z",
-            "label": "8/13 07:08",
+            "at": "2026-08-12T23:35:18.187Z",
+            "label": "8/13 07:35",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:07:09.027Z",
-            "label": "8/13 08:07",
+            "at": "2026-08-13T00:43:30.916Z",
+            "label": "8/13 08:43",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:06:16.284Z",
-            "label": "8/13 09:06",
+            "at": "2026-08-13T01:51:43.645Z",
+            "label": "8/13 09:51",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:05:23.540Z",
-            "label": "8/13 10:05",
+            "at": "2026-08-13T02:59:56.374Z",
+            "label": "8/13 10:59",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:04:30.797Z",
-            "label": "8/13 11:04",
+            "at": "2026-08-13T04:08:09.103Z",
+            "label": "8/13 12:08",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:03:38.054Z",
-            "label": "8/13 12:03",
+            "at": "2026-08-13T05:16:21.832Z",
+            "label": "8/13 13:16",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:02:45.311Z",
-            "label": "8/13 13:02",
+            "at": "2026-08-13T06:24:34.561Z",
+            "label": "8/13 14:24",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:01:52.568Z",
-            "label": "8/13 14:01",
+            "at": "2026-08-13T07:32:47.290Z",
+            "label": "8/13 15:32",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -2502,7 +2891,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T19:51:30.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -2513,68 +2902,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T20:52:21.802Z",
-            "label": "8/13 04:52",
+            "at": "2026-08-12T21:01:27.274Z",
+            "label": "8/13 05:01",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:53:13.604Z",
-            "label": "8/13 05:53",
+            "at": "2026-08-12T22:11:24.548Z",
+            "label": "8/13 06:11",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:54:05.406Z",
-            "label": "8/13 06:54",
+            "at": "2026-08-12T23:21:21.823Z",
+            "label": "8/13 07:21",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:54:57.209Z",
-            "label": "8/13 07:54",
+            "at": "2026-08-13T00:31:19.097Z",
+            "label": "8/13 08:31",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:55:49.011Z",
-            "label": "8/13 08:55",
+            "at": "2026-08-13T01:41:16.372Z",
+            "label": "8/13 09:41",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:56:40.813Z",
-            "label": "8/13 09:56",
+            "at": "2026-08-13T02:51:13.646Z",
+            "label": "8/13 10:51",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:57:32.615Z",
-            "label": "8/13 10:57",
+            "at": "2026-08-13T04:01:10.921Z",
+            "label": "8/13 12:01",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:58:24.418Z",
-            "label": "8/13 11:58",
+            "at": "2026-08-13T05:11:08.195Z",
+            "label": "8/13 13:11",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:59:16.220Z",
-            "label": "8/13 12:59",
+            "at": "2026-08-13T06:21:05.470Z",
+            "label": "8/13 14:21",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T06:00:08.022Z",
-            "label": "8/13 14:00",
+            "at": "2026-08-13T07:31:02.744Z",
+            "label": "8/13 15:31",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 58,
             "reports": 1
           }
@@ -2684,7 +3073,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T19:00:00.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2695,68 +3084,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T20:05:32.711Z",
-            "label": "8/13 04:05",
+            "at": "2026-08-12T20:14:38.183Z",
+            "label": "8/13 04:14",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:11:05.422Z",
-            "label": "8/13 05:11",
+            "at": "2026-08-12T21:29:16.367Z",
+            "label": "8/13 05:29",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:16:38.134Z",
-            "label": "8/13 06:16",
+            "at": "2026-08-12T22:43:54.550Z",
+            "label": "8/13 06:43",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:22:10.845Z",
-            "label": "8/13 07:22",
+            "at": "2026-08-12T23:58:32.734Z",
+            "label": "8/13 07:58",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:27:43.556Z",
-            "label": "8/13 08:27",
+            "at": "2026-08-13T01:13:10.917Z",
+            "label": "8/13 09:13",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:33:16.268Z",
-            "label": "8/13 09:33",
+            "at": "2026-08-13T02:27:49.101Z",
+            "label": "8/13 10:27",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:38:48.979Z",
-            "label": "8/13 10:38",
+            "at": "2026-08-13T03:42:27.284Z",
+            "label": "8/13 11:42",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:44:21.690Z",
-            "label": "8/13 11:44",
+            "at": "2026-08-13T04:57:05.468Z",
+            "label": "8/13 12:57",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:49:54.402Z",
-            "label": "8/13 12:49",
+            "at": "2026-08-13T06:11:43.651Z",
+            "label": "8/13 14:11",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:55:27.113Z",
-            "label": "8/13 13:55",
+            "at": "2026-08-13T07:26:21.835Z",
+            "label": "8/13 15:26",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -3911,7 +4300,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T18:33:21.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -3922,68 +4311,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T19:41:19.075Z",
-            "label": "8/13 03:41",
+            "at": "2026-08-12T19:50:24.547Z",
+            "label": "8/13 03:50",
             "value": 52,
             "reports": 42
           },
           {
-            "at": "2026-08-12T20:49:17.150Z",
-            "label": "8/13 04:49",
+            "at": "2026-08-12T21:07:28.094Z",
+            "label": "8/13 05:07",
             "value": 59,
             "reports": 42
           },
           {
-            "at": "2026-08-12T21:57:15.225Z",
-            "label": "8/13 05:57",
+            "at": "2026-08-12T22:24:31.641Z",
+            "label": "8/13 06:24",
             "value": 66,
             "reports": 42
           },
           {
-            "at": "2026-08-12T23:05:13.300Z",
-            "label": "8/13 07:05",
+            "at": "2026-08-12T23:41:35.188Z",
+            "label": "8/13 07:41",
             "value": 73,
             "reports": 42
           },
           {
-            "at": "2026-08-13T00:13:11.375Z",
-            "label": "8/13 08:13",
+            "at": "2026-08-13T00:58:38.735Z",
+            "label": "8/13 08:58",
             "value": 80,
             "reports": 42
           },
           {
-            "at": "2026-08-13T01:21:09.450Z",
-            "label": "8/13 09:21",
+            "at": "2026-08-13T02:15:42.283Z",
+            "label": "8/13 10:15",
             "value": 87,
             "reports": 42
           },
           {
-            "at": "2026-08-13T02:29:07.525Z",
-            "label": "8/13 10:29",
+            "at": "2026-08-13T03:32:45.830Z",
+            "label": "8/13 11:32",
             "value": 94,
             "reports": 42
           },
           {
-            "at": "2026-08-13T03:37:05.600Z",
-            "label": "8/13 11:37",
+            "at": "2026-08-13T04:49:49.377Z",
+            "label": "8/13 12:49",
             "value": 100,
             "reports": 42
           },
           {
-            "at": "2026-08-13T04:45:03.675Z",
-            "label": "8/13 12:45",
+            "at": "2026-08-13T06:06:52.924Z",
+            "label": "8/13 14:06",
             "value": 100,
             "reports": 42
           },
           {
-            "at": "2026-08-13T05:53:01.750Z",
-            "label": "8/13 13:53",
+            "at": "2026-08-13T07:23:56.471Z",
+            "label": "8/13 15:23",
             "value": 100,
             "reports": 42
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 100,
             "reports": 42
           }
@@ -4108,7 +4497,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T18:19:12.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -4119,68 +4508,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T19:28:27.256Z",
-            "label": "8/13 03:28",
+            "at": "2026-08-12T19:37:32.729Z",
+            "label": "8/13 03:37",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:37:42.513Z",
-            "label": "8/13 04:37",
+            "at": "2026-08-12T20:55:53.458Z",
+            "label": "8/13 04:55",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:46:57.770Z",
-            "label": "8/13 05:46",
+            "at": "2026-08-12T22:14:14.187Z",
+            "label": "8/13 06:14",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:56:13.027Z",
-            "label": "8/13 06:56",
+            "at": "2026-08-12T23:32:34.916Z",
+            "label": "8/13 07:32",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:05:28.284Z",
-            "label": "8/13 08:05",
+            "at": "2026-08-13T00:50:55.645Z",
+            "label": "8/13 08:50",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:14:43.540Z",
-            "label": "8/13 09:14",
+            "at": "2026-08-13T02:09:16.374Z",
+            "label": "8/13 10:09",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:23:58.797Z",
-            "label": "8/13 10:23",
+            "at": "2026-08-13T03:27:37.103Z",
+            "label": "8/13 11:27",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:33:14.054Z",
-            "label": "8/13 11:33",
+            "at": "2026-08-13T04:45:57.832Z",
+            "label": "8/13 12:45",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:42:29.311Z",
-            "label": "8/13 12:42",
+            "at": "2026-08-13T06:04:18.561Z",
+            "label": "8/13 14:04",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:51:44.568Z",
-            "label": "8/13 13:51",
+            "at": "2026-08-13T07:22:39.290Z",
+            "label": "8/13 15:22",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -4297,7 +4686,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T18:00:08.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -4308,68 +4697,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T19:11:07.256Z",
-            "label": "8/13 03:11",
+            "at": "2026-08-12T19:20:12.729Z",
+            "label": "8/13 03:20",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:22:06.513Z",
-            "label": "8/13 04:22",
+            "at": "2026-08-12T20:40:17.458Z",
+            "label": "8/13 04:40",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:33:05.770Z",
-            "label": "8/13 05:33",
+            "at": "2026-08-12T22:00:22.187Z",
+            "label": "8/13 06:00",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:44:05.027Z",
-            "label": "8/13 06:44",
+            "at": "2026-08-12T23:20:26.916Z",
+            "label": "8/13 07:20",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:55:04.284Z",
-            "label": "8/13 07:55",
+            "at": "2026-08-13T00:40:31.645Z",
+            "label": "8/13 08:40",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:06:03.540Z",
-            "label": "8/13 09:06",
+            "at": "2026-08-13T02:00:36.374Z",
+            "label": "8/13 10:00",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:17:02.797Z",
-            "label": "8/13 10:17",
+            "at": "2026-08-13T03:20:41.103Z",
+            "label": "8/13 11:20",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:28:02.054Z",
-            "label": "8/13 11:28",
+            "at": "2026-08-13T04:40:45.832Z",
+            "label": "8/13 12:40",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:39:01.311Z",
-            "label": "8/13 12:39",
+            "at": "2026-08-13T06:00:50.561Z",
+            "label": "8/13 14:00",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:50:00.568Z",
-            "label": "8/13 13:50",
+            "at": "2026-08-13T07:20:55.290Z",
+            "label": "8/13 15:20",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -4487,7 +4876,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T17:57:36.369Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 69,
         "peak": 69,
         "history": [
@@ -4498,68 +4887,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T19:08:49.410Z",
-            "label": "8/13 03:08",
+            "at": "2026-08-12T19:17:54.882Z",
+            "label": "8/13 03:17",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:20:02.451Z",
-            "label": "8/13 04:20",
+            "at": "2026-08-12T20:38:13.396Z",
+            "label": "8/13 04:38",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:31:15.493Z",
-            "label": "8/13 05:31",
+            "at": "2026-08-12T21:58:31.909Z",
+            "label": "8/13 05:58",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:42:28.534Z",
-            "label": "8/13 06:42",
+            "at": "2026-08-12T23:18:50.423Z",
+            "label": "8/13 07:18",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:53:41.576Z",
-            "label": "8/13 07:53",
+            "at": "2026-08-13T00:39:08.937Z",
+            "label": "8/13 08:39",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:04:54.617Z",
-            "label": "8/13 09:04",
+            "at": "2026-08-13T01:59:27.450Z",
+            "label": "8/13 09:59",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:16:07.659Z",
-            "label": "8/13 10:16",
+            "at": "2026-08-13T03:19:45.964Z",
+            "label": "8/13 11:19",
             "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:27:20.700Z",
-            "label": "8/13 11:27",
+            "at": "2026-08-13T04:40:04.478Z",
+            "label": "8/13 12:40",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:38:33.742Z",
-            "label": "8/13 12:38",
+            "at": "2026-08-13T06:00:22.991Z",
+            "label": "8/13 14:00",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:49:46.783Z",
-            "label": "8/13 13:49",
+            "at": "2026-08-13T07:20:41.505Z",
+            "label": "8/13 15:20",
             "value": 64,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 69,
             "reports": 1
           }
@@ -4659,7 +5048,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T17:51:00.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -4670,68 +5059,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T19:02:49.075Z",
-            "label": "8/13 03:02",
+            "at": "2026-08-12T19:11:54.547Z",
+            "label": "8/13 03:11",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:14:38.150Z",
-            "label": "8/13 04:14",
+            "at": "2026-08-12T20:32:49.094Z",
+            "label": "8/13 04:32",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:26:27.225Z",
-            "label": "8/13 05:26",
+            "at": "2026-08-12T21:53:43.641Z",
+            "label": "8/13 05:53",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:38:16.300Z",
-            "label": "8/13 06:38",
+            "at": "2026-08-12T23:14:38.188Z",
+            "label": "8/13 07:14",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:50:05.375Z",
-            "label": "8/13 07:50",
+            "at": "2026-08-13T00:35:32.735Z",
+            "label": "8/13 08:35",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:01:54.450Z",
-            "label": "8/13 09:01",
+            "at": "2026-08-13T01:56:27.283Z",
+            "label": "8/13 09:56",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:13:43.525Z",
-            "label": "8/13 10:13",
+            "at": "2026-08-13T03:17:21.830Z",
+            "label": "8/13 11:17",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:25:32.600Z",
-            "label": "8/13 11:25",
+            "at": "2026-08-13T04:38:16.377Z",
+            "label": "8/13 12:38",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:37:21.675Z",
-            "label": "8/13 12:37",
+            "at": "2026-08-13T05:59:10.924Z",
+            "label": "8/13 13:59",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:49:10.750Z",
-            "label": "8/13 13:49",
+            "at": "2026-08-13T07:20:05.471Z",
+            "label": "8/13 15:20",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -4828,7 +5217,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T17:41:29.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -4839,68 +5228,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T18:54:09.984Z",
-            "label": "8/13 02:54",
+            "at": "2026-08-12T19:03:15.456Z",
+            "label": "8/13 03:03",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:06:50.968Z",
-            "label": "8/13 04:06",
+            "at": "2026-08-12T20:25:01.912Z",
+            "label": "8/13 04:25",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:19:31.952Z",
-            "label": "8/13 05:19",
+            "at": "2026-08-12T21:46:48.368Z",
+            "label": "8/13 05:46",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:32:12.936Z",
-            "label": "8/13 06:32",
+            "at": "2026-08-12T23:08:34.825Z",
+            "label": "8/13 07:08",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:44:53.920Z",
-            "label": "8/13 07:44",
+            "at": "2026-08-13T00:30:21.281Z",
+            "label": "8/13 08:30",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:57:34.904Z",
-            "label": "8/13 08:57",
+            "at": "2026-08-13T01:52:07.737Z",
+            "label": "8/13 09:52",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:10:15.888Z",
-            "label": "8/13 10:10",
+            "at": "2026-08-13T03:13:54.193Z",
+            "label": "8/13 11:13",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:22:56.872Z",
-            "label": "8/13 11:22",
+            "at": "2026-08-13T04:35:40.650Z",
+            "label": "8/13 12:35",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:35:37.856Z",
-            "label": "8/13 12:35",
+            "at": "2026-08-13T05:57:27.106Z",
+            "label": "8/13 13:57",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:48:18.840Z",
-            "label": "8/13 13:48",
+            "at": "2026-08-13T07:19:13.562Z",
+            "label": "8/13 15:19",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -5015,7 +5404,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T17:32:59.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -5026,68 +5415,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T18:46:26.347Z",
-            "label": "8/13 02:46",
+            "at": "2026-08-12T18:55:31.819Z",
+            "label": "8/13 02:55",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T19:59:53.695Z",
-            "label": "8/13 03:59",
+            "at": "2026-08-12T20:18:04.639Z",
+            "label": "8/13 04:18",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:13:21.043Z",
-            "label": "8/13 05:13",
+            "at": "2026-08-12T21:40:37.459Z",
+            "label": "8/13 05:40",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:26:48.390Z",
-            "label": "8/13 06:26",
+            "at": "2026-08-12T23:03:10.279Z",
+            "label": "8/13 07:03",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:40:15.738Z",
-            "label": "8/13 07:40",
+            "at": "2026-08-13T00:25:43.099Z",
+            "label": "8/13 08:25",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:53:43.086Z",
-            "label": "8/13 08:53",
+            "at": "2026-08-13T01:48:15.919Z",
+            "label": "8/13 09:48",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:07:10.434Z",
-            "label": "8/13 10:07",
+            "at": "2026-08-13T03:10:48.739Z",
+            "label": "8/13 11:10",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:20:37.781Z",
-            "label": "8/13 11:20",
+            "at": "2026-08-13T04:33:21.559Z",
+            "label": "8/13 12:33",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:34:05.129Z",
-            "label": "8/13 12:34",
+            "at": "2026-08-13T05:55:54.379Z",
+            "label": "8/13 13:55",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:47:32.477Z",
-            "label": "8/13 13:47",
+            "at": "2026-08-13T07:18:27.199Z",
+            "label": "8/13 15:18",
             "value": 62,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 66,
             "reports": 1
           }
@@ -5187,7 +5576,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T16:57:58.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -5198,68 +5587,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T18:14:36.347Z",
-            "label": "8/13 02:14",
+            "at": "2026-08-12T18:23:41.819Z",
+            "label": "8/13 02:23",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-12T19:31:14.695Z",
-            "label": "8/13 03:31",
+            "at": "2026-08-12T19:49:25.639Z",
+            "label": "8/13 03:49",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:47:53.043Z",
-            "label": "8/13 04:47",
+            "at": "2026-08-12T21:15:09.459Z",
+            "label": "8/13 05:15",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:04:31.390Z",
-            "label": "8/13 06:04",
+            "at": "2026-08-12T22:40:53.279Z",
+            "label": "8/13 06:40",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:21:09.738Z",
-            "label": "8/13 07:21",
+            "at": "2026-08-13T00:06:37.099Z",
+            "label": "8/13 08:06",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:37:48.086Z",
-            "label": "8/13 08:37",
+            "at": "2026-08-13T01:32:20.919Z",
+            "label": "8/13 09:32",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:54:26.434Z",
-            "label": "8/13 09:54",
+            "at": "2026-08-13T02:58:04.739Z",
+            "label": "8/13 10:58",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:11:04.781Z",
-            "label": "8/13 11:11",
+            "at": "2026-08-13T04:23:48.559Z",
+            "label": "8/13 12:23",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:27:43.129Z",
-            "label": "8/13 12:27",
+            "at": "2026-08-13T05:49:32.379Z",
+            "label": "8/13 13:49",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:44:21.477Z",
-            "label": "8/13 13:44",
+            "at": "2026-08-13T07:15:16.199Z",
+            "label": "8/13 15:15",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 58,
             "reports": 1
           }
@@ -5392,7 +5781,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T16:51:57.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -5403,68 +5792,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T18:09:08.165Z",
-            "label": "8/13 02:09",
+            "at": "2026-08-12T18:18:13.638Z",
+            "label": "8/13 02:18",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-12T19:26:19.331Z",
-            "label": "8/13 03:26",
+            "at": "2026-08-12T19:44:30.276Z",
+            "label": "8/13 03:44",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:43:30.497Z",
-            "label": "8/13 04:43",
+            "at": "2026-08-12T21:10:46.914Z",
+            "label": "8/13 05:10",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:00:41.663Z",
-            "label": "8/13 06:00",
+            "at": "2026-08-12T22:37:03.552Z",
+            "label": "8/13 06:37",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:17:52.829Z",
-            "label": "8/13 07:17",
+            "at": "2026-08-13T00:03:20.190Z",
+            "label": "8/13 08:03",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:35:03.995Z",
-            "label": "8/13 08:35",
+            "at": "2026-08-13T01:29:36.828Z",
+            "label": "8/13 09:29",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:52:15.161Z",
-            "label": "8/13 09:52",
+            "at": "2026-08-13T02:55:53.466Z",
+            "label": "8/13 10:55",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:09:26.327Z",
-            "label": "8/13 11:09",
+            "at": "2026-08-13T04:22:10.104Z",
+            "label": "8/13 12:22",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:26:37.493Z",
-            "label": "8/13 12:26",
+            "at": "2026-08-13T05:48:26.742Z",
+            "label": "8/13 13:48",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:43:48.659Z",
-            "label": "8/13 13:43",
+            "at": "2026-08-13T07:14:43.380Z",
+            "label": "8/13 15:14",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 58,
             "reports": 1
           }
@@ -5561,7 +5950,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T16:46:02.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -5572,68 +5961,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T18:03:45.438Z",
-            "label": "8/13 02:03",
+            "at": "2026-08-12T18:12:50.910Z",
+            "label": "8/13 02:12",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-12T19:21:28.877Z",
-            "label": "8/13 03:21",
+            "at": "2026-08-12T19:39:39.821Z",
+            "label": "8/13 03:39",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:39:12.315Z",
-            "label": "8/13 04:39",
+            "at": "2026-08-12T21:06:28.732Z",
+            "label": "8/13 05:06",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:56:55.754Z",
-            "label": "8/13 05:56",
+            "at": "2026-08-12T22:33:17.643Z",
+            "label": "8/13 06:33",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:14:39.193Z",
-            "label": "8/13 07:14",
+            "at": "2026-08-13T00:00:06.554Z",
+            "label": "8/13 08:00",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:32:22.631Z",
-            "label": "8/13 08:32",
+            "at": "2026-08-13T01:26:55.464Z",
+            "label": "8/13 09:26",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:50:06.070Z",
-            "label": "8/13 09:50",
+            "at": "2026-08-13T02:53:44.375Z",
+            "label": "8/13 10:53",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:07:49.509Z",
-            "label": "8/13 11:07",
+            "at": "2026-08-13T04:20:33.286Z",
+            "label": "8/13 12:20",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:25:32.947Z",
-            "label": "8/13 12:25",
+            "at": "2026-08-13T05:47:22.197Z",
+            "label": "8/13 13:47",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:43:16.386Z",
-            "label": "8/13 13:43",
+            "at": "2026-08-13T07:14:11.108Z",
+            "label": "8/13 15:14",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 55,
             "reports": 1
           }
@@ -5766,7 +6155,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T16:24:32.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -5777,68 +6166,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T17:44:12.711Z",
-            "label": "8/13 01:44",
+            "at": "2026-08-12T17:53:18.183Z",
+            "label": "8/13 01:53",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-12T19:03:53.422Z",
-            "label": "8/13 03:03",
+            "at": "2026-08-12T19:22:04.367Z",
+            "label": "8/13 03:22",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:23:34.134Z",
-            "label": "8/13 04:23",
+            "at": "2026-08-12T20:50:50.550Z",
+            "label": "8/13 04:50",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:43:14.845Z",
-            "label": "8/13 05:43",
+            "at": "2026-08-12T22:19:36.734Z",
+            "label": "8/13 06:19",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-12T23:02:55.556Z",
-            "label": "8/13 07:02",
+            "at": "2026-08-12T23:48:22.917Z",
+            "label": "8/13 07:48",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:22:36.268Z",
-            "label": "8/13 08:22",
+            "at": "2026-08-13T01:17:09.101Z",
+            "label": "8/13 09:17",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:42:16.979Z",
-            "label": "8/13 09:42",
+            "at": "2026-08-13T02:45:55.284Z",
+            "label": "8/13 10:45",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-13T03:01:57.690Z",
-            "label": "8/13 11:01",
+            "at": "2026-08-13T04:14:41.468Z",
+            "label": "8/13 12:14",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:21:38.402Z",
-            "label": "8/13 12:21",
+            "at": "2026-08-13T05:43:27.651Z",
+            "label": "8/13 13:43",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:41:19.113Z",
-            "label": "8/13 13:41",
+            "at": "2026-08-13T07:12:13.835Z",
+            "label": "8/13 15:12",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 61,
             "reports": 1
           }
@@ -5933,7 +6322,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T16:14:36.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 47,
         "peak": 47,
         "history": [
@@ -5944,68 +6333,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T17:35:10.893Z",
-            "label": "8/13 01:35",
+            "at": "2026-08-12T17:44:16.365Z",
+            "label": "8/13 01:44",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-08-12T18:55:45.786Z",
-            "label": "8/13 02:55",
+            "at": "2026-08-12T19:13:56.730Z",
+            "label": "8/13 03:13",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:16:20.679Z",
-            "label": "8/13 04:16",
+            "at": "2026-08-12T20:43:37.096Z",
+            "label": "8/13 04:43",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:36:55.572Z",
-            "label": "8/13 05:36",
+            "at": "2026-08-12T22:13:17.461Z",
+            "label": "8/13 06:13",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:57:30.465Z",
-            "label": "8/13 06:57",
+            "at": "2026-08-12T23:42:57.826Z",
+            "label": "8/13 07:42",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:18:05.359Z",
-            "label": "8/13 08:18",
+            "at": "2026-08-13T01:12:38.192Z",
+            "label": "8/13 09:12",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:38:40.252Z",
-            "label": "8/13 09:38",
+            "at": "2026-08-13T02:42:18.557Z",
+            "label": "8/13 10:42",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:59:15.145Z",
-            "label": "8/13 10:59",
+            "at": "2026-08-13T04:11:58.922Z",
+            "label": "8/13 12:11",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:19:50.038Z",
-            "label": "8/13 12:19",
+            "at": "2026-08-13T05:41:39.288Z",
+            "label": "8/13 13:41",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:40:24.931Z",
-            "label": "8/13 13:40",
+            "at": "2026-08-13T07:11:19.653Z",
+            "label": "8/13 15:11",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 47,
             "reports": 1
           }
@@ -6314,7 +6703,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T16:10:01.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -6325,68 +6714,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T17:31:00.893Z",
-            "label": "8/13 01:31",
+            "at": "2026-08-12T17:40:06.365Z",
+            "label": "8/13 01:40",
             "value": 53,
             "reports": 11
           },
           {
-            "at": "2026-08-12T18:52:00.786Z",
-            "label": "8/13 02:52",
+            "at": "2026-08-12T19:10:11.730Z",
+            "label": "8/13 03:10",
             "value": 60,
             "reports": 11
           },
           {
-            "at": "2026-08-12T20:13:00.679Z",
-            "label": "8/13 04:13",
+            "at": "2026-08-12T20:40:17.096Z",
+            "label": "8/13 04:40",
             "value": 68,
             "reports": 11
           },
           {
-            "at": "2026-08-12T21:34:00.572Z",
-            "label": "8/13 05:34",
+            "at": "2026-08-12T22:10:22.461Z",
+            "label": "8/13 06:10",
             "value": 76,
             "reports": 11
           },
           {
-            "at": "2026-08-12T22:55:00.465Z",
-            "label": "8/13 06:55",
+            "at": "2026-08-12T23:40:27.826Z",
+            "label": "8/13 07:40",
             "value": 84,
             "reports": 11
           },
           {
-            "at": "2026-08-13T00:16:00.359Z",
-            "label": "8/13 08:16",
+            "at": "2026-08-13T01:10:33.192Z",
+            "label": "8/13 09:10",
             "value": 91,
             "reports": 11
           },
           {
-            "at": "2026-08-13T01:37:00.252Z",
-            "label": "8/13 09:37",
+            "at": "2026-08-13T02:40:38.557Z",
+            "label": "8/13 10:40",
             "value": 99,
             "reports": 11
           },
           {
-            "at": "2026-08-13T02:58:00.145Z",
-            "label": "8/13 10:58",
+            "at": "2026-08-13T04:10:43.922Z",
+            "label": "8/13 12:10",
             "value": 100,
             "reports": 11
           },
           {
-            "at": "2026-08-13T04:19:00.038Z",
-            "label": "8/13 12:19",
+            "at": "2026-08-13T05:40:49.288Z",
+            "label": "8/13 13:40",
             "value": 100,
             "reports": 11
           },
           {
-            "at": "2026-08-13T05:39:59.931Z",
-            "label": "8/13 13:39",
+            "at": "2026-08-13T07:10:54.653Z",
+            "label": "8/13 15:10",
             "value": 100,
             "reports": 11
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 100,
             "reports": 11
           }
@@ -6507,7 +6896,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T16:04:27.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -6518,68 +6907,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T17:25:57.256Z",
-            "label": "8/13 01:25",
+            "at": "2026-08-12T17:35:02.729Z",
+            "label": "8/13 01:35",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T18:47:27.513Z",
-            "label": "8/13 02:47",
+            "at": "2026-08-12T19:05:38.458Z",
+            "label": "8/13 03:05",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:08:57.770Z",
-            "label": "8/13 04:08",
+            "at": "2026-08-12T20:36:14.187Z",
+            "label": "8/13 04:36",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:30:28.027Z",
-            "label": "8/13 05:30",
+            "at": "2026-08-12T22:06:49.916Z",
+            "label": "8/13 06:06",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:51:58.284Z",
-            "label": "8/13 06:51",
+            "at": "2026-08-12T23:37:25.645Z",
+            "label": "8/13 07:37",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:13:28.540Z",
-            "label": "8/13 08:13",
+            "at": "2026-08-13T01:08:01.374Z",
+            "label": "8/13 09:08",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:34:58.797Z",
-            "label": "8/13 09:34",
+            "at": "2026-08-13T02:38:37.103Z",
+            "label": "8/13 10:38",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:56:29.054Z",
-            "label": "8/13 10:56",
+            "at": "2026-08-13T04:09:12.832Z",
+            "label": "8/13 12:09",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:17:59.311Z",
-            "label": "8/13 12:17",
+            "at": "2026-08-13T05:39:48.561Z",
+            "label": "8/13 13:39",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:39:29.568Z",
-            "label": "8/13 13:39",
+            "at": "2026-08-13T07:10:24.290Z",
+            "label": "8/13 15:10",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
@@ -6690,7 +7079,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-12T16:00:59.000Z",
-        "endedAt": "2026-08-13T07:00:59.825Z",
+        "endedAt": "2026-08-13T08:41:00.019Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -6701,68 +7090,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-12T17:22:48.165Z",
-            "label": "8/13 01:22",
+            "at": "2026-08-12T17:31:53.638Z",
+            "label": "8/13 01:31",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-12T18:44:37.331Z",
-            "label": "8/13 02:44",
+            "at": "2026-08-12T19:02:48.276Z",
+            "label": "8/13 03:02",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-12T20:06:26.497Z",
-            "label": "8/13 04:06",
+            "at": "2026-08-12T20:33:42.914Z",
+            "label": "8/13 04:33",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-12T21:28:15.663Z",
-            "label": "8/13 05:28",
+            "at": "2026-08-12T22:04:37.552Z",
+            "label": "8/13 06:04",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-12T22:50:04.829Z",
-            "label": "8/13 06:50",
+            "at": "2026-08-12T23:35:32.190Z",
+            "label": "8/13 07:35",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T00:11:53.995Z",
-            "label": "8/13 08:11",
+            "at": "2026-08-13T01:06:26.828Z",
+            "label": "8/13 09:06",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T01:33:43.161Z",
-            "label": "8/13 09:33",
+            "at": "2026-08-13T02:37:21.466Z",
+            "label": "8/13 10:37",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-13T02:55:32.327Z",
-            "label": "8/13 10:55",
+            "at": "2026-08-13T04:08:16.104Z",
+            "label": "8/13 12:08",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-13T04:17:21.493Z",
-            "label": "8/13 12:17",
+            "at": "2026-08-13T05:39:10.742Z",
+            "label": "8/13 13:39",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-13T05:39:10.659Z",
-            "label": "8/13 13:39",
+            "at": "2026-08-13T07:10:05.380Z",
+            "label": "8/13 15:10",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-13T07:00:59.825Z",
-            "label": "8/13 15:00",
+            "at": "2026-08-13T08:41:00.019Z",
+            "label": "8/13 16:41",
             "value": 64,
             "reports": 1
           }
