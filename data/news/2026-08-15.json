@@ -1,7 +1,148 @@
 {
-  "generatedAt": "2026-08-14T21:35:23.937Z",
+  "generatedAt": "2026-08-14T22:33:26.640Z",
   "date": "2026-08-15",
   "items": [
+    {
+      "id": "8961949ff68916c0",
+      "normalizedUrl": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate",
+      "originalUrl": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
+      "titleOriginal": "Don't classify. Hallucinate!",
+      "summaryOriginal": "Don&#x27;t classify. Hallucinate! I still have quite a bit of older content on my blog that I never got round to tagging. My blog has 1,856 tags - likely too many to feed to an LLM in one go and say \"which of these tags match the following content\". Doug Turnbull has a neat solution. Tell the model to output tags without any details of the existing vocabulary, then use vector embeddings against the existing corpus to find the concrete tags that are closest to the ones the model imagined might fit! His example prompt suggests including an example of the shape of your tags to help the model make a more useful guess: Your task is to create novel, never seen before, furniture, home goods, or hardware classification that best fit a search query. Product classifications might look like: Furniture / Living Room Furniture / Coffee Tables & End Tables / Coffee Tables Décor & Pillows / Decorative Pillows & Blankets / Throw Pillows Furniture / Bedroom Furniture / Dressers & Chests Kitchen & Tabletop / Kitchen Organization / Food Storage & Canisters School Furniture and Supplies / School Furniture / School Chairs & Seating / Stackable Chairs Baby & Kids / Toddler & Kids Bedroom Furniture / Kid",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
+        "https://simonwillison.net/",
+        "https://simonwillison.net/tags/search",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/embeddings",
+        "https://simonwillison.net/tags/doug-turnbull"
+      ],
+      "publishedAt": "2026-08-14T21:54:35.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
+          "publishedAt": "2026-08-14T21:54:35.000Z",
+          "title": "Don't classify. Hallucinate!",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [],
+          "resourceLinks": [
+            "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
+            "https://simonwillison.net/",
+            "https://simonwillison.net/tags/search",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/embeddings",
+            "https://simonwillison.net/tags/doug-turnbull"
+          ]
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该技巧提供了一种实用的 LLM 应用方法，解决了实际场景中的标签推荐问题，具有较高的实用价值。",
+      "importanceReasonEn": "This trick provides a practical LLM application method that solves a real-world tag recommendation problem, offering high practical value.",
+      "scoringMode": "ai",
+      "titleZh": "不要分类，去幻觉！",
+      "titleEn": "Don't classify. Hallucinate!",
+      "summaryZh": "Simon Willison 分享了一个利用 LLM 进行标签推荐的技巧：与其让模型从现有标签列表中选择，不如让模型自由生成可能的标签（即“幻觉”），然后通过向量嵌入找到与现有标签最接近的匹配。这种方法避免了将大量标签一次性输入模型的限制，并提高了推荐的准确性。",
+      "summaryEn": "Simon Willison shares a trick for using LLMs for tag recommendation: instead of asking the model to choose from an existing list of tags, let the model freely generate possible tags (i.e., 'hallucinate'), then use vector embeddings to find the closest matches to the existing tag corpus. This avoids the limitation of feeding a large tag list to the model at once and improves recommendation accuracy.",
+      "keywords": [
+        "标签",
+        "幻觉",
+        "向量嵌入",
+        "LLM",
+        "提示工程"
+      ],
+      "topics": [
+        "LLM",
+        "标签推荐",
+        "向量嵌入",
+        "提示工程"
+      ],
+      "models": [],
+      "detailZh": "Simon Willison 在博客中分享了一个关于标签推荐的技巧。他的博客有 1,856 个标签，数量太多，无法一次性全部输入给 LLM 并要求其选择匹配的标签。Doug Turnbull 提出了一个巧妙的解决方案：让模型自由生成可能适合内容的标签，而不提供现有标签列表。然后，使用向量嵌入将这些生成的标签与现有标签语料库进行比较，找到最接近的现有标签。为了帮助模型生成更符合现有标签形状的标签，提示中应包含一些示例，例如“家具 / 客厅家具 / 咖啡桌和边桌 / 咖啡桌”这样的层级结构。这种方法避免了输入大量标签的限制，同时利用了模型的生成能力和向量搜索的相似性匹配。",
+      "keyPointsZh": [
+        "现有标签数量过多，无法一次性输入 LLM。",
+        "让模型自由生成标签（幻觉），而非从现有列表中选择。",
+        "使用向量嵌入将生成的标签与现有标签匹配。",
+        "提示中包含标签形状示例有助于生成更合适的标签。"
+      ],
+      "impactZh": "该技巧为处理大规模标签分类问题提供了一种高效方法，可应用于内容管理系统、电商平台等场景，提高标签推荐的准确性和效率。",
+      "readerImpactZh": "对于使用博客或内容管理系统的普通用户，此技巧可能间接改善标签推荐功能，但普通用户无需直接操作。",
+      "userImpactZh": "对于 AI 开发者和数据科学家，此技巧提供了一种可复用的模式，用于解决标签推荐、分类等任务，尤其是在标签数量庞大时。",
+      "howItWorksZh": "具体步骤：1. 准备现有标签的向量嵌入（如使用 sentence-transformers）。2. 在提示中要求模型生成可能的标签，不提供现有列表，但可提供标签形状示例。3. 将模型生成的标签转换为向量。4. 计算生成标签向量与现有标签向量的余弦相似度，选择最接近的现有标签作为推荐。",
+      "interpretationZh": "该技巧的核心是利用 LLM 的生成能力来产生候选标签，再通过向量相似性匹配到现有标签，从而避免上下文长度限制。需要注意的是，该方法依赖于向量嵌入的质量和标签语料库的覆盖度。",
+      "limitationsZh": "该方法依赖于向量嵌入的质量和标签语料库的覆盖度。如果现有标签语料库不完整，匹配可能不准确。此外，生成的标签可能过于新颖，导致无法匹配到合适的现有标签。",
+      "actionStepsZh": [
+        "为现有标签创建向量嵌入。",
+        "在提示中提供标签形状示例，要求模型生成候选标签。",
+        "将生成的标签向量化，并与现有标签向量计算相似度。",
+        "选择相似度最高的现有标签作为推荐。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
+          "publishedAt": "2026-08-14T21:54:35.000Z",
+          "title": "Don't classify. Hallucinate!",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [],
+          "resourceLinks": [
+            "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
+            "https://simonwillison.net/",
+            "https://simonwillison.net/tags/search",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/embeddings",
+            "https://simonwillison.net/tags/doug-turnbull"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-14T21:54:35.000Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-14T21:54:35.000Z",
+            "label": "8/15 05:54",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "7c5bff95ac40ce14",
       "normalizedUrl": "https://anthropic.com/news/improving-fable-5-s-biology-safeguards",
@@ -405,7 +546,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-14T21:29:17.000Z",
-        "endedAt": "2026-08-14T21:35:23.937Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -416,8 +557,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T21:35:23.937Z",
-            "label": "8/15 05:35",
+            "at": "2026-08-14T22:01:21.820Z",
+            "label": "8/15 06:01",
+            "value": 83,
+            "reports": 11
+          },
+          {
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
             "value": 100,
             "reports": 11
           }
@@ -549,7 +696,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-14T19:22:48.546Z",
-        "endedAt": "2026-08-14T21:35:23.937Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
         "current": 69,
         "peak": 69,
         "history": [
@@ -560,20 +707,26 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T20:07:00.343Z",
-            "label": "8/15 04:07",
-            "value": 32,
+            "at": "2026-08-14T20:10:28.069Z",
+            "label": "8/15 04:10",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-14T20:51:12.140Z",
-            "label": "8/15 04:51",
-            "value": 50,
+            "at": "2026-08-14T20:58:07.593Z",
+            "label": "8/15 04:58",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-14T21:35:23.937Z",
-            "label": "8/15 05:35",
+            "at": "2026-08-14T21:45:47.116Z",
+            "label": "8/15 05:45",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
             "value": 69,
             "reports": 1
           }
@@ -1148,7 +1301,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-14T18:06:29.000Z",
-        "endedAt": "2026-08-14T21:35:23.937Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -1159,26 +1312,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T18:58:42.734Z",
-            "label": "8/15 02:58",
-            "value": 64,
+            "at": "2026-08-14T18:59:52.528Z",
+            "label": "8/15 02:59",
+            "value": 60,
             "reports": 19
           },
           {
-            "at": "2026-08-14T19:50:56.468Z",
-            "label": "8/15 03:50",
-            "value": 83,
+            "at": "2026-08-14T19:53:16.056Z",
+            "label": "8/15 03:53",
+            "value": 76,
             "reports": 19
           },
           {
-            "at": "2026-08-14T20:43:10.202Z",
-            "label": "8/15 04:43",
+            "at": "2026-08-14T20:46:39.584Z",
+            "label": "8/15 04:46",
+            "value": 91,
+            "reports": 19
+          },
+          {
+            "at": "2026-08-14T21:40:03.112Z",
+            "label": "8/15 05:40",
             "value": 100,
             "reports": 19
           },
           {
-            "at": "2026-08-14T21:35:23.937Z",
-            "label": "8/15 05:35",
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
             "value": 100,
             "reports": 19
           }
@@ -1641,7 +1800,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-14T17:01:54.000Z",
-        "endedAt": "2026-08-14T21:35:23.937Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -1652,32 +1811,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T17:56:35.987Z",
-            "label": "8/15 01:56",
-            "value": 62,
+            "at": "2026-08-14T17:57:09.440Z",
+            "label": "8/15 01:57",
+            "value": 59,
             "reports": 15
           },
           {
-            "at": "2026-08-14T18:51:17.974Z",
-            "label": "8/15 02:51",
-            "value": 79,
+            "at": "2026-08-14T18:52:24.880Z",
+            "label": "8/15 02:52",
+            "value": 73,
             "reports": 15
           },
           {
-            "at": "2026-08-14T19:45:59.962Z",
-            "label": "8/15 03:45",
-            "value": 96,
+            "at": "2026-08-14T19:47:40.320Z",
+            "label": "8/15 03:47",
+            "value": 88,
             "reports": 15
           },
           {
-            "at": "2026-08-14T20:40:41.949Z",
-            "label": "8/15 04:40",
+            "at": "2026-08-14T20:42:55.760Z",
+            "label": "8/15 04:42",
             "value": 100,
             "reports": 15
           },
           {
-            "at": "2026-08-14T21:35:23.937Z",
-            "label": "8/15 05:35",
+            "at": "2026-08-14T21:38:11.200Z",
+            "label": "8/15 05:38",
+            "value": 100,
+            "reports": 15
+          },
+          {
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
             "value": 100,
             "reports": 15
           }
@@ -1833,7 +1998,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-14T16:43:43.000Z",
-        "endedAt": "2026-08-14T21:35:23.937Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1844,32 +2009,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T17:42:03.187Z",
+            "at": "2026-08-14T17:42:00.273Z",
             "label": "8/15 01:42",
-            "value": 24,
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-14T18:40:23.374Z",
+            "at": "2026-08-14T18:40:17.546Z",
             "label": "8/15 02:40",
-            "value": 34,
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-14T19:38:43.562Z",
+            "at": "2026-08-14T19:38:34.820Z",
             "label": "8/15 03:38",
-            "value": 44,
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-14T20:37:03.749Z",
-            "label": "8/15 04:37",
-            "value": 54,
+            "at": "2026-08-14T20:36:52.093Z",
+            "label": "8/15 04:36",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-14T21:35:23.937Z",
+            "at": "2026-08-14T21:35:09.366Z",
             "label": "8/15 05:35",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
             "value": 64,
             "reports": 1
           }
@@ -1966,7 +2137,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-14T16:13:40.000Z",
-        "endedAt": "2026-08-14T21:35:23.937Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1977,38 +2148,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T17:07:17.322Z",
+            "at": "2026-08-14T17:07:55.234Z",
             "label": "8/15 01:07",
-            "value": 21,
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-14T18:00:54.645Z",
-            "label": "8/15 02:00",
-            "value": 29,
+            "at": "2026-08-14T18:02:10.468Z",
+            "label": "8/15 02:02",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-14T18:54:31.968Z",
-            "label": "8/15 02:54",
-            "value": 36,
+            "at": "2026-08-14T18:56:25.702Z",
+            "label": "8/15 02:56",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-14T19:48:09.291Z",
-            "label": "8/15 03:48",
-            "value": 43,
+            "at": "2026-08-14T19:50:40.937Z",
+            "label": "8/15 03:50",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-14T20:41:46.614Z",
-            "label": "8/15 04:41",
-            "value": 51,
+            "at": "2026-08-14T20:44:56.171Z",
+            "label": "8/15 04:44",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-14T21:35:23.937Z",
-            "label": "8/15 05:35",
+            "at": "2026-08-14T21:39:11.405Z",
+            "label": "8/15 05:39",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
             "value": 58,
             "reports": 1
           }
@@ -2129,7 +2306,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-14T16:06:32.000Z",
-        "endedAt": "2026-08-14T21:35:23.937Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -2140,38 +2317,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T17:01:20.656Z",
+            "at": "2026-08-14T17:01:48.377Z",
             "label": "8/15 01:01",
-            "value": 23,
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-14T17:56:09.312Z",
-            "label": "8/15 01:56",
-            "value": 31,
+            "at": "2026-08-14T17:57:04.754Z",
+            "label": "8/15 01:57",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-14T18:50:57.968Z",
-            "label": "8/15 02:50",
-            "value": 40,
+            "at": "2026-08-14T18:52:21.131Z",
+            "label": "8/15 02:52",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-14T19:45:46.624Z",
-            "label": "8/15 03:45",
-            "value": 49,
+            "at": "2026-08-14T19:47:37.508Z",
+            "label": "8/15 03:47",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-14T20:40:35.280Z",
-            "label": "8/15 04:40",
-            "value": 58,
+            "at": "2026-08-14T20:42:53.885Z",
+            "label": "8/15 04:42",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-08-14T21:35:23.937Z",
-            "label": "8/15 05:35",
+            "at": "2026-08-14T21:38:10.262Z",
+            "label": "8/15 05:38",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
             "value": 66,
             "reports": 1
           }
@@ -2323,7 +2506,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-14T16:00:00.000Z",
-        "endedAt": "2026-08-14T21:35:23.937Z",
+        "endedAt": "2026-08-14T22:33:26.640Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2334,38 +2517,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T16:55:53.989Z",
-            "label": "8/15 00:55",
-            "value": 22,
+            "at": "2026-08-14T16:56:12.377Z",
+            "label": "8/15 00:56",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-14T17:51:47.979Z",
-            "label": "8/15 01:51",
-            "value": 31,
+            "at": "2026-08-14T17:52:24.754Z",
+            "label": "8/15 01:52",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-14T18:47:41.968Z",
-            "label": "8/15 02:47",
-            "value": 39,
+            "at": "2026-08-14T18:48:37.131Z",
+            "label": "8/15 02:48",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-14T19:43:35.958Z",
-            "label": "8/15 03:43",
-            "value": 47,
+            "at": "2026-08-14T19:44:49.508Z",
+            "label": "8/15 03:44",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-14T20:39:29.947Z",
-            "label": "8/15 04:39",
-            "value": 55,
+            "at": "2026-08-14T20:41:01.885Z",
+            "label": "8/15 04:41",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-14T21:35:23.937Z",
-            "label": "8/15 05:35",
+            "at": "2026-08-14T21:37:14.262Z",
+            "label": "8/15 05:37",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T22:33:26.640Z",
+            "label": "8/15 06:33",
             "value": 64,
             "reports": 1
           }
