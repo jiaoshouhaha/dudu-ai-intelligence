@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T00:10:47.288Z",
+  "generatedAt": "2026-08-14T03:09:57.803Z",
   "date": "2026-08-14",
   "items": [
     {
@@ -64,7 +64,9 @@
         "入门指南",
         "工具使用"
       ],
-      "models": [],
+      "models": [
+        "DeepSeek"
+      ],
       "detailZh": "本文是一篇关于DeepSeek Harness的入门教程，作者以个人经验为基础，从零开始介绍了该工具的基本概念、安装步骤、核心功能和使用技巧。文章首先解释了DeepSeek Harness是什么，以及它在AI开发中的作用。接着，作者详细演示了如何安装和配置环境，包括必要的依赖和常见问题的解决方法。然后，文章重点介绍了Harness的核心功能，如任务定义、数据加载、模型调用和结果评估，并通过简单的示例展示了如何编写和运行一个基本的测试任务。最后，作者分享了一些实用技巧，如如何优化配置、调试错误以及扩展功能，帮助读者更高效地使用该工具。文章语言通俗易懂，适合初学者快速上手。",
       "keyPointsZh": [
         "DeepSeek Harness是一个用于测试和评估AI模型的工具。",
@@ -106,7 +108,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T23:58:00.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -117,9 +119,187 @@
             "reports": 0
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T00:45:59.450Z",
+            "label": "8/14 08:45",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:33:58.901Z",
+            "label": "8/14 09:33",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T02:21:58.352Z",
+            "label": "8/14 10:21",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 58,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "4f45cf68d2894ffb",
+      "normalizedUrl": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2",
+      "originalUrl": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/",
+      "titleOriginal": "sqlite-utils 4.2.1",
+      "summaryOriginal": "Release: sqlite-utils 4.2.1 Fixes a crashing bug in sqlite-utils 4.2 . I'd introduced code that looks like this: from typing_extensions import Self It turned out the typing-extensions package was not listed as a dependency for sqlite-utils - it was installed by one of the other dependencies in the dev dependency group , but when you uvx sqlite-utils directly you don't get those dependencies. As part of fixing this I figured out how to run a smoke test to ensure the CLI tool still works even without those dev dependencies, which can be run from the project checkout: uv run --isolated --no-default-groups sqlite-utils --help The --no-default-groups argument prevents it from installing that default dev group, and --isolated means that even if there is a .venv/ folder containing extra dependencies they will be ignored for the duration of that uv run command. Tags: packaging , python , sqlite-utils , uv",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/sqlite-utils/releases/tag/4.2.1",
+        "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
+        "https://pypi.org/project/typing-extensions/",
+        "https://github.com/simonw/sqlite-utils/blob/56dd09702fdb9e899f577ffd51693c1f2176cb08/pyproject.toml#L34-L55",
+        "https://simonwillison.net/tags/packaging",
+        "https://simonwillison.net/tags/python",
+        "https://simonwillison.net/tags/sqlite-utils",
+        "https://simonwillison.net/tags/uv"
+      ],
+      "publishedAt": "2026-08-13T23:53:47.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/",
+          "publishedAt": "2026-08-13T23:53:47.000Z",
+          "title": "sqlite-utils 4.2.1",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/sqlite-utils/releases/tag/4.2.1",
+            "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
+            "https://pypi.org/project/typing-extensions/",
+            "https://github.com/simonw/sqlite-utils/blob/56dd09702fdb9e899f577ffd51693c1f2176cb08/pyproject.toml#L34-L55",
+            "https://simonwillison.net/tags/packaging",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/sqlite-utils",
+            "https://simonwillison.net/tags/uv"
+          ]
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "这是一个针对开发者的小型工具修复，解决了实际崩溃问题，并提供了可复用的隔离测试方法，对使用 sqlite-utils 的开发者有直接帮助。",
+      "importanceReasonEn": "This is a minor tool fix for developers, resolving a real crash and providing a reusable isolated testing method, directly helpful for sqlite-utils users.",
+      "scoringMode": "ai",
+      "titleZh": "sqlite-utils 4.2.1 发布：修复崩溃并改进隔离测试",
+      "titleEn": "sqlite-utils 4.2.1: Fixes Crashing Bug and Improves Isolated Testing",
+      "summaryZh": "sqlite-utils 4.2.1 修复了 4.2 版本中的一个崩溃问题。该问题源于代码中使用了 typing_extensions 的 Self，但该包未被列为依赖，导致直接使用 uvx 时缺少依赖而崩溃。修复过程中，作者还改进了隔离测试方法，使用 uv run --isolated --no-default-groups 来确保 CLI 在无开发依赖的情况下正常工作。",
+      "summaryEn": "sqlite-utils 4.2.1 fixes a crashing bug in 4.2. The issue was caused by using typing_extensions.Self without declaring it as a dependency, leading to crashes when running via uvx directly. The fix also includes an improved smoke test using uv run --isolated --no-default-groups to verify the CLI works without dev dependencies.",
+      "keywords": [
+        "sqlite-utils",
+        "4.2.1",
+        "bug fix",
+        "typing_extensions",
+        "uv",
+        "isolated"
+      ],
+      "topics": [
+        "sqlite-utils",
+        "python",
+        "packaging",
+        "uv"
+      ],
+      "models": [],
+      "detailZh": "sqlite-utils 4.2.1 是一个补丁版本，主要修复了 4.2 版本中引入的一个崩溃问题。问题源于代码中使用了 from typing_extensions import Self，但 typing-extensions 包并未被列为 sqlite-utils 的依赖。在开发环境中，该包可能通过其他依赖间接安装，但当用户直接使用 uvx sqlite-utils 时，这些间接依赖不会包含在内，导致运行时崩溃。\n\n修复过程中，作者 Simon Willison 还改进了项目的测试流程。他设计了一个冒烟测试，用于确保 CLI 工具在没有开发依赖的情况下仍能正常工作。该测试命令为：uv run --isolated --no-default-groups sqlite-utils --help。其中 --no-default-groups 参数阻止安装默认的开发依赖组，--isolated 参数确保即使存在 .venv/ 文件夹，其中的额外依赖也会被忽略。\n\n这个修复不仅解决了当前的崩溃问题，还提高了项目的可靠性，确保类似问题在未来能被及时发现。对于使用 sqlite-utils 的开发者来说，升级到 4.2.1 可以避免因缺少 typing-extensions 而导致的崩溃。",
+      "keyPointsZh": [
+        "sqlite-utils 4.2.1 修复了 4.2 中因缺少 typing-extensions 依赖导致的崩溃。",
+        "修复方法是将 typing-extensions 添加为依赖，或调整代码避免使用该包。",
+        "新增了隔离冒烟测试，使用 uv run --isolated --no-default-groups 验证 CLI 在无开发依赖下可用。",
+        "该测试方法可复用于其他 Python 项目，确保打包正确性。"
+      ],
+      "impactZh": "该修复对使用 sqlite-utils 的开发者有直接影响，避免了因依赖缺失导致的崩溃，提高了工具的稳定性。同时，改进的测试方法有助于项目维护者确保发布质量。",
+      "readerImpactZh": "对于普通用户，如果使用 sqlite-utils 4.2 并遇到崩溃，升级到 4.2.1 即可解决问题。",
+      "userImpactZh": "对于开发者，升级到 4.2.1 可避免崩溃，并可采用新的隔离测试方法验证自己的项目打包是否完整。",
+      "howItWorksZh": "修复的核心是确保 typing-extensions 被正确声明为依赖。在 Python 打包中，如果代码中使用了某个包，必须在项目的 pyproject.toml 或 setup.py 中声明，否则在干净环境中安装时可能缺失。作者通过添加依赖或调整代码解决了问题。\n\n隔离测试方法：uv run --isolated --no-default-groups sqlite-utils --help 命令利用 uv 的隔离功能，忽略默认依赖组和现有虚拟环境，模拟干净环境，从而验证 CLI 是否能在仅安装核心依赖的情况下运行。",
+      "interpretationZh": "该事件表明，即使项目在开发环境中测试通过，也可能因依赖声明不完整而在用户环境中出现问题。作者通过添加依赖和隔离测试来修复和预防此类问题。",
+      "limitationsZh": "该修复仅针对 sqlite-utils 4.2.1，其他版本可能不受影响。隔离测试方法依赖于 uv 工具，对于使用其他包管理器的项目可能不适用。",
+      "actionStepsZh": [
+        "升级 sqlite-utils 到 4.2.1 或更高版本。",
+        "如果使用 uvx 运行 sqlite-utils，确保升级后无崩溃。",
+        "在自己的 Python 项目中，检查是否所有导入的包都已声明为依赖。",
+        "采用 uv run --isolated --no-default-groups 进行冒烟测试，确保 CLI 在干净环境下可用。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/",
+          "publishedAt": "2026-08-13T23:53:47.000Z",
+          "title": "sqlite-utils 4.2.1",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/sqlite-utils/releases/tag/4.2.1",
+            "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
+            "https://pypi.org/project/typing-extensions/",
+            "https://github.com/simonw/sqlite-utils/blob/56dd09702fdb9e899f577ffd51693c1f2176cb08/pyproject.toml#L34-L55",
+            "https://simonwillison.net/tags/packaging",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/sqlite-utils",
+            "https://simonwillison.net/tags/uv"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-13T23:53:47.000Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-08-13T23:53:47.000Z",
+            "label": "8/14 07:53",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-14T00:42:49.700Z",
+            "label": "8/14 08:42",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:31:52.401Z",
+            "label": "8/14 09:31",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T02:20:55.102Z",
+            "label": "8/14 10:20",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -236,7 +416,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T21:27:02.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -247,20 +427,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T22:21:37.096Z",
-            "label": "8/14 06:21",
+            "at": "2026-08-13T22:24:11.300Z",
+            "label": "8/14 06:24",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T23:21:20.601Z",
+            "label": "8/14 07:21",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:16:12.192Z",
-            "label": "8/14 07:16",
+            "at": "2026-08-14T00:18:29.901Z",
+            "label": "8/14 08:18",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:15:39.202Z",
+            "label": "8/14 09:15",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T02:12:48.502Z",
+            "label": "8/14 10:12",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 64,
             "reports": 1
           }
@@ -351,7 +549,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T21:13:24.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -362,20 +560,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T22:12:31.762Z",
+            "at": "2026-08-13T22:12:49.633Z",
             "label": "8/14 06:12",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T23:12:15.267Z",
+            "label": "8/14 07:12",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:11:39.525Z",
-            "label": "8/14 07:11",
+            "at": "2026-08-14T00:11:40.901Z",
+            "label": "8/14 08:11",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:11:06.535Z",
+            "label": "8/14 09:11",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T02:10:32.169Z",
+            "label": "8/14 10:10",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 64,
             "reports": 1
           }
@@ -476,7 +692,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T20:14:39.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -487,27 +703,234 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T21:13:41.072Z",
+            "at": "2026-08-13T21:13:58.829Z",
             "label": "8/14 05:13",
-            "value": 27,
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-13T22:12:43.144Z",
-            "label": "8/14 06:12",
-            "value": 40,
+            "at": "2026-08-13T22:13:18.658Z",
+            "label": "8/14 06:13",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:11:45.216Z",
-            "label": "8/14 07:11",
-            "value": 53,
+            "at": "2026-08-13T23:12:38.487Z",
+            "label": "8/14 07:12",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T00:11:58.316Z",
+            "label": "8/14 08:11",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:11:18.145Z",
+            "label": "8/14 09:11",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T02:10:37.974Z",
+            "label": "8/14 10:10",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a0054230c097ef75",
+      "normalizedUrl": "https://simonwillison.net/2026/Aug/13/sqlite-utils",
+      "originalUrl": "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
+      "titleOriginal": "sqlite-utils 4.2",
+      "summaryOriginal": "Release: sqlite-utils 4.2 Lots of improvements in this one relating to the table.transform() feature , which adds support for complex alter table operations by creating a fresh table, copying across the data and then dropping and replacing the old one. transform() now preserves a much larger array of edge-case schema definitions, including check constraints, unique constraints and even comments describing the columns. There are also new introspection properties for check constraints, and a whole lot of other smaller changes. Includes contributions from Bunlong Heng , ethanhawkes-gif , Rami Abdelrazzaq , nyxst4ck , and ikatyal2110 . (It later turned out 4.2 had a crashing bug , fixed in 4.2.1 .) Tags: releases , sqlite , sqlite-utils",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/sqlite-utils/releases/tag/4.2",
+        "https://sqlite-utils.datasette.io/en/stable/python-api.html#transforming-a-table",
+        "https://sqlite-utils.datasette.io/en/stable/python-api.html#checks",
+        "https://github.com/bunlongheng",
+        "https://github.com/ethanhawkes-gif",
+        "https://github.com/RamiNoodle733",
+        "https://github.com/nyxst4ck",
+        "https://github.com/ikatyal2110",
+        "https://github.com/simonw/sqlite-utils/issues/842",
+        "https://sqlite-utils.datasette.io/en/stable/changelog.html#v4-2-1",
+        "https://simonwillison.net/tags/releases",
+        "https://simonwillison.net/tags/sqlite"
+      ],
+      "publishedAt": "2026-08-13T20:11:29.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
+          "publishedAt": "2026-08-13T20:11:29.000Z",
+          "title": "sqlite-utils 4.2",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/sqlite-utils/releases/tag/4.2",
+            "https://sqlite-utils.datasette.io/en/stable/python-api.html#transforming-a-table",
+            "https://sqlite-utils.datasette.io/en/stable/python-api.html#checks",
+            "https://github.com/bunlongheng",
+            "https://github.com/ethanhawkes-gif",
+            "https://github.com/RamiNoodle733",
+            "https://github.com/nyxst4ck",
+            "https://github.com/ikatyal2110",
+            "https://github.com/simonw/sqlite-utils/issues/842",
+            "https://sqlite-utils.datasette.io/en/stable/changelog.html#v4-2-1",
+            "https://simonwillison.net/tags/releases",
+            "https://simonwillison.net/tags/sqlite"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该版本对 sqlite-utils 的 transform() 功能进行了重要改进，增强了复杂表结构变更的支持，对使用 SQLite 的开发者有实际价值。",
+      "importanceReasonEn": "This release brings significant improvements to the transform() feature, enhancing support for complex schema changes, which is practically valuable for developers using SQLite.",
+      "scoringMode": "ai",
+      "titleZh": "sqlite-utils 4.2 发布",
+      "titleEn": "sqlite-utils 4.2 Release",
+      "summaryZh": "sqlite-utils 4.2 发布，主要改进了 table.transform() 功能，通过创建新表、复制数据、删除旧表的方式支持复杂的 ALTER TABLE 操作。该版本现在能保留更多边缘情况的表结构定义，包括检查约束、唯一约束和列注释。还新增了检查约束的内省属性，以及其他一些较小的更改。包含多位贡献者的贡献。但后来发现 4.2 存在崩溃错误，已在 4.2.1 中修复。",
+      "summaryEn": "sqlite-utils 4.2 released with major improvements to the table.transform() feature, which supports complex ALTER TABLE operations by creating a fresh table, copying data, and replacing the old one. This version preserves more edge-case schema definitions, including check constraints, unique constraints, and column comments. New introspection properties for check constraints and other smaller changes. Includes contributions from multiple contributors. However, 4.2 had a crashing bug, fixed in 4.2.1.",
+      "keywords": [
+        "sqlite-utils",
+        "transform",
+        "check constraints",
+        "unique constraints",
+        "release"
+      ],
+      "topics": [
+        "sqlite-utils",
+        "SQLite",
+        "数据库工具",
+        "表转换"
+      ],
+      "models": [],
+      "detailZh": "sqlite-utils 4.2 版本发布，主要围绕 table.transform() 功能进行了大量改进。transform() 通过创建新表、复制数据、删除旧表的方式，支持复杂的 ALTER TABLE 操作。此版本增强了保留边缘情况表结构定义的能力，包括检查约束、唯一约束和列注释。此外，还新增了检查约束的内省属性，以及一些其他较小的更改。该版本包含了 Bunlong Heng、ethanhawkes-gif、Rami Abdelrazzaq、nyxst4ck 和 ikatyal2110 的贡献。但后来发现 4.2 存在崩溃错误，已在 4.2.1 中修复。",
+      "keyPointsZh": [
+        "sqlite-utils 4.2 改进了 table.transform() 功能，支持更复杂的表结构变更。",
+        "transform() 现在能保留检查约束、唯一约束和列注释等边缘情况。",
+        "新增了检查约束的内省属性。",
+        "包含多位贡献者的贡献。",
+        "4.2 存在崩溃错误，已在 4.2.1 中修复。"
+      ],
+      "impactZh": "该版本对使用 sqlite-utils 进行数据库迁移的开发者有直接影响，增强了复杂表结构变更的可靠性，减少了数据丢失或结构错误的风险。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用 sqlite-utils 的开发者，升级到 4.2.1 可以获得更稳定的 transform() 功能，支持更复杂的表结构变更，并避免 4.2 中的崩溃问题。",
+      "howItWorksZh": "table.transform() 的工作原理是：创建一个新表，将旧表的数据复制到新表，然后删除旧表并重命名新表。此版本增强了在复制过程中保留表结构定义的能力，包括检查约束、唯一约束和列注释。具体实现细节未在源材料中详细说明，但可以推测是通过解析旧表的 schema 并在创建新表时应用这些定义。",
+      "interpretationZh": "根据发布说明，sqlite-utils 4.2 在 transform() 功能上取得了显著进步，但随后发现的崩溃错误表明该版本存在稳定性问题。用户应升级到 4.2.1 以获得修复。",
+      "limitationsZh": "源材料仅提供了发布说明的摘要，未提供具体的技术细节或示例。此外，4.2 的崩溃错误细节未说明，仅提到已在 4.2.1 中修复。",
+      "actionStepsZh": [
+        "如果正在使用 sqlite-utils 4.2，请升级到 4.2.1 以避免崩溃问题。",
+        "在升级后，测试涉及复杂表结构变更的 transform() 操作，确保功能正常。",
+        "查阅 sqlite-utils 官方文档以了解 transform() 的详细用法和限制。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
+          "publishedAt": "2026-08-13T20:11:29.000Z",
+          "title": "sqlite-utils 4.2",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/sqlite-utils/releases/tag/4.2",
+            "https://sqlite-utils.datasette.io/en/stable/python-api.html#transforming-a-table",
+            "https://sqlite-utils.datasette.io/en/stable/python-api.html#checks",
+            "https://github.com/bunlongheng",
+            "https://github.com/ethanhawkes-gif",
+            "https://github.com/RamiNoodle733",
+            "https://github.com/nyxst4ck",
+            "https://github.com/ikatyal2110",
+            "https://github.com/simonw/sqlite-utils/issues/842",
+            "https://sqlite-utils.datasette.io/en/stable/changelog.html#v4-2-1",
+            "https://simonwillison.net/tags/releases",
+            "https://simonwillison.net/tags/sqlite"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-13T20:11:29.000Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-08-13T20:11:29.000Z",
+            "label": "8/14 04:11",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-13T21:11:15.971Z",
+            "label": "8/14 05:11",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T22:11:02.943Z",
+            "label": "8/14 06:11",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T23:10:49.915Z",
+            "label": "8/14 07:10",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T00:10:36.887Z",
+            "label": "8/14 08:10",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:10:23.859Z",
+            "label": "8/14 09:10",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T02:10:10.831Z",
+            "label": "8/14 10:10",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -625,7 +1048,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T19:39:54.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -636,33 +1059,259 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T20:34:04.657Z",
-            "label": "8/14 04:34",
-            "value": 24,
+            "at": "2026-08-13T20:36:09.475Z",
+            "label": "8/14 04:36",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-13T21:28:15.315Z",
-            "label": "8/14 05:28",
-            "value": 34,
+            "at": "2026-08-13T21:32:24.950Z",
+            "label": "8/14 05:32",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-13T22:22:25.972Z",
-            "label": "8/14 06:22",
-            "value": 44,
+            "at": "2026-08-13T22:28:40.426Z",
+            "label": "8/14 06:28",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:16:36.630Z",
-            "label": "8/14 07:16",
-            "value": 54,
+            "at": "2026-08-13T23:24:55.901Z",
+            "label": "8/14 07:24",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T00:21:11.376Z",
+            "label": "8/14 08:21",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:17:26.852Z",
+            "label": "8/14 09:17",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T02:13:42.327Z",
+            "label": "8/14 10:13",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "21203a15a22ffd95",
+      "normalizedUrl": "https://simonwillison.net/2026/Aug/13/llm-gemini",
+      "originalUrl": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+      "titleOriginal": "llm-gemini 0.33",
+      "summaryOriginal": "Release: llm-gemini 0.33 It's been a while since the last llm-gemini release. This version of the plugin adds support for today's Gemini 3.7 Flash release, plus gemini-3.6-flash , gemini-3.5-flash-lite and two embedding models gemini-embedding-2 and gemini-embedding-001 . The plugin is also upgraded for compatibility with LLM 0.32, which means you can now see reasoning traces and you can also enable server-side tools using this pattern: llm -m gemini-3.7-flash -T CodeExecution \\ 'use python to calculate (factorial of 13) * 3' I had Gemini 3.7 Flash draw me some pelicans riding bicycles at high, medium, and low thinking efforts (minimal, which was an option in 3.6 Flash, has been removed in 3.7.) Here's the high level one, which is pretty great: One catch though: the pelican I showed here was rendered with Safari. Both Firefox and Chrome render it differently, due to Safari being more tolerant of empty SVG elements than those other two browsers. They still display the bicycle, but the pelican is missing entirely! Tags: google , ai , generative-ai , llms , llm , gemini , pelican-riding-a-bicycle , llm-release",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/gemini-3.7-flash-high-pelican.jpg",
+        "https://static.simonwillison.net/static/2026/broken-pelican-safari.jpg"
+      ],
+      "resourceLinks": [
+        "https://github.com/simonw/llm-gemini/releases/tag/0.33",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+        "https://tools.simonwillison.net/markdown-svg-renderer.html#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6779a22d5e7bb6bdf29936f1600a5259",
+        "https://simonwillison.net/tags/google",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/llm",
+        "https://simonwillison.net/tags/gemini",
+        "https://simonwillison.net/tags/pelican-riding-a-bicycle",
+        "https://simonwillison.net/tags/llm-release"
+      ],
+      "publishedAt": "2026-08-13T19:37:34.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+          "publishedAt": "2026-08-13T19:37:34.000Z",
+          "title": "llm-gemini 0.33",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [
+            "https://static.simonwillison.net/static/2026/gemini-3.7-flash-high-pelican.jpg",
+            "https://static.simonwillison.net/static/2026/broken-pelican-safari.jpg"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-gemini/releases/tag/0.33",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+            "https://tools.simonwillison.net/markdown-svg-renderer.html#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6779a22d5e7bb6bdf29936f1600a5259",
+            "https://simonwillison.net/tags/google",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/gemini",
+            "https://simonwillison.net/tags/pelican-riding-a-bicycle",
+            "https://simonwillison.net/tags/llm-release"
+          ]
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该发布为 LLM 用户带来新模型支持和功能增强，具有实际使用价值，但内容较为具体，影响范围有限。",
+      "importanceReasonEn": "The release brings new model support and feature enhancements for LLM users, with practical value but limited scope.",
+      "scoringMode": "ai",
+      "titleZh": "llm-gemini 0.33 发布：支持 Gemini 3.7 Flash 及新嵌入模型",
+      "titleEn": "llm-gemini 0.33 Released: Support for Gemini 3.7 Flash and New Embedding Models",
+      "summaryZh": "llm-gemini 0.33 插件发布，新增对 Gemini 3.7 Flash、3.6 Flash、3.5 Flash Lite 以及两个嵌入模型的支持，并升级兼容 LLM 0.32，支持推理痕迹和服务器端工具。作者测试了不同思考强度下的绘图效果，并指出 Safari 与 Firefox/Chrome 渲染 SVG 的差异。",
+      "summaryEn": "llm-gemini 0.33 plugin released, adding support for Gemini 3.7 Flash, 3.6 Flash, 3.5 Flash Lite, and two embedding models, upgraded for LLM 0.32 compatibility, enabling reasoning traces and server-side tools. The author tested drawing at different thinking efforts and noted SVG rendering differences between Safari and Firefox/Chrome.",
+      "keywords": [
+        "llm-gemini",
+        "Gemini 3.7 Flash",
+        "LLM 0.32",
+        "embedding",
+        "server-side tools",
+        "reasoning traces"
+      ],
+      "topics": [
+        "llm-gemini",
+        "Gemini 3.7 Flash",
+        "LLM 0.32",
+        "embedding models",
+        "server-side tools"
+      ],
+      "models": [
+        "gemini-3.7-flash",
+        "gemini-3.6-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-embedding-2",
+        "gemini-embedding-001"
+      ],
+      "detailZh": "llm-gemini 0.33 是 llm-gemini 插件的一次重要更新，距离上次发布已有一段时间。本次更新主要增加了对 Google 最新发布的 Gemini 3.7 Flash 模型的支持，同时还包括 gemini-3.6-flash、gemini-3.5-flash-lite 以及两个嵌入模型 gemini-embedding-2 和 gemini-embedding-001。此外，插件升级以兼容 LLM 0.32，这意味着用户现在可以查看推理痕迹（reasoning traces），并能够启用服务器端工具。例如，可以使用命令 `llm -m gemini-3.7-flash -T CodeExecution 'use python to calculate (factorial of 13) * 3'` 来启用代码执行工具。作者还测试了 Gemini 3.7 Flash 在不同思考强度（高、中、低）下绘制“骑自行车的鹈鹕”的效果，并展示了高思考强度下的图像。值得注意的是，作者指出该图像在 Safari 浏览器中渲染正常，但在 Firefox 和 Chrome 中，由于对空 SVG 元素的处理差异，鹈鹕可能缺失，仅显示自行车。",
+      "keyPointsZh": [
+        "llm-gemini 0.33 新增支持 Gemini 3.7 Flash、3.6 Flash、3.5 Flash Lite 及两个嵌入模型。",
+        "插件升级兼容 LLM 0.32，支持查看推理痕迹和启用服务器端工具。",
+        "作者测试了不同思考强度下的绘图效果，并发现 Safari 与 Firefox/Chrome 渲染 SVG 存在差异。"
+      ],
+      "impactZh": "该更新为使用 LLM 工具的用户提供了对新模型和功能的访问，特别是服务器端工具和推理痕迹功能，提升了实用性和灵活性。",
+      "readerImpactZh": "对于普通用户，此更新可能意味着通过 LLM 命令行工具获得更强大的模型和功能，但需要一定的技术背景。",
+      "userImpactZh": "对于 AI 开发者和团队，此更新提供了对新 Gemini 模型的支持，并可通过服务器端工具执行代码，提高自动化能力。",
+      "howItWorksZh": "要使用新功能，用户需升级 llm-gemini 插件至 0.33 版本，并确保 LLM 版本为 0.32 或更高。启用服务器端工具时，可在命令行中使用 `-T` 参数指定工具，例如 `-T CodeExecution`。推理痕迹功能会自动显示模型的推理过程。",
+      "interpretationZh": "该发布是插件维护者对 Google 新模型的及时跟进，表明 LLM 生态持续演进。作者提到的 SVG 渲染差异是浏览器兼容性问题，并非模型缺陷。",
+      "limitationsZh": "来源为个人博客，未提供官方文档或详细测试数据；SVG 渲染差异仅基于作者个人测试，可能因环境而异。",
+      "actionStepsZh": [
+        "升级 llm-gemini 插件至 0.33 版本。",
+        "确保 LLM 版本为 0.32 或更高以兼容新功能。",
+        "尝试使用 `-T CodeExecution` 启用服务器端工具。",
+        "注意不同浏览器对 SVG 的渲染差异，必要时进行兼容性测试。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+          "publishedAt": "2026-08-13T19:37:34.000Z",
+          "title": "llm-gemini 0.33",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [
+            "https://static.simonwillison.net/static/2026/gemini-3.7-flash-high-pelican.jpg",
+            "https://static.simonwillison.net/static/2026/broken-pelican-safari.jpg"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-gemini/releases/tag/0.33",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+            "https://tools.simonwillison.net/markdown-svg-renderer.html#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6779a22d5e7bb6bdf29936f1600a5259",
+            "https://simonwillison.net/tags/google",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/gemini",
+            "https://simonwillison.net/tags/pelican-riding-a-bicycle",
+            "https://simonwillison.net/tags/llm-release"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-13T19:37:34.000Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-08-13T19:37:34.000Z",
+            "label": "8/14 03:37",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-13T20:34:06.975Z",
+            "label": "8/14 04:34",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T21:30:39.950Z",
+            "label": "8/14 05:30",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T22:27:12.926Z",
+            "label": "8/14 06:27",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T23:23:45.901Z",
+            "label": "8/14 07:23",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T00:20:18.876Z",
+            "label": "8/14 08:20",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:16:51.852Z",
+            "label": "8/14 09:16",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T02:13:24.827Z",
+            "label": "8/14 10:13",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
+            "value": 58,
             "reports": 1
           }
         ],
@@ -1864,7 +2513,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T19:22:40.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -1875,32 +2524,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T20:20:17.457Z",
-            "label": "8/14 04:20",
-            "value": 60,
+            "at": "2026-08-13T20:21:04.725Z",
+            "label": "8/14 04:21",
+            "value": 55,
             "reports": 44
           },
           {
-            "at": "2026-08-13T21:17:54.915Z",
-            "label": "8/14 05:17",
-            "value": 76,
+            "at": "2026-08-13T21:19:29.450Z",
+            "label": "8/14 05:19",
+            "value": 64,
             "reports": 44
           },
           {
-            "at": "2026-08-13T22:15:32.372Z",
-            "label": "8/14 06:15",
-            "value": 91,
+            "at": "2026-08-13T22:17:54.176Z",
+            "label": "8/14 06:17",
+            "value": 74,
             "reports": 44
           },
           {
-            "at": "2026-08-13T23:13:09.830Z",
-            "label": "8/14 07:13",
+            "at": "2026-08-13T23:16:18.901Z",
+            "label": "8/14 07:16",
+            "value": 83,
+            "reports": 44
+          },
+          {
+            "at": "2026-08-14T00:14:43.626Z",
+            "label": "8/14 08:14",
+            "value": 93,
+            "reports": 44
+          },
+          {
+            "at": "2026-08-14T01:13:08.352Z",
+            "label": "8/14 09:13",
             "value": 100,
             "reports": 44
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T02:11:33.077Z",
+            "label": "8/14 10:11",
+            "value": 100,
+            "reports": 44
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 100,
             "reports": 44
           }
@@ -2034,7 +2701,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T19:19:49.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2045,32 +2712,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T20:18:00.657Z",
+            "at": "2026-08-13T20:18:35.100Z",
             "label": "8/14 04:18",
-            "value": 24,
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-13T21:16:12.315Z",
-            "label": "8/14 05:16",
-            "value": 34,
+            "at": "2026-08-13T21:17:21.200Z",
+            "label": "8/14 05:17",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-13T22:14:23.972Z",
-            "label": "8/14 06:14",
-            "value": 44,
+            "at": "2026-08-13T22:16:07.301Z",
+            "label": "8/14 06:16",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:12:35.630Z",
-            "label": "8/14 07:12",
-            "value": 54,
+            "at": "2026-08-13T23:14:53.401Z",
+            "label": "8/14 07:14",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T00:13:39.501Z",
+            "label": "8/14 08:13",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:12:25.602Z",
+            "label": "8/14 09:12",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T02:11:11.702Z",
+            "label": "8/14 10:11",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 64,
             "reports": 1
           }
@@ -2192,7 +2877,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T18:41:52.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 69,
         "peak": 69,
         "history": [
@@ -2203,38 +2888,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T19:36:41.214Z",
-            "label": "8/14 03:36",
-            "value": 23,
+            "at": "2026-08-13T19:38:19.311Z",
+            "label": "8/14 03:38",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-13T20:31:30.429Z",
-            "label": "8/14 04:31",
+            "at": "2026-08-13T20:34:46.622Z",
+            "label": "8/14 04:34",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T21:31:13.934Z",
+            "label": "8/14 05:31",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-13T21:26:19.644Z",
-            "label": "8/14 05:26",
-            "value": 42,
+            "at": "2026-08-13T22:27:41.245Z",
+            "label": "8/14 06:27",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-13T22:21:08.858Z",
-            "label": "8/14 06:21",
+            "at": "2026-08-13T23:24:08.557Z",
+            "label": "8/14 07:24",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T00:20:35.868Z",
+            "label": "8/14 08:20",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:15:58.073Z",
-            "label": "8/14 07:15",
-            "value": 60,
+            "at": "2026-08-14T01:17:03.180Z",
+            "label": "8/14 09:17",
+            "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T02:13:30.491Z",
+            "label": "8/14 10:13",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 69,
             "reports": 1
           }
@@ -2330,7 +3033,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T18:28:14.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -2341,38 +3044,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T19:25:19.548Z",
-            "label": "8/14 03:25",
-            "value": 23,
+            "at": "2026-08-13T19:26:12.200Z",
+            "label": "8/14 03:26",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-13T20:22:25.096Z",
-            "label": "8/14 04:22",
+            "at": "2026-08-13T20:24:10.400Z",
+            "label": "8/14 04:24",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T21:22:08.601Z",
+            "label": "8/14 05:22",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-13T21:19:30.644Z",
-            "label": "8/14 05:19",
-            "value": 40,
+            "at": "2026-08-13T22:20:06.801Z",
+            "label": "8/14 06:20",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T22:16:36.192Z",
-            "label": "8/14 06:16",
+            "at": "2026-08-13T23:18:05.001Z",
+            "label": "8/14 07:18",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T00:16:03.202Z",
+            "label": "8/14 08:16",
             "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:13:41.740Z",
-            "label": "8/14 07:13",
-            "value": 58,
+            "at": "2026-08-14T01:14:01.402Z",
+            "label": "8/14 09:14",
+            "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T02:11:59.602Z",
+            "label": "8/14 10:11",
+            "value": 61,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 66,
             "reports": 1
           }
@@ -2865,7 +3586,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T17:20:05.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -2876,44 +3597,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T18:18:45.326Z",
-            "label": "8/14 02:18",
-            "value": 56,
+            "at": "2026-08-13T18:19:04.280Z",
+            "label": "8/14 02:19",
+            "value": 53,
             "reports": 17
           },
           {
-            "at": "2026-08-13T19:17:25.653Z",
-            "label": "8/14 03:17",
-            "value": 67,
+            "at": "2026-08-13T19:18:03.560Z",
+            "label": "8/14 03:18",
+            "value": 60,
             "reports": 17
           },
           {
-            "at": "2026-08-13T20:16:05.980Z",
-            "label": "8/14 04:16",
-            "value": 78,
+            "at": "2026-08-13T20:17:02.840Z",
+            "label": "8/14 04:17",
+            "value": 68,
             "reports": 17
           },
           {
-            "at": "2026-08-13T21:14:46.307Z",
-            "label": "8/14 05:14",
-            "value": 89,
+            "at": "2026-08-13T21:16:02.121Z",
+            "label": "8/14 05:16",
+            "value": 76,
             "reports": 17
           },
           {
-            "at": "2026-08-13T22:13:26.634Z",
-            "label": "8/14 06:13",
+            "at": "2026-08-13T22:15:01.401Z",
+            "label": "8/14 06:15",
+            "value": 83,
+            "reports": 17
+          },
+          {
+            "at": "2026-08-13T23:14:00.681Z",
+            "label": "8/14 07:14",
+            "value": 91,
+            "reports": 17
+          },
+          {
+            "at": "2026-08-14T00:12:59.962Z",
+            "label": "8/14 08:12",
+            "value": 99,
+            "reports": 17
+          },
+          {
+            "at": "2026-08-14T01:11:59.242Z",
+            "label": "8/14 09:11",
             "value": 100,
             "reports": 17
           },
           {
-            "at": "2026-08-13T23:12:06.961Z",
-            "label": "8/14 07:12",
+            "at": "2026-08-14T02:10:58.522Z",
+            "label": "8/14 10:10",
             "value": 100,
             "reports": 17
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 100,
             "reports": 17
           }
@@ -3049,7 +3788,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T17:16:04.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3060,44 +3799,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T18:15:18.755Z",
+            "at": "2026-08-13T18:15:27.380Z",
             "label": "8/14 02:15",
-            "value": 21,
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-13T19:14:33.510Z",
+            "at": "2026-08-13T19:14:50.760Z",
             "label": "8/14 03:14",
-            "value": 28,
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-13T20:13:48.266Z",
-            "label": "8/14 04:13",
-            "value": 35,
+            "at": "2026-08-13T20:14:14.140Z",
+            "label": "8/14 04:14",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-13T21:13:03.021Z",
+            "at": "2026-08-13T21:13:37.521Z",
             "label": "8/14 05:13",
-            "value": 42,
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-13T22:12:17.777Z",
-            "label": "8/14 06:12",
+            "at": "2026-08-13T22:13:00.901Z",
+            "label": "8/14 06:13",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T23:12:24.281Z",
+            "label": "8/14 07:12",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T00:11:47.662Z",
+            "label": "8/14 08:11",
             "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:11:32.532Z",
-            "label": "8/14 07:11",
-            "value": 57,
+            "at": "2026-08-14T01:11:11.042Z",
+            "label": "8/14 09:11",
+            "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T02:10:34.422Z",
+            "label": "8/14 10:10",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 64,
             "reports": 1
           }
@@ -3466,7 +4223,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T16:52:23.676Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -3477,50 +4234,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T17:47:11.627Z",
-            "label": "8/14 01:47",
-            "value": 56,
+            "at": "2026-08-13T17:48:32.233Z",
+            "label": "8/14 01:48",
+            "value": 53,
             "reports": 13
           },
           {
-            "at": "2026-08-13T18:41:59.579Z",
-            "label": "8/14 02:41",
-            "value": 66,
+            "at": "2026-08-13T18:44:40.790Z",
+            "label": "8/14 02:44",
+            "value": 60,
             "reports": 13
           },
           {
-            "at": "2026-08-13T19:36:47.530Z",
-            "label": "8/14 03:36",
-            "value": 77,
+            "at": "2026-08-13T19:40:49.347Z",
+            "label": "8/14 03:40",
+            "value": 68,
             "reports": 13
           },
           {
-            "at": "2026-08-13T20:31:35.482Z",
-            "label": "8/14 04:31",
-            "value": 88,
+            "at": "2026-08-13T20:36:57.904Z",
+            "label": "8/14 04:36",
+            "value": 76,
             "reports": 13
           },
           {
-            "at": "2026-08-13T21:26:23.433Z",
-            "label": "8/14 05:26",
-            "value": 98,
+            "at": "2026-08-13T21:33:06.461Z",
+            "label": "8/14 05:33",
+            "value": 84,
             "reports": 13
           },
           {
-            "at": "2026-08-13T22:21:11.385Z",
-            "label": "8/14 06:21",
+            "at": "2026-08-13T22:29:15.018Z",
+            "label": "8/14 06:29",
+            "value": 91,
+            "reports": 13
+          },
+          {
+            "at": "2026-08-13T23:25:23.575Z",
+            "label": "8/14 07:25",
+            "value": 99,
+            "reports": 13
+          },
+          {
+            "at": "2026-08-14T00:21:32.132Z",
+            "label": "8/14 08:21",
             "value": 100,
             "reports": 13
           },
           {
-            "at": "2026-08-13T23:15:59.336Z",
-            "label": "8/14 07:15",
+            "at": "2026-08-14T01:17:40.689Z",
+            "label": "8/14 09:17",
             "value": 100,
             "reports": 13
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T02:13:49.246Z",
+            "label": "8/14 10:13",
+            "value": 100,
+            "reports": 13
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 100,
             "reports": 13
           }
@@ -3653,7 +4428,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T16:45:00.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3664,50 +4439,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T17:40:43.411Z",
-            "label": "8/14 01:40",
-            "value": 20,
+            "at": "2026-08-13T17:41:48.891Z",
+            "label": "8/14 01:41",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-13T18:36:26.822Z",
-            "label": "8/14 02:36",
-            "value": 26,
+            "at": "2026-08-13T18:38:37.782Z",
+            "label": "8/14 02:38",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-13T19:32:10.233Z",
-            "label": "8/14 03:32",
-            "value": 33,
+            "at": "2026-08-13T19:35:26.673Z",
+            "label": "8/14 03:35",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-13T20:27:53.644Z",
-            "label": "8/14 04:27",
-            "value": 39,
+            "at": "2026-08-13T20:32:15.564Z",
+            "label": "8/14 04:32",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-13T21:23:37.055Z",
-            "label": "8/14 05:23",
-            "value": 45,
+            "at": "2026-08-13T21:29:04.455Z",
+            "label": "8/14 05:29",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-13T22:19:20.466Z",
-            "label": "8/14 06:19",
-            "value": 51,
+            "at": "2026-08-13T22:25:53.347Z",
+            "label": "8/14 06:25",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:15:03.877Z",
-            "label": "8/14 07:15",
-            "value": 57,
+            "at": "2026-08-13T23:22:42.238Z",
+            "label": "8/14 07:22",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T00:19:31.129Z",
+            "label": "8/14 08:19",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T01:16:20.020Z",
+            "label": "8/14 09:16",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T02:13:08.911Z",
+            "label": "8/14 10:13",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 64,
             "reports": 1
           }
@@ -3829,7 +4622,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-13T16:27:32.000Z",
-        "endedAt": "2026-08-14T00:10:47.288Z",
+        "endedAt": "2026-08-14T03:09:57.803Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -3840,50 +4633,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-13T17:25:26.411Z",
+            "at": "2026-08-13T17:25:56.163Z",
             "label": "8/14 01:25",
-            "value": 21,
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-13T18:23:20.822Z",
-            "label": "8/14 02:23",
-            "value": 27,
+            "at": "2026-08-13T18:24:20.327Z",
+            "label": "8/14 02:24",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-13T19:21:15.233Z",
-            "label": "8/14 03:21",
-            "value": 34,
+            "at": "2026-08-13T19:22:44.491Z",
+            "label": "8/14 03:22",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-13T20:19:09.644Z",
-            "label": "8/14 04:19",
-            "value": 40,
+            "at": "2026-08-13T20:21:08.655Z",
+            "label": "8/14 04:21",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-13T21:17:04.055Z",
-            "label": "8/14 05:17",
+            "at": "2026-08-13T21:19:32.819Z",
+            "label": "8/14 05:19",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T22:17:56.983Z",
+            "label": "8/14 06:17",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-13T23:16:21.147Z",
+            "label": "8/14 07:16",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-13T22:14:58.466Z",
-            "label": "8/14 06:14",
-            "value": 53,
+            "at": "2026-08-14T00:14:45.311Z",
+            "label": "8/14 08:14",
+            "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-13T23:12:52.877Z",
-            "label": "8/14 07:12",
-            "value": 60,
+            "at": "2026-08-14T01:13:09.475Z",
+            "label": "8/14 09:13",
+            "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-14T00:10:47.288Z",
-            "label": "8/14 08:10",
+            "at": "2026-08-14T02:11:33.639Z",
+            "label": "8/14 10:11",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-14T03:09:57.803Z",
+            "label": "8/14 11:09",
             "value": 66,
             "reports": 1
           }
