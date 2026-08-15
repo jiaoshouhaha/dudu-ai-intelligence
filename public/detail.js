@@ -79,6 +79,10 @@ function renderSourceMedia(item) {
     return figure;
   }));
   section.hidden = images.length === 0;
+  const visualTitle = item.visual?.titleZh || '这条新闻中的数据或证据';
+  $('#mediaNote').textContent = item.visual
+    ? `阅读方法：先看左侧事实摘要，再对照“${visualTitle}”的图表；图中数字只按原文呈现，不额外推断。`
+    : '阅读方法：先看左侧事实摘要和关键要点，再对照配图中的界面、流程或现场信息；图片来自原文，完整上下文请查看原文。';
 }
 
 function renderVisual(item) {

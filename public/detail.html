@@ -34,12 +34,6 @@
           <div id="articleTags" class="article-tags"></div>
         </header>
 
-        <section id="mediaSection" class="article-media" hidden>
-          <div class="media-heading"><span>SOURCE MEDIA</span><strong>原文图表与配图</strong></div>
-          <div id="mediaGrid" class="media-grid"></div>
-          <p class="media-note">图片来自公开来源，仅用于帮助理解；完整上下文请查看原文。</p>
-        </section>
-
         <div id="mediaLightbox" class="media-lightbox" hidden role="dialog" aria-modal="true" aria-label="放大查看图片">
           <button id="mediaLightboxClose" class="media-lightbox-close" type="button" aria-label="关闭图片">×</button>
           <figure>
@@ -50,26 +44,31 @@
 
         <aside id="limitedNotice" class="source-notice" hidden>这篇解读基于来源公开摘要整理，细节有限；如需核对完整上下文，请查看原文。</aside>
 
-        <section class="detail-section">
+        <section class="detail-section story-section">
           <p class="section-kicker">01</p>
-          <h2>事情是什么</h2>
-          <div id="detailContent" class="detail-copy"></div>
-        </section>
-
-        <section id="keyPointsSection" class="detail-section">
-          <p class="section-kicker">02</p>
-          <h2>关键要点</h2>
-          <ul id="keyPoints" class="key-points"></ul>
-        </section>
-
-        <section class="detail-section">
-          <p class="section-kicker">03</p>
-          <h2>为什么值得关注</h2>
-          <p id="impactContent" class="detail-copy"></p>
+          <div>
+            <h2>新闻解说</h2>
+            <div class="story-intro-grid">
+              <div id="detailContent" class="detail-copy"></div>
+              <section id="mediaSection" class="article-media story-media" hidden>
+                <div class="media-heading"><span>SOURCE MEDIA</span><strong>配图与原文证据</strong></div>
+                <div id="mediaGrid" class="media-grid"></div>
+                <p id="mediaNote" class="media-note">图片来自公开来源，用来辅助理解上面的事实摘要；完整上下文请查看原文。</p>
+              </section>
+            </div>
+            <div id="keyPointsSection" class="story-subsection">
+              <h3>关键要点</h3>
+              <ul id="keyPoints" class="key-points"></ul>
+            </div>
+            <div class="story-subsection">
+              <h3>为什么值得关注</h3>
+              <p id="impactContent" class="detail-copy"></p>
+            </div>
+          </div>
         </section>
 
         <section id="contextSection" class="detail-section narrative-section" hidden>
-          <p class="section-kicker">04</p>
+          <p class="section-kicker">02</p>
           <div>
             <h2>影响、原理与解读</h2>
             <div id="relevanceGrid" class="relevance-grid">
@@ -95,7 +94,7 @@
         </section>
 
         <section id="visualSection" class="detail-section visual-section" hidden>
-          <p class="section-kicker">07</p>
+          <p class="section-kicker">03</p>
           <div>
             <h2 id="visualTitle">数据图表</h2>
             <p id="visualNote" class="section-note"></p>
@@ -105,7 +104,7 @@
         </section>
 
         <section class="detail-section intelligence-section">
-          <p class="section-kicker">08</p>
+          <p class="section-kicker">04</p>
           <div>
             <h2>事件热度走势</h2>
             <p id="heatWindow" class="section-note">从新闻发布时间开始，根据公开报道数量、来源权威度与发布时间估算。</p>
@@ -115,7 +114,7 @@
         </section>
 
         <section class="detail-section intelligence-section">
-          <p class="section-kicker">09</p>
+          <p class="section-kicker">05</p>
           <div>
             <h2>报道时间线</h2>
             <p id="reportCount" class="section-note"></p>
@@ -124,13 +123,13 @@
         </section>
 
         <section id="actionSection" class="detail-section action-section" hidden>
-          <p class="section-kicker">10</p>
+          <p class="section-kicker">06</p>
           <h2>可以怎么做</h2>
           <ol id="actionSteps" class="action-steps"></ol>
         </section>
 
         <section id="resourceSection" class="detail-section resource-section" hidden>
-          <p class="section-kicker">11</p>
+          <p class="section-kicker">07</p>
           <div>
             <h2>原文中的有用链接</h2>
             <p class="section-note">只保留原文里可能有帮助的文档、代码、演示和文件入口。</p>
