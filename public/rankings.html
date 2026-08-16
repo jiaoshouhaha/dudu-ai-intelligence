@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="按文本、代码、数学、视觉、文档、搜索和 Agent 能力选择适合自己的 AI 模型" />
+    <title>模型排名 · 嘟嘟的 AI 情报站</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191915'/%3E%3Cpath d='M14 17h36v8H26v7h20v8H26v7h24v8H14z' fill='%23f3f0e8'/%3E%3Ccircle cx='50' cy='17' r='7' fill='%23ed5b2a'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./mobile-fix.css" />
+    <link rel="stylesheet" href="./rankings.css" />
+  </head>
+  <body>
+    <button id="menuToggle" class="mobile-menu" aria-label="打开分类菜单" aria-expanded="false">☰</button>
+    <div id="sidebarBackdrop" class="sidebar-backdrop" hidden></div>
+    <aside id="sidebar" class="sidebar" aria-label="主菜单">
+      <a class="brand" href="./index.html">嘟嘟的<span>AI 情报站</span></a>
+      <p class="brand-note">新闻 · 工具 · 方法 · 观点</p>
+      <nav class="side-nav">
+        <p class="nav-group">情报流</p>
+        <a class="side-link" href="./index.html"><span>⌁</span>首页</a>
+        <p class="nav-group">决策工具</p>
+        <a class="side-link active" href="./rankings.html"><span>▥</span>模型排名</a>
+        <p class="nav-group">浏览</p>
+        <a class="side-link" href="./topics.html"><span>⌘</span>主题地图</a>
+        <a class="side-link" href="./archive.html"><span>▦</span>六个月归档</a>
+      </nav>
+      <div class="sidebar-status"><span id="rankingHealth" class="health-dot"></span><div><strong id="rankingStatus">正在读取榜单</strong><small id="rankingUpdated">—</small></div></div>
+    </aside>
+
+    <main class="rankings-shell">
+      <header class="rankings-hero">
+        <div>
+          <p class="eyebrow">MODEL GUIDE · 按任务选模型</p>
+          <h1>没有最强模型，<br /><span>只有更合适的模型。</span></h1>
+          <p class="hero-copy">把不同评测放回它真正擅长回答的问题：写作看文本盲测，修代码看真实仓库，做 Agent 看任务完成率。先选需求，再看排名。</p>
+        </div>
+        <aside class="freshness-card" aria-live="polite">
+          <span>数据状态</span>
+          <strong id="refreshTime">正在更新</strong>
+          <p id="sourceSummary">正在读取公开评测数据…</p>
+        </aside>
+      </header>
+
+      <section class="need-selector" aria-labelledby="needTitle">
+        <header><div><p class="section-kicker">STEP 1</p><h2 id="needTitle">你想让 AI 做什么？</h2></div><p>选择任务后，榜单和选型建议会一起切换。</p></header>
+        <div id="categoryNav" class="need-grid" role="tablist" aria-label="按能力选择模型榜单"></div>
+      </section>
+
+      <section id="rankingPanel" class="ranking-panel" aria-live="polite">
+        <header class="ranking-heading">
+          <div><p id="rankingSource" class="section-kicker">—</p><h2 id="rankingTitle">正在读取排名</h2><p id="rankingDescription">—</p></div>
+          <a id="sourceLink" class="source-link" target="_blank" rel="noopener noreferrer">查看评测源数据 ↗</a>
+        </header>
+
+        <div id="choiceGuide" class="choice-guide"></div>
+        <div id="podium" class="podium" aria-label="前三名"></div>
+        <div class="ranking-table-wrap">
+          <table class="ranking-table">
+            <thead><tr><th>排名</th><th>模型</th><th>评测成绩</th><th>数据依据</th></tr></thead>
+            <tbody id="rankingRows"></tbody>
+          </table>
+        </div>
+        <p id="methodology" class="methodology"></p>
+      </section>
+
+      <section class="reading-guide">
+        <div><p class="section-kicker">HOW TO READ</p><h2>看排名时，记住这三件事</h2></div>
+        <ol id="rankingNotes"></ol>
+      </section>
+
+      <section class="source-cards" aria-labelledby="sourcesTitle">
+        <header><p class="section-kicker">SOURCES</p><h2 id="sourcesTitle">数据从哪里来？</h2></header>
+        <div id="sourceCards"></div>
+      </section>
+    </main>
+    <script type="module" src="./rankings.js"></script>
+  </body>
+</html>
