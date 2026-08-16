@@ -1,7 +1,192 @@
 {
-  "generatedAt": "2026-08-16T21:51:06.715Z",
+  "generatedAt": "2026-08-16T22:31:32.435Z",
   "date": "2026-08-17",
   "items": [
+    {
+      "id": "45cd7975f6d2c641",
+      "normalizedUrl": "https://simonwillison.net/2026/Aug/16/qwen-38-27b",
+      "originalUrl": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+      "titleOriginal": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+      "summaryOriginal": "Friday's big release was Qwen 3.8 27B , an Apache 2 licensed 27B parameter vision-capable LLM from Alibaba's Qwen research lab. I've been looking forward to this one: 27B is an excellent size for running a model on a reasonably specced laptop, and its predecessor Qwen 3.6 27B was impressive. Qwen's self-reported benchmarks for this model are eye-opening. They show a boost from both Qwen 3.6 27B and the closed-weight Qwen 3.7-Plus, which was one of Qwen's strongest models of any size as recently as May this year . It will be interesting to hear what independent benchmarks have to say about the model. I've been running the model on two different machines: my 128GB M5 Max MacBook Pro, and an NVIDIA DGX Spark . On both machines I'm running LM Studio and their 17GB Q4_K_M quantized build . I also tried using llama-server directly on the Spark. The default of extra high results in spectacular over-thinking Qwen's documentation describes the model as defaulting to xhigh for the reasoning effort, and the LM Studio GGUF I've been trying preserves that default: Qwen3.8 comes with official support for reasoning_effort , which can be used to adjust reasoning depth and control cost: xhigh (defa",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/qwen-thinking-bicycle-27b.jpg",
+        "https://static.simonwillison.net/static/2026/qwen-3.8-27b-no-reasoning-pelican-2.png",
+        "https://static.simonwillison.net/static/2026/qwen-over-engineered-bbox.webp",
+        "https://static.simonwillison.net/static/2026/qwen-full-ui-with-pelicans.webp",
+        "https://static.simonwillison.net/static/2026/qwen-no-reasoning-bug.webp",
+        "https://static.simonwillison.net/static/2026/qwen-animated-first-frame.jpg",
+        "https://static.simonwillison.net/static/2026/circle-web-first-frame.jpg",
+        "https://static.inaturalist.org/photos/714731804/large.jpg"
+      ],
+      "resourceLinks": [
+        "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "https://simonwillison.net/2026/Apr/22/qwen36-27b/",
+        "https://huggingface.co/Qwen/Qwen3.8-27B#benchmark-results",
+        "https://qwen.ai/blog?id=qwen3.7-plus",
+        "https://simonwillison.net/2025/Oct/14/nvidia-dgx-spark/",
+        "https://lmstudio.ai/models/qwen3.8",
+        "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Ffc909bea4fecf752c7bf9bad0e9dbf2a",
+        "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F1265cfa8dce2f9ad5eb160792ff45a49",
+        "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F557016f0895b2abb4b9957caec781734",
+        "https://static.simonwillison.net/static/2026/qwen-animated-small.mp4",
+        "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6f9e48293be5c916652d29f0dc0b0657"
+      ],
+      "publishedAt": "2026-08-16T22:00:39.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+          "publishedAt": "2026-08-16T22:00:39.000Z",
+          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [
+            "https://static.simonwillison.net/static/2026/qwen-thinking-bicycle-27b.jpg",
+            "https://static.simonwillison.net/static/2026/qwen-3.8-27b-no-reasoning-pelican-2.png",
+            "https://static.simonwillison.net/static/2026/qwen-over-engineered-bbox.webp",
+            "https://static.simonwillison.net/static/2026/qwen-full-ui-with-pelicans.webp",
+            "https://static.simonwillison.net/static/2026/qwen-no-reasoning-bug.webp",
+            "https://static.simonwillison.net/static/2026/qwen-animated-first-frame.jpg",
+            "https://static.simonwillison.net/static/2026/circle-web-first-frame.jpg",
+            "https://static.inaturalist.org/photos/714731804/large.jpg"
+          ],
+          "resourceLinks": [
+            "https://huggingface.co/Qwen/Qwen3.8-27B",
+            "https://simonwillison.net/2026/Apr/22/qwen36-27b/",
+            "https://huggingface.co/Qwen/Qwen3.8-27B#benchmark-results",
+            "https://qwen.ai/blog?id=qwen3.7-plus",
+            "https://simonwillison.net/2025/Oct/14/nvidia-dgx-spark/",
+            "https://lmstudio.ai/models/qwen3.8",
+            "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Ffc909bea4fecf752c7bf9bad0e9dbf2a",
+            "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F1265cfa8dce2f9ad5eb160792ff45a49",
+            "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+            "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F557016f0895b2abb4b9957caec781734",
+            "https://static.simonwillison.net/static/2026/qwen-animated-small.mp4",
+            "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6f9e48293be5c916652d29f0dc0b0657"
+          ]
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该事件涉及一个重要的开源模型发布，并提供了实用的调优建议，对AI用户有直接帮助。",
+      "importanceReasonEn": "The event involves a significant open-source model release and provides practical tuning advice, directly helpful to AI users.",
+      "scoringMode": "ai",
+      "titleZh": "Qwen 3.8 27B 表现出色，但默认过度思考",
+      "titleEn": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+      "summaryZh": "周五的重大发布是 Qwen 3.8 27B，这是阿里巴巴 Qwen 研究实验室推出的 Apache 2 许可的 27B 参数视觉能力 LLM。27B 是适合在配置合理的笔记本电脑上运行的绝佳尺寸，其前身 Qwen 3.6 27B 令人印象深刻。Qwen 自报的基准测试显示，该模型相比 Qwen 3.6 27B 和闭源 Qwen 3.7-Plus 都有提升。作者在两台机器上运行了该模型：128GB M5 Max MacBook Pro 和 NVIDIA DGX Spark，均使用 LM Studio 的 17GB Q4_K_M 量化版本。默认的推理努力级别为 xhigh，导致模型过度思考。",
+      "summaryEn": "Friday's big release was Qwen 3.8 27B, an Apache 2 licensed 27B parameter vision-capable LLM from Alibaba's Qwen research lab. 27B is an excellent size for running on a reasonably specced laptop, and its predecessor Qwen 3.6 27B was impressive. Qwen's self-reported benchmarks show improvements over Qwen 3.6 27B and closed-weight Qwen 3.7-Plus. The author ran the model on two machines: a 128GB M5 Max MacBook Pro and an NVIDIA DGX Spark, using LM Studio's 17GB Q4_K_M quantized build. The default reasoning effort is xhigh, causing the model to overthink.",
+      "keywords": [
+        "Qwen 3.8",
+        "27B",
+        "reasoning_effort",
+        "overthinking",
+        "LM Studio",
+        "DGX Spark"
+      ],
+      "topics": [
+        "Qwen",
+        "LLM",
+        "reasoning effort",
+        "LM Studio",
+        "quantization"
+      ],
+      "models": [
+        "Qwen 3.8 27B",
+        "Qwen 3.6 27B",
+        "Qwen 3.7-Plus"
+      ],
+      "detailZh": "周五，阿里巴巴的 Qwen 研究实验室发布了 Qwen 3.8 27B，这是一个 Apache 2 许可的 27B 参数模型，具备视觉能力。作者一直期待这个模型，因为 27B 是适合在配置合理的笔记本电脑上运行的绝佳尺寸，其前身 Qwen 3.6 27B 令人印象深刻。Qwen 自报的基准测试显示，该模型相比 Qwen 3.6 27B 和闭源 Qwen 3.7-Plus 都有提升，后者是截至今年五月 Qwen 最强的模型之一。作者在两台机器上运行了该模型：128GB M5 Max MacBook Pro 和 NVIDIA DGX Spark，均使用 LM Studio 的 17GB Q4_K_M 量化版本。作者还尝试在 Spark 上直接使用 llama-server。Qwen 的文档描述该模型默认使用 xhigh 推理努力级别，LM Studio 的 GGUF 保留了这一默认设置。作者发现默认的 xhigh 设置导致模型过度思考，可能影响响应速度和成本。",
+      "keyPointsZh": [
+        "Qwen 3.8 27B 是 Apache 2 许可的 27B 参数视觉 LLM。",
+        "自报基准显示优于 Qwen 3.6 27B 和 Qwen 3.7-Plus。",
+        "默认推理努力级别为 xhigh，导致过度思考。",
+        "作者在 MacBook Pro 和 DGX Spark 上运行，使用 LM Studio 的 Q4_K_M 量化版本。"
+      ],
+      "impactZh": "该模型发布为开源社区提供了强大的新选择，其默认过度思考的问题提醒用户注意推理努力级别的调整，以平衡质量和成本。",
+      "readerImpactZh": "对于普通用户，如果使用该模型，可能会遇到响应过慢或成本过高的问题，可以通过调整推理努力级别来改善。",
+      "userImpactZh": "对于AI用户和开发者，该模型提供了可调节的推理努力级别，建议根据任务需求调整，以优化性能和成本。",
+      "howItWorksZh": "Qwen 3.8 支持 reasoning_effort 参数，可调整推理深度和控制成本。默认设置为 xhigh，导致模型在回答前进行大量内部推理。用户可以通过设置 reasoning_effort 为 low 或 medium 来减少过度思考。在 LM Studio 中，可以调整相关设置。",
+      "interpretationZh": "根据作者的实际测试，Qwen 3.8 27B 性能出色，但默认的 xhigh 推理努力级别会导致过度思考，这可能影响用户体验。作者建议用户根据任务需求调整推理努力级别。需要注意的是，这些观察基于作者的个人测试，独立基准尚未公布。",
+      "limitationsZh": "本文基于作者的个人测试，未提供独立基准数据。自报基准可能带有偏差。",
+      "actionStepsZh": [
+        "在 LM Studio 中调整 reasoning_effort 为 low 或 medium 以减少过度思考。",
+        "根据任务复杂度选择合适的推理努力级别。",
+        "关注独立基准测试结果以验证模型性能。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+          "publishedAt": "2026-08-16T22:00:39.000Z",
+          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+          "authority": 90,
+          "sourcePriority": 90,
+          "images": [
+            "https://static.simonwillison.net/static/2026/qwen-thinking-bicycle-27b.jpg",
+            "https://static.simonwillison.net/static/2026/qwen-3.8-27b-no-reasoning-pelican-2.png",
+            "https://static.simonwillison.net/static/2026/qwen-over-engineered-bbox.webp",
+            "https://static.simonwillison.net/static/2026/qwen-full-ui-with-pelicans.webp",
+            "https://static.simonwillison.net/static/2026/qwen-no-reasoning-bug.webp",
+            "https://static.simonwillison.net/static/2026/qwen-animated-first-frame.jpg",
+            "https://static.simonwillison.net/static/2026/circle-web-first-frame.jpg",
+            "https://static.inaturalist.org/photos/714731804/large.jpg"
+          ],
+          "resourceLinks": [
+            "https://huggingface.co/Qwen/Qwen3.8-27B",
+            "https://simonwillison.net/2026/Apr/22/qwen36-27b/",
+            "https://huggingface.co/Qwen/Qwen3.8-27B#benchmark-results",
+            "https://qwen.ai/blog?id=qwen3.7-plus",
+            "https://simonwillison.net/2025/Oct/14/nvidia-dgx-spark/",
+            "https://lmstudio.ai/models/qwen3.8",
+            "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Ffc909bea4fecf752c7bf9bad0e9dbf2a",
+            "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F1265cfa8dce2f9ad5eb160792ff45a49",
+            "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+            "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F557016f0895b2abb4b9957caec781734",
+            "https://static.simonwillison.net/static/2026/qwen-animated-small.mp4",
+            "https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6f9e48293be5c916652d29f0dc0b0657"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-16T22:00:39.000Z",
+        "endedAt": "2026-08-16T22:31:32.435Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-16T22:00:39.000Z",
+            "label": "8/17 06:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-16T22:31:32.435Z",
+            "label": "8/17 06:31",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "345b81487115ab84",
       "normalizedUrl": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b",
@@ -36,8 +221,8 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该收购涉及知名支付公司Stripe和AI网关初创公司OpenRouter，金额巨大，可能影响AI基础设施格局，但消息未经官方证实，重要性较高。",
-      "importanceReasonEn": "The acquisition involves major payment company Stripe and AI gateway startup OpenRouter, with a large sum, potentially impacting AI infrastructure landscape, but unconfirmed, hence high importance.",
+      "importanceReasonZh": "该报道涉及大型科技公司对AI基础设施初创企业的高额收购，可能影响AI服务分发和支付生态，具有行业重要性。",
+      "importanceReasonEn": "The report involves a major tech company's high-value acquisition of an AI infrastructure startup, potentially impacting AI service distribution and payment ecosystems, making it industry-significant.",
       "scoringMode": "ai",
       "titleZh": "Stripe据报道将以70亿美元以上收购AI网关初创公司OpenRouter",
       "titleEn": "Stripe to reportedly acquire AI gateway startup OpenRouter for $7B+",
@@ -57,18 +242,18 @@
         "AI网关"
       ],
       "models": [],
-      "detailZh": "据TechCrunch AI报道，Stripe据称将以超过70亿美元的价格收购AI网关初创公司OpenRouter。OpenRouter的CEO最近将这家初创公司描述为“AI领域的Stripe”，暗示其业务模式与Stripe类似，但专注于AI模型访问。目前，该交易尚未得到官方确认，细节有限。OpenRouter是一个AI网关平台，允许开发者通过单一API访问多个AI模型，类似于Stripe为支付提供的统一接口。如果收购完成，Stripe将进入AI基础设施领域，可能整合OpenRouter的模型路由和计费功能。然而，由于消息来源单一且未证实，交易的真实性和具体条款仍待观察。",
+      "detailZh": "据TechCrunch AI报道，支付巨头Stripe据称将以超过70亿美元的价格收购AI网关初创公司OpenRouter。OpenRouter的CEO最近将该公司描述为“AI领域的Stripe”，暗示其业务模式与Stripe类似，但专注于AI模型的路由和访问。目前，该交易尚未得到官方确认，细节有限。OpenRouter作为AI网关，可能帮助开发者统一访问多个AI模型，简化集成和计费。如果收购完成，Stripe可能借此进入AI基础设施领域，扩展其支付和API服务生态。然而，由于消息来源单一且未证实，交易条款和最终结果仍存在不确定性。",
       "keyPointsZh": [
         "Stripe据称将以超过70亿美元收购OpenRouter。",
-        "OpenRouter的CEO曾称其为“AI领域的Stripe”。",
+        "OpenRouter的CEO称其为“AI领域的Stripe”。",
         "交易尚未得到官方确认，细节有限。"
       ],
-      "impactZh": "如果收购完成，Stripe将进入AI基础设施市场，可能改变AI模型访问和计费的方式，对AI开发者生态产生重大影响。",
-      "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和企业，如果Stripe整合OpenRouter，可能提供更统一的模型访问和计费解决方案，简化多模型管理，但具体影响取决于整合方式。",
+      "impactZh": "如果收购完成，可能重塑AI模型访问和支付方式，影响开发者和企业使用AI服务的成本与便利性。",
+      "readerImpactZh": "对于普通用户，此收购可能间接影响AI服务的定价和可用性，但短期内无直接影响。",
+      "userImpactZh": "对于AI开发者和团队，若收购完成，OpenRouter的集成和计费可能更紧密地与Stripe结合，简化支付流程，但需关注服务稳定性和价格变化。",
       "howItWorksZh": "",
-      "interpretationZh": "报道称Stripe将收购OpenRouter，但未提供官方确认。OpenRouter作为AI网关，提供统一API访问多个模型，其CEO的比喻暗示其商业模式与Stripe类似。合理推测是Stripe希望扩展至AI基础设施，但交易细节和最终结果仍不确定。",
-      "limitationsZh": "消息来源单一，未获官方证实，交易金额和条款可能不准确，且OpenRouter的业务细节未详细披露。",
+      "interpretationZh": "报道称Stripe将收购OpenRouter，但消息未经官方证实。OpenRouter作为AI网关，可能提供统一API访问多个模型，其CEO的比喻暗示其定位类似支付网关。合理推断是Stripe希望将支付能力与AI模型访问结合，但具体细节未知。",
+      "limitationsZh": "消息来源单一，未获官方确认，交易金额和条款可能不准确。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -90,7 +275,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T20:57:04.000Z",
-        "endedAt": "2026-08-16T21:51:06.715Z",
+        "endedAt": "2026-08-16T22:31:32.435Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -101,8 +286,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T21:51:06.715Z",
-            "label": "8/17 05:51",
+            "at": "2026-08-16T21:44:18.217Z",
+            "label": "8/17 05:44",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-16T22:31:32.435Z",
+            "label": "8/17 06:31",
             "value": 64,
             "reports": 1
           }
@@ -144,32 +335,32 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该新闻涉及Meta CEO对AI未来的愿景，但缺乏具体细节，仅作为观点讨论，重要性中等。",
-      "importanceReasonEn": "The news involves Meta CEO's vision for AI future, but lacks specific details, serving as opinion discussion, moderate importance.",
+      "importanceReasonZh": "该新闻涉及科技领袖的AI愿景与公众信任问题，具有一定讨论价值，但缺乏具体事实和细节，重要性中等。",
+      "importanceReasonEn": "The news involves a tech leader's AI vision and public trust, which has some discussion value, but lacks specific facts and details, so importance is moderate.",
       "scoringMode": "ai",
-      "titleZh": "为什么人们不买账马克·扎克伯格的人工智能未来",
+      "titleZh": "为什么人们不买账马克·扎克伯格的AI未来",
       "titleEn": "Why people aren't buying Mark Zuckerberg's AI future",
-      "summaryZh": "在最新一期的Equity播客中，我们讨论了为什么不是每个人都相信扎克伯格的愿景。",
+      "summaryZh": "在最新一期的Equity播客中，我们讨论了为什么不是所有人都相信扎克伯格的愿景。",
       "summaryEn": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg's vision.",
       "keywords": [],
       "topics": [
-        "Meta",
         "AI愿景",
-        "公众信任"
+        "公众信任",
+        "科技领袖"
       ],
       "models": [],
-      "detailZh": "在最新一期的Equity播客中，主持人讨论了为什么公众和投资者对马克·扎克伯格所描绘的人工智能未来持怀疑态度。扎克伯格一直积极推广Meta在AI领域的投资，包括大型语言模型、智能眼镜等，但许多人对其动机和可行性表示质疑。播客中可能提到了隐私问题、过往的争议以及AI技术实际落地中的挑战。然而，由于原始内容仅为播客摘要，没有提供具体的论据或数据，因此无法深入分析。",
+      "detailZh": "本期Equity播客讨论了马克·扎克伯格所描绘的AI未来，但许多人对这一愿景持怀疑态度。播客主持人分析了公众不买账的可能原因，包括对Meta过往隐私问题的担忧、对AI技术实际益处的质疑，以及对科技巨头过度承诺的疲劳感。然而，由于原始报道仅提供了播客的概要，没有具体引用扎克伯格的言论或详细分析，因此我们无法确认具体观点和论据。",
       "keyPointsZh": [
-        "Equity播客讨论了扎克伯格AI愿景的公众接受度问题。",
-        "扎克伯格积极推广Meta的AI投资，但面临怀疑。",
-        "原始内容仅为摘要，缺乏具体细节。"
+        "Equity播客讨论了扎克伯格的AI愿景。",
+        "公众对扎克伯格的AI未来持怀疑态度。",
+        "怀疑原因可能包括隐私担忧和科技巨头过度承诺。"
       ],
-      "impactZh": "该事件反映了公众对科技巨头AI愿景的信任危机，可能影响Meta的AI产品市场接受度和监管环境。",
-      "readerImpactZh": "普通用户可能会对Meta的AI产品持保留态度，关注隐私和数据安全。",
-      "userImpactZh": "AI开发者和企业可能会重新评估与Meta的合作，或关注其AI技术的实际效果。",
+      "impactZh": "该事件反映了公众对科技领袖AI愿景的信任危机，可能影响Meta在AI领域的公众接受度和政策环境。",
+      "readerImpactZh": "普通用户可能对AI技术产生更多疑虑，但具体影响尚不明确。",
+      "userImpactZh": "AI从业者可能面临更严格的公众审视，但具体影响需更多信息。",
       "howItWorksZh": "",
-      "interpretationZh": "报道仅提及播客讨论，未提供具体事实，因此无法确认扎克伯格AI愿景的具体内容或反对理由。推测公众怀疑可能源于Meta过往的隐私争议和AI技术的不确定性。",
-      "limitationsZh": "原始内容仅为播客摘要，缺乏具体论据、数据或直接引述，无法验证讨论的深度和准确性。",
+      "interpretationZh": "报道仅提及播客讨论，未提供具体事实。推测公众不买账可能源于对Meta的既有不信任，但缺乏证据。",
+      "limitationsZh": "原始报道仅为播客概要，缺乏具体内容，无法验证观点和论据。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -191,7 +382,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T20:32:01.000Z",
-        "endedAt": "2026-08-16T21:51:06.715Z",
+        "endedAt": "2026-08-16T22:31:32.435Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -202,14 +393,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T21:11:33.857Z",
-            "label": "8/17 05:11",
+            "at": "2026-08-16T21:31:46.717Z",
+            "label": "8/17 05:31",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-16T21:51:06.715Z",
-            "label": "8/17 05:51",
+            "at": "2026-08-16T22:31:32.435Z",
+            "label": "8/17 06:31",
             "value": 55,
             "reports": 1
           }
@@ -305,7 +496,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T16:53:51.000Z",
-        "endedAt": "2026-08-16T21:51:06.715Z",
+        "endedAt": "2026-08-16T22:31:32.435Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -316,32 +507,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T17:53:18.143Z",
-            "label": "8/17 01:53",
-            "value": 23,
+            "at": "2026-08-16T17:50:07.905Z",
+            "label": "8/17 01:50",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-16T18:52:45.286Z",
-            "label": "8/17 02:52",
-            "value": 32,
+            "at": "2026-08-16T18:46:24.811Z",
+            "label": "8/17 02:46",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-16T19:52:12.429Z",
-            "label": "8/17 03:52",
-            "value": 41,
+            "at": "2026-08-16T19:42:41.717Z",
+            "label": "8/17 03:42",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-16T20:51:39.572Z",
-            "label": "8/17 04:51",
-            "value": 49,
+            "at": "2026-08-16T20:38:58.623Z",
+            "label": "8/17 04:38",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-16T21:51:06.715Z",
-            "label": "8/17 05:51",
+            "at": "2026-08-16T21:35:15.529Z",
+            "label": "8/17 05:35",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-16T22:31:32.435Z",
+            "label": "8/17 06:31",
             "value": 58,
             "reports": 1
           }
