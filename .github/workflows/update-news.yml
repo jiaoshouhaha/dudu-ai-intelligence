@@ -46,6 +46,7 @@ jobs:
         run: pnpm test
 
       - name: Refresh model rankings
+        continue-on-error: true
         run: pnpm run rankings
 
       - name: Fetch and process news
