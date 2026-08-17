@@ -1,7 +1,257 @@
 {
-  "generatedAt": "2026-08-17T03:08:13.937Z",
+  "generatedAt": "2026-08-17T04:21:55.745Z",
   "date": "2026-08-17",
   "items": [
+    {
+      "id": "2a126068ed5ab49f",
+      "normalizedUrl": "https://arxiv.org/abs/2608.13564",
+      "originalUrl": "https://arxiv.org/abs/2608.13564",
+      "titleOriginal": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
+      "summaryOriginal": "arXiv:2608.13564v1 Announce Type: new Abstract: Evaluating language-model agents at scale increasingly relies on a second language model as an automatic judge, because the gold signal, an executable environment reward, is expensive, slow, or unavailable at deployment time. Such a judge is a reward-free proxy whose value depends on whether it can be trusted, yet existing judges either hand-write the scoring rubric, as in G-Eval, or fine-tune the judge's weights, and both tend to credit fluent but unsuccessful trajectories as successes. We instead induce the text of an agent-judging rubric from a small set of ground-truth-labeled trajectories, grounding it in true outcomes. We present RubricForge, which evolves a judge rubric by reflective evolution against labeled trajectories to maximize agreement with the environment reward, freezes it, and applies it to held-out trajectories in one model call with no environment access. The optimized artifact is human-readable text, so every verdict is attributable to named criteria. Using one frozen 7B model as both agent and judge, on tau-bench (173 labeled trajectories drawn from 220 rollouts) and WebShop (160), the principal gain is faithfuln",
+      "originalLanguage": "en",
+      "author": "Darragh Quinn, David Dylan, Roisin Healy, Fionn Carroll, Maeve Donnelly, Cormac Sheehan",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-17T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.13564",
+          "publishedAt": "2026-08-17T04:00:00.000Z",
+          "title": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提出了一种新的自动评判方法，通过从带标签轨迹中诱导评判标准，减少过度评分问题，对LLM智能体评估领域有实际意义。",
+      "importanceReasonEn": "This research proposes a novel automatic judging method that induces rubrics from labeled trajectories to reduce over-crediting, which is practically relevant to LLM agent evaluation.",
+      "scoringMode": "ai",
+      "titleZh": "诱导无奖励评判标准以减少智能体评估中的过度评分",
+      "titleEn": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
+      "summaryZh": "arXiv:2608.13564v1 新公告类型：摘要：大规模评估语言模型智能体越来越依赖第二个语言模型作为自动评判者，因为黄金信号（可执行环境奖励）在部署时昂贵、缓慢或不可用。这样的评判者是无奖励代理，其价值取决于是否可信，但现有评判者要么手写评分标准（如G-Eval），要么微调评判者权重，两者都倾向于将流畅但不成功的轨迹视为成功。我们转而从一小部分带真实标签的轨迹中诱导出智能体评判标准的文本，将其锚定在真实结果上。我们提出了RubricForge，它通过反思性进化针对带标签轨迹进化评判标准，以最大化与环境奖励的一致性，冻结它，并在一次模型调用中应用于留出轨迹，无需环境访问。优化后的产物是人类可读的文本，因此每个裁决都可归因于命名标准。使用一个冻结的7B模型同时作为智能体和评判者，在tau-bench（从220次rollout中抽取的173条带标签轨迹）和WebShop（160条）上，主要收益是忠实性……",
+      "summaryEn": "arXiv:2608.13564v1 Announce Type: new Abstract: Evaluating language-model agents at scale increasingly relies on a second language model as an automatic judge, because the gold signal, an executable environment reward, is expensive, slow, or unavailable at deployment time. Such a judge is a reward-free proxy whose value depends on whether it can be trusted, yet existing judges either hand-write the scoring rubric, as in G-Eval, or fine-tune the judge's weights, and both tend to credit fluent but unsuccessful trajectories as successes. We instead induce the text of an agent-judging rubric from a small set of ground-truth-labeled trajectories, grounding it in true outcomes. We present RubricForge, which evolves a judge rubric by reflective evolution against labeled trajectories to maximize a",
+      "keywords": [
+        "RubricForge",
+        "agent evaluation",
+        "judging rubric",
+        "over-crediting",
+        "tau-bench",
+        "WebShop"
+      ],
+      "topics": [
+        "LLM agents",
+        "automatic evaluation",
+        "reward-free judging",
+        "rubric induction"
+      ],
+      "models": [
+        "7B model (unspecified)"
+      ],
+      "detailZh": "该论文介绍了一种名为RubricForge的方法，用于生成自动评判标准，以评估语言模型智能体的性能。传统方法如G-Eval依赖手写评分标准，或通过微调评判模型来适应任务，但这些方法往往倾向于将流畅但不成功的轨迹误判为成功，即过度评分问题。RubricForge通过从少量带真实标签的轨迹中诱导出评判标准的文本，使评判标准锚定在真实结果上。具体来说，它使用反思性进化算法，针对带标签轨迹迭代优化评判标准，以最大化与环境奖励的一致性。优化后的评判标准是冻结的，并在一次模型调用中应用于留出轨迹，无需访问环境。该方法的优势在于评判标准是人类可读的文本，因此每个裁决都可以归因于具体的命名标准，提高了可解释性。实验使用一个冻结的7B模型同时作为智能体和评判者，在tau-bench（从220次rollout中抽取的173条带标签轨迹）和WebShop（160条）上进行了评估。主要收益是忠实性（faithfulness）的提升，即评判结果更符合真实结果。",
+      "keyPointsZh": [
+        "RubricForge通过反思性进化从带标签轨迹中诱导评判标准，以最大化与环境奖励的一致性。",
+        "该方法生成的评判标准是人类可读的文本，每个裁决可归因于命名标准。",
+        "实验使用冻结的7B模型，在tau-bench和WebShop上评估，主要收益是忠实性提升。",
+        "现有方法如G-Eval和微调评判者倾向于过度评分，RubricForge旨在解决此问题。"
+      ],
+      "impactZh": "该研究对LLM智能体评估领域有重要影响，提供了一种无需环境奖励即可生成可靠评判标准的方法，减少了过度评分问题，提高了评估的可信度和可解释性。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，RubricForge提供了一种可复现的自动评估方法，无需环境访问即可获得与真实奖励一致的评判，有助于更准确地评估智能体性能，减少人工标注成本。",
+      "howItWorksZh": "RubricForge的工作流程包括：1) 收集少量带真实标签的轨迹（即已知成功或失败的环境交互记录）；2) 使用反思性进化算法，从一个初始评判标准开始，迭代地根据轨迹标签调整标准文本，以最大化评判结果与环境奖励的一致性；3) 冻结优化后的评判标准；4) 在评估新轨迹时，仅需一次模型调用，将轨迹和评判标准输入评判模型，即可获得裁决。整个过程无需访问环境，且评判标准可读。",
+      "interpretationZh": "该论文报告了RubricForge在tau-bench和WebShop上的实验结果，显示其主要收益是忠实性提升。需要注意的是，摘要中未提供具体的数值结果，因此无法量化提升幅度。此外，实验仅使用了7B模型，可能不适用于更大模型。",
+      "limitationsZh": "摘要中未提供具体的性能数据，如提升幅度或与其他方法的对比。实验仅在一个7B模型上进行，可能缺乏泛化性。此外，摘要被截断，可能遗漏了更多细节。",
+      "actionStepsZh": [
+        "阅读完整论文以获取具体实验数据和对比结果。",
+        "考虑在自有智能体评估任务中尝试RubricForge方法，以验证其效果。",
+        "关注该方法的开源实现或代码发布，以便复现实验。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.13564",
+          "publishedAt": "2026-08-17T04:00:00.000Z",
+          "title": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-17T04:00:00.000Z",
+        "endedAt": "2026-08-17T04:21:55.745Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-17T04:00:00.000Z",
+            "label": "8/17 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-17T04:21:55.745Z",
+            "label": "8/17 12:21",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "03b3344dcc9ff8bb",
+      "normalizedUrl": "https://arxiv.org/abs/2608.13565",
+      "originalUrl": "https://arxiv.org/abs/2608.13565",
+      "titleOriginal": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
+      "summaryOriginal": "arXiv:2608.13565v1 Announce Type: new Abstract: Mixture-of-Experts (MoE) architectures scale large language models (LLMs) while preserving computational efficiency through sparse activation. Despite their widespread adoption, the relative importance of individual MoE layers remains insufficiently characterized, particularly for model compression. This paper presents a systematic layer-wise sensitivity analysis of the Qwen3.6-35B-A3B model (40 MoE layers, 256 experts per layer, top-8 routing) using magnitude-based expert masking on the XLCoST cross-lingual code translation benchmark. We conduct a multi-phase study spanning 100, 300, and 500 prompt evaluation scales across three H100 GPU servers. Our central finding is that layer sensitivity is strongly depth-dependent: early layers (0-9) and middle layers (10-29) are highly fragile to expert masking, while late layers (30-39), and especially very-late layers (35-39), tolerate aggressive masking of low-magnitude experts. Flat all-layer masking at 30% retains only 150/300 Good+Similar outputs at 300-prompt scale, whereas late-focused policies retain 249-255/300 while masking 640-1,145 experts. On a later 500-prompt held-out validation",
+      "originalLanguage": "en",
+      "author": "Pradeep Kumar Sharma, Shantanu Godbole, Hritvik Shrivastava",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-17T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.13565",
+          "publishedAt": "2026-08-17T04:00:00.000Z",
+          "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提供了对MoE模型层敏感性的系统分析，对模型压缩和高效部署有实际指导意义，且基于具体模型和基准，结果可信。",
+      "importanceReasonEn": "The study provides a systematic analysis of layer sensitivity in MoE models, offering practical guidance for model compression and efficient deployment, based on a concrete model and benchmark with credible results.",
+      "scoringMode": "ai",
+      "titleZh": "基于幅度的专家掩码对混合专家模型的深度感知敏感性分析",
+      "titleEn": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
+      "summaryZh": "本文对Qwen3.6-35B-A3B模型（40个MoE层，每层256个专家，top-8路由）进行了逐层敏感性分析，使用基于幅度的专家掩码在XLCoST跨语言代码翻译基准上测试。研究发现层敏感性强烈依赖于深度：早期层（0-9）和中间层（10-29）对专家掩码高度脆弱，而晚期层（30-39），尤其是35-39层，能容忍对低幅度专家的激进掩码。在300提示规模下，平坦的全层掩码30%仅保留150/300个Good+Similar输出，而晚期聚焦策略在掩码640-1145个专家时保留249-255/300。在后续500提示的保留验证中，结果类似。",
+      "summaryEn": "This paper presents a systematic layer-wise sensitivity analysis of the Qwen3.6-35B-A3B model (40 MoE layers, 256 experts per layer, top-8 routing) using magnitude-based expert masking on the XLCoST cross-lingual code translation benchmark. The study finds that layer sensitivity is strongly depth-dependent: early layers (0-9) and middle layers (10-29) are highly fragile to expert masking, while late layers (30-39), especially 35-39, tolerate aggressive masking of low-magnitude experts. At 300-prompt scale, flat all-layer masking at 30% retains only 150/300 Good+Similar outputs, whereas late-focused policies retain 249-255/300 while masking 640-1,145 experts. A later 500-prompt held-out validation shows similar results.",
+      "keywords": [
+        "MoE",
+        "expert masking",
+        "layer sensitivity",
+        "model compression",
+        "Qwen3.6-35B-A3B"
+      ],
+      "topics": [
+        "Mixture-of-Experts",
+        "Model Compression",
+        "Sensitivity Analysis",
+        "LLM"
+      ],
+      "models": [
+        "Qwen3.6-35B-A3B"
+      ],
+      "detailZh": "该研究针对混合专家（MoE）架构的大语言模型，探讨了不同层对专家掩码的敏感性。实验基于Qwen3.6-35B-A3B模型，该模型具有40个MoE层，每层256个专家，采用top-8路由。研究者使用基于幅度的专家掩码方法，在XLCoST跨语言代码翻译基准上进行了多阶段实验，评估规模包括100、300和500个提示，并在三台H100 GPU服务器上进行。核心发现是层敏感性强烈依赖于深度：早期层（0-9）和中间层（10-29）对专家掩码高度脆弱，而晚期层（30-39），尤其是35-39层，能容忍对低幅度专家的激进掩码。具体数据表明，在300提示规模下，平坦的全层掩码30%仅保留150/300个Good+Similar输出，而晚期聚焦策略在掩码640-1145个专家时保留249-255/300。在后续500提示的保留验证中，结果类似。该研究为MoE模型的压缩提供了深度感知的掩码策略，表明优先保留早期和中间层专家，而可以激进裁剪晚期层低幅度专家。",
+      "keyPointsZh": [
+        "Qwen3.6-35B-A3B模型具有40个MoE层，每层256个专家，top-8路由。",
+        "早期层（0-9）和中间层（10-29）对专家掩码高度脆弱。",
+        "晚期层（30-39），尤其是35-39层，能容忍激进掩码。",
+        "平坦全层掩码30%仅保留150/300 Good+Similar输出，而晚期聚焦策略保留249-255/300。",
+        "晚期聚焦策略掩码640-1145个专家，显著多于平坦策略。"
+      ],
+      "impactZh": "该研究揭示了MoE模型中层敏感性的深度依赖性，为模型压缩提供了新的视角：通过优先保留早期和中间层专家，可以更激进地裁剪晚期层，从而在保持性能的同时减少计算量。这对大规模MoE模型的部署和推理效率提升具有重要意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用MoE模型的开发者和研究者，该研究提供了实用的压缩策略：在裁剪专家时，应优先考虑晚期层，而保留早期和中间层，以在减少模型规模的同时保持输出质量。",
+      "howItWorksZh": "研究者使用基于幅度的专家掩码方法，即根据专家权重的幅度（magnitude）来决定是否掩码（即停用）某个专家。实验在XLCoST基准上进行，评估不同掩码策略下的模型输出质量。具体步骤包括：1) 选择Qwen3.6-35B-A3B模型；2) 定义掩码策略：平坦全层掩码（对所有层统一掩码一定比例的专家）和晚期聚焦掩码（仅对晚期层掩码）；3) 在100、300、500提示规模下评估，记录Good+Similar输出数量；4) 比较不同策略的性能。",
+      "interpretationZh": "该研究的结果表明，MoE模型的不同层对专家冗余的容忍度不同，晚期层可能包含更多冗余专家。这一发现是合理的，因为深层可能学习到更抽象的特征，对个别专家的依赖较低。但需要注意的是，该研究仅基于单一模型和单一基准，结论的普适性有待验证。",
+      "limitationsZh": "该研究仅针对Qwen3.6-35B-A3B模型和XLCoST基准，可能不适用于其他MoE模型或任务。此外，实验规模有限（最多500提示），且未提供与其他压缩方法的对比。",
+      "actionStepsZh": [
+        "对于MoE模型压缩，优先考虑掩码晚期层（30-39）的低幅度专家。",
+        "在压缩前进行层敏感性分析，以确定哪些层可以安全裁剪。",
+        "在多个基准上验证压缩效果，以确保泛化性。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "晚期聚焦策略在300提示规模下保留的Good+Similar输出数量（249-255）显著高于平坦全层掩码（150），表明深度感知掩码更有效。",
+        "data": [
+          {
+            "label": "平坦全层掩码30%",
+            "value": 150,
+            "display": ""
+          },
+          {
+            "label": "晚期聚焦策略",
+            "value": 252,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.13565",
+          "publishedAt": "2026-08-17T04:00:00.000Z",
+          "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-17T04:00:00.000Z",
+        "endedAt": "2026-08-17T04:21:55.745Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-17T04:00:00.000Z",
+            "label": "8/17 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-17T04:21:55.745Z",
+            "label": "8/17 12:21",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "79f38e749039b653",
       "normalizedUrl": "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades",
@@ -139,7 +389,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T23:59:37.000Z",
-        "endedAt": "2026-08-17T03:08:13.937Z",
+        "endedAt": "2026-08-17T04:21:55.745Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -150,26 +400,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T00:46:46.234Z",
-            "label": "8/17 08:46",
-            "value": 24,
+            "at": "2026-08-17T00:52:04.749Z",
+            "label": "8/17 08:52",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-17T01:33:55.468Z",
-            "label": "8/17 09:33",
-            "value": 35,
+            "at": "2026-08-17T01:44:32.498Z",
+            "label": "8/17 09:44",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T02:21:04.702Z",
-            "label": "8/17 10:21",
-            "value": 45,
+            "at": "2026-08-17T02:37:00.247Z",
+            "label": "8/17 10:37",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-17T03:08:13.937Z",
-            "label": "8/17 11:08",
+            "at": "2026-08-17T03:29:27.996Z",
+            "label": "8/17 11:29",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T04:21:55.745Z",
+            "label": "8/17 12:21",
             "value": 55,
             "reports": 1
           }
@@ -372,7 +628,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T22:00:39.000Z",
-        "endedAt": "2026-08-17T03:08:13.937Z",
+        "endedAt": "2026-08-17T04:21:55.745Z",
         "current": 89,
         "peak": 89,
         "history": [
@@ -383,38 +639,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T22:51:54.822Z",
-            "label": "8/17 06:51",
-            "value": 38,
+            "at": "2026-08-16T22:55:07.106Z",
+            "label": "8/17 06:55",
+            "value": 37,
             "reports": 2
           },
           {
-            "at": "2026-08-16T23:43:10.645Z",
-            "label": "8/17 07:43",
-            "value": 48,
+            "at": "2026-08-16T23:49:35.212Z",
+            "label": "8/17 07:49",
+            "value": 45,
             "reports": 2
           },
           {
-            "at": "2026-08-17T00:34:26.468Z",
-            "label": "8/17 08:34",
-            "value": 58,
+            "at": "2026-08-17T00:44:03.319Z",
+            "label": "8/17 08:44",
+            "value": 54,
             "reports": 2
           },
           {
-            "at": "2026-08-17T01:25:42.291Z",
-            "label": "8/17 09:25",
-            "value": 69,
+            "at": "2026-08-17T01:38:31.425Z",
+            "label": "8/17 09:38",
+            "value": 63,
             "reports": 2
           },
           {
-            "at": "2026-08-17T02:16:58.114Z",
-            "label": "8/17 10:16",
-            "value": 79,
+            "at": "2026-08-17T02:32:59.532Z",
+            "label": "8/17 10:32",
+            "value": 71,
             "reports": 2
           },
           {
-            "at": "2026-08-17T03:08:13.937Z",
-            "label": "8/17 11:08",
+            "at": "2026-08-17T03:27:27.638Z",
+            "label": "8/17 11:27",
+            "value": 80,
+            "reports": 2
+          },
+          {
+            "at": "2026-08-17T04:21:55.745Z",
+            "label": "8/17 12:21",
             "value": 89,
             "reports": 2
           }
@@ -456,8 +718,8 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该收购涉及知名支付公司Stripe和AI网关初创公司OpenRouter，金额巨大，对AI基础设施和支付领域有潜在影响，但消息未经官方证实，故重要性中等偏高。",
-      "importanceReasonEn": "The acquisition involves major payment company Stripe and AI gateway startup OpenRouter, with a large sum, potentially impacting AI infrastructure and payments, but unconfirmed, hence moderately high importance.",
+      "importanceReasonZh": "该收购涉及知名支付公司Stripe和AI网关初创公司OpenRouter，金额巨大，可能影响AI模型访问和支付生态，具有行业重要性。",
+      "importanceReasonEn": "The acquisition involves major payment company Stripe and AI gateway startup OpenRouter, with a large sum, potentially impacting AI model access and payment ecosystem, making it industry-significant.",
       "scoringMode": "ai",
       "titleZh": "Stripe据报道将以70亿美元以上收购AI网关初创公司OpenRouter",
       "titleEn": "Stripe to reportedly acquire AI gateway startup OpenRouter for $7B+",
@@ -477,18 +739,18 @@
         "AI网关"
       ],
       "models": [],
-      "detailZh": "据报道，支付巨头Stripe正在洽谈收购AI网关初创公司OpenRouter，交易金额可能超过70亿美元。OpenRouter的CEO最近将该公司描述为“AI领域的Stripe”，暗示其业务模式与Stripe类似，但专注于AI模型访问。目前，该消息尚未得到Stripe或OpenRouter的官方确认，细节有限。OpenRouter是一个AI模型路由平台，允许开发者通过单一API访问多种AI模型，类似于AI领域的网关。如果收购完成，Stripe可能将AI模型访问与支付基础设施整合，进一步扩展其在AI生态中的角色。然而，由于缺乏官方声明，交易的具体条款、时间表以及是否最终达成仍存在不确定性。",
+      "detailZh": "据报道，支付巨头Stripe正在洽谈收购AI网关初创公司OpenRouter，交易金额可能超过70亿美元。OpenRouter的CEO最近将这家初创公司描述为“AI领域的Stripe”，暗示其业务模式与Stripe类似，但专注于AI模型访问。目前，该交易尚未得到官方确认，细节仍不清楚。OpenRouter是一个AI模型网关，允许开发者通过单一API访问多个AI模型，简化了模型选择和集成过程。如果收购成功，Stripe将能够将其支付基础设施与AI模型访问相结合，可能为开发者提供更全面的解决方案。然而，由于消息来源仅为报道，交易可能尚未最终敲定，存在变数。",
       "keyPointsZh": [
         "Stripe据报道将以超过70亿美元收购OpenRouter。",
         "OpenRouter的CEO称其为“AI领域的Stripe”。",
-        "消息未经官方证实，细节有限。"
+        "交易尚未官方确认，细节有限。"
       ],
-      "impactZh": "如果收购成真，可能重塑AI模型访问和支付领域的格局，但普通用户短期内可能不会感受到直接影响。",
-      "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和团队，如果收购完成，OpenRouter的服务可能与Stripe支付深度集成，可能简化模型付费流程，但具体影响需待官方消息。",
+      "impactZh": "该收购若完成，可能改变AI模型访问和支付的格局，使Stripe在AI领域占据更重要的位置，影响开发者使用AI模型的方式。",
+      "readerImpactZh": "对于普通用户，此收购可能间接影响AI服务的定价和可用性，但短期内影响有限。",
+      "userImpactZh": "对于AI开发者和团队，若收购完成，可能通过Stripe获得更便捷的模型访问和支付集成，但具体影响需待交易细节公布。",
       "howItWorksZh": "",
-      "interpretationZh": "报道称Stripe有意收购OpenRouter，但未获官方证实。OpenRouter作为AI网关，提供多模型访问，其CEO的比喻暗示其商业模式与Stripe类似。合理推测是Stripe希望借助OpenRouter进入AI基础设施领域，但具体细节未知。",
-      "limitationsZh": "消息来源单一，未经官方确认，交易可能不成立，金额和条款可能变化。",
+      "interpretationZh": "报道称Stripe将收购OpenRouter，但未提供官方确认。OpenRouter作为AI网关，其业务模式与Stripe类似，但专注于AI模型访问。若交易达成，Stripe可能整合AI模型访问与支付服务，但具体整合方式尚不明确。",
+      "limitationsZh": "消息来源仅为报道，未获官方确认，交易可能尚未最终敲定，细节有限。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -510,7 +772,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T20:57:04.000Z",
-        "endedAt": "2026-08-17T03:08:13.937Z",
+        "endedAt": "2026-08-17T04:21:55.745Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -521,44 +783,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T21:50:05.419Z",
-            "label": "8/17 05:50",
-            "value": 21,
+            "at": "2026-08-16T21:52:40.468Z",
+            "label": "8/17 05:52",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-16T22:43:06.839Z",
-            "label": "8/17 06:43",
-            "value": 28,
+            "at": "2026-08-16T22:48:16.936Z",
+            "label": "8/17 06:48",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-16T23:36:08.258Z",
-            "label": "8/17 07:36",
-            "value": 35,
+            "at": "2026-08-16T23:43:53.404Z",
+            "label": "8/17 07:43",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-17T00:29:09.678Z",
-            "label": "8/17 08:29",
-            "value": 42,
+            "at": "2026-08-17T00:39:29.872Z",
+            "label": "8/17 08:39",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-17T01:22:11.097Z",
-            "label": "8/17 09:22",
-            "value": 50,
+            "at": "2026-08-17T01:35:06.340Z",
+            "label": "8/17 09:35",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-08-17T02:15:12.517Z",
-            "label": "8/17 10:15",
+            "at": "2026-08-17T02:30:42.808Z",
+            "label": "8/17 10:30",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T03:26:19.276Z",
+            "label": "8/17 11:26",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-17T03:08:13.937Z",
-            "label": "8/17 11:08",
+            "at": "2026-08-17T04:21:55.745Z",
+            "label": "8/17 12:21",
             "value": 64,
             "reports": 1
           }
@@ -600,33 +868,37 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该新闻涉及科技领袖的AI愿景与公众信任的争议，但缺乏具体事实和细节，重要性中等。",
-      "importanceReasonEn": "The news involves controversy over a tech leader's AI vision and public trust, but lacks specific facts and details, so importance is moderate.",
+      "importanceReasonZh": "该新闻涉及科技领袖的AI愿景与公众信任问题，具有一定讨论价值，但缺乏具体细节和证据，重要性中等。",
+      "importanceReasonEn": "The news touches on tech leaders' AI vision and public trust, with some discussion value but lacks specifics and evidence, moderate importance.",
       "scoringMode": "ai",
       "titleZh": "为什么人们不买账马克·扎克伯格的AI未来",
       "titleEn": "Why people aren't buying Mark Zuckerberg's AI future",
-      "summaryZh": "在最新一期的Equity播客中，我们讨论了为什么不是每个人都相信扎克伯格的愿景。",
+      "summaryZh": "在最新一期的Equity播客中，我们讨论了为什么不是所有人都相信扎克伯格的愿景。",
       "summaryEn": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg's vision.",
-      "keywords": [],
+      "keywords": [
+        "Mark Zuckerberg",
+        "AI未来",
+        "公众怀疑",
+        "Equity播客"
+      ],
       "topics": [
         "AI愿景",
         "公众信任",
         "科技领袖"
       ],
       "models": [],
-      "detailZh": "本期Equity播客讨论了马克·扎克伯格对AI未来的愿景，以及为什么许多人对此持怀疑态度。播客主持人指出，扎克伯格在AI领域的投资和宣传力度很大，但公众和行业观察者对其动机和实际效果存在疑虑。讨论中提到，扎克伯格过去在隐私和数据安全方面的争议，可能影响了人们对他在AI领域承诺的信任。此外，AI技术的快速发展也引发了关于伦理、就业和社会影响的广泛担忧，这些都可能削弱公众对科技领袖所描绘的乐观未来的接受度。然而，由于缺乏具体的案例或数据，讨论更多停留在观点层面。",
+      "detailZh": "根据TechCrunch AI的报道，在最新一期的Equity播客中，主持人及嘉宾讨论了为什么公众对马克·扎克伯格所描绘的AI未来持怀疑态度。报道指出，尽管扎克伯格积极推广其AI愿景，但许多人并不买账。然而，报道并未提供具体的讨论内容、扎克伯格的具体言论或公众怀疑的具体原因。目前仅知该讨论发生在2026年8月16日发布的播客中。由于缺乏详细背景和具体事实，该新闻的细节有限。",
       "keyPointsZh": [
-        "扎克伯格积极宣传AI未来，但公众信任度不高。",
-        "过去隐私争议可能影响公众对其AI承诺的信任。",
-        "AI伦理和社会影响担忧加剧了怀疑态度。",
-        "讨论基于观点，缺乏具体事实支撑。"
+        "Equity播客讨论了公众对扎克伯格AI愿景的怀疑。",
+        "报道未提供具体原因或细节。",
+        "该新闻发布于2026年8月16日。"
       ],
-      "impactZh": "该事件反映了科技领袖与公众之间在AI发展上的信任鸿沟，可能影响AI技术的公众接受度和政策制定。",
-      "readerImpactZh": "普通读者可能因此对AI发展持更谨慎态度，关注隐私和伦理问题。",
-      "userImpactZh": "AI从业者和开发者可能面临更多公众质疑，需要在产品设计中更注重透明度和伦理。",
+      "impactZh": "该事件反映了科技领袖与公众之间在AI发展上的信任鸿沟，可能影响公众对AI技术的接受度，但具体影响尚不明确。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道主要呈现了播客中的观点，认为公众对扎克伯格AI愿景的怀疑源于其过往争议和AI的普遍担忧。但报道未提供具体证据，属于观点性内容。",
-      "limitationsZh": "缺乏具体数据或案例，仅基于播客讨论，无法验证观点的普遍性。",
+      "interpretationZh": "报道仅提及播客讨论了公众对扎克伯格AI愿景的怀疑，但未提供具体论据。可以合理推断，公众的怀疑可能源于对AI技术风险、隐私问题或对科技巨头的不信任，但这些均属推测，缺乏直接证据。",
+      "limitationsZh": "该报道信息量有限，未提供播客的具体内容、扎克伯格的具体言论或公众怀疑的具体原因，因此无法进行深入分析。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -648,7 +920,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T20:32:01.000Z",
-        "endedAt": "2026-08-17T03:08:13.937Z",
+        "endedAt": "2026-08-17T04:21:55.745Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -659,44 +931,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T21:28:37.133Z",
-            "label": "8/17 05:28",
-            "value": 20,
+            "at": "2026-08-16T21:30:45.343Z",
+            "label": "8/17 05:30",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-16T22:25:13.267Z",
-            "label": "8/17 06:25",
-            "value": 26,
+            "at": "2026-08-16T22:29:29.686Z",
+            "label": "8/17 06:29",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-16T23:21:49.401Z",
-            "label": "8/17 07:21",
-            "value": 32,
+            "at": "2026-08-16T23:28:14.029Z",
+            "label": "8/17 07:28",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-17T00:18:25.535Z",
-            "label": "8/17 08:18",
-            "value": 38,
+            "at": "2026-08-17T00:26:58.372Z",
+            "label": "8/17 08:26",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-17T01:15:01.669Z",
-            "label": "8/17 09:15",
-            "value": 44,
+            "at": "2026-08-17T01:25:42.715Z",
+            "label": "8/17 09:25",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-17T02:11:37.803Z",
-            "label": "8/17 10:11",
+            "at": "2026-08-17T02:24:27.058Z",
+            "label": "8/17 10:24",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T03:23:11.401Z",
+            "label": "8/17 11:23",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-17T03:08:13.937Z",
-            "label": "8/17 11:08",
+            "at": "2026-08-17T04:21:55.745Z",
+            "label": "8/17 12:21",
             "value": 55,
             "reports": 1
           }
@@ -792,7 +1070,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T16:53:51.000Z",
-        "endedAt": "2026-08-17T03:08:13.937Z",
+        "endedAt": "2026-08-17T04:21:55.745Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -803,68 +1081,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T17:49:42.176Z",
-            "label": "8/17 01:49",
+            "at": "2026-08-16T17:56:24.158Z",
+            "label": "8/17 01:56",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-16T18:45:33.352Z",
-            "label": "8/17 02:45",
+            "at": "2026-08-16T18:58:57.317Z",
+            "label": "8/17 02:58",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-16T19:41:24.528Z",
-            "label": "8/17 03:41",
+            "at": "2026-08-16T20:01:30.475Z",
+            "label": "8/17 04:01",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-16T20:37:15.704Z",
-            "label": "8/17 04:37",
+            "at": "2026-08-16T21:04:03.634Z",
+            "label": "8/17 05:04",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-16T21:33:06.880Z",
-            "label": "8/17 05:33",
+            "at": "2026-08-16T22:06:36.793Z",
+            "label": "8/17 06:06",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-16T22:28:58.056Z",
-            "label": "8/17 06:28",
+            "at": "2026-08-16T23:09:09.951Z",
+            "label": "8/17 07:09",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-16T23:24:49.232Z",
-            "label": "8/17 07:24",
+            "at": "2026-08-17T00:11:43.110Z",
+            "label": "8/17 08:11",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-17T00:20:40.408Z",
-            "label": "8/17 08:20",
+            "at": "2026-08-17T01:14:16.269Z",
+            "label": "8/17 09:14",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-17T01:16:31.584Z",
-            "label": "8/17 09:16",
+            "at": "2026-08-17T02:16:49.427Z",
+            "label": "8/17 10:16",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-17T02:12:22.760Z",
-            "label": "8/17 10:12",
+            "at": "2026-08-17T03:19:22.586Z",
+            "label": "8/17 11:19",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-17T03:08:13.937Z",
-            "label": "8/17 11:08",
+            "at": "2026-08-17T04:21:55.745Z",
+            "label": "8/17 12:21",
             "value": 58,
             "reports": 1
           }
