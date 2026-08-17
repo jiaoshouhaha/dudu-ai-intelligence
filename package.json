@@ -8,9 +8,10 @@
     "fetch:fixture": "NODE_USE_ENV_PROXY=1 node scripts/fetch-news.mjs --fixture",
     "rankings": "NODE_USE_ENV_PROXY=1 node scripts/fetch-rankings.mjs",
     "topics": "node scripts/build-topic-index.mjs",
+    "repair:data": "node scripts/repair-historical-merges.mjs",
     "serve": "node scripts/serve.mjs",
     "test": "node --test",
-    "check": "node --check public/app.js && node --check public/rankings.js && node --check public/topics.js && node --check scripts/fetch-news.mjs && node --check scripts/fetch-rankings.mjs && node --check scripts/build-topic-index.mjs && node --check src/lib/topic-taxonomy.mjs"
+    "check": "node --check public/app.js && node --check public/rankings.js && node --check public/topics.js && node --check scripts/fetch-news.mjs && node --check scripts/fetch-rankings.mjs && node --check scripts/build-topic-index.mjs && node --check scripts/repair-historical-merges.mjs && node --check src/lib/topic-taxonomy.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.2.5"
