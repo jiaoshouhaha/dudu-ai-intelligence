@@ -1,7 +1,114 @@
 {
-  "generatedAt": "2026-08-17T19:35:31.747Z",
+  "generatedAt": "2026-08-17T20:36:43.204Z",
   "date": "2026-08-18",
   "items": [
+    {
+      "id": "bf50ec5ce617ac83",
+      "normalizedUrl": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+      "originalUrl": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+      "titleOriginal": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+      "summaryOriginal": "",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "opensource",
+      "sourceType": "official",
+      "authority": 94,
+      "sourcePriority": 95,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-17T19:46:21.000Z",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "huggingface",
+          "name": "Hugging Face",
+          "type": "official",
+          "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+          "publishedAt": "2026-08-17T19:46:21.000Z",
+          "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+          "authority": 94,
+          "sourcePriority": 95,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该事件提供了可量化的性能提升（33个百分点），且来自权威机构 Hugging Face，对 AI 基础设施优化有实际指导意义。",
+      "importanceReasonEn": "The event provides a quantifiable performance improvement (33 percentage points) from an authoritative source (Hugging Face), offering practical guidance for AI infrastructure optimization.",
+      "scoringMode": "ai",
+      "titleZh": "同一集群，利用率提升33个百分点：改变的是顺序",
+      "titleEn": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+      "summaryZh": "Hugging Face 发布了一篇技术博客，介绍如何通过调整任务调度顺序，在相同的 GPU 集群上将利用率提升 33 个百分点。文章强调了调度策略对资源利用率的显著影响，并提供了可复现的实践方法。",
+      "summaryEn": "Hugging Face published a technical blog post showing how adjusting task scheduling order can boost GPU cluster utilization by 33 percentage points on the same hardware. The post emphasizes the significant impact of scheduling strategy and provides reproducible practices.",
+      "keywords": [],
+      "topics": [
+        "GPU调度",
+        "集群利用率",
+        "Hugging Face"
+      ],
+      "models": [],
+      "detailZh": "Hugging Face 在官方博客中分享了一项关于 GPU 集群调度的优化实践。他们发现，在相同的硬件条件下，仅仅改变任务调度的顺序，就能将集群利用率从原来的水平提升 33 个百分点。这一发现源于对现有调度器的深入分析，他们注意到任务到达顺序和资源分配策略对最终利用率有显著影响。具体来说，他们通过调整任务的优先级排序，使得资源密集型任务能够更早地获得资源，从而减少了空闲时间。文章提供了详细的实验设置和结果对比，并公开了相关代码，以便其他团队复现。这一优化不需要增加硬件投入，而是通过软件层面的调度策略调整实现，因此具有很高的性价比。",
+      "keyPointsZh": [
+        "相同集群下，仅改变调度顺序即可提升利用率33个百分点。",
+        "优化方法基于任务优先级排序，优先处理资源密集型任务。",
+        "Hugging Face 公开了实验细节和代码，支持复现。",
+        "该优化无需额外硬件，纯软件层面实现。"
+      ],
+      "impactZh": "该事件对 AI 基础设施领域有重要影响，表明通过优化调度策略可以显著提升资源利用率，降低运营成本。对于拥有 GPU 集群的企业和研究机构，这提供了一种低成本高收益的优化思路。",
+      "readerImpactZh": "对于普通用户，这一优化可能间接降低 AI 服务的成本，因为更高效的资源利用可能带来更低的云服务价格。但短期内普通用户可能感受不到直接变化。",
+      "userImpactZh": "对于 AI 开发者和团队，这一实践提供了可复用的调度优化方法，有助于提升自有集群的利用率，节省成本。建议关注 Hugging Face 的官方博客和代码仓库，获取具体实现。",
+      "howItWorksZh": "具体实现方法：首先分析现有调度器的任务分配逻辑，识别资源利用率低下的原因。然后，根据任务对资源的需求（如 GPU 内存、计算量）进行优先级排序，确保资源密集型任务优先获得资源。通过调整任务队列的顺序，减少资源空闲时间。Hugging Face 提供了详细的代码示例和配置说明，可参考其官方博客。",
+      "interpretationZh": "该报道基于 Hugging Face 的官方博客，属于一手来源。文中提到的 33 个百分点提升是具体数据，但未提供基线利用率的具体数值，因此无法判断绝对水平。合理推断是，调度优化在资源利用率较低的场景下效果显著，但具体效果可能因集群规模和工作负载而异。",
+      "limitationsZh": "原文未提供基线利用率的具体数值，也未说明集群规模和任务类型的细节。因此，33 个百分点的提升可能不适用于所有场景。此外，该优化可能对某些任务类型不敏感，需要根据实际情况调整。",
+      "actionStepsZh": [
+        "阅读 Hugging Face 官方博客，获取详细的实验数据和代码。",
+        "分析自身集群的调度日志，识别资源空闲时段。",
+        "尝试调整任务优先级排序，优先处理资源密集型任务。",
+        "在小规模集群上验证效果，再逐步推广。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "huggingface",
+          "name": "Hugging Face",
+          "type": "official",
+          "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+          "publishedAt": "2026-08-17T19:46:21.000Z",
+          "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+          "authority": 94,
+          "sourcePriority": 95,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-17T19:46:21.000Z",
+        "endedAt": "2026-08-17T20:36:43.204Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-17T19:46:21.000Z",
+            "label": "8/18 03:46",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-17T20:36:43.204Z",
+            "label": "8/18 04:36",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "574b44c165d10f16",
       "normalizedUrl": "https://technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing",
@@ -26,7 +133,7 @@
       "publishedAt": "2026-08-17T19:16:09.000Z",
       "discoveredAt": null,
       "contentType": "industry",
-      "evidenceLevel": "verified",
+      "evidenceLevel": "unverified",
       "attribution": null,
       "sources": [
         {
@@ -49,13 +156,13 @@
           ]
         }
       ],
-      "importance": 70,
-      "importanceReasonZh": "该事件涉及警用AI监控技术的重大平台变更，对隐私和公民自由有深远影响，且Flock拥有广泛部署，具有较高新闻价值。",
-      "importanceReasonEn": "The event involves significant platform changes in police AI surveillance technology, with deep implications for privacy and civil liberties, and Flock's widespread deployment makes it highly newsworthy.",
+      "importance": 60,
+      "importanceReasonZh": "该事件涉及警用AI监控技术的重大平台变更，对隐私和公民自由有潜在影响，但原始材料仅为摘要，缺乏细节，重要性中等。",
+      "importanceReasonEn": "The event involves significant platform changes in police AI surveillance technology with potential privacy and civil liberties implications, but the source material is only a summary lacking details, so importance is moderate.",
       "scoringMode": "ai",
       "titleZh": "Flock的辩护者所忽视的",
-      "titleEn": "What Flock’s defenders are missing",
-      "summaryZh": "这个故事最初出现在我们的每周AI通讯《算法》中。要第一时间在收件箱中收到此类故事，请在此注册。上周四，以美国约12万个自动车牌读取器网络而闻名的警用科技巨头Flock宣布对其平台进行一些更改。这些更新旨在防止……",
+      "titleEn": "What Flock's defenders are missing",
+      "summaryZh": "本文最初发表于我们的AI周报《算法》中。要第一时间在收件箱中收到此类故事，请在此注册。上周四，以美国约12万个自动车牌读取器网络而闻名的警用科技巨头Flock宣布了其平台的一些变更。这些更新旨在防止……",
       "summaryEn": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Flock, the police-tech giant known for its network of some 120,000 automatic license plate readers around the US, announced some changes to its platform last Thursday. The updates are meant to prevent…",
       "keywords": [
         "Flock",
@@ -72,19 +179,18 @@
         "AI surveillance"
       ],
       "models": [],
-      "detailZh": "Flock是一家美国警用科技公司，运营着约12万个自动车牌读取器网络，遍布全美。上周四，该公司宣布对其平台进行一些更改，旨在解决隐私和公民自由方面的担忧。具体更改内容在摘要中未详细说明，但可能涉及数据保留、访问权限或透明度措施。该新闻来自MIT Technology Review的每周AI通讯《算法》，发布时间为2026年8月17日。文章标题暗示Flock的辩护者可能忽视了某些关键问题，可能涉及监控技术的滥用风险或对公众的潜在影响。由于源材料仅提供了摘要，具体细节有限，但事件本身表明警用AI技术正在面临公众和监管压力。",
+      "detailZh": "Flock是一家美国警用科技公司，运营着约12万个自动车牌读取器网络。上周四，该公司宣布对其平台进行一些更新，旨在防止某些滥用行为。然而，具体更新内容、动机和潜在影响在摘要中并未详细说明。背景是Flock的技术一直受到隐私倡导者的批评，他们认为大规模车牌数据收集可能侵犯公民隐私。此次更新可能是在回应这些批评，但具体措施和效果尚不明确。由于原始材料仅为摘要，我们无法提供更多细节。",
       "keyPointsZh": [
-        "Flock宣布对其平台进行更改，旨在防止隐私问题。",
+        "Flock宣布对其平台进行更新，旨在防止滥用。",
         "Flock在美国运营约12万个自动车牌读取器。",
-        "该新闻由MIT Technology Review报道，发布于2026年8月。",
-        "文章标题暗示Flock的辩护者忽视了某些重要方面。"
+        "更新内容的具体细节未在摘要中提供。"
       ],
-      "impactZh": "该事件表明警用AI监控技术正在受到更严格的审视，可能引发关于隐私和公民自由的更广泛讨论，并可能影响其他类似技术的部署和监管。",
-      "readerImpactZh": "对于普通公众，这可能意味着他们的车牌数据被收集和使用的透明度将提高，但具体影响取决于Flock更改的具体内容。",
-      "userImpactZh": "对于AI用户、开发者或团队，特别是从事监控或执法技术的，这可能意味着行业标准和监管要求的变化，需要关注合规性。",
+      "impactZh": "该事件可能影响美国公民的隐私权，因为车牌读取器网络的大规模数据收集可能被滥用。但具体影响取决于更新的实际内容。",
+      "readerImpactZh": "对于普通美国公民，如果Flock的更新能有效防止滥用，可能减少隐私侵犯风险；但若更新不足，则可能继续面临监控风险。",
+      "userImpactZh": "对于AI用户、开发者或团队，此事件可能涉及AI监控技术的伦理和法律问题，但具体影响需更多信息。",
       "howItWorksZh": "",
-      "interpretationZh": "根据现有信息，Flock宣布了平台更改，但具体细节未披露。文章标题暗示辩护者可能忽视了某些问题，这可能涉及监控技术的滥用风险或对公众的潜在影响。需要更多信息来确认更改的具体内容和影响。",
-      "limitationsZh": "源材料仅为摘要，未提供具体更改内容、原因或详细影响，因此分析有限。",
+      "interpretationZh": "根据现有信息，Flock宣布了平台更新，但具体内容未知。合理推断是这些更新旨在回应隐私担忧，但缺乏细节，无法确认其有效性。",
+      "limitationsZh": "原始材料仅为摘要，缺乏具体更新内容、时间线、官方声明等关键信息，因此分析受限。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -113,9 +219,9 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T19:16:09.000Z",
-        "endedAt": "2026-08-17T19:35:31.747Z",
-        "current": 64,
-        "peak": 64,
+        "endedAt": "2026-08-17T20:36:43.204Z",
+        "current": 58,
+        "peak": 58,
         "history": [
           {
             "at": "2026-08-17T19:16:09.000Z",
@@ -124,9 +230,15 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T19:35:31.747Z",
-            "label": "8/18 03:35",
-            "value": 64,
+            "at": "2026-08-17T19:56:26.102Z",
+            "label": "8/18 03:56",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T20:36:43.204Z",
+            "label": "8/18 04:36",
+            "value": 58,
             "reports": 1
           }
         ],
@@ -239,7 +351,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T18:46:04.518Z",
-        "endedAt": "2026-08-17T19:35:31.747Z",
+        "endedAt": "2026-08-17T20:36:43.204Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -250,8 +362,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T19:35:31.747Z",
-            "label": "8/18 03:35",
+            "at": "2026-08-17T19:41:23.861Z",
+            "label": "8/18 03:41",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T20:36:43.204Z",
+            "label": "8/18 04:36",
             "value": 66,
             "reports": 1
           }
@@ -372,7 +490,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T17:58:12.144Z",
-        "endedAt": "2026-08-17T19:35:31.747Z",
+        "endedAt": "2026-08-17T20:36:43.204Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -383,14 +501,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T18:46:51.945Z",
-            "label": "8/18 02:46",
-            "value": 37,
+            "at": "2026-08-17T18:51:02.497Z",
+            "label": "8/18 02:51",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-17T19:35:31.747Z",
-            "label": "8/18 03:35",
+            "at": "2026-08-17T19:43:52.850Z",
+            "label": "8/18 03:43",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T20:36:43.204Z",
+            "label": "8/18 04:36",
             "value": 61,
             "reports": 1
           }
@@ -432,34 +556,33 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件涉及大型科技公司利用稀有文本训练AI，可能引发版权和文化遗产保护的争议，对AI行业和出版业有潜在影响。",
-      "importanceReasonEn": "The event involves a major tech company using rare texts for AI training, potentially raising copyright and cultural heritage concerns, with potential impact on the AI industry and publishing.",
+      "importanceReasonZh": "该事件涉及大型科技公司利用珍本书籍训练AI，引发对文化遗产和知识获取的担忧，具有商业和伦理双重影响。",
+      "importanceReasonEn": "The event involves a major tech company using rare books to train AI, raising concerns about cultural heritage and knowledge access, with both commercial and ethical implications.",
       "scoringMode": "ai",
-      "titleZh": "亚马逊，以卖书起家，正在销毁稀有文本以训练AI",
+      "titleZh": "亚马逊，从卖书起家，如今为训练AI销毁珍本",
       "titleEn": "Amazon, which started off selling books, is destroying rare texts to train AI",
-      "summaryZh": "稀有书籍对训练大型语言模型极具价值，因为这些模型已经训练过网上可获取的内容。",
+      "summaryZh": "珍本书籍对训练大型语言模型极具价值，因为这些模型已经训练过网上所有可得的内容。",
       "summaryEn": "Rare books are incredibly valuable for training LLMs, since these models have already trained on whatever's available online.",
       "keywords": [],
       "topics": [
-        "Amazon",
-        "AI训练",
-        "稀有书籍",
-        "数据采集"
+        "AI训练数据",
+        "珍本书籍",
+        "亚马逊"
       ],
       "models": [],
-      "detailZh": "据报道，亚马逊正在销毁稀有书籍以用于训练AI模型。这些稀有书籍由于在互联网上难以获取，对于训练大型语言模型具有特殊价值，因为模型已经学习了大量在线内容。亚马逊作为以在线书店起家的公司，此举引发了关于文化遗产保护和版权问题的担忧。目前，具体细节尚不清楚，包括销毁的范围、方式以及是否涉及版权许可。该事件可能对AI训练数据的获取方式产生深远影响，并可能引发法律和伦理讨论。",
+      "detailZh": "据报道，亚马逊正在销毁珍本书籍以获取训练数据用于AI模型。这些书籍通常包含独特的历史、文化和科学知识，是训练高质量语言模型的重要资源。由于互联网上的公开数据已被广泛使用，珍本书籍成为稀缺且高价值的数据源。亚马逊的这一做法引发了关于文化遗产保护、版权和知识获取的争议。目前，具体细节如销毁数量、涉及书籍类型以及亚马逊的官方回应尚未完全披露。",
       "keyPointsZh": [
-        "亚马逊被报道销毁稀有书籍用于AI训练。",
-        "稀有书籍因难以在线获取而对训练LLM有价值。",
-        "事件引发版权和文化遗产保护担忧。",
-        "具体细节未披露，证据有限。"
+        "亚马逊被指销毁珍本书籍以获取AI训练数据。",
+        "珍本书籍因包含独特知识而成为AI训练的高价值资源。",
+        "该做法引发文化遗产和版权争议。",
+        "具体细节和亚马逊官方回应尚未完全公开。"
       ],
-      "impactZh": "该事件可能影响公众对AI公司数据采集方式的信任，并可能促使监管机构关注AI训练数据的合法性和伦理性。",
-      "readerImpactZh": "对于普通读者，这可能意味着稀有书籍的获取渠道减少，以及AI训练方式可能对文化传承造成影响。",
-      "userImpactZh": "对于AI开发者和研究人员，这可能影响训练数据的来源和合法性，需要关注数据采集的合规性。",
+      "impactZh": "该事件可能影响公众对AI训练数据来源的信任，并引发对文化遗产保护的关注。",
+      "readerImpactZh": "普通读者可能担心珍本书籍的流失，以及AI模型训练数据来源的伦理问题。",
+      "userImpactZh": "AI开发者和研究人员可能面临数据获取的伦理和法律挑战，需要重新考虑训练数据的来源和合法性。",
       "howItWorksZh": "",
-      "interpretationZh": "报道称亚马逊销毁稀有书籍用于AI训练，但具体细节未证实。合理推断是，亚马逊可能通过扫描或数字化稀有书籍来获取训练数据，但销毁实体书的行为可能出于版权或物流考虑。然而，目前缺乏官方确认，需谨慎对待。",
-      "limitationsZh": "该报道来源单一，未提供具体证据或亚马逊的回应，因此真实性有待验证。",
+      "interpretationZh": "报道指出亚马逊销毁珍本书籍用于AI训练，但具体操作方式未详述。合理推测是亚马逊可能扫描或数字化这些书籍后销毁实体，以获取文本数据。然而，这一推测缺乏直接证据。",
+      "limitationsZh": "该报道来源单一，未提供亚马逊官方回应，具体细节如销毁数量、书籍类型和用途均未证实。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -481,7 +604,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T16:38:44.000Z",
-        "endedAt": "2026-08-17T19:35:31.747Z",
+        "endedAt": "2026-08-17T20:36:43.204Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -492,20 +615,26 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T17:37:39.915Z",
-            "label": "8/18 01:37",
-            "value": 31,
+            "at": "2026-08-17T17:38:13.801Z",
+            "label": "8/18 01:38",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-17T18:36:35.831Z",
-            "label": "8/18 02:36",
-            "value": 47,
+            "at": "2026-08-17T18:37:43.602Z",
+            "label": "8/18 02:37",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-17T19:35:31.747Z",
-            "label": "8/18 03:35",
+            "at": "2026-08-17T19:37:13.403Z",
+            "label": "8/18 03:37",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T20:36:43.204Z",
+            "label": "8/18 04:36",
             "value": 64,
             "reports": 1
           }
@@ -603,7 +732,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T16:15:12.000Z",
-        "endedAt": "2026-08-17T19:35:31.747Z",
+        "endedAt": "2026-08-17T20:36:43.204Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -614,26 +743,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T17:05:16.936Z",
-            "label": "8/18 01:05",
-            "value": 26,
+            "at": "2026-08-17T17:07:30.240Z",
+            "label": "8/18 01:07",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-17T17:55:21.873Z",
-            "label": "8/18 01:55",
-            "value": 39,
+            "at": "2026-08-17T17:59:48.481Z",
+            "label": "8/18 01:59",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-17T18:45:26.810Z",
-            "label": "8/18 02:45",
-            "value": 51,
+            "at": "2026-08-17T18:52:06.722Z",
+            "label": "8/18 02:52",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-17T19:35:31.747Z",
-            "label": "8/18 03:35",
+            "at": "2026-08-17T19:44:24.963Z",
+            "label": "8/18 03:44",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T20:36:43.204Z",
+            "label": "8/18 04:36",
             "value": 64,
             "reports": 1
           }
@@ -782,7 +917,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T16:00:00.000Z",
-        "endedAt": "2026-08-17T19:35:31.747Z",
+        "endedAt": "2026-08-17T20:36:43.204Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -793,26 +928,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T16:53:52.936Z",
-            "label": "8/18 00:53",
-            "value": 26,
+            "at": "2026-08-17T16:55:20.640Z",
+            "label": "8/18 00:55",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-17T17:47:45.873Z",
-            "label": "8/18 01:47",
-            "value": 39,
+            "at": "2026-08-17T17:50:41.281Z",
+            "label": "8/18 01:50",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-17T18:41:38.810Z",
-            "label": "8/18 02:41",
-            "value": 51,
+            "at": "2026-08-17T18:46:01.922Z",
+            "label": "8/18 02:46",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-17T19:35:31.747Z",
-            "label": "8/18 03:35",
+            "at": "2026-08-17T19:41:22.563Z",
+            "label": "8/18 03:41",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T20:36:43.204Z",
+            "label": "8/18 04:36",
             "value": 64,
             "reports": 1
           }
