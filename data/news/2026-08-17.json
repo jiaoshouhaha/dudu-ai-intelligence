@@ -1,7 +1,268 @@
 {
-  "generatedAt": "2026-08-17T05:13:11.455Z",
+  "generatedAt": "2026-08-17T06:03:58.032Z",
   "date": "2026-08-17",
   "items": [
+    {
+      "id": "cedf57bb6ac50ed2",
+      "normalizedUrl": "https://arxiv.org/abs/2608.13574",
+      "originalUrl": "https://arxiv.org/abs/2608.13574",
+      "titleOriginal": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+      "summaryOriginal": "arXiv:2608.13574v1 Announce Type: new Abstract: LLM agents increasingly operate as execution systems that invoke tools, modify local state, use persistent memory, and interact with external protocols. These capabilities make agents useful, but they also introduce risks related to over-privileged actions, weak auditability, prompt injection, tool poisoning, and uncontrolled side effects. This paper presents Agentao, a governed local-first runtime for tool-using LLM agents. Agentao separates model-generated action proposals from host-authorized execution through a layered architecture consisting of host-facing surfaces, a host contract, a runtime core, a permission-mediated tool system, and supporting subsystems for memory, replay, plugins, skills, sub-agents, and protocol integration. We describe the motivation, threat model, design goals, governance model, execution pipeline, and structured event interface of the system. Agentao does not provide formal safety guarantees; rather, it demonstrates how permissions, state, protocol boundaries, and execution traces can be made explicit runtime abstractions for building agents that are more governable, inspectable, and suitable for host-c",
+      "originalLanguage": "en",
+      "author": "Bo Jin, Qiang Jiao, Xin Tong",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/jin-bo/agentao"
+      ],
+      "publishedAt": "2026-08-17T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.13574",
+          "publishedAt": "2026-08-17T04:00:00.000Z",
+          "title": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/jin-bo/agentao"
+          ]
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种新的代理运行时架构，强调治理和可审计性，对AI代理的安全部署有实际意义，但尚未经过实践验证。",
+      "importanceReasonEn": "The paper proposes a novel agent runtime architecture emphasizing governance and auditability, with practical implications for secure deployment of AI agents, but it is not yet validated in practice.",
+      "scoringMode": "ai",
+      "titleZh": "Agentao：面向工具使用型LLM代理的受治理本地优先运行时",
+      "titleEn": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+      "summaryZh": "arXiv:2608.13574v1 公告类型：新论文。摘要：LLM代理日益作为执行系统运行，调用工具、修改本地状态、使用持久记忆并与外部协议交互。这些能力使代理有用，但也引入了与过度权限操作、弱审计性、提示注入、工具投毒和不受控制的副作用相关的风险。本文提出Agentao，一个面向工具使用型LLM代理的受治理本地优先运行时。Agentao通过分层架构将模型生成的动作提议与主机授权的执行分离，该架构包括主机面向表面、主机契约、运行时核心、权限中介工具系统，以及用于记忆、重放、插件、技能、子代理和协议集成的支持子系统。我们描述了系统的动机、威胁模型、设计目标、治理模型、执行流水线和结构化事件接口。Agentao不提供正式的安全保证；相反，它展示了如何将权限、状态、协议边界和执行轨迹作为显式运行时抽象，以构建更可治理、可检查且适合主机控制的代理。",
+      "summaryEn": "arXiv:2608.13574v1 Announce Type: new Abstract: LLM agents increasingly operate as execution systems that invoke tools, modify local state, use persistent memory, and interact with external protocols. These capabilities make agents useful, but they also introduce risks related to over-privileged actions, weak auditability, prompt injection, tool poisoning, and uncontrolled side effects. This paper presents Agentao, a governed local-first runtime for tool-using LLM agents. Agentao separates model-generated action proposals from host-authorized execution through a layered architecture consisting of host-facing surfaces, a host contract, a runtime core, a permission-mediated tool system, and supporting subsystems for memory, replay, plugins, skills, sub-agents, and protocol integration. We de",
+      "keywords": [
+        "Agentao",
+        "LLM代理",
+        "运行时",
+        "治理",
+        "权限",
+        "本地优先",
+        "工具使用",
+        "安全"
+      ],
+      "topics": [
+        "LLM代理",
+        "运行时安全",
+        "权限治理",
+        "工具使用"
+      ],
+      "models": [],
+      "detailZh": "该论文由arXiv发布，介绍了一个名为Agentao的运行时系统，旨在解决LLM代理在调用工具、修改本地状态、使用持久记忆和与外部协议交互时带来的安全风险。论文指出，这些能力虽然使代理有用，但也引入了过度权限操作、弱审计性、提示注入、工具投毒和不受控制的副作用等风险。Agentao通过分层架构将模型生成的动作提议与主机授权的执行分离，包括主机面向表面、主机契约、运行时核心、权限中介工具系统，以及支持记忆、重放、插件、技能、子代理和协议集成的子系统。论文详细描述了系统的动机、威胁模型、设计目标、治理模型、执行流水线和结构化事件接口。作者强调，Agentao不提供正式的安全保证，而是展示如何将权限、状态、协议边界和执行轨迹作为显式运行时抽象，以构建更可治理、可检查且适合主机控制的代理。该论文的发布时间为2026年8月17日，属于arXiv人工智能类别。",
+      "keyPointsZh": [
+        "Agentao是一个面向工具使用型LLM代理的受治理本地优先运行时。",
+        "它通过分层架构将模型生成的动作提议与主机授权的执行分离。",
+        "系统包括权限中介工具系统、记忆、重放、插件、技能、子代理和协议集成等子系统。",
+        "论文描述了动机、威胁模型、设计目标、治理模型、执行流水线和结构化事件接口。",
+        "Agentao不提供正式的安全保证，而是强调可治理性和可检查性。"
+      ],
+      "impactZh": "该论文提出了一个针对LLM代理安全性的新架构思路，可能影响未来代理系统的设计，特别是在权限管理和审计方面。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和团队，Agentao的架构概念可能启发更安全的代理设计，但尚未有可用的实现或工具。",
+      "howItWorksZh": "根据论文，Agentao通过分层架构实现治理：模型生成动作提议，然后由主机授权的执行层进行权限检查。具体包括主机面向表面、主机契约、运行时核心、权限中介工具系统等。执行流水线可能涉及动作提议、权限验证、执行和事件记录。但论文未提供具体配置或代码示例。",
+      "interpretationZh": "论文报告了Agentao的设计，但未提供实验评估或实际部署结果。因此，其有效性尚待验证。合理推断是，该架构旨在提高代理的可治理性，但可能增加复杂性和性能开销。",
+      "limitationsZh": "论文未提供实验数据或案例研究，仅描述了设计。Agentao不提供正式安全保证，且未提及与现有系统的比较。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.13574",
+          "publishedAt": "2026-08-17T04:00:00.000Z",
+          "title": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/jin-bo/agentao"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-17T04:00:00.000Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-17T04:00:00.000Z",
+            "label": "8/17 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-17T04:41:19.344Z",
+            "label": "8/17 12:41",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T05:22:38.688Z",
+            "label": "8/17 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f2acee4b56f09fb7",
+      "normalizedUrl": "https://arxiv.org/abs/2608.13570",
+      "originalUrl": "https://arxiv.org/abs/2608.13570",
+      "titleOriginal": "Think in Latent, Explain in Language: Self-Explainable Latent Reasoning",
+      "summaryOriginal": "arXiv:2608.13570v1 Announce Type: new Abstract: Latent reasoning has emerged as a powerful alternative to text-based Chain-of-Thought (CoT), offering significant gains in computational efficiency by compressing verbose reasoning into compact embeddings. However, compressing reasoning into the latent space renders the thinking opaque, hindering its interpretability. Current methods present a stark trade-off: they either function as unexplainable ''black boxes'' (e.g., Coconut), where the latent reasoning is not human-readable, or rely on separate post-hoc decoders for explainability (e.g., Heima), introducing architectural overhead and decoupling the explanation from the actual reasoning process. In this work, we present a unified framework for Self-Explainable Latent Reasoning (SELR) that trains a single model to perform efficient and inherently explainable latent reasoning. Our core contribution is a novel multi-task training objective that optimizes for two goals simultaneously: (1) an Answer Loss that optimizes the latent reasoning trajectory to produce accurate final answers, and (2) a CoT Loss that explicitly trains the same model to decode its own latent representations back",
+      "originalLanguage": "en",
+      "author": "Dayuan Zhao, Shengcao Cao, Yu-Xiong Wang, Liang-Yan Gui",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://jasondayuan.github.io/SELR/"
+      ],
+      "publishedAt": "2026-08-17T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.13570",
+          "publishedAt": "2026-08-17T04:00:00.000Z",
+          "title": "Think in Latent, Explain in Language: Self-Explainable Latent Reasoning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": [
+            "https://jasondayuan.github.io/SELR/"
+          ]
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种新的框架，旨在解决潜在推理的可解释性问题，通过多任务学习实现自解释，具有实际应用潜力，但摘要不完整，缺乏实验细节。",
+      "importanceReasonEn": "The paper proposes a novel framework to address interpretability in latent reasoning via multi-task learning, with practical potential, but the abstract is incomplete and lacks experimental details.",
+      "scoringMode": "ai",
+      "titleZh": "在潜在空间中思考，用语言解释：自解释潜在推理",
+      "titleEn": "Think in Latent, Explain in Language: Self-Explainable Latent Reasoning",
+      "summaryZh": "arXiv:2608.13570v1 公告类型：新论文。摘要：潜在推理已成为基于文本的思维链（CoT）的强大替代方案，通过将冗长的推理压缩为紧凑的嵌入，在计算效率上带来显著提升。然而，将推理压缩到潜在空间会使思考过程不透明，阻碍其可解释性。当前方法呈现明显的权衡：要么作为无法解释的“黑箱”（如 Coconut），其潜在推理不可读；要么依赖单独的事后解码器进行解释（如 Heima），引入架构开销并将解释与实际推理过程分离。在这项工作中，我们提出了一个自解释潜在推理（SELR）的统一框架，训练单一模型执行高效且固有可解释的潜在推理。我们的核心贡献是一种新颖的多任务训练目标，同时优化两个目标：（1）答案损失，优化潜在推理轨迹以产生准确的最终答案；（2）思维链损失，明确训练同一模型将其自身的潜在表示解码回……",
+      "summaryEn": "arXiv:2608.13570v1 Announce Type: new. Abstract: Latent reasoning has emerged as a powerful alternative to text-based Chain-of-Thought (CoT), offering significant gains in computational efficiency by compressing verbose reasoning into compact embeddings. However, compressing reasoning into the latent space renders the thinking opaque, hindering its interpretability. Current methods present a stark trade-off: they either function as unexplainable 'black boxes' (e.g., Coconut), where the latent reasoning is not human-readable, or rely on separate post-hoc decoders for explainability (e.g., Heima), introducing architectural overhead and decoupling the explanation from the actual reasoning process. In this work, we present a unified framework for Self-Explainable Latent Reasoning (SELR) that t",
+      "keywords": [
+        "latent reasoning",
+        "self-explainable",
+        "chain-of-thought",
+        "interpretability",
+        "multi-task learning"
+      ],
+      "topics": [
+        "latent reasoning",
+        "interpretability",
+        "chain-of-thought",
+        "multi-task learning"
+      ],
+      "models": [
+        "Coconut",
+        "Heima"
+      ],
+      "detailZh": "该论文提出了一种名为SELR（自解释潜在推理）的统一框架，旨在解决潜在推理中的可解释性问题。潜在推理是一种将推理过程压缩为紧凑嵌入的方法，相比传统的文本思维链（CoT）具有更高的计算效率。然而，这种压缩使得推理过程不透明，难以解释。现有方法要么是完全黑箱（如Coconut），要么依赖事后解码器（如Heima），后者增加了架构开销且解释与实际推理过程脱节。SELR通过训练单一模型同时优化两个目标：答案损失（确保潜在推理轨迹产生准确答案）和思维链损失（训练模型将自身潜在表示解码为可读的思维链）。这样，模型既能高效推理，又能提供固有可解释性。摘要在此处截断，未提供实验设置和结果。",
+      "keyPointsZh": [
+        "提出SELR框架，统一潜在推理与可解释性。",
+        "采用多任务训练目标，同时优化答案损失和思维链损失。",
+        "与Coconut和Heima等方法对比，强调单一模型无需额外解码器。",
+        "潜在推理在计算效率上优于文本CoT。"
+      ],
+      "impactZh": "该研究可能推动AI推理模型在保持高效的同时具备可解释性，对需要透明决策的领域（如医疗、金融）有潜在价值。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，该框架可能提供一种新的训练方法，使模型在推理时既能高效又能解释，减少对事后解释系统的依赖。",
+      "howItWorksZh": "SELR框架通过多任务学习实现：在训练时，模型同时优化答案损失和思维链损失。答案损失确保潜在推理轨迹导向正确结果，思维链损失则训练模型将潜在表示解码为人类可读的思维链。这样，模型在推理时先进行潜在推理，然后生成解释，无需额外解码器。",
+      "interpretationZh": "根据摘要，SELR旨在解决潜在推理的可解释性权衡。它声称通过单一模型实现自解释，但摘要未提供实验验证，因此其有效性尚待证实。",
+      "limitationsZh": "摘要不完整，未提供实验细节、数据集、基线对比或性能数据，因此无法评估其实际效果。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.13570",
+          "publishedAt": "2026-08-17T04:00:00.000Z",
+          "title": "Think in Latent, Explain in Language: Self-Explainable Latent Reasoning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": [
+            "https://jasondayuan.github.io/SELR/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-17T04:00:00.000Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-17T04:00:00.000Z",
+            "label": "8/17 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-17T04:41:19.344Z",
+            "label": "8/17 12:41",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T05:22:38.688Z",
+            "label": "8/17 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "da3b998a992bf55b",
       "normalizedUrl": "https://arxiv.org/abs/2608.13567",
@@ -36,8 +297,8 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该研究提供了关于LLM内部结构的新见解，可能影响未来模型设计和解释性研究，但尚未经过同行评审，且缺乏实际应用细节。",
-      "importanceReasonEn": "The study offers new insights into LLM internal structure, potentially influencing future model design and interpretability research, but it is not yet peer-reviewed and lacks practical application details.",
+      "importanceReasonZh": "该研究提供了关于LLM内部结构的新见解，可能影响未来模型设计和解释性研究，但尚未提供实际应用或代码，因此重要性中等偏高。",
+      "importanceReasonEn": "The study provides new insights into LLM internal structure, potentially influencing future model design and interpretability research, but lacks practical applications or code, hence moderate-high importance.",
       "scoringMode": "ai",
       "titleZh": "大语言模型中涌现出模块化认知架构",
       "titleEn": "Modular Cognitive Architecture Emerges in Large Language Models",
@@ -57,19 +318,18 @@
         "circuit analysis"
       ],
       "models": [],
-      "detailZh": "该研究来自arXiv预印本，标题为“Modular Cognitive Architecture Emerges in Large Language Models”。研究团队对46个任务进行了电路分析，这些任务覆盖四个认知领域：语言、形式推理、社会推理和物理推理。他们发现，LLM中出现了与人类大脑相似的模块化组织：在人类中依赖相同网络的任务会招募LLM中重叠的神经元，而依赖不同网络的任务则招募不同的神经元。这种趋同现象表明，模块化可能是智能系统的基本属性，而非生物大脑特有的进化偶然。研究使用了电路分析方法，通过识别任务激活的神经元模式来比较不同任务之间的重叠程度。目前该研究尚未经过同行评审，但提供了初步证据支持模块化在人工和生物智能中的普遍性。",
+      "detailZh": "该研究发表于arXiv（编号2608.13567），旨在探讨模块化组织是否是智能系统的普遍原则。研究人员对46个任务进行了电路分析，这些任务覆盖四个认知领域：语言、形式推理、社会推理和物理推理。他们发现，LLM中出现了与人类大脑相似的模块化架构：在人类中依赖相同网络的任务会招募LLM中重叠的神经元，而依赖不同网络的任务则招募不同的神经元。这种趋同演化表明，模块化可能是智能系统的基本属性，而非生物大脑特有的偶然现象。研究使用了电路分析方法，通过识别特定任务激活的神经元群体来比较不同任务之间的重叠程度。结果支持了模块化组织的存在，并暗示这种组织可能源于优化过程的共性。",
       "keyPointsZh": [
         "研究分析了46个任务，涵盖语言、形式推理、社会推理和物理推理四个认知领域。",
-        "发现LLM中任务激活的神经元模式与人类大脑网络对应。",
-        "相同领域任务激活重叠神经元，不同领域任务激活不同神经元。",
-        "模块化在LLM和大脑中的趋同出现，暗示其可能是智能的基本属性。"
+        "LLM中出现了与人类大脑相似的模块化组织：同领域任务激活重叠神经元，不同领域任务激活不同神经元。",
+        "模块化的趋同涌现表明它可能是智能系统的基本属性。"
       ],
-      "impactZh": "该研究可能推动对LLM内部机制的理解，为可解释性和模型设计提供新方向，但实际影响尚待验证。",
+      "impactZh": "该研究为理解LLM的内部工作机制提供了新视角，可能促进更可解释的模型设计，并加深对智能本质的认识。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI研究者和开发者，该研究可能启发新的模型架构或解释工具，但当前没有直接可用的技术或方法。",
+      "userImpactZh": "对于AI开发者和研究人员，该发现可能启发新的模型架构或解释工具，但当前没有直接可用的技术或代码。",
       "howItWorksZh": "",
-      "interpretationZh": "该研究报道了LLM中模块化组织的发现，但作为预印本，其结论尚未经过同行评审。虽然结果有趣，但需要更多验证。",
-      "limitationsZh": "该研究为预印本，未经同行评审；样本任务和模型可能有限；电路分析方法的可靠性需进一步确认。",
+      "interpretationZh": "该研究通过电路分析揭示了LLM中的模块化结构，但具体方法细节和实验设置未在摘要中详述。模块化与人类大脑的相似性是基于任务间神经元重叠的统计比较，属于合理推断。",
+      "limitationsZh": "摘要未提供具体实验细节、模型类型或任务列表，也未说明电路分析的具体方法。因此，结论的稳健性和普遍性尚需进一步验证。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -91,7 +351,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T04:00:00.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -102,14 +362,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T04:36:35.727Z",
-            "label": "8/17 12:36",
-            "value": 39,
+            "at": "2026-08-17T04:41:19.344Z",
+            "label": "8/17 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T05:22:38.688Z",
+            "label": "8/17 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 64,
             "reports": 1
           }
@@ -151,20 +417,20 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该研究提供了为期一年的生产LLM服务轨迹，揭示了工作负载演变和用户-模型结构，对服务系统设计和基准测试有重要价值，且将发布完整轨迹，对研究社区有实际贡献。",
-      "importanceReasonEn": "This research provides a one-year production LLM serving trace, revealing workload evolution and user-model structure, which is valuable for serving system design and benchmarking, and the release of the full trace offers practical contributions to the research community.",
+      "importanceReasonZh": "该研究提供了罕见的长期生产追踪数据，对LLM服务系统的设计和优化具有重要参考价值，且数据将公开，有助于后续研究。",
+      "importanceReasonEn": "This research provides rare long-term production trace data, valuable for designing and optimizing LLM serving systems, and the data will be public, aiding future research.",
       "scoringMode": "ai",
       "titleZh": "LLM服务的一年：工作负载演变、缓存与负载均衡",
       "titleEn": "A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing",
-      "summaryZh": "arXiv:2608.13573v1 公告类型：新论文。摘要：大语言模型（LLM）服务已成为关键云工作负载，真实轨迹对于激励和基准测试服务系统至关重要。然而，现有LLM服务工作负载研究在规模和范围上仍然有限，通常观察时间短，对用户与模型在生产环境中的交互可见性有限。因此，它们未能完全捕捉LLM服务工作负载随时间演变的方式，以及用户-模型交互如何塑造生产流量。在这项工作中，我们通过全局特征描述和对Chutes一年生产轨迹的纵向研究，进一步理解真实世界的LLM服务工作负载。与先前研究不同，我们的轨迹捕捉了跨多个模型和用户的完整生产行为，包括流行和长尾模型。我们从聚合、时间、模型级和用户级视角分析工作负载，揭示了通常隐藏在聚合视图背后的工作负载演变和用户-模型结构。为支持未来研究，我们将随论文发布完整的一年轨迹，支持下游生产行为研究。",
-      "summaryEn": "arXiv:2608.13573v1 Announce Type: new. Abstract: Large Language Model (LLM) serving has become a critical cloud workload, and realistic traces are essential for motivating and benchmarking serving systems. However, existing LLM serving workload studies remain limited in scale and scope. They often observe short time periods and provide limited visibility into how users interact with models in production. As a result, they do not fully capture how LLM serving workloads evolve over time or how user-model interactions shape production traffic. In this work, we further the understanding of real-world LLM serving workloads through both a global characterization and a longitudinal study of a one-year production trace from Chutes. Unlike prior studies, our trace captures full production behavior ",
+      "summaryZh": "本文通过Chutes平台一年的生产追踪数据，对LLM服务工作负载进行了全球特征化和纵向研究。与以往研究不同，该追踪捕获了跨多个模型和用户的完整生产行为，包括流行模型和长尾模型。研究从聚合、时间、模型和用户层面分析工作负载，揭示了通常被聚合视图隐藏的工作负载演变和用户-模型结构。论文将发布完整的一年追踪数据，以支持后续研究。",
+      "summaryEn": "This paper presents a global characterization and longitudinal study of a one-year production trace from Chutes, furthering the understanding of real-world LLM serving workloads. Unlike prior studies, the trace captures full production behavior across many models and users, including popular and long-tail models. The analysis from aggregate, temporal, model-level, and user-level perspectives reveals workload evolution and user-model structure hidden behind aggregate views. The full one-year trace will be released with the paper.",
       "keywords": [
         "LLM serving",
         "workload evolution",
         "production trace",
-        "Chutes",
         "caching",
-        "load balancing"
+        "load balancing",
+        "Chutes"
       ],
       "topics": [
         "LLM serving",
@@ -174,20 +440,19 @@
         "load balancing"
       ],
       "models": [],
-      "detailZh": "该论文来自arXiv，公告类型为新论文，编号arXiv:2608.13573v1。研究背景是LLM服务已成为关键云工作负载，但现有工作负载研究在规模和范围上有限，通常观察时间短，对用户与模型交互的可见性不足。因此，作者对Chutes平台的一年生产轨迹进行了全局特征描述和纵向研究。与先前研究不同，该轨迹捕捉了跨多个模型和用户的完整生产行为，包括流行和长尾模型。研究从聚合、时间、模型级和用户级视角分析工作负载，揭示了通常隐藏在聚合视图背后的工作负载演变和用户-模型结构。作者计划随论文发布完整的一年轨迹，以支持下游研究。论文摘要未提供具体数据或方法细节，但强调了轨迹的规模和长期性。",
+      "detailZh": "该论文针对LLM服务工作负载研究在规模和范围上的局限性，利用Chutes平台一年的生产追踪数据进行了全面分析。与以往研究相比，该追踪数据覆盖了多个模型和用户，包括流行模型和长尾模型，能够更真实地反映生产环境中的用户交互。研究从聚合、时间、模型和用户四个层面进行分析，揭示了工作负载的演变规律以及用户与模型之间的交互结构。这些发现有助于理解LLM服务中的缓存和负载均衡等关键问题。论文将发布完整的一年追踪数据，为后续研究提供支持。",
       "keyPointsZh": [
-        "对Chutes平台一年生产LLM服务轨迹进行了纵向研究。",
-        "轨迹涵盖多个模型和用户，包括流行和长尾模型。",
-        "从聚合、时间、模型级和用户级视角分析工作负载。",
-        "揭示了工作负载演变和用户-模型结构。",
-        "将发布完整的一年轨迹以支持未来研究。"
+        "基于Chutes平台一年的生产追踪数据，覆盖多个模型和用户。",
+        "从聚合、时间、模型和用户层面分析工作负载演变。",
+        "揭示流行模型和长尾模型的使用模式差异。",
+        "将发布完整追踪数据，支持后续研究。"
       ],
-      "impactZh": "该研究提供了长期、大规模的生产LLM服务轨迹，有助于理解真实工作负载的演变，对服务系统的设计、缓存策略和负载均衡优化有重要指导意义，并为基准测试提供了真实数据基础。",
-      "readerImpactZh": "",
-      "userImpactZh": "对于AI服务提供商和系统开发者，该轨迹可用于优化缓存和负载均衡策略，提高服务效率；对于研究人员，可基于公开轨迹进行下游研究。",
-      "howItWorksZh": "",
-      "interpretationZh": "根据摘要，该研究基于Chutes平台的一年生产轨迹，分析了LLM服务工作负载的演变和用户-模型结构。摘要未提供具体数据或方法细节，但声称轨迹比先前研究更全面。合理推断是，该研究可能揭示了工作负载的时间模式、模型流行度分布和用户行为特征，但具体发现需待论文全文。",
-      "limitationsZh": "摘要未提供具体数据或方法细节，因此无法验证其声称的全面性。轨迹仅来自单一平台（Chutes），可能不代表所有LLM服务场景。",
+      "impactZh": "该研究为LLM服务系统提供了长期生产数据，有助于改进缓存策略和负载均衡算法，提升服务效率和用户体验。",
+      "readerImpactZh": "对于普通用户，该研究可能间接改善LLM服务的响应速度和稳定性，但短期内无直接影响。",
+      "userImpactZh": "对于AI开发者和运维团队，该研究提供的生产数据可用于优化服务架构，改进缓存和负载均衡策略，降低成本并提高服务质量。",
+      "howItWorksZh": "研究通过分析Chutes平台一年的生产追踪数据，从多个维度（如时间、模型、用户）进行统计和建模，揭示工作负载的特征和演变。具体方法包括聚合统计、时间序列分析、模型级和用户级的行为分析等。",
+      "interpretationZh": "该研究提供了对LLM生产工作负载的深入理解，但具体发现和结论需待论文全文发布后确认。目前仅基于摘要，无法评估其分析方法的细节和结论的可靠性。",
+      "limitationsZh": "目前仅提供摘要，缺乏具体数据和分析细节，无法验证其结论的准确性。此外，追踪数据来自单一平台，可能不代表所有LLM服务场景。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -209,7 +474,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T04:00:00.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -220,14 +485,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T04:36:35.727Z",
-            "label": "8/17 12:36",
-            "value": 39,
+            "at": "2026-08-17T04:41:19.344Z",
+            "label": "8/17 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T05:22:38.688Z",
+            "label": "8/17 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 64,
             "reports": 1
           }
@@ -324,7 +595,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T04:00:00.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -335,14 +606,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T04:36:35.727Z",
-            "label": "8/17 12:36",
-            "value": 39,
+            "at": "2026-08-17T04:41:19.344Z",
+            "label": "8/17 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T05:22:38.688Z",
+            "label": "8/17 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 64,
             "reports": 1
           }
@@ -465,7 +742,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T04:00:00.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -476,14 +753,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T04:36:35.727Z",
-            "label": "8/17 12:36",
-            "value": 39,
+            "at": "2026-08-17T04:41:19.344Z",
+            "label": "8/17 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T05:22:38.688Z",
+            "label": "8/17 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 64,
             "reports": 1
           }
@@ -628,7 +911,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T23:59:37.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -639,38 +922,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T00:51:52.742Z",
+            "at": "2026-08-17T00:51:40.004Z",
             "label": "8/17 08:51",
-            "value": 21,
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-17T01:44:08.485Z",
-            "label": "8/17 09:44",
-            "value": 28,
+            "at": "2026-08-17T01:43:43.009Z",
+            "label": "8/17 09:43",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-17T02:36:24.227Z",
-            "label": "8/17 10:36",
-            "value": 35,
+            "at": "2026-08-17T02:35:46.013Z",
+            "label": "8/17 10:35",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-17T03:28:39.970Z",
-            "label": "8/17 11:28",
-            "value": 42,
+            "at": "2026-08-17T03:27:49.018Z",
+            "label": "8/17 11:27",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-17T04:20:55.712Z",
-            "label": "8/17 12:20",
-            "value": 49,
+            "at": "2026-08-17T04:19:52.022Z",
+            "label": "8/17 12:19",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T05:11:55.027Z",
+            "label": "8/17 13:11",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 55,
             "reports": 1
           }
@@ -873,7 +1162,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T22:00:39.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 89,
         "peak": 89,
         "history": [
@@ -884,50 +1173,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T22:54:43.056Z",
+            "at": "2026-08-16T22:54:21.114Z",
             "label": "8/17 06:54",
-            "value": 36,
+            "value": 35,
             "reports": 2
           },
           {
-            "at": "2026-08-16T23:48:47.113Z",
+            "at": "2026-08-16T23:48:03.229Z",
             "label": "8/17 07:48",
-            "value": 43,
+            "value": 42,
             "reports": 2
           },
           {
-            "at": "2026-08-17T00:42:51.170Z",
-            "label": "8/17 08:42",
-            "value": 51,
+            "at": "2026-08-17T00:41:45.344Z",
+            "label": "8/17 08:41",
+            "value": 48,
             "reports": 2
           },
           {
-            "at": "2026-08-17T01:36:55.227Z",
-            "label": "8/17 09:36",
-            "value": 58,
+            "at": "2026-08-17T01:35:27.458Z",
+            "label": "8/17 09:35",
+            "value": 55,
             "reports": 2
           },
           {
-            "at": "2026-08-17T02:30:59.284Z",
-            "label": "8/17 10:30",
-            "value": 66,
+            "at": "2026-08-17T02:29:09.573Z",
+            "label": "8/17 10:29",
+            "value": 62,
             "reports": 2
           },
           {
-            "at": "2026-08-17T03:25:03.341Z",
-            "label": "8/17 11:25",
-            "value": 74,
+            "at": "2026-08-17T03:22:51.688Z",
+            "label": "8/17 11:22",
+            "value": 69,
             "reports": 2
           },
           {
-            "at": "2026-08-17T04:19:07.398Z",
-            "label": "8/17 12:19",
-            "value": 81,
+            "at": "2026-08-17T04:16:33.802Z",
+            "label": "8/17 12:16",
+            "value": 75,
             "reports": 2
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T05:10:15.917Z",
+            "label": "8/17 13:10",
+            "value": 82,
+            "reports": 2
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 89,
             "reports": 2
           }
@@ -1023,7 +1318,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T20:57:04.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1034,56 +1329,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T21:52:11.495Z",
-            "label": "8/17 05:52",
-            "value": 20,
+            "at": "2026-08-16T21:51:45.403Z",
+            "label": "8/17 05:51",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-16T22:47:18.990Z",
-            "label": "8/17 06:47",
-            "value": 25,
+            "at": "2026-08-16T22:46:26.806Z",
+            "label": "8/17 06:46",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-16T23:42:26.485Z",
-            "label": "8/17 07:42",
-            "value": 31,
+            "at": "2026-08-16T23:41:08.209Z",
+            "label": "8/17 07:41",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-17T00:37:33.980Z",
-            "label": "8/17 08:37",
-            "value": 36,
+            "at": "2026-08-17T00:35:49.612Z",
+            "label": "8/17 08:35",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-17T01:32:41.475Z",
-            "label": "8/17 09:32",
-            "value": 42,
+            "at": "2026-08-17T01:30:31.016Z",
+            "label": "8/17 09:30",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-17T02:27:48.970Z",
-            "label": "8/17 10:27",
-            "value": 47,
+            "at": "2026-08-17T02:25:12.419Z",
+            "label": "8/17 10:25",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-17T03:22:56.465Z",
-            "label": "8/17 11:22",
-            "value": 53,
+            "at": "2026-08-17T03:19:53.822Z",
+            "label": "8/17 11:19",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-17T04:18:03.960Z",
-            "label": "8/17 12:18",
-            "value": 58,
+            "at": "2026-08-17T04:14:35.225Z",
+            "label": "8/17 12:14",
+            "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T05:09:16.628Z",
+            "label": "8/17 13:09",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 64,
             "reports": 1
           }
@@ -1177,7 +1478,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T20:32:01.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1188,56 +1489,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T21:29:55.495Z",
+            "at": "2026-08-16T21:29:12.703Z",
             "label": "8/17 05:29",
-            "value": 19,
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-16T22:27:49.990Z",
-            "label": "8/17 06:27",
-            "value": 23,
+            "at": "2026-08-16T22:26:24.406Z",
+            "label": "8/17 06:26",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-16T23:25:44.485Z",
-            "label": "8/17 07:25",
-            "value": 28,
+            "at": "2026-08-16T23:23:36.109Z",
+            "label": "8/17 07:23",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-17T00:23:38.980Z",
-            "label": "8/17 08:23",
-            "value": 32,
+            "at": "2026-08-17T00:20:47.812Z",
+            "label": "8/17 08:20",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T01:21:33.475Z",
-            "label": "8/17 09:21",
-            "value": 37,
+            "at": "2026-08-17T01:17:59.516Z",
+            "label": "8/17 09:17",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-17T02:19:27.970Z",
-            "label": "8/17 10:19",
-            "value": 42,
+            "at": "2026-08-17T02:15:11.219Z",
+            "label": "8/17 10:15",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-17T03:17:22.465Z",
-            "label": "8/17 11:17",
-            "value": 46,
+            "at": "2026-08-17T03:12:22.922Z",
+            "label": "8/17 11:12",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-17T04:15:16.960Z",
-            "label": "8/17 12:15",
+            "at": "2026-08-17T04:09:34.625Z",
+            "label": "8/17 12:09",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-17T05:06:46.328Z",
+            "label": "8/17 13:06",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 55,
             "reports": 1
           }
@@ -1333,7 +1640,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-16T16:53:51.000Z",
-        "endedAt": "2026-08-17T05:13:11.455Z",
+        "endedAt": "2026-08-17T06:03:58.032Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1344,68 +1651,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-16T18:01:03.768Z",
-            "label": "8/17 02:01",
+            "at": "2026-08-16T18:05:40.730Z",
+            "label": "8/17 02:05",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-16T19:08:16.537Z",
-            "label": "8/17 03:08",
+            "at": "2026-08-16T19:17:30.460Z",
+            "label": "8/17 03:17",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-16T20:15:29.305Z",
-            "label": "8/17 04:15",
+            "at": "2026-08-16T20:29:20.190Z",
+            "label": "8/17 04:29",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-16T21:22:42.074Z",
-            "label": "8/17 05:22",
+            "at": "2026-08-16T21:41:09.920Z",
+            "label": "8/17 05:41",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-16T22:29:54.843Z",
-            "label": "8/17 06:29",
+            "at": "2026-08-16T22:52:59.650Z",
+            "label": "8/17 06:52",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-16T23:37:07.611Z",
-            "label": "8/17 07:37",
+            "at": "2026-08-17T00:04:49.381Z",
+            "label": "8/17 08:04",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-17T00:44:20.380Z",
-            "label": "8/17 08:44",
+            "at": "2026-08-17T01:16:39.111Z",
+            "label": "8/17 09:16",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-17T01:51:33.149Z",
-            "label": "8/17 09:51",
+            "at": "2026-08-17T02:28:28.841Z",
+            "label": "8/17 10:28",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-17T02:58:45.917Z",
-            "label": "8/17 10:58",
+            "at": "2026-08-17T03:40:18.571Z",
+            "label": "8/17 11:40",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-17T04:05:58.686Z",
-            "label": "8/17 12:05",
+            "at": "2026-08-17T04:52:08.301Z",
+            "label": "8/17 12:52",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-17T05:13:11.455Z",
-            "label": "8/17 13:13",
+            "at": "2026-08-17T06:03:58.032Z",
+            "label": "8/17 14:03",
             "value": 58,
             "reports": 1
           }
