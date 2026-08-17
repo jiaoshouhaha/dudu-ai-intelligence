@@ -10,7 +10,7 @@ import { scoreEvent } from '../src/lib/score.mjs';
 import { aiConfig, enrichEvent, finalizeFallback, validateAiPayload } from '../src/lib/ai-client.mjs';
 import { runPipeline } from '../src/lib/pipeline.mjs';
 import { translateEventToChinese } from '../src/lib/translate.mjs';
-import { dateKeyInTimeZone, extractImageUrls, extractResourceLinks, titleSimilarity } from '../src/lib/utils.mjs';
+import { dateKeyInTimeZone, extractImageUrls, extractResourceLinks, modelEntities, titleSimilarity } from '../src/lib/utils.mjs';
 import { parseAihotItems } from '../src/lib/source-adapters.mjs';
 
 const fixture = await fs.readFile(new URL('./fixtures/sample-rss.xml', import.meta.url), 'utf8');
@@ -59,6 +59,20 @@ test('merges cross-language model release reports and prefers an official link',
   const [event] = dedupeItems([english, chinese]);
   assert.equal(event.sources.length, 2);
   assert.equal(event.originalUrl, 'https://qwen.ai/blog?id=qwen3.8');
+});
+
+test('does not confuse a Max suffix with the MiniMax brand', () => {
+  assert.ok(modelEntities('Qwen3.8-Max 发布').has('qwen3.8-max'));
+  assert.ok(!modelEntities('MiniMax H3 正式发布').has('qwen3.8-max'));
+});
+
+test('does not merge separate releases merely because they share a model company', () => {
+  const qwen = normalizeItem({ ...source, sourceId: 'qwen', title: 'Qwen3.8-Max releases open weights', description: 'Qwen flagship.', url: 'https://qwen.ai/qwen38', publishedAt: '2026-08-03T02:00:00Z' });
+  const minimax = normalizeItem({ ...source, sourceId: 'minimax', title: 'MiniMax H3 launches a video model', description: 'MiniMax flagship.', url: 'https://minimax.io/h3', publishedAt: '2026-08-03T03:00:00Z' });
+  assert.equal(dedupeItems([qwen, minimax]).length, 2);
+  const first = normalizeItem({ ...source, sourceId: 'qwen', title: 'Qwen3.8-Max releases open weights', description: 'Qwen flagship.', url: 'https://qwen.ai/qwen38', publishedAt: '2026-08-03T02:00:00Z' });
+  const second = normalizeItem({ ...source, sourceId: 'qwen', title: 'Qwen Image 3.0 launches for creators', description: 'Qwen image model.', url: 'https://qwen.ai/image3', publishedAt: '2026-08-05T02:00:00Z' });
+  assert.equal(dedupeItems([first, second]).length, 2);
 });
 
 test('rule score is bounded and includes a transparent reason', () => {
@@ -188,6 +202,9 @@ test('pipeline isolates a failed source and writes valid data files', async () =
   const archive = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'archive.json'), 'utf8'));
   assert.equal(archive.retentionDays, 180);
   assert.equal(archive.months[0].days[0].date, '2026-08-01');
+  const topicIndex = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'topic-index.json'), 'utf8'));
+  assert.equal(topicIndex.audit.totalItems, 3);
+  assert.ok(topicIndex.topics.every((topic) => topic.count === new Set(topic.itemIds).size));
   const generatedItem = output.items[0];
   assert.ok(generatedItem.heat.history.length >= 2);
   assert.equal(generatedItem.heat.history[0].at, generatedItem.publishedAt);

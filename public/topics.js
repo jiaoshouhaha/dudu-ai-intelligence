@@ -1,11 +1,66 @@
 const $ = (selector) => document.querySelector(selector);
-const groups = [
-  { title: '公司与模型', note: '按厂商与模型系追踪：谁发布了什么，又赢了哪一局', items: [['OpenAI / ChatGPT','openai','OpenAI、ChatGPT、Codex 与 Sora'],['Anthropic / Claude','anthropic','Claude 系列模型与安全研究'],['Google / Gemini','google','Gemini、DeepMind 与多模态产品'],['DeepSeek','deepseek','开源模型、API 与推理能力'],['通义千问 Qwen','qwen','Qwen 系列模型与开源生态'],['Kimi / 月之暗面','kimi','长上下文、Agent 与产品迭代'],['MiniMax','minimax','多模态模型、语音与视频'],['智谱 GLM','glm','GLM 开源模型与企业应用'],['xAI / Grok','grok','Grok、X 平台与实时信息'],['Meta / Llama','llama','Llama 开源模型与生态']] },
-  { title: '技术方向', note: '按问题和技术路径深挖，适合从主题切入阅读', items: [['Agent 智能体','agent','自主执行、工具调用与多智能体'],['AI 编码','coding','编程代理、代码生成与开发流程'],['推理能力','reasoning','思维链、测试时计算与复杂问题'],['多模态','multimodal','文本、图像、视频、音频协同'],['AI 视频','video','视频生成、编辑与世界模型'],['具身智能','embodied','机器人、物理世界与行动'],['开源生态','open-source','权重、许可证、框架与社区'],['部署工程','engineering','推理服务、成本与可观测性'],['安全对齐','safety','评测、攻击、防护与治理'],['MCP 与工具调用','mcp','工具协议、插件和本地工作流']] },
-  { title: '内容形态', note: '按阅读目的浏览：发布、论文、教程、观点和政策', items: [['模型发布','model-releases','新模型、版本、权重与 API'],['产品更新','product-updates','应用功能、平台和商业化'],['论文研究','papers','论文、实验与研究解读'],['评测基准','benchmarks','排行榜、基准和实测对比'],['教程实践','tutorials','可复用配置、提示词与干货'],['大佬观点','opinions','研究者、开发者和行业人物'],['现象与趋势','trends','生态变化、用户实践与趋势'],['政策监管','policy','法规、治理、安全与合规']] }
-];
-const menu = $('#menuToggle'); const sidebar = $('#sidebar'); const backdrop = $('#sidebarBackdrop');
-menu.addEventListener('click', () => { const open = !sidebar.classList.contains('open'); sidebar.classList.toggle('open', open); backdrop.hidden = !open; }); backdrop.addEventListener('click', () => { sidebar.classList.remove('open'); backdrop.hidden = true; });
-const trends = await fetch('./data/trends.json').then((response) => response.ok ? response.json() : {}).catch(() => ({}));
-const counts = new Map([...(trends.models || []), ...(trends.topics || [])].map((item) => [String(item.name).toLowerCase(), item.count]));
-$('#topicGroups').replaceChildren(...groups.map((group) => { const section = document.createElement('section'); section.className = 'topic-group'; const header = document.createElement('header'); header.innerHTML = `<h2>${group.title}</h2><p>${group.note}</p>`; section.append(header); const grid = document.createElement('div'); grid.className = 'topic-grid'; for (const [name, slug, description] of group.items) { const link = document.createElement('a'); link.href = `./index.html?q=${encodeURIComponent(name)}`; link.className = 'topic-card'; link.innerHTML = `<strong>${name}</strong><span>${description}</span><small>${counts.get(name.toLowerCase()) || '—'} 条相关情报 · 查看时间线 →</small>`; grid.append(link); } section.append(grid); return section; }));
+const menu = $('#menuToggle');
+const sidebar = $('#sidebar');
+const backdrop = $('#sidebarBackdrop');
+
+function closeMenu() {
+  sidebar.classList.remove('open');
+  backdrop.hidden = true;
+  menu.setAttribute('aria-expanded', 'false');
+}
+menu.addEventListener('click', () => {
+  const open = !sidebar.classList.contains('open');
+  sidebar.classList.toggle('open', open);
+  backdrop.hidden = !open;
+  menu.setAttribute('aria-expanded', String(open));
+});
+backdrop.addEventListener('click', closeMenu);
+
+function makeTopicCard(topic) {
+  const card = document.createElement('article');
+  card.className = `topic-card${topic.officialUrl ? ' company-card' : ''}`;
+  const main = document.createElement('a');
+  main.className = 'topic-card-main';
+  main.href = `./index.html?theme=${encodeURIComponent(topic.id)}`;
+  const name = document.createElement('strong'); name.textContent = topic.name;
+  const description = document.createElement('span'); description.textContent = topic.description;
+  const count = document.createElement('small'); count.textContent = `查看 ${topic.count} 条本站情报 →`;
+  main.append(name, description, count);
+  card.append(main);
+  if (topic.officialUrl) {
+    const official = document.createElement('a');
+    official.className = 'official-link';
+    official.href = topic.officialUrl;
+    official.target = '_blank';
+    official.rel = 'noopener noreferrer';
+    official.textContent = '官网 ↗';
+    official.setAttribute('aria-label', `打开 ${topic.name} 官网`);
+    card.append(official);
+  }
+  return card;
+}
+
+function renderGroups(data) {
+  const topicsByGroup = Map.groupBy(data.topics || [], (topic) => topic.group);
+  $('#topicGroups').replaceChildren(...(data.groups || []).map((group) => {
+    const section = document.createElement('section'); section.className = 'topic-group';
+    const header = document.createElement('header');
+    const title = document.createElement('h2'); title.textContent = group.title;
+    const note = document.createElement('p'); note.textContent = group.note;
+    header.append(title, note); section.append(header);
+    const grid = document.createElement('div'); grid.className = 'topic-grid';
+    grid.replaceChildren(...(topicsByGroup.get(group.id) || []).map(makeTopicCard));
+    section.append(grid); return section;
+  }));
+}
+
+try {
+  const response = await fetch('./data/topic-index.json');
+  if (!response.ok) throw new Error(`主题索引请求失败（${response.status}）`);
+  const data = await response.json();
+  renderGroups(data);
+  $('#topicState').textContent = `已整理 ${data.audit?.totalItems || 0} 条新闻 · 更新于 ${new Date(data.generatedAt).toLocaleString('zh-CN', { hour12: false })}`;
+} catch (error) {
+  $('#topicState').classList.add('error');
+  $('#topicState').textContent = `主题索引暂不可用：${error.message}。新闻时间线仍可正常浏览。`;
+}

@@ -67,7 +67,7 @@ export function tokenizeTitle(value) {
 }
 
 const MODEL_ENTITY_PATTERNS = [
-  ['qwen3.8-max', /qwen\s*3[._-]?8\s*[- ]?max|qwen3\.8|max/i],
+  ['qwen3.8-max', /qwen\s*3[._-]?8\s*[- ]?max|qwen3\.8/i],
   ['qwen', /qwen|通义千问/i],
   ['deepseek', /deepseek|深度求索/i],
   ['gpt', /\bgpt(?:[- .]?\d+(?:\.\d+)?)?|chatgpt|codex|openai/i],

@@ -7,8 +7,8 @@ export function dedupeItems(items, threshold = 0.72) {
       if (event.normalizedUrl === item.normalizedUrl || event.fingerprint === item.fingerprint) return true;
       const similarity = titleSimilarity(event.titleOriginal, item.title);
       if (similarity.score >= Math.min(threshold, 0.64) && similarity.intersection >= 3) return true;
-      const sharedModels = [...modelEntities(event.titleOriginal)].some((name) => modelEntities(item.title).has(name));
-      return sharedModels && hasReleaseSignal(event.titleOriginal) && hasReleaseSignal(item.title);
+      const sharedSpecificModel = [...modelEntities(event.titleOriginal)].some((name) => /\d/.test(name) && modelEntities(item.title).has(name));
+      return sharedSpecificModel && hasReleaseSignal(event.titleOriginal) && hasReleaseSignal(item.title);
     });
 
     const source = {

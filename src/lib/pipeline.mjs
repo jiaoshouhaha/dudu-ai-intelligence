@@ -88,7 +88,7 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
     if (left.id === right.id || left.normalizedUrl === right.normalizedUrl) return true;
     const similarity = titleSimilarity(left.titleOriginal, right.titleOriginal);
     if (similarity.score >= 0.64 && similarity.intersection >= 3) return true;
-    return [...modelEntities(left.titleOriginal)].some((name) => modelEntities(right.titleOriginal).has(name)) &&
+    return [...modelEntities(left.titleOriginal)].some((name) => /\d/.test(name) && modelEntities(right.titleOriginal).has(name)) &&
       hasReleaseSignal(left.titleOriginal) && hasReleaseSignal(right.titleOriginal);
   };
   const mergeReports = (old, incoming) => {

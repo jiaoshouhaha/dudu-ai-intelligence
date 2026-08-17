@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { clamp, dateKeyInTimeZone } from './utils.mjs';
+import { buildTopicIndex } from './topic-taxonomy.mjs';
 
 export async function readExistingData(dataDir) {
   try {
@@ -57,6 +58,7 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
   const indexItems = retained
     .filter((item) => !(item.contentType === 'paper' && item.importance < 78))
     .slice(0, 240);
+  const topicIndex = buildTopicIndex(indexItems, status.finishedAt);
   const categories = Object.entries(Object.groupBy(retained.slice(0, 120), (item) => item.category))
     .map(([name, categoryItems]) => ({ name, count: categoryItems.length }))
     .sort((a, b) => b.count - a.count);
@@ -73,6 +75,7 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
 
   await Promise.all([
     atomicJson(path.join(dataDir, 'index.json'), { generatedAt: status.finishedAt, items: indexItems }),
+    atomicJson(path.join(dataDir, 'topic-index.json'), topicIndex),
     atomicJson(path.join(dataDir, 'search.json'), { generatedAt: status.finishedAt, items: retained }),
     atomicJson(path.join(dataDir, 'seen.json'), { generatedAt: status.finishedAt, retentionDays: 7, events: seenEvents }),
     atomicJson(path.join(dataDir, 'archive.json'), archive),
