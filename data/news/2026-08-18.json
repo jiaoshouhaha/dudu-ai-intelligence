@@ -1,7 +1,259 @@
 {
-  "generatedAt": "2026-08-18T03:04:16.290Z",
+  "generatedAt": "2026-08-18T04:11:06.184Z",
   "date": "2026-08-18",
   "items": [
+    {
+      "id": "0e2f9ef098965972",
+      "normalizedUrl": "https://arxiv.org/abs/2608.14550",
+      "originalUrl": "https://arxiv.org/abs/2608.14550",
+      "titleOriginal": "FLOPs vs Real Work: The Importance of Replication in AI Efficiency Assessment",
+      "summaryOriginal": "arXiv:2608.14550v1 Announce Type: new Abstract: AI efficiency has recently taken the spotlight in both academy and industry due to massive model scales, high energy demands, and environmental costs. While reporting Floating Point Operations (FLOPs) is a traditional approach for assessing computational costs, the relationship between FLOPs and execution time is not straightforward, as layers with the same number of FLOPs may not have the same execution time because some operations are more easily parallelized than others. This paper sets out to replicate the original experiments from a study that proposed the $\\alpha-FLOPs$ estimation formula to verify whether the results remain applicable on newer, more powerful hardware. During the replication process, we identify limitations in the replication materials provided by the original study, including a lack of specific dependency details and transparency regarding regression data. Our results validate the thesis that raw FLOPs alone are not an appropriate metric for execution time, as spatial dimensions remain more easily parallelized than kernel dimensions. However, fine-grained measurements reveal that the relationship is much less s",
+      "originalLanguage": "en",
+      "author": "Enrique Barba Roque, Lu\\'is Cruz",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-18T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.14550",
+          "publishedAt": "2026-08-18T04:00:00.000Z",
+          "title": "FLOPs vs Real Work: The Importance of Replication in AI Efficiency Assessment",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究通过复制实验验证了FLOPs作为效率指标的局限性，对AI硬件评估和模型优化有实际意义，且提供了复制过程中的具体问题，对研究可重复性有贡献。",
+      "importanceReasonEn": "The study validates the limitations of FLOPs as an efficiency metric through replication, offering practical implications for hardware evaluation and model optimization, and contributes to research reproducibility by documenting replication issues.",
+      "scoringMode": "ai",
+      "titleZh": "FLOPs与实际工作：复制在AI效率评估中的重要性",
+      "titleEn": "FLOPs vs Real Work: The Importance of Replication in AI Efficiency Assessment",
+      "summaryZh": "arXiv:2608.14550v1 公告类型：新论文。摘要：AI效率近来因模型规模庞大、能源需求高和环境成本而受到学术界和工业界的关注。虽然报告浮点运算次数（FLOPs）是评估计算成本的传统方法，但FLOPs与执行时间之间的关系并不直接，因为具有相同FLOPs的层可能执行时间不同，因为某些操作更容易并行化。本文旨在复制一项提出α-FLOPs估计公式的研究的原始实验，以验证结果在更新的、更强大的硬件上是否仍然适用。在复制过程中，我们发现了原始研究提供的复制材料的局限性，包括缺乏具体的依赖项细节和回归数据的透明度。我们的结果验证了原始FLOPs本身并不是执行时间的合适指标，因为空间维度比内核维度更容易并行化。然而，细粒度测量表明，这种关系远没有那么简单。",
+      "summaryEn": "arXiv:2608.14550v1 Announce Type: new. Abstract: AI efficiency has recently taken the spotlight due to massive model scales, high energy demands, and environmental costs. While reporting FLOPs is traditional for assessing computational costs, the relationship between FLOPs and execution time is not straightforward, as layers with the same FLOPs may not have the same execution time because some operations are more easily parallelized. This paper replicates the original experiments from a study proposing the α-FLOPs estimation formula to verify whether results remain applicable on newer, more powerful hardware. During replication, we identify limitations in the replication materials, including lack of dependency details and transparency regarding regression data. Our results validate that ra",
+      "keywords": [
+        "FLOPs",
+        "执行时间",
+        "复制",
+        "α-FLOPs",
+        "并行化"
+      ],
+      "topics": [
+        "AI效率",
+        "FLOPs",
+        "复制研究",
+        "硬件性能"
+      ],
+      "models": [],
+      "detailZh": "该论文针对AI效率评估中常用的FLOPs指标进行了批判性检验。作者指出，FLOPs虽然被广泛用于衡量计算成本，但实际执行时间受并行化程度影响，相同FLOPs的层可能执行时间不同。为了验证先前提出的α-FLOPs估计公式在新型硬件上的适用性，作者进行了复制实验。复制过程中，他们发现原始研究提供的材料存在不足，例如缺少依赖项的具体版本和回归数据的透明度。实验结果证实，原始FLOPs不能准确预测执行时间，空间维度（如特征图尺寸）比内核维度（如卷积核大小）更容易并行化，因此对执行时间的影响不同。细粒度测量进一步表明，FLOPs与执行时间的关系比简单公式更复杂。该研究强调了复制研究在验证科学结论中的重要性，并为AI效率评估提供了更细致的视角。",
+      "keyPointsZh": [
+        "FLOPs不是执行时间的可靠指标，因为并行化程度不同。",
+        "复制实验发现原始研究材料缺乏依赖项细节和回归数据透明度。",
+        "空间维度比内核维度更容易并行化，影响执行时间。",
+        "细粒度测量显示FLOPs与执行时间的关系复杂。"
+      ],
+      "impactZh": "该研究对AI硬件评估和模型优化有实际意义，提醒研究人员和工程师不要仅依赖FLOPs来估计性能，而应考虑实际执行时间和并行化特性。同时，它强调了复制研究在科学验证中的重要性，有助于提高研究的可重复性。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，该研究提示在模型设计和硬件选型时，应结合基准测试和实际执行时间，而非仅依赖FLOPs。复制过程中发现的材料问题也提醒在使用他人研究时需谨慎检查依赖和数据的完整性。",
+      "howItWorksZh": "论文通过复制原始实验，在更新的硬件上运行相同的模型和测量方法，比较FLOPs与实际执行时间。他们可能使用了性能分析工具来测量各层的执行时间，并分析了不同维度（空间和内核）对并行化的影响。具体步骤包括获取原始代码、安装依赖、运行实验、收集数据，并与原始结果对比。",
+      "interpretationZh": "该研究基于复制实验的结果，证实了FLOPs作为执行时间指标的局限性。这是基于实际测量的事实。然而，论文中提到的α-FLOPs公式的具体细节和复制实验的完整方法未在摘要中提供，因此我们只能推断其结论。复制材料的不足是作者观察到的，但具体缺失内容未详述。",
+      "limitationsZh": "摘要未提供复制实验的具体细节，如硬件配置、模型架构、测量工具等。原始研究的α-FLOPs公式的具体形式也未说明。因此，我们无法评估复制实验的完整性和准确性。此外，论文可能未涵盖所有类型的操作或硬件。",
+      "actionStepsZh": [
+        "在评估模型效率时，结合基准测试和实际执行时间，而非仅依赖FLOPs。",
+        "在复现研究时，确保获取完整的依赖项和回归数据，以提高可重复性。",
+        "关注空间维度和内核维度对并行化的不同影响，优化模型结构。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.14550",
+          "publishedAt": "2026-08-18T04:00:00.000Z",
+          "title": "FLOPs vs Real Work: The Importance of Replication in AI Efficiency Assessment",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-18T04:00:00.000Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-18T04:00:00.000Z",
+            "label": "8/18 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d777f0d1d66fbc0e",
+      "normalizedUrl": "https://arxiv.org/abs/2608.14552",
+      "originalUrl": "https://arxiv.org/abs/2608.14552",
+      "titleOriginal": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
+      "summaryOriginal": "arXiv:2608.14552v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly evaluated and used in medicine, but clinical usefulness depends on answer accuracy and whether confidence tracks evidence quality and uncertainty. We developed a controlled, psychophysics-inspired clinical benchmark to test diagnostic choice and confidence behavior in a medical LLM. The benchmark focused on probable Alzheimer-type neurocognitive disorder (AT-NCD) versus depression-related cognitive impairment (DRCI). We generated 45 synthetic vignettes varying evidence strength, conflicting evidence, and missing information. Each vignette was presented under three prompt variants, yielding 135 trials. In a pilot run with gpt-4.1-nano, all trials produced valid structured outputs. Across forced-choice trials, diagnostic accuracy was 93.5%, mean confidence was 78.4%, and AUROC2 was 0.876. Confidence increased with evidence distance from the diagnostic boundary, decreased when information was missing, and remained higher on correct than incorrect trials after adjustment for evidence strength and prompt format. These findings indicate partial metacognitive sensitivity rather than globally unin",
+      "originalLanguage": "en",
+      "author": "Ahmad Nazzal",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-18T04:00:00.000Z",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.14552",
+          "publishedAt": "2026-08-18T04:00:00.000Z",
+          "title": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究首次使用受控心理物理学基准评估LLM在医学诊断中的置信度校准，对AI医疗应用的可信度有重要意义。",
+      "importanceReasonEn": "This study is the first to use a controlled psychophysics-inspired benchmark to evaluate confidence calibration in medical diagnosis, which is important for the trustworthiness of AI in healthcare.",
+      "scoringMode": "ai",
+      "titleZh": "大型语言模型在医学推理中表现出元认知敏感性",
+      "titleEn": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
+      "summaryZh": "一项新研究开发了受心理物理学启发的临床基准，测试医学LLM的诊断准确性和置信度校准。在45个合成病例中，gpt-4.1-nano的诊断准确率为93.5%，平均置信度为78.4%，AUROC2为0.876。置信度随证据强度变化，缺失信息时降低，正确试验时更高，表明部分元认知敏感性。",
+      "summaryEn": "A new study developed a psychophysics-inspired clinical benchmark to test diagnostic accuracy and confidence calibration of a medical LLM. Across 45 synthetic vignettes, gpt-4.1-nano achieved 93.5% diagnostic accuracy, mean confidence 78.4%, and AUROC2 0.876. Confidence varied with evidence strength, decreased with missing information, and was higher on correct trials, indicating partial metacognitive sensitivity.",
+      "keywords": [
+        "LLM",
+        "medical reasoning",
+        "metacognition",
+        "confidence calibration",
+        "Alzheimer's",
+        "depression"
+      ],
+      "topics": [
+        "LLM",
+        "医疗",
+        "元认知",
+        "置信度校准"
+      ],
+      "models": [
+        "gpt-4.1-nano"
+      ],
+      "detailZh": "该研究由arXiv预印本发布，开发了一个受心理物理学启发的临床基准，用于测试医学LLM的诊断选择行为和置信度。基准聚焦于阿尔茨海默型神经认知障碍（AT-NCD）与抑郁相关认知障碍（DRCI）的鉴别诊断。研究者生成了45个合成病例，系统变化证据强度、冲突证据和缺失信息，每个病例以三种提示变体呈现，共135个试验。在gpt-4.1-nano的试点运行中，所有试验均产生有效的结构化输出。在强制选择试验中，诊断准确率为93.5%，平均置信度为78.4%，AUROC2为0.876。置信度随证据距离诊断边界的增加而增加，信息缺失时降低，且在正确试验中高于错误试验（调整证据强度和提示格式后）。这些发现表明LLM具有部分元认知敏感性，而非全局性的不敏感。",
+      "keyPointsZh": [
+        "开发了受控的临床基准，包含45个合成病例和135个试验。",
+        "gpt-4.1-nano的诊断准确率为93.5%，平均置信度78.4%。",
+        "置信度随证据强度变化，缺失信息时降低，正确试验时更高。",
+        "结果表明LLM具有部分元认知敏感性。"
+      ],
+      "impactZh": "该研究为评估LLM在医疗决策中的可靠性提供了新方法，有助于建立对AI辅助诊断的信任。",
+      "readerImpactZh": "对于普通公众，该研究可能意味着未来AI辅助诊断系统将更可靠，但尚处于早期阶段，实际应用还需更多验证。",
+      "userImpactZh": "对于AI开发者和医疗AI团队，该研究提供了一种评估模型置信度校准的基准方法，可用于改进模型的可信度和安全性。",
+      "howItWorksZh": "研究者设计了45个合成临床病例，系统变化证据强度、冲突证据和缺失信息。每个病例以三种提示变体呈现，共135个试验。模型需要做出诊断选择并给出置信度评分。通过分析置信度与证据特征和诊断正确性的关系，评估元认知敏感性。",
+      "interpretationZh": "该研究显示LLM在医疗推理中不仅提供答案，还能根据证据质量调整置信度，这比单纯准确率更有价值。但需注意，该研究仅使用了一个模型（gpt-4.1-nano），且为合成数据，真实临床场景可能更复杂。",
+      "limitationsZh": "研究仅使用单一模型，且为合成病例，可能无法完全代表真实临床多样性。置信度校准的临床意义仍需进一步验证。",
+      "actionStepsZh": [
+        "对于医疗AI团队，可参考该基准设计类似的评估流程。",
+        "在部署LLM辅助诊断前，应进行置信度校准测试。",
+        "结合其他评估指标，如校准误差，全面评估模型可靠性。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "metrics",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "诊断准确率高于平均置信度，表明模型可能过度自信，但AUROC2较高说明置信度排序良好。",
+        "data": [
+          {
+            "label": "诊断准确率",
+            "value": 93.5,
+            "display": ""
+          },
+          {
+            "label": "平均置信度",
+            "value": 78.4,
+            "display": ""
+          },
+          {
+            "label": "AUROC2",
+            "value": 0.876,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.14552",
+          "publishedAt": "2026-08-18T04:00:00.000Z",
+          "title": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-18T04:00:00.000Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-18T04:00:00.000Z",
+            "label": "8/18 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "4fdeab7a66fc6733",
       "normalizedUrl": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52",
@@ -158,7 +410,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T23:58:14.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -169,26 +421,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-18T00:44:44.572Z",
-            "label": "8/18 08:44",
-            "value": 26,
+            "at": "2026-08-18T00:48:48.436Z",
+            "label": "8/18 08:48",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:31:15.145Z",
-            "label": "8/18 09:31",
-            "value": 39,
+            "at": "2026-08-18T01:39:22.873Z",
+            "label": "8/18 09:39",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:17:45.717Z",
-            "label": "8/18 10:17",
-            "value": 51,
+            "at": "2026-08-18T02:29:57.310Z",
+            "label": "8/18 10:29",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:20:31.747Z",
+            "label": "8/18 11:20",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 64,
             "reports": 1
           }
@@ -305,7 +563,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T23:58:00.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -316,26 +574,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-18T00:44:34.072Z",
-            "label": "8/18 08:44",
-            "value": 26,
+            "at": "2026-08-18T00:48:37.236Z",
+            "label": "8/18 08:48",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:31:08.145Z",
-            "label": "8/18 09:31",
-            "value": 39,
+            "at": "2026-08-18T01:39:14.473Z",
+            "label": "8/18 09:39",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:17:42.217Z",
-            "label": "8/18 10:17",
-            "value": 51,
+            "at": "2026-08-18T02:29:51.710Z",
+            "label": "8/18 10:29",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:20:28.947Z",
+            "label": "8/18 11:20",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 64,
             "reports": 1
           }
@@ -377,7 +641,7 @@
         }
       ],
       "importance": 80,
-      "importanceReasonZh": "Anthropic作为领先的AI模型制造商，其收入快速增长反映了AI行业的商业活力，对投资者和行业观察者具有重要参考价值。",
+      "importanceReasonZh": "Anthropic作为领先的AI公司，其收入快速增长反映了AI行业的商业活力，对投资者和行业观察者具有重要参考价值。",
       "importanceReasonEn": "Anthropic's rapid revenue growth reflects the commercial vitality of the AI industry, providing important reference for investors and industry observers.",
       "scoringMode": "ai",
       "titleZh": "Anthropic年化收入飙升至650亿美元",
@@ -388,8 +652,7 @@
         "Anthropic",
         "年化收入",
         "650亿美元",
-        "180亿美元",
-        "增长"
+        "180亿美元"
       ],
       "topics": [
         "Anthropic",
@@ -397,34 +660,38 @@
         "AI商业"
       ],
       "models": [],
-      "detailZh": "据TechCrunch AI报道，Anthropic的年化收入已飙升至650亿美元。该公司在短短两个月内新增了180亿美元的年化收入，显示出其业务的高速增长。这一增长可能得益于其AI模型和服务的广泛采用，以及企业客户对生成式AI解决方案的强劲需求。Anthropic作为AI领域的重要参与者，其收入增长也反映了整个AI市场的扩张趋势。",
+      "detailZh": "据TechCrunch AI报道，Anthropic的年化收入已飙升至650亿美元。该公司在短短两个月内新增了180亿美元的年化收入，显示出其业务的高速增长。这一增长可能得益于其AI模型和产品的市场接受度提升，以及企业客户的持续采用。目前，Anthropic是AI领域的重要参与者，其收入增长也反映了整个AI行业的繁荣趋势。",
       "keyPointsZh": [
         "Anthropic年化收入达到650亿美元。",
         "两个月内新增180亿美元年化收入。",
-        "增长可能源于AI模型和服务的广泛采用。"
+        "增长可能源于AI产品市场接受度提升。"
       ],
-      "impactZh": "Anthropic的收入增长表明AI行业正在快速商业化，可能吸引更多投资，并推动AI技术的进一步普及。",
-      "readerImpactZh": "对于普通用户，这可能意味着AI产品和服务将更加丰富，但具体影响尚不明确。",
-      "userImpactZh": "对于AI用户和开发者，Anthropic的快速增长可能意味着其API和服务将更加稳定，并可能带来更多创新功能。",
+      "impactZh": "Anthropic的收入增长可能加剧AI市场竞争，推动更多企业采用AI技术，并影响投资者对AI行业的信心。",
+      "readerImpactZh": "对于普通用户，Anthropic的快速增长可能意味着更多AI产品和服务的选择，以及更激烈的市场竞争，可能带来价格下降或功能提升。",
+      "userImpactZh": "对于AI用户和开发者，Anthropic的扩张可能带来更稳定的API服务、更丰富的模型选择，以及潜在的定价变化。",
       "howItWorksZh": "",
-      "interpretationZh": "根据报道，Anthropic的年化收入在两个月内从470亿美元增长到650亿美元。这一数字是年化收入，即基于当前收入趋势推算的全年收入，并非实际已实现的收入。增长可能源于新客户签约和现有客户扩展，但具体细节未披露。",
-      "limitationsZh": "该报道仅提供了收入数字，未提供具体财务细节或增长原因，因此无法验证其准确性。",
-      "actionStepsZh": [],
+      "interpretationZh": "根据报道，Anthropic的年化收入在两个月内从约470亿美元增长至650亿美元，增幅显著。这一数据基于公司内部财务信息，但具体计算方式未披露。合理推断是，其企业级AI解决方案和API服务的需求强劲，推动了收入增长。然而，年化收入是基于当前收入趋势的推算，实际全年收入可能受市场波动影响。",
+      "limitationsZh": "该报道仅提供了年化收入的数字，未提供具体财务报告或审计信息，因此数据的准确性有待验证。此外，年化收入的计算方法可能因公司而异，且未披露利润或成本情况。",
+      "actionStepsZh": [
+        "关注Anthropic官方财报或新闻稿以获取更详细财务数据。",
+        "评估Anthropic的API定价变化，以调整预算。",
+        "考虑将Anthropic模型纳入企业AI战略，以利用其增长势头。"
+      ],
       "detailCompleteness": "limited",
       "visual": {
-        "type": "bar",
+        "type": "comparison",
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "Anthropic年化收入在两个月内从470亿美元增长至650亿美元，增幅约38%。",
+        "insightZh": "Anthropic年化收入从470亿美元增长至650亿美元，增幅约38%。",
         "data": [
           {
-            "label": "两个月前",
+            "label": "两个月前年化收入",
             "value": 470,
             "display": ""
           },
           {
-            "label": "现在",
+            "label": "当前年化收入",
             "value": 650,
             "display": ""
           }
@@ -448,7 +715,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T23:56:26.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 69,
         "peak": 69,
         "history": [
@@ -459,26 +726,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-18T00:43:23.572Z",
-            "label": "8/18 08:43",
-            "value": 28,
+            "at": "2026-08-18T00:47:22.036Z",
+            "label": "8/18 08:47",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:30:21.145Z",
-            "label": "8/18 09:30",
-            "value": 42,
+            "at": "2026-08-18T01:38:18.073Z",
+            "label": "8/18 09:38",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:17:18.717Z",
-            "label": "8/18 10:17",
-            "value": 55,
+            "at": "2026-08-18T02:29:14.110Z",
+            "label": "8/18 10:29",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:20:10.147Z",
+            "label": "8/18 11:20",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 69,
             "reports": 1
           }
@@ -596,7 +869,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T23:22:25.902Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -607,26 +880,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-18T00:17:53.499Z",
-            "label": "8/18 08:17",
-            "value": 27,
+            "at": "2026-08-18T00:20:09.958Z",
+            "label": "8/18 08:20",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:13:21.096Z",
-            "label": "8/18 09:13",
-            "value": 40,
+            "at": "2026-08-18T01:17:54.014Z",
+            "label": "8/18 09:17",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:08:48.693Z",
-            "label": "8/18 10:08",
-            "value": 53,
+            "at": "2026-08-18T02:15:38.071Z",
+            "label": "8/18 10:15",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:13:22.127Z",
+            "label": "8/18 11:13",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 66,
             "reports": 1
           }
@@ -776,7 +1055,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T23:13:41.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 67,
         "peak": 67,
         "history": [
@@ -787,26 +1066,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-18T00:11:19.822Z",
-            "label": "8/18 08:11",
-            "value": 27,
+            "at": "2026-08-18T00:13:10.036Z",
+            "label": "8/18 08:13",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:08:58.645Z",
-            "label": "8/18 09:08",
-            "value": 41,
+            "at": "2026-08-18T01:12:39.073Z",
+            "label": "8/18 09:12",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:06:37.467Z",
-            "label": "8/18 10:06",
-            "value": 54,
+            "at": "2026-08-18T02:12:08.110Z",
+            "label": "8/18 10:12",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:11:37.147Z",
+            "label": "8/18 11:11",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 67,
             "reports": 1
           }
@@ -921,7 +1206,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T22:14:00.748Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -932,32 +1217,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T23:12:03.856Z",
-            "label": "8/18 07:12",
-            "value": 24,
+            "at": "2026-08-17T23:13:31.654Z",
+            "label": "8/18 07:13",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:10:06.964Z",
-            "label": "8/18 08:10",
-            "value": 35,
+            "at": "2026-08-18T00:13:02.560Z",
+            "label": "8/18 08:13",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:08:10.073Z",
-            "label": "8/18 09:08",
-            "value": 45,
+            "at": "2026-08-18T01:12:33.466Z",
+            "label": "8/18 09:12",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:06:13.181Z",
-            "label": "8/18 10:06",
-            "value": 56,
+            "at": "2026-08-18T02:12:04.372Z",
+            "label": "8/18 10:12",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:11:35.278Z",
+            "label": "8/18 11:11",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 66,
             "reports": 1
           }
@@ -999,19 +1290,19 @@
         }
       ],
       "importance": 60,
-      "importanceReasonZh": "该事件反映了AI初创公司在竞争激烈的市场中的生存挑战，以及大型科技公司对AI人才的吸纳，对行业动态有一定指示意义。",
-      "importanceReasonEn": "This event reflects the survival challenges of AI startups in a competitive market and the absorption of AI talent by large tech companies, indicating industry dynamics.",
+      "importanceReasonZh": "该事件反映了AI自动化初创公司在竞争激烈的市场中的生存挑战，以及大型科技公司对AI人才的吸纳，对行业动态有一定参考价值。",
+      "importanceReasonEn": "The event reflects the survival challenges of AI automation startups in a competitive market and the absorption of AI talent by large tech companies, offering some reference value for industry dynamics.",
       "scoringMode": "ai",
       "titleZh": "AI自动化初创公司Relay关闭，员工加入谷歌Chrome团队",
       "titleEn": "AI automation startup Relay shuts down, staff joins Google's Chrome team",
-      "summaryZh": "Relay，一家为企业提供工作流自动化的公司，将于下月停止运营。其CEO及部分员工计划加入谷歌Chrome团队。",
+      "summaryZh": "提供企业工作流自动化的Relay公司将于下月停止运营。其CEO及部分员工计划加入谷歌Chrome团队。",
       "summaryEn": "Relay, which offered businesses workflow automation, will stop operating next month. Its CEO and some of its staff plan to get to work on Google Chrome next.",
       "keywords": [
         "Relay",
-        "Google Chrome",
+        "Google",
+        "Chrome",
         "AI自动化",
-        "关闭",
-        "员工加入"
+        "关闭"
       ],
       "topics": [
         "Relay",
@@ -1020,23 +1311,22 @@
         "初创公司关闭"
       ],
       "models": [],
-      "detailZh": "Relay是一家为企业提供工作流自动化服务的初创公司，其产品利用AI技术帮助客户自动化重复性任务。据TechCrunch报道，Relay将于下月正式停止运营。公司CEO及部分员工将加入谷歌Chrome团队，继续在浏览器领域发挥他们的技术专长。目前，Relay的客户将需要寻找替代方案，而公司的关闭也反映了AI自动化领域竞争的激烈程度。具体关闭原因尚未披露，但可能涉及资金问题或战略调整。",
+      "detailZh": "Relay是一家提供企业工作流自动化服务的初创公司，其平台帮助企业自动化重复性任务，提升运营效率。然而，据TechCrunch报道，Relay将于下月正式停止运营。公司CEO及部分员工将加入谷歌Chrome团队，这一变动意味着Relay的技术和人才将融入谷歌的浏览器开发中。目前，Relay的现有客户将需要寻找替代方案，而公司未透露关闭的具体原因，但可能涉及市场竞争、资金压力或战略调整。该事件发生在AI自动化领域竞争日益激烈的背景下，许多初创公司面临被收购或关闭的命运。",
       "keyPointsZh": [
-        "Relay是一家提供工作流自动化服务的AI初创公司。",
-        "公司将于下月停止运营。",
+        "Relay是一家提供工作流自动化的初创公司，将于下月关闭。",
         "CEO及部分员工将加入谷歌Chrome团队。",
-        "关闭原因未明确，可能涉及资金或战略调整。"
+        "现有客户需寻找替代方案。",
+        "关闭原因未明确，可能涉及市场竞争或资金压力。"
       ],
-      "impactZh": "对于使用Relay服务的企业，需要尽快迁移到其他自动化工具，以避免业务中断。同时，该事件也向市场传递了AI初创企业可能面临生存压力的信号。",
-      "readerImpactZh": "如果您是Relay的客户，您需要寻找替代方案，并注意数据迁移和合同终止事宜。",
-      "userImpactZh": "对于AI开发者或团队，此事件提醒您在选择第三方自动化工具时需评估供应商的稳定性，并考虑开源或自建方案以降低风险。",
+      "impactZh": "该事件对普通用户影响有限，但可能影响Relay的现有企业客户，他们需要迁移到其他自动化工具。",
+      "readerImpactZh": "对于使用Relay服务的企业，需要尽快寻找替代方案，以避免业务中断。",
+      "userImpactZh": "对于AI开发者或团队，此事件表明AI自动化领域竞争激烈，选择供应商时需考虑其稳定性。",
       "howItWorksZh": "",
-      "interpretationZh": "根据报道，Relay关闭并让员工加入谷歌Chrome团队，这可能是谷歌对AI人才的吸纳，也可能是Relay创始人看到了在浏览器领域更大的机会。但具体原因未明，我们只能基于现有信息进行推测。",
-      "limitationsZh": "报道未提供Relay关闭的具体原因，也未说明员工加入谷歌的具体职位和人数，因此无法评估其影响范围。",
+      "interpretationZh": "根据报道，Relay关闭并让员工加入谷歌Chrome团队是已确认的事实。但关闭的具体原因未披露，可能涉及商业压力或战略调整，这属于合理推测。",
+      "limitationsZh": "报道未提供关闭的具体原因、员工数量或客户影响细节，信息有限。",
       "actionStepsZh": [
-        "如果您是Relay客户，请立即联系Relay获取数据导出和迁移支持。",
-        "评估其他工作流自动化工具，如Zapier、Make或Microsoft Power Automate。",
-        "关注谷歌Chrome团队的新动态，看是否会有相关产品整合。"
+        "Relay的现有客户应尽快评估替代自动化工具，确保业务连续性。",
+        "关注谷歌Chrome团队后续动态，看是否整合Relay的技术。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -1058,7 +1348,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T21:27:05.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1069,38 +1359,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T22:23:16.881Z",
-            "label": "8/18 06:23",
-            "value": 21,
+            "at": "2026-08-17T22:24:48.026Z",
+            "label": "8/18 06:24",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-17T23:19:28.763Z",
-            "label": "8/18 07:19",
-            "value": 29,
+            "at": "2026-08-17T23:22:31.052Z",
+            "label": "8/18 07:22",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:15:40.645Z",
-            "label": "8/18 08:15",
-            "value": 36,
+            "at": "2026-08-18T00:20:14.078Z",
+            "label": "8/18 08:20",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:11:52.526Z",
-            "label": "8/18 09:11",
-            "value": 43,
+            "at": "2026-08-18T01:17:57.105Z",
+            "label": "8/18 09:17",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:08:04.408Z",
-            "label": "8/18 10:08",
-            "value": 51,
+            "at": "2026-08-18T02:15:40.131Z",
+            "label": "8/18 10:15",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:13:23.157Z",
+            "label": "8/18 11:13",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 58,
             "reports": 1
           }
@@ -1195,7 +1491,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T19:46:21.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1206,50 +1502,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T20:41:05.411Z",
-            "label": "8/18 04:41",
+            "at": "2026-08-17T20:42:26.020Z",
+            "label": "8/18 04:42",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-17T21:35:49.822Z",
-            "label": "8/18 05:35",
-            "value": 26,
+            "at": "2026-08-17T21:38:31.040Z",
+            "label": "8/18 05:38",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-17T22:30:34.233Z",
-            "label": "8/18 06:30",
-            "value": 33,
+            "at": "2026-08-17T22:34:36.061Z",
+            "label": "8/18 06:34",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T23:25:18.645Z",
-            "label": "8/18 07:25",
-            "value": 39,
+            "at": "2026-08-17T23:30:41.081Z",
+            "label": "8/18 07:30",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:20:03.056Z",
-            "label": "8/18 08:20",
-            "value": 45,
+            "at": "2026-08-18T00:26:46.102Z",
+            "label": "8/18 08:26",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:14:47.467Z",
-            "label": "8/18 09:14",
-            "value": 51,
+            "at": "2026-08-18T01:22:51.122Z",
+            "label": "8/18 09:22",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:09:31.878Z",
-            "label": "8/18 10:09",
-            "value": 57,
+            "at": "2026-08-18T02:18:56.143Z",
+            "label": "8/18 10:18",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:15:01.163Z",
+            "label": "8/18 11:15",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 64,
             "reports": 1
           }
@@ -1369,7 +1671,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T19:16:09.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1380,50 +1682,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T20:14:39.911Z",
-            "label": "8/18 04:14",
+            "at": "2026-08-17T20:15:35.353Z",
+            "label": "8/18 04:15",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-17T21:13:10.822Z",
-            "label": "8/18 05:13",
-            "value": 26,
+            "at": "2026-08-17T21:15:01.707Z",
+            "label": "8/18 05:15",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-17T22:11:41.733Z",
-            "label": "8/18 06:11",
-            "value": 33,
+            "at": "2026-08-17T22:14:28.061Z",
+            "label": "8/18 06:14",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T23:10:12.645Z",
-            "label": "8/18 07:10",
-            "value": 39,
+            "at": "2026-08-17T23:13:54.415Z",
+            "label": "8/18 07:13",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:08:43.556Z",
-            "label": "8/18 08:08",
-            "value": 45,
+            "at": "2026-08-18T00:13:20.768Z",
+            "label": "8/18 08:13",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:07:14.467Z",
-            "label": "8/18 09:07",
-            "value": 51,
+            "at": "2026-08-18T01:12:47.122Z",
+            "label": "8/18 09:12",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:05:45.378Z",
-            "label": "8/18 10:05",
-            "value": 57,
+            "at": "2026-08-18T02:12:13.476Z",
+            "label": "8/18 10:12",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T03:11:39.830Z",
+            "label": "8/18 11:11",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 64,
             "reports": 1
           }
@@ -1537,7 +1845,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T18:46:04.518Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -1548,56 +1856,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T19:41:25.826Z",
-            "label": "8/18 03:41",
-            "value": 20,
+            "at": "2026-08-17T19:42:34.684Z",
+            "label": "8/18 03:42",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-17T20:36:47.134Z",
-            "label": "8/18 04:36",
-            "value": 26,
+            "at": "2026-08-17T20:39:04.851Z",
+            "label": "8/18 04:39",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-17T21:32:08.442Z",
-            "label": "8/18 05:32",
-            "value": 31,
+            "at": "2026-08-17T21:35:35.017Z",
+            "label": "8/18 05:35",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-17T22:27:29.750Z",
-            "label": "8/18 06:27",
-            "value": 37,
+            "at": "2026-08-17T22:32:05.184Z",
+            "label": "8/18 06:32",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-17T23:22:51.058Z",
-            "label": "8/18 07:22",
-            "value": 43,
+            "at": "2026-08-17T23:28:35.351Z",
+            "label": "8/18 07:28",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:18:12.366Z",
-            "label": "8/18 08:18",
-            "value": 49,
+            "at": "2026-08-18T00:25:05.517Z",
+            "label": "8/18 08:25",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:13:33.674Z",
-            "label": "8/18 09:13",
-            "value": 55,
+            "at": "2026-08-18T01:21:35.684Z",
+            "label": "8/18 09:21",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:08:54.982Z",
-            "label": "8/18 10:08",
+            "at": "2026-08-18T02:18:05.850Z",
+            "label": "8/18 10:18",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T03:14:36.017Z",
+            "label": "8/18 11:14",
             "value": 61,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 66,
             "reports": 1
           }
@@ -1718,7 +2032,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T17:58:12.144Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -1729,62 +2043,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T18:52:48.558Z",
-            "label": "8/18 02:52",
-            "value": 19,
+            "at": "2026-08-17T18:53:55.238Z",
+            "label": "8/18 02:53",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-17T19:47:24.973Z",
-            "label": "8/18 03:47",
+            "at": "2026-08-17T19:49:38.333Z",
+            "label": "8/18 03:49",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-17T20:42:01.387Z",
-            "label": "8/18 04:42",
-            "value": 28,
+            "at": "2026-08-17T20:45:21.427Z",
+            "label": "8/18 04:45",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-17T21:36:37.802Z",
-            "label": "8/18 05:36",
-            "value": 33,
+            "at": "2026-08-17T21:41:04.522Z",
+            "label": "8/18 05:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-17T22:31:14.217Z",
-            "label": "8/18 06:31",
-            "value": 37,
+            "at": "2026-08-17T22:36:47.616Z",
+            "label": "8/18 06:36",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-17T23:25:50.631Z",
-            "label": "8/18 07:25",
-            "value": 42,
+            "at": "2026-08-17T23:32:30.711Z",
+            "label": "8/18 07:32",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:20:27.046Z",
-            "label": "8/18 08:20",
-            "value": 47,
+            "at": "2026-08-18T00:28:13.805Z",
+            "label": "8/18 08:28",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:15:03.460Z",
-            "label": "8/18 09:15",
+            "at": "2026-08-18T01:23:56.900Z",
+            "label": "8/18 09:23",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-18T02:19:39.994Z",
+            "label": "8/18 10:19",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:09:39.875Z",
-            "label": "8/18 10:09",
-            "value": 56,
+            "at": "2026-08-18T03:15:23.089Z",
+            "label": "8/18 11:15",
+            "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 61,
             "reports": 1
           }
@@ -1875,7 +2195,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T16:38:44.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1886,68 +2206,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T17:35:36.026Z",
-            "label": "8/18 01:35",
+            "at": "2026-08-17T17:41:40.562Z",
+            "label": "8/18 01:41",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-17T18:32:28.052Z",
-            "label": "8/18 02:32",
+            "at": "2026-08-17T18:44:37.124Z",
+            "label": "8/18 02:44",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-17T19:29:20.079Z",
-            "label": "8/18 03:29",
+            "at": "2026-08-17T19:47:33.686Z",
+            "label": "8/18 03:47",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-17T20:26:12.105Z",
-            "label": "8/18 04:26",
+            "at": "2026-08-17T20:50:30.248Z",
+            "label": "8/18 04:50",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-17T21:23:04.131Z",
-            "label": "8/18 05:23",
+            "at": "2026-08-17T21:53:26.810Z",
+            "label": "8/18 05:53",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-17T22:19:56.158Z",
-            "label": "8/18 06:19",
+            "at": "2026-08-17T22:56:23.373Z",
+            "label": "8/18 06:56",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-17T23:16:48.184Z",
-            "label": "8/18 07:16",
+            "at": "2026-08-17T23:59:19.935Z",
+            "label": "8/18 07:59",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:13:40.210Z",
-            "label": "8/18 08:13",
+            "at": "2026-08-18T01:02:16.497Z",
+            "label": "8/18 09:02",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:10:32.237Z",
-            "label": "8/18 09:10",
+            "at": "2026-08-18T02:05:13.059Z",
+            "label": "8/18 10:05",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:07:24.263Z",
-            "label": "8/18 10:07",
+            "at": "2026-08-18T03:08:09.621Z",
+            "label": "8/18 11:08",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 64,
             "reports": 1
           }
@@ -2045,7 +2365,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T16:15:12.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2056,68 +2376,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T17:14:12.390Z",
-            "label": "8/18 01:14",
+            "at": "2026-08-17T17:20:16.925Z",
+            "label": "8/18 01:20",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-17T18:13:12.780Z",
-            "label": "8/18 02:13",
+            "at": "2026-08-17T18:25:21.851Z",
+            "label": "8/18 02:25",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-17T19:12:13.170Z",
-            "label": "8/18 03:12",
+            "at": "2026-08-17T19:30:26.777Z",
+            "label": "8/18 03:30",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-17T20:11:13.560Z",
-            "label": "8/18 04:11",
+            "at": "2026-08-17T20:35:31.703Z",
+            "label": "8/18 04:35",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-17T21:10:13.950Z",
-            "label": "8/18 05:10",
+            "at": "2026-08-17T21:40:36.629Z",
+            "label": "8/18 05:40",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-17T22:09:14.340Z",
-            "label": "8/18 06:09",
+            "at": "2026-08-17T22:45:41.554Z",
+            "label": "8/18 06:45",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-17T23:08:14.730Z",
-            "label": "8/18 07:08",
+            "at": "2026-08-17T23:50:46.480Z",
+            "label": "8/18 07:50",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:07:15.120Z",
-            "label": "8/18 08:07",
+            "at": "2026-08-18T00:55:51.406Z",
+            "label": "8/18 08:55",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:06:15.510Z",
-            "label": "8/18 09:06",
+            "at": "2026-08-18T02:00:56.332Z",
+            "label": "8/18 10:00",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:05:15.900Z",
-            "label": "8/18 10:05",
+            "at": "2026-08-18T03:06:01.258Z",
+            "label": "8/18 11:06",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 64,
             "reports": 1
           }
@@ -2266,7 +2586,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-17T16:00:00.000Z",
-        "endedAt": "2026-08-18T03:04:16.290Z",
+        "endedAt": "2026-08-18T04:11:06.184Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2277,68 +2597,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-17T17:00:23.299Z",
-            "label": "8/18 01:00",
+            "at": "2026-08-17T17:06:27.834Z",
+            "label": "8/18 01:06",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-17T18:00:46.598Z",
-            "label": "8/18 02:00",
+            "at": "2026-08-17T18:12:55.669Z",
+            "label": "8/18 02:12",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-17T19:01:09.897Z",
-            "label": "8/18 03:01",
+            "at": "2026-08-17T19:19:23.504Z",
+            "label": "8/18 03:19",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-17T20:01:33.196Z",
-            "label": "8/18 04:01",
+            "at": "2026-08-17T20:25:51.339Z",
+            "label": "8/18 04:25",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-17T21:01:56.495Z",
-            "label": "8/18 05:01",
+            "at": "2026-08-17T21:32:19.174Z",
+            "label": "8/18 05:32",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-17T22:02:19.794Z",
-            "label": "8/18 06:02",
+            "at": "2026-08-17T22:38:47.009Z",
+            "label": "8/18 06:38",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-17T23:02:43.093Z",
-            "label": "8/18 07:02",
+            "at": "2026-08-17T23:45:14.844Z",
+            "label": "8/18 07:45",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-18T00:03:06.392Z",
-            "label": "8/18 08:03",
+            "at": "2026-08-18T00:51:42.679Z",
+            "label": "8/18 08:51",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-18T01:03:29.691Z",
-            "label": "8/18 09:03",
+            "at": "2026-08-18T01:58:10.514Z",
+            "label": "8/18 09:58",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-18T02:03:52.990Z",
-            "label": "8/18 10:03",
+            "at": "2026-08-18T03:04:38.349Z",
+            "label": "8/18 11:04",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-18T03:04:16.290Z",
-            "label": "8/18 11:04",
+            "at": "2026-08-18T04:11:06.184Z",
+            "label": "8/18 12:11",
             "value": 64,
             "reports": 1
           }
