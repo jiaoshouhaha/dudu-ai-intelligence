@@ -1,3 +1,5 @@
+import { parseFeed } from './feed-parser.mjs';
+import { parseClaudeBlog, parseOpenAiDeveloperBlog } from './official-blog-adapters.mjs';
 import { extractImageUrls, extractResourceLinks } from './utils.mjs';
 
 const AIHOT_CATEGORY_MAP = {
@@ -32,4 +34,14 @@ export function parseAihotItems(payload, source) {
       attribution: item.attribution || { name: 'AI HOT', url: item.links?.aihot }
     }))
     .filter((item) => item.title && /^https?:\/\//i.test(item.url));
+}
+
+export async function parseSourceResponse(response, source, now = new Date()) {
+  const format = source.format || 'rss';
+  if (format === 'aihot-json') return parseAihotItems(await response.json(), source);
+  const body = await response.text();
+  if (format === 'rss') return parseFeed(body, source, now);
+  if (format === 'openai-developer-html') return parseOpenAiDeveloperBlog(body, source, now);
+  if (format === 'claude-blog-html') return parseClaudeBlog(body, source, now);
+  throw new Error(`Unsupported source format: ${format}`);
 }

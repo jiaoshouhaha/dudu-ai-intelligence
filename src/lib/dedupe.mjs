@@ -1,4 +1,5 @@
 import { hasReleaseSignal, modelEntities, stableId, titleSimilarity } from './utils.mjs';
+import { chooseRicherSummary, shouldPreferIncomingSource } from './source-preference.mjs';
 
 export function dedupeItems(items, threshold = 0.72) {
   const events = [];
@@ -20,30 +21,37 @@ export function dedupeItems(items, threshold = 0.72) {
       title: item.title,
       authority: item.authority,
       sourcePriority: item.sourcePriority || item.authority || 0,
+      publishedPrecision: item.publishedPrecision || 'minute',
       images: item.images || [],
       resourceLinks: item.resourceLinks || []
     };
 
     if (match) {
       if (!match.sources.some((existing) => existing.url === source.url)) match.sources.push(source);
+      const incomingEventShape = {
+        originalUrl: item.url,
+        sourceType: item.sourceType,
+        sourcePriority: item.sourcePriority,
+        authority: item.authority
+      };
+      const preferIncomingSource = shouldPreferIncomingSource(match, incomingEventShape);
       match.publishedAt = match.publishedAt < item.publishedAt ? item.publishedAt : match.publishedAt;
       match.authority = Math.max(match.authority, item.authority);
       match.sourcePriority = Math.max(match.sourcePriority || 0, item.sourcePriority || item.authority || 0);
       match.images = [...new Set([...(match.images || []), ...(item.images || [])])].slice(0, 8);
       match.resourceLinks = [...new Set([...(match.resourceLinks || []), ...(item.resourceLinks || [])])].slice(0, 12);
-      const prefersOfficialLink = /(?:qwen\.ai|openai\.com|deepseek\.com|anthropic\.com|deepmind\.google|blog\.google)/i.test(item.url || '') &&
-        !/(?:qwen\.ai|openai\.com|deepseek\.com|anthropic\.com|deepmind\.google|blog\.google)/i.test(match.originalUrl || '');
-      if ((item.sourceType === 'official' && match.sourceType !== 'official') || prefersOfficialLink) {
+      match.summaryOriginal = chooseRicherSummary(match.summaryOriginal, item.description);
+      if (preferIncomingSource) {
         match.normalizedUrl = item.normalizedUrl;
         match.originalUrl = item.url;
         match.titleOriginal = item.title;
-        match.summaryOriginal = item.description;
         match.originalLanguage = item.language;
         match.author = item.author;
         match.sourceType = item.sourceType;
         match.category = item.category;
         match.contentType = item.contentTypeHint || match.contentType;
         match.evidenceLevel = item.evidenceLevelHint || match.evidenceLevel;
+        match.publishedPrecision = item.publishedPrecision || match.publishedPrecision;
       }
       continue;
     }
@@ -63,6 +71,7 @@ export function dedupeItems(items, threshold = 0.72) {
       images: [...new Set(item.images || [])].slice(0, 8),
       resourceLinks: [...new Set(item.resourceLinks || [])].slice(0, 12),
       publishedAt: item.publishedAt,
+      publishedPrecision: item.publishedPrecision || 'minute',
       discoveredAt: item.discoveredAt || null,
       contentType: item.contentTypeHint || null,
       evidenceLevel: item.evidenceLevelHint || null,

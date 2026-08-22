@@ -3,8 +3,11 @@ const categoryNames = { models:'模型动态',products:'AI 产品',agent:'Agent 
 const contentTypeNames = { official:'官方发布',practical:'实践方法',opensource:'开源项目',paper:'研究论文',benchmark:'实测对比',industry:'行业新闻',opinion:'人物观点' };
 const evidenceNames = { primary:'一手来源',verified:'交叉验证',practitioner:'作者实测',unverified:'尚待验证' };
 
-function formatTime(value) {
-  return new Intl.DateTimeFormat('zh-CN', { dateStyle:'long',timeStyle:'short',hour12:false }).format(new Date(value));
+function formatTime(value, precision = 'minute') {
+  const options = precision === 'date'
+    ? { dateStyle:'long' }
+    : { dateStyle:'long',timeStyle:'short',hour12:false };
+  return new Intl.DateTimeFormat('zh-CN', options).format(new Date(value));
 }
 
 function addTextList(element, items) {
@@ -158,7 +161,7 @@ function renderIntelligence(item) {
     const row = document.createElement('article');
     row.className = 'report-row';
     const time = document.createElement('time');
-    time.textContent = formatTime(report.publishedAt || item.publishedAt);
+    time.textContent = formatTime(report.publishedAt || item.publishedAt, report.publishedPrecision || item.publishedPrecision);
     const body = document.createElement('div');
     const title = document.createElement('strong');
     title.textContent = report.title || item.titleZh || item.titleOriginal;
@@ -249,7 +252,7 @@ function render(item) {
   renderResourceLinks(item);
   $('#limitedNotice').hidden = item.detailCompleteness !== 'limited' && Boolean(item.detailZh);
   $('#sourceName').textContent = `来源：${source}`;
-  $('#publishTime').textContent = `发布时间：${formatTime(item.publishedAt)}`;
+  $('#publishTime').textContent = `发布时间：${formatTime(item.publishedAt, item.publishedPrecision)}`;
   $('#originalLink').href = item.originalUrl;
 
   const tags = [...(item.models || []).map((name) => ({ name, model:true })), ...(item.topics || item.keywords || []).slice(0, 6).map((name) => ({ name, model:false }))];
