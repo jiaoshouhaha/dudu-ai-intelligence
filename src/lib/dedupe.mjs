@@ -28,19 +28,20 @@ export function dedupeItems(items, threshold = 0.72) {
 
     if (match) {
       if (!match.sources.some((existing) => existing.url === source.url)) match.sources.push(source);
-      match.publishedAt = match.publishedAt < item.publishedAt ? item.publishedAt : match.publishedAt;
-      match.authority = Math.max(match.authority, item.authority);
-      match.sourcePriority = Math.max(match.sourcePriority || 0, item.sourcePriority || item.authority || 0);
-      match.images = [...new Set([...(match.images || []), ...(item.images || [])])].slice(0, 8);
-      match.resourceLinks = [...new Set([...(match.resourceLinks || []), ...(item.resourceLinks || [])])].slice(0, 12);
-      match.summaryOriginal = chooseRicherSummary(match.summaryOriginal, item.description);
       const incomingEventShape = {
         originalUrl: item.url,
         sourceType: item.sourceType,
         sourcePriority: item.sourcePriority,
         authority: item.authority
       };
-      if (shouldPreferIncomingSource(match, incomingEventShape)) {
+      const preferIncomingSource = shouldPreferIncomingSource(match, incomingEventShape);
+      match.publishedAt = match.publishedAt < item.publishedAt ? item.publishedAt : match.publishedAt;
+      match.authority = Math.max(match.authority, item.authority);
+      match.sourcePriority = Math.max(match.sourcePriority || 0, item.sourcePriority || item.authority || 0);
+      match.images = [...new Set([...(match.images || []), ...(item.images || [])])].slice(0, 8);
+      match.resourceLinks = [...new Set([...(match.resourceLinks || []), ...(item.resourceLinks || [])])].slice(0, 12);
+      match.summaryOriginal = chooseRicherSummary(match.summaryOriginal, item.description);
+      if (preferIncomingSource) {
         match.normalizedUrl = item.normalizedUrl;
         match.originalUrl = item.url;
         match.titleOriginal = item.title;

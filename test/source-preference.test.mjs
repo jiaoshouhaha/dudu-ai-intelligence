@@ -22,6 +22,16 @@ test('same-run dedupe keeps the official identity and the richer reliable summar
   assert.equal(event.sources.length, 2);
 });
 
+test('same-run dedupe promotes a higher-priority official identity and its date precision', () => {
+  const current = normalizeItem({ sourceId: 'openai-news', sourceName: 'OpenAI News', sourceType: 'official', authority: 90, sourcePriority: 90, category: 'agent', language: 'en', title: 'Codex platform uses an open agent harness', description: 'Earlier official description.', url: 'https://openai.com/index/codex-platform', publishedAt: '2026-08-19T13:00:00Z', publishedPrecision: 'minute' });
+  const incoming = normalizeItem({ sourceId: 'openai-developer', sourceName: 'OpenAI Developer Blog', sourceType: 'official', authority: 100, sourcePriority: 104, category: 'agent', language: 'en', title: 'Codex as a platform: build on the open agent harness', description: 'Developer documentation.', url: 'https://developers.openai.com/blog/codex-as-a-platform', publishedAt: '2026-08-19T12:00:00Z', publishedPrecision: 'date' });
+  const [event] = dedupeItems([current, incoming], 0.6);
+  assert.equal(event.originalUrl, incoming.url);
+  assert.equal(event.titleOriginal, incoming.title);
+  assert.equal(event.publishedPrecision, 'date');
+  assert.equal(event.sourcePriority, 104);
+});
+
 test('cross-run merge promotes an official canonical URL without discarding Chinese detail', () => {
   const current = { id: 'one', normalizedUrl: 'https://example.com/repost', originalUrl: 'https://example.com/repost', titleOriginal: 'Anthropic AI teaching', summaryOriginal: 'A longer verified description of the public curriculum and internal training origin.', titleZh: '已有中文标题', detailZh: '已有中文详情', sourceType: 'aggregator', authority: 76, sourcePriority: 76, publishedAt: '2026-08-20T13:00:00Z', sources: [{ url: 'https://example.com/repost' }] };
   const incoming = { ...current, normalizedUrl: 'https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai', originalUrl: 'https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai', titleOriginal: "Anthropic's approach to teaching and learning AI", summaryOriginal: 'Official description.', sourceType: 'official', authority: 100, sourcePriority: 103, sources: [{ url: 'https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai' }] };
