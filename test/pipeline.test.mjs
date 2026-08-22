@@ -8,7 +8,7 @@ import { normalizeItem, normalizeUrl } from '../src/lib/normalize.mjs';
 import { dedupeItems } from '../src/lib/dedupe.mjs';
 import { scoreEvent } from '../src/lib/score.mjs';
 import { aiConfig, enrichEvent, finalizeFallback, validateAiPayload } from '../src/lib/ai-client.mjs';
-import { runPipeline } from '../src/lib/pipeline.mjs';
+import { runPipeline, selectCandidateEvents } from '../src/lib/pipeline.mjs';
 import { translateEventToChinese } from '../src/lib/translate.mjs';
 import { dateKeyInTimeZone, extractImageUrls, extractResourceLinks, modelEntities, titleSimilarity } from '../src/lib/utils.mjs';
 import { parseAihotItems } from '../src/lib/source-adapters.mjs';
@@ -81,6 +81,21 @@ test('rule score is bounded and includes a transparent reason', () => {
   assert.ok(scored.importance >= 1 && scored.importance <= 100);
   assert.equal(scored.scoringMode, 'rules');
   assert.match(scored.importanceReasonZh, /权威|影响|新发布|时间/);
+});
+
+test('candidate selection gives higher-priority official feeds first coverage', () => {
+  const common = {
+    sourceType: 'official',
+    authority: 100,
+    category: 'agent',
+    contentType: 'official',
+    publishedAt: '2026-08-19T12:00:00.000Z'
+  };
+  const selected = selectCandidateEvents([
+    { ...common, id: 'aggregated-official', titleOriginal: 'General AI guide', summaryOriginal: '', importance: 80, sourcePriority: 94 },
+    { ...common, id: 'openai-developer', titleOriginal: 'Codex as a platform: build on the open agent harness', summaryOriginal: '', importance: 72, sourcePriority: 104 }
+  ], 1);
+  assert.equal(selected[0].id, 'openai-developer');
 });
 
 test('AI payload validation clamps score and normalizes unknown categories', () => {

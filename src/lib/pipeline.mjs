@@ -42,7 +42,13 @@ function candidateRank(event) {
   const practical = event.category === 'tips' || event.contentType === 'practical';
   const paper = event.sourceType === 'paper' || event.contentType === 'paper';
   const lane = major ? 0 : official ? 1 : practical ? 2 : paper ? 4 : 3;
-  return [lane, -(event.importance || 0), -(event.sourcePriority || event.authority || 0), -new Date(event.publishedAt).valueOf()];
+  const priority = event.sourcePriority || event.authority || 0;
+  // Within the official lane, prefer the source's editorial priority before the
+  // rule score. This prevents a newly-added first-party feed from being
+  // perpetually crowded out by slightly higher-scoring aggregator items.
+  return official && !major
+    ? [lane, -priority, -(event.importance || 0), -new Date(event.publishedAt).valueOf()]
+    : [lane, -(event.importance || 0), -priority, -new Date(event.publishedAt).valueOf()];
 }
 
 export function selectCandidateEvents(events, maxNew) {
