@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T17:53:17.238Z",
+  "generatedAt": "2026-08-22T18:42:23.976Z",
   "date": "2026-08-23",
   "items": [
     {
@@ -62,19 +62,19 @@
         }
       ],
       "importance": 60,
-      "importanceReasonZh": "该版本为 llm 命令行工具带来了实用的改进，特别是模板组合功能，对开发者有实际帮助。",
-      "importanceReasonEn": "This release brings practical improvements to the llm CLI tool, especially the template combination feature, which is helpful for developers.",
+      "importanceReasonZh": "该版本为 llm 工具带来实用改进，包括嵌入键支持和模板组合，对开发者有实际价值，但影响范围有限。",
+      "importanceReasonEn": "This release brings practical improvements to the llm tool, including embedding key support and template combination, which are valuable for developers but limited in scope.",
       "scoringMode": "ai",
-      "titleZh": "llm 0.33 发布",
-      "titleEn": "llm 0.33 Release",
-      "summaryZh": "llm 0.33 版本发布，主要亮点包括：升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2。llm embed 和 llm embed-multi 命令现在支持 --key 参数，Python 的 EmbeddingModel.embed() 等方法也支持 key= 参数，允许将每次调用的 key 传递给嵌入插件，而不改变共享模型状态。现有插件通过兼容性回退继续工作。嵌入模型现在使用与常规 LLM 模型相同的 key 模式。llm prompt -t/--template 现在可以重复使用以按顺序组合模板，允许一个模板的模型配置和选项与另一个模板的提示一起使用。这解锁了一种模式：创建包含模型和默认选项的模板，然后组合使用。",
-      "summaryEn": "Release of llm 0.33. Highlights: upgraded to OpenAI Python library 3.x and switched HTTP client dependency from httpx to httpx2. llm embed and llm embed-multi now accept --key. Python methods EmbeddingModel.embed(), embed_multi(), Collection.embed(), and embed_multi() accept key= too, passing the resolved per-call key to embedding plugins without changing shared model state. Existing plugins that read self.key continue to work through a compatibility fallback. Embedding models now use the same pattern for keys as regular LLM models. llm prompt -t/--template can now be repeated to combine templates in order, allowing model configuration and options from one template to be used with a prompt from another. This unlocks a pattern where you can create templates that package a model with default",
+      "titleZh": "llm 0.33 发布：支持 OpenAI 库 3.x、嵌入键参数与模板组合",
+      "titleEn": "llm 0.33 Released: OpenAI 3.x Support, Embedding Keys, Template Combination",
+      "summaryZh": "llm 0.33 版本发布，主要亮点包括：升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2；llm embed 和 llm embed-multi 命令新增 --key 参数，Python 的 EmbeddingModel.embed() 等方法也支持 key= 参数，允许为嵌入插件传递每次调用的键而不改变共享模型状态；llm prompt -t/--template 现在可以重复使用以按顺序组合模板，从而可以将一个模板中的模型配置和选项与另一个模板的提示结合使用。",
+      "summaryEn": "Release llm 0.33 highlights: upgraded to OpenAI Python library 3.x and switched HTTP client dependency from httpx to httpx2; llm embed and llm embed-multi now accept --key, and Python methods EmbeddingModel.embed(), embed_multi(), Collection.embed(), embed_multi() accept key= too, passing resolved per-call key to embedding plugins without changing shared model state; llm prompt -t/--template can now be repeated to combine templates in order, enabling model config and options from one template to be used with a prompt from another.",
       "keywords": [
         "llm 0.33",
-        "OpenAI Python library",
+        "OpenAI 3.x",
         "httpx2",
-        "embed",
-        "template"
+        "embedding keys",
+        "template combination"
       ],
       "topics": [
         "llm",
@@ -83,23 +83,23 @@
         "templates"
       ],
       "models": [],
-      "detailZh": "llm 0.33 版本于 2026 年 8 月 22 日发布。主要更新包括：升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2。此前 0.32.1 已提供快速修复，但 0.33 是更全面的修复。\n\n嵌入相关命令和 Python 方法现在支持 --key 参数，允许用户为每次调用指定 API 密钥，而无需修改共享模型状态。这为嵌入插件提供了更灵活的密钥管理方式。\n\n模板系统得到增强：llm prompt -t/--template 可以重复使用，按顺序组合多个模板。这意味着用户可以将一个模板中的模型配置和选项与另一个模板的提示结合使用。例如，可以创建一个模板来保存模型和默认选项，另一个模板保存提示，然后组合运行。\n\n这些改进使得 llm 工具更加灵活和强大，尤其适合需要频繁切换模型和提示的场景。",
+      "detailZh": "llm 0.33 版本于 2026 年 8 月 22 日发布，主要更新包括：\n\n1. **OpenAI 库升级**：将 OpenAI Python 库升级到 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2。此前 0.32.1 已发布快速修复，但 0.33 提供了更全面的修复。\n\n2. **嵌入键支持**：llm embed 和 llm embed-multi 命令现在接受 --key 参数。Python 的 EmbeddingModel.embed()、EmbeddingModel.embed_multi()、Collection.embed() 和 Collection.embed_multi() 方法也支持 key= 参数，将解析后的每次调用键传递给嵌入插件，而不改变共享模型状态。现有读取 self.key 的插件通过兼容性回退继续工作。\n\n3. **模板组合**：llm prompt -t/--template 现在可以重复使用以按顺序组合模板。这允许将一个模板中的模型配置和选项与另一个模板的提示结合使用。例如，可以创建打包模型和默认选项的模板，然后组合使用。\n\n这些改进增强了 llm 的灵活性和易用性，特别是对于需要为不同调用使用不同 API 键或组合模板的用户。",
       "keyPointsZh": [
-        "升级到 OpenAI Python 库 3.x，并切换 HTTP 客户端到 httpx2。",
-        "llm embed 和 embed-multi 命令支持 --key 参数，Python 方法也支持 key=。",
-        "嵌入模型现在使用与常规 LLM 模型相同的密钥模式。",
-        "llm prompt -t/--template 可重复使用以组合模板，实现模型配置和提示的分离。"
+        "升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2。",
+        "llm embed 和 llm embed-multi 命令新增 --key 参数，Python 嵌入方法也支持 key= 参数。",
+        "llm prompt -t/--template 可以重复使用以按顺序组合模板。",
+        "现有插件通过兼容性回退继续工作。"
       ],
-      "impactZh": "该版本提升了 llm 工具的灵活性和可用性，特别是模板组合功能，使得开发者可以更高效地管理模型配置和提示。",
+      "impactZh": "该版本为 llm 工具用户提供了更灵活的嵌入键管理和模板组合功能，简化了多模型配置的使用流程。",
       "readerImpactZh": "",
-      "userImpactZh": "对于使用 llm 的开发者，可以更灵活地管理 API 密钥，并通过组合模板来复用模型配置和提示，提高工作效率。",
-      "howItWorksZh": "模板组合功能允许用户通过重复使用 -t/--template 参数来按顺序组合多个模板。例如，先创建一个模板保存模型和默认选项（如 llm -m gpt-5.6-luna -o reasoning_effort high --save lhigh），再创建一个模板保存提示（如 llm \"Generate an SVG of a pelican riding a bicycle\" --save pelican），然后通过 llm -t lhigh -t pelican 组合运行。",
-      "interpretationZh": "该版本主要是一次功能增强，没有引入破坏性变更。模板组合功能是亮点，但具体使用效果还需实际测试。",
-      "limitationsZh": "由于信息有限，未提及模板组合的具体限制或潜在问题。",
+      "userImpactZh": "对于使用 llm 的开发者，可以更方便地管理多个 API 键，并通过模板组合快速切换模型配置，提高工作效率。",
+      "howItWorksZh": "llm 0.33 通过升级 OpenAI 库和切换 HTTP 客户端来确保兼容性。嵌入键支持允许用户为每次调用指定 API 键，而无需修改全局配置。模板组合功能通过重复使用 -t 参数，将多个模板按顺序合并，使得模型配置和提示可以分离管理。",
+      "interpretationZh": "该版本主要面向开发者，提供了实用的功能改进。嵌入键支持解决了多键场景下的配置问题，模板组合则提高了命令行的灵活性。这些改进基于官方发布说明，具体实现细节可能需要查阅文档。",
+      "limitationsZh": "由于信息来自发布说明，未提供详细的代码示例或迁移指南，用户可能需要参考官方文档。",
       "actionStepsZh": [
         "升级到 llm 0.33 以获取最新功能。",
-        "尝试使用 --key 参数为嵌入命令指定密钥。",
-        "利用模板组合功能，将模型配置和提示分离，提高复用性。"
+        "使用 --key 参数为嵌入命令指定 API 键。",
+        "利用模板组合功能，将模型配置和提示分离管理。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -134,7 +134,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-22T17:01:16.000Z",
-        "endedAt": "2026-08-22T17:53:17.238Z",
+        "endedAt": "2026-08-22T18:42:23.976Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -145,8 +145,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-22T17:53:17.238Z",
-            "label": "8/23 01:53",
+            "at": "2026-08-22T17:51:49.988Z",
+            "label": "8/23 01:51",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-22T18:42:23.976Z",
+            "label": "8/23 02:42",
             "value": 58,
             "reports": 1
           }
@@ -190,8 +196,8 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "OpenAI对AI安全法案的立场转变具有行业影响力，可能影响加州乃至全美的AI监管方向。",
-      "importanceReasonEn": "OpenAI's shift in stance on AI safety legislation is influential and may affect AI regulation in California and beyond.",
+      "importanceReasonZh": "OpenAI作为AI领域的重要企业，其对AI安全法案的态度转变具有行业影响力，可能影响政策走向。",
+      "importanceReasonEn": "OpenAI's shift in stance on AI safety legislation is influential and may impact policy direction.",
       "scoringMode": "ai",
       "titleZh": "OpenAI呼吁加州加强其AI安全法案",
       "titleEn": "OpenAI says California should strengthen its AI safety bill",
@@ -210,18 +216,19 @@
         "OpenAI"
       ],
       "models": [],
-      "detailZh": "OpenAI此前曾反对加州的一项AI安全法案，但现在呼吁加强该法案。这一转变表明OpenAI在AI监管问题上的立场可能正在调整。该法案编号为SB 53，旨在为AI系统设定安全标准。OpenAI的呼吁可能基于对AI潜在风险的担忧，以及希望建立更明确的监管框架。目前，该法案的具体内容和OpenAI的具体建议尚未完全公开。",
+      "detailZh": "据TechCrunch报道，OpenAI呼吁加州加强其AI安全法案SB 53。此前，OpenAI曾反对该法案，但现在态度转变，认为需要更严格的安全措施。该法案旨在为大型AI模型设立安全标准，以防止潜在风险。OpenAI的立场变化可能源于对AI安全问题的日益重视，以及公众和监管机构的压力。目前，法案的具体条款和加强方向尚未披露，但OpenAI的呼吁可能推动加州立法者采取更严格的措施。",
       "keyPointsZh": [
         "OpenAI呼吁加州加强SB 53法案。",
-        "该法案此前曾遭到OpenAI反对。",
-        "OpenAI的立场转变可能影响AI监管政策。"
+        "此前OpenAI曾反对该法案。",
+        "法案旨在为大型AI模型设立安全标准。",
+        "OpenAI的立场转变可能影响政策走向。"
       ],
-      "impactZh": "该事件可能影响加州AI监管政策的走向，进而影响AI行业的发展。",
+      "impactZh": "该事件表明AI行业对安全监管的态度正在转变，可能促使其他科技公司重新考虑对AI安全法案的立场，并推动更严格的监管措施出台。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和企业，这可能意味着未来需要遵守更严格的AI安全标准。",
+      "userImpactZh": "对于AI开发者和企业，这可能意味着未来需要遵守更严格的安全标准，增加合规成本，但也可能提升公众对AI的信任。",
       "howItWorksZh": "",
-      "interpretationZh": "根据报道，OpenAI从反对转为支持加强AI安全法案，这可能是基于对AI风险的认识加深，也可能是为了在监管框架中发挥更积极的作用。但具体细节尚不明确。",
-      "limitationsZh": "报道未提供法案的具体内容、OpenAI的具体建议以及立场转变的原因。",
+      "interpretationZh": "报道显示OpenAI从反对转为支持加强SB 53，但具体细节有限。合理推断是OpenAI可能认为更严格的安全标准有助于行业长期发展，但具体动机和法案内容仍需进一步信息。",
+      "limitationsZh": "报道未提供法案具体条款、OpenAI立场转变的原因，以及加强措施的具体内容，信息有限。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -244,7 +251,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-22T16:30:34.000Z",
-        "endedAt": "2026-08-22T17:53:17.238Z",
+        "endedAt": "2026-08-22T18:42:23.976Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -255,14 +262,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-22T17:11:55.619Z",
-            "label": "8/23 01:11",
-            "value": 39,
+            "at": "2026-08-22T17:14:30.658Z",
+            "label": "8/23 01:14",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-22T17:53:17.238Z",
-            "label": "8/23 01:53",
+            "at": "2026-08-22T17:58:27.317Z",
+            "label": "8/23 01:58",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-22T18:42:23.976Z",
+            "label": "8/23 02:42",
             "value": 64,
             "reports": 1
           }
@@ -360,7 +373,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-22T16:00:00.000Z",
-        "endedAt": "2026-08-22T17:53:17.238Z",
+        "endedAt": "2026-08-22T18:42:23.976Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -371,14 +384,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-22T16:56:38.619Z",
-            "label": "8/23 00:56",
-            "value": 39,
+            "at": "2026-08-22T16:54:07.992Z",
+            "label": "8/23 00:54",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-22T17:53:17.238Z",
-            "label": "8/23 01:53",
+            "at": "2026-08-22T17:48:15.984Z",
+            "label": "8/23 01:48",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-22T18:42:23.976Z",
+            "label": "8/23 02:42",
             "value": 64,
             "reports": 1
           }
