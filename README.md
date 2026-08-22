@@ -1,6 +1,8 @@
 # SIGNAL/AI
 
-每小时自动收集全球 AI 新闻的中文个人情报站。它会抓取公开 RSS、合并重复报道、把标题与摘要翻译为中文，并生成透明的重要度评分。页面只展示中文内容，每条新闻保留原始来源链接。
+每约 30 分钟自动收集全球 AI 新闻。发现层同时读取公开 RSS、OpenAI Developer Blog、Claude Blog 与 AI HOT 补充源；只有发现尚未处理的新文章后，才调用 DeepSeek 生成中文整理。
+
+站点会合并重复报道、生成透明的重要度评分，并优先保留官方来源链接。页面只展示中文内容，每条新闻保留原始来源链接。
 
 ## 本地运行
 
@@ -44,9 +46,9 @@ pnpm fetch
 
 不要把真实密钥写进 `.env.example` 或提交到 Git。
 
-## GitHub 每小时更新
+## GitHub 自动更新
 
-`.github/workflows/update-news.yml` 会按北京时间每天 01:00、07:00、12:30 和 19:00 运行，也支持从 Actions 页面手动触发。
+`.github/workflows/update-news.yml` 使用 `2,32 * * * *`，约每 30 分钟扫描一次，也支持从 Actions 页面手动触发。GitHub cron 为尽力执行，可能出现少量排队延迟。
 
 启用 DeepSeek 增强时，在仓库设置中添加：
 
@@ -56,6 +58,14 @@ pnpm fetch
 - 可选 Actions Variable：`DEEPSEEK_DAILY_LIMIT`
 
 不添加任何变量时，工作流仍会使用规则评分正常更新。
+
+## 信源健康检查
+
+只检查来源能否抓取和解析，不写入新闻数据，也不调用 DeepSeek：
+
+```bash
+pnpm check:sources -- --only microsoft-ai,openai-developer,claude-blog
+```
 
 ## 数据与隐私
 
