@@ -5,8 +5,9 @@ import { scoreEvent } from './score.mjs';
 import { aiConfig, enrichEvents, finalizeFallback } from './ai-client.mjs';
 import { translateEventsToChinese, translationConfig } from './translate.mjs';
 import { readExistingData, readSeenData, writeDataFiles } from './storage.mjs';
-import { dateKeyInTimeZone, hasReleaseSignal, modelEntities, titleSimilarity } from './utils.mjs';
+import { dateKeyInTimeZone, hasReleaseSignal, modelEntities } from './utils.mjs';
 import { parseSourceResponse } from './source-adapters.mjs';
+import { isSameEvent, mergeEventReports } from './event-merge.mjs';
 
 export async function fetchSource(source, options) {
   const started = Date.now();
@@ -81,39 +82,15 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
     .map(normalizeItem)
     .filter((item) => new Date(item.publishedAt).valueOf() >= windowCutoff && new Date(item.publishedAt).valueOf() <= now.valueOf() + 5 * 60e3);
   const freshEvents = dedupeItems(normalized).map((event) => scoreEvent(event, now));
-  const sameEvent = (left, right) => {
-    if (left.id === right.id || left.normalizedUrl === right.normalizedUrl) return true;
-    const similarity = titleSimilarity(left.titleOriginal, right.titleOriginal);
-    if (similarity.score >= 0.64 && similarity.intersection >= 3) return true;
-    return [...modelEntities(left.titleOriginal)].some((name) => /\d/.test(name) && modelEntities(right.titleOriginal).has(name)) &&
-      hasReleaseSignal(left.titleOriginal) && hasReleaseSignal(right.titleOriginal);
-  };
-  const mergeReports = (old, incoming) => {
-    const sources = [...(old.sources || [])];
-    for (const source of incoming.sources || []) if (!sources.some((existingSource) => existingSource.url === source.url)) sources.push(source);
-    const incomingOfficialLink = /(?:qwen\.ai|openai\.com|deepseek\.com|anthropic\.com|deepmind\.google|blog\.google)/i.test(incoming.originalUrl || '');
-    const oldOfficialLink = /(?:qwen\.ai|openai\.com|deepseek\.com|anthropic\.com|deepmind\.google|blog\.google)/i.test(old.originalUrl || '');
-    const preferIncoming = (incoming.sourcePriority || incoming.authority || 0) > (old.sourcePriority || old.authority || 0) || incoming.sourceType === 'official' || (incomingOfficialLink && !oldOfficialLink);
-    return {
-      ...old,
-      ...(preferIncoming ? { normalizedUrl: incoming.normalizedUrl, originalUrl: incoming.originalUrl, titleOriginal: incoming.titleOriginal, summaryOriginal: incoming.summaryOriginal, originalLanguage: incoming.originalLanguage, author: incoming.author, category: incoming.category, sourceType: incoming.sourceType } : {}),
-      publishedAt: new Date(old.publishedAt) > new Date(incoming.publishedAt) ? old.publishedAt : incoming.publishedAt,
-      authority: Math.max(old.authority || 0, incoming.authority || 0),
-      sourcePriority: Math.max(old.sourcePriority || 0, incoming.sourcePriority || 0),
-      images: [...new Set([...(old.images || []), ...(incoming.images || [])])].slice(0, 8),
-      resourceLinks: [...new Set([...(old.resourceLinks || []), ...(incoming.resourceLinks || [])])].slice(0, 12),
-      sources
-    };
-  };
   const existingByEvent = [];
   for (const item of (await readExistingData(resolvedDataDir)).filter((event) => new Date(event.publishedAt).valueOf() >= windowCutoff)) {
-    const match = existingByEvent.find((old) => sameEvent(old, item));
-    if (match) Object.assign(match, mergeReports(match, item));
+    const match = existingByEvent.find((old) => isSameEvent(old, item));
+    if (match) Object.assign(match, mergeEventReports(match, item));
     else existingByEvent.push(item);
   }
   for (const incoming of freshEvents) {
-    const match = existingByEvent.find((old) => sameEvent(old, incoming));
-    if (match) Object.assign(match, mergeReports(match, incoming));
+    const match = existingByEvent.find((old) => isSameEvent(old, incoming));
+    if (match) Object.assign(match, mergeEventReports(match, incoming));
   }
   const existing = existingByEvent;
   const seen = await readSeenData(resolvedDataDir);
@@ -123,7 +100,7 @@ export async function runPipeline({ rootDir, sources, fetchImpl = fetch, now = n
   const maxNew = Number(process.env.MAX_NEW_ITEMS_PER_RUN || 80);
   const detailBackfillLimit = Math.min(2, maxNew);
   const matchesExisting = (event) => existing.some((old) =>
-    sameEvent(old, event)
+    isSameEvent(old, event)
   );
   const duplicateEvents = freshEvents.filter((event) => matchesExisting(event));
   const newEvents = selectCandidateEvents(freshEvents
