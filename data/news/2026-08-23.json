@@ -1,7 +1,275 @@
 {
-  "generatedAt": "2026-08-22T17:29:57.005Z",
+  "generatedAt": "2026-08-22T17:53:17.238Z",
   "date": "2026-08-23",
   "items": [
+    {
+      "id": "97c4e9cb8b163ddb",
+      "normalizedUrl": "https://simonwillison.net/2026/Aug/22/llm",
+      "originalUrl": "https://simonwillison.net/2026/Aug/22/llm/",
+      "titleOriginal": "llm 0.33",
+      "summaryOriginal": "Release: llm 0.33 My highlights from this release: Upgraded to the OpenAI Python library 3.x and switched the HTTP client dependency from httpx to httpx2 . #1608 , #1631 I shipped a quick 0.32.1 fix for this yesterday, but this is the more comprehensive fix. llm embed and llm embed-multi now accept --key . The Python EmbeddingModel.embed() , EmbeddingModel.embed_multi() , Collection.embed() and Collection.embed_multi() methods accept key= too, passing the resolved per-call key to embedding plugins without changing shared model state. Existing plugins that read self.key continue to work through a compatibility fallback. Thanks, ChrisJr404 . #757 , #1620 The embedding models now use the same pattern for keys that regular LLM models do. llm prompt -t/--template can now be repeated to combine templates in order. This allows model configuration and options from one template to be used with a prompt from another. This unlocks a neat pattern where you can create templates that package a model with a set of default options: llm -m gpt-5.6-luna -o reasoning_effort high --save lhigh llm \"Generate an SVG of a pelican riding a bicycle\" --save pelican # Combine and run the templates llm -t lhig",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/llm/releases/tag/0.33",
+        "https://github.com/simonw/llm/issues/1608",
+        "https://github.com/simonw/llm/pull/1631",
+        "https://simonwillison.net/2026/Aug/21/llm/",
+        "https://github.com/ChrisJr404",
+        "https://github.com/simonw/llm/issues/757",
+        "https://github.com/simonw/llm/pull/1620",
+        "https://llm.datasette.io/en/stable/other-models.html#openai-endpoint",
+        "https://github.com/simonw/llm/issues/1600",
+        "https://simonwillison.net/tags/annotated-release-notes",
+        "https://simonwillison.net/tags/llm"
+      ],
+      "publishedAt": "2026-08-22T17:01:16.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/22/llm/",
+          "publishedAt": "2026-08-22T17:01:16.000Z",
+          "title": "llm 0.33",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm/releases/tag/0.33",
+            "https://github.com/simonw/llm/issues/1608",
+            "https://github.com/simonw/llm/pull/1631",
+            "https://simonwillison.net/2026/Aug/21/llm/",
+            "https://github.com/ChrisJr404",
+            "https://github.com/simonw/llm/issues/757",
+            "https://github.com/simonw/llm/pull/1620",
+            "https://llm.datasette.io/en/stable/other-models.html#openai-endpoint",
+            "https://github.com/simonw/llm/issues/1600",
+            "https://simonwillison.net/tags/annotated-release-notes",
+            "https://simonwillison.net/tags/llm"
+          ]
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该版本为 llm 命令行工具带来了实用的改进，特别是模板组合功能，对开发者有实际帮助。",
+      "importanceReasonEn": "This release brings practical improvements to the llm CLI tool, especially the template combination feature, which is helpful for developers.",
+      "scoringMode": "ai",
+      "titleZh": "llm 0.33 发布",
+      "titleEn": "llm 0.33 Release",
+      "summaryZh": "llm 0.33 版本发布，主要亮点包括：升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2。llm embed 和 llm embed-multi 命令现在支持 --key 参数，Python 的 EmbeddingModel.embed() 等方法也支持 key= 参数，允许将每次调用的 key 传递给嵌入插件，而不改变共享模型状态。现有插件通过兼容性回退继续工作。嵌入模型现在使用与常规 LLM 模型相同的 key 模式。llm prompt -t/--template 现在可以重复使用以按顺序组合模板，允许一个模板的模型配置和选项与另一个模板的提示一起使用。这解锁了一种模式：创建包含模型和默认选项的模板，然后组合使用。",
+      "summaryEn": "Release of llm 0.33. Highlights: upgraded to OpenAI Python library 3.x and switched HTTP client dependency from httpx to httpx2. llm embed and llm embed-multi now accept --key. Python methods EmbeddingModel.embed(), embed_multi(), Collection.embed(), and embed_multi() accept key= too, passing the resolved per-call key to embedding plugins without changing shared model state. Existing plugins that read self.key continue to work through a compatibility fallback. Embedding models now use the same pattern for keys as regular LLM models. llm prompt -t/--template can now be repeated to combine templates in order, allowing model configuration and options from one template to be used with a prompt from another. This unlocks a pattern where you can create templates that package a model with default",
+      "keywords": [
+        "llm 0.33",
+        "OpenAI Python library",
+        "httpx2",
+        "embed",
+        "template"
+      ],
+      "topics": [
+        "llm",
+        "OpenAI",
+        "embedding",
+        "templates"
+      ],
+      "models": [],
+      "detailZh": "llm 0.33 版本于 2026 年 8 月 22 日发布。主要更新包括：升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2。此前 0.32.1 已提供快速修复，但 0.33 是更全面的修复。\n\n嵌入相关命令和 Python 方法现在支持 --key 参数，允许用户为每次调用指定 API 密钥，而无需修改共享模型状态。这为嵌入插件提供了更灵活的密钥管理方式。\n\n模板系统得到增强：llm prompt -t/--template 可以重复使用，按顺序组合多个模板。这意味着用户可以将一个模板中的模型配置和选项与另一个模板的提示结合使用。例如，可以创建一个模板来保存模型和默认选项，另一个模板保存提示，然后组合运行。\n\n这些改进使得 llm 工具更加灵活和强大，尤其适合需要频繁切换模型和提示的场景。",
+      "keyPointsZh": [
+        "升级到 OpenAI Python 库 3.x，并切换 HTTP 客户端到 httpx2。",
+        "llm embed 和 embed-multi 命令支持 --key 参数，Python 方法也支持 key=。",
+        "嵌入模型现在使用与常规 LLM 模型相同的密钥模式。",
+        "llm prompt -t/--template 可重复使用以组合模板，实现模型配置和提示的分离。"
+      ],
+      "impactZh": "该版本提升了 llm 工具的灵活性和可用性，特别是模板组合功能，使得开发者可以更高效地管理模型配置和提示。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用 llm 的开发者，可以更灵活地管理 API 密钥，并通过组合模板来复用模型配置和提示，提高工作效率。",
+      "howItWorksZh": "模板组合功能允许用户通过重复使用 -t/--template 参数来按顺序组合多个模板。例如，先创建一个模板保存模型和默认选项（如 llm -m gpt-5.6-luna -o reasoning_effort high --save lhigh），再创建一个模板保存提示（如 llm \"Generate an SVG of a pelican riding a bicycle\" --save pelican），然后通过 llm -t lhigh -t pelican 组合运行。",
+      "interpretationZh": "该版本主要是一次功能增强，没有引入破坏性变更。模板组合功能是亮点，但具体使用效果还需实际测试。",
+      "limitationsZh": "由于信息有限，未提及模板组合的具体限制或潜在问题。",
+      "actionStepsZh": [
+        "升级到 llm 0.33 以获取最新功能。",
+        "尝试使用 --key 参数为嵌入命令指定密钥。",
+        "利用模板组合功能，将模型配置和提示分离，提高复用性。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Aug/22/llm/",
+          "publishedAt": "2026-08-22T17:01:16.000Z",
+          "title": "llm 0.33",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm/releases/tag/0.33",
+            "https://github.com/simonw/llm/issues/1608",
+            "https://github.com/simonw/llm/pull/1631",
+            "https://simonwillison.net/2026/Aug/21/llm/",
+            "https://github.com/ChrisJr404",
+            "https://github.com/simonw/llm/issues/757",
+            "https://github.com/simonw/llm/pull/1620",
+            "https://llm.datasette.io/en/stable/other-models.html#openai-endpoint",
+            "https://github.com/simonw/llm/issues/1600",
+            "https://simonwillison.net/tags/annotated-release-notes",
+            "https://simonwillison.net/tags/llm"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-22T17:01:16.000Z",
+        "endedAt": "2026-08-22T17:53:17.238Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-08-22T17:01:16.000Z",
+            "label": "8/23 01:01",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-22T17:53:17.238Z",
+            "label": "8/23 01:53",
+            "value": 58,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "efbde8355f8fb85d",
+      "normalizedUrl": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill",
+      "originalUrl": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+      "titleOriginal": "OpenAI says California should strengthen its AI safety bill",
+      "summaryOriginal": "OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed.",
+      "originalLanguage": "en",
+      "author": "Anthony Ha",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-22T16:30:34.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+          "publishedAt": "2026-08-22T16:30:34.000Z",
+          "title": "OpenAI says California should strengthen its AI safety bill",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "OpenAI对AI安全法案的立场转变具有行业影响力，可能影响加州乃至全美的AI监管方向。",
+      "importanceReasonEn": "OpenAI's shift in stance on AI safety legislation is influential and may affect AI regulation in California and beyond.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI呼吁加州加强其AI安全法案",
+      "titleEn": "OpenAI says California should strengthen its AI safety bill",
+      "summaryZh": "OpenAI呼吁加州加强SB 53法案，该法案此前曾遭到该公司反对。",
+      "summaryEn": "OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed.",
+      "keywords": [
+        "OpenAI",
+        "California",
+        "SB 53",
+        "AI safety",
+        "bill"
+      ],
+      "topics": [
+        "AI安全",
+        "政策",
+        "OpenAI"
+      ],
+      "models": [],
+      "detailZh": "OpenAI此前曾反对加州的一项AI安全法案，但现在呼吁加强该法案。这一转变表明OpenAI在AI监管问题上的立场可能正在调整。该法案编号为SB 53，旨在为AI系统设定安全标准。OpenAI的呼吁可能基于对AI潜在风险的担忧，以及希望建立更明确的监管框架。目前，该法案的具体内容和OpenAI的具体建议尚未完全公开。",
+      "keyPointsZh": [
+        "OpenAI呼吁加州加强SB 53法案。",
+        "该法案此前曾遭到OpenAI反对。",
+        "OpenAI的立场转变可能影响AI监管政策。"
+      ],
+      "impactZh": "该事件可能影响加州AI监管政策的走向，进而影响AI行业的发展。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和企业，这可能意味着未来需要遵守更严格的AI安全标准。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据报道，OpenAI从反对转为支持加强AI安全法案，这可能是基于对AI风险的认识加深，也可能是为了在监管框架中发挥更积极的作用。但具体细节尚不明确。",
+      "limitationsZh": "报道未提供法案的具体内容、OpenAI的具体建议以及立场转变的原因。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+          "publishedAt": "2026-08-22T16:30:34.000Z",
+          "title": "OpenAI says California should strengthen its AI safety bill",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-22T16:30:34.000Z",
+        "endedAt": "2026-08-22T17:53:17.238Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-22T16:30:34.000Z",
+            "label": "8/23 00:30",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-22T17:11:55.619Z",
+            "label": "8/23 01:11",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-22T17:53:17.238Z",
+            "label": "8/23 01:53",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "058d495cab2c8c26",
       "normalizedUrl": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model",
@@ -38,12 +306,12 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该新闻涉及AI安全的关键议题，且基于一项新研究，具有较高的信息价值和公众关注度。",
-      "importanceReasonEn": "The news addresses a critical AI safety issue and is based on a new study, offering high informational value and public relevance.",
+      "importanceReasonZh": "该事件涉及AI安全的关键问题，且基于一项新研究，具有较高的信息价值和潜在影响。",
+      "importanceReasonEn": "The event addresses a critical issue in AI safety and is based on a new study, offering high informational value and potential impact.",
       "scoringMode": "ai",
       "titleZh": "前沿AI实验室仍不愿透露如何控制失控模型",
       "titleEn": "Frontier AI labs still won't say how they'd contain a rogue model",
-      "summaryZh": "一项新研究发现，领先的AI实验室很少有公开记录的关于控制失控模型的计划，这引发了人们对AI系统日益表现出意外和潜在危险行为时准备工作的质疑。",
+      "summaryZh": "一项新研究发现，领先的AI实验室几乎没有公开记录的控制失控模型的计划，这引发了人们对AI系统日益表现出意外和潜在危险行为时准备工作的质疑。",
       "summaryEn": "A new study finds leading AI labs have few publicly documented plans for containing rogue models, raising questions about preparedness as AI systems increasingly demonstrate unexpected and potentially dangerous behavior.",
       "keywords": [],
       "topics": [
@@ -52,22 +320,24 @@
         "前沿实验室"
       ],
       "models": [],
-      "detailZh": "根据TechCrunch AI于2026年8月22日报道，一项新研究指出，领先的AI实验室（如OpenAI、Google DeepMind等）在公开文档中很少详细说明如何控制可能失控的AI模型。研究团队审查了这些实验室发布的安全政策、技术报告和公开声明，发现大多数实验室缺乏具体的遏制策略，例如如何隔离模型、关闭模型或防止模型访问关键系统。\n\n研究背景是AI模型在复杂任务中表现出越来越多的意外行为，包括产生有害内容、规避安全措施或出现不可预测的决策。尽管实验室内部可能拥有一些安全协议，但公开信息有限，这使得外部研究人员和监管机构难以评估其准备程度。\n\n研究还发现，一些实验室提到了“红队测试”和“安全评估”，但很少描述在模型真正失控时的具体操作步骤。例如，如何快速切断模型的计算资源、如何防止模型复制自身或传播恶意代码等细节均未公开。\n\n该研究呼吁实验室提高透明度，并建议制定行业标准来规范失控模型的遏制流程。目前，各实验室对此问题的回应不一，有的表示正在改进安全措施，有的则未予置评。",
+      "detailZh": "根据TechCrunch AI于2026年8月22日报道，一项新研究发现，领先的AI实验室（如OpenAI、Google DeepMind等）几乎没有公开记录的控制失控模型的计划。研究团队审查了这些实验室的公开文档、安全政策和研究论文，发现关于如何检测、隔离或关闭一个表现出意外或危险行为的AI模型的具体方案很少被披露。\n\n研究指出，尽管这些实验室在AI安全方面投入了大量资源，并经常发布关于对齐和红队测试的论文，但具体的遏制策略（如模型断电、沙箱隔离或回滚机制）的细节却鲜有公开。这引发了担忧：如果AI系统在部署后表现出不可预测的行为，实验室是否真的准备好了？\n\n报道还提到，一些实验室在内部可能拥有详细的应急计划，但出于安全或商业原因选择不公开。然而，缺乏透明度使得外部研究人员和政策制定者难以评估这些实验室的实际准备程度。\n\n该研究呼吁AI实验室公开更多关于模型控制和安全协议的信息，以增强整个行业的信任和准备度。",
       "keyPointsZh": [
-        "新研究发现前沿AI实验室公开的失控模型遏制计划很少。",
-        "实验室的安全政策和技术报告缺乏具体遏制策略。",
-        "研究呼吁提高透明度和制定行业标准。"
+        "新研究发现前沿AI实验室缺乏公开的模型控制计划。",
+        "审查了公开文档、安全政策和研究论文。",
+        "具体遏制策略细节很少被披露。",
+        "实验室可能内部有计划但未公开。",
+        "研究呼吁提高透明度。"
       ],
-      "impactZh": "该事件凸显了AI安全领域的透明度缺口，可能影响公众对AI技术的信任，并促使监管机构考虑更严格的要求。",
-      "readerImpactZh": "对于普通公众，这可能意味着AI系统在出现意外行为时，缺乏明确的应对机制，从而增加潜在风险。",
-      "userImpactZh": "对于AI开发者和团队，该研究提示需要更完善的安全协议和应急计划，并可能推动行业最佳实践的形成。",
+      "impactZh": "该事件凸显了AI安全领域的一个关键缺口：即使是最先进的实验室，其模型控制策略的透明度也有限。这可能影响监管政策、行业标准和公众信任。",
+      "readerImpactZh": "对于普通公众，这一发现可能增加对AI系统安全性的担忧，尤其是在AI技术日益融入日常生活的背景下。",
+      "userImpactZh": "对于AI用户、开发者或团队，这一发现提醒他们在依赖前沿模型时，应关注模型提供方的安全协议，并考虑自身的风险缓解措施。",
       "howItWorksZh": "",
-      "interpretationZh": "该报道基于一项研究，指出实验室公开信息不足，但并未证实实验室内部确实缺乏计划。可能的情况是实验室有内部协议但未公开，或者确实准备不足。",
-      "limitationsZh": "该研究仅基于公开文档，可能无法反映实验室内部的实际安全措施。此外，报道未提供研究的具体方法或样本范围。",
+      "interpretationZh": "报道基于一项研究，指出前沿AI实验室缺乏公开的模型控制计划。这并不意味着实验室没有计划，而是他们选择不公开。可能的原因包括安全考虑、商业机密或避免引发不必要的关注。然而，缺乏透明度使得外部评估变得困难。",
+      "limitationsZh": "该研究仅基于公开信息，可能无法反映实验室内部的实际准备情况。此外，报道未提供研究的具体方法或样本细节，因此结论的全面性有限。",
       "actionStepsZh": [
-        "关注AI实验室的安全政策更新，了解其遏制策略。",
-        "支持或参与关于AI安全透明度的公开讨论。",
-        "对于AI开发者，建议制定并测试内部模型失控应急计划。"
+        "关注AI实验室发布的安全白皮书和透明度报告。",
+        "在部署AI系统时，制定自己的应急响应计划。",
+        "支持推动AI安全透明度的政策倡议。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -90,7 +360,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-22T16:00:00.000Z",
-        "endedAt": "2026-08-22T17:29:57.005Z",
+        "endedAt": "2026-08-22T17:53:17.238Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -101,14 +371,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-22T16:44:58.502Z",
-            "label": "8/23 00:44",
+            "at": "2026-08-22T16:56:38.619Z",
+            "label": "8/23 00:56",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-22T17:29:57.005Z",
-            "label": "8/23 01:29",
+            "at": "2026-08-22T17:53:17.238Z",
+            "label": "8/23 01:53",
             "value": 64,
             "reports": 1
           }
