@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { applyEditorialRepairs } from '../src/lib/editorial-repairs.mjs';
 import { readSeenData, writeDataFiles } from '../src/lib/storage.mjs';
 import { dateKeyInTimeZone } from '../src/lib/utils.mjs';
 
@@ -36,11 +37,14 @@ const repairedItems = search.items.map((item) => {
   };
 });
 
-if (!removedReports) {
-  console.log('No historical merge contamination found.');
+const editorial = applyEditorialRepairs(repairedItems);
+const finalItems = editorial.items;
+
+if (!removedReports && !editorial.changed) {
+  console.log('No historical or editorial repairs required.');
   process.exit(0);
 }
 
 const todayKey = dateKeyInTimeZone(status.finishedAt || new Date());
-await writeDataFiles(dataDir, repairedItems, status, todayKey, seen);
-console.log(`Repaired ${removedReports} historical report merges.`);
+await writeDataFiles(dataDir, finalItems, status, todayKey, seen);
+console.log(`Repaired ${removedReports} report merges and ${editorial.changed} editorial titles.`);
