@@ -9,10 +9,10 @@ const MONTHS = new Map([
 ]);
 const DATE_PATTERN = /\b(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})(?:,\s*(\d{4}))?\b/i;
 
-function publicationFromText(value, now) {
+function publicationFromText(value, now, inferredYear = now.getUTCFullYear()) {
   const match = String(value || '').match(DATE_PATTERN);
   if (!match) return null;
-  let year = Number(match[3] || now.getUTCFullYear());
+  let year = Number(match[3] || inferredYear);
   const month = MONTHS.get(match[1].toLowerCase());
   const day = Number(match[2]);
   let result = new Date(Date.UTC(year, month, day, 12));
@@ -23,10 +23,10 @@ function publicationFromText(value, now) {
   return { publishedAt: result.toISOString(), publishedPrecision: 'date' };
 }
 
-function publicationFromValue(value, now) {
+function publicationFromValue(value, now, inferredYear = now.getUTCFullYear()) {
   const raw = String(value || '').trim();
   if (!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:?\d{2})?)?$/.test(raw)) {
-    return publicationFromText(raw, now);
+    return publicationFromText(raw, now, inferredYear);
   }
   const parsed = new Date(raw);
   if (!Number.isFinite(parsed.valueOf())) return null;
@@ -34,6 +34,40 @@ function publicationFromValue(value, now) {
     publishedAt: parsed.toISOString(),
     publishedPrecision: /T\d{2}:\d{2}/.test(raw) ? 'minute' : 'date'
   };
+}
+
+function directText($, element) {
+  return $(element).contents()
+    .filter((_, child) => child.type === 'text')
+    .text()
+    .trim();
+}
+
+function publicationFromScope($, scope, now, state) {
+  const candidates = [];
+  scope.find('[datetime]').each((_, element) => candidates.push($(element).attr('datetime')));
+  scope.add(scope.find('*')).each((_, element) => candidates.push(directText($, element)));
+
+  for (const candidate of candidates) {
+    const raw = String(candidate || '').trim();
+    if (!raw) continue;
+    const textMatch = raw.match(DATE_PATTERN);
+    const publication = publicationFromValue(raw, now, state.year);
+    if (!publication) continue;
+
+    const published = new Date(publication.publishedAt);
+    const month = textMatch ? MONTHS.get(textMatch[1].toLowerCase()) : published.getUTCMonth();
+    const hasExplicitYear = Boolean(textMatch?.[3]) || /^\d{4}-\d{2}-\d{2}/.test(raw);
+    if (!hasExplicitYear && state.month != null && month > state.month) {
+      state.year -= 1;
+      publication.publishedAt = new Date(Date.UTC(state.year, month, published.getUTCDate(), 12)).toISOString();
+    } else {
+      state.year = published.getUTCFullYear();
+    }
+    state.month = month;
+    return publication;
+  }
+  return null;
 }
 
 function structuredPosts($, source, now, policy) {
@@ -87,6 +121,7 @@ function parseBlogCards(html, source, now, policy) {
   const $ = load(html);
   const items = structuredPosts($, source, now, policy);
   const seen = new Set(items.map((item) => item.url));
+  const dateState = { year: now.getUTCFullYear(), month: null };
   $('a[href]').each((_, element) => {
     const link = $(element);
     let url;
@@ -96,11 +131,20 @@ function parseBlogCards(html, source, now, policy) {
       return;
     }
     if (!policy.hosts.has(url.hostname) || !policy.path.test(url.pathname) || seen.has(url.href)) return;
-    const card = link.closest('article, li, .w-dyn-item, [data-blog-card], [role="listitem"]').first();
+    const linkIsCard = link.find('p').length > 0
+      && (link.find('img[alt]').length > 0 || link.find('h1,h2,h3,h4').length > 0);
+    const card = linkIsCard
+      ? link
+      : link.closest('article, li, .w-dyn-item, [data-blog-card], [role="listitem"]').first();
     const scope = card.length ? card : link.parent();
-    const title = stripHtml(scope.find('h1,h2,h3,h4').first().text() || link.attr('aria-label') || link.text());
+    const title = stripHtml(
+      scope.find('h1,h2,h3,h4').first().text()
+      || scope.find('img[alt]').first().attr('alt')
+      || link.attr('aria-label')
+      || link.text()
+    );
     const description = stripHtml(scope.find('p').first().text()).slice(0, 1200);
-    const publication = publicationFromValue(scope.find('time[datetime]').first().attr('datetime') || scope.text(), now);
+    const publication = publicationFromScope($, scope, now, dateState);
     if (!title || !publication) return;
     seen.add(url.href);
     items.push({
