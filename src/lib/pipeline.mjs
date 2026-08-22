@@ -1,5 +1,4 @@
 import fs from 'node:fs/promises';
-import { parseFeed } from './feed-parser.mjs';
 import { normalizeItem } from './normalize.mjs';
 import { dedupeItems } from './dedupe.mjs';
 import { scoreEvent } from './score.mjs';
@@ -7,9 +6,9 @@ import { aiConfig, enrichEvents, finalizeFallback } from './ai-client.mjs';
 import { translateEventsToChinese, translationConfig } from './translate.mjs';
 import { readExistingData, readSeenData, writeDataFiles } from './storage.mjs';
 import { dateKeyInTimeZone, hasReleaseSignal, modelEntities, titleSimilarity } from './utils.mjs';
-import { parseAihotItems } from './source-adapters.mjs';
+import { parseSourceResponse } from './source-adapters.mjs';
 
-async function fetchSource(source, options) {
+export async function fetchSource(source, options) {
   const started = Date.now();
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), options.feedTimeoutMs);
@@ -19,9 +18,7 @@ async function fetchSource(source, options) {
       signal: controller.signal
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const items = source.format === 'aihot-json'
-      ? parseAihotItems(await response.json(), source)
-      : parseFeed(await response.text(), source, options.now);
+    const items = await parseSourceResponse(response, source, options.now);
     const limitedItems = source.maxItems ? items.slice(0, Number(source.maxItems)) : items;
     return { sourceId: source.id, ok: true, count: limitedItems.length, durationMs: Date.now() - started, items: limitedItems };
   } catch (error) {
