@@ -1,7 +1,257 @@
 {
-  "generatedAt": "2026-08-24T04:25:12.036Z",
+  "generatedAt": "2026-08-24T05:22:40.645Z",
   "date": "2026-08-24",
   "items": [
+    {
+      "id": "9cb8a13833c1c5c4",
+      "normalizedUrl": "https://arxiv.org/abs/2608.20378",
+      "originalUrl": "https://arxiv.org/abs/2608.20378",
+      "titleOriginal": "Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification",
+      "summaryOriginal": "arXiv:2608.20378v1 Announce Type: new Abstract: Safety alignment in Large Language Models (LLMs) is often superficial, relying on refusal mechanisms that trigger only at the final stages of generation without erasing the foundational knowledge of harmful concepts acquired during pretraining. This study demonstrates that this architectural disconnect leaves models vulnerable to Semantic Camouflage -- adversarial attacks that wrap harmful intent in benign narrative contexts (e.g., creative writing), effectively bypassing standard input and output guardrails. By analyzing the latent activation trajectories of three distinct Small Language Model (SLM) families (Phi-3, Qwen2.5, and Gemma-2b) under adversarial stress, this research identifies a universal ``Intent Horizon'' -- a critical depth (typically 15--20\\% of total layers) where the model's distinct, pre-trained representation of harmful intent collapses as it contextualizes the query into a ``safe'' narrative. Results indicate that while late-layer representations of camouflaged attacks are mathematically indistinguishable from safe queries (Detection Rate $< 20\\%$), early-layer representations retain a distinct, detectable ``harm",
+      "originalLanguage": "en",
+      "author": "Md. Hasib Ur Rahman",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-24T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.20378",
+          "publishedAt": "2026-08-24T04:00:00.000Z",
+          "title": "Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该研究揭示了LLM安全对齐的一个关键漏洞，并提出了基于早期层潜在表示的检测方法，对AI安全领域具有实际意义。",
+      "importanceReasonEn": "The study reveals a critical vulnerability in LLM safety alignment and proposes a detection method based on early-layer latent representations, which has practical implications for AI safety.",
+      "scoringMode": "ai",
+      "titleZh": "真相深藏：通过潜在意图验证对抗语义伪装",
+      "titleEn": "Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification",
+      "summaryZh": "arXiv:2608.20378v1 新论文。研究表明，大语言模型（LLM）的安全对齐往往是表面的，依赖仅在生成最后阶段触发的拒绝机制，并未消除预训练中习得的有害概念的基础知识。这种架构脱节使模型易受语义伪装攻击——将有害意图包裹在良性叙事语境（如创意写作）中，从而绕过标准输入和输出防护。通过分析三个不同的小语言模型（SLM）家族（Phi-3、Qwen2.5 和 Gemma-2b）在对抗压力下的潜在激活轨迹，研究识别出一个普遍的“意图视界”——一个关键深度（通常占总层数的 15-20%），在该深度，模型对有害意图的独特预训练表示在将查询情境化为“安全”叙事时崩溃。结果表明，虽然伪装攻击的后期层表示在数学上与安全查询无法区分（检测率 < 20%），但早期层表示保留了独特的、可检测的“危害”信号。",
+      "summaryEn": "arXiv:2608.20378v1 new paper. The study shows that safety alignment in LLMs is often superficial, relying on refusal mechanisms that trigger only at the final stages of generation without erasing the foundational knowledge of harmful concepts acquired during pretraining. This architectural disconnect leaves models vulnerable to Semantic Camouflage—adversarial attacks that wrap harmful intent in benign narrative contexts (e.g., creative writing), bypassing standard input and output guardrails. By analyzing latent activation trajectories of three SLM families (Phi-3, Qwen2.5, Gemma-2b) under adversarial stress, the research identifies a universal 'Intent Horizon'—a critical depth (typically 15-20% of total layers) where the model's distinct pre-trained representation of harmful intent collap",
+      "keywords": [
+        "语义伪装",
+        "意图视界",
+        "潜在激活",
+        "安全对齐",
+        "对抗攻击",
+        "LLM安全"
+      ],
+      "topics": [
+        "LLM安全",
+        "对抗攻击",
+        "语义伪装",
+        "潜在意图验证",
+        "安全对齐"
+      ],
+      "models": [
+        "Phi-3",
+        "Qwen2.5",
+        "Gemma-2b"
+      ],
+      "detailZh": "该研究由arXiv发布，论文编号2608.20378。研究指出，当前LLM的安全对齐机制往往只关注生成阶段的拒绝行为，而没有从根本上消除模型在预训练阶段习得的有害知识。这种架构上的脱节使得模型容易受到“语义伪装”攻击：攻击者将有害意图嵌入看似无害的叙事中（例如创意写作），从而绕过输入和输出的安全过滤。\n\n为了验证这一假设，研究人员对三个不同的小语言模型家族（Phi-3、Qwen2.5和Gemma-2b）进行了对抗性压力测试，分析了它们在处理伪装攻击时的潜在激活轨迹。他们发现了一个普遍存在的“意图视界”——在模型总层数的15-20%深度处，模型对有害意图的独特表示开始崩溃，并逐渐将查询情境化为“安全”叙事。\n\n实验结果显示，在后期层中，伪装攻击的表示与安全查询在数学上几乎无法区分，检测率低于20%。然而，在早期层中，模型保留了独特的“危害”信号，可以被检测到。基于这一发现，研究者提出了一种潜在意图验证方法，通过分析早期层的激活模式来识别伪装攻击。\n\n该研究还讨论了这种方法的局限性，例如对模型架构的依赖以及对抗性攻击可能进一步演化以规避检测。尽管如此，该研究为LLM安全提供了一种新的思路，即从模型内部表示入手，而非仅仅依赖输出端的过滤。",
+      "keyPointsZh": [
+        "LLM安全对齐是表面的，拒绝机制仅在生成最后阶段触发，未消除有害知识。",
+        "语义伪装攻击将有害意图包裹在良性叙事中，绕过输入输出防护。",
+        "识别出“意图视界”：在15-20%层深度，有害意图表示崩溃。",
+        "后期层检测率低于20%，但早期层保留可检测的危害信号。",
+        "提出潜在意图验证方法，利用早期层激活检测伪装攻击。"
+      ],
+      "impactZh": "该研究揭示了LLM安全对齐的一个根本性缺陷，即模型内部仍保留有害知识，仅靠输出过滤无法有效防御。这促使安全社区重新思考对齐策略，从模型内部表示入手进行防御。",
+      "readerImpactZh": "对于普通用户，该研究意味着当前AI助手可能仍存在被恶意利用的风险，即使表面看起来安全。用户应谨慎对待AI生成的内容，尤其是在涉及敏感话题时。",
+      "userImpactZh": "对于AI开发者和安全团队，该研究提供了一种新的检测思路，即通过分析早期层激活来识别伪装攻击。这有助于开发更鲁棒的安全机制，但也需要警惕对抗性攻击的进一步演化。",
+      "howItWorksZh": "该方法通过分析模型在推理过程中的潜在激活轨迹来检测语义伪装。具体而言，研究者对模型输入进行前向传播，记录每一层的激活值，然后比较早期层（如总层数的15-20%）与后期层的表示差异。在早期层，模型对有害意图的表示仍然保留，而在后期层则被“安全”叙事覆盖。通过训练一个分类器来识别早期层的危害信号，可以在生成之前检测到伪装攻击。",
+      "interpretationZh": "该研究提供了实证证据表明LLM的安全对齐存在深层漏洞。虽然结果基于小语言模型，但“意图视界”现象可能具有普遍性。需要注意的是，检测率低于20%表明后期层确实无法区分，但早期层的检测能力也并非完美，且对抗性攻击可能进一步调整以规避早期层检测。",
+      "limitationsZh": "研究仅在小语言模型（SLM）上验证，未在大型模型上测试。检测方法可能对模型架构敏感，且对抗性攻击可能演化以规避早期层检测。此外，论文摘要未提供完整的实验细节，如数据集和评估指标。",
+      "actionStepsZh": [
+        "安全团队应评估现有模型对语义伪装攻击的脆弱性，并考虑引入早期层检测机制。",
+        "研究者可进一步探索“意图视界”现象在更大模型上的普遍性。",
+        "开发对抗性训练方法，使模型在早期层就消除有害表示。",
+        "关注后续论文的完整版本，以获取更多实验细节。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.20378",
+          "publishedAt": "2026-08-24T04:00:00.000Z",
+          "title": "Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-24T04:00:00.000Z",
+        "endedAt": "2026-08-24T05:22:40.645Z",
+        "current": 66,
+        "peak": 66,
+        "history": [
+          {
+            "at": "2026-08-24T04:00:00.000Z",
+            "label": "8/24 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-24T04:41:20.322Z",
+            "label": "8/24 12:41",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-24T05:22:40.645Z",
+            "label": "8/24 13:22",
+            "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "5d66e03fc73374fb",
+      "normalizedUrl": "https://arxiv.org/abs/2608.20379",
+      "originalUrl": "https://arxiv.org/abs/2608.20379",
+      "titleOriginal": "A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications",
+      "summaryOriginal": "arXiv:2608.20379v1 Announce Type: new Abstract: Advances in large language models (LLMs) have fueled a wave of research into agency: the ability to reason, plan, and act. This effort has produced agentic frameworks that orchestrate perception, memory, and decision-making around powerful LLM backbones. With the advent of large multimodal models (LMMs), these systems can process and integrate diverse modalities, including images, audio, and video, thereby improving their real-world applicability. Yet, while surveys of LLM-based agents exist, the role of multimodality in shaping agency has not been systematically examined in recent years. This survey fills the gap by analyzing the impact of multimodality across the core functional modules of the agentic framework: perception, reasoning, planning, memory, and action. Using this lens, we trace the evolution from text-centric agents to multimodal frameworks, examine how modalities are integrated through delegated, late-fusion, and early-fusion architectures, and assess the emergence of agentic behaviors enabled by grounded perception and multimodal reasoning. We organize existing work through a modality-centric taxonomy that links archit",
+      "originalLanguage": "en",
+      "author": "Neel Mokaria, Rishie Raj, Dheeraj Baiju, Xiaoqian Shen, Shraman Pramanick, Kevin Qinghong Lin, Arda Senocak, Mike Zheng Shou, Philip Torr, Mohamed Elhoseiny, Yapeng Tian, Ruohan Gao, Salman Khan, Sayan Nag, Sanjoy Chowdhury, Dinesh Manocha",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-24T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.20379",
+          "publishedAt": "2026-08-24T04:00:00.000Z",
+          "title": "A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该综述填补了多模态智能体领域系统研究的空白，对理解多模态在智能体中的作用具有重要参考价值，但作为综述，其新颖性有限。",
+      "importanceReasonEn": "This survey fills a gap in systematic research on multimodal agents and provides valuable reference for understanding the role of multimodality in agents, but as a survey, its novelty is limited.",
+      "scoringMode": "ai",
+      "titleZh": "多模态智能体框架的基础与前沿综述：技术与应用",
+      "titleEn": "A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications",
+      "summaryZh": "本文是一篇关于多模态智能体框架的综述，系统分析了多模态性如何影响智能体的核心功能模块（感知、推理、规划、记忆和行动），并梳理了从文本中心智能体到多模态框架的演变过程，以及不同模态融合架构（委托、晚期融合、早期融合）的特点。",
+      "summaryEn": "This survey systematically analyzes how multimodality impacts the core functional modules of agentic frameworks (perception, reasoning, planning, memory, and action), tracing the evolution from text-centric agents to multimodal frameworks and examining different modality integration architectures (delegated, late-fusion, early-fusion).",
+      "keywords": [
+        "multimodal",
+        "agentic frameworks",
+        "survey",
+        "perception",
+        "reasoning",
+        "planning",
+        "memory",
+        "action"
+      ],
+      "topics": [
+        "multimodal agents",
+        "agentic frameworks",
+        "survey"
+      ],
+      "models": [],
+      "detailZh": "本文是一篇关于多模态智能体框架的综述，发表于arXiv。随着大型语言模型（LLM）的进步，智能体（agent）的研究蓬勃发展，智能体框架围绕强大的LLM骨干组织感知、记忆和决策。随着大型多模态模型（LMM）的出现，这些系统能够处理并整合图像、音频和视频等多种模态，从而提升其现实世界适用性。然而，尽管已有关于基于LLM的智能体的综述，但近年来多模态性在塑造智能体方面的作用尚未被系统研究。本综述通过分析多模态性对智能体框架核心功能模块（感知、推理、规划、记忆和行动）的影响来填补这一空白。作者通过这一视角，追溯了从文本中心智能体到多模态框架的演变，考察了模态如何通过委托、晚期融合和早期融合架构进行整合，并评估了由基础感知和多模态推理所涌现的智能体行为。他们通过一个以模态为中心的、将架构与功能模块联系起来的分类法来组织现有工作。",
+      "keyPointsZh": [
+        "综述聚焦多模态智能体框架，分析多模态性对感知、推理、规划、记忆和行动五大核心模块的影响。",
+        "梳理了从文本中心智能体到多模态框架的演变过程。",
+        "总结了模态融合的三种架构：委托、晚期融合和早期融合。",
+        "提出了一个以模态为中心的分类法，将架构与功能模块联系起来。"
+      ],
+      "impactZh": "该综述为多模态智能体领域提供了系统性的梳理，有助于研究人员快速了解该领域的研究现状和未来方向，推动多模态智能体的进一步发展。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，该综述提供了多模态智能体框架的全面概览，有助于理解不同模态融合架构的优缺点，为设计更强大的多模态智能体提供参考。",
+      "howItWorksZh": "",
+      "interpretationZh": "该综述基于现有文献，系统分析了多模态智能体的研究进展。它指出多模态性通过增强感知和推理能力，使智能体能够处理更丰富的现实世界信息，从而提升其适用性。综述提出的分类法有助于理解不同融合架构的适用场景。需要注意的是，综述内容基于已发表的研究，可能无法涵盖所有最新进展。",
+      "limitationsZh": "作为综述，其内容基于已发表的研究，可能无法涵盖所有最新进展，且对某些具体技术的分析可能不够深入。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.20379",
+          "publishedAt": "2026-08-24T04:00:00.000Z",
+          "title": "A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-24T04:00:00.000Z",
+        "endedAt": "2026-08-24T05:22:40.645Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-24T04:00:00.000Z",
+            "label": "8/24 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-24T04:41:20.322Z",
+            "label": "8/24 12:41",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-24T05:22:40.645Z",
+            "label": "8/24 13:22",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "869c4764a03151dd",
       "normalizedUrl": "https://arxiv.org/abs/2608.20341",
@@ -38,43 +288,44 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该论文提出了一种新的软件开发范式，对AI原生软件工程有重要影响，但内容较为学术，缺乏实际应用细节。",
-      "importanceReasonEn": "The paper proposes a new software development paradigm with significant implications for AI-native software engineering, but it is academic and lacks practical implementation details.",
+      "importanceReasonZh": "该论文提出一个系统化的SDAD框架，将规范驱动开发与智能体结合，并引入量化治理指标，对AI原生软件开发实践具有指导意义，但属于研究性论文，缺乏实际应用验证。",
+      "importanceReasonEn": "The paper proposes a systematic SDAD framework combining spec-driven development with agents and introduces quantitative governance metrics, offering guidance for AI-native software development practices, but it is a research paper lacking real-world validation.",
       "scoringMode": "ai",
       "titleZh": "SDAD：面向AI原生软件开发生命周期的规范驱动智能体开发",
       "titleEn": "SDAD: Spec-Driven Agentic Development for the AI-Native SDLC",
-      "summaryZh": "arXiv:2608.20341v1 公告类型：新论文。摘要：基于大语言模型的前沿编码智能体，其上下文窗口从数十万到数百万token不等，正在重构软件开发生命周期（SDLC）。丰富的上下文处理和多步推理使得大量功能需求文档（FRD）和仓库上下文能够在单个工作流中被摄取，从而使规范质量成为自主交付的执行燃料。本报告将规范驱动智能体开发（SDAD）形式化为纪律性的前期形式化与高速实现相结合的综合方法：意图捕获、机器可读规范、智能体综合以及人工签署下的独立多智能体验证。我们重新审视了瀑布模型和敏捷开发之间的历史钟摆，将AI代码引入为第四种生产范式，并比较了人类敏捷（约2020年）与智能体SDAD（约2026年）在工件、节奏、问责制和安全性方面的差异。除了过程描述，我们还将模型扩展到团队角色转变（工程师、QA、平台和产品职能）、量化治理（歧义税、规范保真度、SER和TCI_agen）。",
-      "summaryEn": "arXiv:2608.20341v1 Announce Type: new Abstract: Frontier coding agents backed by large language models with context windows from hundreds of thousands to millions of tokens are restructuring the Software Development Life Cycle (SDLC). Rich context handling and multi-step reasoning now allow substantial Functional Requirement Documents (FRDs) and repository context to be ingested in a single workflow, making specification quality the execution fuel for autonomous delivery. This report formalises Spec-Driven Agentic Development (SDAD) as a synthesis of disciplined up-front formalisation and high-velocity implementation: intent capture, machine-readable specification, agentic synthesis, and independent multi-agent verification under human sign-off. We revisit the historical pendulum between W",
+      "summaryZh": "arXiv:2608.20341v1 新论文。论文提出规范驱动智能体开发（SDAD）框架，将严谨的前期形式化与高速实现相结合，涵盖意图捕获、机器可读规范、智能体合成和独立多智能体验证（需人工签署）。论文回顾了瀑布与敏捷的历史摇摆，将AI代码视为第四种生产范式，并比较了2020年的人类敏捷与2026年的智能体SDAD在工件、节奏、责任和安全态势方面的差异。此外，论文还扩展了团队角色转变（工程师、QA、平台、产品）和量化治理指标（歧义税、规范保真度、SER、TCI_agen）。",
+      "summaryEn": "arXiv:2608.20341v1 new paper. The paper proposes the Spec-Driven Agentic Development (SDAD) framework, synthesizing disciplined up-front formalization with high-velocity implementation, covering intent capture, machine-readable specification, agentic synthesis, and independent multi-agent verification under human sign-off. It revisits the historical pendulum between Waterfall and Agile, introduces AI-code as a fourth production paradigm, and compares Human-Agile (circa 2020) with Agentic-SDAD (circa 2026) across artefacts, cadence, accountability, and security posture. It also extends to team role metamorphosis and quantitative governance metrics (Ambiguity Tax, Spec Fidelity, SER, TCI_agen).",
       "keywords": [
         "SDAD",
         "spec-driven",
         "agentic development",
         "SDLC",
-        "AI-native",
-        "LLM",
-        "multi-agent verification"
+        "AI-code",
+        "multi-agent",
+        "governance"
       ],
       "topics": [
+        "SDAD",
         "AI-native SDLC",
-        "spec-driven development",
         "agentic development",
-        "software engineering"
+        "specification-driven",
+        "multi-agent verification"
       ],
       "models": [],
-      "detailZh": "该论文由arXiv发布，编号2608.20341，属于人工智能类别。论文提出了一种名为“规范驱动智能体开发”（SDAD）的新方法，旨在将AI智能体整合到软件开发生命周期中。SDAD结合了前期规范化和高速实现，包括意图捕获、机器可读规范、智能体综合和人工签署下的独立多智能体验证。论文回顾了瀑布模型和敏捷开发的历史，将AI代码视为第四种生产范式，并比较了人类敏捷（约2020年）与智能体SDAD（约2026年）在工件、节奏、问责制和安全性方面的差异。此外，论文还扩展了团队角色转变和量化治理的概念，如歧义税、规范保真度、SER和TCI_agen。然而，摘要被截断，未提供完整的细节。",
+      "detailZh": "该论文发表于arXiv，编号2608.20341，属于人工智能类别。论文指出，具有数十万到数百万token上下文窗口的前沿编码智能体正在重构软件开发生命周期（SDLC）。丰富的上下文处理和多步推理使得大量功能需求文档（FRD）和仓库上下文能够在单一工作流中被摄取，从而使规范质量成为自主交付的执行燃料。论文将规范驱动智能体开发（SDAD）形式化为一种综合方法，结合了严谨的前期形式化和高速实现，包括意图捕获、机器可读规范、智能体合成和独立多智能体验证（需人工签署）。论文回顾了瀑布与敏捷之间的历史摇摆，将AI代码视为第四种生产范式，并比较了2020年的人类敏捷与2026年的智能体SDAD在工件、节奏、责任和安全态势方面的差异。此外，论文还扩展了团队角色转变（工程师、QA、平台、产品）和量化治理指标（歧义税、规范保真度、SER、TCI_agen）。",
       "keyPointsZh": [
-        "SDAD是一种结合前期规范化和智能体实现的新开发范式。",
+        "SDAD框架将规范驱动开发与智能体结合，强调规范质量作为自主交付的关键。",
         "论文将AI代码视为继瀑布、敏捷之后的第四种生产范式。",
-        "SDAD强调意图捕获、机器可读规范、智能体综合和多智能体验证。",
-        "论文比较了人类敏捷和智能体SDAD在多个维度上的差异。",
-        "论文提出了量化治理指标，如歧义税和规范保真度。"
+        "比较了人类敏捷（2020）与智能体SDAD（2026）在工件、节奏、责任和安全方面的差异。",
+        "提出了量化治理指标：歧义税、规范保真度、SER和TCI_agen。",
+        "讨论了团队角色转变，包括工程师、QA、平台和产品职能。"
       ],
-      "impactZh": "该论文可能对软件工程实践产生重要影响，特别是在AI智能体日益普及的背景下。它提供了一种结构化的方法来利用AI进行软件开发，可能提高开发效率和软件质量。然而，由于论文尚未完整发布，其实际影响有待进一步评估。",
+      "impactZh": "该论文为AI原生软件开发提供了系统化的方法论，可能影响未来软件开发流程的设计和治理，推动规范驱动与智能体协作的实践。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和团队，该论文可能提供一种新的工作流程，即通过规范驱动智能体进行开发，可能提高自动化程度和一致性。但具体实践方法尚未详细披露。",
-      "howItWorksZh": "",
-      "interpretationZh": "根据摘要，SDAD是一种将规范驱动的方法与AI智能体相结合的过程。它强调在开发前明确意图和规范，然后由智能体进行实现，并通过多智能体验证确保质量。这类似于将敏捷的灵活性与瀑布的严谨性相结合，但由AI承担主要实现工作。然而，摘要中提到的具体指标和角色转变细节尚未公开，因此我们只能基于摘要进行推断。",
-      "limitationsZh": "摘要被截断，缺少关于SDAD具体实施步骤、工具、案例研究和量化指标的详细数据。论文尚未经过同行评审，其结论可能基于理论分析而非实证研究。",
+      "userImpactZh": "对于AI开发者或团队，该框架可能提供一种新的开发范式，通过规范驱动和智能体协作提高开发效率和质量，但具体效果需进一步验证。",
+      "howItWorksZh": "SDAD框架包括四个阶段：意图捕获（intent capture）、机器可读规范（machine-readable specification）、智能体合成（agentic synthesis）和独立多智能体验证（independent multi-agent verification）。在意图捕获阶段，需求被形式化为机器可读的规范；然后由智能体根据规范进行代码合成；最后通过多个独立智能体进行验证，并需要人工签署。论文还提出了量化治理指标，如歧义税（Ambiguity Tax）衡量规范中的歧义程度，规范保真度（Spec Fidelity）衡量实现与规范的一致性，SER和TCI_agen可能用于评估智能体效率和治理。",
+      "interpretationZh": "论文提出的SDAD框架是一种理论模型，旨在解决AI时代软件开发中规范质量与执行速度的矛盾。它强调规范的重要性，并引入多智能体验证来确保质量。然而，论文尚未提供实际应用案例或实证数据，因此其有效性仍需验证。",
+      "limitationsZh": "论文为理论性研究，缺乏实际应用案例和实证数据。所提出的指标（如歧义税、规范保真度）的具体计算方法和有效性未详细说明。此外，论文未讨论SDAD在现实项目中的可扩展性和潜在挑战。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -97,7 +348,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T04:00:00.000Z",
-        "endedAt": "2026-08-24T04:25:12.036Z",
+        "endedAt": "2026-08-24T05:22:40.645Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -108,8 +359,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T04:25:12.036Z",
-            "label": "8/24 12:25",
+            "at": "2026-08-24T04:41:20.322Z",
+            "label": "8/24 12:41",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-24T05:22:40.645Z",
+            "label": "8/24 13:22",
             "value": 64,
             "reports": 1
           }
@@ -217,7 +474,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T04:00:00.000Z",
-        "endedAt": "2026-08-24T04:25:12.036Z",
+        "endedAt": "2026-08-24T05:22:40.645Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -228,8 +485,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T04:25:12.036Z",
-            "label": "8/24 12:25",
+            "at": "2026-08-24T04:41:20.322Z",
+            "label": "8/24 12:41",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-24T05:22:40.645Z",
+            "label": "8/24 13:22",
             "value": 61,
             "reports": 1
           }
@@ -426,7 +689,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-23T20:24:52.000Z",
-        "endedAt": "2026-08-24T04:25:12.036Z",
+        "endedAt": "2026-08-24T05:22:40.645Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -437,56 +700,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-23T21:18:14.226Z",
-            "label": "8/24 05:18",
+            "at": "2026-08-23T21:24:37.405Z",
+            "label": "8/24 05:24",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-23T22:11:36.452Z",
-            "label": "8/24 06:11",
+            "at": "2026-08-23T22:24:22.810Z",
+            "label": "8/24 06:24",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-23T23:04:58.678Z",
-            "label": "8/24 07:04",
+            "at": "2026-08-23T23:24:08.215Z",
+            "label": "8/24 07:24",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-23T23:58:20.904Z",
-            "label": "8/24 07:58",
+            "at": "2026-08-24T00:23:53.620Z",
+            "label": "8/24 08:23",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-24T00:51:43.131Z",
-            "label": "8/24 08:51",
+            "at": "2026-08-24T01:23:39.025Z",
+            "label": "8/24 09:23",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-24T01:45:05.357Z",
-            "label": "8/24 09:45",
+            "at": "2026-08-24T02:23:24.430Z",
+            "label": "8/24 10:23",
             "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-24T02:38:27.583Z",
-            "label": "8/24 10:38",
+            "at": "2026-08-24T03:23:09.835Z",
+            "label": "8/24 11:23",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-24T03:31:49.809Z",
-            "label": "8/24 11:31",
+            "at": "2026-08-24T04:22:55.240Z",
+            "label": "8/24 12:22",
             "value": 61,
             "reports": 1
           },
           {
-            "at": "2026-08-24T04:25:12.036Z",
-            "label": "8/24 12:25",
+            "at": "2026-08-24T05:22:40.645Z",
+            "label": "8/24 13:22",
             "value": 66,
             "reports": 1
           }
@@ -530,8 +793,8 @@
         }
       ],
       "importance": 60,
-      "importanceReasonZh": "该事件引发广泛猜测，可能涉及AI行业的重要动态，但信息有限。",
-      "importanceReasonEn": "The event has sparked widespread speculation and may involve significant developments in the AI industry, but information is limited.",
+      "importanceReasonZh": "该事件引发广泛猜测，但缺乏确凿信息，重要性中等。",
+      "importanceReasonEn": "The event has sparked widespread speculation but lacks concrete information, so importance is moderate.",
       "scoringMode": "ai",
       "titleZh": "新“隐形模型”Ox Alpha背后是谁？",
       "titleEn": "Who's behind the new 'stealth model' Ox Alpha?",
@@ -545,23 +808,23 @@
       "topics": [
         "Ox Alpha",
         "AI模型",
-        "神秘发布"
+        "猜测"
       ],
       "models": [
         "Ox Alpha"
       ],
-      "detailZh": "根据TechCrunch AI的报道，一个名为Ox Alpha的新AI模型在互联网的某些角落引发了疯狂的猜测。报道指出，该模型以“隐形”方式出现，没有明确的发布方或官方公告，导致社区对其来源和性质进行各种推测。目前已知的事实仅限于模型名称和引发的讨论，关于其技术细节、性能或背后的组织均未披露。报道未提供任何官方确认或可靠来源，因此所有信息均属传闻。",
+      "detailZh": "根据TechCrunch AI的报道，一个名为Ox Alpha的神秘新AI模型在互联网的某些角落引发了疯狂的猜测。报道指出，该模型的出现让许多人猜测其背后的开发者是谁，但截至目前，没有官方确认或详细的技术细节被公开。报道中未提及任何具体的性能数据、发布方或使用案例，因此所有信息都基于猜测。背景是AI领域经常出现类似的神秘发布，以吸引关注或测试市场反应。目前已知的事实仅限于模型名称和引发的讨论，其余信息均未得到证实。",
       "keyPointsZh": [
-        "Ox Alpha是一个新出现的AI模型，引发互联网猜测。",
-        "该模型以“隐形”方式发布，缺乏官方信息。",
-        "目前没有关于其技术细节或背后组织的可靠信息。"
+        "Ox Alpha是一个新出现的AI模型，引发广泛猜测。",
+        "目前没有官方确认其开发者或技术细节。",
+        "报道仅基于猜测，缺乏实证信息。"
       ],
-      "impactZh": "该事件可能预示着AI领域出现新的参与者或技术突破，但由于信息不足，实际影响尚不明确。",
+      "impactZh": "该事件可能影响AI社区的关注焦点，但具体影响尚不明确。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道仅提及Ox Alpha引发猜测，但未提供任何具体事实。因此，所有关于其来源或能力的说法均属推测，需谨慎对待。",
-      "limitationsZh": "来源仅为一篇简短报道，缺乏官方确认和详细数据，所有信息均未经验证。",
+      "interpretationZh": "报道仅提及Ox Alpha引发猜测，没有提供任何具体事实。因此，我们只能确认该模型的存在和引发的讨论，其余均为推测。",
+      "limitationsZh": "来源信息有限，未提供任何可验证的细节，所有内容均未证实。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -584,7 +847,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-23T20:01:36.000Z",
-        "endedAt": "2026-08-24T04:25:12.036Z",
+        "endedAt": "2026-08-24T05:22:40.645Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -595,56 +858,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-23T20:57:33.337Z",
+            "at": "2026-08-23T20:57:42.464Z",
             "label": "8/24 04:57",
-            "value": 19,
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-23T21:53:30.674Z",
+            "at": "2026-08-23T21:53:48.929Z",
             "label": "8/24 05:53",
-            "value": 24,
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-23T22:49:28.012Z",
+            "at": "2026-08-23T22:49:55.393Z",
             "label": "8/24 06:49",
-            "value": 29,
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-23T23:45:25.349Z",
-            "label": "8/24 07:45",
-            "value": 34,
+            "at": "2026-08-23T23:46:01.858Z",
+            "label": "8/24 07:46",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-24T00:41:22.686Z",
-            "label": "8/24 08:41",
-            "value": 39,
+            "at": "2026-08-24T00:42:08.322Z",
+            "label": "8/24 08:42",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-24T01:37:20.024Z",
-            "label": "8/24 09:37",
-            "value": 43,
+            "at": "2026-08-24T01:38:14.787Z",
+            "label": "8/24 09:38",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-24T02:33:17.361Z",
-            "label": "8/24 10:33",
-            "value": 48,
+            "at": "2026-08-24T02:34:21.251Z",
+            "label": "8/24 10:34",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-08-24T03:29:14.698Z",
-            "label": "8/24 11:29",
-            "value": 53,
+            "at": "2026-08-24T03:30:27.716Z",
+            "label": "8/24 11:30",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-24T04:25:12.036Z",
-            "label": "8/24 12:25",
+            "at": "2026-08-24T04:26:34.180Z",
+            "label": "8/24 12:26",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-24T05:22:40.645Z",
+            "label": "8/24 13:22",
             "value": 58,
             "reports": 1
           }
@@ -787,7 +1056,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-23T19:55:30.000Z",
-        "endedAt": "2026-08-24T04:25:12.036Z",
+        "endedAt": "2026-08-24T05:22:40.645Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -798,56 +1067,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-23T20:52:08.004Z",
+            "at": "2026-08-23T20:52:13.064Z",
             "label": "8/24 04:52",
-            "value": 20,
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-23T21:48:46.008Z",
+            "at": "2026-08-23T21:48:56.129Z",
             "label": "8/24 05:48",
-            "value": 25,
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-23T22:45:24.012Z",
+            "at": "2026-08-23T22:45:39.193Z",
             "label": "8/24 06:45",
-            "value": 31,
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-23T23:42:02.016Z",
+            "at": "2026-08-23T23:42:22.258Z",
             "label": "8/24 07:42",
-            "value": 36,
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-24T00:38:40.020Z",
-            "label": "8/24 08:38",
-            "value": 42,
+            "at": "2026-08-24T00:39:05.322Z",
+            "label": "8/24 08:39",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-24T01:35:18.024Z",
+            "at": "2026-08-24T01:35:48.387Z",
             "label": "8/24 09:35",
-            "value": 47,
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-24T02:31:56.028Z",
-            "label": "8/24 10:31",
-            "value": 53,
+            "at": "2026-08-24T02:32:31.451Z",
+            "label": "8/24 10:32",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-24T03:28:34.032Z",
-            "label": "8/24 11:28",
-            "value": 58,
+            "at": "2026-08-24T03:29:14.516Z",
+            "label": "8/24 11:29",
+            "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-24T04:25:12.036Z",
+            "at": "2026-08-24T04:25:57.580Z",
             "label": "8/24 12:25",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-24T05:22:40.645Z",
+            "label": "8/24 13:22",
             "value": 64,
             "reports": 1
           }
@@ -967,7 +1242,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-23T19:14:08.000Z",
-        "endedAt": "2026-08-24T04:25:12.036Z",
+        "endedAt": "2026-08-24T05:22:40.645Z",
         "current": 83,
         "peak": 83,
         "history": [
@@ -978,62 +1253,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-23T20:09:14.403Z",
+            "at": "2026-08-23T20:09:27.331Z",
             "label": "8/24 04:09",
-            "value": 34,
+            "value": 33,
             "reports": 2
           },
           {
-            "at": "2026-08-23T21:04:20.807Z",
+            "at": "2026-08-23T21:04:46.662Z",
             "label": "8/24 05:04",
-            "value": 39,
+            "value": 38,
             "reports": 2
           },
           {
-            "at": "2026-08-23T21:59:27.210Z",
-            "label": "8/24 05:59",
-            "value": 45,
+            "at": "2026-08-23T22:00:05.994Z",
+            "label": "8/24 06:00",
+            "value": 43,
             "reports": 2
           },
           {
-            "at": "2026-08-23T22:54:33.614Z",
-            "label": "8/24 06:54",
-            "value": 50,
+            "at": "2026-08-23T22:55:25.325Z",
+            "label": "8/24 06:55",
+            "value": 48,
             "reports": 2
           },
           {
-            "at": "2026-08-23T23:49:40.018Z",
-            "label": "8/24 07:49",
-            "value": 56,
+            "at": "2026-08-23T23:50:44.656Z",
+            "label": "8/24 07:50",
+            "value": 53,
             "reports": 2
           },
           {
-            "at": "2026-08-24T00:44:46.421Z",
-            "label": "8/24 08:44",
-            "value": 61,
+            "at": "2026-08-24T00:46:03.988Z",
+            "label": "8/24 08:46",
+            "value": 58,
             "reports": 2
           },
           {
-            "at": "2026-08-24T01:39:52.825Z",
-            "label": "8/24 09:39",
-            "value": 67,
+            "at": "2026-08-24T01:41:23.319Z",
+            "label": "8/24 09:41",
+            "value": 63,
             "reports": 2
           },
           {
-            "at": "2026-08-24T02:34:59.228Z",
-            "label": "8/24 10:34",
-            "value": 72,
+            "at": "2026-08-24T02:36:42.650Z",
+            "label": "8/24 10:36",
+            "value": 68,
             "reports": 2
           },
           {
-            "at": "2026-08-24T03:30:05.632Z",
-            "label": "8/24 11:30",
+            "at": "2026-08-24T03:32:01.982Z",
+            "label": "8/24 11:32",
+            "value": 73,
+            "reports": 2
+          },
+          {
+            "at": "2026-08-24T04:27:21.313Z",
+            "label": "8/24 12:27",
             "value": 78,
             "reports": 2
           },
           {
-            "at": "2026-08-24T04:25:12.036Z",
-            "label": "8/24 12:25",
+            "at": "2026-08-24T05:22:40.645Z",
+            "label": "8/24 13:22",
             "value": 83,
             "reports": 2
           }
