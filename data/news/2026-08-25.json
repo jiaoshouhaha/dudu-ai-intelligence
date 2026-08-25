@@ -1,7 +1,245 @@
 {
-  "generatedAt": "2026-08-25T03:08:09.983Z",
+  "generatedAt": "2026-08-25T04:19:29.821Z",
   "date": "2026-08-25",
   "items": [
+    {
+      "id": "1af13a997ccd1b8b",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21362",
+      "originalUrl": "https://arxiv.org/abs/2608.21362",
+      "titleOriginal": "KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference",
+      "summaryOriginal": "arXiv:2608.21362v1 Announce Type: new Abstract: Transformer-based large language models (LLMs) incur high prefill latency because key-value (KV) tensors must be recomputed for each request. Existing prefix-caching systems reduce this cost but require prompts to share a leading contiguous prefix, limiting effectiveness when shared content appears at arbitrary positions. We present KVBoost, a chunk-level KV cache reuse system for HuggingFace-compatible decoder models that enables reuse regardless of content position. KVBoost introduces a dual-hash keying scheme that separates positional identity (prefix hash) from content identity (content hash), supporting both exact and approximate cache matches. To address attention boundary errors from independently cached chunks, KVBoost employs two repair strategies: SelectiveRecompute, which re-encodes boundary regions, and CacheBlendRecompute, which identifies and recomputes high-deviation tokens after a probe pass. The system further incorporates asymmetric KV quantization (int8/int4), adaptive chunk boundary splitting, and importance-weighted eviction under a fixed memory budget. Evaluated on Qwen/Qwen2.5-3B over 1,000 bug-localization samp",
+      "originalLanguage": "en",
+      "author": "Srihari Unnikrishnan",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-25T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21362",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究针对LLM推理中的高预填充延迟问题，提出块级KV缓存复用方法，突破前缀缓存限制，具有实际应用价值，但评估规模较小，影响有限。",
+      "importanceReasonEn": "Addresses high prefill latency with chunk-level KV reuse, overcoming prefix limitation, practical but limited evaluation.",
+      "scoringMode": "ai",
+      "titleZh": "KVBoost：基于偏差引导重计算的块级键值缓存复用，用于高效大语言模型推理",
+      "titleEn": "KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference",
+      "summaryZh": "Transformer大语言模型因每个请求需重新计算键值张量而面临高预填充延迟。现有前缀缓存系统要求提示共享连续前缀，限制了任意位置共享内容的复用。KVBoost提出块级KV缓存复用系统，支持任意位置的内容复用，通过双哈希键控方案分离位置身份和内容身份，支持精确和近似匹配，并采用选择性重计算和CacheBlend重计算修复注意力边界误差，结合非对称量化、自适应分块和重要性驱逐，在Qwen2.5-3B上评估。",
+      "summaryEn": "Transformer LLMs incur high prefill latency due to recomputing KV tensors per request. Existing prefix caching requires contiguous prefix sharing. KVBoost enables chunk-level reuse regardless of position, using dual-hash keying, repair strategies, quantization, and eviction, evaluated on Qwen2.5-3B.",
+      "keywords": [
+        "KV缓存复用",
+        "块级缓存",
+        "偏差引导重计算",
+        "前缀缓存",
+        "推理加速"
+      ],
+      "topics": [
+        "KV缓存",
+        "推理优化",
+        "大语言模型"
+      ],
+      "models": [
+        "Qwen2.5-3B"
+      ],
+      "detailZh": "Transformer大语言模型在推理时，每个请求都需要重新计算键值（KV）张量，导致预填充阶段延迟高。现有的前缀缓存系统通过缓存连续前缀来减少重复计算，但要求提示词共享一个连续的前缀，当共享内容出现在任意位置时效果有限。KVBoost提出了一种块级KV缓存复用系统，适用于HuggingFace兼容的解码器模型，支持无论内容位置如何都能复用缓存。\n\nKVBoost引入了双哈希键控方案，将位置身份（前缀哈希）与内容身份（内容哈希）分离，支持精确和近似缓存匹配。为了处理独立缓存块带来的注意力边界误差，KVBoost采用两种修复策略：选择性重计算（SelectiveRecompute）重新编码边界区域，以及CacheBlendRecompute在探测后识别并重计算高偏差令牌。\n\n系统还集成了非对称KV量化（int8/int4）、自适应块边界分割和固定内存预算下的重要性加权驱逐。在Qwen/Qwen2.5-3B模型上，针对1000个bug定位样本进行了评估。\n\n摘要提到评估结果，但未提供具体数值，因此无法量化性能提升。该研究为缓存复用提供了新思路，但需要更多实验验证。",
+      "keyPointsZh": [
+        "KVBoost实现块级KV缓存复用，不受前缀位置限制。",
+        "双哈希键控分离位置和内容身份，支持精确和近似匹配。",
+        "采用选择性重计算和CacheBlend重计算修复边界误差。",
+        "集成int8/int4量化、自适应分块和重要性驱逐。",
+        "在Qwen2.5-3B上评估，但未提供具体性能数据。"
+      ],
+      "impactZh": "该研究可能降低LLM推理的预填充延迟，提升缓存利用率，尤其对长上下文和共享内容场景有积极影响，但尚需更大规模验证。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和推理系统工程师，KVBoost提供了块级缓存复用方案，可能减少重复计算，降低推理成本，但需关注其实现复杂度和实际效果。",
+      "howItWorksZh": "KVBoost将KV缓存划分为块，每个块通过双哈希（前缀哈希和内容哈希）标识。前缀哈希用于定位，内容哈希用于内容匹配。当新请求的块与缓存块内容匹配时，可直接复用，否则需重计算。为处理边界误差，系统先进行探测，识别高偏差令牌，然后仅重计算这些区域。量化技术减少内存占用，自适应分块优化块大小，重要性驱逐在内存受限时保留重要块。",
+      "interpretationZh": "该研究提出了一种新颖的缓存复用方法，突破了前缀限制，但摘要未提供具体性能数据，因此其实际效果尚不明确。双哈希和重计算策略在理论上合理，但实现复杂度和开销需进一步评估。",
+      "limitationsZh": "摘要未提供具体性能提升数值，评估仅基于Qwen2.5-3B和bug定位任务，泛化性未知。双哈希和重计算可能引入额外开销，需详细实验验证。",
+      "actionStepsZh": [
+        "阅读论文全文以获取具体性能数据和实现细节。",
+        "在自有模型上复现KVBoost，评估其效果。",
+        "关注后续工作，看是否有更大规模评估。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21362",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-25T04:00:00.000Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-25T04:00:00.000Z",
+            "label": "8/25 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b749ed6ae3aff615",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21363",
+      "originalUrl": "https://arxiv.org/abs/2608.21363",
+      "titleOriginal": "AIREP: A Protocol for Per-Decision Evidence in AI Runtime Governance",
+      "summaryOriginal": "arXiv:2608.21363v1 Announce Type: new Abstract: A protocol is presented for recording the governance decisions of automated AI runtimes. When a runtime releases, blocks, defers, redacts, or escalates an individual output, AIREP records that decision as a single signed object that any party can check offline, independent of the runtime that produced it. A record carries the decision as one of a closed set of verbs under a stated policy basis, references its input, output, and evidence by hash rather than by value, and declares both what its evidence covers and what it does not. Records form a SHA-256 hash chain that binds each record to its position, so that tampering and gaps are detectable by recomputation. Vendor-, model-, and domain-specific content is confined to a single optional namespace, and a mechanical neutrality test keeps the shared format free of it. A reference implementation and a two-language conformance kit are described. Some implementation issues are considered, and problems such as alignment of the canonical form across implementations, freshness witnesses, and multi-runtime chains are exposed. The format is offered for adoption by any AI runtime that records go",
+      "originalLanguage": "en",
+      "author": "Ali Toygar Abak",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-25T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21363",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "AIREP: A Protocol for Per-Decision Evidence in AI Runtime Governance",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种用于AI运行时治理决策记录的标准协议，具有实际应用潜力，但尚未广泛部署，且缺乏实证验证。",
+      "importanceReasonEn": "The paper proposes a standard protocol for recording governance decisions in AI runtimes, with practical potential but not yet widely deployed and lacking empirical validation.",
+      "scoringMode": "ai",
+      "titleZh": "AIREP：AI运行时治理中逐决策证据的协议",
+      "titleEn": "AIREP: A Protocol for Per-Decision Evidence in AI Runtime Governance",
+      "summaryZh": "本文提出了一种协议，用于记录自动化AI运行时的治理决策。当运行时发布、阻止、延迟、编辑或升级单个输出时，AIREP将该决策记录为单个签名对象，任何一方都可以离线检查，独立于产生它的运行时。记录将决策表示为在既定政策依据下的封闭动词集合中的一个，通过哈希而非值引用其输入、输出和证据，并声明其证据涵盖的内容和不涵盖的内容。记录形成SHA-256哈希链，将每条记录绑定到其位置，从而通过重新计算可检测篡改和间隙。供应商、模型和领域特定内容被限制在单个可选命名空间中，机械中立性测试保持共享格式不受其影响。描述了参考实现和双语言一致性工具包。考虑了一些实现问题，并暴露了诸如跨实现规范形式对齐、新鲜度见证和多运行时链等问题。该格式提供给任何记录治理决策的AI运行时采用。",
+      "summaryEn": "A protocol is presented for recording the governance decisions of automated AI runtimes. When a runtime releases, blocks, defers, redacts, or escalates an individual output, AIREP records that decision as a single signed object that any party can check offline, independent of the runtime that produced it. A record carries the decision as one of a closed set of verbs under a stated policy basis, references its input, output, and evidence by hash rather than by value, and declares both what its evidence covers and what it does not. Records form a SHA-256 hash chain that binds each record to its position, so that tampering and gaps are detectable by recomputation. Vendor-, model-, and domain-specific content is confined to a single optional namespace, and a mechanical neutrality test keeps th",
+      "keywords": [
+        "AIREP",
+        "AI运行时",
+        "治理决策",
+        "哈希链",
+        "可审计性",
+        "协议"
+      ],
+      "topics": [
+        "AI治理",
+        "运行时",
+        "协议",
+        "哈希链",
+        "可审计性"
+      ],
+      "models": [],
+      "detailZh": "本文介绍了一种名为AIREP的协议，旨在为AI运行时的治理决策提供标准化的记录格式。当AI运行时对输出做出决策（如发布、阻止、延迟、编辑或升级）时，AIREP会生成一个签名对象，该对象包含决策类型（封闭动词集合）、政策依据、输入输出和证据的哈希引用，以及证据覆盖范围的声明。这些记录通过SHA-256哈希链连接，确保每条记录的位置固定，任何篡改或缺失都能通过重新计算检测出来。协议设计强调中立性，将供应商、模型和领域特定内容限制在可选命名空间中，并通过机械测试确保共享格式的纯净。论文还描述了参考实现和双语言一致性工具包，并讨论了实现中的挑战，如规范形式对齐、新鲜度见证和多运行时链问题。该协议旨在供任何记录治理决策的AI运行时采用，以提高透明度和可审计性。",
+      "keyPointsZh": [
+        "AIREP协议为AI运行时的治理决策提供标准记录格式。",
+        "记录包含决策动词、政策依据、哈希引用和证据覆盖声明。",
+        "使用SHA-256哈希链确保记录完整性和防篡改。",
+        "通过可选命名空间和机械测试保持格式中立性。",
+        "提供了参考实现和双语言一致性工具包。"
+      ],
+      "impactZh": "该协议可能为AI治理提供标准化的审计轨迹，增强透明度和问责性，但实际影响取决于行业采纳程度。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和团队，该协议可能提供一种标准方式来记录和审计AI运行时的决策，有助于满足合规要求，但需要集成到现有系统中。",
+      "howItWorksZh": "AIREP协议的工作方式如下：当AI运行时对输出做出治理决策时，它创建一个记录对象，包含决策动词（如release、block等）、政策依据、输入输出和证据的哈希值，以及证据覆盖范围的声明。每条记录通过SHA-256哈希链接到前一条记录，形成链式结构。验证者可以离线重新计算哈希以检测篡改或缺失。协议定义了规范形式，并提供了参考实现和一致性工具包，以确保不同实现之间的互操作性。",
+      "interpretationZh": "该论文提出了一种技术方案，但尚未经过大规模实际部署验证。其有效性依赖于行业采纳和实现的一致性。",
+      "limitationsZh": "论文未提供实际部署案例或性能数据，且协议仍处于提案阶段，可能面临实现一致性和采纳障碍。",
+      "actionStepsZh": [
+        "阅读论文以了解协议细节。",
+        "评估AIREP是否适用于您的AI运行时。",
+        "参考实现和一致性工具包进行原型验证。",
+        "关注后续更新和社区反馈。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21363",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "AIREP: A Protocol for Per-Decision Evidence in AI Runtime Governance",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-25T04:00:00.000Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-25T04:00:00.000Z",
+            "label": "8/25 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "ee9fdc090cc0c494",
       "normalizedUrl": "https://latent.space/p/ainews-andrew-ng-gets-into-ai-engineering",
@@ -82,31 +320,31 @@
         }
       ],
       "importance": 60,
-      "importanceReasonZh": "吴恩达作为AI领域的重要人物，其动向对行业有较大影响，但信息有限，重要性中等。",
-      "importanceReasonEn": "Andrew Ng is a significant figure in AI, his moves have considerable industry impact, but information is limited, so importance is moderate.",
+      "importanceReasonZh": "吴恩达作为AI领域的重要人物，其动向具有行业风向标意义，但具体内容不详。",
+      "importanceReasonEn": "Andrew Ng's move is a bellwether for the industry, but details are scarce.",
       "scoringMode": "ai",
       "titleZh": "[AINews] 吴恩达进军AI工程领域",
       "titleEn": "[AINews] Andrew Ng gets into AI Engineering",
-      "summaryZh": "行业传奇人物开始涉足不可避免的领域！",
+      "summaryZh": "行业传奇人物开始涉足AI工程领域，这标志着AI工程化的重要趋势。",
       "summaryEn": "An industry legend starts covering the inevitable!",
       "keywords": [],
       "topics": [
         "AI工程",
-        "行业动态"
+        "行业趋势"
       ],
       "models": [],
-      "detailZh": "据Latent Space报道，吴恩达（Andrew Ng）开始涉足AI工程领域。吴恩达是人工智能领域的知名人物，曾领导Google Brain和Coursera，并创立了DeepLearning.AI。此次他进入AI工程领域，可能意味着他将关注AI系统的实际构建和部署，而不仅仅是算法研究。目前关于他具体计划或项目的细节尚未披露，但这一动向可能预示着AI工程将成为他新的关注重点。",
+      "detailZh": "据Latent Space报道，吴恩达（Andrew Ng）开始涉足AI工程领域。吴恩达是AI领域的知名人物，曾领导Google Brain和百度AI部门，并创立了Coursera和DeepLearning.AI。此次他进入AI工程领域，可能意味着AI工程化将成为未来发展的重点。然而，目前关于他具体计划或项目的细节尚未公开，仅从标题和摘要中得知这一动向。",
       "keyPointsZh": [
         "吴恩达开始涉足AI工程领域。",
-        "吴恩达是AI领域的知名人物，曾领导Google Brain和Coursera。",
-        "具体计划或项目细节尚未披露。"
+        "该消息来自Latent Space的报道。",
+        "具体细节尚未披露。"
       ],
-      "impactZh": "吴恩达的动向可能影响AI工程领域的发展方向，吸引更多关注和资源投入。",
+      "impactZh": "吴恩达的动向可能预示着AI工程化将成为行业热点，但具体影响需待更多信息。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI从业者，可能意味着未来会有更多关于AI工程的最佳实践和工具出现，但具体影响尚不明确。",
+      "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道称吴恩达开始涉足AI工程，但未提供具体细节。这可能是他个人兴趣的转变，也可能是其公司战略的一部分。目前只能确认他对此领域表现出兴趣，具体行动有待观察。",
-      "limitationsZh": "信息来源单一，且未提供具体细节，无法确认吴恩达的具体计划或项目。",
+      "interpretationZh": "根据现有信息，吴恩达进入AI工程领域是一个明确的信号，表明AI工程化的重要性日益凸显。但具体内容尚不明确，需等待后续报道。",
+      "limitationsZh": "目前仅有标题和摘要，缺乏具体细节，无法确认吴恩达的具体计划或项目。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -151,7 +389,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T02:50:57.000Z",
-        "endedAt": "2026-08-25T03:08:09.983Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -162,8 +400,14 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T03:08:09.983Z",
-            "label": "8/25 11:08",
+            "at": "2026-08-25T03:35:13.410Z",
+            "label": "8/25 11:35",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
             "value": 58,
             "reports": 1
           }
@@ -207,38 +451,39 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件涉及AI在金融领域的实际应用与监管风险，对行业有警示意义，但信息有限。",
-      "importanceReasonEn": "The event involves real-world application of AI in finance and regulatory risks, with industry implications, but information is limited.",
+      "importanceReasonZh": "该事件涉及AI在金融领域的应用与监管风险，对行业有警示意义，但信息有限且未经证实。",
+      "importanceReasonEn": "The event involves AI application in finance and regulatory risks, with industry implications, but information is limited and unverified.",
       "scoringMode": "ai",
-      "titleZh": "情境感知AI对冲基金险些崩盘，现遭美国证券交易委员会调查",
+      "titleZh": "情境感知，这家几乎崩溃的明星AI对冲基金正遭美国证券交易委员会调查",
       "titleEn": "Situational Awareness, star AI hedge fund that nearly imploded, now being probed by the SEC",
-      "summaryZh": "这家AI对冲基金从“华尔街热议”到“收到联邦传票”的速度比说“分散投资”还快。",
+      "summaryZh": "这家AI对冲基金从“华尔街热议”到“收到联邦传票”的速度比你说“分散投资”还快。",
       "summaryEn": "The AI hedge fund went from \"the talk of Wall Street\" to \"subject of federal subpoenas\" faster than you can say \"diversify your portfolio.\"",
       "keywords": [
         "AI对冲基金",
         "SEC",
         "调查",
-        "崩盘",
+        "情境感知",
         "华尔街"
       ],
       "topics": [
         "AI对冲基金",
-        "SEC调查",
-        "金融监管"
+        "监管调查",
+        "金融科技"
       ],
       "models": [],
-      "detailZh": "据TechCrunch AI报道，一家名为“情境感知”（Situational Awareness）的AI对冲基金曾一度成为华尔街的明星，但近期几乎崩盘，现在正面临美国证券交易委员会（SEC）的调查。报道称，该基金从“华尔街热议”到“收到联邦传票”的速度极快，暗示其可能涉及不当行为或管理失误。目前，SEC的调查细节尚未公开，基金的具体问题也未明确。该事件凸显了AI在金融领域应用的高风险性，以及监管机构对新兴技术的关注。",
+      "detailZh": "据报道，名为“情境感知”的AI对冲基金曾一度是华尔街的明星，但近期几乎崩溃，现在正面临美国证券交易委员会（SEC）的调查。该基金曾因利用AI技术进行投资决策而备受瞩目，但近期遭遇重大挫折，导致其濒临倒闭。目前，SEC已发出传票，调查该基金是否存在不当行为。具体调查细节尚未公开，但这一事件引发了人们对AI在金融领域应用的担忧。背景是，AI对冲基金近年来兴起，但监管机构对其透明度和风险控制一直存有疑虑。此次调查可能涉及基金的投资策略、信息披露或内部管理等问题。目前，该基金尚未公开回应，SEC也未发表评论。",
       "keyPointsZh": [
-        "情境感知AI对冲基金曾备受关注，但近期几乎崩盘。",
-        "该基金现正接受美国证券交易委员会（SEC）的调查。",
-        "调查细节和基金具体问题尚未公开。"
+        "AI对冲基金“情境感知”曾备受瞩目，但近期几乎崩溃。",
+        "SEC已对该基金发出传票，展开调查。",
+        "调查具体细节未公开，基金和SEC均未回应。",
+        "事件引发对AI金融应用监管的担忧。"
       ],
-      "impactZh": "该事件可能影响投资者对AI驱动投资策略的信心，并促使监管机构加强对AI金融应用的审查。",
+      "impactZh": "该事件可能影响投资者对AI驱动投资产品的信心，并促使监管机构加强对AI金融应用的审查。",
       "readerImpactZh": "对于普通投资者，此事件提醒他们AI基金并非稳赚不赔，投资需谨慎。",
-      "userImpactZh": "对于AI从业者和开发者，此事件表明AI在金融领域应用需更加注重合规和风险管理。",
+      "userImpactZh": "对于AI开发者和金融科技公司，此事件凸显了合规和风险管理的重要性，可能促使行业加强自律。",
       "howItWorksZh": "",
-      "interpretationZh": "报道仅提及基金几乎崩盘和SEC调查，但未提供具体原因。可能涉及策略失误、市场波动或合规问题，但均为推测。",
-      "limitationsZh": "信息来源单一，缺乏SEC官方确认和基金回应，具体细节未知。",
+      "interpretationZh": "根据现有报道，该基金曾利用AI进行投资，但近期遭遇重大挫折，SEC介入调查。报道未提供具体细节，因此无法确认基金是否违规。合理推断是，监管机构可能关注AI决策的透明度和潜在的系统性风险。",
+      "limitationsZh": "信息仅来自单一来源，且未提供具体调查细节，基金和SEC均未回应，因此存在不确定性。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -261,7 +506,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T00:23:12.000Z",
-        "endedAt": "2026-08-25T03:08:09.983Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -272,21 +517,159 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T01:18:11.327Z",
-            "label": "8/25 09:18",
-            "value": 31,
+            "at": "2026-08-25T01:22:16.455Z",
+            "label": "8/25 09:22",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:13:10.655Z",
-            "label": "8/25 10:13",
-            "value": 47,
+            "at": "2026-08-25T02:21:20.910Z",
+            "label": "8/25 10:21",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:08:09.983Z",
-            "label": "8/25 11:08",
+            "at": "2026-08-25T03:20:25.365Z",
+            "label": "8/25 11:20",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
             "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9b54a38fa1b1a3f1",
+      "normalizedUrl": "https://huggingface.co/blog/gradio-workflow-guide",
+      "originalUrl": "https://huggingface.co/blog/gradio-workflow-guide",
+      "titleOriginal": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
+      "summaryOriginal": "",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "opensource",
+      "sourceType": "official",
+      "authority": 94,
+      "sourcePriority": 95,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opensource",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "huggingface",
+          "name": "Hugging Face",
+          "type": "official",
+          "url": "https://huggingface.co/blog/gradio-workflow-guide",
+          "publishedAt": "2026-08-25T00:00:00.000Z",
+          "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
+          "authority": 94,
+          "sourcePriority": 95,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该指南为开发者提供了实用的 Gradio 工作流构建方法，具有实际应用价值。",
+      "importanceReasonEn": "The guide provides practical methods for building Gradio workflows, offering real-world utility for developers.",
+      "scoringMode": "ai",
+      "titleZh": "连接、运行、部署：Gradio 中的 AI 工作流",
+      "titleEn": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
+      "summaryZh": "Hugging Face 发布了一篇关于在 Gradio 中构建 AI 工作流的指南，涵盖从连接组件到部署的完整流程。",
+      "summaryEn": "Hugging Face published a guide on building AI workflows in Gradio, covering the full process from wiring components to deployment.",
+      "keywords": [],
+      "topics": [
+        "Gradio",
+        "AI工作流",
+        "部署"
+      ],
+      "models": [],
+      "detailZh": "Hugging Face 发布了一篇关于在 Gradio 中构建 AI 工作流的指南。指南涵盖了从连接组件到部署的完整流程，包括如何将不同的 AI 模型和功能串联起来，以及如何将构建好的工作流部署到生产环境。文章强调了 Gradio 作为快速构建和分享 AI 应用的框架，其易用性和灵活性使得开发者能够快速迭代。指南中可能包含具体的代码示例和最佳实践，但具体细节未在摘要中提供。",
+      "keyPointsZh": [
+        "Hugging Face 发布了 Gradio AI 工作流构建指南。",
+        "指南涵盖连接、运行和部署的完整流程。",
+        "Gradio 框架强调快速构建和分享 AI 应用。"
+      ],
+      "impactZh": "该指南有助于降低 AI 应用开发门槛，使更多开发者能够快速构建和部署 AI 工作流，促进 AI 技术的普及和应用。",
+      "readerImpactZh": "对于普通用户，该指南可能间接促进更多易用的 AI 应用出现，但直接影响有限。",
+      "userImpactZh": "对于 AI 开发者和团队，该指南提供了实用的 Gradio 工作流构建方法，有助于提高开发效率，快速实现 AI 应用的部署。",
+      "howItWorksZh": "指南可能介绍了如何使用 Gradio 的 Blocks 或 Interface API 来连接多个 AI 模型，通过定义输入输出接口和事件处理函数来构建工作流，并利用 Gradio 的部署功能（如 Hugging Face Spaces）进行发布。具体步骤和配置细节未在摘要中提供。",
+      "interpretationZh": "该指南是 Hugging Face 官方发布的教程，内容可信度较高。但摘要信息有限，具体技术细节和最佳实践需要查看原文。",
+      "limitationsZh": "摘要未提供具体的技术细节，无法验证指南的深度和实用性。",
+      "actionStepsZh": [
+        "访问 Hugging Face 官方博客或文档查看完整指南。",
+        "尝试使用 Gradio 构建简单的 AI 工作流。",
+        "参考指南中的最佳实践优化现有工作流。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "huggingface",
+          "name": "Hugging Face",
+          "type": "official",
+          "url": "https://huggingface.co/blog/gradio-workflow-guide",
+          "publishedAt": "2026-08-25T00:00:00.000Z",
+          "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
+          "authority": 94,
+          "sourcePriority": 95,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-25T00:00:00.000Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-08-25T00:00:00.000Z",
+            "label": "8/25 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-25T00:51:53.964Z",
+            "label": "8/25 08:51",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T01:43:47.928Z",
+            "label": "8/25 09:43",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T02:35:41.892Z",
+            "label": "8/25 10:35",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T03:27:35.856Z",
+            "label": "8/25 11:27",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
+            "value": 58,
             "reports": 1
           }
         ],
@@ -378,7 +761,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T21:24:17.000Z",
-        "endedAt": "2026-08-25T03:08:09.983Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -389,38 +772,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T22:21:35.830Z",
-            "label": "8/25 06:21",
-            "value": 21,
+            "at": "2026-08-24T22:23:35.974Z",
+            "label": "8/25 06:23",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:18:54.661Z",
-            "label": "8/25 07:18",
-            "value": 29,
+            "at": "2026-08-24T23:22:54.948Z",
+            "label": "8/25 07:22",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:16:13.491Z",
-            "label": "8/25 08:16",
-            "value": 36,
+            "at": "2026-08-25T00:22:13.923Z",
+            "label": "8/25 08:22",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:13:32.322Z",
-            "label": "8/25 09:13",
-            "value": 43,
+            "at": "2026-08-25T01:21:32.897Z",
+            "label": "8/25 09:21",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:10:51.152Z",
-            "label": "8/25 10:10",
-            "value": 51,
+            "at": "2026-08-25T02:20:51.872Z",
+            "label": "8/25 10:20",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:08:09.983Z",
-            "label": "8/25 11:08",
+            "at": "2026-08-25T03:20:10.846Z",
+            "label": "8/25 11:20",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
             "value": 58,
             "reports": 1
           }
@@ -517,7 +906,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T19:54:19.000Z",
-        "endedAt": "2026-08-25T03:08:09.983Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
         "current": 47,
         "peak": 47,
         "history": [
@@ -528,50 +917,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T20:48:32.872Z",
-            "label": "8/25 04:48",
+            "at": "2026-08-24T20:50:26.869Z",
+            "label": "8/25 04:50",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:42:46.745Z",
-            "label": "8/25 05:42",
-            "value": 22,
+            "at": "2026-08-24T21:46:34.738Z",
+            "label": "8/25 05:46",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:37:00.618Z",
-            "label": "8/25 06:37",
-            "value": 26,
+            "at": "2026-08-24T22:42:42.607Z",
+            "label": "8/25 06:42",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:31:14.491Z",
-            "label": "8/25 07:31",
-            "value": 31,
+            "at": "2026-08-24T23:38:50.476Z",
+            "label": "8/25 07:38",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:25:28.364Z",
-            "label": "8/25 08:25",
-            "value": 35,
+            "at": "2026-08-25T00:34:58.345Z",
+            "label": "8/25 08:34",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:19:42.237Z",
-            "label": "8/25 09:19",
-            "value": 39,
+            "at": "2026-08-25T01:31:06.214Z",
+            "label": "8/25 09:31",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:13:56.110Z",
-            "label": "8/25 10:13",
-            "value": 43,
+            "at": "2026-08-25T02:27:14.083Z",
+            "label": "8/25 10:27",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:08:09.983Z",
-            "label": "8/25 11:08",
+            "at": "2026-08-25T03:23:21.952Z",
+            "label": "8/25 11:23",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
             "value": 47,
             "reports": 1
           }
@@ -691,7 +1086,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T18:22:49.000Z",
-        "endedAt": "2026-08-25T03:08:09.983Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -702,56 +1097,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T19:21:11.331Z",
-            "label": "8/25 03:21",
-            "value": 20,
+            "at": "2026-08-24T19:22:29.082Z",
+            "label": "8/25 03:22",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-24T20:19:33.662Z",
-            "label": "8/25 04:19",
-            "value": 25,
+            "at": "2026-08-24T20:22:09.164Z",
+            "label": "8/25 04:22",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:17:55.994Z",
-            "label": "8/25 05:17",
-            "value": 31,
+            "at": "2026-08-24T21:21:49.246Z",
+            "label": "8/25 05:21",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:16:18.325Z",
-            "label": "8/25 06:16",
-            "value": 36,
+            "at": "2026-08-24T22:21:29.328Z",
+            "label": "8/25 06:21",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:14:40.657Z",
-            "label": "8/25 07:14",
-            "value": 42,
+            "at": "2026-08-24T23:21:09.410Z",
+            "label": "8/25 07:21",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:13:02.988Z",
-            "label": "8/25 08:13",
-            "value": 47,
+            "at": "2026-08-25T00:20:49.492Z",
+            "label": "8/25 08:20",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:11:25.320Z",
-            "label": "8/25 09:11",
-            "value": 53,
+            "at": "2026-08-25T01:20:29.574Z",
+            "label": "8/25 09:20",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:09:47.651Z",
-            "label": "8/25 10:09",
-            "value": 58,
+            "at": "2026-08-25T02:20:09.656Z",
+            "label": "8/25 10:20",
+            "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:08:09.983Z",
-            "label": "8/25 11:08",
+            "at": "2026-08-25T03:19:49.738Z",
+            "label": "8/25 11:19",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
             "value": 64,
             "reports": 1
           }
@@ -850,7 +1251,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T18:03:55.000Z",
-        "endedAt": "2026-08-25T03:08:09.983Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -861,62 +1262,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T18:58:20.498Z",
-            "label": "8/25 02:58",
-            "value": 19,
+            "at": "2026-08-24T18:59:52.711Z",
+            "label": "8/25 02:59",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-24T19:52:45.996Z",
-            "label": "8/25 03:52",
+            "at": "2026-08-24T19:55:50.422Z",
+            "label": "8/25 03:55",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-24T20:47:11.494Z",
-            "label": "8/25 04:47",
-            "value": 28,
+            "at": "2026-08-24T20:51:48.133Z",
+            "label": "8/25 04:51",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:41:36.993Z",
-            "label": "8/25 05:41",
-            "value": 33,
+            "at": "2026-08-24T21:47:45.844Z",
+            "label": "8/25 05:47",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:36:02.491Z",
-            "label": "8/25 06:36",
-            "value": 37,
+            "at": "2026-08-24T22:43:43.555Z",
+            "label": "8/25 06:43",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:30:27.989Z",
-            "label": "8/25 07:30",
-            "value": 42,
+            "at": "2026-08-24T23:39:41.266Z",
+            "label": "8/25 07:39",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:24:53.488Z",
-            "label": "8/25 08:24",
-            "value": 47,
+            "at": "2026-08-25T00:35:38.977Z",
+            "label": "8/25 08:35",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:19:18.986Z",
-            "label": "8/25 09:19",
+            "at": "2026-08-25T01:31:36.688Z",
+            "label": "8/25 09:31",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T02:27:34.399Z",
+            "label": "8/25 10:27",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:13:44.484Z",
-            "label": "8/25 10:13",
-            "value": 56,
+            "at": "2026-08-25T03:23:32.110Z",
+            "label": "8/25 11:23",
+            "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:08:09.983Z",
-            "label": "8/25 11:08",
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
             "value": 61,
             "reports": 1
           }
@@ -1037,7 +1444,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T18:02:29.000Z",
-        "endedAt": "2026-08-25T03:08:09.983Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
         "current": 72,
         "peak": 72,
         "history": [
@@ -1048,62 +1455,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T18:57:03.098Z",
-            "label": "8/25 02:57",
-            "value": 20,
+            "at": "2026-08-24T18:58:34.529Z",
+            "label": "8/25 02:58",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-24T19:51:37.196Z",
-            "label": "8/25 03:51",
-            "value": 26,
+            "at": "2026-08-24T19:54:40.058Z",
+            "label": "8/25 03:54",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-24T20:46:11.294Z",
-            "label": "8/25 04:46",
-            "value": 31,
+            "at": "2026-08-24T20:50:45.587Z",
+            "label": "8/25 04:50",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:40:45.393Z",
-            "label": "8/25 05:40",
-            "value": 37,
+            "at": "2026-08-24T21:46:51.116Z",
+            "label": "8/25 05:46",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:35:19.491Z",
-            "label": "8/25 06:35",
-            "value": 43,
+            "at": "2026-08-24T22:42:56.645Z",
+            "label": "8/25 06:42",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:29:53.589Z",
-            "label": "8/25 07:29",
-            "value": 49,
+            "at": "2026-08-24T23:39:02.175Z",
+            "label": "8/25 07:39",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:24:27.688Z",
-            "label": "8/25 08:24",
-            "value": 55,
+            "at": "2026-08-25T00:35:07.704Z",
+            "label": "8/25 08:35",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:19:01.786Z",
-            "label": "8/25 09:19",
-            "value": 60,
+            "at": "2026-08-25T01:31:13.233Z",
+            "label": "8/25 09:31",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:13:35.884Z",
-            "label": "8/25 10:13",
-            "value": 66,
+            "at": "2026-08-25T02:27:18.762Z",
+            "label": "8/25 10:27",
+            "value": 61,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:08:09.983Z",
-            "label": "8/25 11:08",
+            "at": "2026-08-25T03:23:24.291Z",
+            "label": "8/25 11:23",
+            "value": 67,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
             "value": 72,
             "reports": 1
           }
@@ -1251,7 +1664,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T16:27:04.000Z",
-        "endedAt": "2026-08-25T03:08:09.983Z",
+        "endedAt": "2026-08-25T04:19:29.821Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1262,68 +1675,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T17:25:20.907Z",
-            "label": "8/25 01:25",
+            "at": "2026-08-24T17:31:49.983Z",
+            "label": "8/25 01:31",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-24T18:23:37.815Z",
-            "label": "8/25 02:23",
+            "at": "2026-08-24T18:36:35.967Z",
+            "label": "8/25 02:36",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-24T19:21:54.722Z",
-            "label": "8/25 03:21",
+            "at": "2026-08-24T19:41:21.951Z",
+            "label": "8/25 03:41",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-24T20:20:11.630Z",
-            "label": "8/25 04:20",
+            "at": "2026-08-24T20:46:07.934Z",
+            "label": "8/25 04:46",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:18:28.537Z",
-            "label": "8/25 05:18",
+            "at": "2026-08-24T21:50:53.918Z",
+            "label": "8/25 05:50",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:16:45.445Z",
-            "label": "8/25 06:16",
+            "at": "2026-08-24T22:55:39.902Z",
+            "label": "8/25 06:55",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:15:02.352Z",
-            "label": "8/25 07:15",
+            "at": "2026-08-25T00:00:25.886Z",
+            "label": "8/25 08:00",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:13:19.260Z",
-            "label": "8/25 08:13",
+            "at": "2026-08-25T01:05:11.869Z",
+            "label": "8/25 09:05",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:11:36.167Z",
-            "label": "8/25 09:11",
+            "at": "2026-08-25T02:09:57.853Z",
+            "label": "8/25 10:09",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:09:53.075Z",
-            "label": "8/25 10:09",
+            "at": "2026-08-25T03:14:43.837Z",
+            "label": "8/25 11:14",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:08:09.983Z",
-            "label": "8/25 11:08",
+            "at": "2026-08-25T04:19:29.821Z",
+            "label": "8/25 12:19",
             "value": 58,
             "reports": 1
           }
