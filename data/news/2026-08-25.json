@@ -1,7 +1,303 @@
 {
-  "generatedAt": "2026-08-25T05:08:32.521Z",
+  "generatedAt": "2026-08-25T06:01:06.809Z",
   "date": "2026-08-25",
   "items": [
+    {
+      "id": "d0c1ff23d0524109",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21365",
+      "originalUrl": "https://arxiv.org/abs/2608.21365",
+      "titleOriginal": "KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search",
+      "summaryOriginal": "arXiv:2608.21365v1 Announce Type: new Abstract: As a low-resource language, Khmer presents several retrieval challenges, including limited annotated data, ambiguous word boundaries, weak support in multilingual embedding models, and frequent mixed Khmer-English usage. This paper presents KSE-Web, an analysis of hybrid retrieval and LLM-assisted query expansion for Khmer semantic search. We construct the dataset from approximately 17K candidate Khmer titles and retain 3K cleaned full-text Khmer documents after filtering, normalization, deduplication, and document-length control. The dataset includes 300 manually reviewed user-style Khmer search queries and silver relevance labels with partial human verification. We evaluate character n-gram BM25, multilingual dense retrieval, hybrid BM25+dense retrieval, and LLM-assisted query expansion using Qwen2.5 models. Experimental results show that BM25 achieves the strongest overall performance, reaching 0.943 Recall and 0.876 nDCG. Hybrid BM25+dense retrieval performs comparably, achieving 0.929 Recall and 0.871 nDCG, while dense retrieval alone performs lower. LLM-assisted query expansion does not outperform non-expanded retrieval; however",
+      "originalLanguage": "en",
+      "author": "Nimol Thuon",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-25T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21365",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究针对低资源语言检索这一重要但研究不足的领域，提供了实证比较，对多语言信息检索有参考价值。",
+      "importanceReasonEn": "The study addresses an important but under-researched area of low-resource language retrieval, providing empirical comparisons valuable for multilingual IR.",
+      "scoringMode": "ai",
+      "titleZh": "KSE-Web：低资源高棉语语义搜索中混合检索与LLM辅助查询扩展的分析",
+      "titleEn": "KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search",
+      "summaryZh": "本文针对低资源语言高棉语，构建了约3000篇清洗后的全文文档和300条人工审核的查询，评估了字符n-gram BM25、多语言稠密检索、混合BM25+稠密检索以及基于Qwen2.5的LLM辅助查询扩展。结果显示BM25表现最佳（Recall 0.943，nDCG 0.876），混合检索次之（Recall 0.929，nDCG 0.871），稠密检索单独表现较低，LLM辅助查询扩展未超越未扩展的检索。",
+      "summaryEn": "This paper addresses retrieval challenges for Khmer, a low-resource language, by constructing a dataset of ~3K cleaned full-text documents and 300 human-reviewed queries, and evaluating character n-gram BM25, multilingual dense retrieval, hybrid BM25+dense, and LLM-assisted query expansion using Qwen2.5. Results show BM25 performs best (Recall 0.943, nDCG 0.876), hybrid is comparable (Recall 0.929, nDCG 0.871), dense alone is lower, and LLM-assisted expansion does not outperform non-expanded retrieval.",
+      "keywords": [
+        "Khmer",
+        "semantic search",
+        "hybrid retrieval",
+        "query expansion",
+        "low-resource"
+      ],
+      "topics": [
+        "低资源语言检索",
+        "混合检索",
+        "查询扩展",
+        "高棉语"
+      ],
+      "models": [
+        "Qwen2.5"
+      ],
+      "detailZh": "高棉语作为低资源语言，在检索中面临标注数据有限、词边界模糊、多语言嵌入模型支持弱以及高棉语-英语混合使用等挑战。本文构建了KSE-Web数据集：从约1.7万个候选标题中筛选，经过过滤、归一化、去重和文档长度控制，保留3000篇清洗后的全文文档。数据集包含300条人工审核的用户风格查询，以及带有部分人工验证的银相关性标签。实验评估了字符n-gram BM25、多语言稠密检索、混合BM25+稠密检索以及使用Qwen2.5模型的LLM辅助查询扩展。结果显示，BM25在整体性能上最强，达到0.943的Recall和0.876的nDCG；混合检索表现相当，Recall为0.929，nDCG为0.871；单独稠密检索性能较低；LLM辅助查询扩展并未超越未扩展的检索。",
+      "keyPointsZh": [
+        "构建了包含3000篇清洗文档和300条人工审核查询的高棉语检索数据集。",
+        "BM25在低资源高棉语检索中表现最佳，Recall 0.943，nDCG 0.876。",
+        "混合BM25+稠密检索与BM25相当，但稠密检索单独表现较低。",
+        "LLM辅助查询扩展未能提升检索性能。"
+      ],
+      "impactZh": "该研究为低资源语言检索提供了基准和实证结果，表明传统BM25在低资源场景下仍具竞争力，对多语言信息检索系统的设计有指导意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于开发多语言搜索或低资源语言应用的团队，该研究提示在数据有限时，简单BM25可能优于复杂模型，混合检索可作备选，LLM扩展需谨慎评估。",
+      "howItWorksZh": "实验采用标准检索流程：构建文档索引，使用字符n-gram BM25、多语言稠密检索（如基于多语言嵌入模型）以及两者混合（如加权融合）。LLM辅助查询扩展使用Qwen2.5生成查询变体或相关词，再用于检索。评估指标为Recall和nDCG。",
+      "interpretationZh": "报道的事实是：在构建的数据集上，BM25和混合检索表现最好，稠密检索和LLM扩展未达预期。合理推断是：低资源语言中，稠密模型训练数据不足，LLM扩展可能引入噪声。但需注意数据集规模有限，结果可能不具普遍性。",
+      "limitationsZh": "数据集规模较小（3000篇文档，300条查询），且为特定领域（标题和全文），结果可能不适用于其他领域或更大规模。LLM扩展仅使用Qwen2.5，其他模型可能不同。",
+      "actionStepsZh": [
+        "在低资源语言检索中，优先尝试BM25作为基线。",
+        "若使用稠密检索，考虑与BM25混合以提升鲁棒性。",
+        "评估LLM查询扩展时，需在目标数据集上验证其收益。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "BM25在Recall和nDCG上均略高于混合检索，表明在低资源场景下简单方法可能更有效。",
+        "data": [
+          {
+            "label": "BM25 Recall",
+            "value": 0.943,
+            "display": ""
+          },
+          {
+            "label": "Hybrid Recall",
+            "value": 0.929,
+            "display": ""
+          },
+          {
+            "label": "BM25 nDCG",
+            "value": 0.876,
+            "display": ""
+          },
+          {
+            "label": "Hybrid nDCG",
+            "value": 0.871,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21365",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-25T04:00:00.000Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-25T04:00:00.000Z",
+            "label": "8/25 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-25T04:40:22.269Z",
+            "label": "8/25 12:40",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T05:20:44.539Z",
+            "label": "8/25 13:20",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d0a35089c70b78ff",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21369",
+      "originalUrl": "https://arxiv.org/abs/2608.21369",
+      "titleOriginal": "Wazobia Eval: A Benchmark for Nigerian Pidgin Emotion Understanding, Sarcasm Detection, and Cultural Reasoning",
+      "summaryOriginal": "arXiv:2608.21369v1 Announce Type: new Abstract: Nigerian Pidgin is one of Africa's most widely spoken languages, yet remains severely underrepresented in language model evaluation. Existing benchmarks primarily focus on translation, transcription, or generic sentiment analysis, leaving critical aspects of culturally grounded language understanding unmeasured. We introduce Wazobia Eval, a benchmark for evaluating Nigerian Pidgin emotion understanding, sarcasm detection, and cultural reasoning. The benchmark is built on a manually annotated dataset containing over 550 examples and a 16-category emotion taxonomy designed to capture culturally specific emotional registers that are not represented in conventional sentiment frameworks. Wazobia Eval provides standardized evaluation protocols and benchmark tasks for assessing model performance on nuanced Nigerian language understanding. We present the benchmark design, annotation methodology, taxonomy development process, and preliminary pilot evaluation results. Our goal is to provide foundational evaluation infrastructure for Nigerian language AI and establish a reproducible benchmark for future research. The dataset is publicly availabl",
+      "originalLanguage": "en",
+      "author": "Stephanie Okoye",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://huggingface.co/WAZOBIALABS"
+      ],
+      "publishedAt": "2026-08-25T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21369",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Wazobia Eval: A Benchmark for Nigerian Pidgin Emotion Understanding, Sarcasm Detection, and Cultural Reasoning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://huggingface.co/WAZOBIALABS"
+          ]
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该基准填补了尼日利亚皮钦语评估的空白，提供了文化特定的情感分类法，对非洲语言AI发展有重要意义。",
+      "importanceReasonEn": "This benchmark fills a gap in Nigerian Pidgin evaluation, providing a culturally specific emotion taxonomy, significant for African language AI development.",
+      "scoringMode": "ai",
+      "titleZh": "Wazobia Eval：尼日利亚皮钦语情感理解、讽刺检测与文化推理基准",
+      "titleEn": "Wazobia Eval: A Benchmark for Nigerian Pidgin Emotion Understanding, Sarcasm Detection, and Cultural Reasoning",
+      "summaryZh": "尼日利亚皮钦语是非洲使用最广泛的语言之一，但在语言模型评估中仍然严重缺乏代表性。现有基准主要关注翻译、转录或通用情感分析，忽略了文化基础语言理解的关键方面。我们引入了Wazobia Eval，一个用于评估尼日利亚皮钦语情感理解、讽刺检测和文化推理的基准。该基准基于一个手动标注的数据集，包含超过550个示例和一个16类情感分类法，旨在捕捉传统情感框架中未代表的文化特定情感表达。Wazobia Eval提供了标准化评估协议和基准任务，用于评估模型在细微尼日利亚语言理解上的表现。我们展示了基准设计、标注方法、分类法开发过程和初步试点评估结果。我们的目标是为尼日利亚语言AI提供基础评估基础设施，并为未来研究建立可复现的基准。数据集公开可用。",
+      "summaryEn": "Nigerian Pidgin is one of Africa's most widely spoken languages, yet remains severely underrepresented in language model evaluation. Existing benchmarks primarily focus on translation, transcription, or generic sentiment analysis, leaving critical aspects of culturally grounded language understanding unmeasured. We introduce Wazobia Eval, a benchmark for evaluating Nigerian Pidgin emotion understanding, sarcasm detection, and cultural reasoning. The benchmark is built on a manually annotated dataset containing over 550 examples and a 16-category emotion taxonomy designed to capture culturally specific emotional registers that are not represented in conventional sentiment frameworks. Wazobia Eval provides standardized evaluation protocols and benchmark tasks for assessing model performance ",
+      "keywords": [
+        "Nigerian Pidgin",
+        "benchmark",
+        "emotion",
+        "sarcasm",
+        "cultural reasoning",
+        "language model evaluation"
+      ],
+      "topics": [
+        "benchmark",
+        "Nigerian Pidgin",
+        "emotion understanding",
+        "sarcasm detection",
+        "cultural reasoning"
+      ],
+      "models": [],
+      "detailZh": "尼日利亚皮钦语是非洲使用最广泛的语言之一，但在语言模型评估中严重缺乏代表性。现有基准主要关注翻译、转录或通用情感分析，忽略了文化基础语言理解的关键方面。为此，研究者引入了Wazobia Eval，一个用于评估尼日利亚皮钦语情感理解、讽刺检测和文化推理的基准。该基准基于一个手动标注的数据集，包含超过550个示例和一个16类情感分类法，旨在捕捉传统情感框架中未代表的文化特定情感表达。Wazobia Eval提供了标准化评估协议和基准任务，用于评估模型在细微尼日利亚语言理解上的表现。论文展示了基准设计、标注方法、分类法开发过程和初步试点评估结果。目标是提供基础评估基础设施，并建立可复现的基准。数据集公开可用。",
+      "keyPointsZh": [
+        "Wazobia Eval是首个针对尼日利亚皮钦语的情感理解、讽刺检测和文化推理基准。",
+        "数据集包含超过550个手动标注的示例。",
+        "采用16类情感分类法，捕捉文化特定的情感表达。",
+        "提供了标准化评估协议和基准任务。",
+        "数据集公开可用，旨在促进尼日利亚语言AI研究。"
+      ],
+      "impactZh": "该基准为尼日利亚皮钦语的自然语言处理研究提供了标准化的评估工具，有助于推动非洲语言AI的发展，并可能促进更多低资源语言评估基准的建立。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，该基准提供了一个可复现的评估框架，可用于测试和改进模型在尼日利亚皮钦语上的表现，特别是在情感和讽刺检测方面。",
+      "howItWorksZh": "Wazobia Eval基准包括三个任务：情感理解、讽刺检测和文化推理。数据集由人工标注，采用16类情感分类法。评估协议标准化，允许模型在这些任务上进行性能比较。具体实现细节未在摘要中提供，但数据集公开可用，研究者可以下载并使用。",
+      "interpretationZh": "该基准的引入表明研究者正在关注低资源语言的文化特定评估。16类情感分类法比传统情感分析更细致，可能更好地捕捉尼日利亚皮钦语中的情感表达。然而，目前仅提供了初步试点评估结果，完整评估和模型性能尚未公开。",
+      "limitationsZh": "摘要未提供模型评估结果或与现有基准的比较，因此无法评估该基准的难度或有效性。数据集规模较小（550个示例），可能不足以全面评估模型性能。此外，情感分类法的有效性尚未经过广泛验证。",
+      "actionStepsZh": [
+        "访问公开数据集，了解标注格式和任务定义。",
+        "在尼日利亚皮钦语模型上运行Wazobia Eval基准，评估性能。",
+        "参考16类情感分类法，改进情感分析模型。",
+        "关注后续论文，获取完整评估结果。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21369",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Wazobia Eval: A Benchmark for Nigerian Pidgin Emotion Understanding, Sarcasm Detection, and Cultural Reasoning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://huggingface.co/WAZOBIALABS"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-25T04:00:00.000Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-25T04:00:00.000Z",
+            "label": "8/25 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-25T04:40:22.269Z",
+            "label": "8/25 12:40",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T05:20:44.539Z",
+            "label": "8/25 13:20",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "3285dfc4bc0ea89d",
       "normalizedUrl": "https://arxiv.org/abs/2608.21366",
@@ -38,42 +334,42 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "模型崩溃是生成式AI领域的重要问题，该综述填补了空白，对研究者和从业者有参考价值。",
-      "importanceReasonEn": "Model collapse is an important issue in generative AI, and this survey fills a gap, providing reference value for researchers and practitioners.",
+      "importanceReasonZh": "该论文是首个关于模型崩溃现象的综述，系统总结了不同应用场景下的进展和缓解对策，对AI研究和实践具有重要参考价值。",
+      "importanceReasonEn": "This paper is the first survey on model collapse, systematically summarizing progress in different application scenarios and mitigation strategies, providing important reference for AI research and practice.",
       "scoringMode": "ai",
       "titleZh": "模型崩溃现象与对策综述",
       "titleEn": "Reviewing Model Collapse and Countermeasures",
-      "summaryZh": "arXiv:2608.21366v1 公告类型：新论文。摘要：受大规模网络数据驱动，生成式AI（GenAI）取得了显著进展，并在多个领域得到应用。GenAI的进步促使从业者使用AI合成数据来训练下一代AI模型。不可否认，使用合成数据缓解了对数据供应的日益严格的需求。然而，它也引入了一个新的关键问题：在模型与数据之间的自我消耗循环中，模型最终会崩溃，引发对GenAI可信度的更多担忧。近年来，越来越多的研究调查了模型崩溃（MC）现象并探索了缓解它的潜在解决方案。然而，对MC现象的综述仍然空白。为填补这一空白，本文提供了这些研究的最新概述，以整合和回顾MC在不同应用场景中的进展以及缓解MC的对策。我们还强调了挑战和未来的研究机会。",
+      "summaryZh": "arXiv:2608.21366v1 公告类型：新论文。摘要：受海量网络规模数据的驱动，生成式AI（GenAI）取得了显著进展，支持了多个领域的应用。GenAI的进步促使从业者使用AI合成数据来训练下一代AI模型。不可否认，使用合成数据缓解了对数据供应日益严格的需求。不幸的是，它也引入了一个新的关键问题：在模型与数据之间的自我消耗循环中，模型最终会崩溃，引发对GenAI的更多可信度担忧。近年来，越来越多的研究调查了模型崩溃（MC）现象并探索了缓解它的潜在解决方案。然而，对MC现象的综述仍然空白。为填补这一空白，本文提供了这些研究的最新概述，以整合和回顾MC在不同应用场景中的进展以及缓解MC的对策。我们还强调了挑战和未来的研究机会。",
       "summaryEn": "arXiv:2608.21366v1 Announce Type: new. Abstract: Driven by massive amounts of web-scale data, generative AI (GenAI) has achieved remarkable progress, enabling various applications in diverse sectors. The advances of GenAI have actuated practitioners to use AI-synthesized data for training next-generation AI models. Undeniably, using synthetic data has alleviated the increasing stringent demand for data supply. Unfortunately, it also introduces a new critical issue: in a self-consuming cycle between model and data, the model ultimately collapse, raising more trustworthiness concerns to GenAI. In recent years, increasingly more studies have investigated the phenomenon of model collapse (MC) and explored potential solutions to mitigate it. However, the review of the phenomenon of MC still rem",
       "keywords": [
         "模型崩溃",
-        "合成数据",
         "生成式AI",
+        "合成数据",
         "综述",
-        "对策"
+        "arXiv"
       ],
       "topics": [
         "模型崩溃",
-        "合成数据",
         "生成式AI",
-        "可信度"
+        "合成数据",
+        "综述"
       ],
       "models": [],
-      "detailZh": "本文是一篇关于模型崩溃（Model Collapse, MC）现象的综述论文。模型崩溃是指在训练过程中，如果模型使用自身或其他模型生成的数据进行训练，会导致模型性能逐渐退化，最终崩溃的现象。这种现象源于模型与数据之间的自我消耗循环，即模型生成的数据被用于训练下一代模型，而下一代模型又生成数据用于训练更下一代的模型，如此循环，导致模型逐渐失去对真实数据分布的表示能力。\n\n论文指出，随着生成式AI的快速发展，使用AI合成数据来训练模型已成为一种常见做法，以缓解数据供应不足的问题。然而，这种做法也带来了模型崩溃的风险。近年来，越来越多的研究开始关注这一现象，并探索各种缓解措施。然而，目前还没有一篇系统的综述来总结这些研究进展。\n\n本文旨在填补这一空白，通过整合和回顾现有研究，总结模型崩溃在不同应用场景中的表现以及相应的缓解对策。论文还指出了当前面临的挑战和未来的研究方向。\n\n由于本文是综述论文，其内容主要基于对现有研究的分析和总结，因此没有提供具体的实验数据或新的方法。",
+      "detailZh": "该论文是一篇关于模型崩溃（Model Collapse, MC）现象的综述文章，发表于arXiv，编号2608.21366。模型崩溃是指在生成式AI模型使用自身生成的数据进行训练时，由于数据分布逐渐偏离真实分布，最终导致模型性能退化甚至完全失效的现象。随着生成式AI的广泛应用，越来越多的从业者使用AI合成数据来训练下一代模型，以缓解数据供应不足的问题。然而，这种自我消耗的循环会引发模型崩溃，对AI的可信度构成威胁。\n\n论文指出，尽管已有大量研究关注模型崩溃现象并探索缓解方法，但缺乏系统的综述。本文旨在填补这一空白，整合和回顾MC在不同应用场景中的研究进展，包括图像生成、文本生成、多模态模型等。同时，论文总结了现有的缓解对策，如数据过滤、混合训练、正则化技术等。\n\n论文还强调了当前面临的挑战，例如如何检测模型崩溃的早期迹象、如何设计更鲁棒的训练算法，以及如何平衡合成数据的使用与真实数据的依赖。最后，论文提出了未来的研究方向，包括开发更有效的缓解策略、建立标准化的评估基准等。\n\n由于该论文是综述性质，其内容基于已发表的研究成果，但具体细节和实验数据未在摘要中提供。",
       "keyPointsZh": [
-        "模型崩溃是生成式AI使用合成数据训练时可能出现的性能退化现象。",
-        "本文是首篇系统综述模型崩溃现象及对策的论文。",
-        "论文总结了不同应用场景下的模型崩溃表现和缓解方法。",
-        "论文指出了模型崩溃研究面临的挑战和未来方向。"
+        "模型崩溃是生成式AI使用合成数据训练时出现的性能退化现象。",
+        "本文是首个关于模型崩溃的综述，系统总结了不同应用场景下的研究进展。",
+        "论文概述了缓解模型崩溃的多种对策，如数据过滤和混合训练。",
+        "论文指出了当前挑战和未来研究方向。"
       ],
-      "impactZh": "该综述论文对生成式AI领域具有重要意义，它系统性地整理了模型崩溃的研究进展，有助于研究者快速了解该领域，并推动更多研究关注模型崩溃问题，从而提升生成式AI的可信度。",
+      "impactZh": "该综述为AI社区提供了关于模型崩溃的全面认识，有助于研究人员和从业者理解这一现象的严重性，并指导他们采取有效的缓解措施，从而提升生成式AI的可靠性和可持续性。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和研究人员，该综述提供了模型崩溃的全面认识，有助于在训练模型时避免使用合成数据导致的性能退化，并了解现有的缓解策略。",
+      "userImpactZh": "对于使用生成式AI或依赖合成数据的开发者和团队，该综述提供了关于模型崩溃风险的警示和缓解策略的概览，有助于他们在模型训练中避免性能退化。",
       "howItWorksZh": "",
-      "interpretationZh": "根据论文摘要，模型崩溃是使用合成数据训练模型时出现的一种现象，其根本原因是模型与数据之间的自我消耗循环。论文作为综述，总结了现有研究，但并未提供具体的实验细节。因此，我们只能确认模型崩溃现象的存在以及研究界正在探索缓解方法，但具体的机制和解决方案需要查阅原文或相关研究。",
-      "limitationsZh": "由于本文是综述论文，其内容基于现有研究，可能无法涵盖所有相关研究，且对模型崩溃的机制解释可能不够深入。此外，论文未提供具体的实验数据，因此无法验证其总结的准确性。",
+      "interpretationZh": "根据摘要，该论文是综述性质，总结了已发表的研究。模型崩溃现象已被广泛报道，但具体机制和缓解方法的细节需要查阅原文。摘要中未提供具体实验数据或方法细节，因此无法深入解释。",
+      "limitationsZh": "由于仅提供摘要，缺乏论文全文，无法验证其综述的全面性和具体结论。摘要中未提及具体的研究方法、实验设置或数据，因此对模型崩溃的机制和缓解措施的理解有限。",
       "actionStepsZh": [],
-      "detailCompleteness": "summary",
+      "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
       "reportCount": 1,
@@ -94,7 +390,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T04:00:00.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -105,14 +401,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T04:34:16.260Z",
-            "label": "8/25 12:34",
-            "value": 39,
+            "at": "2026-08-25T04:40:22.269Z",
+            "label": "8/25 12:40",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T05:20:44.539Z",
+            "label": "8/25 13:20",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 64,
             "reports": 1
           }
@@ -160,45 +462,49 @@
         }
       ],
       "importance": 75,
-      "importanceReasonZh": "该研究提出了一个针对文献综述智能体的新评估平台，并提供了人类专家与 LLM 判断不一致的实证数据，对评估方法和智能体开发有实际参考价值。",
-      "importanceReasonEn": "This research proposes a new evaluation platform for literature review agents and provides empirical data on human-LLM disagreement, offering practical reference for evaluation methods and agent development.",
+      "importanceReasonZh": "该研究提出了一个针对文献综述智能体的新评估平台，并提供了人类专家与LLM判断不一致的实证数据，对AI评估领域有重要参考价值。",
+      "importanceReasonEn": "This research introduces a new evaluation platform for literature review agents and provides empirical data on the misalignment between human experts and LLM judges, which is valuable for the AI evaluation field.",
       "scoringMode": "ai",
       "titleZh": "LitReview Arena：基于对战式同行评审平台的文献综述智能体评估",
       "titleEn": "LitReview Arena: Evaluating Literature Review Agents with Battle-Style Peer Review Platform",
-      "summaryZh": "arXiv:2608.21374v1 新论文公告。文献综述对科学进步至关重要，但严格评估自动生成的综述仍然困难，因为许多研究实用性方面依赖于专家判断而非参考重叠指标。我们引入了 LitReview Arena，一个对战式评估平台，采用针对文献综述质量定制的结构化协议：具有 AI 论文写作经验的领域专家比较匿名草稿，匹配其专业领域内的主题，并提供五个文献综述特定标准的维度级结果。通过该协议，我们收集了约 3000 个专家判断，每个包含五个维度级结果，并表明即使是最强的当前系统在整体实用性方面仅赢得 23.0% 的决定性比赛，而智能体 LLM（如 Sonar Deep Research）显著优于基础语言模型超过 60%。我们进一步发现现有的 LLM-as-a-judge 方法与人类专家严重不一致（Spearman's rho=0.467），尤其是在综合密集型标准（如论文结构和研究建议）上。",
+      "summaryZh": "arXiv:2608.21374v1 新论文公告。文献综述对科学进步至关重要，但严格评估自动生成的综述仍然困难，因为许多研究实用性方面依赖于专家判断而非参考重叠指标。我们引入了 LitReview Arena，一个对战式评估平台，采用针对文献综述质量定制的结构化协议：具有 AI 论文写作经验的领域专家比较匿名草稿，匹配其专业领域内的主题，并提供五个文献综述特定标准的维度级结果。通过该协议，我们收集了约 3000 条专家判断，每条包含五个维度级结果，并表明即使是最强的现有系统在总体实用性方面仅赢得 23.0% 的决定性比赛，而智能体 LLM（如 Sonar Deep Research）显著优于基础语言模型超过 60%。我们进一步发现现有的 LLM-as-a-judge 方法与人类专家严重不一致（Spearman's rho=0.467），尤其是在综合密集型标准（如论文结构和研究建议）上。",
       "summaryEn": "arXiv:2608.21374v1 Announcement Type: new. Literature reviews are essential to scientific progress, but rigorously evaluating automatically generated reviews remains difficult because many aspects of research utility depend on expert judgment rather than reference-overlap metrics. We introduce LitReview Arena, a battle-style evaluation platform with a structured protocol tailored to literature review quality: domain experts with AI paper-writing experience compare anonymized drafts, are matched to topics within their expertise, and provide dimension-wise outcomes over five literature-review-specific criteria. From this protocol, we collect approximately 3k expert judgments, each containing five dimension-wise outcomes, and show that even the strongest current systems win only 23.0% of deci",
       "keywords": [
         "LitReview Arena",
         "文献综述",
-        "评估",
-        "对战式",
-        "专家判断",
-        "LLM-as-a-judge"
+        "评估平台",
+        "LLM-as-a-judge",
+        "人类专家",
+        "对战式"
       ],
       "topics": [
         "文献综述",
-        "评估平台",
-        "LLM-as-a-judge",
-        "智能体"
+        "LLM评估",
+        "智能体",
+        "对战式评估"
       ],
       "models": [
         "Sonar Deep Research"
       ],
-      "detailZh": "该论文介绍了一个名为 LitReview Arena 的评估平台，旨在解决自动生成文献综述的评估难题。传统评估方法通常依赖参考重叠指标，但无法捕捉综述的实际研究效用。LitReview Arena 采用对战式（battle-style）协议，邀请具有 AI 论文写作经验的领域专家对匿名草稿进行比较，并确保专家匹配其专业领域。专家根据五个文献综述特定标准（如整体效用、论文结构、研究建议等）提供维度级评分。研究收集了约 3000 个专家判断，每个包含五个维度结果。结果显示，即使是最强的现有系统在整体效用方面仅赢得 23.0% 的决定性比赛（对人类草稿），而智能体 LLM（如 Sonar Deep Research）比基础语言模型性能提升超过 60%。此外，研究评估了 LLM-as-a-judge 方法，发现其与人类专家判断的相关性较低（Spearman's rho=0.467），尤其在综合密集型标准上。",
+      "detailZh": "文献综述是科学进步的基础，但自动生成的综述质量评估一直是个难题，因为许多研究实用性方面依赖于专家判断，而非简单的参考重叠指标。为此，研究者推出了 LitReview Arena，一个对战式评估平台，采用专门针对文献综述质量定制的结构化协议。该协议要求具有 AI 论文写作经验的领域专家比较匿名草稿，并确保专家匹配到其专业领域内的主题，然后从五个文献综述特定标准（如论文结构、研究建议等）给出维度级评分。通过这一协议，研究者收集了约 3000 条专家判断，每条包含五个维度级结果。结果显示，即使是最强的现有系统，在总体实用性方面也仅能赢得 23.0% 的决定性比赛（对人类草稿），而智能体 LLM（如 Sonar Deep Research）显著优于基础语言模型，性能提升超过 60%。此外，研究者发现现有的 LLM-as-a-judge 方法与人类专家严重不一致（Spearman's rho=0.467），尤其是在综合密集型标准（如论文结构和研究建议）上。这些发现表明，当前自动评估方法可能无法准确反映文献综述的实际质量，需要更可靠的人类评估协议。",
       "keyPointsZh": [
-        "LitReview Arena 是对战式评估平台，使用领域专家比较匿名综述草稿。",
-        "收集约 3000 个专家判断，每个包含五个维度结果。",
-        "最强系统在整体效用上仅赢得 23.0% 的决定性比赛。",
-        "智能体 LLM（如 Sonar Deep Research）比基础模型性能提升超过 60%。",
-        "LLM-as-a-judge 与人类专家相关性低（rho=0.467）。"
+        "LitReview Arena 是一个对战式评估平台，用于评估文献综述智能体。",
+        "收集了约 3000 条专家判断，每条包含五个维度级结果。",
+        "最强系统在总体实用性上仅赢得 23.0% 的决定性比赛。",
+        "智能体 LLM（如 Sonar Deep Research）比基础语言模型性能提升超过 60%。",
+        "LLM-as-a-judge 与人类专家一致性较低（Spearman's rho=0.467）。"
       ],
-      "impactZh": "该研究为文献综述智能体的评估提供了新方法，揭示了现有自动评估方法的局限性，可能推动更可靠的评估标准发展。",
+      "impactZh": "该研究为文献综述智能体的评估提供了新的方法论，揭示了现有自动评估方法的局限性，可能推动更可靠的人类评估协议的发展，对AI辅助科研工具的开发有指导意义。",
       "readerImpactZh": "",
-      "userImpactZh": "对于开发文献综述工具或使用 LLM 进行研究的用户，该研究提示 LLM 生成的综述在专家眼中可能仍与人类有差距，且自动评估可能不可靠，需谨慎使用。",
-      "howItWorksZh": "LitReview Arena 的工作流程：1) 收集来自不同系统的综述草稿和人类撰写的草稿；2) 邀请领域专家（具有 AI 论文写作经验）参与对战；3) 专家被匹配到其专业领域内的主题；4) 专家比较匿名草稿，并根据五个标准（如整体效用、结构、研究建议等）提供维度级评分；5) 汇总评分，计算胜率等指标。",
-      "interpretationZh": "该研究提供了关于文献综述智能体性能的实证数据，显示当前系统与人类仍有差距，但智能体方法显著优于基础模型。同时，LLM-as-a-judge 与人类判断的不一致表明自动评估方法需要改进。这些发现基于论文摘要，具体细节可能有限。",
-      "limitationsZh": "摘要未提供具体评估标准细节、专家数量、系统列表等，因此无法全面评估方法的严谨性。",
-      "actionStepsZh": [],
+      "userImpactZh": "对于AI开发者和研究人员，该研究提供了评估文献综述智能体的新思路，并提醒他们依赖LLM-as-a-judge可能存在的偏差，建议在关键评估中引入人类专家。",
+      "howItWorksZh": "LitReview Arena 采用对战式评估：领域专家比较两个匿名草稿，并根据五个文献综述特定标准（如结构、建议等）给出维度级评分。专家被匹配到其专业领域内的主题，确保评估的专业性。收集的专家判断用于计算系统的胜率，并与 LLM-as-a-judge 的结果进行对比，通过 Spearman 相关系数衡量一致性。",
+      "interpretationZh": "该研究报道了 LitReview Arena 平台及其初步结果。根据摘要，最强系统在总体实用性上仅赢得 23.0% 的决定性比赛，表明人类草稿仍具优势。智能体 LLM 显著优于基础模型，说明智能体方法在文献综述任务上更有效。LLM-as-a-judge 与人类专家的一致性较低，暗示自动评估可能不可靠。这些是作者报告的结果，但具体实验细节和统计显著性需查阅全文。",
+      "limitationsZh": "该摘要未提供完整的实验细节，如具体模型列表、评估标准定义、专家数量等。胜率 23.0% 和性能提升 60% 的具体计算方式未说明。LLM-as-a-judge 的一致性可能受提示词和模型选择影响。",
+      "actionStepsZh": [
+        "查阅论文全文以获取完整的实验设置和结果。",
+        "考虑在文献综述评估中采用人类专家协议，而非仅依赖 LLM-as-a-judge。",
+        "关注智能体 LLM 在文献综述任务中的潜力，如 Sonar Deep Research。"
+      ],
       "detailCompleteness": "summary",
       "visual": null,
       "processingError": null,
@@ -222,7 +528,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T04:00:00.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -233,14 +539,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T04:34:16.260Z",
-            "label": "8/25 12:34",
-            "value": 40,
+            "at": "2026-08-25T04:40:22.269Z",
+            "label": "8/25 12:40",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T05:20:44.539Z",
+            "label": "8/25 13:20",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 66,
             "reports": 1
           }
@@ -345,7 +657,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T04:00:00.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -356,14 +668,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T04:34:16.260Z",
-            "label": "8/25 12:34",
-            "value": 39,
+            "at": "2026-08-25T04:40:22.269Z",
+            "label": "8/25 12:40",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T05:20:44.539Z",
+            "label": "8/25 13:20",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 64,
             "reports": 1
           }
@@ -471,7 +789,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T04:00:00.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -482,14 +800,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T04:34:16.260Z",
-            "label": "8/25 12:34",
-            "value": 39,
+            "at": "2026-08-25T04:40:22.269Z",
+            "label": "8/25 12:40",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T05:20:44.539Z",
+            "label": "8/25 13:20",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 64,
             "reports": 1
           }
@@ -646,7 +970,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T02:50:57.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -657,20 +981,26 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T03:36:48.840Z",
-            "label": "8/25 11:36",
-            "value": 29,
+            "at": "2026-08-25T03:38:29.452Z",
+            "label": "8/25 11:38",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-25T04:22:40.680Z",
-            "label": "8/25 12:22",
-            "value": 43,
+            "at": "2026-08-25T04:26:01.904Z",
+            "label": "8/25 12:26",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T05:13:34.356Z",
+            "label": "8/25 13:13",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 58,
             "reports": 1
           }
@@ -769,7 +1099,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T00:23:12.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -780,32 +1110,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T01:20:16.104Z",
-            "label": "8/25 09:20",
-            "value": 24,
+            "at": "2026-08-25T01:19:31.134Z",
+            "label": "8/25 09:19",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:17:20.208Z",
-            "label": "8/25 10:17",
-            "value": 34,
+            "at": "2026-08-25T02:15:50.269Z",
+            "label": "8/25 10:15",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:14:24.312Z",
-            "label": "8/25 11:14",
-            "value": 44,
+            "at": "2026-08-25T03:12:09.404Z",
+            "label": "8/25 11:12",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-25T04:11:28.416Z",
-            "label": "8/25 12:11",
-            "value": 54,
+            "at": "2026-08-25T04:08:28.539Z",
+            "label": "8/25 12:08",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T05:04:47.674Z",
+            "label": "8/25 13:04",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 64,
             "reports": 1
           }
@@ -901,7 +1237,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T00:00:00.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -912,38 +1248,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T00:51:25.420Z",
+            "at": "2026-08-25T00:51:35.258Z",
             "label": "8/25 08:51",
-            "value": 21,
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:42:50.840Z",
-            "label": "8/25 09:42",
-            "value": 29,
+            "at": "2026-08-25T01:43:10.516Z",
+            "label": "8/25 09:43",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:34:16.260Z",
+            "at": "2026-08-25T02:34:45.775Z",
             "label": "8/25 10:34",
-            "value": 36,
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:25:41.680Z",
-            "label": "8/25 11:25",
-            "value": 43,
+            "at": "2026-08-25T03:26:21.033Z",
+            "label": "8/25 11:26",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-25T04:17:07.100Z",
+            "at": "2026-08-25T04:17:56.292Z",
             "label": "8/25 12:17",
-            "value": 51,
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T05:09:31.550Z",
+            "label": "8/25 13:09",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 58,
             "reports": 1
           }
@@ -1036,7 +1378,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T21:24:17.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1047,50 +1389,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T22:22:18.940Z",
-            "label": "8/25 06:22",
-            "value": 20,
+            "at": "2026-08-24T22:21:42.534Z",
+            "label": "8/25 06:21",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:20:20.880Z",
-            "label": "8/25 07:20",
-            "value": 25,
+            "at": "2026-08-24T23:19:08.068Z",
+            "label": "8/25 07:19",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:18:22.820Z",
-            "label": "8/25 08:18",
-            "value": 31,
+            "at": "2026-08-25T00:16:33.603Z",
+            "label": "8/25 08:16",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:16:24.760Z",
-            "label": "8/25 09:16",
-            "value": 36,
+            "at": "2026-08-25T01:13:59.137Z",
+            "label": "8/25 09:13",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:14:26.700Z",
-            "label": "8/25 10:14",
-            "value": 42,
+            "at": "2026-08-25T02:11:24.671Z",
+            "label": "8/25 10:11",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:12:28.640Z",
-            "label": "8/25 11:12",
-            "value": 47,
+            "at": "2026-08-25T03:08:50.206Z",
+            "label": "8/25 11:08",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-25T04:10:30.580Z",
-            "label": "8/25 12:10",
+            "at": "2026-08-25T04:06:15.740Z",
+            "label": "8/25 12:06",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T05:03:41.274Z",
+            "label": "8/25 13:03",
             "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 58,
             "reports": 1
           }
@@ -1187,7 +1535,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T19:54:19.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 47,
         "peak": 47,
         "history": [
@@ -1198,62 +1546,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T20:49:44.352Z",
+            "at": "2026-08-24T20:49:28.800Z",
             "label": "8/25 04:49",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:45:09.704Z",
-            "label": "8/25 05:45",
-            "value": 21,
+            "at": "2026-08-24T21:44:38.601Z",
+            "label": "8/25 05:44",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:40:35.056Z",
-            "label": "8/25 06:40",
-            "value": 24,
+            "at": "2026-08-24T22:39:48.402Z",
+            "label": "8/25 06:39",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:36:00.408Z",
-            "label": "8/25 07:36",
-            "value": 27,
+            "at": "2026-08-24T23:34:58.203Z",
+            "label": "8/25 07:34",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:31:25.760Z",
-            "label": "8/25 08:31",
-            "value": 31,
+            "at": "2026-08-25T00:30:08.004Z",
+            "label": "8/25 08:30",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:26:51.112Z",
-            "label": "8/25 09:26",
-            "value": 34,
+            "at": "2026-08-25T01:25:17.804Z",
+            "label": "8/25 09:25",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:22:16.464Z",
-            "label": "8/25 10:22",
-            "value": 37,
+            "at": "2026-08-25T02:20:27.605Z",
+            "label": "8/25 10:20",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:17:41.816Z",
-            "label": "8/25 11:17",
+            "at": "2026-08-25T03:15:37.406Z",
+            "label": "8/25 11:15",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-25T04:10:47.207Z",
+            "label": "8/25 12:10",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-25T04:13:07.168Z",
-            "label": "8/25 12:13",
+            "at": "2026-08-25T05:05:57.008Z",
+            "label": "8/25 13:05",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 47,
             "reports": 1
           }
@@ -1373,7 +1727,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T18:22:49.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1384,68 +1738,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T19:21:31.138Z",
-            "label": "8/25 03:21",
+            "at": "2026-08-24T19:26:17.891Z",
+            "label": "8/25 03:26",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-24T20:20:13.276Z",
-            "label": "8/25 04:20",
+            "at": "2026-08-24T20:29:46.783Z",
+            "label": "8/25 04:29",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:18:55.414Z",
-            "label": "8/25 05:18",
+            "at": "2026-08-24T21:33:15.675Z",
+            "label": "8/25 05:33",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:17:37.553Z",
-            "label": "8/25 06:17",
+            "at": "2026-08-24T22:36:44.566Z",
+            "label": "8/25 06:36",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:16:19.691Z",
-            "label": "8/25 07:16",
+            "at": "2026-08-24T23:40:13.458Z",
+            "label": "8/25 07:40",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:15:01.829Z",
-            "label": "8/25 08:15",
+            "at": "2026-08-25T00:43:42.350Z",
+            "label": "8/25 08:43",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:13:43.967Z",
-            "label": "8/25 09:13",
+            "at": "2026-08-25T01:47:11.242Z",
+            "label": "8/25 09:47",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:12:26.106Z",
-            "label": "8/25 10:12",
+            "at": "2026-08-25T02:50:40.133Z",
+            "label": "8/25 10:50",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:11:08.244Z",
-            "label": "8/25 11:11",
+            "at": "2026-08-25T03:54:09.025Z",
+            "label": "8/25 11:54",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-25T04:09:50.382Z",
-            "label": "8/25 12:09",
+            "at": "2026-08-25T04:57:37.917Z",
+            "label": "8/25 12:57",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 64,
             "reports": 1
           }
@@ -1544,7 +1898,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T18:03:55.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -1555,68 +1909,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T19:04:20.229Z",
-            "label": "8/25 03:04",
+            "at": "2026-08-24T19:09:06.982Z",
+            "label": "8/25 03:09",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-24T20:04:45.458Z",
-            "label": "8/25 04:04",
+            "at": "2026-08-24T20:14:18.965Z",
+            "label": "8/25 04:14",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:05:10.687Z",
-            "label": "8/25 05:05",
+            "at": "2026-08-24T21:19:30.947Z",
+            "label": "8/25 05:19",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:05:35.916Z",
-            "label": "8/25 06:05",
+            "at": "2026-08-24T22:24:42.930Z",
+            "label": "8/25 06:24",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:06:01.145Z",
-            "label": "8/25 07:06",
+            "at": "2026-08-24T23:29:54.913Z",
+            "label": "8/25 07:29",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:06:26.375Z",
-            "label": "8/25 08:06",
+            "at": "2026-08-25T00:35:06.895Z",
+            "label": "8/25 08:35",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:06:51.604Z",
-            "label": "8/25 09:06",
+            "at": "2026-08-25T01:40:18.878Z",
+            "label": "8/25 09:40",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:07:16.833Z",
-            "label": "8/25 10:07",
+            "at": "2026-08-25T02:45:30.861Z",
+            "label": "8/25 10:45",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:07:42.062Z",
-            "label": "8/25 11:07",
+            "at": "2026-08-25T03:50:42.843Z",
+            "label": "8/25 11:50",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-25T04:08:07.291Z",
-            "label": "8/25 12:08",
+            "at": "2026-08-25T04:55:54.826Z",
+            "label": "8/25 12:55",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 61,
             "reports": 1
           }
@@ -1737,7 +2091,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T18:02:29.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 72,
         "peak": 72,
         "history": [
@@ -1748,68 +2102,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T19:03:02.047Z",
-            "label": "8/25 03:03",
+            "at": "2026-08-24T19:07:48.800Z",
+            "label": "8/25 03:07",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-24T20:03:35.094Z",
-            "label": "8/25 04:03",
+            "at": "2026-08-24T20:13:08.601Z",
+            "label": "8/25 04:13",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:04:08.142Z",
-            "label": "8/25 05:04",
+            "at": "2026-08-24T21:18:28.402Z",
+            "label": "8/25 05:18",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:04:41.189Z",
-            "label": "8/25 06:04",
+            "at": "2026-08-24T22:23:48.203Z",
+            "label": "8/25 06:23",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:05:14.236Z",
-            "label": "8/25 07:05",
+            "at": "2026-08-24T23:29:08.004Z",
+            "label": "8/25 07:29",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:05:47.284Z",
-            "label": "8/25 08:05",
+            "at": "2026-08-25T00:34:27.804Z",
+            "label": "8/25 08:34",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:06:20.331Z",
-            "label": "8/25 09:06",
+            "at": "2026-08-25T01:39:47.605Z",
+            "label": "8/25 09:39",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:06:53.378Z",
-            "label": "8/25 10:06",
+            "at": "2026-08-25T02:45:07.406Z",
+            "label": "8/25 10:45",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:07:26.426Z",
-            "label": "8/25 11:07",
+            "at": "2026-08-25T03:50:27.207Z",
+            "label": "8/25 11:50",
             "value": 61,
             "reports": 1
           },
           {
-            "at": "2026-08-25T04:07:59.473Z",
-            "label": "8/25 12:07",
+            "at": "2026-08-25T04:55:47.008Z",
+            "label": "8/25 12:55",
             "value": 67,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 72,
             "reports": 1
           }
@@ -1957,7 +2311,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-24T16:27:04.000Z",
-        "endedAt": "2026-08-25T05:08:32.521Z",
+        "endedAt": "2026-08-25T06:01:06.809Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1968,68 +2322,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-24T17:36:17.501Z",
-            "label": "8/25 01:36",
+            "at": "2026-08-24T17:41:04.255Z",
+            "label": "8/25 01:41",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-24T18:45:31.003Z",
-            "label": "8/25 02:45",
+            "at": "2026-08-24T18:55:04.510Z",
+            "label": "8/25 02:55",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-24T19:54:44.505Z",
-            "label": "8/25 03:54",
+            "at": "2026-08-24T20:09:04.766Z",
+            "label": "8/25 04:09",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-24T21:03:58.007Z",
-            "label": "8/25 05:03",
+            "at": "2026-08-24T21:23:05.021Z",
+            "label": "8/25 05:23",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-24T22:13:11.509Z",
-            "label": "8/25 06:13",
+            "at": "2026-08-24T22:37:05.276Z",
+            "label": "8/25 06:37",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-24T23:22:25.011Z",
-            "label": "8/25 07:22",
+            "at": "2026-08-24T23:51:05.532Z",
+            "label": "8/25 07:51",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-25T00:31:38.513Z",
-            "label": "8/25 08:31",
+            "at": "2026-08-25T01:05:05.787Z",
+            "label": "8/25 09:05",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-25T01:40:52.015Z",
-            "label": "8/25 09:40",
+            "at": "2026-08-25T02:19:06.042Z",
+            "label": "8/25 10:19",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-25T02:50:05.517Z",
-            "label": "8/25 10:50",
+            "at": "2026-08-25T03:33:06.298Z",
+            "label": "8/25 11:33",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-25T03:59:19.019Z",
-            "label": "8/25 11:59",
+            "at": "2026-08-25T04:47:06.553Z",
+            "label": "8/25 12:47",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-25T05:08:32.521Z",
-            "label": "8/25 13:08",
+            "at": "2026-08-25T06:01:06.809Z",
+            "label": "8/25 14:01",
             "value": 58,
             "reports": 1
           }
