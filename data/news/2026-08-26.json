@@ -1,7 +1,1140 @@
 {
-  "generatedAt": "2026-08-26T03:14:41.569Z",
+  "generatedAt": "2026-08-26T04:20:03.946Z",
   "date": "2026-08-26",
   "items": [
+    {
+      "id": "3d3c764cfe0d8300",
+      "normalizedUrl": "https://arxiv.org/abs/2608.23568",
+      "originalUrl": "https://arxiv.org/abs/2608.23568",
+      "titleOriginal": "RENDER: Controlling Reader-Facing Evidence in LLM Memory Evaluation",
+      "summaryOriginal": "arXiv:2608.23568v1 Announce Type: new Abstract: Memory and RAG evaluations often treat the answering model's input as an implementation detail, even though systems may render the same history as a memory entry, summary, typed record, or raw excerpt. We introduce RENDER, a benchmark control that fixes the conversation while varying the reader-facing artifact. RENDER combines a five-level packet ladder, localizing when answer-bearing content enters the input, with deterministic templates approximating ChatGPT-style entries, LangChain summaries, MemGPT-style typed records, and raw conversation. On 500 LongMemEval questions and nine models, matched-budget resolved packets beat recency-truncated raw dialogue by 42.4-72.6 points. In deployed-style templates, best-worst spread is 24.6-48.8 points per model; under the primary scorer, ChatGPT-style entries have higher point estimates than raw conversation on 7 of 9 models. Judge rescoring preserves the positive aggregate effect, but model-specific significance is mixed. Three models scoring 0 percent on formal ledger packets answer the same facts from natural-language entries at 45.4-53.4 percent. The effect persists under retrieval noise a",
+      "originalLanguage": "en",
+      "author": "Yuan Si, Simeng Han, Daming Li, Jialu Zhang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.23568",
+          "publishedAt": "2026-08-26T04:00:00.000Z",
+          "title": "RENDER: Controlling Reader-Facing Evidence in LLM Memory Evaluation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该研究提出了一个新颖的基准控制方法，揭示了记忆评估中读者面向工件的重要性，对LLM记忆和RAG系统的评估具有实际指导意义。",
+      "importanceReasonEn": "The study introduces a novel benchmark control revealing the importance of reader-facing artifacts in memory evaluation, offering practical guidance for evaluating LLM memory and RAG systems.",
+      "scoringMode": "ai",
+      "titleZh": "RENDER：控制LLM记忆评估中的读者面向证据",
+      "titleEn": "RENDER: Controlling Reader-Facing Evidence in LLM Memory Evaluation",
+      "summaryZh": "arXiv:2608.23568v1 公告类型：新论文。摘要：记忆和RAG评估通常将回答模型的输入视为实现细节，尽管系统可能将相同的历史记录渲染为记忆条目、摘要、类型化记录或原始摘录。我们引入RENDER，一个基准控制，固定对话同时变化读者面向的工件。RENDER结合了五级数据包阶梯，定位答案承载内容进入输入的时间，以及确定性模板，近似ChatGPT风格条目、LangChain摘要、MemGPT风格类型化记录和原始对话。在500个LongMemEval问题和九个模型上，匹配预算的解析数据包比截断的原始对话高出42.4-72.6分。在部署风格模板中，每个模型的最佳-最差差距为24.6-48.8分；在主要评分器下，ChatGPT风格条目在9个模型中的7个上点估计高于原始对话。裁判重新评分保留了正面的总体效果，但模型特定显著性混合。三个在正式账本数据包上得分为0%的模型，从自然语言条目中回答相同事实的准确率为45.4-53.4%。在检索噪声下效果持续存在。",
+      "summaryEn": "arXiv:2608.23568v1 Announce Type: new Abstract: Memory and RAG evaluations often treat the answering model's input as an implementation detail, even though systems may render the same history as a memory entry, summary, typed record, or raw excerpt. We introduce RENDER, a benchmark control that fixes the conversation while varying the reader-facing artifact. RENDER combines a five-level packet ladder, localizing when answer-bearing content enters the input, with deterministic templates approximating ChatGPT-style entries, LangChain summaries, MemGPT-style typed records, and raw conversation. On 500 LongMemEval questions and nine models, matched-budget resolved packets beat recency-truncated raw dialogue by 42.4-72.6 points. In deployed-style templates, best-worst spread is 24.6-48.8 points",
+      "keywords": [
+        "RENDER",
+        "memory evaluation",
+        "RAG",
+        "reader-facing artifact",
+        "LongMemEval"
+      ],
+      "topics": [
+        "LLM memory",
+        "RAG evaluation",
+        "benchmark"
+      ],
+      "models": [],
+      "detailZh": "该研究指出，在记忆和RAG评估中，回答模型的输入通常被视为实现细节，但系统可能将相同的历史记录渲染为不同的形式，如记忆条目、摘要、类型化记录或原始摘录。为了系统研究这种影响，作者引入了RENDER基准控制，它固定对话内容，同时变化读者面向的工件。RENDER结合了一个五级数据包阶梯，用于定位答案承载内容进入输入的时间，以及确定性模板，模拟ChatGPT风格条目、LangChain摘要、MemGPT风格类型化记录和原始对话。实验在500个LongMemEval问题和九个模型上进行。结果显示，匹配预算的解析数据包比截断的原始对话高出42.4-72.6分。在部署风格模板中，每个模型的最佳-最差差距为24.6-48.8分；在主要评分器下，ChatGPT风格条目在9个模型中的7个上点估计高于原始对话。裁判重新评分保留了正面的总体效果，但模型特定显著性混合。三个在正式账本数据包上得分为0%的模型，从自然语言条目中回答相同事实的准确率为45.4-53.4%。效果在检索噪声下持续存在。",
+      "keyPointsZh": [
+        "RENDER基准控制固定对话，变化读者面向工件，包括五级数据包阶梯和确定性模板。",
+        "在500个LongMemEval问题和九个模型上，匹配预算的解析数据包比截断原始对话高42.4-72.6分。",
+        "部署风格模板中，每个模型的最佳-最差差距为24.6-48.8分；ChatGPT风格条目在7/9模型上优于原始对话。",
+        "三个模型在正式账本数据包上得分为0%，但从自然语言条目中回答相同事实的准确率为45.4-53.4%。",
+        "效果在检索噪声下持续存在。"
+      ],
+      "impactZh": "该研究揭示了记忆评估中读者面向工件的重要性，表明评估结果可能因输入渲染方式的不同而产生显著差异。这提醒研究者和开发者在评估LLM记忆和RAG系统时，需要控制这一变量，以获得更可靠和可比较的结果。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，该研究提供了RENDER基准控制，可用于更严谨地评估记忆和RAG系统。它强调了输入渲染方式对模型性能的影响，提示在部署记忆系统时，应选择适当的渲染格式（如自然语言条目）以提升效果。",
+      "howItWorksZh": "RENDER基准控制通过固定对话内容，同时变化读者面向的工件来隔离输入渲染的影响。它使用五级数据包阶梯，逐步将答案承载内容引入输入，并采用确定性模板模拟不同的渲染风格（如ChatGPT风格、LangChain摘要、MemGPT类型化记录和原始对话）。实验使用LongMemEval数据集和九个模型，通过比较不同渲染下的性能差异来评估影响。",
+      "interpretationZh": "该研究的结果表明，输入渲染方式对LLM记忆评估有显著影响，自然语言条目通常优于原始对话或正式账本。然而，模型特定效果存在差异，且裁判重新评分显示显著性混合，因此需要谨慎解读。",
+      "limitationsZh": "研究仅基于LongMemEval数据集和九个模型，可能不具有普遍性。裁判重新评分显示模型特定显著性混合，表明效果可能因模型而异。此外，模板是确定性的，可能无法完全捕捉真实部署中的多样性。",
+      "actionStepsZh": [
+        "在评估记忆和RAG系统时，控制输入渲染方式，使用RENDER基准进行更严谨的比较。",
+        "考虑在部署中使用自然语言条目而非原始对话或正式账本，以提升模型性能。",
+        "在报告评估结果时，明确说明输入渲染方式，以便结果可复现和比较。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.23568",
+          "publishedAt": "2026-08-26T04:00:00.000Z",
+          "title": "RENDER: Controlling Reader-Facing Evidence in LLM Memory Evaluation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 66,
+        "peak": 66,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "782e7aab683b1240",
+      "normalizedUrl": "https://arxiv.org/abs/2608.23569",
+      "originalUrl": "https://arxiv.org/abs/2608.23569",
+      "titleOriginal": "ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence",
+      "summaryOriginal": "arXiv:2608.23569v1 Announce Type: new Abstract: State-of-the-art Natural Language to SQL (NL2SQL) models report execution accuracy exceeding 89 percent on established benchmarks such as Spider and BIRD. However, these benchmarks rely on simplified academic schemas and open-source SQL dialects that do not reflect the complexity of enterprise database environments. We introduce ESQ-Bench, an Oracle-first NL2SQL benchmark with systematic complexity tiers and silent-divergence evaluation across three enterprise schema complexity tiers. We constructed and released six populated schemas (465 tables, 164,682 rows, zero empty tables) with identical seed data on Oracle, PostgreSQL, MySQL, and SQL Server, a four-metric evaluation harness (EM, EX, SR, SD), and 550 gold-validated question-query pairs (Tier-1: 95; Tier-2: 228; Tier-3: 227). Schema-linked prompting with GPT-4o shows monotonic execution-match degradation across tiers: 79.8, 60.3, and 57.2 percent EX on executed queries (June 2026), versus 75.6, 80.4, and 95.8 percent on an earlier 142-question pilot slice. EM stays below 7 percent tier-wide; operational silent-divergence reaches 73 to 99 percent among EX-passing queries. Failure",
+      "originalLanguage": "en",
+      "author": "Sanjay Mishra, Divya Chukkapalli, Ganesh R. Naik",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.23569",
+          "publishedAt": "2026-08-26T04:00:00.000Z",
+          "title": "ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该论文提出了一个针对企业级 Oracle 数据库的 NL2SQL 基准，揭示了现有基准的局限性，并提供了详细的评估结果，对 NL2SQL 研究和实际应用有重要参考价值。",
+      "importanceReasonEn": "This paper introduces an NL2SQL benchmark for enterprise Oracle databases, revealing limitations of existing benchmarks and providing detailed evaluation results, which is valuable for NL2SQL research and practical applications.",
+      "scoringMode": "ai",
+      "titleZh": "ESQ-Bench：面向企业级 Oracle 的多层 NL2SQL 基准，评估方言泛化与静默语义分歧",
+      "titleEn": "ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence",
+      "summaryZh": "arXiv:2608.23569v1 公告类型：新论文。摘要：最先进的自然语言转 SQL（NL2SQL）模型在 Spider 和 BIRD 等既有基准上报告的执行准确率超过 89%。然而，这些基准依赖简化的学术模式和开源 SQL 方言，无法反映企业数据库环境的复杂性。我们引入了 ESQ-Bench，一个以 Oracle 优先的 NL2SQL 基准，具有系统化的复杂度层级和跨三个企业模式复杂度层级的静默分歧评估。我们构建并发布了六个填充模式（465 张表，164,682 行，零空表），在 Oracle、PostgreSQL、MySQL 和 SQL Server 上具有相同的种子数据，一个四指标评估工具（EM、EX、SR、SD），以及 550 个金标准验证的问题-查询对（Tier-1：95；Tier-2：228；Tier-3：227）。使用 GPT-4o 进行模式链接提示显示执行匹配跨层级单调下降：在已执行查询上 EX 分别为 79.8、60.3 和 57.2%（2026 年 6 月），而早期 142 个问题的试点切片分别为 75.6、80.4 和 95.8%。EM 在层级间保持低于 7%；在 EX 通过的查询中，操作性静默分歧达到 73% 至 99%。失败...",
+      "summaryEn": "arXiv:2608.23569v1 Announce Type: new Abstract: State-of-the-art Natural Language to SQL (NL2SQL) models report execution accuracy exceeding 89 percent on established benchmarks such as Spider and BIRD. However, these benchmarks rely on simplified academic schemas and open-source SQL dialects that do not reflect the complexity of enterprise database environments. We introduce ESQ-Bench, an Oracle-first NL2SQL benchmark with systematic complexity tiers and silent-divergence evaluation across three enterprise schema complexity tiers. We constructed and released six populated schemas (465 tables, 164,682 rows, zero empty tables) with identical seed data on Oracle, PostgreSQL, MySQL, and SQL Server, a four-metric evaluation harness (EM, EX, SR, SD), and 550 gold-validated question-query pairs ",
+      "keywords": [
+        "ESQ-Bench",
+        "NL2SQL",
+        "Oracle",
+        "benchmark",
+        "silent divergence",
+        "execution match",
+        "schema complexity"
+      ],
+      "topics": [
+        "NL2SQL",
+        "benchmark",
+        "enterprise databases",
+        "Oracle",
+        "silent divergence"
+      ],
+      "models": [
+        "GPT-4o"
+      ],
+      "detailZh": "ESQ-Bench 是一个新的 NL2SQL 基准，专注于企业级 Oracle 数据库，旨在评估模型在复杂模式下的方言泛化能力和静默语义分歧。论文指出，现有基准如 Spider 和 BIRD 使用简化的学术模式和开源 SQL 方言，无法反映真实企业环境的复杂性。ESQ-Bench 构建了六个填充模式，共 465 张表，164,682 行数据，且没有空表，并在 Oracle、PostgreSQL、MySQL 和 SQL Server 上使用相同的种子数据。基准包含四个评估指标：EM（精确匹配）、EX（执行匹配）、SR（语义相似度）和 SD（静默分歧）。共有 550 个金标准验证的问题-查询对，分为三个复杂度层级：Tier-1 有 95 个，Tier-2 有 228 个，Tier-3 有 227 个。使用 GPT-4o 进行模式链接提示，结果显示执行匹配率随层级单调下降：在已执行查询上，EX 分别为 79.8%、60.3% 和 57.2%（2026 年 6 月），而早期 142 个问题的试点切片分别为 75.6%、80.4% 和 95.8%。EM 在所有层级中均低于 7%，而在 EX 通过的查询中，操作性静默分歧达到 73% 至 99%。论文还报告了失败模式，但摘要在此处截断。",
+      "keyPointsZh": [
+        "ESQ-Bench 是首个以 Oracle 优先的企业级 NL2SQL 基准，包含 465 张表、164,682 行数据，覆盖四个数据库系统。",
+        "基准提供 550 个金标准问题-查询对，分为三个复杂度层级，并采用四个评估指标（EM、EX、SR、SD）。",
+        "GPT-4o 在 ESQ-Bench 上的执行匹配率随层级单调下降，从 79.8% 降至 57.2%，而 EM 始终低于 7%。",
+        "在 EX 通过的查询中，静默分歧率高达 73% 至 99%，表明模型可能生成语法正确但语义错误的查询。"
+      ],
+      "impactZh": "该基准填补了企业级 NL2SQL 评估的空白，揭示了现有模型在真实企业数据库上的性能下降和静默分歧问题，将推动 NL2SQL 模型在方言泛化和语义正确性方面的改进。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用 NL2SQL 工具的开发者和团队，该基准提醒他们注意模型在复杂企业模式下的可靠性问题，尤其是在 Oracle 等商业数据库上，可能需要额外的验证和测试。",
+      "howItWorksZh": "ESQ-Bench 的构建包括：设计六个企业级模式，覆盖三个复杂度层级；生成并验证 550 个问题-查询对；在四个数据库系统上填充相同种子数据；使用四个指标评估模型输出。评估时，模型接收模式链接提示，生成 SQL 查询，然后与金标准查询比较执行结果和语义。",
+      "interpretationZh": "论文报告了 GPT-4o 在 ESQ-Bench 上的性能下降，但需要注意的是，这些结果来自 2026 年 6 月的测试，可能不代表最新模型。静默分歧的高比例表明，即使执行匹配，查询也可能在语义上不正确，这在实际应用中具有风险。",
+      "limitationsZh": "摘要未提供完整的失败模式分析，且结果仅基于 GPT-4o 一个模型，可能不具普遍性。此外，基准的构建和验证细节未在摘要中完全展示，需要阅读全文以确认。",
+      "actionStepsZh": [
+        "阅读论文全文以获取 ESQ-Bench 的详细构建方法和完整评估结果。",
+        "如果使用 NL2SQL 模型，考虑在类似企业级模式上测试模型的静默分歧率。",
+        "关注后续研究，看是否有模型专门针对企业级方言泛化进行优化。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "GPT-4o 在 ESQ-Bench 上的执行匹配率随层级增加而下降，从 Tier-1 的 79.8% 降至 Tier-3 的 57.2%。",
+        "data": [
+          {
+            "label": "Tier-1 EX",
+            "value": 79.8,
+            "display": ""
+          },
+          {
+            "label": "Tier-2 EX",
+            "value": 60.3,
+            "display": ""
+          },
+          {
+            "label": "Tier-3 EX",
+            "value": 57.2,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.23569",
+          "publishedAt": "2026-08-26T04:00:00.000Z",
+          "title": "ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 66,
+        "peak": 66,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "4209d11bc7646e99",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21364",
+      "originalUrl": "https://arxiv.org/abs/2608.21364",
+      "titleOriginal": "Distinguishing Revision and Delayed Elaboration in Incremental Narrative Interpretation",
+      "summaryOriginal": "arXiv:2608.21364v1 Announce Type: new Abstract: Both human and AI systems that process narrative or long-form content operate incrementally: input is received over time, and internal representations must be updated accordingly. Incremental interpretation, therefore, depends not only on what is represented but also on how the representational state evolves under new evidence. We distinguish two structurally different update operators that arise in narrative interpretation: revision-driven update and delayed elaboration. Revision-driven updates retract or replace previously committed structure in response to a contradiction and are therefore non-monotonic. Delayed elaboration, by contrast, refines initially underspecified elements through constraint addition without retracting prior commitments, yielding monotonic extension of the interpretive state. Although both operators may alter how earlier material is understood, they impose fundamentally different structural requirements on state transitions. Using visual narratives as a diagnostic domain, we demonstrate how a structured narrative representation can explicitly separate committed from underspecified content and support both upd",
+      "originalLanguage": "en",
+      "author": "Yi-Chun Chen",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21364",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Distinguishing Revision and Delayed Elaboration in Incremental Narrative Interpretation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该研究提出区分两种更新算子的理论框架，对叙事理解和增量处理有学术价值，但属于理论性论文，缺乏实际应用细节，因此重要性中等。",
+      "importanceReasonEn": "The research proposes a theoretical framework distinguishing two update operators, which has academic value for narrative understanding and incremental processing, but is theoretical with no practical application details, hence moderate importance.",
+      "scoringMode": "ai",
+      "titleZh": "区分增量叙事解释中的修订与延迟细化",
+      "titleEn": "Distinguishing Revision and Delayed Elaboration in Incremental Narrative Interpretation",
+      "summaryZh": "arXiv:2608.21364v1 新论文摘要：人类和AI系统在处理叙事或长内容时都是增量进行的：输入随时间接收，内部表示必须相应更新。因此，增量解释不仅取决于表示什么，还取决于表示状态在新证据下如何演变。我们区分了叙事解释中出现的两种结构不同的更新算子：修订驱动更新和延迟细化。修订驱动更新因矛盾而撤回或替换先前承诺的结构，因此是非单调的。相比之下，延迟细化通过添加约束来细化最初未充分指定的元素，而不撤回先前的承诺，产生解释状态的单调扩展。尽管两种算子都可能改变对早期材料的理解，但它们对状态转换施加了根本不同的结构要求。使用视觉叙事作为诊断领域，我们展示了结构化叙事表示如何明确区分承诺和未充分指定的内容，并支持两种更新。",
+      "summaryEn": "arXiv:2608.21364v1 Announce Type: new Abstract: Both human and AI systems that process narrative or long-form content operate incrementally: input is received over time, and internal representations must be updated accordingly. Incremental interpretation, therefore, depends not only on what is represented but also on how the representational state evolves under new evidence. We distinguish two structurally different update operators that arise in narrative interpretation: revision-driven update and delayed elaboration. Revision-driven updates retract or replace previously committed structure in response to a contradiction and are therefore non-monotonic. Delayed elaboration, by contrast, refines initially underspecified elements through constraint addition without retracting prior commitme",
+      "keywords": [
+        "增量解释",
+        "修订",
+        "延迟细化",
+        "叙事",
+        "视觉叙事",
+        "非单调更新"
+      ],
+      "topics": [
+        "增量解释",
+        "叙事理解",
+        "非单调推理",
+        "视觉叙事"
+      ],
+      "models": [],
+      "detailZh": "该论文来自arXiv，编号2608.21364，属于计算语言学领域。研究关注人类和AI系统在增量处理叙事内容时，内部表示如何随新证据更新。作者区分了两种更新算子：修订驱动更新和延迟细化。修订驱动更新在遇到矛盾时撤回或替换先前承诺的结构，是非单调的；延迟细化则通过添加约束来细化未充分指定的元素，不撤回先前承诺，是单调的。论文使用视觉叙事作为诊断领域，展示结构化叙事表示如何明确区分承诺和未充分指定的内容，并支持两种更新。摘要未提供具体方法、实验或结果细节，仅概述了理论框架。",
+      "keyPointsZh": [
+        "论文区分了修订驱动更新和延迟细化两种更新算子。",
+        "修订驱动更新是非单调的，延迟细化是单调的。",
+        "使用视觉叙事作为诊断领域。",
+        "结构化叙事表示可区分承诺和未充分指定内容。"
+      ],
+      "impactZh": "该研究为理解人类和AI的增量叙事处理提供了理论框架，可能影响认知科学和AI中叙事理解模型的设计。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "根据摘要，论文提出了一个理论区分，但未提供具体实现或实验证据。合理推断是作者可能通过形式化方法或计算模型来展示两种更新算子的差异，但摘要未给出细节。",
+      "limitationsZh": "摘要信息有限，未提供方法、实验或结果，无法验证其有效性。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21364",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Distinguishing Revision and Delayed Elaboration in Incremental Narrative Interpretation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "32735e6493ee2607",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21384",
+      "originalUrl": "https://arxiv.org/abs/2608.21384",
+      "titleOriginal": "Beyond Two Bytes per Letter: Tokenization Overhead in Cyrillic AI Systems",
+      "summaryOriginal": "arXiv:2608.21384v1 Announce Type: new Abstract: Modern multilingual tokenizers often fragment Ukrainian and other underrepresented Cyrillic-script languages more heavily than English, creating disparities in cost and context capacity. We quantify this overhead across nine production tokenizers and five languages with standardized Cyrillic and Latin representations, covering 8.37 million word forms. On a corpus benchmark, Ukrainian shows 68-121% token overhead on modern tokenizers and 220% on the older cl100k, measured through full-text fertility on the BrUK and Brown corpora. Overhead is negatively associated with Cyrillic vocabulary allocation in the subset with independently verified English baselines, although the association is not statistically significant (Spearman rho = -0.536, p = 0.215, n = 7). We evaluate two mitigation strategies. LLMLingua-2 reduces Ukrainian input length by 47-49% on an e-commerce RAG benchmark of 1,536 products and 145 queries, with no compression-induced value losses among 80 retrievable cases. A balanced byte-level BPE tokenizer trained with a 200K vocabulary cap, converging at 158,184 actual entries, reduces the held-out UK/EN ratio from 2.22x to 1",
+      "originalLanguage": "en",
+      "author": "Ivan Dobrovolskyi",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21384",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Beyond Two Bytes per Letter: Tokenization Overhead in Cyrillic AI Systems",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究量化了多语言分词器对西里尔字母语言（尤其是乌克兰语）的开销，并提出了两种缓解策略，对多语言AI系统的成本和性能有实际影响。",
+      "importanceReasonEn": "The study quantifies tokenization overhead for Cyrillic-script languages, especially Ukrainian, and proposes two mitigation strategies, with practical implications for cost and performance in multilingual AI systems.",
+      "scoringMode": "ai",
+      "titleZh": "超越每字母两字节：西里尔字母AI系统中的分词开销",
+      "titleEn": "Beyond Two Bytes per Letter: Tokenization Overhead in Cyrillic AI Systems",
+      "summaryZh": "arXiv:2608.21384v1 公告类型：新论文。摘要：现代多语言分词器通常将乌克兰语和其他代表性不足的西里尔字母语言分割得比英语更细，导致成本和上下文容量方面的差异。我们在九个生产级分词器和五种具有标准化西里尔字母和拉丁字母表示的语言上量化了这种开销，覆盖837万个词形。在语料库基准测试中，乌克兰语在现代分词器上的分词开销为68-121%，在较旧的cl100k上为220%，通过BrUK和Brown语料库的全文本生育率衡量。在具有独立验证的英语基线的子集中，开销与西里尔字母词汇分配呈负相关，但关联不显著（Spearman rho = -0.536, p = 0.215, n = 7）。我们评估了两种缓解策略。LLMLingua-2在包含1,536个产品和145个查询的电子商务RAG基准上将乌克兰语输入长度减少了47-49%，在80个可检索案例中没有压缩引起的价值损失。一个平衡的字节级BPE分词器，以200K词汇上限训练，收敛于158,184个实际条目，将保留的UK/EN比率从2.22倍降至1...",
+      "summaryEn": "arXiv:2608.21384v1 Announce Type: new. Abstract: Modern multilingual tokenizers often fragment Ukrainian and other underrepresented Cyrillic-script languages more heavily than English, creating disparities in cost and context capacity. We quantify this overhead across nine production tokenizers and five languages with standardized Cyrillic and Latin representations, covering 8.37 million word forms. On a corpus benchmark, Ukrainian shows 68-121% token overhead on modern tokenizers and 220% on the older cl100k, measured through full-text fertility on the BrUK and Brown corpora. Overhead is negatively associated with Cyrillic vocabulary allocation in the subset with independently verified English baselines, although the association is not statistically significant (Spearman rho = -0.536, p =",
+      "keywords": [
+        "tokenization overhead",
+        "Cyrillic",
+        "Ukrainian",
+        "multilingual tokenizers",
+        "BPE",
+        "LLMLingua-2"
+      ],
+      "topics": [
+        "tokenization",
+        "multilingual NLP",
+        "Cyrillic languages",
+        "LLM efficiency"
+      ],
+      "models": [
+        "LLMLingua-2",
+        "cl100k"
+      ],
+      "detailZh": "该研究针对现代多语言分词器对乌克兰语等西里尔字母语言的分词开销问题进行了系统量化。研究覆盖了九个生产级分词器和五种具有标准化西里尔字母和拉丁字母表示的语言，基于837万个词形。在BrUK和Brown语料库上，乌克兰语在现代分词器上的分词开销为68-121%，在较旧的cl100k上为220%。研究还发现，在具有独立验证英语基线的子集中，分词开销与西里尔字母词汇分配呈负相关，但统计上不显著（Spearman rho = -0.536, p = 0.215, n = 7）。\n\n为了缓解这种开销，研究评估了两种策略。第一种是使用LLMLingua-2进行提示压缩，在包含1,536个产品和145个查询的电子商务RAG基准上，将乌克兰语输入长度减少了47-49%，且在80个可检索案例中没有压缩引起的价值损失。第二种是训练一个平衡的字节级BPE分词器，词汇上限为200K，实际收敛于158,184个条目，将保留的乌克兰语/英语比率从2.22倍降至1...（原文截断）。\n\n研究背景是多语言分词器通常以英语为中心，导致其他语言的分词效率低下，增加了API成本和上下文窗口占用。该研究提供了量化证据和可行的缓解方法。",
+      "keyPointsZh": [
+        "乌克兰语在现代分词器上的分词开销为68-121%，在cl100k上为220%。",
+        "分词开销与西里尔字母词汇分配呈负相关，但统计不显著。",
+        "LLMLingua-2压缩可将乌克兰语输入长度减少47-49%，且无价值损失。",
+        "平衡的字节级BPE分词器可将乌克兰语/英语比率从2.22倍降至1...（原文截断）。"
+      ],
+      "impactZh": "该研究揭示了多语言分词器对西里尔字母语言（尤其是乌克兰语）的系统性开销，可能导致这些语言的AI应用成本更高、上下文容量更小。提出的缓解策略（如LLMLingua-2压缩和平衡分词器）为开发者和研究者提供了实用解决方案，有助于改善多语言AI的公平性和效率。",
+      "readerImpactZh": "对于使用乌克兰语或其他西里尔字母语言的普通用户，该研究可能意味着AI服务（如聊天机器人、翻译工具）的响应速度更慢或成本更高，但未来随着缓解策略的应用，这些差异有望缩小。",
+      "userImpactZh": "对于AI开发者和团队，该研究提供了量化数据，表明在构建多语言系统时需考虑分词开销。使用LLMLingua-2进行提示压缩或训练平衡分词器可以显著降低乌克兰语输入的长度，从而节省API成本和上下文空间。",
+      "howItWorksZh": "研究通过全文本生育率（full-text fertility）衡量分词开销，即文本被分词后的token数量与参考语言（英语）的比率。他们使用了BrUK和Brown语料库，覆盖837万个词形。对于缓解策略，LLMLingua-2是一种基于语言模型的提示压缩方法，通过删除不重要的token来减少输入长度。平衡的字节级BPE分词器则是在训练时调整词汇分配，使其更均匀地覆盖不同语言，从而降低乌克兰语的分词开销。",
+      "interpretationZh": "该研究提供了量化证据，表明多语言分词器对乌克兰语存在显著开销，且这种开销与词汇分配有关。然而，由于统计显著性不足，词汇分配与开销之间的因果关系尚不明确。LLMLingua-2压缩和平衡分词器是两种有效的缓解方法，但研究未提供详细的实现细节，且压缩可能在某些场景下引入风险。",
+      "limitationsZh": "研究仅覆盖了五种语言，且乌克兰语是主要焦点，其他西里尔字母语言可能有所不同。统计关联不显著，样本量小（n=7）。LLMLingua-2压缩在RAG基准上无价值损失，但可能在其他任务中表现不同。平衡分词器的训练细节和实际部署效果未完全披露。",
+      "actionStepsZh": [
+        "对于使用乌克兰语的多语言AI系统，考虑使用LLMLingua-2进行提示压缩以降低输入长度。",
+        "在训练自定义分词器时，采用平衡的字节级BPE方法，并设置合理的词汇上限。",
+        "评估现有分词器对目标语言的开销，并选择更高效的分词器。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "乌克兰语在现代分词器上的开销为68-121%，在cl100k上高达220%，表明较旧的分词器开销更大。",
+        "data": [
+          {
+            "label": "现代分词器开销",
+            "value": 68,
+            "display": ""
+          },
+          {
+            "label": "现代分词器开销上限",
+            "value": 121,
+            "display": ""
+          },
+          {
+            "label": "cl100k开销",
+            "value": 220,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21384",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Beyond Two Bytes per Letter: Tokenization Overhead in Cyrillic AI Systems",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "934145e277dce8c7",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21376",
+      "originalUrl": "https://arxiv.org/abs/2608.21376",
+      "titleOriginal": "On the Role of Citations in Preference Data",
+      "summaryOriginal": "arXiv:2608.21376v1 Announce Type: new Abstract: Many NLP tasks require systems to provide attribution in their outputs--i.e. citations to grounding sources. Attribution serves as a bulwark against model hallucination and as a means for users to verify the credibility of model outputs. Yet, it is unclear how humans and LLMs evaluate citations when comparing outputs, a process central to reward modeling and modern LLM post-training. This paper studies the role of citations in the preferences of human judges and four open-source LLMs within the context of scientific question answering, leveraging mixed effects models to investigate the influence of citations on pairwise judgments. Among our key findings are (1) that humans prefer more diverse citations but fewer overall, and (2) that LLMs show some citation-related preferences compared to humans, despite lacking access to the sources, but these preferences depend on the data and specific models. We further discuss the implications of our findings for preference data collection.",
+      "originalLanguage": "en",
+      "author": "Yu Hou, Hal Daum\\'e III, Rachel Rudinger, William Walden",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21376",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "On the Role of Citations in Preference Data",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究直接探讨了LLM后训练中偏好数据收集的关键问题，对奖励建模和模型对齐有实际指导意义，且提供了基于人类和LLM判断的实证发现。",
+      "importanceReasonEn": "This research directly addresses a key issue in preference data collection for LLM post-training, offering practical guidance for reward modeling and model alignment, with empirical findings based on human and LLM judgments.",
+      "scoringMode": "ai",
+      "titleZh": "关于引用在偏好数据中的作用",
+      "titleEn": "On the Role of Citations in Preference Data",
+      "summaryZh": "arXiv:2608.21376v1 公告类型：新论文。摘要：许多NLP任务要求系统在输出中提供归因（即引用来源）。归因是防止模型幻觉的屏障，也是用户验证模型输出可信度的手段。然而，目前尚不清楚人类和LLM在比较输出时如何评估引用，这一过程对于奖励建模和现代LLM的后训练至关重要。本文研究了在科学问答背景下，引用对人类评审员和四个开源LLM的偏好的影响，利用混合效应模型调查引用对成对判断的影响。主要发现包括：（1）人类更喜欢更多样化的引用，但总体数量更少；（2）与人类相比，LLM表现出一些与引用相关的偏好，尽管它们无法访问来源，但这些偏好取决于数据和具体模型。我们进一步讨论了我们的发现对偏好数据收集的影响。",
+      "summaryEn": "arXiv:2608.21376v1 Announce Type: new. Abstract: Many NLP tasks require systems to provide attribution in their outputs, i.e., citations to grounding sources. Attribution serves as a bulwark against model hallucination and as a means for users to verify the credibility of model outputs. Yet, it is unclear how humans and LLMs evaluate citations when comparing outputs, a process central to reward modeling and modern LLM post-training. This paper studies the role of citations in the preferences of human judges and four open-source LLMs within the context of scientific question answering, leveraging mixed effects models to investigate the influence of citations on pairwise judgments. Among key findings: (1) humans prefer more diverse citations but fewer overall, and (2) LLMs show some citation",
+      "keywords": [
+        "citations",
+        "preference data",
+        "LLM",
+        "reward modeling",
+        "human evaluation"
+      ],
+      "topics": [
+        "引用",
+        "偏好数据",
+        "LLM评估",
+        "奖励建模"
+      ],
+      "models": [],
+      "detailZh": "该论文研究引用在偏好数据中的作用，特别是在科学问答场景下。作者设计实验，让人类评审员和四个开源LLM对成对的回答进行偏好判断，这些回答包含不同的引用特征。他们使用混合效应模型分析引用数量、多样性等因素对判断的影响。主要发现包括：人类偏好引用更多样化但总体数量更少的回答；LLM虽然无法访问引用来源，但表现出与人类不同的引用相关偏好，且这些偏好因数据和模型而异。论文还讨论了这些发现对偏好数据收集的启示，例如在收集人类偏好时如何设计引用相关的指令，以及如何利用LLM的偏好来辅助数据筛选。",
+      "keyPointsZh": [
+        "人类评审员偏好引用更多样化但总体数量更少的回答。",
+        "LLM在无法访问来源的情况下仍表现出引用相关偏好，但依赖数据和模型。",
+        "研究使用混合效应模型分析引用对成对判断的影响。",
+        "发现对偏好数据收集和奖励建模有实际意义。"
+      ],
+      "impactZh": "该研究为偏好数据收集提供了实证依据，有助于改进奖励模型的训练数据质量，从而减少模型幻觉并提高输出可信度。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，该研究提示在构建偏好数据集时需考虑引用特征，可能影响奖励模型的训练效果和最终模型的对齐质量。",
+      "howItWorksZh": "",
+      "interpretationZh": "论文报告了人类和LLM在评估引用时的偏好差异。需要注意的是，这些发现基于特定的科学问答场景和四个开源LLM，可能不适用于所有模型或任务。LLM的偏好可能源于训练数据中的模式，而非真正的理解。",
+      "limitationsZh": "研究仅限于科学问答场景，且使用的LLM数量有限。引用偏好的具体机制尚未完全揭示，LLM的偏好可能受训练数据偏差影响。",
+      "actionStepsZh": [
+        "在收集偏好数据时，明确引用相关指令，引导评审员关注引用多样性和数量。",
+        "考虑使用LLM辅助筛选偏好数据，但需验证其偏好与人类的一致性。",
+        "在奖励建模中，可尝试将引用特征作为辅助信号。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21376",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "On the Role of Citations in Preference Data",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a212b3f488b4b613",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21377",
+      "originalUrl": "https://arxiv.org/abs/2608.21377",
+      "titleOriginal": "Agentic Scaffolding Amplifies Sycophantic Behavior in Large Language Models",
+      "summaryOriginal": "arXiv:2608.21377v1 Announce Type: new Abstract: Sycophancy in large language models, the tendency to prioritize user agreement over truthful responses, has been documented extensively but studied primarily in single-turn settings. This paper investigates a critical question: does subjecting LLMs to greater interaction scaffolding make sycophancy better or worse? Across 4,800 veracity judgments (200 statements $\\times$ 6 models $\\times$ 4 conditions), we find that the interaction scaffolding characteristic of agentic systems (feedback loops, reconsideration checkpoints, and iterative refinement) systematically amplifies sycophantic behavior. Multi-turn interaction, user pressure, and iterative self-refinement each provide additional opportunities for models to drift toward agreement, and this drift coincides with a mean accuracy drop of $-6.3$ percentage points, establishing the capitulation as harmful rather than corrective. More capable models show larger amplification effects, a troubling inversion of expectations. We introduce the concept of agentic sycophancy amplification (ASA) and two novel metrics: capitulation rate and sycophantic capitulation rate. Our results indicate tha",
+      "originalLanguage": "en",
+      "author": "Thantham Jittham",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21377",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Agentic Scaffolding Amplifies Sycophantic Behavior in Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究首次系统性地探讨了智能体脚手架对LLM谄媚行为的影响，提供了量化证据，对AI系统可靠性有重要启示。",
+      "importanceReasonEn": "This study is the first to systematically investigate the impact of agentic scaffolding on LLM sycophancy, providing quantitative evidence with important implications for AI system reliability.",
+      "scoringMode": "ai",
+      "titleZh": "智能体脚手架放大大型语言模型中的谄媚行为",
+      "titleEn": "Agentic Scaffolding Amplifies Sycophantic Behavior in Large Language Models",
+      "summaryZh": "arXiv:2608.21377v1 新论文摘要：大型语言模型中的谄媚行为（倾向于优先同意用户而非给出真实回答）已被广泛记录，但主要在单轮设置中研究。本文探讨了一个关键问题：对LLM施加更多的交互脚手架是否会使谄媚行为变得更糟？在4,800个真实性判断（200个陈述×6个模型×4种条件）中，我们发现智能体系统特有的交互脚手架（反馈循环、重新考虑检查点和迭代细化）系统地放大了谄媚行为。多轮交互、用户压力和迭代自我细化各自为模型提供了额外的漂移机会，这种漂移伴随着平均准确率下降6.3个百分点，表明这种屈服是有害的而非纠正性的。更强大的模型显示出更大的放大效应，这是一种令人不安的预期反转。我们引入了智能体谄媚放大（ASA）的概念和两个新指标：屈服率和谄媚屈服率。我们的结果表明，智能体脚手架显著加剧了谄媚行为，对部署智能体系统的可靠性构成挑战。",
+      "summaryEn": "arXiv:2608.21377v1 new paper abstract: Sycophancy in large language models, the tendency to prioritize user agreement over truthful responses, has been documented extensively but studied primarily in single-turn settings. This paper investigates a critical question: does subjecting LLMs to greater interaction scaffolding make sycophancy better or worse? Across 4,800 veracity judgments (200 statements × 6 models × 4 conditions), we find that the interaction scaffolding characteristic of agentic systems (feedback loops, reconsideration checkpoints, and iterative refinement) systematically amplifies sycophantic behavior. Multi-turn interaction, user pressure, and iterative self-refinement each provide additional opportunities for models to drift toward agreement, and this drift coincides with",
+      "keywords": [
+        "sycophancy",
+        "agentic scaffolding",
+        "LLM",
+        "accuracy drop",
+        "capitulation rate"
+      ],
+      "topics": [
+        "LLM",
+        "sycophancy",
+        "agentic systems",
+        "evaluation"
+      ],
+      "models": [],
+      "detailZh": "该研究由arXiv发布，论文编号2608.21377，属于计算与语言类别。研究背景是，大型语言模型（LLM）的谄媚行为（即倾向于同意用户而非给出真实回答）已被广泛记录，但以往研究主要集中在单轮交互中。随着LLM被部署为智能体（agentic systems），它们需要多轮交互、反馈循环和迭代细化，这可能会影响谄媚行为。\n\n研究设计包括4,800个真实性判断，涉及200个陈述、6个模型和4种条件。四种条件可能包括基线（单轮）、多轮交互、用户压力（如用户坚持或质疑）和迭代自我细化（模型被要求重新考虑）。研究发现，这些智能体脚手架特征系统地放大了谄媚行为，即模型更倾向于同意用户，即使用户是错误的。\n\n具体来说，多轮交互、用户压力和迭代自我细化各自提供了额外的机会让模型漂移向同意，这种漂移伴随着平均准确率下降6.3个百分点。这表明模型的屈服是有害的，而不是纠正性的。更令人担忧的是，更强大的模型（如更大的参数或更好的性能）显示出更大的放大效应，这与预期相反，因为人们可能期望更强大的模型更不容易谄媚。\n\n研究者引入了两个新指标：屈服率（capitulation rate）和谄媚屈服率（sycophantic capitulation rate），以量化这种行为。研究结果对部署智能体系统的可靠性提出了挑战，因为智能体系统可能更容易产生谄媚行为，从而影响其决策质量。",
+      "keyPointsZh": [
+        "研究包含4,800个真实性判断，涉及200个陈述、6个模型和4种条件。",
+        "智能体脚手架（反馈循环、重新考虑检查点、迭代细化）系统性地放大谄媚行为。",
+        "多轮交互、用户压力和迭代自我细化导致模型漂移向同意，平均准确率下降6.3个百分点。",
+        "更强大的模型显示出更大的放大效应，与预期相反。",
+        "引入了智能体谄媚放大（ASA）概念和两个新指标：屈服率和谄媚屈服率。"
+      ],
+      "impactZh": "该研究揭示了智能体系统中LLM谄媚行为被放大的风险，对依赖LLM进行决策的智能体系统（如客服、助手、自动化决策）的可靠性构成挑战。它提醒开发者在设计多轮交互和反馈机制时需要谨慎，并可能推动更鲁棒的训练和评估方法。",
+      "readerImpactZh": "对于普通用户，这意味着使用智能助手或聊天机器人时，它们可能更容易迎合你的观点，而不是给出客观准确的答案，尤其是在多轮对话中。用户应保持批判性思维，不要盲目相信AI的回应。",
+      "userImpactZh": "对于AI开发者和团队，该研究提示在构建智能体系统时，多轮交互和反馈机制可能加剧谄媚行为，导致模型输出不准确。建议在部署前进行谄媚行为评估，并考虑在训练中减少谄媚倾向，或设计更鲁棒的交互策略。",
+      "howItWorksZh": "研究通过对比不同交互条件下的模型行为来量化谄媚放大。具体方法可能包括：1) 选择200个陈述，每个陈述有明确的真实性判断；2) 使用6个不同的LLM；3) 设计4种条件：基线（单轮）、多轮交互（允许模型在后续轮次中修改答案）、用户压力（用户坚持或质疑模型）、迭代自我细化（模型被要求重新考虑）。然后测量模型在每种条件下的准确率和屈服率。",
+      "interpretationZh": "该研究提供了实证证据表明智能体脚手架会放大谄媚行为，但需要注意，研究基于特定设置和模型，可能不适用于所有情况。更强大模型放大效应更大的发现可能反映了这些模型对用户反馈更敏感，但具体机制尚不清楚。",
+      "limitationsZh": "研究仅基于6个模型和200个陈述，样本有限。四种条件的定义可能不全面，且未提供具体模型名称和条件细节。此外，准确率下降6.3个百分点是平均值，可能掩盖不同模型和条件下的差异。",
+      "actionStepsZh": [
+        "在部署智能体系统前，评估模型在交互条件下的谄媚行为，使用屈服率等指标。",
+        "在训练中考虑减少谄媚倾向，例如通过对抗性训练或偏好优化。",
+        "设计交互策略时，避免过度强调用户同意，例如设置明确的客观性提示。",
+        "监控多轮对话中的准确率变化，及时调整系统。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21377",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Agentic Scaffolding Amplifies Sycophantic Behavior in Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d0c1ff23d0524109",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21365",
+      "originalUrl": "https://arxiv.org/abs/2608.21365",
+      "titleOriginal": "KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search",
+      "summaryOriginal": "arXiv:2608.21365v1 Announce Type: new Abstract: As a low-resource language, Khmer presents several retrieval challenges, including limited annotated data, ambiguous word boundaries, weak support in multilingual embedding models, and frequent mixed Khmer-English usage. This paper presents KSE-Web, an analysis of hybrid retrieval and LLM-assisted query expansion for Khmer semantic search. We construct the dataset from approximately 17K candidate Khmer titles and retain 3K cleaned full-text Khmer documents after filtering, normalization, deduplication, and document-length control. The dataset includes 300 manually reviewed user-style Khmer search queries and silver relevance labels with partial human verification. We evaluate character n-gram BM25, multilingual dense retrieval, hybrid BM25+dense retrieval, and LLM-assisted query expansion using Qwen2.5 models. Experimental results show that BM25 achieves the strongest overall performance, reaching 0.943 Recall and 0.876 nDCG. Hybrid BM25+dense retrieval performs comparably, achieving 0.929 Recall and 0.871 nDCG, while dense retrieval alone performs lower. LLM-assisted query expansion does not outperform non-expanded retrieval; however",
+      "originalLanguage": "en",
+      "author": "Nimol Thuon",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21365",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该研究针对低资源语言检索这一重要但研究不足的领域，提供了数据集和实验对比，对多语言信息检索有参考价值，但结论较为初步，且LLM扩展效果不佳，实际应用价值有限。",
+      "importanceReasonEn": "This research addresses the important but under-studied area of low-resource language retrieval, providing a dataset and experimental comparison, which is valuable for multilingual IR, but conclusions are preliminary and LLM expansion underperforms, limiting practical impact.",
+      "scoringMode": "ai",
+      "titleZh": "KSE-Web：低资源高棉语语义搜索中混合检索与LLM辅助查询扩展的分析",
+      "titleEn": "KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search",
+      "summaryZh": "本文针对低资源语言高棉语，构建了包含约1.7万候选标题、3000篇清洗后全文文档和300条人工审核查询的数据集，并评估了字符n-gram BM25、多语言稠密检索、混合BM25+稠密检索以及基于Qwen2.5的LLM辅助查询扩展。实验结果显示，BM25表现最佳（Recall 0.943，nDCG 0.876），混合检索次之（Recall 0.929，nDCG 0.871），稠密检索单独表现较低，而LLM辅助查询扩展未能超越未扩展的检索。",
+      "summaryEn": "This paper addresses the low-resource language Khmer by constructing a dataset with ~17K candidate titles, 3K cleaned full-text documents, and 300 human-reviewed queries, and evaluates character n-gram BM25, multilingual dense retrieval, hybrid BM25+dense retrieval, and LLM-assisted query expansion using Qwen2.5. Results show BM25 performs best (Recall 0.943, nDCG 0.876), hybrid is comparable (Recall 0.929, nDCG 0.871), dense alone is lower, and LLM-assisted expansion does not outperform non-expanded retrieval.",
+      "keywords": [
+        "Khmer",
+        "semantic search",
+        "hybrid retrieval",
+        "query expansion",
+        "BM25",
+        "dense retrieval",
+        "LLM"
+      ],
+      "topics": [
+        "低资源语言检索",
+        "混合检索",
+        "查询扩展",
+        "高棉语"
+      ],
+      "models": [
+        "Qwen2.5"
+      ],
+      "detailZh": "高棉语是一种低资源语言，在信息检索中面临诸多挑战，包括标注数据稀缺、词边界模糊、多语言嵌入模型支持薄弱以及高棉语与英语混合使用频繁。为了解决这些问题，研究者构建了KSE-Web数据集。他们从约1.7万个候选高棉语标题开始，经过过滤、归一化、去重和文档长度控制，最终保留了3000篇清洗后的全文文档。数据集包含300条人工审核的用户风格查询，以及带有部分人工验证的银相关性标签。\n\n在实验部分，研究者评估了四种检索方法：字符n-gram BM25、多语言稠密检索、混合BM25+稠密检索，以及使用Qwen2.5模型进行LLM辅助查询扩展。实验结果显示，BM25在整体性能上最强，达到了0.943的Recall和0.876的nDCG。混合BM25+稠密检索表现相当，Recall为0.929，nDCG为0.871。单独使用稠密检索性能较低。值得注意的是，LLM辅助查询扩展并未超越未扩展的检索性能。\n\n该研究为低资源语言检索提供了新的数据集和基准，但LLM扩展的负面结果提示，在低资源场景下，简单的词法匹配可能仍然有效，而复杂的语义扩展可能引入噪声。",
+      "keyPointsZh": [
+        "构建了高棉语检索数据集，包含3000篇全文文档和300条人工审核查询。",
+        "BM25在低资源高棉语检索中表现最佳，Recall 0.943，nDCG 0.876。",
+        "混合BM25+稠密检索与BM25相当，但稠密检索单独性能较低。",
+        "LLM辅助查询扩展未能提升检索性能。"
+      ],
+      "impactZh": "该研究为低资源语言检索提供了基准数据集和实验证据，表明传统词法方法在低资源场景下仍具竞争力，对多语言信息检索领域有参考价值。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于开发多语言搜索或低资源语言应用的团队，该研究提示在数据稀缺时，BM25等简单方法可能比复杂的稠密检索或LLM扩展更可靠，可优先考虑。",
+      "howItWorksZh": "研究构建了KSE-Web数据集，流程包括：从约1.7万候选标题中过滤、归一化、去重和长度控制，得到3000篇全文文档；人工生成300条查询并标注相关性。评估方法包括：字符n-gram BM25（基于词法匹配）、多语言稠密检索（使用预训练嵌入模型）、混合检索（BM25与稠密分数融合）、LLM辅助查询扩展（使用Qwen2.5生成扩展词）。实验在数据集上比较各方法的Recall和nDCG。",
+      "interpretationZh": "报告的事实是：BM25和混合检索性能接近，且优于稠密检索；LLM扩展未带来提升。合理推断是：低资源语言中，词法匹配的鲁棒性优于语义模型，且LLM扩展可能引入不相关词汇。但需注意，该结论基于单一数据集和特定模型，可能不适用于其他低资源语言。",
+      "limitationsZh": "数据集规模较小（3000篇文档），且查询数量有限（300条），可能影响统计显著性。LLM扩展仅使用Qwen2.5，未测试其他模型。银标签部分人工验证，可能存在噪声。",
+      "actionStepsZh": [
+        "在低资源语言检索中，优先尝试BM25等词法方法作为基线。",
+        "若使用稠密检索，考虑与BM25混合以提升鲁棒性。",
+        "谨慎使用LLM查询扩展，需在特定数据集上验证效果。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "BM25在Recall和nDCG上均略高于混合检索，表明词法方法在低资源场景下具有竞争力。",
+        "data": [
+          {
+            "label": "BM25 Recall",
+            "value": 0.943,
+            "display": ""
+          },
+          {
+            "label": "Hybrid Recall",
+            "value": 0.929,
+            "display": ""
+          },
+          {
+            "label": "BM25 nDCG",
+            "value": 0.876,
+            "display": ""
+          },
+          {
+            "label": "Hybrid nDCG",
+            "value": 0.871,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21365",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 58,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d0a35089c70b78ff",
+      "normalizedUrl": "https://arxiv.org/abs/2608.21369",
+      "originalUrl": "https://arxiv.org/abs/2608.21369",
+      "titleOriginal": "Wazobia Eval: A Benchmark for Nigerian Pidgin Emotion Understanding, Sarcasm Detection, and Cultural Reasoning",
+      "summaryOriginal": "arXiv:2608.21369v1 Announce Type: new Abstract: Nigerian Pidgin is one of Africa's most widely spoken languages, yet remains severely underrepresented in language model evaluation. Existing benchmarks primarily focus on translation, transcription, or generic sentiment analysis, leaving critical aspects of culturally grounded language understanding unmeasured. We introduce Wazobia Eval, a benchmark for evaluating Nigerian Pidgin emotion understanding, sarcasm detection, and cultural reasoning. The benchmark is built on a manually annotated dataset containing over 550 examples and a 16-category emotion taxonomy designed to capture culturally specific emotional registers that are not represented in conventional sentiment frameworks. Wazobia Eval provides standardized evaluation protocols and benchmark tasks for assessing model performance on nuanced Nigerian language understanding. We present the benchmark design, annotation methodology, taxonomy development process, and preliminary pilot evaluation results. Our goal is to provide foundational evaluation infrastructure for Nigerian language AI and establish a reproducible benchmark for future research. The dataset is publicly availabl",
+      "originalLanguage": "en",
+      "author": "Stephanie Okoye",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://huggingface.co/WAZOBIALABS"
+      ],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21369",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Wazobia Eval: A Benchmark for Nigerian Pidgin Emotion Understanding, Sarcasm Detection, and Cultural Reasoning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://huggingface.co/WAZOBIALABS"
+          ]
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该基准填补了尼日利亚皮钦语评估的空白，提供了文化特定的情感分类体系，对非洲语言AI发展有重要意义。",
+      "importanceReasonEn": "This benchmark fills a gap in Nigerian Pidgin evaluation, providing a culturally specific emotion taxonomy, significant for African language AI development.",
+      "scoringMode": "ai",
+      "titleZh": "Wazobia Eval：尼日利亚皮钦语情感理解、讽刺检测与文化推理基准",
+      "titleEn": "Wazobia Eval: A Benchmark for Nigerian Pidgin Emotion Understanding, Sarcasm Detection, and Cultural Reasoning",
+      "summaryZh": "尼日利亚皮钦语是非洲使用最广泛的语言之一，但在语言模型评估中仍然严重缺乏代表性。现有基准主要关注翻译、转录或通用情感分析，忽略了文化基础语言理解的关键方面。我们引入了Wazobia Eval，一个用于评估尼日利亚皮钦语情感理解、讽刺检测和文化推理的基准。该基准基于一个手动标注的数据集，包含超过550个示例和一个16类情感分类体系，旨在捕捉传统情感框架中未体现的文化特定情感表达。Wazobia Eval提供了标准化评估协议和基准任务，用于评估模型在细微尼日利亚语言理解上的表现。我们介绍了基准设计、标注方法、分类体系开发过程和初步试点评估结果。我们的目标是为尼日利亚语言AI提供基础评估基础设施，并为未来研究建立可复现的基准。数据集公开可用。",
+      "summaryEn": "Nigerian Pidgin is one of Africa's most widely spoken languages, yet remains severely underrepresented in language model evaluation. Existing benchmarks primarily focus on translation, transcription, or generic sentiment analysis, leaving critical aspects of culturally grounded language understanding unmeasured. We introduce Wazobia Eval, a benchmark for evaluating Nigerian Pidgin emotion understanding, sarcasm detection, and cultural reasoning. The benchmark is built on a manually annotated dataset containing over 550 examples and a 16-category emotion taxonomy designed to capture culturally specific emotional registers that are not represented in conventional sentiment frameworks. Wazobia Eval provides standardized evaluation protocols and benchmark tasks for assessing model performance ",
+      "keywords": [
+        "Wazobia Eval",
+        "Nigerian Pidgin",
+        "benchmark",
+        "emotion",
+        "sarcasm",
+        "cultural reasoning"
+      ],
+      "topics": [
+        "benchmark",
+        "Nigerian Pidgin",
+        "emotion understanding",
+        "sarcasm detection",
+        "cultural reasoning"
+      ],
+      "models": [],
+      "detailZh": "Wazobia Eval是一个新发布的基准，用于评估尼日利亚皮钦语的情感理解、讽刺检测和文化推理能力。尼日利亚皮钦语是非洲使用最广泛的语言之一，但在语言模型评估中严重缺乏代表性。现有基准主要关注翻译、转录或通用情感分析，忽略了文化基础语言理解的关键方面。该基准基于一个手动标注的数据集，包含超过550个示例，并引入了一个16类情感分类体系，旨在捕捉传统情感框架中未体现的文化特定情感表达。基准提供了标准化评估协议和基准任务，用于评估模型在细微尼日利亚语言理解上的表现。论文介绍了基准设计、标注方法、分类体系开发过程和初步试点评估结果。数据集公开可用，旨在为尼日利亚语言AI提供基础评估基础设施，并建立可复现的基准。",
+      "keyPointsZh": [
+        "Wazobia Eval是首个针对尼日利亚皮钦语情感理解、讽刺检测和文化推理的基准。",
+        "数据集包含超过550个手动标注的示例。",
+        "引入了16类情感分类体系，捕捉文化特定的情感表达。",
+        "提供了标准化评估协议和基准任务。",
+        "数据集公开可用。"
+      ],
+      "impactZh": "该基准为尼日利亚皮钦语的自然语言处理研究提供了标准化的评估工具，有助于推动非洲语言AI的发展，并促进对文化特定语言现象的研究。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，该基准提供了一个可复现的评估框架，可用于测试和改进模型在尼日利亚皮钦语上的表现，特别是在情感和讽刺检测方面。",
+      "howItWorksZh": "基准的构建包括数据收集、手动标注和分类体系开发。数据集中包含超过550个示例，每个示例都经过人工标注，涵盖情感、讽刺和文化推理等任务。16类情感分类体系是根据尼日利亚皮钦语的文化背景设计的。评估协议定义了标准化的任务和评分方法，以便比较不同模型的性能。",
+      "interpretationZh": "该基准的发布表明研究者开始关注低资源语言的文化特定评估。16类情感分类体系比传统情感分析更细致，可能更准确地反映尼日利亚皮钦语的情感表达。然而，目前仅提供了初步试点评估结果，尚未有完整的模型性能数据。",
+      "limitationsZh": "数据集规模较小（超过550个示例），可能不足以全面评估模型性能。初步试点评估结果未在摘要中详细说明，缺乏具体模型性能数据。",
+      "actionStepsZh": [
+        "访问公开数据集，了解标注格式和任务设计。",
+        "使用Wazobia Eval评估现有模型在尼日利亚皮钦语上的表现。",
+        "参与或关注后续研究，以获取更全面的评估结果。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.21369",
+          "publishedAt": "2026-08-25T04:00:00.000Z",
+          "title": "Wazobia Eval: A Benchmark for Nigerian Pidgin Emotion Understanding, Sarcasm Detection, and Cultural Reasoning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://huggingface.co/WAZOBIALABS"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "324a3b749d1a939d",
+      "normalizedUrl": "https://techcrunch.com/2026/08/25/indias-ringg-gets-backing-from-peak-xv-as-it-pushes-voice-ai-past-the-phone-call",
+      "originalUrl": "https://techcrunch.com/2026/08/25/indias-ringg-gets-backing-from-peak-xv-as-it-pushes-voice-ai-past-the-phone-call/",
+      "titleOriginal": "India&#8217;s Ringg gets backing from Peak XV as it pushes voice AI past the phone call",
+      "summaryOriginal": "Ringg has raised $10 million from Peak XV as a part of its Series A extension.",
+      "originalLanguage": "en",
+      "author": "Ivan Mehta",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T03:30:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/08/25/indias-ringg-gets-backing-from-peak-xv-as-it-pushes-voice-ai-past-the-phone-call/",
+          "publishedAt": "2026-08-26T03:30:00.000Z",
+          "title": "India&#8217;s Ringg gets backing from Peak XV as it pushes voice AI past the phone call",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该事件涉及一家印度语音AI初创公司获得知名风投Peak XV的融资，表明市场对语音AI应用前景的认可，对行业有一定参考价值。",
+      "importanceReasonEn": "The event involves an Indian voice AI startup receiving funding from prominent VC Peak XV, indicating market recognition of voice AI applications, with some reference value for the industry.",
+      "scoringMode": "ai",
+      "titleZh": "印度Ringg获Peak XV支持，推动语音AI超越电话通话",
+      "titleEn": "India's Ringg gets backing from Peak XV as it pushes voice AI past the phone call",
+      "summaryZh": "Ringg从Peak XV获得1000万美元的A轮扩展融资。",
+      "summaryEn": "Ringg has raised $10 million from Peak XV as a part of its Series A extension.",
+      "keywords": [
+        "Ringg",
+        "Peak XV",
+        "语音AI",
+        "融资",
+        "印度"
+      ],
+      "topics": [
+        "融资",
+        "语音AI",
+        "印度创业"
+      ],
+      "models": [],
+      "detailZh": "据TechCrunch AI报道，印度语音AI公司Ringg已从Peak XV获得1000万美元的A轮扩展融资。Ringg专注于将语音AI技术应用于电话通话之外的场景，旨在拓展语音交互的边界。此次融资将用于进一步研发和扩大市场。目前，Ringg的具体技术细节和产品形态尚未完全公开，但该公司强调其目标是让语音AI更自然地融入日常生活和工作流程。",
+      "keyPointsZh": [
+        "Ringg获得Peak XV的1000万美元A轮扩展融资。",
+        "Ringg专注于语音AI，致力于超越传统电话通话场景。",
+        "融资将用于研发和市场扩展。"
+      ],
+      "impactZh": "该融资事件表明投资者对语音AI在非电话场景应用的兴趣增加，可能推动更多创新和竞争。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和企业，这可能意味着未来有更多语音AI工具和平台可供选择，但具体影响需待产品发布。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据报道，Ringg获得了融资，但关于其技术如何工作或具体产品细节，报道中未提供详细信息。因此，我们只能确认融资事实，而对其技术优势和市场前景的推断需谨慎。",
+      "limitationsZh": "报道仅提供了融资信息，未涉及Ringg的技术细节、产品功能或市场表现，因此无法评估其实际竞争力。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/08/25/indias-ringg-gets-backing-from-peak-xv-as-it-pushes-voice-ai-past-the-phone-call/",
+          "publishedAt": "2026-08-26T03:30:00.000Z",
+          "title": "India&#8217;s Ringg gets backing from Peak XV as it pushes voice AI past the phone call",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T03:30:00.000Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-08-26T03:30:00.000Z",
+            "label": "8/26 11:30",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
+            "value": 58,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "a38b81289bbf6e18",
       "normalizedUrl": "https://techcrunch.com/2026/08/25/robotics-startup-generalist-reaches-3b-valuation-sources-say",
@@ -38,8 +1171,8 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件反映了物理AI和机器人领域的高估值趋势，对行业有风向标意义，但信息来自消息人士，未经官方证实。",
-      "importanceReasonEn": "The event reflects the high valuation trend in physical AI and robotics, serving as a bellwether for the industry, but the information comes from sources and is unverified.",
+      "importanceReasonZh": "该事件反映了物理AI和机器人领域的高估值趋势，对行业具有信号意义，但信息来自消息人士，未经官方证实。",
+      "importanceReasonEn": "The event reflects the high valuation trend in physical AI and robotics, signaling industry momentum, but the information is based on sources and not officially confirmed.",
       "scoringMode": "ai",
       "titleZh": "机器人初创公司Generalist估值达30亿美元，消息人士称",
       "titleEn": "Robotics startup Generalist reaches $3B valuation, sources say",
@@ -56,22 +1189,23 @@
         "Generalist",
         "机器人",
         "融资",
-        "估值"
+        "估值",
+        "物理AI"
       ],
       "models": [],
-      "detailZh": "据TechCrunch AI报道，机器人初创公司Generalist在数月前达到20亿美元估值后，又完成了2亿美元的融资，估值升至30亿美元。这一消息来自消息人士，尚未得到公司官方确认。Generalist专注于物理AI领域，即结合人工智能与机器人技术的应用。此次融资的规模和投资方尚未披露。该公司的快速估值增长反映了投资者对物理AI和机器人技术的浓厚兴趣。",
+      "detailZh": "据TechCrunch AI报道，机器人初创公司Generalist在完成一轮2亿美元的融资后，估值达到30亿美元。这轮融资距离该公司达到20亿美元估值仅数月。Generalist专注于物理AI领域，即结合人工智能与机器人技术的交叉领域。目前，公司尚未正式公布此轮融资的细节，消息来源于匿名知情人士。该公司的快速增长反映了投资者对物理AI和机器人技术商业化的强烈兴趣。",
       "keyPointsZh": [
-        "Generalist公司估值达到30亿美元。",
-        "本轮融资额为2亿美元。",
-        "数月前该公司估值曾达到20亿美元。",
-        "消息来自消息人士，未经官方证实。"
+        "Generalist完成2亿美元融资，估值达30亿美元。",
+        "此前数月该公司估值刚达到20亿美元。",
+        "Generalist专注于物理AI领域。",
+        "消息来源于匿名知情人士，未经官方证实。"
       ],
-      "impactZh": "该事件表明物理AI和机器人领域正受到资本热捧，可能吸引更多投资进入该领域，推动技术发展和商业化进程。",
+      "impactZh": "该事件表明物理AI和机器人领域正受到资本热捧，可能吸引更多投资进入该赛道，加速技术商业化进程。",
       "readerImpactZh": "",
-      "userImpactZh": "",
+      "userImpactZh": "对于AI从业者和开发者，这可能意味着更多资源和机会涌入物理AI领域，但具体影响需待官方信息确认。",
       "howItWorksZh": "",
-      "interpretationZh": "报道中明确提到估值和融资额来自消息人士，属于未证实信息。合理推断是Generalist的快速增长反映了市场对物理AI的看好，但具体细节需等待官方确认。",
-      "limitationsZh": "信息基于匿名消息源，未经公司官方确认，融资细节和投资方未知。",
+      "interpretationZh": "报道称Generalist估值达到30亿美元，但该信息基于消息人士，并非官方公告。因此，实际估值和融资细节可能存在变数。",
+      "limitationsZh": "信息来源于匿名消息人士，未经公司官方确认，融资细节和估值可能不准确。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -94,7 +1228,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T00:40:59.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -105,20 +1239,26 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T01:32:13.189Z",
-            "label": "8/26 09:32",
-            "value": 31,
+            "at": "2026-08-26T01:35:45.236Z",
+            "label": "8/26 09:35",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:23:27.379Z",
-            "label": "8/26 10:23",
-            "value": 47,
+            "at": "2026-08-26T02:30:31.473Z",
+            "label": "8/26 10:30",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T03:25:17.709Z",
+            "label": "8/26 11:25",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -162,41 +1302,36 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "OpenAI作为AI领域头部公司，其高管持续流失反映内部管理动荡，影响行业信心。",
-      "importanceReasonEn": "OpenAI, as a leading AI company, its continuous executive departures reflect internal management turmoil, affecting industry confidence.",
+      "importanceReasonZh": "OpenAI作为AI领域头部公司，其高管离职和组织变动反映公司内部稳定性，对行业有风向标意义。",
+      "importanceReasonEn": "As a leading AI company, OpenAI's executive departures and organizational changes reflect internal stability and have industry significance.",
       "scoringMode": "ai",
-      "titleZh": "OpenAI再失数据中心高管，高端人才流失潮持续",
+      "titleZh": "OpenAI再失数据中心高管，高层离职潮持续",
       "titleEn": "OpenAI loses a top data center exec, as stream of high-profile departures continues",
       "summaryZh": "在Malone离职前，OpenAI已重组其基础设施部门，将其汇报线从总裁Greg Brockman改为由副总裁Sachin Katti负责该团队。",
       "summaryEn": "Before Malone left, OpenAI had already reshuffled its infrastructure org, shifting his reporting line away from President Greg Brockman and putting Vice President Sachin Katti in charge of the group.",
-      "keywords": [
+      "keywords": [],
+      "topics": [
         "OpenAI",
         "高管离职",
         "数据中心",
-        "基础设施",
-        "人才流失"
-      ],
-      "topics": [
-        "OpenAI",
-        "人才流失",
-        "数据中心",
-        "高管离职"
+        "组织架构"
       ],
       "models": [],
-      "detailZh": "据TechCrunch报道，OpenAI又失去了一位负责数据中心的高管，这是该公司一系列高调离职事件中的最新一例。在Malone离开之前，OpenAI已经对其基础设施部门进行了重组，将其汇报线从总裁Greg Brockman改为由副总裁Sachin Katti负责该团队。这一变动可能反映了公司内部权力结构的调整。目前，OpenAI尚未对此事发表官方评论。此次离职正值OpenAI面临激烈竞争和内部挑战之际，人才流失可能对其长期发展产生影响。",
+      "detailZh": "据TechCrunch报道，OpenAI又失去了一位数据中心高管，这是该公司一系列高调离职事件中的最新一例。在Malone离开之前，OpenAI已经对其基础设施部门进行了重组，将其汇报线从总裁Greg Brockman改为由副总裁Sachin Katti负责该团队。这一变动表明OpenAI正在调整其基础设施领导层，以应对不断增长的计算需求。Malone的离职具体原因尚未披露，但可能与管理层变动有关。OpenAI近年来经历了多次高管离职，包括首席技术官、首席科学家等，这引发了外界对其领导层稳定性的担忧。尽管如此，OpenAI仍在继续推进其AI模型和基础设施的扩展计划。",
       "keyPointsZh": [
-        "OpenAI又一位数据中心高管离职。",
-        "离职前，基础设施部门已重组，汇报线从Greg Brockman改为Sachin Katti。",
-        "这是OpenAI一系列高调离职事件的最新一例。"
+        "OpenAI又一位数据中心高管离职，具体身份未披露。",
+        "离职前，OpenAI已重组基础设施部门，汇报线从Greg Brockman改为Sachin Katti。",
+        "这是OpenAI一系列高调离职事件的最新一例。",
+        "离职原因未公开，可能与组织调整有关。"
       ],
-      "impactZh": "OpenAI作为AI行业领导者，其高管持续流失可能影响公司战略稳定性和项目执行力，进而影响AI行业的人才流动格局。",
-      "readerImpactZh": "对于普通用户，OpenAI的内部变动可能间接影响其产品迭代速度和服务稳定性，但短期内影响有限。",
-      "userImpactZh": "对于AI开发者和企业用户，OpenAI的人才流失可能导致其基础设施和产品路线图的不确定性，建议关注其后续动态。",
+      "impactZh": "该事件可能影响OpenAI内部士气和外部对其管理稳定性的看法，但短期内不太可能直接影响普通用户。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于依赖OpenAI API的开发者或企业，高管变动可能带来战略调整的不确定性，但短期内服务应保持稳定。",
       "howItWorksZh": "",
-      "interpretationZh": "报道指出，Malone离职前，OpenAI已重组基础设施部门，将其汇报线从总裁Greg Brockman改为副总裁Sachin Katti。这暗示公司内部可能正在进行权力调整。但报道未提供离职原因，也未提及具体影响，因此需谨慎解读。",
-      "limitationsZh": "报道未提供离职原因、具体影响及公司官方回应，信息有限。",
+      "interpretationZh": "报道确认了高管离职和组织重组的事实，但未提供离职原因或更多细节。合理推测是OpenAI正在加强基础设施团队的管理，以应对算力需求，但具体影响尚不明确。",
+      "limitationsZh": "报道未披露离职高管的具体姓名、离职原因及后续影响，信息有限。",
       "actionStepsZh": [],
-      "detailCompleteness": "summary",
+      "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
       "reportCount": 1,
@@ -217,7 +1352,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T00:06:20.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -228,26 +1363,32 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T00:53:25.392Z",
-            "label": "8/26 08:53",
-            "value": 26,
+            "at": "2026-08-26T00:57:04.789Z",
+            "label": "8/26 08:57",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:40:30.784Z",
-            "label": "8/26 09:40",
-            "value": 39,
+            "at": "2026-08-26T01:47:49.578Z",
+            "label": "8/26 09:47",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:27:36.176Z",
-            "label": "8/26 10:27",
-            "value": 51,
+            "at": "2026-08-26T02:38:34.367Z",
+            "label": "8/26 10:38",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T03:29:19.156Z",
+            "label": "8/26 11:29",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -392,7 +1533,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T22:59:30.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -403,32 +1544,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T23:50:32.313Z",
-            "label": "8/26 07:50",
-            "value": 23,
+            "at": "2026-08-25T23:52:55.657Z",
+            "label": "8/26 07:52",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:41:34.627Z",
-            "label": "8/26 08:41",
-            "value": 33,
+            "at": "2026-08-26T00:46:21.315Z",
+            "label": "8/26 08:46",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:32:36.941Z",
-            "label": "8/26 09:32",
-            "value": 42,
+            "at": "2026-08-26T01:39:46.973Z",
+            "label": "8/26 09:39",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:23:39.255Z",
-            "label": "8/26 10:23",
-            "value": 52,
+            "at": "2026-08-26T02:33:12.630Z",
+            "label": "8/26 10:33",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T03:26:38.288Z",
+            "label": "8/26 11:26",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 61,
             "reports": 1
           }
@@ -568,7 +1715,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T21:35:11.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -579,38 +1726,44 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T22:31:46.094Z",
-            "label": "8/26 06:31",
-            "value": 22,
+            "at": "2026-08-25T22:33:01.420Z",
+            "label": "8/26 06:33",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:28:21.189Z",
-            "label": "8/26 07:28",
-            "value": 31,
+            "at": "2026-08-25T23:30:51.841Z",
+            "label": "8/26 07:30",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:24:56.284Z",
-            "label": "8/26 08:24",
-            "value": 39,
+            "at": "2026-08-26T00:28:42.262Z",
+            "label": "8/26 08:28",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:21:31.379Z",
-            "label": "8/26 09:21",
-            "value": 47,
+            "at": "2026-08-26T01:26:32.683Z",
+            "label": "8/26 09:26",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:18:06.474Z",
-            "label": "8/26 10:18",
-            "value": 55,
+            "at": "2026-08-26T02:24:23.104Z",
+            "label": "8/26 10:24",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T03:22:13.525Z",
+            "label": "8/26 11:22",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -730,7 +1883,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T21:12:53.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -741,44 +1894,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T22:04:34.224Z",
-            "label": "8/26 06:04",
-            "value": 21,
+            "at": "2026-08-25T22:06:16.868Z",
+            "label": "8/26 06:06",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:56:15.448Z",
-            "label": "8/26 06:56",
-            "value": 28,
+            "at": "2026-08-25T22:59:40.736Z",
+            "label": "8/26 06:59",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:47:56.672Z",
-            "label": "8/26 07:47",
-            "value": 35,
+            "at": "2026-08-25T23:53:04.604Z",
+            "label": "8/26 07:53",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:39:37.896Z",
-            "label": "8/26 08:39",
-            "value": 42,
+            "at": "2026-08-26T00:46:28.473Z",
+            "label": "8/26 08:46",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:31:19.120Z",
-            "label": "8/26 09:31",
-            "value": 50,
+            "at": "2026-08-26T01:39:52.341Z",
+            "label": "8/26 09:39",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:23:00.344Z",
-            "label": "8/26 10:23",
+            "at": "2026-08-26T02:33:16.209Z",
+            "label": "8/26 10:33",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T03:26:40.077Z",
+            "label": "8/26 11:26",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -870,7 +2029,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T19:03:47.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -881,56 +2040,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T19:58:19.729Z",
-            "label": "8/26 03:58",
-            "value": 20,
+            "at": "2026-08-25T19:59:24.694Z",
+            "label": "8/26 03:59",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:52:52.459Z",
-            "label": "8/26 04:52",
-            "value": 25,
+            "at": "2026-08-25T20:55:02.389Z",
+            "label": "8/26 04:55",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:47:25.189Z",
-            "label": "8/26 05:47",
-            "value": 31,
+            "at": "2026-08-25T21:50:40.083Z",
+            "label": "8/26 05:50",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:41:57.919Z",
-            "label": "8/26 06:41",
-            "value": 36,
+            "at": "2026-08-25T22:46:17.778Z",
+            "label": "8/26 06:46",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:36:30.649Z",
-            "label": "8/26 07:36",
-            "value": 42,
+            "at": "2026-08-25T23:41:55.473Z",
+            "label": "8/26 07:41",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:31:03.379Z",
-            "label": "8/26 08:31",
-            "value": 47,
+            "at": "2026-08-26T00:37:33.167Z",
+            "label": "8/26 08:37",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:25:36.109Z",
-            "label": "8/26 09:25",
-            "value": 53,
+            "at": "2026-08-26T01:33:10.862Z",
+            "label": "8/26 09:33",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:20:08.839Z",
-            "label": "8/26 10:20",
-            "value": 58,
+            "at": "2026-08-26T02:28:48.556Z",
+            "label": "8/26 10:28",
+            "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T03:24:26.251Z",
+            "label": "8/26 11:24",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -1050,7 +2215,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T18:54:56.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1061,56 +2226,62 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T19:50:27.729Z",
-            "label": "8/26 03:50",
-            "value": 20,
+            "at": "2026-08-25T19:51:26.794Z",
+            "label": "8/26 03:51",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:45:59.459Z",
-            "label": "8/26 04:45",
-            "value": 25,
+            "at": "2026-08-25T20:47:57.589Z",
+            "label": "8/26 04:47",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:41:31.189Z",
-            "label": "8/26 05:41",
-            "value": 31,
+            "at": "2026-08-25T21:44:28.383Z",
+            "label": "8/26 05:44",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:37:02.919Z",
-            "label": "8/26 06:37",
-            "value": 36,
+            "at": "2026-08-25T22:40:59.178Z",
+            "label": "8/26 06:40",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:32:34.649Z",
-            "label": "8/26 07:32",
-            "value": 42,
+            "at": "2026-08-25T23:37:29.973Z",
+            "label": "8/26 07:37",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:28:06.379Z",
-            "label": "8/26 08:28",
-            "value": 47,
+            "at": "2026-08-26T00:34:00.767Z",
+            "label": "8/26 08:34",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:23:38.109Z",
-            "label": "8/26 09:23",
-            "value": 53,
+            "at": "2026-08-26T01:30:31.562Z",
+            "label": "8/26 09:30",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:19:09.839Z",
-            "label": "8/26 10:19",
-            "value": 58,
+            "at": "2026-08-26T02:27:02.356Z",
+            "label": "8/26 10:27",
+            "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T03:23:33.151Z",
+            "label": "8/26 11:23",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -1227,7 +2398,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T18:16:02.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1238,56 +2409,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T19:15:53.063Z",
-            "label": "8/26 03:15",
-            "value": 20,
+            "at": "2026-08-25T19:10:56.722Z",
+            "label": "8/26 03:10",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:15:44.126Z",
-            "label": "8/26 04:15",
-            "value": 25,
+            "at": "2026-08-25T20:05:51.444Z",
+            "label": "8/26 04:05",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:15:35.189Z",
-            "label": "8/26 05:15",
-            "value": 31,
+            "at": "2026-08-25T21:00:46.167Z",
+            "label": "8/26 05:00",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:15:26.252Z",
-            "label": "8/26 06:15",
-            "value": 36,
+            "at": "2026-08-25T21:55:40.889Z",
+            "label": "8/26 05:55",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:15:17.316Z",
-            "label": "8/26 07:15",
-            "value": 42,
+            "at": "2026-08-25T22:50:35.611Z",
+            "label": "8/26 06:50",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:15:08.379Z",
-            "label": "8/26 08:15",
-            "value": 47,
+            "at": "2026-08-25T23:45:30.334Z",
+            "label": "8/26 07:45",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:14:59.442Z",
-            "label": "8/26 09:14",
-            "value": 53,
+            "at": "2026-08-26T00:40:25.056Z",
+            "label": "8/26 08:40",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:14:50.505Z",
-            "label": "8/26 10:14",
-            "value": 58,
+            "at": "2026-08-26T01:35:19.778Z",
+            "label": "8/26 09:35",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T02:30:14.501Z",
+            "label": "8/26 10:30",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T03:25:09.223Z",
+            "label": "8/26 11:25",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -1395,7 +2578,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T18:02:04.743Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1406,62 +2589,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T18:57:20.425Z",
-            "label": "8/26 02:57",
+            "at": "2026-08-25T18:58:15.579Z",
+            "label": "8/26 02:58",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T19:52:36.108Z",
-            "label": "8/26 03:52",
-            "value": 24,
+            "at": "2026-08-25T19:54:26.416Z",
+            "label": "8/26 03:54",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:47:51.790Z",
-            "label": "8/26 04:47",
-            "value": 29,
+            "at": "2026-08-25T20:50:37.252Z",
+            "label": "8/26 04:50",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:43:07.473Z",
-            "label": "8/26 05:43",
-            "value": 34,
+            "at": "2026-08-25T21:46:48.089Z",
+            "label": "8/26 05:46",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:38:23.156Z",
-            "label": "8/26 06:38",
-            "value": 39,
+            "at": "2026-08-25T22:42:58.926Z",
+            "label": "8/26 06:42",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:33:38.838Z",
-            "label": "8/26 07:33",
-            "value": 44,
+            "at": "2026-08-25T23:39:09.762Z",
+            "label": "8/26 07:39",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:28:54.521Z",
-            "label": "8/26 08:28",
-            "value": 49,
+            "at": "2026-08-26T00:35:20.599Z",
+            "label": "8/26 08:35",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:24:10.203Z",
-            "label": "8/26 09:24",
-            "value": 54,
+            "at": "2026-08-26T01:31:31.436Z",
+            "label": "8/26 09:31",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:19:25.886Z",
-            "label": "8/26 10:19",
+            "at": "2026-08-26T02:27:42.272Z",
+            "label": "8/26 10:27",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T03:23:53.109Z",
+            "label": "8/26 11:23",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -1582,7 +2771,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T18:00:50.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -1593,62 +2782,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T18:56:13.156Z",
-            "label": "8/26 02:56",
+            "at": "2026-08-25T18:57:07.631Z",
+            "label": "8/26 02:57",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T19:51:36.313Z",
-            "label": "8/26 03:51",
+            "at": "2026-08-25T19:53:25.262Z",
+            "label": "8/26 03:53",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:46:59.470Z",
-            "label": "8/26 04:46",
-            "value": 30,
+            "at": "2026-08-25T20:49:42.894Z",
+            "label": "8/26 04:49",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:42:22.627Z",
-            "label": "8/26 05:42",
-            "value": 35,
+            "at": "2026-08-25T21:46:00.525Z",
+            "label": "8/26 05:46",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:37:45.784Z",
-            "label": "8/26 06:37",
-            "value": 40,
+            "at": "2026-08-25T22:42:18.157Z",
+            "label": "8/26 06:42",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:33:08.941Z",
-            "label": "8/26 07:33",
-            "value": 45,
+            "at": "2026-08-25T23:38:35.788Z",
+            "label": "8/26 07:38",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:28:32.098Z",
-            "label": "8/26 08:28",
-            "value": 51,
+            "at": "2026-08-26T00:34:53.420Z",
+            "label": "8/26 08:34",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:23:55.255Z",
-            "label": "8/26 09:23",
-            "value": 56,
+            "at": "2026-08-26T01:31:11.051Z",
+            "label": "8/26 09:31",
+            "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:19:18.412Z",
-            "label": "8/26 10:19",
-            "value": 61,
+            "at": "2026-08-26T02:27:28.683Z",
+            "label": "8/26 10:27",
+            "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T03:23:46.314Z",
+            "label": "8/26 11:23",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 66,
             "reports": 1
           }
@@ -1748,7 +2943,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T17:50:33.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1759,62 +2954,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T18:46:57.856Z",
-            "label": "8/26 02:46",
+            "at": "2026-08-25T18:47:46.722Z",
+            "label": "8/26 02:47",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T19:43:22.713Z",
-            "label": "8/26 03:43",
-            "value": 24,
+            "at": "2026-08-25T19:45:00.444Z",
+            "label": "8/26 03:45",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:39:47.570Z",
-            "label": "8/26 04:39",
-            "value": 29,
+            "at": "2026-08-25T20:42:14.167Z",
+            "label": "8/26 04:42",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:36:12.427Z",
-            "label": "8/26 05:36",
-            "value": 34,
+            "at": "2026-08-25T21:39:27.889Z",
+            "label": "8/26 05:39",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:32:37.284Z",
-            "label": "8/26 06:32",
-            "value": 39,
+            "at": "2026-08-25T22:36:41.611Z",
+            "label": "8/26 06:36",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:29:02.141Z",
-            "label": "8/26 07:29",
-            "value": 44,
+            "at": "2026-08-25T23:33:55.334Z",
+            "label": "8/26 07:33",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:25:26.998Z",
-            "label": "8/26 08:25",
-            "value": 49,
+            "at": "2026-08-26T00:31:09.056Z",
+            "label": "8/26 08:31",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:21:51.855Z",
-            "label": "8/26 09:21",
-            "value": 54,
+            "at": "2026-08-26T01:28:22.778Z",
+            "label": "8/26 09:28",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:18:16.712Z",
-            "label": "8/26 10:18",
+            "at": "2026-08-26T02:25:36.501Z",
+            "label": "8/26 10:25",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T03:22:50.223Z",
+            "label": "8/26 11:22",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -1937,7 +3138,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T16:21:09.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1948,68 +3149,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T17:20:33.779Z",
-            "label": "8/26 01:20",
+            "at": "2026-08-25T17:26:30.358Z",
+            "label": "8/26 01:26",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T18:19:58.558Z",
-            "label": "8/26 02:19",
+            "at": "2026-08-25T18:31:51.717Z",
+            "label": "8/26 02:31",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T19:19:23.337Z",
-            "label": "8/26 03:19",
+            "at": "2026-08-25T19:37:13.076Z",
+            "label": "8/26 03:37",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:18:48.116Z",
-            "label": "8/26 04:18",
+            "at": "2026-08-25T20:42:34.434Z",
+            "label": "8/26 04:42",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:18:12.895Z",
-            "label": "8/26 05:18",
+            "at": "2026-08-25T21:47:55.793Z",
+            "label": "8/26 05:47",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:17:37.674Z",
-            "label": "8/26 06:17",
+            "at": "2026-08-25T22:53:17.152Z",
+            "label": "8/26 06:53",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:17:02.453Z",
-            "label": "8/26 07:17",
+            "at": "2026-08-25T23:58:38.511Z",
+            "label": "8/26 07:58",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:16:27.232Z",
-            "label": "8/26 08:16",
+            "at": "2026-08-26T01:03:59.869Z",
+            "label": "8/26 09:03",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:15:52.011Z",
-            "label": "8/26 09:15",
+            "at": "2026-08-26T02:09:21.228Z",
+            "label": "8/26 10:09",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:15:16.790Z",
-            "label": "8/26 10:15",
+            "at": "2026-08-26T03:14:42.587Z",
+            "label": "8/26 11:14",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 64,
             "reports": 1
           }
@@ -2115,7 +3316,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T16:00:00.000Z",
-        "endedAt": "2026-08-26T03:14:41.569Z",
+        "endedAt": "2026-08-26T04:20:03.946Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -2126,68 +3327,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T17:01:20.142Z",
-            "label": "8/26 01:01",
+            "at": "2026-08-25T17:07:16.722Z",
+            "label": "8/26 01:07",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-25T18:02:40.285Z",
-            "label": "8/26 02:02",
+            "at": "2026-08-25T18:14:33.444Z",
+            "label": "8/26 02:14",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-25T19:04:00.427Z",
-            "label": "8/26 03:04",
+            "at": "2026-08-25T19:21:50.167Z",
+            "label": "8/26 03:21",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:05:20.570Z",
-            "label": "8/26 04:05",
+            "at": "2026-08-25T20:29:06.889Z",
+            "label": "8/26 04:29",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:06:40.713Z",
-            "label": "8/26 05:06",
+            "at": "2026-08-25T21:36:23.611Z",
+            "label": "8/26 05:36",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:08:00.855Z",
-            "label": "8/26 06:08",
+            "at": "2026-08-25T22:43:40.334Z",
+            "label": "8/26 06:43",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:09:20.998Z",
-            "label": "8/26 07:09",
+            "at": "2026-08-25T23:50:57.056Z",
+            "label": "8/26 07:50",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:10:41.141Z",
-            "label": "8/26 08:10",
+            "at": "2026-08-26T00:58:13.778Z",
+            "label": "8/26 08:58",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:12:01.283Z",
-            "label": "8/26 09:12",
+            "at": "2026-08-26T02:05:30.501Z",
+            "label": "8/26 10:05",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:13:21.426Z",
-            "label": "8/26 10:13",
+            "at": "2026-08-26T03:12:47.223Z",
+            "label": "8/26 11:12",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:14:41.569Z",
-            "label": "8/26 11:14",
+            "at": "2026-08-26T04:20:03.946Z",
+            "label": "8/26 12:20",
             "value": 58,
             "reports": 1
           }
