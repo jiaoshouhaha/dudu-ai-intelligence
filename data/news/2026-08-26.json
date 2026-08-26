@@ -1,7 +1,293 @@
 {
-  "generatedAt": "2026-08-26T05:08:37.218Z",
+  "generatedAt": "2026-08-26T06:03:42.877Z",
   "date": "2026-08-26",
   "items": [
+    {
+      "id": "fa2f004f22f59c03",
+      "normalizedUrl": "https://arxiv.org/abs/2608.23631",
+      "originalUrl": "https://arxiv.org/abs/2608.23631",
+      "titleOriginal": "TRACE: Transition-Aware Residual Control for Multi-Objective Materials Discovery",
+      "summaryOriginal": "arXiv:2608.23631v1 Announce Type: new Abstract: Multi-objective materials discovery with LLM agents is often limited not only by how many candidates can be proposed, but by how effectively each costly property evaluation informs the next search step. Existing agents mainly store evaluated candidates and their scores, so they know which materials succeeded but not which executable edits caused useful property changes. This makes local refinement difficult when objectives compete and an edit that improves one property may damage another. We propose TRACE, a transition-aware residual control framework that treats evaluated edits as the basic unit of feedback. TRACE records each local refinement as a parent-edit-child transition with observed property deltas, aggregates transition evidence to estimate reusable edit effects, and ranks future edits by their predicted ability to reduce the current candidate's remaining constraint violations while avoiding damage to already satisfied objectives. In a controlled same-backbone comparison, TRACE improves over LLEMA, the state-of-the-art LLM-agent baseline, raising macro-average hit rate from 18.13\\% to 25.96\\%.",
+      "originalLanguage": "en",
+      "author": "Kang Zhou, Yujia Tong, Yong Tao, Jingling Yuan",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.23631",
+          "publishedAt": "2026-08-26T04:00:00.000Z",
+          "title": "TRACE: Transition-Aware Residual Control for Multi-Objective Materials Discovery",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究针对LLM智能体在多目标材料发现中的关键瓶颈，提出新颖的转换感知框架，并在同骨干对比中显著提升命中率，具有实际应用价值。",
+      "importanceReasonEn": "The research addresses a key bottleneck in LLM agents for multi-objective materials discovery, proposes a novel transition-aware framework, and shows significant hit rate improvement in a controlled same-backbone comparison, offering practical value.",
+      "scoringMode": "ai",
+      "titleZh": "TRACE：面向多目标材料发现的转换感知残差控制框架",
+      "titleEn": "TRACE: Transition-Aware Residual Control for Multi-Objective Materials Discovery",
+      "summaryZh": "多目标材料发现中，LLM智能体不仅受限于候选生成数量，更受限于每次昂贵属性评估对后续搜索的指导效率。现有智能体仅存储评估候选及其分数，知道哪些材料成功，但不知道哪些可执行编辑导致了有用的属性变化，导致目标冲突时局部优化困难。本文提出TRACE框架，将评估过的编辑作为基本反馈单元，记录父编辑-子编辑转换及属性变化，聚合转换证据估计可复用编辑效果，并排序未来编辑以预测其减少当前候选剩余约束违规并避免损害已满足目标的能力。在相同骨干网络对比中，TRACE相比最先进的LLM智能体基线LLEMA，宏平均命中率从18.13%提升至25.96%。",
+      "summaryEn": "Multi-objective materials discovery with LLM agents is often limited not only by how many candidates can be proposed, but by how effectively each costly property evaluation informs the next search step. Existing agents mainly store evaluated candidates and their scores, so they know which materials succeeded but not which executable edits caused useful property changes. This makes local refinement difficult when objectives compete and an edit that improves one property may damage another. We propose TRACE, a transition-aware residual control framework that treats evaluated edits as the basic unit of feedback. TRACE records each local refinement as a parent-edit-child transition with observed property deltas, aggregates transition evidence to estimate reusable edit effects, and ranks future",
+      "keywords": [
+        "TRACE",
+        "multi-objective materials discovery",
+        "LLM agents",
+        "transition-aware",
+        "residual control",
+        "hit rate"
+      ],
+      "topics": [
+        "LLM agents",
+        "materials discovery",
+        "multi-objective optimization",
+        "transition-aware learning"
+      ],
+      "models": [
+        "LLEMA"
+      ],
+      "detailZh": "多目标材料发现中，LLM智能体需要提出候选材料并评估其多个属性（如稳定性、导电性等），但每次评估成本高昂。现有方法（如LLEMA）将评估过的候选及其分数存入记忆，但忽略了候选之间的编辑关系，导致智能体知道哪些材料成功，却不知道哪些具体修改导致了属性改善。当目标冲突时，一个修改可能改善一个属性却损害另一个，使得局部优化困难。\n\nTRACE框架将评估过的编辑作为基本反馈单元，记录每次局部优化为父编辑-子编辑转换，并附带观察到的属性变化（delta）。通过聚合这些转换证据，TRACE估计可复用的编辑效果，并据此排序未来编辑，优先选择能减少当前候选剩余约束违规且不损害已满足目标的编辑。\n\n在受控的同骨干网络对比实验中，TRACE在宏平均命中率上从LLEMA的18.13%提升至25.96%，表明转换感知的反馈能更有效地指导搜索。该框架不依赖额外领域知识，可泛化到其他多目标优化任务。",
+      "keyPointsZh": [
+        "TRACE将评估过的编辑作为反馈单元，记录父编辑-子编辑转换及属性变化。",
+        "通过聚合转换证据估计可复用编辑效果，并排序未来编辑。",
+        "在相同骨干网络下，TRACE的宏平均命中率从18.13%提升至25.96%。",
+        "框架不依赖额外领域知识，可泛化到其他多目标优化任务。"
+      ],
+      "impactZh": "该研究为LLM智能体在多目标优化任务中的反馈机制提供了新思路，有望提升材料发现等领域的搜索效率，减少昂贵评估次数。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用LLM智能体进行材料设计或类似多目标优化的研究人员，TRACE提供了一种改进反馈利用的方法，可能提高搜索效率并降低成本。",
+      "howItWorksZh": "TRACE的工作流程包括：1) 记录每次编辑操作及其父编辑，形成转换图；2) 计算每个转换的属性变化（delta）；3) 聚合相似转换的证据，估计编辑效果；4) 根据当前候选的剩余约束违规和已满足目标，对候选编辑进行排序；5) 选择最优编辑执行。具体实现细节需参考论文。",
+      "interpretationZh": "根据摘要，TRACE通过利用编辑转换信息显著提升了命中率，这暗示了转换感知反馈的有效性。但摘要未提供实验细节，如数据集、评估协议等，因此需谨慎解读。",
+      "limitationsZh": "摘要未提供实验细节，如数据集、评估协议、基线设置等，因此无法验证结果的稳健性。此外，TRACE的泛化能力尚未在多种任务上验证。",
+      "actionStepsZh": [
+        "阅读论文全文以获取实验细节和实现代码。",
+        "在类似的多目标优化任务中尝试应用TRACE框架。",
+        "关注后续工作对TRACE的扩展和验证。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "TRACE相比LLEMA宏平均命中率提升7.83个百分点。",
+        "data": [
+          {
+            "label": "LLEMA宏平均命中率",
+            "value": 18.13,
+            "display": ""
+          },
+          {
+            "label": "TRACE宏平均命中率",
+            "value": 25.96,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.23631",
+          "publishedAt": "2026-08-26T04:00:00.000Z",
+          "title": "TRACE: Transition-Aware Residual Control for Multi-Objective Materials Discovery",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "af56b2ee53845e43",
+      "normalizedUrl": "https://arxiv.org/abs/2608.23632",
+      "originalUrl": "https://arxiv.org/abs/2608.23632",
+      "titleOriginal": "Function-Level Execution Feedback for Code Preference Optimization",
+      "summaryOriginal": "arXiv:2608.23632v1 Announce Type: new Abstract: Process supervision has improved mathematical reasoning, where intermediate steps are naturally expressed as chains of thought. In code generation, however, process supervision remains underexplored because there is no standard notion of a step. Supervision can target lines, reasoning traces, or program states, making it unclear what to label and optimize. We propose STEP-KTODER, a framework for code preference optimization that defines steps as module-level functions in decomposed multi-function programs and assigns binary correctness labels via automatically generated unit tests. Our method provides a code-specific instantiation of stepwise KTO, combining function-level process supervision with outcome-level feedback on the full program. We evaluate on HumanEval(+), MBPP(+), BigCodeBench, and LiveCodeBench, showing that STEP-KTODER improves over outcome-only KTO and DPO. Further analysis shows that execution-based labels are essential: LLM-as-a-judge annotations systematically over-predict function failures, corrupt positive step labels, and degrade downstream preference optimization. Code is available at: https://github.com/inechne",
+      "originalLanguage": "en",
+      "author": "Idris Nechnech, Sehwan Kim, Jimin Seo, Yeongoon Kim, Minhae Oh, Sangwoo Hong, Jungwoo Lee",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/inechnech/STEP-KTODER"
+      ],
+      "publishedAt": "2026-08-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.23632",
+          "publishedAt": "2026-08-26T04:00:00.000Z",
+          "title": "Function-Level Execution Feedback for Code Preference Optimization",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/inechnech/STEP-KTODER"
+          ]
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究提出了一种新颖的代码偏好优化方法，通过函数级执行反馈改进代码生成模型，并在多个基准上验证了有效性，对代码生成领域有实际意义。",
+      "importanceReasonEn": "This research proposes a novel code preference optimization method that improves code generation models via function-level execution feedback, validated on multiple benchmarks, with practical significance for the code generation field.",
+      "scoringMode": "ai",
+      "titleZh": "面向代码偏好优化的函数级执行反馈",
+      "titleEn": "Function-Level Execution Feedback for Code Preference Optimization",
+      "summaryZh": "arXiv:2608.23632v1 公告类型：新论文。摘要：过程监督已提升了数学推理能力，其中中间步骤自然表示为思维链。然而在代码生成中，过程监督仍未充分探索，因为缺乏标准的步骤定义。监督可以针对代码行、推理轨迹或程序状态，导致难以确定标注和优化的目标。我们提出 STEP-KTODER 框架，用于代码偏好优化，将步骤定义为分解后的多函数程序中的模块级函数，并通过自动生成的单元测试分配二元正确性标签。我们的方法提供了逐步 KTO 的代码特定实例，将函数级过程监督与整个程序的结果级反馈相结合。我们在 HumanEval(+)、MBPP(+)、BigCodeBench 和 LiveCodeBench 上进行了评估，表明 STEP-KTODER 优于仅结果级 KTO 和 DPO。进一步分析表明，基于执行的标签至关重要：LLM 作为评判者的标注系统性地过度预测函数失败，破坏正向步骤标签，并降低下游偏好优化的性能。代码可在 https://github.com/inechne 获取。",
+      "summaryEn": "arXiv:2608.23632v1 Announce Type: new Abstract: Process supervision has improved mathematical reasoning, where intermediate steps are naturally expressed as chains of thought. In code generation, however, process supervision remains underexplored because there is no standard notion of a step. Supervision can target lines, reasoning traces, or program states, making it unclear what to label and optimize. We propose STEP-KTODER, a framework for code preference optimization that defines steps as module-level functions in decomposed multi-function programs and assigns binary correctness labels via automatically generated unit tests. Our method provides a code-specific instantiation of stepwise KTO, combining function-level process supervision with outcome-level feedback on the full program. We",
+      "keywords": [
+        "代码偏好优化",
+        "过程监督",
+        "函数级执行反馈",
+        "KTO",
+        "DPO",
+        "单元测试"
+      ],
+      "topics": [
+        "代码生成",
+        "偏好优化",
+        "过程监督",
+        "函数级反馈"
+      ],
+      "models": [
+        "STEP-KTODER"
+      ],
+      "detailZh": "该论文针对代码生成中的过程监督问题，提出了一种名为 STEP-KTODER 的框架。在数学推理中，过程监督通过中间步骤的反馈提升了模型性能，但在代码生成中，由于缺乏标准的步骤定义，过程监督难以应用。论文将步骤定义为分解后的多函数程序中的模块级函数，并通过自动生成的单元测试为每个函数分配二元正确性标签，从而提供函数级的过程监督。同时，该方法结合了结果级反馈，即整个程序的最终正确性，形成逐步 KTO 的实例化。实验在 HumanEval(+)、MBPP(+)、BigCodeBench 和 LiveCodeBench 等基准上进行，结果显示 STEP-KTODER 优于仅使用结果级反馈的 KTO 和 DPO。进一步分析表明，基于执行的标签至关重要，而使用 LLM 作为评判者进行标注会系统性地过度预测函数失败，破坏正向步骤标签，并降低下游偏好优化的性能。代码已开源。",
+      "keyPointsZh": [
+        "提出 STEP-KTODER 框架，将代码生成中的步骤定义为模块级函数，并通过单元测试提供执行反馈。",
+        "结合函数级过程监督和结果级反馈，实现逐步 KTO 优化。",
+        "在多个代码生成基准上优于仅结果级 KTO 和 DPO。",
+        "发现 LLM 作为评判者的标注会过度预测函数失败，损害偏好优化效果。"
+      ],
+      "impactZh": "该研究为代码生成中的过程监督提供了新的思路，通过函数级执行反馈提升了模型性能，并揭示了 LLM 评判在代码标注中的局限性，对代码生成模型的训练和评估有重要影响。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用代码生成模型的开发者，该方法可能提升模型生成代码的正确性，但当前仍处于研究阶段，尚未直接提供可用的工具或模型。",
+      "howItWorksZh": "STEP-KTODER 的工作流程包括：首先将程序分解为多个函数，每个函数视为一个步骤；然后为每个函数自动生成单元测试，通过执行测试判断函数是否正确，从而获得二元标签；接着使用这些函数级标签和整个程序的结果级反馈，结合逐步 KTO 算法进行偏好优化。具体实现细节需参考论文和开源代码。",
+      "interpretationZh": "论文报告了 STEP-KTODER 在多个基准上的改进，并强调了执行反馈的重要性。然而，论文未提供详细的实验设置和消融研究，且未与其他过程监督方法进行对比，因此其优势仍需进一步验证。",
+      "limitationsZh": "论文未提供详细的实验设置和超参数，也未与其他过程监督方法进行对比。此外，LLM 评判的负面结果可能受具体提示和模型影响，需谨慎推广。",
+      "actionStepsZh": [
+        "阅读论文全文和开源代码以了解具体实现。",
+        "在代码生成任务中尝试使用函数级执行反馈替代 LLM 评判。",
+        "关注后续工作，看是否有更全面的基准测试。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2608.23632",
+          "publishedAt": "2026-08-26T04:00:00.000Z",
+          "title": "Function-Level Execution Feedback for Code Preference Optimization",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/inechnech/STEP-KTODER"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-08-26T04:00:00.000Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-08-26T04:00:00.000Z",
+            "label": "8/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "fd16a058ee8e16ad",
       "normalizedUrl": "https://arxiv.org/abs/2608.23622",
@@ -38,12 +324,12 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该研究提出了一种将LLM智能体与高保真仿真模型结合进行受控实验的新框架，在制药工艺设计等工业场景中具有实际应用价值，且论文提供了具体方法和初步结果，属于有实质贡献的研究。",
-      "importanceReasonEn": "This research proposes a novel framework combining LLM agents with high-fidelity simulation models for controlled experiments, with practical value in industrial scenarios like pharmaceutical process design. The paper provides concrete methods and preliminary results, representing a substantive cont",
+      "importanceReasonZh": "该研究提出了一种将LLM智能体与高保真仿真模型耦合进行受控实验的新框架，在制药工艺设计等工业场景中具有实际应用价值，且论文提供了具体方法和初步结果，属于有实用价值的研究。",
+      "importanceReasonEn": "This research proposes a novel framework coupling LLM agents with high-fidelity simulation models for controlled experiments, with practical value in industrial scenarios like pharmaceutical process design. The paper provides concrete methods and preliminary results, making it a useful research cont",
       "scoringMode": "ai",
       "titleZh": "LLM智能体利用仿真模型进行受控实验",
       "titleEn": "LLM Agents Perform Controlled Experiments Using Simulation Models",
-      "summaryZh": "arXiv:2608.23622v1 公告类型：新论文。摘要：大型语言模型（LLM）在推理、规划和工具使用方面表现出强大能力，但许多科学和工程任务不仅需要合理的文本和代码生成，还需要理解系统对干预的响应，这依赖于受控实验。在这项工作中，我们提出了一个多智能体框架，使LLM智能体能够使用科学仿真模型进行受控实验，用于制药工艺设计。给定用户查询和基线配置，系统构建结构化任务表示，设计实验，执行比较仿真，解释结果，并综合基于证据的工艺参数优化建议。通过将语言模型与高保真仿真模型耦合在交互式智能体框架中，该系统支持通过干预、比较和观察进行推理，从而产生比纯语言推理更具体和可操作的输出。在工业应用环境中，这一优势体现在更高的输出特异性上。",
+      "summaryZh": "arXiv:2608.23622v1 公告类型：新论文。摘要：大型语言模型（LLM）在推理、规划和工具使用方面表现出强大能力，但许多科学和工程任务不仅需要合理的文本和代码生成，还需要理解系统对干预的响应，这依赖于受控实验。本文提出一个多智能体框架，使LLM智能体能够使用科学仿真模型进行受控实验，用于制药工艺设计。给定用户查询和基线配置，系统构建结构化任务表示，设计实验，执行比较仿真，解释结果，并综合基于证据的工艺参数优化建议。通过将语言模型与高保真仿真模型耦合在交互式智能体框架中，该系统支持通过干预、比较和观察进行推理，从而产生比纯语言推理更具体和可操作的输出。在工业应用场景中，这一优势体现在更高的输出特异性上。",
       "summaryEn": "arXiv:2608.23622v1 Announce Type: new. Abstract: Large language models (LLMs) have shown strong capabilities in reasoning, planning, and tool use, but many scientific and engineering tasks require more than plausible text and code generation. They require understanding how a system responds to intervention, which in practice depends on controlled experimentation. In this work, we propose a multi-agent framework that enables LLM agents to conduct controlled experiments with scientific simulation models for pharmaceutical process design. Given a user query and a baseline configuration, the system constructs a structured task representation, designs experiments, executes comparative simulation, interprets the resulting outcomes, and synthesizes evidence-based recommendations for process param",
       "keywords": [
         "LLM",
@@ -60,21 +346,25 @@
         "pharmaceutical process design"
       ],
       "models": [],
-      "detailZh": "该论文提出了一种多智能体框架，使LLM智能体能够利用科学仿真模型进行受控实验，应用于制药工艺设计。系统流程包括：给定用户查询和基线配置，构建结构化任务表示，设计实验，执行比较仿真，解释结果，并综合基于证据的工艺参数优化建议。通过将语言模型与高保真仿真模型耦合，系统支持通过干预、比较和观察进行推理，从而产生比纯语言推理更具体和可操作的输出。在工业应用环境中，该优势体现在更高的输出特异性上。论文还提到，该框架能够处理需要理解系统对干预响应的任务，而不仅仅是生成合理的文本和代码。",
+      "detailZh": "该论文提出了一种多智能体框架，使LLM智能体能够利用科学仿真模型进行受控实验，应用于制药工艺设计。系统流程包括：给定用户查询和基线配置，构建结构化任务表示，设计实验，执行比较仿真，解释结果，并综合基于证据的工艺参数优化建议。通过将语言模型与高保真仿真模型耦合，系统支持通过干预、比较和观察进行推理，从而产生比纯语言推理更具体和可操作的输出。在工业应用场景中，该优势体现在更高的输出特异性上。论文发表于arXiv，编号2608.23622，属于人工智能领域。",
       "keyPointsZh": [
-        "提出多智能体框架，使LLM智能体能够使用仿真模型进行受控实验。",
-        "应用于制药工艺设计，支持工艺参数优化。",
-        "系统流程包括任务表示、实验设计、比较仿真、结果解释和建议综合。",
-        "与纯语言推理相比，输出更具体和可操作。",
-        "在工业应用中表现出更高的输出特异性。"
+        "提出多智能体框架，使LLM智能体能够进行受控实验。",
+        "框架结合高保真仿真模型，用于制药工艺设计。",
+        "系统支持干预、比较和观察的推理方式。",
+        "相比纯语言推理，输出更具体和可操作。",
+        "在工业应用中体现为更高的输出特异性。"
       ],
-      "impactZh": "该研究展示了LLM智能体在科学和工程任务中超越文本生成的能力，通过结合仿真模型进行受控实验，为需要干预和优化的领域提供了新的方法论。",
+      "impactZh": "该研究展示了LLM智能体在科学和工程任务中超越文本生成的能力，通过受控实验和仿真模型提供基于证据的决策支持，有望提高制药等行业的工艺优化效率。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和研究人员，该框架提供了一种将LLM与仿真工具结合的可复现方法，可用于需要实验验证的领域，如制药、化工等。",
-      "howItWorksZh": "系统由多个智能体协作：一个智能体负责解析用户查询并构建结构化任务表示；另一个智能体设计实验方案，包括参数变化和比较设置；然后执行仿真模型进行对比；最后解释结果并生成建议。整个过程通过交互式框架将语言模型与仿真模型耦合，实现基于干预和观察的推理。",
-      "interpretationZh": "论文报告了框架的设计和初步应用结果，表明其能提高输出特异性。但摘要未提供具体实验数据或对比细节，因此应视为初步研究。合理推断是，该框架通过仿真提供了可验证的证据，减少了纯语言推理的不确定性。",
-      "limitationsZh": "摘要未提供具体实验设置、数据集或量化结果，因此无法评估其有效性和泛化性。此外，框架依赖高保真仿真模型，可能不适用于所有领域。",
-      "actionStepsZh": [],
+      "userImpactZh": "对于AI开发者和研究人员，该框架提供了一种将LLM与仿真模型结合的方法，可用于开发更可靠的决策支持系统，特别是在需要精确干预响应的领域。",
+      "howItWorksZh": "系统由多个智能体协作：任务表示智能体将用户查询和基线配置转化为结构化任务；实验设计智能体规划受控实验；仿真执行智能体运行高保真仿真模型；结果解释智能体分析仿真输出；推荐智能体综合证据生成优化建议。整个过程通过交互式框架实现，使LLM能够基于仿真结果进行推理。",
+      "interpretationZh": "论文报告了框架的提出和初步应用，表明其能提高输出特异性。但具体实验细节、对比基线和量化结果未在摘要中提供，因此尚需阅读全文以验证其有效性和适用范围。",
+      "limitationsZh": "摘要未提供详细的实验设置、基线对比和量化结果，因此无法评估其性能提升的具体幅度。此外，框架依赖高保真仿真模型，可能不适用于缺乏可靠模型的领域。",
+      "actionStepsZh": [
+        "阅读论文全文以获取详细的框架实现和实验结果。",
+        "评估该框架在自身领域（如制药、化工）的适用性。",
+        "考虑将LLM智能体与现有仿真工具集成，以增强决策支持。"
+      ],
       "detailCompleteness": "summary",
       "visual": null,
       "processingError": null,
@@ -96,7 +386,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -107,14 +397,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 39,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -157,13 +453,13 @@
           "resourceLinks": []
         }
       ],
-      "importance": 80,
-      "importanceReasonZh": "该研究揭示了天文基础模型中的一个重要系统性偏差，对科学数据分析和模型应用有直接影响，且提供了因果干预的审计方法，具有较高的科学价值。",
-      "importanceReasonEn": "This study reveals a significant systematic bias in astronomical foundation models, directly impacting scientific data analysis and model applications, and provides a causal intervention audit method with high scientific value.",
+      "importance": 75,
+      "importanceReasonZh": "该研究揭示了天文基础模型中的一个重要系统性偏差，通过因果干预证明了检测通道对模型输出的主导作用，对天文数据分析和基础模型应用有重要影响。",
+      "importanceReasonEn": "This research reveals a significant systematic bias in astronomical foundation models, demonstrating through causal interventions the dominant role of the detection channel on model outputs, with important implications for astronomical data analysis and foundation model applications.",
       "scoringMode": "ai",
-      "titleZh": "天文基础模型中的调查检测通道覆盖像素信息，并导致层析平均红移偏差",
+      "titleZh": "天文基础模型中的调查检测通道覆盖像素并导致层析平均红移偏差",
       "titleEn": "A survey detection channel overrides the pixels in an astronomical foundation model, and biases tomographic mean redshifts",
-      "summaryZh": "arXiv:2608.23626v1 公告类型：新论文。摘要：天文学基础模型在训练时使用调查像素以及从这些像素派生的星表产品。这些星表在可测量的速率下是不完整的，模型同时训练两者会继承这种不完整性作为系统性偏差。我们使用因果干预对 AION-1（一个在超过2亿个天体上训练的39模态Transformer）的输入进行审计。保持图像令牌逐字节相同，仅编辑调查分割图，模型报告的所有量——通量、大小、椭圆率、红移——都会改变110到4400倍于匹配的安慰剂。机制是检测门控，在场中心的存在（r=0.47），而不是掩模包围的光（r=0.30）；在322个真实混合体中，模型忽略了流水线如何划分光（R=-0.006）。这种偏好也不是该通道特有的：矛盾的星表测光使模型比不提供任何元数据差九倍。Legacy Survey流水线有3.68%的目标没有覆盖其位置的分割。传播该比率，用流水线实际返回的字段表示遗漏，会移动层析平均红移。",
+      "summaryZh": "arXiv:2608.23626v1 公告类型：新论文。摘要：天文学基础模型在训练时使用调查像素以及从这些像素衍生的星表产品。这些星表在可测量的速率下是不完整的，而同时使用两者训练的模型会继承这种不完整性作为系统性偏差。我们使用因果干预对AION-1（一个在超过2亿个天体上训练的39模态Transformer）的输入进行审计。保持图像令牌逐字节相同，仅编辑调查分割图，模型报告的所有量——通量、大小、椭圆率、红移——都会改变110到4400倍于匹配的安慰剂。机制是检测门控，与场中心的存在（r = 0.47）相关，而不是掩模包围的光（r = 0.30）；在322个真实混合体中，模型忽略了流水线如何划分光（R = -0.006）。这种偏好也不是该通道特有的：矛盾的星表测光使模型比不提供元数据差九倍。Legacy Survey流水线有3.68%的目标没有覆盖其位置的分割。传播该比率，用流水线实际返回的字段表示遗漏，会改变层析平均红移。",
       "summaryEn": "arXiv:2608.23626v1 Announce Type: new. Abstract: Foundation models for astronomy are trained on survey pixels together with the catalogue products derived from those pixels. Those catalogues are incomplete at a measurable rate, and a model trained on both inherits that incompleteness as a systematic. We audit AION-1, a 39-modality transformer trained on more than 200 million objects, using causal interventions on its inputs. Holding the image tokens byte-identical and editing only the survey segmentation map changes every quantity the model reports -- flux, size, ellipticity, redshift -- by 110-4400 times a matched placebo. The mechanism is detection gating, presence at the field centre (r = 0.47), not the light the mask encloses (r = 0.30); across 322 real blends the model ignores how the",
       "keywords": [
         "foundation model",
@@ -183,24 +479,24 @@
       "models": [
         "AION-1"
       ],
-      "detailZh": "该研究审计了AION-1，一个在超过2亿个天体上训练的39模态Transformer基础模型。研究者通过因果干预输入，保持图像令牌不变，仅编辑调查分割图，发现模型报告的所有量（通量、大小、椭圆率、红移）都会发生显著变化，变化幅度是匹配安慰剂的110到4400倍。这表明模型严重依赖分割图通道，而不是像素本身。机制是检测门控，即模型主要关注场中心是否存在检测（r=0.47），而不是掩模包围的光（r=0.30）。在322个真实混合体中，模型忽略了流水线如何划分光（R=-0.006）。此外，矛盾的星表测光使模型性能比不提供任何元数据差九倍。Legacy Survey流水线有3.68%的目标没有分割覆盖，传播该比率会导致层析平均红移偏差。",
+      "detailZh": "该研究审计了AION-1，一个在超过2亿个天体上训练的39模态Transformer。研究者通过因果干预，保持图像令牌不变，仅编辑调查分割图，发现模型报告的所有量（通量、大小、椭圆率、红移）都发生了显著变化，变化幅度是匹配安慰剂的110到4400倍。这表明模型对分割图的依赖远大于对图像本身的依赖。机制分析显示，这种偏好与场中心的存在（r=0.47）相关，而不是掩模包围的光（r=0.30）。在322个真实混合体中，模型忽略了流水线如何划分光（R=-0.006）。此外，矛盾的星表测光使模型比不提供元数据差九倍，表明模型对元数据的依赖并非特定于分割通道。Legacy Survey流水线有3.68%的目标没有覆盖其位置的分割，传播该比率会改变层析平均红移。",
       "keyPointsZh": [
-        "AION-1模型在输入中优先使用调查分割图，而非像素。",
-        "仅编辑分割图即可改变模型所有输出，变化幅度为110-4400倍。",
-        "检测门控机制：场中心存在检测比掩模光更重要。",
-        "矛盾的星表测光使模型性能比无元数据差九倍。",
-        "3.68%的目标缺少分割，导致层析平均红移偏差。"
+        "AION-1模型对调查分割图的依赖远大于对图像像素的依赖，改变分割图导致输出变化110-4400倍。",
+        "机制是检测门控，与场中心存在相关（r=0.47），而非掩模包围的光（r=0.30）。",
+        "在322个真实混合体中，模型忽略了流水线如何划分光（R=-0.006）。",
+        "矛盾的星表测光使模型比不提供元数据差九倍。",
+        "Legacy Survey流水线有3.68%的目标没有分割覆盖，传播该比率会改变层析平均红移。"
       ],
-      "impactZh": "该研究对天文基础模型的应用有重要影响，表明模型可能继承星表的不完整性，导致科学结果偏差。",
+      "impactZh": "该研究揭示了天文基础模型中的一个系统性偏差，可能导致基于这些模型的科学结果出现偏差，特别是在层析红移测量等关键应用中。",
       "readerImpactZh": "",
-      "userImpactZh": "对于使用天文基础模型的研究人员，需要意识到模型对分割图的依赖，并谨慎处理元数据缺失的情况。",
-      "howItWorksZh": "研究者对AION-1模型进行因果干预，保持图像令牌不变，仅修改调查分割图，观察模型输出的变化。通过对比安慰剂，量化了分割图的影响。他们分析了检测门控机制，并评估了星表不完整性的影响。",
-      "interpretationZh": "该研究表明，天文基础模型可能过度依赖辅助元数据（如分割图），而忽略像素信息，这可能导致系统性偏差。但具体机制和普遍性仍需进一步验证。",
-      "limitationsZh": "研究仅针对AION-1模型，其他模型可能表现不同。因果干预的结论基于特定数据集，可能不适用于所有情况。",
+      "userImpactZh": "对于使用天文基础模型的研究人员和开发者，该研究提醒他们注意模型对元数据的过度依赖，可能需要在训练或推理时考虑检测不完整性的影响。",
+      "howItWorksZh": "研究者对AION-1模型进行因果干预，保持图像令牌不变，仅编辑调查分割图，观察模型输出的变化。通过计算相关性（r值）和回归系数（R值）来分析机制。具体步骤包括：1) 选择样本；2) 创建匹配的安慰剂干预；3) 比较真实干预与安慰剂的效果；4) 分析机制与场中心、掩模光的关系；5) 在真实混合体上测试；6) 评估矛盾元数据的影响；7) 传播检测不完整率到层析红移。",
+      "interpretationZh": "该研究明确表明，AION-1模型在预测时严重依赖调查分割图，而不是图像本身。这可能是由于训练数据中分割图与目标属性的强相关性，导致模型学会了利用分割图作为捷径。然而，分割图的不完整性（3.68%的缺失）会导致模型输出偏差，进而影响科学结论。",
+      "limitationsZh": "该研究仅针对AION-1模型，可能不适用于其他基础模型。此外，因果干预的具体实现细节未完全公开，可能影响结果的可重复性。",
       "actionStepsZh": [
-        "在使用天文基础模型时，检查输入元数据的完整性。",
-        "考虑对模型进行因果干预审计，以识别潜在偏差。",
-        "在训练时，注意星表不完整性的影响。"
+        "在使用天文基础模型时，应检查输入元数据的完整性，并考虑缺失分割的影响。",
+        "对于关键科学应用，建议对模型输出进行不确定性量化，以反映元数据不完整性。",
+        "研究者可考虑在训练时加入对元数据缺失的鲁棒性处理。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -223,9 +519,9 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
-        "current": 69,
-        "peak": 69,
+        "endedAt": "2026-08-26T06:03:42.877Z",
+        "current": 66,
+        "peak": 66,
         "history": [
           {
             "at": "2026-08-26T04:00:00.000Z",
@@ -234,15 +530,21 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 42,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
-            "value": 69,
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
+            "value": 66,
             "reports": 1
           }
         ],
@@ -349,7 +651,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -360,14 +662,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 40,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 66,
             "reports": 1
           }
@@ -499,7 +807,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -510,14 +818,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 40,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 66,
             "reports": 1
           }
@@ -618,7 +932,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -629,14 +943,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 35,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 55,
             "reports": 1
           }
@@ -767,7 +1087,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -778,14 +1098,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 39,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -889,7 +1215,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -900,14 +1226,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 39,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -1013,7 +1345,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1024,14 +1356,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 39,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -1167,7 +1505,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1178,14 +1516,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 36,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 58,
             "reports": 1
           }
@@ -1298,7 +1642,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T04:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1309,14 +1653,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:34:18.609Z",
-            "label": "8/26 12:34",
-            "value": 39,
+            "at": "2026-08-26T04:41:14.292Z",
+            "label": "8/26 12:41",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:22:28.584Z",
+            "label": "8/26 13:22",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -1414,7 +1764,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T03:30:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1425,14 +1775,20 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T04:19:18.609Z",
-            "label": "8/26 12:19",
-            "value": 36,
+            "at": "2026-08-26T04:21:14.292Z",
+            "label": "8/26 12:21",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:12:28.584Z",
+            "label": "8/26 13:12",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 58,
             "reports": 1
           }
@@ -1533,7 +1889,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T00:40:59.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1544,32 +1900,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T01:34:30.643Z",
+            "at": "2026-08-26T01:34:46.312Z",
             "label": "8/26 09:34",
-            "value": 24,
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:28:02.287Z",
+            "at": "2026-08-26T02:28:33.625Z",
             "label": "8/26 10:28",
-            "value": 34,
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:21:33.930Z",
-            "label": "8/26 11:21",
-            "value": 44,
+            "at": "2026-08-26T03:22:20.938Z",
+            "label": "8/26 11:22",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:15:05.574Z",
-            "label": "8/26 12:15",
-            "value": 54,
+            "at": "2026-08-26T04:16:08.251Z",
+            "label": "8/26 12:16",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:09:55.564Z",
+            "label": "8/26 13:09",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -1665,7 +2027,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-26T00:06:20.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1676,38 +2038,38 @@
             "reports": 0
           },
           {
-            "at": "2026-08-26T00:56:42.869Z",
-            "label": "8/26 08:56",
+            "at": "2026-08-26T01:05:53.812Z",
+            "label": "8/26 09:05",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:47:05.739Z",
-            "label": "8/26 09:47",
+            "at": "2026-08-26T02:05:27.625Z",
+            "label": "8/26 10:05",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:37:28.609Z",
-            "label": "8/26 10:37",
+            "at": "2026-08-26T03:05:01.438Z",
+            "label": "8/26 11:05",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:27:51.478Z",
-            "label": "8/26 11:27",
+            "at": "2026-08-26T04:04:35.251Z",
+            "label": "8/26 12:04",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:18:14.348Z",
-            "label": "8/26 12:18",
+            "at": "2026-08-26T05:04:09.064Z",
+            "label": "8/26 13:04",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -1852,7 +2214,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T22:59:30.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -1863,44 +2225,50 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T23:52:13.888Z",
+            "at": "2026-08-25T23:52:31.609Z",
             "label": "8/26 07:52",
-            "value": 21,
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:44:57.776Z",
-            "label": "8/26 08:44",
-            "value": 27,
+            "at": "2026-08-26T00:45:33.219Z",
+            "label": "8/26 08:45",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:37:41.664Z",
-            "label": "8/26 09:37",
-            "value": 34,
+            "at": "2026-08-26T01:38:34.828Z",
+            "label": "8/26 09:38",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:30:25.553Z",
-            "label": "8/26 10:30",
-            "value": 41,
+            "at": "2026-08-26T02:31:36.438Z",
+            "label": "8/26 10:31",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:23:09.441Z",
-            "label": "8/26 11:23",
-            "value": 48,
+            "at": "2026-08-26T03:24:38.048Z",
+            "label": "8/26 11:24",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:15:53.329Z",
-            "label": "8/26 12:15",
-            "value": 54,
+            "at": "2026-08-26T04:17:39.657Z",
+            "label": "8/26 12:17",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:10:41.267Z",
+            "label": "8/26 13:10",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 61,
             "reports": 1
           }
@@ -2040,7 +2408,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T21:35:11.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2051,50 +2419,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T22:31:51.777Z",
+            "at": "2026-08-25T22:31:41.208Z",
             "label": "8/26 06:31",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:28:32.554Z",
+            "at": "2026-08-25T23:28:11.417Z",
             "label": "8/26 07:28",
-            "value": 26,
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:25:13.331Z",
-            "label": "8/26 08:25",
-            "value": 33,
+            "at": "2026-08-26T00:24:41.625Z",
+            "label": "8/26 08:24",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:21:54.109Z",
+            "at": "2026-08-26T01:21:11.834Z",
             "label": "8/26 09:21",
-            "value": 39,
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:18:34.886Z",
-            "label": "8/26 10:18",
-            "value": 45,
+            "at": "2026-08-26T02:17:42.042Z",
+            "label": "8/26 10:17",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:15:15.663Z",
-            "label": "8/26 11:15",
-            "value": 51,
+            "at": "2026-08-26T03:14:12.251Z",
+            "label": "8/26 11:14",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:11:56.440Z",
-            "label": "8/26 12:11",
-            "value": 57,
+            "at": "2026-08-26T04:10:42.459Z",
+            "label": "8/26 12:10",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:07:12.668Z",
+            "label": "8/26 13:07",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -2214,7 +2588,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T21:12:53.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2225,50 +2599,56 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T22:12:21.027Z",
-            "label": "8/26 06:12",
+            "at": "2026-08-25T22:11:51.875Z",
+            "label": "8/26 06:11",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:11:49.054Z",
-            "label": "8/26 07:11",
-            "value": 26,
+            "at": "2026-08-25T23:10:50.750Z",
+            "label": "8/26 07:10",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:11:17.081Z",
-            "label": "8/26 08:11",
-            "value": 33,
+            "at": "2026-08-26T00:09:49.625Z",
+            "label": "8/26 08:09",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:10:45.109Z",
-            "label": "8/26 09:10",
-            "value": 39,
+            "at": "2026-08-26T01:08:48.500Z",
+            "label": "8/26 09:08",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:10:13.136Z",
-            "label": "8/26 10:10",
-            "value": 45,
+            "at": "2026-08-26T02:07:47.376Z",
+            "label": "8/26 10:07",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:09:41.163Z",
-            "label": "8/26 11:09",
-            "value": 51,
+            "at": "2026-08-26T03:06:46.251Z",
+            "label": "8/26 11:06",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:09:09.190Z",
-            "label": "8/26 12:09",
-            "value": 57,
+            "at": "2026-08-26T04:05:45.126Z",
+            "label": "8/26 12:05",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T05:04:44.001Z",
+            "label": "8/26 13:04",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -2360,7 +2740,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T19:03:47.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2371,68 +2751,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T19:58:46.110Z",
-            "label": "8/26 03:58",
+            "at": "2026-08-25T20:03:46.625Z",
+            "label": "8/26 04:03",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:53:45.221Z",
-            "label": "8/26 04:53",
+            "at": "2026-08-25T21:03:46.250Z",
+            "label": "8/26 05:03",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:48:44.332Z",
-            "label": "8/26 05:48",
+            "at": "2026-08-25T22:03:45.875Z",
+            "label": "8/26 06:03",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:43:43.442Z",
-            "label": "8/26 06:43",
+            "at": "2026-08-25T23:03:45.500Z",
+            "label": "8/26 07:03",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:38:42.553Z",
-            "label": "8/26 07:38",
+            "at": "2026-08-26T00:03:45.125Z",
+            "label": "8/26 08:03",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:33:41.664Z",
-            "label": "8/26 08:33",
+            "at": "2026-08-26T01:03:44.751Z",
+            "label": "8/26 09:03",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:28:40.775Z",
-            "label": "8/26 09:28",
+            "at": "2026-08-26T02:03:44.376Z",
+            "label": "8/26 10:03",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:23:39.885Z",
-            "label": "8/26 10:23",
+            "at": "2026-08-26T03:03:44.001Z",
+            "label": "8/26 11:03",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:18:38.996Z",
-            "label": "8/26 11:18",
+            "at": "2026-08-26T04:03:43.626Z",
+            "label": "8/26 12:03",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:13:38.107Z",
-            "label": "8/26 12:13",
+            "at": "2026-08-26T05:03:43.251Z",
+            "label": "8/26 13:03",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -2552,7 +2932,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T18:54:56.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2563,68 +2943,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T19:50:43.383Z",
-            "label": "8/26 03:50",
+            "at": "2026-08-25T19:55:43.897Z",
+            "label": "8/26 03:55",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:46:30.766Z",
-            "label": "8/26 04:46",
+            "at": "2026-08-25T20:56:31.795Z",
+            "label": "8/26 04:56",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:42:18.150Z",
-            "label": "8/26 05:42",
+            "at": "2026-08-25T21:57:19.693Z",
+            "label": "8/26 05:57",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:38:05.533Z",
-            "label": "8/26 06:38",
+            "at": "2026-08-25T22:58:07.591Z",
+            "label": "8/26 06:58",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:33:52.917Z",
-            "label": "8/26 07:33",
+            "at": "2026-08-25T23:58:55.489Z",
+            "label": "8/26 07:58",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:29:40.300Z",
-            "label": "8/26 08:29",
+            "at": "2026-08-26T00:59:43.387Z",
+            "label": "8/26 08:59",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:25:27.684Z",
-            "label": "8/26 09:25",
+            "at": "2026-08-26T02:00:31.285Z",
+            "label": "8/26 10:00",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:21:15.067Z",
-            "label": "8/26 10:21",
+            "at": "2026-08-26T03:01:19.183Z",
+            "label": "8/26 11:01",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:17:02.451Z",
-            "label": "8/26 11:17",
+            "at": "2026-08-26T04:02:07.081Z",
+            "label": "8/26 12:02",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:12:49.834Z",
-            "label": "8/26 12:12",
+            "at": "2026-08-26T05:02:54.979Z",
+            "label": "8/26 13:02",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -2741,7 +3121,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T18:16:02.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2752,68 +3132,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T19:15:21.565Z",
-            "label": "8/26 03:15",
+            "at": "2026-08-25T19:20:22.079Z",
+            "label": "8/26 03:20",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:14:41.130Z",
-            "label": "8/26 04:14",
+            "at": "2026-08-25T20:24:42.159Z",
+            "label": "8/26 04:24",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:14:00.695Z",
-            "label": "8/26 05:14",
+            "at": "2026-08-25T21:29:02.239Z",
+            "label": "8/26 05:29",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:13:20.261Z",
-            "label": "8/26 06:13",
+            "at": "2026-08-25T22:33:22.318Z",
+            "label": "8/26 06:33",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:12:39.826Z",
-            "label": "8/26 07:12",
+            "at": "2026-08-25T23:37:42.398Z",
+            "label": "8/26 07:37",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:11:59.391Z",
-            "label": "8/26 08:11",
+            "at": "2026-08-26T00:42:02.478Z",
+            "label": "8/26 08:42",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:11:18.956Z",
-            "label": "8/26 09:11",
+            "at": "2026-08-26T01:46:22.558Z",
+            "label": "8/26 09:46",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:10:38.522Z",
-            "label": "8/26 10:10",
+            "at": "2026-08-26T02:50:42.637Z",
+            "label": "8/26 10:50",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:09:58.087Z",
-            "label": "8/26 11:09",
+            "at": "2026-08-26T03:55:02.717Z",
+            "label": "8/26 11:55",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:09:17.652Z",
-            "label": "8/26 12:09",
+            "at": "2026-08-26T04:59:22.797Z",
+            "label": "8/26 12:59",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -2921,7 +3301,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T18:02:04.743Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2932,68 +3312,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T19:02:40.422Z",
-            "label": "8/26 03:02",
+            "at": "2026-08-25T19:07:40.937Z",
+            "label": "8/26 03:07",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:03:16.102Z",
-            "label": "8/26 04:03",
+            "at": "2026-08-25T20:13:17.131Z",
+            "label": "8/26 04:13",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:03:51.781Z",
-            "label": "8/26 05:03",
+            "at": "2026-08-25T21:18:53.325Z",
+            "label": "8/26 05:18",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:04:27.461Z",
-            "label": "8/26 06:04",
+            "at": "2026-08-25T22:24:29.519Z",
+            "label": "8/26 06:24",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:05:03.140Z",
-            "label": "8/26 07:05",
+            "at": "2026-08-25T23:30:05.713Z",
+            "label": "8/26 07:30",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:05:38.820Z",
-            "label": "8/26 08:05",
+            "at": "2026-08-26T00:35:41.907Z",
+            "label": "8/26 08:35",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:06:14.499Z",
-            "label": "8/26 09:06",
+            "at": "2026-08-26T01:41:18.101Z",
+            "label": "8/26 09:41",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:06:50.179Z",
-            "label": "8/26 10:06",
+            "at": "2026-08-26T02:46:54.295Z",
+            "label": "8/26 10:46",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:07:25.858Z",
-            "label": "8/26 11:07",
+            "at": "2026-08-26T03:52:30.489Z",
+            "label": "8/26 11:52",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:08:01.538Z",
-            "label": "8/26 12:08",
+            "at": "2026-08-26T04:58:06.683Z",
+            "label": "8/26 12:58",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -3114,7 +3494,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T18:00:50.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -3125,68 +3505,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T19:01:32.474Z",
-            "label": "8/26 03:01",
+            "at": "2026-08-25T19:06:32.988Z",
+            "label": "8/26 03:06",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:02:14.948Z",
-            "label": "8/26 04:02",
+            "at": "2026-08-25T20:12:15.977Z",
+            "label": "8/26 04:12",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:02:57.423Z",
-            "label": "8/26 05:02",
+            "at": "2026-08-25T21:17:58.966Z",
+            "label": "8/26 05:17",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:03:39.897Z",
-            "label": "8/26 06:03",
+            "at": "2026-08-25T22:23:41.955Z",
+            "label": "8/26 06:23",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:04:22.371Z",
-            "label": "8/26 07:04",
+            "at": "2026-08-25T23:29:24.944Z",
+            "label": "8/26 07:29",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:05:04.846Z",
-            "label": "8/26 08:05",
+            "at": "2026-08-26T00:35:07.932Z",
+            "label": "8/26 08:35",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:05:47.320Z",
-            "label": "8/26 09:05",
+            "at": "2026-08-26T01:40:50.921Z",
+            "label": "8/26 09:40",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:06:29.794Z",
-            "label": "8/26 10:06",
+            "at": "2026-08-26T02:46:33.910Z",
+            "label": "8/26 10:46",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:07:12.269Z",
-            "label": "8/26 11:07",
+            "at": "2026-08-26T03:52:16.899Z",
+            "label": "8/26 11:52",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:07:54.743Z",
-            "label": "8/26 12:07",
+            "at": "2026-08-26T04:57:59.888Z",
+            "label": "8/26 12:57",
             "value": 62,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 66,
             "reports": 1
           }
@@ -3286,7 +3666,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T17:50:33.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3297,68 +3677,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T18:52:11.565Z",
-            "label": "8/26 02:52",
+            "at": "2026-08-25T18:57:12.079Z",
+            "label": "8/26 02:57",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T19:53:50.130Z",
-            "label": "8/26 03:53",
+            "at": "2026-08-25T20:03:51.159Z",
+            "label": "8/26 04:03",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:55:28.695Z",
-            "label": "8/26 04:55",
+            "at": "2026-08-25T21:10:30.239Z",
+            "label": "8/26 05:10",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:57:07.261Z",
-            "label": "8/26 05:57",
+            "at": "2026-08-25T22:17:09.318Z",
+            "label": "8/26 06:17",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:58:45.826Z",
-            "label": "8/26 06:58",
+            "at": "2026-08-25T23:23:48.398Z",
+            "label": "8/26 07:23",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:00:24.391Z",
-            "label": "8/26 08:00",
+            "at": "2026-08-26T00:30:27.478Z",
+            "label": "8/26 08:30",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:02:02.956Z",
-            "label": "8/26 09:02",
+            "at": "2026-08-26T01:37:06.558Z",
+            "label": "8/26 09:37",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:03:41.522Z",
-            "label": "8/26 10:03",
+            "at": "2026-08-26T02:43:45.637Z",
+            "label": "8/26 10:43",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:05:20.087Z",
-            "label": "8/26 11:05",
+            "at": "2026-08-26T03:50:24.717Z",
+            "label": "8/26 11:50",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-26T04:06:58.652Z",
-            "label": "8/26 12:06",
+            "at": "2026-08-26T04:57:03.797Z",
+            "label": "8/26 12:57",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -3481,7 +3861,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T16:21:09.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3492,68 +3872,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T17:30:55.201Z",
-            "label": "8/26 01:30",
+            "at": "2026-08-25T17:35:55.716Z",
+            "label": "8/26 01:35",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-08-25T18:40:41.403Z",
-            "label": "8/26 02:40",
+            "at": "2026-08-25T18:50:42.432Z",
+            "label": "8/26 02:50",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-08-25T19:50:27.604Z",
-            "label": "8/26 03:50",
+            "at": "2026-08-25T20:05:29.148Z",
+            "label": "8/26 04:05",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:00:13.806Z",
-            "label": "8/26 05:00",
+            "at": "2026-08-25T21:20:15.864Z",
+            "label": "8/26 05:20",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-08-25T22:10:00.008Z",
-            "label": "8/26 06:10",
+            "at": "2026-08-25T22:35:02.580Z",
+            "label": "8/26 06:35",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:19:46.209Z",
-            "label": "8/26 07:19",
+            "at": "2026-08-25T23:49:49.296Z",
+            "label": "8/26 07:49",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:29:32.411Z",
-            "label": "8/26 08:29",
+            "at": "2026-08-26T01:04:36.012Z",
+            "label": "8/26 09:04",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:39:18.613Z",
-            "label": "8/26 09:39",
+            "at": "2026-08-26T02:19:22.728Z",
+            "label": "8/26 10:19",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:49:04.814Z",
-            "label": "8/26 10:49",
+            "at": "2026-08-26T03:34:09.444Z",
+            "label": "8/26 11:34",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:58:51.016Z",
-            "label": "8/26 11:58",
+            "at": "2026-08-26T04:48:56.160Z",
+            "label": "8/26 12:48",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 64,
             "reports": 1
           }
@@ -3659,7 +4039,7 @@
       ],
       "heat": {
         "startedAt": "2026-08-25T16:00:00.000Z",
-        "endedAt": "2026-08-26T05:08:37.218Z",
+        "endedAt": "2026-08-26T06:03:42.877Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -3670,68 +4050,68 @@
             "reports": 0
           },
           {
-            "at": "2026-08-25T17:11:41.565Z",
-            "label": "8/26 01:11",
+            "at": "2026-08-25T17:16:42.079Z",
+            "label": "8/26 01:16",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-08-25T18:23:23.130Z",
-            "label": "8/26 02:23",
+            "at": "2026-08-25T18:33:24.159Z",
+            "label": "8/26 02:33",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-08-25T19:35:04.695Z",
-            "label": "8/26 03:35",
+            "at": "2026-08-25T19:50:06.239Z",
+            "label": "8/26 03:50",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-08-25T20:46:46.261Z",
-            "label": "8/26 04:46",
+            "at": "2026-08-25T21:06:48.318Z",
+            "label": "8/26 05:06",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-08-25T21:58:27.826Z",
-            "label": "8/26 05:58",
+            "at": "2026-08-25T22:23:30.398Z",
+            "label": "8/26 06:23",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-08-25T23:10:09.391Z",
-            "label": "8/26 07:10",
+            "at": "2026-08-25T23:40:12.478Z",
+            "label": "8/26 07:40",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-08-26T00:21:50.956Z",
-            "label": "8/26 08:21",
+            "at": "2026-08-26T00:56:54.558Z",
+            "label": "8/26 08:56",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-08-26T01:33:32.522Z",
-            "label": "8/26 09:33",
+            "at": "2026-08-26T02:13:36.637Z",
+            "label": "8/26 10:13",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-08-26T02:45:14.087Z",
-            "label": "8/26 10:45",
+            "at": "2026-08-26T03:30:18.717Z",
+            "label": "8/26 11:30",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-08-26T03:56:55.652Z",
-            "label": "8/26 11:56",
+            "at": "2026-08-26T04:47:00.797Z",
+            "label": "8/26 12:47",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-08-26T05:08:37.218Z",
-            "label": "8/26 13:08",
+            "at": "2026-08-26T06:03:42.877Z",
+            "label": "8/26 14:03",
             "value": 58,
             "reports": 1
           }
