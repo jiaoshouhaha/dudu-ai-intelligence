@@ -1,7 +1,1331 @@
 {
-  "generatedAt": "2026-09-02T01:23:13.455Z",
+  "generatedAt": "2026-09-02T06:23:44.205Z",
   "date": "2026-09-02",
   "items": [
+    {
+      "id": "f5a31c994d292d1b",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/2/rick-brewster",
+      "originalUrl": "https://simonwillison.net/2026/Sep/2/rick-brewster/",
+      "titleOriginal": "Quoting Rick Brewster",
+      "summaryOriginal": "Direct2D has always been the biggest hurdle for Paint.NET on WINE, and it's clear that it will never be completed enough for Paint.NET's use. And I can't just \"disable\" the use of Direct2D. So, instead, Paint.NET now has an internal, from-scratch, clean-room reverse-engineered rewrite of Direct2D that it uses on WINE (triggered by using /wine ). It lives in PaintDotNet.Windows.Direct2D1.Managed.dll . This was written by our good friend Claude , without whom this would NOT have been possible and would NEVER have happened. [...] Most of this code is, as they say, \"vibe coded.\" By that I mean that it has not been thoroughly reviewed, it's more \"trust me bro\" style. I cannot possibly review 180,000 lines of code, it's just way way way too much. For reference, the rest of Paint.NET is about 700,000 lines of code and I've been working on it for over 20 years. [...] At times, Claude was working with the fury of 10 freshly unshackled Einstein genius-level 10x coders. And other times ... well, not so much. I had to babysit Claude quite a bit to make sure it did resource management correctly (for awhile it just wasn't doing the COM equivalent of AddRef() for reference counted objects, oops).",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://forums.paint.net/topic/134563-🍷-extremely-experimental-winelinux-support-how-to-get-started/",
+        "https://claude.ai/",
+        "https://simonwillison.net/tags/reverse-engineering",
+        "https://simonwillison.net/tags/coding-agents",
+        "https://simonwillison.net/tags/claude",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/dotnet",
+        "https://simonwillison.net/tags/linux",
+        "https://simonwillison.net/tags/vibe-coding"
+      ],
+      "publishedAt": "2026-09-02T05:50:57.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/2/rick-brewster/",
+          "publishedAt": "2026-09-02T05:50:57.000Z",
+          "title": "Quoting Rick Brewster",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://forums.paint.net/topic/134563-🍷-extremely-experimental-winelinux-support-how-to-get-started/",
+            "https://claude.ai/",
+            "https://simonwillison.net/tags/reverse-engineering",
+            "https://simonwillison.net/tags/coding-agents",
+            "https://simonwillison.net/tags/claude",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/dotnet",
+            "https://simonwillison.net/tags/linux",
+            "https://simonwillison.net/tags/vibe-coding"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该事件展示了 AI 辅助编程在大型项目中的实际应用，以及开发者对 AI 生成代码的信任与风险权衡，对开发者社区有启发意义。",
+      "importanceReasonEn": "This event demonstrates the practical use of AI-assisted programming in a large project and the developer's trust and risk trade-off with AI-generated code, which is instructive for the developer community.",
+      "scoringMode": "ai",
+      "titleZh": "Paint.NET 在 WINE 上通过内部重写 Direct2D 实现运行",
+      "titleEn": "Paint.NET Runs on WINE via Internal Direct2D Rewrite",
+      "summaryZh": "Paint.NET 的开发者 Rick Brewster 透露，由于 Direct2D 在 WINE 上无法完整实现，他们用 Claude 从零开始重写了一个干净的 Direct2D 实现，用于在 WINE 上运行 Paint.NET。该实现位于 PaintDotNet.Windows.Direct2D1.Managed.dll，通过 /wine 参数触发。代码约 18 万行，大部分是“氛围编码”，未经彻底审查。",
+      "summaryEn": "Paint.NET developer Rick Brewster revealed that because Direct2D cannot be fully implemented on WINE, they used Claude to rewrite a clean-room Direct2D implementation from scratch for running Paint.NET on WINE. The implementation lives in PaintDotNet.Windows.Direct2D1.Managed.dll and is triggered by /wine. The code is about 180,000 lines, mostly 'vibe coded' and not thoroughly reviewed.",
+      "keywords": [],
+      "topics": [
+        "Paint.NET",
+        "WINE",
+        "Direct2D",
+        "AI辅助编程",
+        "Claude"
+      ],
+      "models": [
+        "Claude"
+      ],
+      "detailZh": "Paint.NET 的开发者 Rick Brewster 在博客中透露，他们一直面临 Direct2D 在 WINE 上无法完整实现的问题，这阻碍了 Paint.NET 在 Linux 上的运行。Direct2D 是微软的图形 API，WINE 对其支持不完整，导致 Paint.NET 无法正常工作。Rick 表示，他无法禁用 Direct2D，因此决定在 WINE 上使用一个内部重写的 Direct2D 实现。这个实现是使用 AI 助手 Claude 从零开始编写的，代码量约 18 万行，存放在 PaintDotNet.Windows.Direct2D1.Managed.dll 中。Rick 强调，如果没有 Claude，这个项目不可能完成。然而，他也承认大部分代码是“氛围编码”，即未经彻底审查，属于“信任我”的风格。他无法审查如此大量的代码，因为 Paint.NET 其余部分约 70 万行，他花了 20 多年开发。Rick 还提到，Claude 有时表现出色，但有时需要他监督资源管理，例如引用计数对象的 AddRef 问题。",
+      "keyPointsZh": [
+        "Paint.NET 在 WINE 上使用内部重写的 Direct2D 实现，通过 /wine 参数触发。",
+        "该实现由 AI 助手 Claude 从零编写，代码量约 18 万行。",
+        "代码大部分未经彻底审查，属于“氛围编码”。",
+        "Rick Brewster 表示没有 Claude 该项目不可能完成。"
+      ],
+      "impactZh": "该事件对普通用户的影响有限，但可能意味着未来 Paint.NET 在 Linux 上通过 WINE 运行成为可能，为需要该软件的 Linux 用户提供便利。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于 AI 用户和开发者，该事件展示了 AI 辅助编程在大型项目中的潜力，但也提醒了审查 AI 生成代码的重要性，尤其是在资源管理和安全性方面。",
+      "howItWorksZh": "Paint.NET 在 WINE 上检测到 /wine 参数时，会加载 PaintDotNet.Windows.Direct2D1.Managed.dll，该库提供了 Direct2D 的替代实现。这个实现是使用 Claude 生成的，基于对 Direct2D API 的逆向工程，以兼容方式提供所需功能。开发者需要监督资源管理，确保引用计数正确。",
+      "interpretationZh": "该事件表明 AI 可以生成大量代码，但需要人工监督和审查。Rick 的坦诚说明 AI 生成代码的质量参差不齐，需要开发者投入精力进行验证。",
+      "limitationsZh": "该实现仅用于 WINE，且代码未经全面审查，可能存在未知问题。Rick 也提到 Claude 在资源管理方面曾出错，因此该实现可能不稳定。",
+      "actionStepsZh": [
+        "对于有兴趣的开发者，可以尝试在 WINE 上使用 /wine 参数运行 Paint.NET，以测试该实现。",
+        "开发者应谨慎对待 AI 生成代码，尤其是在资源管理和安全关键部分，需进行审查。",
+        "关注 Paint.NET 官方更新，以获取该功能的改进和修复。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/2/rick-brewster/",
+          "publishedAt": "2026-09-02T05:50:57.000Z",
+          "title": "Quoting Rick Brewster",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://forums.paint.net/topic/134563-🍷-extremely-experimental-winelinux-support-how-to-get-started/",
+            "https://claude.ai/",
+            "https://simonwillison.net/tags/reverse-engineering",
+            "https://simonwillison.net/tags/coding-agents",
+            "https://simonwillison.net/tags/claude",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/dotnet",
+            "https://simonwillison.net/tags/linux",
+            "https://simonwillison.net/tags/vibe-coding"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T05:50:57.000Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-02T05:50:57.000Z",
+            "label": "9/2 13:50",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "cd6699f0965493eb",
+      "normalizedUrl": "https://arxiv.org/abs/2609.00002",
+      "originalUrl": "https://arxiv.org/abs/2609.00002",
+      "titleOriginal": "HyperWorld: Hypergraph-Structured State Serialization Improves Learned Textual World Models",
+      "summaryOriginal": "arXiv:2609.00002v1 Announce Type: new Abstract: World models enable language-model agents to predict environment dynamics and plan before acting. In text environments, the model must learn symbolic action effects from serialized state descriptions, but the role of serialization structure remains underexplored. We present HyperWorld, a controlled study of state serialization for learned textual world models. We compare raw observations with three symbolic serializations of the same ground-truth state: independent sentences, pairwise triples, and entity-centered hyperedge units that group multiple related facts around entities and relations. All variants use the same training objective: given a state and an action, predict symbolic effects or judge the action infeasible. Across model scales, data budgets, and in-distribution and out-of-distribution test worlds, hyperedge serialization gives the clearest gains for 0.5B--1.5B models and under distribution shift. Larger models reduce the gap, and pairwise triples can match or slightly exceed hyperedges on in-distribution exact match, but hyperedges achieve the strongest out-of-distribution fact F1 and the best small-to-medium scale trad",
+      "originalLanguage": "en",
+      "author": "Yun-Jian Zhang, Chen-Wei Liang, Tian-Yi Zhang, Jian Ding, Yi-Lun Wu, Ao-Bo Li, Wei-Cong Su,  Saifullah, Hong-Yu An, Mu-Jiang-Shan Wang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-02T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.00002",
+          "publishedAt": "2026-09-02T04:00:00.000Z",
+          "title": "HyperWorld: Hypergraph-Structured State Serialization Improves Learned Textual World Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该研究针对语言模型代理中的世界模型学习，提出了一种新的状态序列化方法（超边），并在多个模型规模和分布偏移下验证了其有效性，对提升代理规划能力有实际意义。",
+      "importanceReasonEn": "This research addresses world model learning in language model agents, proposing a novel state serialization method (hyperedge) and validating its effectiveness across model scales and distribution shifts, with practical implications for improving agent planning.",
+      "scoringMode": "ai",
+      "titleZh": "HyperWorld：超图结构状态序列化改进学习型文本世界模型",
+      "titleEn": "HyperWorld: Hypergraph-Structured State Serialization Improves Learned Textual World Models",
+      "summaryZh": "arXiv:2609.00002v1 公告类型：新论文。摘要：世界模型使语言模型代理能够预测环境动态并在行动前进行规划。在文本环境中，模型必须从序列化的状态描述中学习符号动作效果，但序列化结构的作用仍未得到充分探索。我们提出了HyperWorld，一项关于学习型文本世界模型的状态序列化的受控研究。我们将原始观察与相同真实状态的三种符号序列化进行比较：独立句子、成对三元组和以实体为中心的超边单元，后者将多个相关事实围绕实体和关系分组。所有变体使用相同的训练目标：给定状态和动作，预测符号效果或判断动作不可行。在模型规模、数据预算以及分布内和分布外测试世界中，超边序列化在0.5B-1.5B模型和分布偏移下带来最明显的收益。较大的模型缩小了差距，成对三元组在分布内精确匹配上可以匹配或略微超过超边，但超边在分布外事实F1和最佳小到中规模传统上取得最强结果。",
+      "summaryEn": "arXiv:2609.00002v1 Announce Type: new Abstract: World models enable language-model agents to predict environment dynamics and plan before acting. In text environments, the model must learn symbolic action effects from serialized state descriptions, but the role of serialization structure remains underexplored. We present HyperWorld, a controlled study of state serialization for learned textual world models. We compare raw observations with three symbolic serializations of the same ground-truth state: independent sentences, pairwise triples, and entity-centered hyperedge units that group multiple related facts around entities and relations. All variants use the same training objective: given a state and an action, predict symbolic effects or judge the action infeasible. Across model scales,",
+      "keywords": [
+        "HyperWorld",
+        "state serialization",
+        "hyperedge",
+        "world model",
+        "text environment",
+        "out-of-distribution"
+      ],
+      "topics": [
+        "world models",
+        "state serialization",
+        "hypergraph",
+        "language model agents",
+        "text environments"
+      ],
+      "models": [],
+      "detailZh": "该论文研究文本环境中语言模型代理的世界模型学习问题。世界模型使代理能够预测环境动态并在行动前进行规划。在文本环境中，模型需要从序列化的状态描述中学习符号动作效果，但序列化结构的作用此前未被充分探索。作者提出了HyperWorld，一个受控研究，比较了原始观察和三种基于相同真实状态的符号序列化方法：独立句子、成对三元组和以实体为中心的超边单元。超边单元将多个相关事实围绕实体和关系分组。所有变体使用相同的训练目标：给定状态和动作，预测符号效果或判断动作不可行。实验在多个模型规模（0.5B-1.5B等）、数据预算以及分布内和分布外测试世界上进行。结果表明，超边序列化在0.5B-1.5B模型和分布偏移下带来最明显的收益。较大的模型缩小了差距，成对三元组在分布内精确匹配上可以匹配或略微超过超边，但超边在分布外事实F1和最佳小到中规模传统上取得最强结果。",
+      "keyPointsZh": [
+        "提出超边序列化方法，将状态描述为以实体为中心的超图结构。",
+        "在0.5B-1.5B模型规模下，超边序列化带来最明显的性能提升。",
+        "在分布偏移下，超边序列化在事实F1上表现最强。",
+        "较大模型下，序列化方法的差距缩小，成对三元组在分布内精确匹配上可匹敌或略超超边。"
+      ],
+      "impactZh": "该研究为文本世界模型的状态表示提供了新思路，可能影响语言模型代理在交互环境中的规划能力，尤其是在数据有限或环境动态变化的情况下。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于开发语言模型代理的团队，该研究提示状态序列化结构的选择会影响模型在分布外场景下的泛化能力，可考虑采用超边结构以提升鲁棒性。",
+      "howItWorksZh": "论文中，超边序列化将状态表示为以实体为中心的超边单元，每个超边将多个相关事实分组。模型接收序列化的状态和动作，预测符号效果或判断动作不可行。训练目标一致，仅改变输入序列化方式。实验比较了不同序列化方法在多个模型规模和数据预算下的表现。",
+      "interpretationZh": "论文报告了超边序列化在中小模型和分布偏移下的优势，但较大模型下差距缩小。这暗示序列化结构可能是一种归纳偏置，在模型容量有限时更有帮助。需要谨慎解读，因为结果基于特定文本环境，可能不适用于所有任务。",
+      "limitationsZh": "论文仅基于arXiv摘要，未提供完整实验细节。结果可能受限于特定文本环境，且未说明超边序列化的计算开销。",
+      "actionStepsZh": [
+        "阅读论文全文以获取实验设置和超参数细节。",
+        "在自有文本环境任务中尝试超边序列化，观察分布外性能提升。",
+        "结合模型规模选择序列化方法，小模型可优先考虑超边。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.00002",
+          "publishedAt": "2026-09-02T04:00:00.000Z",
+          "title": "HyperWorld: Hypergraph-Structured State Serialization Improves Learned Textual World Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T04:00:00.000Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-09-02T04:00:00.000Z",
+            "label": "9/2 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T04:47:54.735Z",
+            "label": "9/2 12:47",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:35:49.470Z",
+            "label": "9/2 13:35",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "7608bb1fc5f0b058",
+      "normalizedUrl": "https://arxiv.org/abs/2609.00003",
+      "originalUrl": "https://arxiv.org/abs/2609.00003",
+      "titleOriginal": "I-CARE: Analysis of interference-related phenomena in a controllable, diverse and representative unlearning setting for text-to-image models",
+      "summaryOriginal": "arXiv:2609.00003v1 Announce Type: new Abstract: Machine unlearning studies the removal of knowledge from an AI model, making the system forget a concept it previously learned. Despite rapid progress in generative machine unlearning, the unintended degradation of semantically related concepts that should have been retained (henceforth, interference) remains poorly characterized and inconsistently evaluated. This paper introduces I-CARE, a methodology that formalizes interference as a first-class object of study in generative unlearning. Rather than proposing a new benchmark or unlearning algorithm, I-CARE provides formal definitions for tasks, metrics, and templates for reporting results, enabling the systematic and reproducible study of interference across unlearning settings. While our methodology is designed to remain valid as models and unlearning algorithms evolve, decoupling long-term scientific insight from transient empirical results, we present a feasibility demonstration with state-of-the-art algorithms and frequently used datasets. The results demonstrate that I-CARE enables meaningful analysis of interference patterns across multiple unlearning settings, establishing the",
+      "originalLanguage": "en",
+      "author": "Leonardo Santiago Benitez Pereira, Marcos Escudero Vi\\~nolo, Luis Herranz Arribas",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-02T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.00003",
+          "publishedAt": "2026-09-02T04:00:00.000Z",
+          "title": "I-CARE: Analysis of interference-related phenomena in a controllable, diverse and representative unlearning setting for text-to-image models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该论文提出了一种系统研究生成式遗忘中干扰现象的方法论，填补了该领域评估不一致的空白，对AI安全与模型治理有实际意义。",
+      "importanceReasonEn": "The paper proposes a methodology for systematically studying interference in generative unlearning, filling a gap of inconsistent evaluation in the field, with practical implications for AI safety and model governance.",
+      "scoringMode": "ai",
+      "titleZh": "I-CARE：在可控、多样且具代表性的文本到图像模型遗忘设置中分析干扰相关现象",
+      "titleEn": "I-CARE: Analysis of interference-related phenomena in a controllable, diverse and representative unlearning setting for text-to-image models",
+      "summaryZh": "arXiv:2609.00003v1 公告类型：新论文。摘要：机器遗忘研究从AI模型中移除知识，使系统忘记其先前学习的概念。尽管生成式机器遗忘进展迅速，但语义相关概念（本应保留）的意外退化（即干扰）仍缺乏特征描述且评估不一致。本文提出I-CARE，一种将干扰形式化为生成式遗忘中一等研究对象的方法论。I-CARE并非提出新基准或遗忘算法，而是提供任务、指标和结果报告模板的正式定义，从而能够在不同遗忘设置中系统且可重复地研究干扰。虽然我们的方法论旨在随着模型和遗忘算法的演进保持有效，将长期科学见解与短期实证结果分离，但我们使用最先进的算法和常用数据集进行了可行性演示。结果表明，I-CARE能够在多种遗忘设置中对干扰模式进行有意义的分析，确立了……",
+      "summaryEn": "arXiv:2609.00003v1 Announce Type: new. Abstract: Machine unlearning studies the removal of knowledge from an AI model, making the system forget a concept it previously learned. Despite rapid progress in generative machine unlearning, the unintended degradation of semantically related concepts that should have been retained (henceforth, interference) remains poorly characterized and inconsistently evaluated. This paper introduces I-CARE, a methodology that formalizes interference as a first-class object of study in generative unlearning. Rather than proposing a new benchmark or unlearning algorithm, I-CARE provides formal definitions for tasks, metrics, and templates for reporting results, enabling the systematic and reproducible study of interference across unlearning settings. While our m",
+      "keywords": [
+        "I-CARE",
+        "machine unlearning",
+        "interference",
+        "text-to-image",
+        "generative models"
+      ],
+      "topics": [
+        "machine unlearning",
+        "text-to-image models",
+        "interference analysis"
+      ],
+      "models": [],
+      "detailZh": "机器遗忘旨在从已训练模型中移除特定知识，例如让文本到图像模型忘记某个概念。然而，在移除目标概念时，模型可能意外退化对语义相关概念（应保留）的生成能力，这种现象称为干扰。目前，干扰现象缺乏统一的定义和评估标准，导致不同研究结果难以比较。I-CARE方法将干扰形式化为生成式遗忘中的一等研究对象，提供正式的任务定义、评估指标和结果报告模板，使研究者能够在不同遗忘设置下系统、可重复地研究干扰。该方法论设计为随着模型和遗忘算法演进仍保持有效，将长期科学见解与短期实证结果分离。论文使用最先进的遗忘算法和常用数据集进行了可行性演示，结果表明I-CARE能够在多种遗忘设置中对干扰模式进行有意义的分析。",
+      "keyPointsZh": [
+        "I-CARE是用于研究生成式遗忘中干扰现象的方法论，而非新基准或算法。",
+        "它提供正式的任务定义、指标和报告模板，促进可重复研究。",
+        "可行性演示使用最先进算法和常用数据集，验证了方法的有效性。"
+      ],
+      "impactZh": "该研究有助于标准化生成式遗忘的评估，推动AI模型安全移除知识而不损害其他能力，对模型治理和合规有重要意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究者，I-CARE提供了一套评估遗忘过程中干扰的框架，有助于开发更安全的模型更新方法。",
+      "howItWorksZh": "I-CARE通过定义干扰相关的任务、指标和报告模板，使研究者能够系统评估遗忘算法对相关概念的影响。具体步骤包括：选择遗忘目标、定义相关概念集、使用统一指标测量生成质量变化，并按照模板报告结果。",
+      "interpretationZh": "论文提出了一种方法论框架，而非具体算法。其核心贡献在于标准化干扰的评估，使不同研究可比较。可行性演示表明该方法在实际中可用，但论文未提供详细实验结果，因此其有效性需进一步验证。",
+      "limitationsZh": "论文为方法论论文，未提供具体实验数据或详细结果，可行性演示细节有限。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.00003",
+          "publishedAt": "2026-09-02T04:00:00.000Z",
+          "title": "I-CARE: Analysis of interference-related phenomena in a controllable, diverse and representative unlearning setting for text-to-image models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T04:00:00.000Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-09-02T04:00:00.000Z",
+            "label": "9/2 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T04:47:54.735Z",
+            "label": "9/2 12:47",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:35:49.470Z",
+            "label": "9/2 13:35",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "dabf025afc9c7f85",
+      "normalizedUrl": "https://x.com/Meituan_LongCat/status/2094996391387111865",
+      "originalUrl": "https://x.com/Meituan_LongCat/status/2094996391387111865",
+      "titleOriginal": "美团 LongCat-2.0 上线 Cline 免费试用",
+      "summaryOriginal": "LongCat-2.0 is now free to try in @cline ！ 🐱",
+      "originalLanguage": "zh",
+      "author": "X：美团 LongCat (@Meituan_LongCat)",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmtjkp6dc02j5rori29u5h7kl",
+        "https://x.com/Meituan_LongCat/status/2094996391387111865"
+      ],
+      "publishedAt": "2026-09-02T03:50:37.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-02T04:05:19.828Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.virxact.com/items/cmtjkp6dc02j5rori29u5h7kl"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmtjkp6dc02j5rori29u5h7kl",
+          "name": "X：美团 LongCat (@Meituan_LongCat)",
+          "type": "aggregator",
+          "url": "https://x.com/Meituan_LongCat/status/2094996391387111865",
+          "publishedAt": "2026-09-02T03:50:37.000Z",
+          "title": "美团 LongCat-2.0 上线 Cline 免费试用",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjkp6dc02j5rori29u5h7kl",
+            "https://x.com/Meituan_LongCat/status/2094996391387111865"
+          ]
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该消息来自官方渠道，涉及模型产品的更新和免费试用，对开发者社区有一定吸引力，但缺乏具体细节。",
+      "importanceReasonEn": "The announcement comes from an official source, involving a model update and free trial, which is of some interest to the developer community but lacks specific details.",
+      "scoringMode": "ai",
+      "titleZh": "美团 LongCat-2.0 上线 Cline 免费试用",
+      "titleEn": "Meituan LongCat-2.0 Now Free to Try in Cline",
+      "summaryZh": "美团 LongCat 宣布其 LongCat-2.0 模型现已在 Cline 中提供免费试用。",
+      "summaryEn": "Meituan LongCat announces that LongCat-2.0 is now available for free trial in Cline.",
+      "keywords": [],
+      "topics": [
+        "LongCat-2.0",
+        "Cline",
+        "免费试用"
+      ],
+      "models": [
+        "LongCat-2.0"
+      ],
+      "detailZh": "美团 LongCat 官方账号于 2026 年 9 月 2 日发布消息，宣布 LongCat-2.0 模型现已在 Cline 中提供免费试用。该消息简短，未提供关于模型性能、功能或试用期限的具体信息。LongCat 是美团推出的 AI 模型系列，此次更新可能旨在扩大其开发者用户群。",
+      "keyPointsZh": [
+        "LongCat-2.0 在 Cline 中提供免费试用。",
+        "消息由美团 LongCat 官方账号发布。",
+        "未提供模型细节或试用期限。"
+      ],
+      "impactZh": "该事件表明美团正在积极推广其模型产品，通过免费试用吸引开发者，可能对 AI 编程工具市场产生一定影响。",
+      "readerImpactZh": "对于普通用户，此消息影响有限，除非他们使用 Cline 并希望尝试新的 AI 模型。",
+      "userImpactZh": "对于使用 Cline 的开发者，可以免费试用 LongCat-2.0，但需注意试用可能有限制，且模型性能未知。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据官方消息，LongCat-2.0 已集成到 Cline 中并提供免费试用。但消息未说明试用条件、模型能力或与其他模型的比较，因此无法评估其实际价值。",
+      "limitationsZh": "消息来源单一，缺乏技术细节和用户反馈，试用体验和模型性能尚待验证。",
+      "actionStepsZh": [
+        "访问 Cline 平台查找 LongCat-2.0 并开始试用。",
+        "关注美团 LongCat 官方账号以获取后续更新。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmtjkp6dc02j5rori29u5h7kl",
+          "name": "X：美团 LongCat (@Meituan_LongCat)",
+          "type": "aggregator",
+          "url": "https://x.com/Meituan_LongCat/status/2094996391387111865",
+          "publishedAt": "2026-09-02T03:50:37.000Z",
+          "title": "美团 LongCat-2.0 上线 Cline 免费试用",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjkp6dc02j5rori29u5h7kl",
+            "https://x.com/Meituan_LongCat/status/2094996391387111865"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T03:50:37.000Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-09-02T03:50:37.000Z",
+            "label": "9/2 11:50",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T04:41:39.401Z",
+            "label": "9/2 12:41",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:32:41.803Z",
+            "label": "9/2 13:32",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 58,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "ed68998c115696ef",
+      "normalizedUrl": "https://anthropic.com/claude-fable-and-mythos-5-1",
+      "originalUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "titleOriginal": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
+      "summaryOriginal": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
+      "originalLanguage": "zh",
+      "author": "Anthropic：Newsroom（网页）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 87,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmtjjkmd800r4roe4wpq221bc",
+        "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "https://aihot.virxact.com/items/cmtj04igz04xproel00pt2oju",
+        "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026"
+      ],
+      "publishedAt": "2026-09-02T03:33:48.237Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-02T03:33:48.237Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.virxact.com/items/cmtjjkmd800r4roe4wpq221bc"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmtjjkmd800r4roe4wpq221bc",
+          "name": "Anthropic：Newsroom（网页）",
+          "type": "aggregator",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "publishedAt": "2026-09-02T03:33:48.237Z",
+          "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
+          "authority": 87,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjjkmd800r4roe4wpq221bc",
+            "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmtj04igz04xproel00pt2oju",
+          "name": "Claude Platform：开发者版本说明（RSS）",
+          "type": "aggregator",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026",
+          "publishedAt": "2026-09-01T00:00:00.000Z",
+          "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtj04igz04xproel00pt2oju",
+            "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026"
+          ]
+        }
+      ],
+      "importance": 80,
+      "importanceReasonZh": "Anthropic 发布新模型，对 AI 行业有重要影响，但信息有限。",
+      "importanceReasonEn": "Anthropic releases new models, significant for AI industry, but limited info.",
+      "scoringMode": "ai",
+      "titleZh": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
+      "titleEn": "Anthropic Releases Claude Fable 5.1 and Claude Mythos 5.1",
+      "summaryZh": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
+      "summaryEn": "Anthropic releases Claude Fable 5.1 (claude-fable-5-1) for long-running agentic coding, knowledge work, and research, and Claude Mythos 5.1 for Project Glasswing participants.",
+      "keywords": [
+        "Anthropic",
+        "Claude Fable 5.1",
+        "Claude Mythos 5.1",
+        "model release"
+      ],
+      "topics": [
+        "model release",
+        "Anthropic",
+        "Claude"
+      ],
+      "models": [
+        "claude-fable-5-1",
+        "claude-mythos-5-1"
+      ],
+      "detailZh": "Anthropic 于 2026 年 9 月 2 日发布了两款新模型：Claude Fable 5.1 和 Claude Mythos 5.1。Claude Fable 5.1 被描述为面向长时间运行的智能体编码、知识工作与研究，而 Claude Mythos 5.1 则面向 Project Glasswing 的参与者。目前关于这两款模型的具体技术细节、性能参数和可用性尚未公布。Anthropic 的官方新闻稿仅提供了这些基本信息，更多细节有待后续披露。",
+      "keyPointsZh": [
+        "Anthropic 发布 Claude Fable 5.1 和 Claude Mythos 5.1。",
+        "Claude Fable 5.1 面向长时间运行的智能体编码、知识工作与研究。",
+        "Claude Mythos 5.1 面向 Project Glasswing 参与者。",
+        "具体技术细节和性能参数尚未公布。"
+      ],
+      "impactZh": "此次发布表明 Anthropic 持续扩展其模型产品线，针对不同应用场景推出专用模型，可能对 AI 应用开发和研究产生重要影响。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于 AI 开发者和研究人员，新模型可能提供更强大的工具，但具体影响需等待更多细节。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据官方新闻稿，Anthropic 发布了两个新模型，但未提供技术细节。可以推断这些模型可能针对特定任务进行了优化，但具体能力未知。",
+      "limitationsZh": "目前仅有官方新闻稿的简短描述，缺乏技术规格、性能基准和可用性信息。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 2,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmtjjkmd800r4roe4wpq221bc",
+          "name": "Anthropic：Newsroom（网页）",
+          "type": "aggregator",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "publishedAt": "2026-09-02T03:33:48.237Z",
+          "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
+          "authority": 87,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjjkmd800r4roe4wpq221bc",
+            "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmtj04igz04xproel00pt2oju",
+          "name": "Claude Platform：开发者版本说明（RSS）",
+          "type": "aggregator",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026",
+          "publishedAt": "2026-09-01T00:00:00.000Z",
+          "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtj04igz04xproel00pt2oju",
+            "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T03:33:48.237Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 94,
+        "peak": 94,
+        "history": [
+          {
+            "at": "2026-09-02T03:33:48.237Z",
+            "label": "9/2 11:33",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T04:30:26.893Z",
+            "label": "9/2 12:30",
+            "value": 50,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-02T05:27:05.549Z",
+            "label": "9/2 13:27",
+            "value": 72,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 94,
+            "reports": 2
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a2f8b04c0baeca09",
+      "normalizedUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609",
+      "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609",
+      "titleOriginal": "UU远程新版本上线：完整 TUI 渲染与多终端会话管理，强化远程 Vibe Coding 体验",
+      "summaryOriginal": "UU远程于9月2日上线新版本，重点优化终端功能，补齐 TUI 渲染交互与终端会话管理能力。主要更新包括：Mac 免密码登录、移动端输入优化并新增调用系统输入法的独立输入框、可同时创建和管理多个终端会话并支持手机与电脑间跨端同步接管（通过 uuyc-cli lterm 命令）。",
+      "originalLanguage": "zh",
+      "author": "公众号：数字生命卡兹克",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmtjjt7360180roe43ggo0t09",
+        "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609"
+      ],
+      "publishedAt": "2026-09-02T03:32:20.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-02T03:40:27.472Z",
+      "contentType": "official",
+      "evidenceLevel": "verified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.virxact.com/items/cmtjjt7360180roe43ggo0t09"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmtjjt7360180roe43ggo0t09",
+          "name": "公众号：数字生命卡兹克",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609",
+          "publishedAt": "2026-09-02T03:32:20.000Z",
+          "title": "UU远程新版本上线：完整 TUI 渲染与多终端会话管理，强化远程 Vibe Coding 体验",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjjt7360180roe43ggo0t09",
+            "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609"
+          ]
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "该更新直接提升远程开发与Vibe Coding场景下的终端体验，对使用远程桌面的开发者有实际价值，但属于产品迭代，影响范围有限。",
+      "importanceReasonEn": "The update directly improves terminal experience in remote development and Vibe Coding scenarios, offering practical value for developers using remote desktops, but it's a product iteration with limited scope.",
+      "scoringMode": "ai",
+      "titleZh": "UU远程新版本上线：完整 TUI 渲染与多终端会话管理，强化远程 Vibe Coding 体验",
+      "titleEn": "UU Remote New Version: Full TUI Rendering and Multi-Terminal Session Management, Enhancing Remote Vibe Coding Experience",
+      "summaryZh": "UU远程于9月2日上线新版本，重点优化终端功能，补齐 TUI 渲染交互与终端会话管理能力。主要更新包括：Mac 免密码登录、移动端输入优化并新增调用系统输入法的独立输入框、可同时创建和管理多个终端会话并支持手机与电脑间跨端同步接管（通过 uuyc-cli lterm 命令）。",
+      "summaryEn": "UU Remote launched a new version on September 2, focusing on terminal enhancements, adding full TUI rendering interaction and terminal session management. Key updates include: Mac passwordless login, mobile input optimization with a new independent input box invoking the system IME, and the ability to create and manage multiple terminal sessions simultaneously with cross-device sync takeover between phone and computer (via the uuyc-cli lterm command).",
+      "keywords": [
+        "UU远程",
+        "TUI渲染",
+        "多终端会话",
+        "Mac免密码",
+        "uuyc-cli lterm"
+      ],
+      "topics": [
+        "UU远程",
+        "远程控制",
+        "终端",
+        "TUI",
+        "Vibe Coding"
+      ],
+      "models": [],
+      "detailZh": "UU远程于9月2日发布新版本，重点优化了终端功能，补齐了TUI渲染交互与终端会话管理能力。此次更新主要面向远程开发场景，尤其是Vibe Coding（一种通过AI辅助编码的工作方式）用户。\n\n具体更新内容包括：Mac端支持免密码登录，简化了连接流程；移动端输入体验优化，新增了调用系统输入法的独立输入框，解决了此前输入法兼容性问题；终端功能增强，支持同时创建和管理多个终端会话，并允许用户在手机与电脑之间跨端同步接管会话，通过uuyc-cli lterm命令实现。\n\n这些功能旨在让用户在任何设备上都能获得接近本地的终端操作体验，尤其适合在移动设备上远程进行代码编辑和运行。UU远程团队表示，此次更新是响应社区反馈，特别是针对Vibe Coding场景下的高频需求。\n\n目前，新版本已上线，用户可更新应用体验。",
+      "keyPointsZh": [
+        "Mac端新增免密码登录功能。",
+        "移动端新增独立输入框，调用系统输入法，优化输入体验。",
+        "支持创建和管理多个终端会话，并可通过uuyc-cli lterm命令实现跨端同步接管。",
+        "更新旨在强化远程Vibe Coding体验。"
+      ],
+      "impactZh": "此次更新提升了远程终端的使用体验，特别是对于依赖终端进行开发工作的用户，使得在移动设备上进行复杂操作成为可能，有助于推动远程办公和移动开发的普及。",
+      "readerImpactZh": "对于普通用户，如果使用UU远程进行远程办公或学习，更新后可以在手机上更流畅地操作终端，输入代码或命令时不再受输入法困扰，并能同时管理多个任务，提高效率。",
+      "userImpactZh": "对于开发者或技术团队，新版本提供了更完整的TUI渲染，使得vim、htop等全屏终端应用在远程会话中能正常显示和交互；多终端会话管理允许并行处理多个任务，跨端接管功能则方便在手机和电脑间无缝切换工作。",
+      "howItWorksZh": "UU远程通过其客户端和命令行工具uuyc-cli实现这些功能。Mac免密码登录可能通过密钥或系统钥匙串实现。移动端独立输入框通过调用系统输入法API，避免自定义输入法带来的兼容问题。多终端会话管理在服务器端维护多个伪终端（PTY），客户端可同时连接多个会话。跨端同步接管通过uuyc-cli lterm命令，将当前会话的上下文同步到另一设备，实现无缝切换。",
+      "interpretationZh": "根据官方发布信息，UU远程此次更新聚焦于终端体验，属于产品功能迭代。报道中未提供具体技术实现细节，但功能描述清晰。可以合理推断，这些更新是为了与主流远程开发工具竞争，并满足日益增长的移动办公需求。",
+      "limitationsZh": "报道来源为官方公众号，信息有限，未提及具体版本号、兼容性限制或已知问题。对于TUI渲染的完整程度、多会话管理的上限等细节未说明。",
+      "actionStepsZh": [
+        "更新UU远程客户端至最新版本。",
+        "在Mac上启用免密码登录，简化连接流程。",
+        "在移动端使用新增的独立输入框，提升输入体验。",
+        "尝试使用uuyc-cli lterm命令进行跨端会话接管。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmtjjt7360180roe43ggo0t09",
+          "name": "公众号：数字生命卡兹克",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609",
+          "publishedAt": "2026-09-02T03:32:20.000Z",
+          "title": "UU远程新版本上线：完整 TUI 渲染与多终端会话管理，强化远程 Vibe Coding 体验",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjjt7360180roe43ggo0t09",
+            "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T03:32:20.000Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-09-02T03:32:20.000Z",
+            "label": "9/2 11:32",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T04:29:28.068Z",
+            "label": "9/2 12:29",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:26:36.136Z",
+            "label": "9/2 13:26",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 58,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "574c75e9204fabc4",
+      "normalizedUrl": "https://x.com/Alibaba_Qwen/status/2094982928371794077",
+      "originalUrl": "https://x.com/Alibaba_Qwen/status/2094982928371794077",
+      "titleOriginal": "Qwen3.8-Max-0902 登顶 Code Arena 并以 $5/MToken 领跑 Pareto 前沿",
+      "summaryOriginal": "通义千问发布 Qwen3.8-Max-0902，在 Code Arena： WebDev 以 1，691 分首次亮相即排名总榜第一，并以混合价 $5/MToken 成为 Pareto 前沿上得分最高的模型，现已可在 QwenCloud 试用。",
+      "originalLanguage": "zh",
+      "author": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmtjimzgx083zrobvekm2zmje",
+        "https://x.com/Alibaba_Qwen/status/2094982928371794077"
+      ],
+      "publishedAt": "2026-09-02T02:57:07.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-02T03:07:37.845Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.virxact.com/items/cmtjimzgx083zrobvekm2zmje"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmtjimzgx083zrobvekm2zmje",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2094982928371794077",
+          "publishedAt": "2026-09-02T02:57:07.000Z",
+          "title": "Qwen3.8-Max-0902 登顶 Code Arena 并以 $5/MToken 领跑 Pareto 前沿",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjimzgx083zrobvekm2zmje",
+            "https://x.com/Alibaba_Qwen/status/2094982928371794077"
+          ]
+        }
+      ],
+      "importance": 83,
+      "importanceReasonZh": "该模型在权威编码基准上登顶，并以明确价格点占据性价比前沿，对开发者选型有直接参考价值。",
+      "importanceReasonEn": "The model tops an authoritative coding benchmark and occupies the value frontier at a clear price point, offering direct reference for developer selection.",
+      "scoringMode": "ai",
+      "titleZh": "Qwen3.8-Max-0902 登顶 Code Arena 并以 $5/MToken 领跑 Pareto 前沿",
+      "titleEn": "Qwen3.8-Max-0902 tops Code Arena and leads Pareto frontier at $5/MToken",
+      "summaryZh": "通义千问发布 Qwen3.8-Max-0902，在 Code Arena: WebDev 以 1,691 分首次亮相即排名总榜第一，并以混合价 $5/MToken 成为 Pareto 前沿上得分最高的模型，现已可在 QwenCloud 试用。",
+      "summaryEn": "Qwen releases Qwen3.8-Max-0902, debuting at #1 on Code Arena: WebDev with a score of 1,691, and becoming the highest-scoring model on the Pareto frontier at a blended price of $5/MToken. Now available for trial on QwenCloud.",
+      "keywords": [
+        "Qwen3.8-Max-0902",
+        "Code Arena",
+        "WebDev",
+        "Pareto frontier",
+        "$5/MToken",
+        "QwenCloud"
+      ],
+      "topics": [
+        "Qwen",
+        "Code Arena",
+        "Pareto frontier",
+        "pricing"
+      ],
+      "models": [
+        "Qwen3.8-Max-0902"
+      ],
+      "detailZh": "通义千问于2026年9月2日发布Qwen3.8-Max-0902。根据官方推文，该模型在Code Arena: WebDev基准上以1,691分的成绩首次亮相即排名总榜第一。同时，在Pareto前沿（即性能与价格权衡的最优曲线）上，该模型以混合价格$5/MToken成为得分最高的模型。目前该模型已在QwenCloud上开放试用。推文还附带了相关截图和链接，但未提供更多技术细节。",
+      "keyPointsZh": [
+        "Qwen3.8-Max-0902在Code Arena: WebDev上获得1,691分，排名第一。",
+        "该模型以$5/MToken的混合价格成为Pareto前沿上得分最高的模型。",
+        "模型已在QwenCloud上开放试用。"
+      ],
+      "impactZh": "该事件表明通义千问在编码能力上达到领先水平，同时以较低价格提供高性能模型，可能加剧编码AI市场的竞争，并推动其他厂商调整定价策略。",
+      "readerImpactZh": "对于普通用户，这意味着在编码辅助工具上可能有更便宜且性能更强的选择，但具体影响取决于模型的实际可用性和集成情况。",
+      "userImpactZh": "对于AI开发者和团队，Qwen3.8-Max-0902提供了一个高性价比的编码模型选项，可能降低使用顶尖编码模型的成本，并可作为现有工具链的替代或补充。",
+      "howItWorksZh": "根据官方信息，Qwen3.8-Max-0902是通义千问系列的最新模型，在Code Arena: WebDev上通过自动化评估获得1,691分。Pareto前沿分析表明，在$5/MToken的混合价格下，该模型实现了性能与成本的最佳平衡。用户可通过QwenCloud平台试用该模型。",
+      "interpretationZh": "官方声称该模型在编码基准上排名第一，且性价比突出。但需注意，Code Arena的评估可能偏向特定任务，且Pareto前沿的定义可能因厂商而异。实际性能需在真实场景中验证。",
+      "limitationsZh": "信息仅来自官方推文，缺乏独立验证。未提供模型参数规模、训练细节或与其他模型的详细对比。Code Arena的分数可能受评估集影响，且价格可能因使用方式不同而变化。",
+      "actionStepsZh": [
+        "访问QwenCloud试用Qwen3.8-Max-0902，验证其在自身编码任务上的表现。",
+        "对比现有编码模型的价格与性能，评估是否切换或集成。",
+        "关注后续独立基准测试结果，以获取更全面的性能评估。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "该模型以$5/MToken的价格获得1,691分，表明其在性价比上具有竞争力。",
+        "data": [
+          {
+            "label": "Qwen3.8-Max-0902 Code Arena 得分",
+            "value": 1691,
+            "display": ""
+          },
+          {
+            "label": "混合价格 (USD/MToken)",
+            "value": 5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmtjimzgx083zrobvekm2zmje",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2094982928371794077",
+          "publishedAt": "2026-09-02T02:57:07.000Z",
+          "title": "Qwen3.8-Max-0902 登顶 Code Arena 并以 $5/MToken 领跑 Pareto 前沿",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjimzgx083zrobvekm2zmje",
+            "https://x.com/Alibaba_Qwen/status/2094982928371794077"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T02:57:07.000Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 71,
+        "peak": 71,
+        "history": [
+          {
+            "at": "2026-09-02T02:57:07.000Z",
+            "label": "9/2 10:57",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T03:48:46.301Z",
+            "label": "9/2 11:48",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:40:25.602Z",
+            "label": "9/2 12:40",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:32:04.903Z",
+            "label": "9/2 13:32",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 71,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "174ca8ddc52b30ec",
+      "normalizedUrl": "https://rdi.berkeley.edu/blog/vero",
+      "originalUrl": "https://rdi.berkeley.edu/blog/vero",
+      "titleOriginal": "UC Berkeley 团队发布 Vero 基准：测试 AI 智能体能否构建形式化验证的软件仓库",
+      "summaryOriginal": "UC Berkeley 等机构发布 Vero，据称是首个要求智能体在仓库级同时编写实现与证明的基准，含 43 个多模块 Lean 4 实例、743 个计分 API 和 2705 条形式化规范。",
+      "originalLanguage": "zh",
+      "author": "Berkeley RDI：Blog（AI 安全与评测）",
+      "category": "research",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmtjh8t5k06jorobvfq21a6e2",
+        "https://rdi.berkeley.edu/blog/vero"
+      ],
+      "publishedAt": "2026-09-02T02:28:38.186Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-02T02:28:38.186Z",
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.virxact.com/items/cmtjh8t5k06jorobvfq21a6e2"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmtjh8t5k06jorobvfq21a6e2",
+          "name": "Berkeley RDI：Blog（AI 安全与评测）",
+          "type": "aggregator",
+          "url": "https://rdi.berkeley.edu/blog/vero",
+          "publishedAt": "2026-09-02T02:28:38.186Z",
+          "title": "UC Berkeley 团队发布 Vero 基准：测试 AI 智能体能否构建形式化验证的软件仓库",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjh8t5k06jorobvfq21a6e2",
+            "https://rdi.berkeley.edu/blog/vero"
+          ]
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "该基准填补了仓库级形式化验证的空白，对AI安全与代码可靠性有重要意义，但具体细节有限。",
+      "importanceReasonEn": "The benchmark fills a gap in repository-level formal verification, significant for AI safety and code reliability, but details are limited.",
+      "scoringMode": "ai",
+      "titleZh": "UC Berkeley 团队发布 Vero 基准：测试 AI 智能体能否构建形式化验证的软件仓库",
+      "titleEn": "UC Berkeley Team Releases Vero Benchmark: Testing AI Agents' Ability to Build Formally Verified Software Repositories",
+      "summaryZh": "UC Berkeley 等机构发布 Vero，据称是首个要求智能体在仓库级同时编写实现与证明的基准，含 43 个多模块 Lean 4 实例、743 个计分 API 和 2705 条形式化规范。",
+      "summaryEn": "UC Berkeley and others release Vero, claimed to be the first benchmark requiring agents to write both implementations and proofs at the repository level, containing 43 multi-module Lean 4 instances, 743 scoring APIs, and 2705 formal specifications.",
+      "keywords": [
+        "Vero",
+        "Lean 4",
+        "形式化验证",
+        "基准",
+        "AI智能体"
+      ],
+      "topics": [
+        "AI安全",
+        "形式化验证",
+        "基准测试",
+        "智能体"
+      ],
+      "models": [],
+      "detailZh": "UC Berkeley 等机构发布了 Vero 基准，据称是首个要求 AI 智能体在仓库级别同时编写实现和形式化证明的基准。该基准包含 43 个多模块的 Lean 4 实例，涉及 743 个计分 API 和 2705 条形式化规范。Vero 旨在测试智能体能否构建经过形式化验证的软件仓库，而不仅仅是单个文件或函数。\n\n形式化验证是一种通过数学证明确保代码正确性的方法，Lean 4 是一种交互式定理证明器，常用于编写可验证的代码。Vero 的发布表明研究社区正在将 AI 智能体的评估从简单的代码生成扩展到更复杂的、需要深度推理和证明的任务。\n\n目前公开的信息主要来自 Berkeley RDI 的博客，详细的技术报告和评估结果尚未完全公开。因此，关于 Vero 的具体设计、评估方法以及与其他基准的比较仍需进一步了解。\n\n该基准的发布可能推动 AI 在安全关键系统中的应用，因为形式化验证能提供更强的正确性保证。然而，其实际效果和局限性需要更多实验数据来验证。",
+      "keyPointsZh": [
+        "Vero 是首个要求仓库级实现与证明的基准。",
+        "包含 43 个多模块 Lean 4 实例。",
+        "涉及 743 个计分 API 和 2705 条形式化规范。",
+        "由 UC Berkeley 等机构发布。"
+      ],
+      "impactZh": "Vero 基准的发布可能推动 AI 智能体在形式化验证领域的研究，促进安全关键软件的自动化开发。但实际影响取决于其评估方法的有效性和社区的采用。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于 AI 开发者和研究人员，Vero 提供了一个新的评估维度，可能影响未来智能体在代码生成和验证方面的研究方向。",
+      "howItWorksZh": "Vero 基准要求智能体在仓库级别同时编写实现和证明，使用 Lean 4 作为形式化语言。具体工作流程可能包括：给定一个仓库的规范，智能体需要生成实现代码和对应的证明，然后通过自动化工具检查证明的正确性。但详细步骤未在公开信息中说明。",
+      "interpretationZh": "根据公开信息，Vero 是一个新的基准测试，旨在评估 AI 智能体在仓库级形式化验证任务上的能力。这反映了 AI 安全领域对可验证代码的需求。然而，目前信息有限，无法确认其实际效果和与现有基准的对比。",
+      "limitationsZh": "公开信息仅来自博客，缺乏详细的技术报告和实验数据。Vero 的实际难度、智能体表现以及与其他基准的比较尚不清楚。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmtjh8t5k06jorobvfq21a6e2",
+          "name": "Berkeley RDI：Blog（AI 安全与评测）",
+          "type": "aggregator",
+          "url": "https://rdi.berkeley.edu/blog/vero",
+          "publishedAt": "2026-09-02T02:28:38.186Z",
+          "title": "UC Berkeley 团队发布 Vero 基准：测试 AI 智能体能否构建形式化验证的软件仓库",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjh8t5k06jorobvfq21a6e2",
+            "https://rdi.berkeley.edu/blog/vero"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T02:28:38.186Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 66,
+        "peak": 66,
+        "history": [
+          {
+            "at": "2026-09-02T02:28:38.186Z",
+            "label": "9/2 10:28",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T03:27:24.690Z",
+            "label": "9/2 11:27",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:26:11.195Z",
+            "label": "9/2 12:26",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:24:57.700Z",
+            "label": "9/2 13:24",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a8ad50e680a470e8",
+      "normalizedUrl": "https://x.com/rohanpaul_ai/status/2094975190468010368",
+      "originalUrl": "https://x.com/rohanpaul_ai/status/2094975190468010368",
+      "titleOriginal": "Nvidia 接近以 129 亿美元收购 Hugging Face",
+      "summaryOriginal": "Bloomberg 报道 Nvidia 正接近以约 129 亿美元收购 Hugging Face，交易总额可能达约 140 亿美元，双方尚未达成最终协议，时间与细节仍可能变动。该价格约为 Hugging Face 2023 年融资轮 45 亿美元估值的 2.9 倍，按年化收入约 1.5 亿美元计算相当于 86 倍，Nvidia 还谈及在交易中加入 10 亿美元的员工留任方案。",
+      "originalLanguage": "zh",
+      "author": "X：Rohan Paul (@rohanpaul_ai)",
+      "category": "business",
+      "sourceType": "aggregator",
+      "authority": 82,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmtjhy5ze07gorobv62fpf0wi",
+        "https://x.com/rohanpaul_ai/status/2094975190468010368"
+      ],
+      "publishedAt": "2026-09-02T02:26:22.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-02T02:48:18.699Z",
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.virxact.com/items/cmtjhy5ze07gorobv62fpf0wi"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmtjhy5ze07gorobv62fpf0wi",
+          "name": "X：Rohan Paul (@rohanpaul_ai)",
+          "type": "aggregator",
+          "url": "https://x.com/rohanpaul_ai/status/2094975190468010368",
+          "publishedAt": "2026-09-02T02:26:22.000Z",
+          "title": "Nvidia 接近以 129 亿美元收购 Hugging Face",
+          "authority": 82,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjhy5ze07gorobv62fpf0wi",
+            "https://x.com/rohanpaul_ai/status/2094975190468010368"
+          ]
+        }
+      ],
+      "importance": 85,
+      "importanceReasonZh": "该交易若完成，将成为AI领域最大收购之一，深刻影响开源AI生态与模型分发格局，对开发者、企业和整个行业都有重大影响。",
+      "importanceReasonEn": "If completed, this would be one of the largest AI acquisitions, profoundly impacting the open-source AI ecosystem and model distribution landscape, with major implications for developers, enterprises, and the industry.",
+      "scoringMode": "ai",
+      "titleZh": "英伟达接近以129亿美元收购Hugging Face",
+      "titleEn": "Nvidia Nears $12.9B Acquisition of Hugging Face",
+      "summaryZh": "据彭博社报道，英伟达正接近以约129亿美元收购Hugging Face，交易总额可能达约140亿美元。双方尚未达成最终协议，时间与细节仍可能变动。该价格约为Hugging Face 2023年融资轮45亿美元估值的2.9倍，按年化收入约1.5亿美元计算相当于86倍。英伟达还谈及在交易中加入10亿美元的员工留任方案。",
+      "summaryEn": "Bloomberg reports Nvidia is nearing a deal to acquire Hugging Face for about $12.9 billion, with total deal value potentially reaching ~$14 billion. No final agreement yet; timing and details may change. The price is ~2.9x Hugging Face's $4.5B valuation from its 2023 funding round, and ~86x annualized revenue of ~$150M. Nvidia also discussed adding a $1B employee retention package.",
+      "keywords": [
+        "Nvidia",
+        "Hugging Face",
+        "acquisition",
+        "Bloomberg",
+        "deal"
+      ],
+      "topics": [
+        "acquisition",
+        "Nvidia",
+        "Hugging Face",
+        "AI infrastructure"
+      ],
+      "models": [],
+      "detailZh": "据彭博社报道，英伟达正接近以约129亿美元收购Hugging Face，交易总额可能达约140亿美元，其中包括员工留任方案。消息人士称，双方尚未达成最终协议，交易时间与细节仍可能变动。Hugging Face是AI模型托管与开源社区的核心平台，拥有超过百万的模型仓库和庞大的开发者用户群。英伟达作为AI芯片巨头，近年来积极布局软件与平台生态，此次收购若完成，将使其直接掌控全球最大的AI模型分发渠道之一。该价格约为Hugging Face在2023年融资轮中45亿美元估值的2.9倍，按年化收入约1.5亿美元计算，相当于86倍收入倍数，凸显市场对AI基础设施平台的高估值。英伟达还讨论了10亿美元的员工留任方案，以确保关键人才在交易后继续留任。目前，交易尚未公开确认，英伟达与Hugging Face均未正式回应。",
+      "keyPointsZh": [
+        "英伟达接近以约129亿美元收购Hugging Face，总交易额可能达140亿美元。",
+        "价格约为Hugging Face 2023年估值45亿美元的2.9倍，年化收入约1.5亿美元，对应86倍收入倍数。",
+        "交易包含10亿美元员工留任方案。",
+        "双方尚未达成最终协议，细节可能变动。"
+      ],
+      "impactZh": "该交易若完成，将重塑AI模型分发与开源生态。英伟达将获得Hugging Face的庞大用户基础和模型库，可能加强其AI软件平台与硬件生态的绑定，影响开发者选择模型和部署方式。同时，可能引发对开源AI平台独立性的担忧，并推动竞争对手加速布局。",
+      "readerImpactZh": "对于普通用户，短期内可能不会感受到直接变化，但长期看，AI模型和工具的分发方式可能更偏向英伟达生态，影响可用模型的选择和成本。",
+      "userImpactZh": "对于AI开发者与团队，若交易完成，Hugging Face平台可能更深度整合英伟达的硬件和软件栈，影响模型托管、推理服务及工具链的兼容性。开发者需关注平台政策变化，并考虑多平台部署以降低风险。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道称英伟达接近收购Hugging Face，但交易尚未最终敲定，存在变数。价格倍数显示市场对AI基础设施平台的高估值，但高倍数也意味着英伟达对Hugging Face未来增长有极高预期。员工留任方案表明英伟达重视Hugging Face的人才与社区。目前信息主要来自彭博社的匿名消息源，未经官方确认，需谨慎对待。",
+      "limitationsZh": "该报道基于匿名消息源，未经英伟达或Hugging Face官方确认，交易可能失败或条款变动。财务数据（如年化收入）可能不精确，且未提供更多细节。",
+      "actionStepsZh": [
+        "关注英伟达与Hugging Face的官方公告以确认交易进展。",
+        "评估当前依赖Hugging Face平台的模型与工作流，考虑迁移至其他平台或本地部署的备选方案。",
+        "关注监管审查动态，大型收购可能面临反垄断审查。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "收购价约为2023年估值的2.9倍，年化收入的86倍，显示高溢价。",
+        "data": [
+          {
+            "label": "收购价（亿美元）",
+            "value": 129,
+            "display": ""
+          },
+          {
+            "label": "2023年估值（亿美元）",
+            "value": 45,
+            "display": ""
+          },
+          {
+            "label": "年化收入（亿美元）",
+            "value": 1.5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmtjhy5ze07gorobv62fpf0wi",
+          "name": "X：Rohan Paul (@rohanpaul_ai)",
+          "type": "aggregator",
+          "url": "https://x.com/rohanpaul_ai/status/2094975190468010368",
+          "publishedAt": "2026-09-02T02:26:22.000Z",
+          "title": "Nvidia 接近以 129 亿美元收购 Hugging Face",
+          "authority": 82,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtjhy5ze07gorobv62fpf0wi",
+            "https://x.com/rohanpaul_ai/status/2094975190468010368"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-02T02:26:22.000Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
+        "current": 72,
+        "peak": 72,
+        "history": [
+          {
+            "at": "2026-09-02T02:26:22.000Z",
+            "label": "9/2 10:26",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-02T03:25:42.551Z",
+            "label": "9/2 11:25",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:25:03.102Z",
+            "label": "9/2 12:25",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:24:23.653Z",
+            "label": "9/2 13:24",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
+            "value": 72,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "4182359e79e632d3",
       "normalizedUrl": "https://platform.claude.com/docs/en/release-notes/overview",
@@ -213,7 +1537,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-02T00:30:11.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -224,8 +1548,38 @@
             "reports": 0
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T01:29:06.534Z",
+            "label": "9/2 09:29",
+            "value": 57,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T02:28:02.068Z",
+            "label": "9/2 10:28",
+            "value": 69,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T03:26:57.602Z",
+            "label": "9/2 11:26",
+            "value": 81,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T04:25:53.136Z",
+            "label": "9/2 12:25",
+            "value": 93,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T05:24:48.670Z",
+            "label": "9/2 13:24",
+            "value": 100,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 100,
             "reports": 4
           }
@@ -419,7 +1773,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T23:57:28.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -430,14 +1784,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-02T00:40:20.727Z",
-            "label": "9/2 08:40",
-            "value": 39,
+            "at": "2026-09-02T00:52:38.886Z",
+            "label": "9/2 08:52",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T01:47:49.772Z",
+            "label": "9/2 09:47",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:43:00.659Z",
+            "label": "9/2 10:43",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T03:38:11.545Z",
+            "label": "9/2 11:38",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:33:22.432Z",
+            "label": "9/2 12:33",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:28:33.318Z",
+            "label": "9/2 13:28",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -481,38 +1865,42 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件标志着 AI 初创公司估值飙升的又一案例，且涉及 Y Combinator 史上最快独角兽的称号，具有行业关注度。",
-      "importanceReasonEn": "The event marks another case of soaring valuations for AI startups and involves the title of Y Combinator's fastest unicorn, drawing industry attention.",
+      "importanceReasonZh": "该事件反映了AI初创公司估值飙升的趋势，具有商业新闻价值，但来源为报道，未经官方证实。",
+      "importanceReasonEn": "The event reflects the trend of soaring valuations for AI startups, has business news value, but the source is a report and not officially confirmed.",
       "scoringMode": "ai",
-      "titleZh": "AfterQuery 据报道成为 Y Combinator 史上最快独角兽，估值达 32 亿美元",
+      "titleZh": "AfterQuery据报道成为Y Combinator史上最快独角兽，估值达32亿美元",
       "titleEn": "AfterQuery reportedly becomes Y Combinator's fastest-ever unicorn, now valued at $3.2B",
-      "summaryZh": "AI 模型训练初创公司 AfterQuery 据报道完成一轮融资，估值达 32 亿美元，距其 4 月宣布的 3000 万美元 A 轮融资（估值 3 亿美元）仅过去五个月。",
+      "summaryZh": "AI模型训练初创公司AfterQuery据报道完成一轮融资，估值达32亿美元，距其4月宣布的3000万美元A轮融资（估值3亿美元）仅五个月。",
       "summaryEn": "AI model-training startup AfterQuery has reportedly raised a round that valued it at $3.2 billion, just five months after announcing its $30 million Series A at a $300 million valuation in April.",
       "keywords": [
         "AfterQuery",
+        "unicorn",
+        "valuation",
         "Y Combinator",
-        "独角兽",
-        "估值",
-        "融资"
+        "funding"
       ],
       "topics": [
+        "AfterQuery",
         "融资",
-        "AI 初创公司",
-        "估值"
+        "估值",
+        "Y Combinator",
+        "AI训练"
       ],
       "models": [],
-      "detailZh": "据 TechCrunch 报道，AI 模型训练初创公司 AfterQuery 据报道完成了一轮融资，估值达到 32 亿美元。这一估值使其成为 Y Combinator 历史上最快达到独角兽地位的公司。就在五个月前，该公司刚刚宣布完成 3000 万美元的 A 轮融资，当时估值为 3 亿美元。这意味着在短短五个月内，公司估值增长了超过 10 倍。目前，关于这轮融资的具体细节，如投资方和融资金额，尚未披露。AfterQuery 专注于 AI 模型训练领域，其快速增长反映了市场对 AI 基础设施和训练服务的强烈需求。",
+      "detailZh": "据TechCrunch AI报道，AI模型训练初创公司AfterQuery已完成一轮融资，估值达到32亿美元，成为Y Combinator历史上最快达到独角兽地位的公司。该公司在2026年4月刚刚宣布完成3000万美元的A轮融资，当时估值为3亿美元。短短五个月内，估值增长了超过10倍。报道称，此轮融资由现有投资者和新投资者共同参与，但具体投资方和融资金额尚未披露。AfterQuery专注于优化AI模型的训练过程，其技术可能涉及数据筛选、训练算法优化等。目前，公司尚未对报道发表官方评论，因此这些信息仍属于未经证实的报道。",
       "keyPointsZh": [
-        "AfterQuery 据报道估值达 32 亿美元，成为 Y Combinator 史上最快独角兽。",
-        "五个月前公司刚完成 3000 万美元 A 轮融资，估值 3 亿美元。",
-        "融资细节如投资方和金额尚未披露。"
+        "AfterQuery据报道完成一轮融资，估值达32亿美元。",
+        "该公司在2026年4月完成3000万美元A轮融资，估值3亿美元。",
+        "五个月内估值增长超过10倍，成为Y Combinator史上最快独角兽。",
+        "具体投资方和融资金额尚未披露。",
+        "公司尚未官方确认此轮融资。"
       ],
-      "impactZh": "该事件可能加剧 AI 初创公司的估值泡沫担忧，同时吸引更多人才和资本进入 AI 模型训练领域。",
+      "impactZh": "此事件表明AI初创公司估值可能迅速飙升，吸引更多资本进入AI训练领域，也可能引发对估值泡沫的讨论。",
       "readerImpactZh": "",
-      "userImpactZh": "对于 AI 开发者和团队，这可能意味着未来在模型训练服务上的选择更多，但价格可能因市场热度而波动。",
+      "userImpactZh": "对于AI从业者和开发者，此事件可能意味着更多资源和工具将涌现，但短期内对普通用户无直接影响。",
       "howItWorksZh": "",
-      "interpretationZh": "报道称 AfterQuery 估值达到 32 亿美元，但该信息尚未得到公司或投资方的官方确认，因此属于未经证实的报道。如果属实，这反映了 AI 领域的高估值趋势，但需注意估值并不等同于实际价值，且市场可能存在泡沫。",
-      "limitationsZh": "该报道基于 TechCrunch 的单一来源，未提供投资方、融资金额等细节，也未得到公司官方确认，因此信息完整性和准确性有限。",
+      "interpretationZh": "报道称AfterQuery估值在五个月内从3亿美元升至32亿美元，增长超过10倍。这一数字令人瞩目，但需注意该信息未经公司官方证实，可能基于投资者预期或市场炒作。合理的解读是，AI训练赛道正受到资本热捧，但具体估值是否合理仍需更多信息。",
+      "limitationsZh": "该报道基于单一来源，未经公司官方确认，具体融资金额和投资方未知，估值可能包含非现金对价或附带条件。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": {
@@ -520,15 +1908,15 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "估值从 3 亿美元增长至 32 亿美元，增长超过 10 倍。",
+        "insightZh": "估值从3亿美元增至32亿美元，增长超过10倍。",
         "data": [
           {
-            "label": "A轮估值",
+            "label": "2026年4月估值",
             "value": 3,
             "display": ""
           },
           {
-            "label": "最新估值",
+            "label": "2026年9月估值",
             "value": 32,
             "display": ""
           }
@@ -553,7 +1941,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T22:08:24.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -564,26 +1952,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T22:57:06.363Z",
-            "label": "9/2 06:57",
-            "value": 26,
+            "at": "2026-09-01T23:03:26.245Z",
+            "label": "9/2 07:03",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:45:48.727Z",
-            "label": "9/2 07:45",
-            "value": 39,
+            "at": "2026-09-01T23:58:28.490Z",
+            "label": "9/2 07:58",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:34:31.091Z",
-            "label": "9/2 08:34",
-            "value": 51,
+            "at": "2026-09-02T00:53:30.735Z",
+            "label": "9/2 08:53",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T01:48:32.980Z",
+            "label": "9/2 09:48",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:43:35.225Z",
+            "label": "9/2 10:43",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T03:38:37.470Z",
+            "label": "9/2 11:38",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:33:39.715Z",
+            "label": "9/2 12:33",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:28:41.960Z",
+            "label": "9/2 13:28",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -627,33 +2045,32 @@
         }
       ],
       "importance": 60,
-      "importanceReasonZh": "该工具可能影响基准测试的设计和模型评估方式，但信息有限。",
-      "importanceReasonEn": "The tool may influence benchmark design and model evaluation, but information is limited.",
+      "importanceReasonZh": "该工具针对 LLM 评估中的关键问题，对研究者和开发者有实际价值，但信息有限。",
+      "importanceReasonEn": "The tool addresses a key issue in LLM evaluation, offering practical value to researchers and developers, but information is limited.",
       "scoringMode": "ai",
       "titleZh": "BenchMIRT：LLM基准测试到底在衡量什么？",
       "titleEn": "BenchMIRT: What are LLM benchmarks actually measuring?",
-      "summaryZh": "Hugging Face 发布 BenchMIRT，一个用于分析 LLM 基准测试的开放工具，帮助研究者理解基准测试真正衡量的能力。",
-      "summaryEn": "Hugging Face releases BenchMIRT, an open tool for analyzing LLM benchmarks, helping researchers understand what benchmarks truly measure.",
+      "summaryZh": "Hugging Face 发布 BenchMIRT，一个用于分析 LLM 基准测试有效性的开源工具，帮助研究者理解基准测试真正衡量的能力。",
+      "summaryEn": "Hugging Face releases BenchMIRT, an open-source tool for analyzing the validity of LLM benchmarks, helping researchers understand what benchmarks truly measure.",
       "keywords": [],
       "topics": [
-        "LLM",
         "benchmark",
-        "evaluation"
+        "evaluation",
+        "open-source"
       ],
       "models": [],
-      "detailZh": "Hugging Face 发布了 BenchMIRT，这是一个用于分析 LLM 基准测试的开放工具。该工具旨在帮助研究者和开发者理解基准测试真正衡量的能力，以及它们可能存在的偏差或局限性。目前公开的信息有限，仅提及该工具是开放的，并聚焦于基准测试分析。具体功能、技术细节和使用方法尚未披露。",
+      "detailZh": "Hugging Face 发布了 BenchMIRT，这是一个开源工具，旨在帮助研究者和开发者分析 LLM 基准测试的有效性。该工具的核心目标是回答一个关键问题：基准测试到底在衡量什么？它可能通过分析基准测试的题目、模型表现和相关性来提供洞察。然而，目前关于 BenchMIRT 的具体功能、使用方法和技术细节的信息非常有限。该发布仅出现在 Hugging Face 上，没有提供详细的文档或示例。因此，我们只能确认这是一个开源项目，但无法提供更多细节。",
       "keyPointsZh": [
-        "Hugging Face 发布 BenchMIRT 工具。",
-        "该工具用于分析 LLM 基准测试。",
-        "旨在帮助理解基准测试衡量的能力。",
-        "目前信息有限，具体细节未公开。"
+        "Hugging Face 发布了 BenchMIRT 开源工具。",
+        "该工具用于分析 LLM 基准测试的有效性。",
+        "目前缺乏详细文档和示例。"
       ],
-      "impactZh": "该事件可能推动更严谨的基准测试设计，帮助社区识别现有基准的不足，从而促进更可靠的模型评估。",
+      "impactZh": "该工具可能帮助社区更好地理解基准测试的局限性，从而改进评估方法，但具体影响尚不明确。",
       "readerImpactZh": "",
-      "userImpactZh": "对于 AI 开发者和研究者，该工具可能提供更深入的基准测试分析，帮助选择或设计更合适的评估方法。",
+      "userImpactZh": "对于 AI 开发者和研究者，该工具可能提供一种新方法来评估基准测试的有效性，但需要更多信息才能确定其实际用途。",
       "howItWorksZh": "",
-      "interpretationZh": "根据现有信息，BenchMIRT 是一个开放工具，但具体工作原理未知。合理推测它可能提供基准测试的统计分析和能力分解，但需等待更多细节。",
-      "limitationsZh": "目前仅有发布公告，缺乏技术细节和实际使用案例，无法验证其有效性和准确性。",
+      "interpretationZh": "根据现有信息，BenchMIRT 是一个开源项目，旨在分析基准测试的有效性。但具体如何实现尚不清楚。合理推测它可能涉及对基准测试题目的分析、模型性能的对比等，但这些都是推断，没有来源支持。",
+      "limitationsZh": "信息非常有限，仅有一个标题和来源，没有详细描述、文档或示例。因此，无法验证其功能、技术细节或实际效果。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -676,7 +2093,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T21:39:07.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -687,26 +2104,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T22:35:08.613Z",
-            "label": "9/2 06:35",
-            "value": 25,
+            "at": "2026-09-01T22:37:24.467Z",
+            "label": "9/2 06:37",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:31:10.227Z",
-            "label": "9/2 07:31",
-            "value": 36,
+            "at": "2026-09-01T23:35:41.934Z",
+            "label": "9/2 07:35",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:27:11.841Z",
-            "label": "9/2 08:27",
-            "value": 47,
+            "at": "2026-09-02T00:33:59.401Z",
+            "label": "9/2 08:33",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T01:32:16.868Z",
+            "label": "9/2 09:32",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:30:34.336Z",
+            "label": "9/2 10:30",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T03:28:51.803Z",
+            "label": "9/2 11:28",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:27:09.270Z",
+            "label": "9/2 12:27",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:25:26.737Z",
+            "label": "9/2 13:25",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 58,
             "reports": 1
           }
@@ -808,7 +2255,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T21:06:24.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -819,32 +2266,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T21:57:45.891Z",
-            "label": "9/2 05:57",
+            "at": "2026-09-01T22:02:08.020Z",
+            "label": "9/2 06:02",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-01T22:57:52.041Z",
+            "label": "9/2 06:57",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:49:07.782Z",
-            "label": "9/2 06:49",
+            "at": "2026-09-01T23:53:36.061Z",
+            "label": "9/2 07:53",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T00:49:20.082Z",
+            "label": "9/2 08:49",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:40:29.673Z",
-            "label": "9/2 07:40",
+            "at": "2026-09-02T01:45:04.102Z",
+            "label": "9/2 09:45",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:40:48.123Z",
+            "label": "9/2 10:40",
             "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:31:51.564Z",
-            "label": "9/2 08:31",
+            "at": "2026-09-02T03:36:32.143Z",
+            "label": "9/2 11:36",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:32:16.164Z",
+            "label": "9/2 12:32",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:28:00.184Z",
+            "label": "9/2 13:28",
+            "value": 61,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 66,
             "reports": 1
           }
@@ -941,7 +2418,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T20:53:05.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -952,32 +2429,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T21:47:06.691Z",
-            "label": "9/2 05:47",
+            "at": "2026-09-01T21:50:08.920Z",
+            "label": "9/2 05:50",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-01T22:47:12.841Z",
+            "label": "9/2 06:47",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:41:08.382Z",
-            "label": "9/2 06:41",
+            "at": "2026-09-01T23:44:16.761Z",
+            "label": "9/2 07:44",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T00:41:20.682Z",
+            "label": "9/2 08:41",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:35:10.073Z",
-            "label": "9/2 07:35",
+            "at": "2026-09-02T01:38:24.602Z",
+            "label": "9/2 09:38",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:35:28.523Z",
+            "label": "9/2 10:35",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:29:11.764Z",
-            "label": "9/2 08:29",
+            "at": "2026-09-02T03:32:32.443Z",
+            "label": "9/2 11:32",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:29:36.364Z",
+            "label": "9/2 12:29",
             "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:26:40.284Z",
+            "label": "9/2 13:26",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 58,
             "reports": 1
           }
@@ -1136,7 +2643,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T20:45:00.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -1147,32 +2654,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T21:40:38.691Z",
-            "label": "9/2 05:40",
+            "at": "2026-09-01T21:42:52.420Z",
+            "label": "9/2 05:42",
+            "value": 52,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-01T22:40:44.841Z",
+            "label": "9/2 06:40",
             "value": 58,
             "reports": 4
           },
           {
-            "at": "2026-09-01T22:36:17.382Z",
-            "label": "9/2 06:36",
+            "at": "2026-09-01T23:38:37.261Z",
+            "label": "9/2 07:38",
+            "value": 65,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T00:36:29.682Z",
+            "label": "9/2 08:36",
             "value": 71,
             "reports": 4
           },
           {
-            "at": "2026-09-01T23:31:56.073Z",
-            "label": "9/2 07:31",
+            "at": "2026-09-02T01:34:22.102Z",
+            "label": "9/2 09:34",
+            "value": 78,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T02:32:14.523Z",
+            "label": "9/2 10:32",
             "value": 85,
             "reports": 4
           },
           {
-            "at": "2026-09-02T00:27:34.764Z",
-            "label": "9/2 08:27",
+            "at": "2026-09-02T03:30:06.943Z",
+            "label": "9/2 11:30",
+            "value": 91,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T04:27:59.364Z",
+            "label": "9/2 12:27",
             "value": 98,
             "reports": 4
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:25:51.784Z",
+            "label": "9/2 13:25",
+            "value": 100,
+            "reports": 4
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 100,
             "reports": 4
           }
@@ -1300,7 +2837,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T20:40:36.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1311,32 +2848,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T21:37:07.491Z",
-            "label": "9/2 05:37",
+            "at": "2026-09-01T21:38:54.820Z",
+            "label": "9/2 05:38",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-01T22:37:13.641Z",
+            "label": "9/2 06:37",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:33:38.982Z",
-            "label": "9/2 06:33",
+            "at": "2026-09-01T23:35:32.461Z",
+            "label": "9/2 07:35",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T00:33:51.282Z",
+            "label": "9/2 08:33",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:30:10.473Z",
-            "label": "9/2 07:30",
+            "at": "2026-09-02T01:32:10.102Z",
+            "label": "9/2 09:32",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:30:28.923Z",
+            "label": "9/2 10:30",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:26:41.964Z",
-            "label": "9/2 08:26",
+            "at": "2026-09-02T03:28:47.743Z",
+            "label": "9/2 11:28",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:27:06.564Z",
+            "label": "9/2 12:27",
             "value": 54,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:25:25.384Z",
+            "label": "9/2 13:25",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -1480,7 +3047,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T20:32:55.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 72,
         "peak": 72,
         "history": [
@@ -1491,32 +3058,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T21:30:58.691Z",
-            "label": "9/2 05:30",
+            "at": "2026-09-01T21:31:59.920Z",
+            "label": "9/2 05:31",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-01T22:31:04.841Z",
+            "label": "9/2 06:31",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:29:02.382Z",
-            "label": "9/2 06:29",
+            "at": "2026-09-01T23:30:09.761Z",
+            "label": "9/2 07:30",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T00:29:14.682Z",
+            "label": "9/2 08:29",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:27:06.073Z",
-            "label": "9/2 07:27",
+            "at": "2026-09-02T01:28:19.602Z",
+            "label": "9/2 09:28",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:27:24.523Z",
+            "label": "9/2 10:27",
             "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:25:09.764Z",
-            "label": "9/2 08:25",
+            "at": "2026-09-02T03:26:29.443Z",
+            "label": "9/2 11:26",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:25:34.364Z",
+            "label": "9/2 12:25",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:24:39.284Z",
+            "label": "9/2 13:24",
+            "value": 66,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 72,
             "reports": 1
           }
@@ -1630,7 +3227,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T20:12:46.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -1641,38 +3238,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T21:04:30.575Z",
-            "label": "9/2 05:04",
-            "value": 22,
+            "at": "2026-09-01T21:08:18.564Z",
+            "label": "9/2 05:08",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:56:15.151Z",
-            "label": "9/2 05:56",
-            "value": 31,
+            "at": "2026-09-01T22:03:51.128Z",
+            "label": "9/2 06:03",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:47:59.727Z",
-            "label": "9/2 06:47",
-            "value": 39,
+            "at": "2026-09-01T22:59:23.692Z",
+            "label": "9/2 06:59",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:39:44.303Z",
-            "label": "9/2 07:39",
-            "value": 47,
+            "at": "2026-09-01T23:54:56.256Z",
+            "label": "9/2 07:54",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:31:28.879Z",
-            "label": "9/2 08:31",
+            "at": "2026-09-02T00:50:28.820Z",
+            "label": "9/2 08:50",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T01:46:01.384Z",
+            "label": "9/2 09:46",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:41:33.948Z",
+            "label": "9/2 10:41",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T03:37:06.512Z",
+            "label": "9/2 11:37",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:32:39.076Z",
+            "label": "9/2 12:32",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:28:11.640Z",
+            "label": "9/2 13:28",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -1790,7 +3417,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T19:43:09.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -1801,38 +3428,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T20:39:49.742Z",
-            "label": "9/2 04:39",
-            "value": 23,
+            "at": "2026-09-01T20:41:23.109Z",
+            "label": "9/2 04:41",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:36:30.485Z",
-            "label": "9/2 05:36",
-            "value": 31,
+            "at": "2026-09-01T21:39:37.219Z",
+            "label": "9/2 05:39",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:33:11.227Z",
-            "label": "9/2 06:33",
-            "value": 40,
+            "at": "2026-09-01T22:37:51.328Z",
+            "label": "9/2 06:37",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:29:51.970Z",
-            "label": "9/2 07:29",
-            "value": 49,
+            "at": "2026-09-01T23:36:05.438Z",
+            "label": "9/2 07:36",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:26:32.712Z",
-            "label": "9/2 08:26",
-            "value": 58,
+            "at": "2026-09-02T00:34:19.547Z",
+            "label": "9/2 08:34",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T01:32:33.657Z",
+            "label": "9/2 09:32",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:30:47.766Z",
+            "label": "9/2 10:30",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T03:29:01.876Z",
+            "label": "9/2 11:29",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:27:15.985Z",
+            "label": "9/2 12:27",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:25:30.095Z",
+            "label": "9/2 13:25",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 66,
             "reports": 1
           }
@@ -1934,7 +3591,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T19:39:22.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1945,38 +3602,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T20:36:40.575Z",
-            "label": "9/2 04:36",
-            "value": 21,
+            "at": "2026-09-01T20:37:56.745Z",
+            "label": "9/2 04:37",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:33:59.151Z",
-            "label": "9/2 05:33",
-            "value": 29,
+            "at": "2026-09-01T21:36:31.491Z",
+            "label": "9/2 05:36",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:31:17.727Z",
-            "label": "9/2 06:31",
-            "value": 36,
+            "at": "2026-09-01T22:35:06.237Z",
+            "label": "9/2 06:35",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:28:36.303Z",
-            "label": "9/2 07:28",
-            "value": 43,
+            "at": "2026-09-01T23:33:40.983Z",
+            "label": "9/2 07:33",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:25:54.879Z",
-            "label": "9/2 08:25",
-            "value": 51,
+            "at": "2026-09-02T00:32:15.729Z",
+            "label": "9/2 08:32",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T01:30:50.475Z",
+            "label": "9/2 09:30",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:29:25.221Z",
+            "label": "9/2 10:29",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T03:27:59.967Z",
+            "label": "9/2 11:27",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:26:34.713Z",
+            "label": "9/2 12:26",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:25:09.459Z",
+            "label": "9/2 13:25",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 58,
             "reports": 1
           }
@@ -2126,7 +3813,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T19:03:01.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -2137,44 +3824,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T19:57:19.922Z",
-            "label": "9/2 03:57",
-            "value": 20,
+            "at": "2026-09-01T20:04:54.018Z",
+            "label": "9/2 04:04",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:51:38.844Z",
-            "label": "9/2 04:51",
-            "value": 27,
+            "at": "2026-09-01T21:06:47.037Z",
+            "label": "9/2 05:06",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:45:57.766Z",
-            "label": "9/2 05:45",
-            "value": 33,
+            "at": "2026-09-01T22:08:40.055Z",
+            "label": "9/2 06:08",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:40:16.688Z",
-            "label": "9/2 06:40",
-            "value": 39,
+            "at": "2026-09-01T23:10:33.074Z",
+            "label": "9/2 07:10",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:34:35.610Z",
-            "label": "9/2 07:34",
+            "at": "2026-09-02T00:12:26.093Z",
+            "label": "9/2 08:12",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T01:14:19.111Z",
+            "label": "9/2 09:14",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:16:12.130Z",
+            "label": "9/2 10:16",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T03:18:05.149Z",
+            "label": "9/2 11:18",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:28:54.532Z",
-            "label": "9/2 08:28",
-            "value": 52,
+            "at": "2026-09-02T04:19:58.167Z",
+            "label": "9/2 12:19",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:21:51.186Z",
+            "label": "9/2 13:21",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 58,
             "reports": 1
           }
@@ -2296,7 +4007,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T18:29:00.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2307,44 +4018,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T19:28:10.493Z",
-            "label": "9/2 03:28",
-            "value": 21,
+            "at": "2026-09-01T19:33:58.564Z",
+            "label": "9/2 03:33",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:27:20.987Z",
-            "label": "9/2 04:27",
+            "at": "2026-09-01T20:38:57.128Z",
+            "label": "9/2 04:38",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-01T21:43:55.692Z",
+            "label": "9/2 05:43",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:26:31.480Z",
-            "label": "9/2 05:26",
-            "value": 35,
+            "at": "2026-09-01T22:48:54.256Z",
+            "label": "9/2 06:48",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:25:41.974Z",
-            "label": "9/2 06:25",
-            "value": 42,
+            "at": "2026-09-01T23:53:52.820Z",
+            "label": "9/2 07:53",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:24:52.467Z",
-            "label": "9/2 07:24",
+            "at": "2026-09-02T00:58:51.384Z",
+            "label": "9/2 08:58",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T02:03:49.948Z",
+            "label": "9/2 10:03",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T03:08:48.512Z",
+            "label": "9/2 11:08",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:24:02.961Z",
-            "label": "9/2 08:24",
-            "value": 57,
+            "at": "2026-09-02T04:13:47.076Z",
+            "label": "9/2 12:13",
+            "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:18:45.640Z",
+            "label": "9/2 13:18",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -2464,7 +4199,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T18:16:57.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 72,
         "peak": 72,
         "history": [
@@ -2475,50 +4210,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T19:10:14.056Z",
-            "label": "9/2 03:10",
-            "value": 21,
+            "at": "2026-09-01T19:23:01.291Z",
+            "label": "9/2 03:23",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:03:31.113Z",
-            "label": "9/2 04:03",
-            "value": 28,
+            "at": "2026-09-01T20:29:05.582Z",
+            "label": "9/2 04:29",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:56:48.170Z",
-            "label": "9/2 04:56",
-            "value": 36,
+            "at": "2026-09-01T21:35:09.874Z",
+            "label": "9/2 05:35",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:50:05.227Z",
-            "label": "9/2 05:50",
-            "value": 43,
+            "at": "2026-09-01T22:41:14.165Z",
+            "label": "9/2 06:41",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:43:22.284Z",
-            "label": "9/2 06:43",
-            "value": 50,
+            "at": "2026-09-01T23:47:18.456Z",
+            "label": "9/2 07:47",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:36:39.341Z",
-            "label": "9/2 07:36",
-            "value": 57,
+            "at": "2026-09-02T00:53:22.748Z",
+            "label": "9/2 08:53",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:29:56.398Z",
-            "label": "9/2 08:29",
-            "value": 65,
+            "at": "2026-09-02T01:59:27.039Z",
+            "label": "9/2 09:59",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T03:05:31.330Z",
+            "label": "9/2 11:05",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:11:35.622Z",
+            "label": "9/2 12:11",
+            "value": 61,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:17:39.913Z",
+            "label": "9/2 13:17",
+            "value": 67,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 72,
             "reports": 1
           }
@@ -2531,7 +4284,7 @@
       "normalizedUrl": "https://simonwillison.net/2026/Sep/1/geojson",
       "originalUrl": "https://simonwillison.net/2026/Sep/1/geojson/",
       "titleOriginal": "GeoJSON Map Viewer",
-      "summaryOriginal": "Tool: GeoJSON Map Viewer I was helping Natalie gather some maps of local political boundaries (for the Granada Community Services District and the Midcoast Community Council and found a need to display some GeoJSON files on a map and export that as a PNG. I asked GPT-5.6-Sol for suggestions of tools and it proactively built one. After some iterations using Claude Code for web and Fable 5.1 we got to this finished tool. As for the GeoJSON.. it turns out if you ask ChatGPT Work to provide boundaries for almost anything it will churn away extracting and combining files from different Government data sources and build exactly what you need. I got this polygon from: I want a polygon that represents the exact boundary of the El Granada GCSD And this one from: Get me a GeoJSON file for the boundary (or boundaries if that makes sense) for the MCC - Midcoast Community Council - that operates near Half Moon Bay CA Here's a link that displays both of them at the same time on the new GeoJSON map viewing tool. Tags: geospatial , tools , geojson , chatgpt",
+      "summaryOriginal": "Tool: GeoJSON Map Viewer I was helping Natalie gather some maps of local political boundaries (for the Granada Community Services District and the Midcoast Community Council ) and found a need to display some GeoJSON files on a map and export that as a PNG. I asked GPT-5.6-Sol for suggestions of tools and it proactively built one. After some iterations using Claude Code for web and Fable 5.1 we got to this finished tool. As for the GeoJSON.. it turns out if you ask ChatGPT Work to provide boundaries for almost anything it will churn away extracting and combining files from different Government data sources and build exactly what you need. I got this polygon from: I want a polygon that represents the exact boundary of the El Granada GCSD And this one from: Get me a GeoJSON file for the boundary (or boundaries if that makes sense) for the MCC - Midcoast Community Council - that operates near Half Moon Bay CA Here's a link that displays both of them at the same time on the new GeoJSON map viewing tool. Tags: geospatial , tools , geojson , chatgpt",
       "originalLanguage": "en",
       "author": "",
       "category": "tips",
@@ -2675,7 +4428,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T18:05:45.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -2686,50 +4439,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T19:00:26.056Z",
-            "label": "9/2 03:00",
-            "value": 20,
+            "at": "2026-09-01T19:12:50.382Z",
+            "label": "9/2 03:12",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:55:07.113Z",
-            "label": "9/2 03:55",
-            "value": 25,
+            "at": "2026-09-01T20:19:55.764Z",
+            "label": "9/2 04:19",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:49:48.170Z",
-            "label": "9/2 04:49",
-            "value": 31,
+            "at": "2026-09-01T21:27:01.146Z",
+            "label": "9/2 05:27",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:44:29.227Z",
-            "label": "9/2 05:44",
-            "value": 36,
+            "at": "2026-09-01T22:34:06.529Z",
+            "label": "9/2 06:34",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:39:10.284Z",
-            "label": "9/2 06:39",
+            "at": "2026-09-01T23:41:11.911Z",
+            "label": "9/2 07:41",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T00:48:17.293Z",
+            "label": "9/2 08:48",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T01:55:22.675Z",
+            "label": "9/2 09:55",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:33:51.341Z",
-            "label": "9/2 07:33",
-            "value": 47,
+            "at": "2026-09-02T03:02:28.058Z",
+            "label": "9/2 11:02",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:28:32.398Z",
-            "label": "9/2 08:28",
-            "value": 53,
+            "at": "2026-09-02T04:09:33.440Z",
+            "label": "9/2 12:09",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:16:38.822Z",
+            "label": "9/2 13:16",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 58,
             "reports": 1
           }
@@ -2832,7 +4603,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T17:35:37.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2843,50 +4614,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T18:34:04.056Z",
-            "label": "9/2 02:34",
-            "value": 20,
+            "at": "2026-09-01T18:45:26.745Z",
+            "label": "9/2 02:45",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:32:31.113Z",
-            "label": "9/2 03:32",
-            "value": 26,
+            "at": "2026-09-01T19:55:16.491Z",
+            "label": "9/2 03:55",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:30:58.170Z",
-            "label": "9/2 04:30",
-            "value": 33,
+            "at": "2026-09-01T21:05:06.237Z",
+            "label": "9/2 05:05",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:29:25.227Z",
-            "label": "9/2 05:29",
-            "value": 39,
+            "at": "2026-09-01T22:14:55.983Z",
+            "label": "9/2 06:14",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:27:52.284Z",
-            "label": "9/2 06:27",
-            "value": 45,
+            "at": "2026-09-01T23:24:45.729Z",
+            "label": "9/2 07:24",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:26:19.341Z",
-            "label": "9/2 07:26",
-            "value": 51,
+            "at": "2026-09-02T00:34:35.475Z",
+            "label": "9/2 08:34",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:24:46.398Z",
-            "label": "9/2 08:24",
-            "value": 57,
+            "at": "2026-09-02T01:44:25.221Z",
+            "label": "9/2 09:44",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T02:54:14.967Z",
+            "label": "9/2 10:54",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T04:04:04.713Z",
+            "label": "9/2 12:04",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:13:54.459Z",
+            "label": "9/2 13:13",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -3027,7 +4816,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T17:08:51.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 97,
         "peak": 97,
         "history": [
@@ -3038,56 +4827,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T18:03:46.828Z",
-            "label": "9/2 02:03",
-            "value": 36,
+            "at": "2026-09-01T18:21:06.745Z",
+            "label": "9/2 02:21",
+            "value": 34,
             "reports": 2
           },
           {
-            "at": "2026-09-01T18:58:42.656Z",
-            "label": "9/2 02:58",
-            "value": 43,
+            "at": "2026-09-01T19:33:22.491Z",
+            "label": "9/2 03:33",
+            "value": 41,
             "reports": 2
           },
           {
-            "at": "2026-09-01T19:53:38.485Z",
-            "label": "9/2 03:53",
-            "value": 51,
+            "at": "2026-09-01T20:45:38.237Z",
+            "label": "9/2 04:45",
+            "value": 47,
             "reports": 2
           },
           {
-            "at": "2026-09-01T20:48:34.313Z",
-            "label": "9/2 04:48",
+            "at": "2026-09-01T21:57:53.983Z",
+            "label": "9/2 05:57",
+            "value": 53,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-01T23:10:09.729Z",
+            "label": "9/2 07:10",
             "value": 59,
             "reports": 2
           },
           {
-            "at": "2026-09-01T21:43:30.141Z",
-            "label": "9/2 05:43",
+            "at": "2026-09-02T00:22:25.475Z",
+            "label": "9/2 08:22",
             "value": 66,
             "reports": 2
           },
           {
-            "at": "2026-09-01T22:38:25.970Z",
-            "label": "9/2 06:38",
-            "value": 74,
+            "at": "2026-09-02T01:34:41.221Z",
+            "label": "9/2 09:34",
+            "value": 72,
             "reports": 2
           },
           {
-            "at": "2026-09-01T23:33:21.798Z",
-            "label": "9/2 07:33",
-            "value": 82,
+            "at": "2026-09-02T02:46:56.967Z",
+            "label": "9/2 10:46",
+            "value": 78,
             "reports": 2
           },
           {
-            "at": "2026-09-02T00:28:17.626Z",
-            "label": "9/2 08:28",
-            "value": 89,
+            "at": "2026-09-02T03:59:12.713Z",
+            "label": "9/2 11:59",
+            "value": 85,
             "reports": 2
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:11:28.459Z",
+            "label": "9/2 13:11",
+            "value": 91,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 97,
             "reports": 2
           }
@@ -3197,7 +4998,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T17:01:11.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 42,
         "peak": 42,
         "history": [
@@ -3208,56 +5009,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T17:56:57.939Z",
-            "label": "9/2 01:56",
+            "at": "2026-09-01T18:14:08.564Z",
+            "label": "9/2 02:14",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-01T18:52:44.878Z",
-            "label": "9/2 02:52",
-            "value": 20,
+            "at": "2026-09-01T19:27:06.128Z",
+            "label": "9/2 03:27",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:48:31.818Z",
-            "label": "9/2 03:48",
-            "value": 23,
+            "at": "2026-09-01T20:40:03.692Z",
+            "label": "9/2 04:40",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:44:18.757Z",
-            "label": "9/2 04:44",
-            "value": 26,
+            "at": "2026-09-01T21:53:01.256Z",
+            "label": "9/2 05:53",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:40:05.697Z",
-            "label": "9/2 05:40",
+            "at": "2026-09-01T23:05:58.820Z",
+            "label": "9/2 07:05",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T00:18:56.384Z",
+            "label": "9/2 08:18",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:35:52.636Z",
-            "label": "9/2 06:35",
+            "at": "2026-09-02T01:31:53.948Z",
+            "label": "9/2 09:31",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:31:39.576Z",
-            "label": "9/2 07:31",
-            "value": 36,
+            "at": "2026-09-02T02:44:51.512Z",
+            "label": "9/2 10:44",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:27:26.515Z",
-            "label": "9/2 08:27",
+            "at": "2026-09-02T03:57:49.076Z",
+            "label": "9/2 11:57",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:10:46.640Z",
+            "label": "9/2 13:10",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 42,
             "reports": 1
           }
@@ -3321,7 +5134,9 @@
         "医疗健康",
         "AI集成"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "OpenAI宣布其ChatGPT Health产品新增了与Epic系统的集成，允许临床医生导入患者数据。该集成提供健康记录的只读访问权限，旨在帮助医生更便捷地获取患者信息。Epic是医疗行业广泛使用的电子健康记录系统，此次合作可能提升临床工作流程的效率。目前，该功能的具体部署范围和时间表尚未公布，但此举表明OpenAI正积极进入医疗健康领域。",
       "keyPointsZh": [
         "OpenAI宣布ChatGPT Health与Epic系统集成。",
@@ -3361,7 +5176,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T17:00:00.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3372,56 +5187,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T17:55:54.828Z",
-            "label": "9/2 01:55",
-            "value": 20,
+            "at": "2026-09-01T18:13:04.018Z",
+            "label": "9/2 02:13",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T18:51:49.656Z",
-            "label": "9/2 02:51",
-            "value": 25,
+            "at": "2026-09-01T19:26:08.037Z",
+            "label": "9/2 03:26",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:47:44.485Z",
-            "label": "9/2 03:47",
-            "value": 31,
+            "at": "2026-09-01T20:39:12.055Z",
+            "label": "9/2 04:39",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:43:39.313Z",
-            "label": "9/2 04:43",
-            "value": 36,
+            "at": "2026-09-01T21:52:16.074Z",
+            "label": "9/2 05:52",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:39:34.141Z",
-            "label": "9/2 05:39",
-            "value": 42,
+            "at": "2026-09-01T23:05:20.093Z",
+            "label": "9/2 07:05",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:35:28.970Z",
-            "label": "9/2 06:35",
-            "value": 47,
+            "at": "2026-09-02T00:18:24.111Z",
+            "label": "9/2 08:18",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:31:23.798Z",
-            "label": "9/2 07:31",
-            "value": 53,
+            "at": "2026-09-02T01:31:28.130Z",
+            "label": "9/2 09:31",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:27:18.626Z",
-            "label": "9/2 08:27",
-            "value": 58,
+            "at": "2026-09-02T02:44:32.149Z",
+            "label": "9/2 10:44",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T03:57:36.167Z",
+            "label": "9/2 11:57",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:10:40.186Z",
+            "label": "9/2 13:10",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -3529,7 +5356,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T17:00:00.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3540,56 +5367,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T17:55:54.828Z",
-            "label": "9/2 01:55",
-            "value": 20,
+            "at": "2026-09-01T18:13:04.018Z",
+            "label": "9/2 02:13",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T18:51:49.656Z",
-            "label": "9/2 02:51",
-            "value": 25,
+            "at": "2026-09-01T19:26:08.037Z",
+            "label": "9/2 03:26",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:47:44.485Z",
-            "label": "9/2 03:47",
-            "value": 31,
+            "at": "2026-09-01T20:39:12.055Z",
+            "label": "9/2 04:39",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:43:39.313Z",
-            "label": "9/2 04:43",
-            "value": 36,
+            "at": "2026-09-01T21:52:16.074Z",
+            "label": "9/2 05:52",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:39:34.141Z",
-            "label": "9/2 05:39",
-            "value": 42,
+            "at": "2026-09-01T23:05:20.093Z",
+            "label": "9/2 07:05",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:35:28.970Z",
-            "label": "9/2 06:35",
-            "value": 47,
+            "at": "2026-09-02T00:18:24.111Z",
+            "label": "9/2 08:18",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:31:23.798Z",
-            "label": "9/2 07:31",
-            "value": 53,
+            "at": "2026-09-02T01:31:28.130Z",
+            "label": "9/2 09:31",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:27:18.626Z",
-            "label": "9/2 08:27",
-            "value": 58,
+            "at": "2026-09-02T02:44:32.149Z",
+            "label": "9/2 10:44",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T03:57:36.167Z",
+            "label": "9/2 11:57",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:10:40.186Z",
+            "label": "9/2 13:10",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -3705,7 +5544,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T16:49:11.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -3716,56 +5555,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T17:46:17.939Z",
-            "label": "9/2 01:46",
-            "value": 19,
+            "at": "2026-09-01T18:03:14.018Z",
+            "label": "9/2 02:03",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-01T18:43:24.878Z",
-            "label": "9/2 02:43",
-            "value": 24,
+            "at": "2026-09-01T19:17:17.037Z",
+            "label": "9/2 03:17",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:40:31.818Z",
-            "label": "9/2 03:40",
-            "value": 29,
+            "at": "2026-09-01T20:31:20.055Z",
+            "label": "9/2 04:31",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:37:38.757Z",
-            "label": "9/2 04:37",
+            "at": "2026-09-01T21:45:23.074Z",
+            "label": "9/2 05:45",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-01T22:59:26.093Z",
+            "label": "9/2 06:59",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:34:45.697Z",
-            "label": "9/2 05:34",
-            "value": 39,
+            "at": "2026-09-02T00:13:29.111Z",
+            "label": "9/2 08:13",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:31:52.636Z",
-            "label": "9/2 06:31",
-            "value": 43,
+            "at": "2026-09-02T01:27:32.130Z",
+            "label": "9/2 09:27",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:28:59.576Z",
-            "label": "9/2 07:28",
-            "value": 48,
+            "at": "2026-09-02T02:41:35.149Z",
+            "label": "9/2 10:41",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:26:06.515Z",
-            "label": "9/2 08:26",
-            "value": 53,
+            "at": "2026-09-02T03:55:38.167Z",
+            "label": "9/2 11:55",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T05:09:41.186Z",
+            "label": "9/2 13:09",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 58,
             "reports": 1
           }
@@ -3857,7 +5708,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T16:31:04.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -3868,56 +5719,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T17:30:11.717Z",
-            "label": "9/2 01:30",
-            "value": 20,
+            "at": "2026-09-01T17:46:45.836Z",
+            "label": "9/2 01:46",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-01T18:29:19.434Z",
-            "label": "9/2 02:29",
-            "value": 25,
+            "at": "2026-09-01T19:02:27.673Z",
+            "label": "9/2 03:02",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:28:27.151Z",
-            "label": "9/2 03:28",
-            "value": 31,
+            "at": "2026-09-01T20:18:09.510Z",
+            "label": "9/2 04:18",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:27:34.868Z",
-            "label": "9/2 04:27",
-            "value": 36,
+            "at": "2026-09-01T21:33:51.347Z",
+            "label": "9/2 05:33",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:26:42.586Z",
-            "label": "9/2 05:26",
-            "value": 42,
+            "at": "2026-09-01T22:49:33.184Z",
+            "label": "9/2 06:49",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:25:50.303Z",
-            "label": "9/2 06:25",
-            "value": 47,
+            "at": "2026-09-02T00:05:15.020Z",
+            "label": "9/2 08:05",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:24:58.020Z",
-            "label": "9/2 07:24",
-            "value": 53,
+            "at": "2026-09-02T01:20:56.857Z",
+            "label": "9/2 09:20",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:24:05.737Z",
-            "label": "9/2 08:24",
-            "value": 58,
+            "at": "2026-09-02T02:36:38.694Z",
+            "label": "9/2 10:36",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T03:52:20.531Z",
+            "label": "9/2 11:52",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:08:02.368Z",
+            "label": "9/2 13:08",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 64,
             "reports": 1
           }
@@ -4079,7 +5942,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T16:17:15.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 63,
         "peak": 63,
         "history": [
@@ -4090,62 +5953,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T17:11:50.845Z",
-            "label": "9/2 01:11",
-            "value": 19,
+            "at": "2026-09-01T17:34:12.200Z",
+            "label": "9/2 01:34",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-01T18:06:26.691Z",
-            "label": "9/2 02:06",
-            "value": 24,
+            "at": "2026-09-01T18:51:09.400Z",
+            "label": "9/2 02:51",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:01:02.536Z",
-            "label": "9/2 03:01",
-            "value": 29,
+            "at": "2026-09-01T20:08:06.601Z",
+            "label": "9/2 04:08",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-01T19:55:38.382Z",
-            "label": "9/2 03:55",
-            "value": 33,
+            "at": "2026-09-01T21:25:03.801Z",
+            "label": "9/2 05:25",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-01T20:50:14.227Z",
-            "label": "9/2 04:50",
-            "value": 38,
+            "at": "2026-09-01T22:42:01.002Z",
+            "label": "9/2 06:42",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-01T21:44:50.073Z",
-            "label": "9/2 05:44",
-            "value": 43,
+            "at": "2026-09-01T23:58:58.202Z",
+            "label": "9/2 07:58",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-01T22:39:25.918Z",
-            "label": "9/2 06:39",
-            "value": 48,
+            "at": "2026-09-02T01:15:55.403Z",
+            "label": "9/2 09:15",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-09-01T23:34:01.764Z",
-            "label": "9/2 07:34",
-            "value": 53,
+            "at": "2026-09-02T02:32:52.603Z",
+            "label": "9/2 10:32",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-09-02T00:28:37.609Z",
-            "label": "9/2 08:28",
+            "at": "2026-09-02T03:49:49.804Z",
+            "label": "9/2 11:49",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-02T05:06:47.004Z",
+            "label": "9/2 13:06",
             "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 63,
             "reports": 1
           }
@@ -4292,7 +6161,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-01T16:00:00.000Z",
-        "endedAt": "2026-09-02T01:23:13.455Z",
+        "endedAt": "2026-09-02T06:23:44.205Z",
         "current": 89,
         "peak": 89,
         "history": [
@@ -4303,62 +6172,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-01T16:56:19.345Z",
-            "label": "9/2 00:56",
+            "at": "2026-09-01T17:18:31.291Z",
+            "label": "9/2 01:18",
             "value": 34,
             "reports": 2
           },
           {
-            "at": "2026-09-01T17:52:38.691Z",
-            "label": "9/2 01:52",
-            "value": 40,
+            "at": "2026-09-01T18:37:02.582Z",
+            "label": "9/2 02:37",
+            "value": 39,
             "reports": 2
           },
           {
-            "at": "2026-09-01T18:48:58.036Z",
-            "label": "9/2 02:48",
-            "value": 46,
+            "at": "2026-09-01T19:55:33.874Z",
+            "label": "9/2 03:55",
+            "value": 45,
             "reports": 2
           },
           {
-            "at": "2026-09-01T19:45:17.382Z",
-            "label": "9/2 03:45",
-            "value": 52,
+            "at": "2026-09-01T21:14:05.165Z",
+            "label": "9/2 05:14",
+            "value": 50,
             "reports": 2
           },
           {
-            "at": "2026-09-01T20:41:36.727Z",
-            "label": "9/2 04:41",
-            "value": 58,
+            "at": "2026-09-01T22:32:36.456Z",
+            "label": "9/2 06:32",
+            "value": 56,
             "reports": 2
           },
           {
-            "at": "2026-09-01T21:37:56.073Z",
-            "label": "9/2 05:37",
-            "value": 65,
+            "at": "2026-09-01T23:51:07.748Z",
+            "label": "9/2 07:51",
+            "value": 61,
             "reports": 2
           },
           {
-            "at": "2026-09-01T22:34:15.418Z",
-            "label": "9/2 06:34",
-            "value": 71,
+            "at": "2026-09-02T01:09:39.039Z",
+            "label": "9/2 09:09",
+            "value": 67,
             "reports": 2
           },
           {
-            "at": "2026-09-01T23:30:34.764Z",
-            "label": "9/2 07:30",
-            "value": 77,
+            "at": "2026-09-02T02:28:10.330Z",
+            "label": "9/2 10:28",
+            "value": 72,
             "reports": 2
           },
           {
-            "at": "2026-09-02T00:26:54.109Z",
-            "label": "9/2 08:26",
+            "at": "2026-09-02T03:46:41.622Z",
+            "label": "9/2 11:46",
+            "value": 78,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-02T05:05:12.913Z",
+            "label": "9/2 13:05",
             "value": 83,
             "reports": 2
           },
           {
-            "at": "2026-09-02T01:23:13.455Z",
-            "label": "9/2 09:23",
+            "at": "2026-09-02T06:23:44.205Z",
+            "label": "9/2 14:23",
             "value": 89,
             "reports": 2
           }
