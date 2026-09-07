@@ -1,7 +1,598 @@
 {
-  "generatedAt": "2026-09-06T23:46:03.335Z",
+  "generatedAt": "2026-09-07T04:23:43.166Z",
   "date": "2026-09-07",
   "items": [
+    {
+      "id": "85ec8233e9b09723",
+      "normalizedUrl": "https://arxiv.org/abs/2609.04239",
+      "originalUrl": "https://arxiv.org/abs/2609.04239",
+      "titleOriginal": "EXAONE Forecast for Finance",
+      "summaryOriginal": "arXiv:2609.04239v1 Announce Type: new Abstract: This technical report presents EXAONE Forecast for Finance (EXAONE Finance), a financial time series (TS) foundation model (TSFM) tailored to financial forecasting. Recent TSFMs achieve strong zero-shot performance through large-scale pretraining. However, they are primarily developed for general-domain TS and largely rely on self-attention backbones whose computational cost grows quadratically with sequence length and variate count. Moreover, they assume fully observed inputs and are pretrained on corpora that fail to capture the unique dynamics of financial markets. These limitations hinder their applicability to finance, where long, many-channel, intermittently observed panels are common. To address these challenges, EXAONE Finance adopts an attention-free architecture, replacing self-attention with two simple yet effective linear-time operators: 1) a causal 1D convolution for temporal mixing and 2) a group-aware pooling multi-layer perceptron (MLP) for variate mixing. Furthermore, a masked context augmentation exposes the model to contiguous missing spans during training, improving robustness to the missingness pervasive in financ",
+      "originalLanguage": "en",
+      "author": "Seunghan Lee, Jaehoon Lee, Jun Seo, Tae Yoon Lim, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, Junhyeok Kang, Sangjun Han, Soonyoung Lee, Wonbin Ahn",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-07T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.04239",
+          "publishedAt": "2026-09-07T04:00:00.000Z",
+          "title": "EXAONE Forecast for Finance",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该模型针对金融时间序列的独特挑战提出创新架构，具有实际应用潜力，但技术细节有限。",
+      "importanceReasonEn": "The model proposes an innovative architecture for financial time series challenges with practical potential, but technical details are limited.",
+      "scoringMode": "ai",
+      "titleZh": "EXAONE金融预测模型",
+      "titleEn": "EXAONE Forecast for Finance",
+      "summaryZh": "EXAONE Finance是一个专为金融预测设计的金融时间序列基础模型。它采用无注意力架构，用因果一维卷积和分组感知池化MLP替代自注意力，以处理金融数据中常见的长序列、多变量和间歇性缺失问题。通过掩码上下文增强训练，模型对数据缺失具有鲁棒性。",
+      "summaryEn": "EXAONE Finance is a financial time series foundation model tailored for financial forecasting. It adopts an attention-free architecture, replacing self-attention with causal 1D convolution and group-aware pooling MLP to handle long sequences, many variates, and intermittent missingness common in finance. Masked context augmentation improves robustness to missing data.",
+      "keywords": [
+        "EXAONE",
+        "金融预测",
+        "时间序列基础模型",
+        "无注意力",
+        "缺失数据"
+      ],
+      "topics": [
+        "金融时间序列",
+        "基础模型",
+        "无注意力架构"
+      ],
+      "models": [
+        "EXAONE Finance"
+      ],
+      "detailZh": "EXAONE Finance是一个金融时间序列基础模型，旨在解决金融预测中的独特挑战。传统的时间序列基础模型主要针对通用领域开发，依赖自注意力机制，其计算成本随序列长度和变量数量呈二次方增长。此外，它们假设输入完全观测，且预训练语料未能捕捉金融市场的动态特性。这些限制阻碍了它们在金融领域的应用，因为金融数据通常具有长序列、多通道和间歇性观测的特点。\n\n为了应对这些挑战，EXAONE Finance采用无注意力架构，用两个简单而有效的线性时间算子替代自注意力：1）用于时间混合的因果一维卷积；2）用于变量混合的分组感知池化多层感知机（MLP）。这种设计显著降低了计算复杂度，使其能够高效处理长序列和多变量数据。\n\n此外，模型在训练期间使用掩码上下文增强，使模型暴露于连续的缺失片段，从而提高对金融数据中普遍存在的缺失情况的鲁棒性。这使得模型能够更好地处理实际金融数据中的不完整观测。\n\n该技术报告来自arXiv，但提供的细节有限，未包含具体的性能基准或与现有模型的比较。因此，其实际效果仍需进一步验证。",
+      "keyPointsZh": [
+        "EXAONE Finance是专为金融预测设计的时间序列基础模型。",
+        "采用无注意力架构，使用因果一维卷积和分组感知池化MLP。",
+        "通过掩码上下文增强提高对缺失数据的鲁棒性。",
+        "旨在解决金融数据长序列、多变量和间歇性缺失的挑战。"
+      ],
+      "impactZh": "该模型可能为金融时间序列预测提供更高效、更鲁棒的解决方案，推动金融AI应用的发展。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和金融数据科学家，该模型可能提供一种处理金融数据缺失和长序列的新方法，但需等待更多细节和基准测试。",
+      "howItWorksZh": "EXAONE Finance使用因果一维卷积进行时间混合，类似于处理序列的时间依赖；使用分组感知池化MLP进行变量混合，将变量分组并池化以捕捉跨变量关系。训练时采用掩码上下文增强，随机掩盖连续时间步，使模型学会从部分观测中预测。",
+      "interpretationZh": "该报告声称模型在金融预测上具有优势，但未提供具体实验结果。其架构创新是合理的，但实际性能需进一步验证。",
+      "limitationsZh": "报告未提供模型规模、训练数据、性能基准等关键细节，也未与现有模型进行比较，因此无法评估其实际效果。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.04239",
+          "publishedAt": "2026-09-07T04:00:00.000Z",
+          "title": "EXAONE Forecast for Finance",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-07T04:00:00.000Z",
+        "endedAt": "2026-09-07T04:23:43.166Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-09-07T04:00:00.000Z",
+            "label": "9/7 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-07T04:23:43.166Z",
+            "label": "9/7 12:23",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d194bd04836e625a",
+      "normalizedUrl": "https://arxiv.org/abs/2609.04286",
+      "originalUrl": "https://arxiv.org/abs/2609.04286",
+      "titleOriginal": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+      "summaryOriginal": "arXiv:2609.04286v1 Announce Type: new Abstract: Artificial intelligence in recruitment has shifted the object being automated from profile pairs and ranked lists to multi-stage workflows that retrieve evidence, compare candidates, and support or execute actions. This systematized narrative review traces that development from bilateral retrieval and behavioral ranking through neural person--job matching, large language model (LLM) components, and tool-using recruiting agents. Using a purposive search and coding protocol updated through 23 July 2026, plus targeted updates through 2 September 2026, we organize 40 representative works with supporting industrial and legal sources. This synthesis is not a prevalence estimate. We analyze three coupled transitions: from similarity to reciprocal suitability, from a model to a compound workflow, and from offline prediction to evidence- and productivity-aligned evaluation. Across document understanding, retrieval, ranking, assessment, interviewing, sourcing, and human handoff, we distinguish field-, pair-, list-, case-, trajectory-, and outcome-level evidence. Persistent gaps arise because behavioral labels confound exposure, preference, and",
+      "originalLanguage": "en",
+      "author": "Ziyi Zhao, Guanzheng Wei",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-07T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.04286",
+          "publishedAt": "2026-09-07T04:00:00.000Z",
+          "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该综述系统梳理了AI招聘从传统匹配模型到LLM和智能体的演进，并提出了多层级证据评估框架，对研究者和从业者均有参考价值。",
+      "importanceReasonEn": "This review systematically maps the evolution of AI recruitment from traditional matching to LLM and agent-based systems, proposing a multi-level evidence evaluation framework, valuable for both researchers and practitioners.",
+      "scoringMode": "ai",
+      "titleZh": "从匹配模型到招聘代理：AI招聘系统、评估与治理的系统化叙述性综述",
+      "titleEn": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+      "summaryZh": "arXiv:2609.04286v1 公告类型：新论文。摘要：人工智能在招聘中的应用已将自动化对象从档案配对和排名列表转变为多阶段工作流，这些工作流检索证据、比较候选人并支持或执行行动。这篇系统化叙述性综述追溯了从双边检索和行为排名，到神经人岗匹配、大语言模型组件以及使用工具的招聘代理的发展。通过截至2026年7月23日的定向搜索和编码协议，以及截至2026年9月2日的定向更新，我们整理了40篇代表性作品及配套的工业和法律来源。本综述并非流行率估计。我们分析了三个耦合的转变：从相似性到互惠适配性，从模型到复合工作流，以及从离线预测到基于证据和生产力对齐的评估。在文档理解、检索、排名、评估、面试、寻源和人工交接方面，我们区分了领域级、配对级、列表级、案例级、轨迹级和结果级证据。持续存在的差距源于行为标签混淆了曝光、偏好和……",
+      "summaryEn": "arXiv:2609.04286v1 Announce Type: new Abstract: Artificial intelligence in recruitment has shifted the object being automated from profile pairs and ranked lists to multi-stage workflows that retrieve evidence, compare candidates, and support or execute actions. This systematized narrative review traces that development from bilateral retrieval and behavioral ranking through neural person--job matching, large language model (LLM) components, and tool-using recruiting agents. Using a purposive search and coding protocol updated through 23 July 2026, plus targeted updates through 2 September 2026, we organize 40 representative works with supporting industrial and legal sources. This synthesis is not a prevalence estimate. We analyze three coupled transitions: from similarity to reciprocal su",
+      "keywords": [
+        "AI招聘",
+        "人岗匹配",
+        "招聘代理",
+        "LLM",
+        "评估",
+        "治理",
+        "综述"
+      ],
+      "topics": [
+        "AI招聘",
+        "大语言模型",
+        "智能体",
+        "评估",
+        "治理"
+      ],
+      "models": [],
+      "detailZh": "该论文是一篇系统化叙述性综述，旨在梳理人工智能在招聘领域的发展脉络。作者指出，AI招聘的自动化对象已从简单的简历配对和排名列表，转变为能够检索证据、比较候选人并支持或执行行动的多阶段工作流。综述追溯了从早期的双边检索和行为排名，到神经人岗匹配，再到引入大语言模型组件和能够使用工具的招聘代理的演进过程。\n\n作者采用了截至2026年7月23日的定向搜索和编码协议，并进行了截至2026年9月2日的定向更新，最终整理了40篇代表性研究作品，并辅以工业和法律来源。综述强调，其目的并非提供流行率估计，而是分析三个耦合的转变：从相似性到互惠适配性（即不仅考虑候选人是否适合职位，也考虑职位是否适合候选人），从单一模型到复合工作流（涉及多个组件协同），以及从离线预测到基于证据和生产力对齐的评估。\n\n在评估层面，综述区分了领域级、配对级、列表级、案例级、轨迹级和结果级证据，覆盖了文档理解、检索、排名、评估、面试、寻源和人工交接等环节。作者指出，持续存在的差距源于行为标签混淆了曝光、偏好和结果等因素，这可能导致评估偏差。\n\n综述还涉及治理问题，讨论了AI招聘系统在公平性、透明度和问责性方面的挑战。由于是综述，论文并未提供新的实验结果，而是对现有文献进行了整合和批判性分析。",
+      "keyPointsZh": [
+        "AI招聘的自动化对象已从配对和排名转向多阶段工作流。",
+        "综述梳理了从传统匹配到神经模型、LLM和招聘代理的演进。",
+        "提出了三个转变：相似性到互惠适配性、模型到复合工作流、离线预测到证据评估。",
+        "区分了六种证据层级：领域、配对、列表、案例、轨迹和结果。",
+        "指出行为标签混淆曝光、偏好和结果导致评估差距。"
+      ],
+      "impactZh": "该综述为AI招聘领域提供了系统化的框架，有助于研究者理解技术演进和评估挑战，并为开发更公平、有效的招聘系统提供理论指导。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI从业者和招聘系统开发者，该综述提供了评估AI招聘系统的多层级框架，有助于识别现有系统的局限并改进设计。",
+      "howItWorksZh": "",
+      "interpretationZh": "该论文是一篇综述，其内容基于对40篇代表性作品的分析。作者提出的三个转变和证据层级框架是合理的归纳，但并非对所有现有系统的精确描述。读者应将其视为对领域趋势的概括性解读，而非对具体产品的评价。",
+      "limitationsZh": "该综述基于定向搜索而非系统性全面检索，可能遗漏部分相关研究。此外，综述未提供定量分析，其结论依赖于作者的主观编码和解释。",
+      "actionStepsZh": [
+        "阅读原文以获取完整的分析框架和文献列表。",
+        "关注行为标签混淆问题，在评估招聘模型时注意区分曝光、偏好和结果。",
+        "考虑采用多层级证据评估方法，而不仅仅依赖单一指标。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.04286",
+          "publishedAt": "2026-09-07T04:00:00.000Z",
+          "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-07T04:00:00.000Z",
+        "endedAt": "2026-09-07T04:23:43.166Z",
+        "current": 64,
+        "peak": 64,
+        "history": [
+          {
+            "at": "2026-09-07T04:00:00.000Z",
+            "label": "9/7 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-07T04:23:43.166Z",
+            "label": "9/7 12:23",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b47a5909a7c0898a",
+      "normalizedUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685960&idx=1&sn=df5885920be226f9514f47a7f2d30621",
+      "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685960&idx=1&sn=df5885920be226f9514f47a7f2d30621",
+      "titleOriginal": "GPT-6 Astra爆火后，卡兹克谈执行能力贬值与判断力断层",
+      "summaryOriginal": "GPT-6 Astra上线后，大量用户用它自主操控Blender、Houdini、Unity、Aseprite等专业软件，做出游戏Demo、3D复刻旧金山艺术宫等作品，其中旧金山艺术宫案例里Astra自己搜索几百张参考图、翻到美国国会图书馆的老扫描文件找柱子尺寸，多数工作在夜间自主完成。",
+      "originalLanguage": "zh",
+      "author": "公众号：数字生命卡兹克",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmtqhifvf04pwrohqvdfqmfxp",
+        "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685960&idx=1&sn=df5885920be226f9514f47a7f2d30621"
+      ],
+      "publishedAt": "2026-09-07T00:08:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-07T00:10:30.732Z",
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.virxact.com/items/cmtqhifvf04pwrohqvdfqmfxp"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmtqhifvf04pwrohqvdfqmfxp",
+          "name": "公众号：数字生命卡兹克",
+          "type": "practitioner",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685960&idx=1&sn=df5885920be226f9514f47a7f2d30621",
+          "publishedAt": "2026-09-07T00:08:00.000Z",
+          "title": "GPT-6 Astra爆火后，卡兹克谈执行能力贬值与判断力断层",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtqhifvf04pwrohqvdfqmfxp",
+            "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685960&idx=1&sn=df5885920be226f9514f47a7f2d30621"
+          ]
+        }
+      ],
+      "importance": 69,
+      "importanceReasonZh": "该事件展示了AI自主执行能力的显著提升，并引发对执行能力贬值与判断力重要性的讨论，对AI用户和从业者有实际启示。",
+      "importanceReasonEn": "This event demonstrates a significant leap in AI autonomous execution and sparks discussion on the depreciation of execution skills and the importance of judgment, offering practical insights for AI users and practitioners.",
+      "scoringMode": "ai",
+      "titleZh": "GPT-6 Astra爆火后，卡兹克谈执行能力贬值与判断力断层",
+      "titleEn": "After GPT-6 Astra Goes Viral, Kazik Discusses the Depreciation of Execution Ability and the Judgment Gap",
+      "summaryZh": "GPT-6 Astra上线后，大量用户用它自主操控Blender、Houdini、Unity、Aseprite等专业软件，做出游戏Demo、3D复刻旧金山艺术宫等作品，其中旧金山艺术宫案例里Astra自己搜索几百张参考图、翻到美国国会图书馆的老扫描文件找柱子尺寸，多数工作在夜间自主完成。",
+      "summaryEn": "After GPT-6 Astra launched, many users used it to autonomously operate professional software like Blender, Houdini, Unity, and Aseprite, creating game demos and a 3D replica of the Palace of Fine Arts in San Francisco. In the Palace case, Astra searched hundreds of reference images and even found old scanned files from the Library of Congress to get column dimensions, completing most work autonomously at night.",
+      "keywords": [
+        "GPT-6 Astra",
+        "执行能力",
+        "判断力",
+        "AI自主操控",
+        "专业软件"
+      ],
+      "topics": [
+        "GPT-6 Astra",
+        "AI自主执行",
+        "判断力",
+        "执行能力贬值"
+      ],
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "detailZh": "GPT-6 Astra上线后，在社交媒体上爆火，大量用户用它自主操控Blender、Houdini、Unity、Aseprite等专业软件，制作出游戏Demo、3D复刻旧金山艺术宫等作品。其中，旧金山艺术宫的案例尤为突出：Astra自己搜索了几百张参考图，甚至翻到美国国会图书馆的老扫描文件来获取柱子的尺寸，多数工作是在夜间自主完成的。这一现象引发了卡兹克的思考，他认为执行能力正在快速贬值，而判断力成为新的稀缺资源。卡兹克指出，当AI能够自主完成复杂的执行任务时，人类的优势不再体现在“怎么做”，而是“做什么”和“为什么做”。他观察到，许多用户开始将AI视为“员工”而非“工具”，但同时也面临如何有效管理和引导AI的挑战。卡兹克强调，判断力——即选择正确目标、评估结果质量、做出关键决策的能力——将成为未来人机协作中的核心能力。他建议用户应注重培养自己的判断力，而不是单纯依赖AI的执行能力。",
+      "keyPointsZh": [
+        "GPT-6 Astra能自主操控Blender、Houdini等专业软件，完成复杂创作任务。",
+        "旧金山艺术宫案例中，Astra自主搜索参考图并查阅国会图书馆资料，夜间完成大部分工作。",
+        "卡兹克认为执行能力正在贬值，判断力成为新的稀缺资源。",
+        "AI被视为“员工”而非“工具”，但管理和引导AI需要新技能。",
+        "判断力（选择目标、评估结果、决策）将成为人机协作的核心。"
+      ],
+      "impactZh": "该事件标志着AI从辅助工具向自主执行者的转变，可能改变创意产业的工作流程，降低专业软件的使用门槛，同时加剧对判断力等高级认知能力的需求。",
+      "readerImpactZh": "对于普通用户，这意味着AI可以帮你完成复杂的软件操作，但你需要学会如何提出正确的需求并评估AI的输出质量。",
+      "userImpactZh": "对于AI用户和开发者，应关注如何有效利用AI的自主执行能力，同时培养自己的判断力，以在AI时代保持竞争力。",
+      "howItWorksZh": "GPT-6 Astra通过自主规划任务、调用工具（如搜索、文件读取）和操作软件，实现了端到端的执行。用户只需给出目标，Astra会分解任务、执行操作并迭代优化。例如，在旧金山艺术宫案例中，Astra先搜索参考图，再查阅历史资料获取尺寸，最后在Blender中建模，整个过程无需人工干预。",
+      "interpretationZh": "报道中提到的案例展示了AI自主执行能力的进步，但具体技术细节和可靠性尚未公开验证。卡兹克的观点属于个人观察和推断，反映了对AI影响的担忧。",
+      "limitationsZh": "该报道基于个人观察，缺乏系统性数据支持。AI自主执行的成功率、错误率及适用范围尚不明确。",
+      "actionStepsZh": [
+        "尝试使用GPT-6 Astra完成一个简单的专业软件任务，体验其自主执行能力。",
+        "在任务中明确目标和验收标准，以便评估AI输出质量。",
+        "关注AI执行过程中的决策点，思考如何优化提示词或任务分解。",
+        "培养自己的判断力，例如学习如何评估AI生成内容的质量。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmtqhifvf04pwrohqvdfqmfxp",
+          "name": "公众号：数字生命卡兹克",
+          "type": "practitioner",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685960&idx=1&sn=df5885920be226f9514f47a7f2d30621",
+          "publishedAt": "2026-09-07T00:08:00.000Z",
+          "title": "GPT-6 Astra爆火后，卡兹克谈执行能力贬值与判断力断层",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmtqhifvf04pwrohqvdfqmfxp",
+            "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685960&idx=1&sn=df5885920be226f9514f47a7f2d30621"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-07T00:08:00.000Z",
+        "endedAt": "2026-09-07T04:23:43.166Z",
+        "current": 63,
+        "peak": 63,
+        "history": [
+          {
+            "at": "2026-09-07T00:08:00.000Z",
+            "label": "9/7 08:08",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-07T00:59:08.633Z",
+            "label": "9/7 08:59",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T01:50:17.266Z",
+            "label": "9/7 09:50",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T02:41:25.899Z",
+            "label": "9/7 10:41",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T03:32:34.532Z",
+            "label": "9/7 11:32",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T04:23:43.166Z",
+            "label": "9/7 12:23",
+            "value": 63,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "3784d7aba9718af9",
+      "normalizedUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "originalUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "titleOriginal": "Research acceleration: The view inside OpenAI",
+      "summaryOriginal": "Research acceleration: The view inside OpenAI Apparently today is RSI day at OpenAI, for Recursive Self-Improvement - I think it's their new AGI. Both this piece and the new essay An Alien Mind (by Chief Scientist Jakub Pachocki) talk about it, and this one doesn't even bother to expand the acronym. Included are details on how OpenAI's own research team are using coding agents. Like pretty much everyone else 2026 has been the year that agentic engineering really took off at OpenAI, best illustrated by this chart: I'm intrigued at what caused that significant acceleration in AI spend per researcher in late July - my best guess is that's when internal employees gained access to the model later released as GPT-6 Astra. Tags: ai , openai , generative-ai , chatgpt , llms , coding-agents , november-2025-inflection , recursive-self-improvement",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "research",
+      "sourceType": "official",
+      "authority": 100,
+      "sourcePriority": 100,
+      "images": [
+        "https://static.simonwillison.net/static/2026/openai-agent-usage.webp"
+      ],
+      "resourceLinks": [
+        "https://aihot.virxact.com/items/cmtpzyon6019iroemu68v4s2v",
+        "https://openai.com/index/research-acceleration-view-inside-openai",
+        "https://openai.com/index/research-acceleration-view-inside-openai/",
+        "https://openai.com/index/an-alien-mind/",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/openai",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/chatgpt",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/coding-agents",
+        "https://simonwillison.net/tags/november-2025-inflection",
+        "https://simonwillison.net/tags/recursive-self-improvement"
+      ],
+      "publishedAt": "2026-09-06T23:57:40.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+          "publishedAt": "2026-09-06T08:00:00.000Z",
+          "title": "Research acceleration: The view inside OpenAI",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        },
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+          "publishedAt": "2026-09-06T23:57:40.000Z",
+          "title": "Research acceleration: The view inside OpenAI",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/openai-agent-usage.webp"
+          ],
+          "resourceLinks": [
+            "https://openai.com/index/research-acceleration-view-inside-openai/",
+            "https://openai.com/index/an-alien-mind/",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/openai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/chatgpt",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/coding-agents",
+            "https://simonwillison.net/tags/november-2025-inflection",
+            "https://simonwillison.net/tags/recursive-self-improvement"
+          ]
+        }
+      ],
+      "importance": 70,
+      "importanceReasonZh": "该事件揭示了OpenAI内部使用编码代理加速研究的实践，对AI研究社区具有启发意义，但信息有限且未经验证。",
+      "importanceReasonEn": "This event reveals OpenAI's internal practice of using coding agents to accelerate research, which is insightful for the AI research community, but the information is limited and unverified.",
+      "scoringMode": "ai",
+      "titleZh": "研究加速：OpenAI内部视角",
+      "titleEn": "Research acceleration: The view inside OpenAI",
+      "summaryZh": "在OpenAI内部，编码代理正在重塑AI研究。探索代理使用、实验速度、任务复杂性和研究加速的早期数据。",
+      "summaryEn": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+      "keywords": [
+        "coding agents",
+        "research acceleration",
+        "OpenAI",
+        "experiment velocity"
+      ],
+      "topics": [
+        "coding agents",
+        "AI research",
+        "OpenAI"
+      ],
+      "models": [
+        "GPT / Codex"
+      ],
+      "detailZh": "OpenAI发布了一篇博客文章，分享了其内部使用编码代理（coding agents）加速AI研究的经验。文章提到，编码代理在OpenAI的研究工作中扮演了重要角色，帮助研究人员更快地进行实验和迭代。早期数据显示，代理的使用显著提高了实验速度，并允许研究人员处理更复杂的任务。文章还讨论了代理在代码生成、调试和测试等方面的应用，以及它们如何与人类研究人员协作。然而，文章并未提供具体的量化数据或详细的案例研究，仅作为初步观察分享。",
+      "keyPointsZh": [
+        "OpenAI内部使用编码代理加速研究。",
+        "代理提高了实验速度和任务复杂性。",
+        "文章为初步观察，缺乏具体数据。"
+      ],
+      "impactZh": "该事件表明编码代理可能成为AI研究的重要工具，可能改变研究流程和效率，但影响尚需更多证据。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和研究人员，这可能意味着未来研究工具的发展方向，但当前信息不足以指导具体实践。",
+      "howItWorksZh": "",
+      "interpretationZh": "文章报告了OpenAI内部使用编码代理的初步经验，但未提供详细数据或方法论，因此应视为轶事证据。合理推断是编码代理可能提高研究效率，但需更多公开验证。",
+      "limitationsZh": "信息有限，未提供具体数据、案例或方法论，且来源为OpenAI自身，可能存在偏见。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 2,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+          "publishedAt": "2026-09-06T23:57:40.000Z",
+          "title": "Research acceleration: The view inside OpenAI",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/openai-agent-usage.webp"
+          ],
+          "resourceLinks": [
+            "https://openai.com/index/research-acceleration-view-inside-openai/",
+            "https://openai.com/index/an-alien-mind/",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/openai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/chatgpt",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/coding-agents",
+            "https://simonwillison.net/tags/november-2025-inflection",
+            "https://simonwillison.net/tags/recursive-self-improvement"
+          ]
+        },
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+          "publishedAt": "2026-09-06T08:00:00.000Z",
+          "title": "Research acceleration: The view inside OpenAI",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-06T23:57:40.000Z",
+        "endedAt": "2026-09-07T04:23:43.166Z",
+        "current": 89,
+        "peak": 89,
+        "history": [
+          {
+            "at": "2026-09-06T23:57:40.000Z",
+            "label": "9/7 07:57",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-07T00:50:52.633Z",
+            "label": "9/7 08:50",
+            "value": 40,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-07T01:44:05.266Z",
+            "label": "9/7 09:44",
+            "value": 52,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-07T02:37:17.899Z",
+            "label": "9/7 10:37",
+            "value": 65,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-07T03:30:30.532Z",
+            "label": "9/7 11:30",
+            "value": 77,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-07T04:23:43.166Z",
+            "label": "9/7 12:23",
+            "value": 89,
+            "reports": 2
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "b5898210effe4127",
       "normalizedUrl": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement",
@@ -41,9 +632,9 @@
       "importanceReasonZh": "该事件涉及AI公司与内容创作者之间的版权纠纷，对行业有影响，但信息有限。",
       "importanceReasonEn": "The event involves copyright disputes between AI companies and content creators, impacting the industry, but information is limited.",
       "scoringMode": "ai",
-      "titleZh": "作者反击：出版商和代理商就Anthropic和解金提出主张",
+      "titleZh": "作者反击：出版商和代理商在Anthropic和解中提出索赔",
       "titleEn": "Authors push back as publishers and agents make claims on Anthropic settlement",
-      "summaryZh": "作者表示，出版商似乎在和解金分配中要求超出其应得的份额。",
+      "summaryZh": "作者表示，出版商似乎要求获得超出其应得份额的和解款项。",
       "summaryEn": "Authors say publishers seem to be claiming more than their fair share of settlement payments.",
       "keywords": [
         "Anthropic",
@@ -59,19 +650,18 @@
         "出版商"
       ],
       "models": [],
-      "detailZh": "据报道，Anthropic与作者之间的版权诉讼和解中，出版商和代理商正在就和解金的分配提出主张。作者认为出版商试图获取超出其应得份额的款项。目前，具体和解金额和分配细节尚未公开。该事件反映了AI训练数据使用与版权所有者之间的紧张关系。",
+      "detailZh": "据报道，Anthropic公司近期就一起版权诉讼达成了和解，但和解款项的分配引发了争议。作者们指出，出版商和代理商似乎试图从和解金中索取超出其应得份额的部分。这一事件反映了AI训练数据使用中版权归属和利益分配的复杂问题。目前，具体和解金额和分配细节尚未公开，作者与出版商之间的分歧仍在持续。",
       "keyPointsZh": [
-        "Anthropic与作者达成版权诉讼和解。",
-        "出版商和代理商对和解金提出主张。",
-        "作者认为出版商要求过多份额。",
-        "具体和解金额未披露。"
+        "Anthropic就版权诉讼达成和解。",
+        "作者认为出版商和代理商索赔过多。",
+        "和解金额和分配细节未公开。"
       ],
-      "impactZh": "该事件可能影响AI公司与内容创作者之间的合作模式，以及未来版权诉讼的和解方式。",
+      "impactZh": "此事件可能影响AI公司与内容创作者之间的合作模式，以及未来版权纠纷的和解方式。",
       "readerImpactZh": "",
-      "userImpactZh": "对于AI开发者和使用AI生成内容的团队，此事件提醒注意版权合规风险，可能影响未来使用受版权保护材料的条款。",
+      "userImpactZh": "对于AI开发者和使用AI服务的团队，此事件提醒他们注意训练数据的版权合规性，以及可能面临的类似法律风险。",
       "howItWorksZh": "",
-      "interpretationZh": "报道指出作者与出版商之间存在分配争议，但具体细节尚不清楚。合理推断是出版商可能基于其与作者的合同主张权利，但作者认为其应获得更多。",
-      "limitationsZh": "报道未提供具体和解金额、参与方或法律细节，信息有限。",
+      "interpretationZh": "根据现有报道，作者与出版商之间的分歧是明确的，但具体细节和双方立场尚未完全披露。合理推断是，出版商可能基于其与作者的合同主张权利，而作者认为这些主张超出了合理范围。",
+      "limitationsZh": "信息来源单一，缺乏具体和解条款和各方详细声明，无法全面评估争议的实质。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -94,7 +684,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-06T20:47:37.000Z",
-        "endedAt": "2026-09-06T23:46:03.335Z",
+        "endedAt": "2026-09-07T04:23:43.166Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -105,20 +695,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-06T21:47:05.778Z",
-            "label": "9/7 05:47",
-            "value": 29,
+            "at": "2026-09-06T21:44:37.770Z",
+            "label": "9/7 05:44",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-06T22:46:34.556Z",
-            "label": "9/7 06:46",
-            "value": 43,
+            "at": "2026-09-06T22:41:38.541Z",
+            "label": "9/7 06:41",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-06T23:46:03.335Z",
-            "label": "9/7 07:46",
+            "at": "2026-09-06T23:38:39.312Z",
+            "label": "9/7 07:38",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T00:35:40.083Z",
+            "label": "9/7 08:35",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T01:32:40.853Z",
+            "label": "9/7 09:32",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T02:29:41.624Z",
+            "label": "9/7 10:29",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T03:26:42.395Z",
+            "label": "9/7 11:26",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T04:23:43.166Z",
+            "label": "9/7 12:23",
             "value": 58,
             "reports": 1
           }
@@ -171,41 +791,41 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件标志着 AI 在自动化研究领域的重要进展，且涉及递归自我改进的讨论，对 AI 发展具有潜在深远影响，但信息源自社交媒体，未经官方证实，重要性中等偏高。",
-      "importanceReasonEn": "This event marks significant progress in AI-driven automated research and touches on recursive self-improvement, with potentially profound implications for AI development, but the information originates from social media and is unverified, giving it moderate-high importance.",
+      "importanceReasonZh": "该事件涉及 OpenAI 在自动化研究方面的内部进展，可能影响 AI 研发效率与行业竞争格局，但信息源为社交媒体转述，缺乏官方确认，故重要性中等偏高。",
+      "importanceReasonEn": "The event involves OpenAI's internal progress in automated research, potentially impacting AI R&D efficiency and industry competition, but the source is a social media repost without official confirmation, hence moderate-high importance.",
       "scoringMode": "ai",
       "titleZh": "OpenAI 宣布达到自动化研究实习生里程碑，内部 agent 运行时达人力 3.1 倍",
-      "titleEn": "OpenAI Announces Milestone of Automated Research Intern, Internal Agent Runtime at 3.1x Human Effort",
+      "titleEn": "OpenAI Announces Milestone of Automated Research Intern, Internal Agent Runtime 3.1x Human Effort",
       "summaryZh": "OpenAI 发布内部数据称已达到自动化研究实习生里程碑，即可在人类监督下完成熟练研究员需数天的明确任务。截至 8 月中旬，其研究组织每投入 1 个人工工作日，就使用 3.1 个 agent 工作日的运行时长，该比值衡量的是运行时间而非等效生产力；原文作者援引 OpenAI 员工观点称递归自我改进或成为未来几年 AI 能力的关键，并呼吁其他 AI 公司同样公开数据。",
-      "summaryEn": "OpenAI released internal data claiming to have reached the milestone of an automated research intern, capable of completing well-defined tasks that would take a skilled researcher days, under human supervision. As of mid-August, its research organization used 3.1 agent-days of runtime for every human workday, a ratio measuring runtime rather than equivalent productivity. The original author cited OpenAI employees suggesting recursive self-improvement could be key to AI capabilities in coming years, and called on other AI companies to publish similar data.",
+      "summaryEn": "OpenAI released internal data claiming to have reached the milestone of an automated research intern, capable of completing well-defined tasks that would take a skilled researcher days, under human supervision. As of mid-August, its research organization used 3.1 agent-days of runtime for every human workday invested; this ratio measures runtime, not equivalent productivity. The original author cited OpenAI employees' view that recursive self-improvement could become key to AI capability in coming years, and called on other AI companies to publish similar data.",
       "keywords": [
         "OpenAI",
-        "自动化研究实习生",
-        "agent 运行时",
-        "3.1 倍",
-        "递归自我改进"
+        "automated research intern",
+        "agent runtime",
+        "recursive self-improvement",
+        "milestone"
       ],
       "topics": [
         "OpenAI",
         "agent",
-        "自动化研究",
-        "递归自我改进"
+        "research automation",
+        "recursive self-improvement"
       ],
       "models": [],
-      "detailZh": "根据 X 上 Rohan Paul 的帖子，OpenAI 宣布已达到自动化研究实习生里程碑。这意味着 AI 系统能够在人类监督下，完成那些通常需要熟练研究员花费数天才能完成的明确任务。帖子中引用了 OpenAI 的内部数据，显示截至 8 月中旬，OpenAI 研究组织每投入 1 个人工工作日，就使用 3.1 个 agent 工作日的运行时长。需要强调的是，这个比值衡量的是运行时间，而非等效生产力，即 agent 运行的时间总量是人工投入的 3.1 倍，但产出效率并未直接说明。帖子还援引 OpenAI 员工的观点，认为递归自我改进可能成为未来几年 AI 能力的关键，并呼吁其他 AI 公司也公开类似数据，以促进透明度和行业比较。目前，OpenAI 官方尚未发布正式公告或论文，该消息仅来自社交媒体，其准确性和完整性有待验证。",
+      "detailZh": "根据 X 上 Rohan Paul 的帖子，OpenAI 宣布已达到“自动化研究实习生”的里程碑。该里程碑指的是 AI 系统能够在人类监督下，完成原本需要熟练研究员花费数天才能完成的明确任务。帖子中引用了 OpenAI 的内部数据，显示截至 8 月中旬，OpenAI 研究组织每投入 1 个人工工作日，就使用 3.1 个 agent 工作日的运行时长。需要强调的是，这个比值衡量的是运行时间，而非等效生产力，即并非意味着 agent 的生产力是人类的 3.1 倍。\n\n帖子还提到，OpenAI 员工认为递归自我改进（即 AI 系统改进自身的能力）可能成为未来几年 AI 能力提升的关键因素。作者呼吁其他 AI 公司也公开类似数据，以促进透明度和行业比较。\n\n目前，该消息仅来源于社交媒体帖子，未得到 OpenAI 官方公告或新闻稿的证实。因此，具体细节和数据的准确性有待验证。",
       "keyPointsZh": [
         "OpenAI 宣布达到自动化研究实习生里程碑，可在人类监督下完成需数天的明确任务。",
-        "内部数据显示，截至 8 月中旬，每 1 个人工工作日对应 3.1 个 agent 工作日的运行时长。",
-        "该比值衡量运行时间而非等效生产力。",
+        "内部数据显示，截至 8 月中旬，每投入 1 个人工工作日，使用 3.1 个 agent 工作日的运行时长。",
+        "该比值衡量运行时间，而非等效生产力。",
         "OpenAI 员工认为递归自我改进可能成为未来几年 AI 能力的关键。",
-        "信息源自社交媒体，未经官方证实。"
+        "消息来源为社交媒体，未经官方证实。"
       ],
-      "impactZh": "该事件表明 AI 在自动化研究方面取得显著进展，可能加速科研进程，并引发关于 AI 自我改进的讨论，对 AI 发展路径和监管具有潜在影响。",
+      "impactZh": "如果该里程碑属实，意味着 AI 在研发领域的应用可能加速，减少人类研究员在重复性任务上的时间投入，从而提升整体研发效率。同时，这可能加剧 AI 公司之间的竞争，促使其他公司加大在自动化研究方面的投入。此外，递归自我改进的提及可能引发对 AI 安全与控制的讨论。",
       "readerImpactZh": "",
-      "userImpactZh": "对于 AI 使用者和开发者，此消息可能意味着未来 AI 工具将能承担更复杂的研究任务，提高工作效率，但需注意当前数据未经证实，实际能力可能有限。",
+      "userImpactZh": "对于 AI 开发者和研究团队，如果 OpenAI 的自动化研究工具成熟，可能提供新的辅助手段，但具体影响取决于工具的可获得性和实际效果。目前信息有限，建议关注官方后续发布。",
       "howItWorksZh": "",
-      "interpretationZh": "根据现有信息，OpenAI 声称其 agent 在运行时长上已达到人工投入的 3.1 倍，但这并不直接等同于生产力提升。递归自我改进的提及属于员工观点，并非官方声明。该消息可能反映 OpenAI 内部对 agent 能力的乐观预期，但缺乏具体任务类型、成功率等细节，需谨慎解读。",
-      "limitationsZh": "信息仅来自单一社交媒体帖子，未提供原始数据或官方链接，无法验证其真实性。未说明任务的具体类型、复杂度、监督程度以及 agent 的实际成功率。3.1 倍为运行时长比，不代表效率或产出质量。",
+      "interpretationZh": "该消息声称 OpenAI 在自动化研究方面取得进展，但数据仅来自社交媒体，缺乏官方细节。3.1 倍的 agent 运行时长可能反映的是计算资源投入的增加，而非实际生产力提升。递归自我改进的预测属于推测性观点，并非已证实的事实。",
+      "limitationsZh": "信息源为单一社交媒体帖子，未提供原始数据或官方链接，无法验证数据准确性。没有说明任务类型、监督程度、agent 的具体能力等关键细节。递归自我改进的说法仅为员工观点，不代表 OpenAI 官方立场。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -231,7 +851,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-06T18:23:14.000Z",
-        "endedAt": "2026-09-06T23:46:03.335Z",
+        "endedAt": "2026-09-07T04:23:43.166Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -242,38 +862,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-06T19:17:02.222Z",
+            "at": "2026-09-06T19:17:49.378Z",
             "label": "9/7 03:17",
-            "value": 22,
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-06T20:10:50.445Z",
-            "label": "9/7 04:10",
-            "value": 31,
+            "at": "2026-09-06T20:12:24.757Z",
+            "label": "9/7 04:12",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-06T21:04:38.667Z",
-            "label": "9/7 05:04",
-            "value": 39,
+            "at": "2026-09-06T21:07:00.136Z",
+            "label": "9/7 05:07",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-06T21:58:26.890Z",
-            "label": "9/7 05:58",
-            "value": 47,
+            "at": "2026-09-06T22:01:35.514Z",
+            "label": "9/7 06:01",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-06T22:52:15.112Z",
-            "label": "9/7 06:52",
+            "at": "2026-09-06T22:56:10.893Z",
+            "label": "9/7 06:56",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-06T23:50:46.272Z",
+            "label": "9/7 07:50",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T00:45:21.651Z",
+            "label": "9/7 08:45",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T01:39:57.029Z",
+            "label": "9/7 09:39",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T02:34:32.408Z",
+            "label": "9/7 10:34",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-06T23:46:03.335Z",
-            "label": "9/7 07:46",
+            "at": "2026-09-07T03:29:07.787Z",
+            "label": "9/7 11:29",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T04:23:43.166Z",
+            "label": "9/7 12:23",
             "value": 64,
             "reports": 1
           }
@@ -372,7 +1022,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-06T16:45:00.000Z",
-        "endedAt": "2026-09-06T23:46:03.335Z",
+        "endedAt": "2026-09-07T04:23:43.166Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -383,50 +1033,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-06T17:37:37.916Z",
-            "label": "9/7 01:37",
-            "value": 20,
+            "at": "2026-09-06T17:48:31.196Z",
+            "label": "9/7 01:48",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-06T18:30:15.833Z",
-            "label": "9/7 02:30",
-            "value": 25,
+            "at": "2026-09-06T18:52:02.393Z",
+            "label": "9/7 02:52",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-06T19:22:53.750Z",
-            "label": "9/7 03:22",
-            "value": 31,
+            "at": "2026-09-06T19:55:33.590Z",
+            "label": "9/7 03:55",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-06T20:15:31.667Z",
-            "label": "9/7 04:15",
-            "value": 36,
+            "at": "2026-09-06T20:59:04.787Z",
+            "label": "9/7 04:59",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-06T21:08:09.584Z",
-            "label": "9/7 05:08",
+            "at": "2026-09-06T22:02:35.984Z",
+            "label": "9/7 06:02",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-06T23:06:07.181Z",
+            "label": "9/7 07:06",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T00:09:38.378Z",
+            "label": "9/7 08:09",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-06T22:00:47.501Z",
-            "label": "9/7 06:00",
-            "value": 47,
+            "at": "2026-09-07T01:13:09.575Z",
+            "label": "9/7 09:13",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-06T22:53:25.418Z",
-            "label": "9/7 06:53",
-            "value": 53,
+            "at": "2026-09-07T02:16:40.772Z",
+            "label": "9/7 10:16",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-06T23:46:03.335Z",
-            "label": "9/7 07:46",
+            "at": "2026-09-07T03:20:11.969Z",
+            "label": "9/7 11:20",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-07T04:23:43.166Z",
+            "label": "9/7 12:23",
             "value": 58,
             "reports": 1
           }
