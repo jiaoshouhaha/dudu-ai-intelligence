@@ -1,7 +1,500 @@
 {
-  "generatedAt": "2026-09-11T12:11:18.075Z",
+  "generatedAt": "2026-09-11T16:44:30.521Z",
   "date": "2026-09-11",
   "items": [
+    {
+      "id": "1acafccf7ac8d9ff",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match",
+      "originalUrl": "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/",
+      "titleOriginal": "Soft-deprecating re.match()",
+      "summaryOriginal": "Soft-deprecating re.match() Python has a concept of soft deprecation , where APIs are marked as \"should no longer be used to write new code\" without any promise/threat to remove them in the future. Python 3.15 release manager Hugo van Kemenade describes how in the upcoming 3.15 release soft deprecation has come for the venerable but deeply confusing re.match() function. It's now available with the much clearer alternative re.prefixmatch() name - reflecting how it anchors at the beginning of the string but not the end. Most of the time you probably want re.search() (match this pattern anywhere in the string) or re.fullmatch() (match the entire string) instead. Via Lobste.rs Tags: python , regular-expressions",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://hugovk.dev/blog/2026/soft-deprecating-re.match/",
+        "https://peps.python.org/pep-0387/#soft-deprecation",
+        "https://lobste.rs/s/u7dr96/soft_deprecating_re_match",
+        "https://simonwillison.net/tags/python",
+        "https://simonwillison.net/tags/regular-expressions"
+      ],
+      "publishedAt": "2026-09-11T14:47:57.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/",
+          "publishedAt": "2026-09-11T14:47:57.000Z",
+          "title": "Soft-deprecating re.match()",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://hugovk.dev/blog/2026/soft-deprecating-re.match/",
+            "https://peps.python.org/pep-0387/#soft-deprecation",
+            "https://lobste.rs/s/u7dr96/soft_deprecating_re_match",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/regular-expressions"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "这是 Python 标准库中一个长期被误解的 API 的命名改进，影响大量使用正则表达式的开发者，但属于软弃用，不会破坏现有代码。",
+      "importanceReasonEn": "It is a naming improvement for a long-misunderstood standard library API affecting many regex users, but it is a soft deprecation that does not break existing code.",
+      "scoringMode": "ai",
+      "titleZh": "Python 软弃用 re.match()",
+      "titleEn": "Soft-deprecating re.match()",
+      "summaryZh": "Python 3.15 将 re.match() 标记为软弃用，并引入更清晰的新名称 re.prefixmatch()，因为它只在字符串开头匹配而不锚定结尾，容易造成混淆。",
+      "summaryEn": "Python 3.15 soft-deprecates re.match() and introduces the clearer alias re.prefixmatch(), since it anchors only at the start of the string and not the end, which is often confusing.",
+      "keywords": [
+        "Python 3.15",
+        "re.match",
+        "re.prefixmatch",
+        "soft deprecation",
+        "regular expressions"
+      ],
+      "topics": [
+        "python",
+        "regular-expressions",
+        "api-design"
+      ],
+      "models": [],
+      "detailZh": "Python 有一个“软弃用”（soft deprecation）的概念：API 会被标记为“不应再用于编写新代码”，但并不承诺或威胁未来会将其移除。Python 3.15 的发布经理 Hugo van Kemenade 介绍了即将到来的 3.15 版本中，历史悠久但极易令人困惑的 re.match() 函数被软弃用的情况。\n\n现在它有了一个更清晰的替代名称 re.prefixmatch()，这个名字反映了它的实际行为：只在字符串开头进行匹配，而不锚定字符串结尾。\n\n大多数情况下，开发者真正想要的可能是 re.search()（在字符串任意位置匹配该模式）或 re.fullmatch()（匹配整个字符串）。",
+      "keyPointsZh": [
+        "Python 3.15 对 re.match() 进行软弃用，不承诺移除。",
+        "新增更清晰的别名 re.prefixmatch()，表明它只锚定字符串开头。",
+        "re.match() 不锚定字符串结尾，这是长期混淆的来源。",
+        "多数场景下应改用 re.search() 或 re.fullmatch()。"
+      ],
+      "impactZh": "该改动澄清了 Python 正则 API 的语义，减少因误解 re.match() 行为而写出的错误代码，同时保持向后兼容。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Python 正则表达式的开发者在新代码中应优先使用 re.prefixmatch()、re.search() 或 re.fullmatch()，以避免 re.match() 语义带来的混淆。",
+      "howItWorksZh": "re.match() 从字符串起始位置尝试匹配模式，但不要求匹配到字符串末尾，因此它等价于在开头锚定（类似 \\A）而非两端锚定。新名称 re.prefixmatch() 直接表达“前缀匹配”这一语义。re.search() 则在字符串任意位置查找匹配，re.fullmatch() 要求整个字符串完全匹配。",
+      "interpretationZh": "报道事实：Python 3.15 将 re.match() 软弃用并引入 re.prefixmatch() 别名。合理推断：这是命名清晰化而非功能变更，现有代码仍可继续运行。",
+      "limitationsZh": "输入未说明 re.prefixmatch() 是否与 re.match() 完全等价、是否会有 DeprecationWarning，也未给出具体发布时间表。",
+      "actionStepsZh": [
+        "在新代码中使用 re.prefixmatch() 替代 re.match()。",
+        "需要任意位置匹配时使用 re.search()。",
+        "需要整串匹配时使用 re.fullmatch()。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/",
+          "publishedAt": "2026-09-11T14:47:57.000Z",
+          "title": "Soft-deprecating re.match()",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://hugovk.dev/blog/2026/soft-deprecating-re.match/",
+            "https://peps.python.org/pep-0387/#soft-deprecation",
+            "https://lobste.rs/s/u7dr96/soft_deprecating_re_match",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/regular-expressions"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-11T14:47:57.000Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-09-11T14:47:57.000Z",
+            "label": "9/11 22:47",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-11T15:46:13.760Z",
+            "label": "9/11 23:46",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "cce32533e19d68b2",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/11/wrapture",
+      "originalUrl": "https://simonwillison.net/2026/Sep/11/wrapture/",
+      "titleOriginal": "Don't sleep on wrapture",
+      "summaryOriginal": "Graham Dumpleton's new monkey patching package wrapture is shaping up to be an indispensable tool for Python developers. I'm not sure why I've seen so little buzz about it! Graham has been posting new tutorials for it almost daily since the initial release on August 31st. Here's everything he's published so far: Introducing wrapture - a new monkey patching library that serves both testing and observability (think New Relic style tracing) at the same time. Unit testing with wrapture - how to use it for the same kinds of thing as unittest.mock . Recording calls with wrapture - recording method calls as timelines and processing and displaying them as trees. Phased behaviour in wrapture - arranging patched methods to change behavior across multiple calls. Beyond callables in wrapture - monkey patching attributes, dictionaries, generators. Live tracing with wrapture - tracing a live application to see exactly how it works. Zero-code tracing with wrapture - configuring tracing in a separate TOML file without modifying Python code at all. Tracing Flask with wrapture - using the separate wrapture-instrumenation package to instrument a Flask application. That package also provides instrumen",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://wrapture.readthedocs.io/",
+        "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
+        "https://grahamdumpleton.me/posts/2026/08/introducing-wrapture/",
+        "https://grahamdumpleton.me/posts/2026/09/unit-testing-with-wrapture/",
+        "https://grahamdumpleton.me/posts/2026/09/recording-calls-with-wrapture/",
+        "https://grahamdumpleton.me/posts/2026/09/phased-behaviour-in-wrapture/",
+        "https://grahamdumpleton.me/posts/2026/09/beyond-callables-in-wrapture/",
+        "https://grahamdumpleton.me/posts/2026/09/live-tracing-with-wrapture/",
+        "https://grahamdumpleton.me/posts/2026/09/zero-code-tracing-with-wrapture/",
+        "https://grahamdumpleton.me/posts/2026/09/tracing-flask-with-wrapture/",
+        "https://github.com/GrahamDumpleton/wrapture-instrumentation",
+        "https://grahamdumpleton.me/posts/2026/09/finding-slow-code-with-wrapture/"
+      ],
+      "publishedAt": "2026-09-11T13:51:32.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/11/wrapture/",
+          "publishedAt": "2026-09-11T13:51:32.000Z",
+          "title": "Don't sleep on wrapture",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://wrapture.readthedocs.io/",
+            "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/08/introducing-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/unit-testing-with-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/recording-calls-with-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/phased-behaviour-in-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/beyond-callables-in-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/live-tracing-with-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/zero-code-tracing-with-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/tracing-flask-with-wrapture/",
+            "https://github.com/GrahamDumpleton/wrapture-instrumentation",
+            "https://grahamdumpleton.me/posts/2026/09/finding-slow-code-with-wrapture/"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "wrapture 同时服务于测试和可观测性，且已形成系列教程和独立插桩包，对 Python 开发者有直接实用价值。",
+      "importanceReasonEn": "wrapture serves both testing and observability, and has a series of tutorials plus a separate instrumentation package, offering direct practical value for Python developers.",
+      "scoringMode": "ai",
+      "titleZh": "不要忽视 wrapture",
+      "titleEn": "Don't sleep on wrapture",
+      "summaryZh": "Graham Dumpleton 的新猴子补丁包 wrapture 正逐渐成为 Python 开发者不可或缺的工具。自 8 月 31 日首次发布以来，Graham 几乎每天都会发布新的教程。",
+      "summaryEn": "Graham Dumpleton's new monkey patching package wrapture is shaping up to be an indispensable tool for Python developers. Graham has been posting new tutorials for it almost daily since the initial release on August 31st.",
+      "keywords": [
+        "wrapture",
+        "monkey patching",
+        "Python",
+        "testing",
+        "observability",
+        "tracing",
+        "Flask",
+        "TOML"
+      ],
+      "topics": [
+        "Python",
+        "monkey patching",
+        "testing",
+        "observability",
+        "tracing"
+      ],
+      "models": [],
+      "detailZh": "Graham Dumpleton 发布了名为 wrapture 的新猴子补丁库，自 8 月 31 日首次发布以来，他几乎每天发布新教程。该库同时服务于测试和可观测性，类似 New Relic 风格的追踪。已发布的教程涵盖：介绍 wrapture；使用它进行单元测试，类似 unittest.mock；记录方法调用为时间线并以树形结构处理和显示；分阶段行为，让被补丁的方法在多次调用中改变行为；超越可调用对象，猴子补丁属性、字典和生成器；对运行中的应用进行实时追踪；通过单独的 TOML 文件实现零代码追踪，无需修改 Python 代码；使用单独的 wrapture-instrumentation 包对 Flask 应用进行插桩。该包还提供其他插桩功能。",
+      "keyPointsZh": [
+        "wrapture 是 Graham Dumpleton 开发的新猴子补丁库，8 月 31 日首次发布。",
+        "它同时支持测试和可观测性，类似 New Relic 风格的追踪。",
+        "已发布系列教程，涵盖单元测试、调用记录、分阶段行为、属性/字典/生成器补丁、实时追踪、零代码 TOML 配置追踪和 Flask 插桩。",
+        "存在单独的 wrapture-instrumentation 包用于 Flask 等插桩。"
+      ],
+      "impactZh": "wrapture 将猴子补丁从测试工具扩展为可观测性工具，可能改变 Python 开发者进行测试和追踪的方式，减少对多种工具的依赖。",
+      "readerImpactZh": "",
+      "userImpactZh": "Python 开发者可以用 wrapture 替代或补充 unittest.mock，并通过 TOML 配置实现零代码追踪，降低插桩成本。",
+      "howItWorksZh": "wrapture 通过猴子补丁修改 Python 对象的方法和属性。它支持记录方法调用为时间线并处理为树形结构，支持分阶段行为让补丁方法在多次调用中改变行为，还能补丁属性、字典和生成器。零代码追踪通过单独的 TOML 文件配置，无需修改 Python 代码。wrapture-instrumentation 包提供对 Flask 等应用的插桩。",
+      "interpretationZh": "根据已发布教程，wrapture 是一个功能丰富的猴子补丁库，覆盖测试和可观测性场景。其零代码 TOML 配置和独立插桩包降低了使用门槛。目前信息来自教程列表，具体 API 和性能细节未在输入中提供。",
+      "limitationsZh": "输入仅列出教程标题和简要描述，未提供 wrapture 的具体 API、性能数据、兼容性信息或与其他工具的对比。",
+      "actionStepsZh": [
+        "阅读 wrapture 的系列教程，了解其测试和追踪功能。",
+        "尝试用 wrapture 进行单元测试，替代或补充 unittest.mock。",
+        "使用 TOML 文件配置零代码追踪，对现有 Python 应用进行插桩。",
+        "使用 wrapture-instrumentation 包对 Flask 应用进行插桩。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/11/wrapture/",
+          "publishedAt": "2026-09-11T13:51:32.000Z",
+          "title": "Don't sleep on wrapture",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://wrapture.readthedocs.io/",
+            "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/08/introducing-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/unit-testing-with-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/recording-calls-with-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/phased-behaviour-in-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/beyond-callables-in-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/live-tracing-with-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/zero-code-tracing-with-wrapture/",
+            "https://grahamdumpleton.me/posts/2026/09/tracing-flask-with-wrapture/",
+            "https://github.com/GrahamDumpleton/wrapture-instrumentation",
+            "https://grahamdumpleton.me/posts/2026/09/finding-slow-code-with-wrapture/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-11T13:51:32.000Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-11T13:51:32.000Z",
+            "label": "9/11 21:51",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-11T14:49:11.507Z",
+            "label": "9/11 22:49",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T15:46:51.014Z",
+            "label": "9/11 23:46",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9f940360bb3182f6",
+      "normalizedUrl": "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data",
+      "originalUrl": "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data",
+      "titleOriginal": "Anthropic 威胁报告披露 Claude 被用于间谍软件、导弹与无人机研发，中国实验室大规模蒸馏提取数据",
+      "summaryOriginal": "Anthropic's new threat intelligence report documents eight months of Claude abuse. Chinese AI labs like Alibaba's Qwen team, DeepSeek, and Moonshot AI relayed requests en masse or extracted training data, with Qwen alone accounting for more than 151 million exchanges. Actors also used Claude for missile software, autonomous kamikaze drones, and nationwide surveillance systems. The article How hackers used Claude for missiles, drone swarms, and surveillance, while Chinese labs mined it for training data appeared first on The Decoder .",
+      "originalLanguage": "zh",
+      "author": "The Decoder：AI News（RSS）",
+      "category": "research",
+      "sourceType": "aggregator",
+      "authority": 84,
+      "sourcePriority": 96,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/04/anthropic_Cybersecurity-1.png"
+      ],
+      "resourceLinks": [
+        "https://aihot.news/items/cmtx0v3dg030mroedwvkdfyvw",
+        "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data",
+        "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-09-11T13:50:28.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-11T13:58:48.543Z",
+      "contentType": "industry",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmtx0v3dg030mroedwvkdfyvw"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmtx0v3dg030mroedwvkdfyvw",
+          "name": "The Decoder：AI News（RSS）",
+          "type": "aggregator",
+          "url": "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data",
+          "publishedAt": "2026-09-11T13:50:28.000Z",
+          "title": "Anthropic 威胁报告披露 Claude 被用于间谍软件、导弹与无人机研发，中国实验室大规模蒸馏提取数据",
+          "authority": 83,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmtx0v3dg030mroedwvkdfyvw",
+            "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data"
+          ]
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data/",
+          "publishedAt": "2026-09-11T13:50:28.000Z",
+          "title": "How hackers used Claude for missiles, drone swarms, and surveillance, while Chinese labs mined it for training data",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/04/anthropic_Cybersecurity-1.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 82,
+      "importanceReasonZh": "该报告由模型提供方 Anthropic 直接发布，属于一手威胁情报，首次系统披露 Claude 被用于军事研发、监控系统和训练数据蒸馏等滥用场景，涉及中国主要 AI 实验室，对 AI 安全治理和模型滥用防范具有重要参考价值。",
+      "importanceReasonEn": "The report is first-party threat intelligence published directly by model provider Anthropic, systematically disclosing for the first time Claude's abuse in military R&D, surveillance systems and training-data distillation, involving major Chinese AI labs, making it highly relevant to AI safety gove",
+      "scoringMode": "ai",
+      "titleZh": "Anthropic 威胁报告披露 Claude 被用于间谍软件、导弹与无人机研发，中国实验室大规模蒸馏提取数据",
+      "titleEn": "Anthropic Threat Report Reveals Claude Used for Spyware, Missiles and Drones, Chinese Labs Mass-Distilled Data",
+      "summaryZh": "Anthropic 发布的新威胁情报报告记录了八个月内 Claude 被滥用的情况。阿里巴巴 Qwen 团队、DeepSeek 和 Moonshot AI 等中国 AI 实验室大规模转发请求或提取训练数据，仅 Qwen 一家就涉及超过 1.51 亿次交互。相关行为者还利用 Claude 开发导弹软件、自主自杀式无人机和全国性监控系统。",
+      "summaryEn": "Anthropic's new threat intelligence report documents eight months of Claude abuse. Chinese AI labs like Alibaba's Qwen team, DeepSeek, and Moonshot AI relayed requests en masse or extracted training data, with Qwen alone accounting for more than 151 million exchanges. Actors also used Claude for missile software, autonomous kamikaze drones, and nationwide surveillance systems.",
+      "keywords": [
+        "Anthropic",
+        "Claude",
+        "威胁报告",
+        "蒸馏",
+        "Qwen",
+        "DeepSeek",
+        "Moonshot AI",
+        "导弹"
+      ],
+      "topics": [
+        "AI滥用",
+        "威胁情报",
+        "模型蒸馏",
+        "军事AI",
+        "监控技术"
+      ],
+      "models": [
+        "Claude"
+      ],
+      "detailZh": "Anthropic 发布了一份新的威胁情报报告，汇总了八个月内观察到的 Claude 模型滥用情况。报告指出，多个行为者利用 Claude 从事敏感甚至有害的活动，包括开发间谍软件、导弹相关软件、自主自杀式无人机以及全国性监控系统。\n\n报告特别提到中国 AI 实验室的大规模使用行为。阿里巴巴的 Qwen 团队、DeepSeek 和 Moonshot AI 被指通过批量转发请求或提取训练数据的方式使用 Claude，其中仅 Qwen 一家就涉及超过 1.51 亿次交互。Anthropic 将这类行为描述为蒸馏或数据提取。\n\n报告还记录了其他滥用类型，包括将 Claude 用于导弹软件、自主无人机集群和监控系统开发。这些内容来自 Anthropic 自身的威胁情报监测，属于模型提供方的一手披露。\n\n目前公开信息主要来自 The Decoder 对报告的报道，Anthropic 原始报告的具体技术细节、涉事方回应以及后续处置措施尚未在输入中完整呈现。",
+      "keyPointsZh": [
+        "Anthropic 发布威胁情报报告，记录八个月内 Claude 被滥用的情况。",
+        "报告称中国 AI 实验室（Qwen、DeepSeek、Moonshot AI）大规模转发请求或提取训练数据，Qwen 涉及超过 1.51 亿次交互。",
+        "相关行为者还被指利用 Claude 开发导弹软件、自主自杀式无人机和全国性监控系统。",
+        "该报告由 Anthropic 直接发布，属于模型提供方的一手威胁情报披露。"
+      ],
+      "impactZh": "该报告将 AI 模型滥用从理论风险推向具体案例，涉及军事研发、监控系统和训练数据蒸馏，可能推动模型提供方加强滥用检测、访问限制和合规审查，并引发关于 AI 实验室竞争伦理与出口管制的讨论。",
+      "readerImpactZh": "",
+      "userImpactZh": "AI 开发者和团队可能需要关注模型服务商对批量请求、数据提取和敏感用途的检测与限制政策，避免因滥用行为导致账号封禁或合规风险。",
+      "howItWorksZh": "",
+      "interpretationZh": "从已披露信息看，Anthropic 通过自身威胁情报监测识别出多类 Claude 滥用行为，并将其整理为报告。报告的核心指控包括中国 AI 实验室的大规模数据提取，以及军事和监控用途。这些属于 Anthropic 单方面披露，涉事方尚未在输入中作出回应，因此应视为待进一步核实的指控而非已确认事实。",
+      "limitationsZh": "输入仅来自 The Decoder 的报道，未包含 Anthropic 原始报告全文、技术细节、涉事方回应或独立验证。1.51 亿次交互等数字无法在输入中交叉核实，蒸馏与正常使用的界限也存在争议。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 2,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmtx0v3dg030mroedwvkdfyvw",
+          "name": "The Decoder：AI News（RSS）",
+          "type": "aggregator",
+          "url": "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data",
+          "publishedAt": "2026-09-11T13:50:28.000Z",
+          "title": "Anthropic 威胁报告披露 Claude 被用于间谍软件、导弹与无人机研发，中国实验室大规模蒸馏提取数据",
+          "authority": 83,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmtx0v3dg030mroedwvkdfyvw",
+            "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data"
+          ]
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data/",
+          "publishedAt": "2026-09-11T13:50:28.000Z",
+          "title": "How hackers used Claude for missiles, drone swarms, and surveillance, while Chinese labs mined it for training data",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/04/anthropic_Cybersecurity-1.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/how-hackers-used-claude-for-missiles-drone-swarms-and-surveillance-while-chinese-labs-mined-it-for-training-data/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-11T13:50:28.000Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
+        "current": 96,
+        "peak": 96,
+        "history": [
+          {
+            "at": "2026-09-11T13:50:28.000Z",
+            "label": "9/11 21:50",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-11T14:48:28.840Z",
+            "label": "9/11 22:48",
+            "value": 50,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-11T15:46:29.680Z",
+            "label": "9/11 23:46",
+            "value": 73,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
+            "value": 96,
+            "reports": 2
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "b6c16261643e9f8f",
       "normalizedUrl": "https://the-decoder.com/openai-floats-a-shared-ai-slowdown-takes-it-to-congress",
@@ -48,19 +541,19 @@
         }
       ],
       "importance": 70,
-      "importanceReasonZh": "该事件涉及 OpenAI 主动向国会询问全行业 AI 减速的合法性，可能影响未来 AI 监管政策走向，具有较高的行业与政策关注度。",
-      "importanceReasonEn": "This event involves OpenAI proactively asking Congress about the legality of an industry-wide AI slowdown, potentially influencing future AI regulatory policy and carrying high industry and policy attention.",
+      "importanceReasonZh": "该事件涉及 OpenAI 主动向美国国会询问全行业 AI 减速的合法性，可能影响未来 AI 监管方向与行业竞争格局，具有较高的政策与商业关注度。",
+      "importanceReasonEn": "OpenAI proactively asking Congress about the legality of an industry-wide AI slowdown could influence future AI regulation and competitive dynamics, making it highly relevant from policy and business perspectives.",
       "scoringMode": "ai",
-      "titleZh": "OpenAI 探讨全行业 AI 减速，并将问题提交国会",
+      "titleZh": "OpenAI 探讨全行业 AI 减速并诉诸国会",
       "titleEn": "OpenAI floats a shared AI slowdown, takes it to Congress",
       "summaryZh": "据多位知情人士透露，OpenAI 向美国国会议员询问，全行业放缓 AI 开发是否合法。",
       "summaryEn": "OpenAI wants to know from members of Congress whether an industry-wide slowdown in AI development would be legal, according to several people familiar with the matter.",
       "keywords": [
         "OpenAI",
-        "国会",
-        "AI 减速",
-        "监管",
-        "合法性"
+        "AI slowdown",
+        "Congress",
+        "regulation",
+        "AI development"
       ],
       "topics": [
         "AI 监管",
@@ -69,18 +562,18 @@
         "AI 发展速度"
       ],
       "models": [],
-      "detailZh": "据 The Decoder AI 报道，多位知情人士称，OpenAI 向美国国会议员询问，全行业放缓 AI 开发是否合法。报道未提供更多细节，例如 OpenAI 提出该问题的具体背景、国会议员的回应，以及是否涉及具体立法提案。目前已知的是，OpenAI 将这一问题带到了国会层面，探讨全行业 AI 减速的合法性问题。该报道最初由 The Decoder 发布。由于信息有限，尚不清楚 OpenAI 此举是出于对监管风险的评估，还是对行业竞争格局的考量。",
+      "detailZh": "据 The Decoder AI 报道，多位知情人士称，OpenAI 已向美国国会议员提出询问，希望了解在全行业范围内放缓人工智能开发速度是否合法。报道未披露具体参与讨论的议员、询问的时间或形式，也未说明 OpenAI 提出该问题的动机。\n\n目前公开信息仅来自匿名消息源，OpenAI 与国会方面均未就此发表正式声明。因此，该事件的具体背景、讨论进展以及可能的法律依据均不明确。\n\n该报道的核心事实是：OpenAI 正在就“全行业 AI 减速”的合法性问题与国会进行接触。除此之外，没有更多可验证的细节。",
       "keyPointsZh": [
         "OpenAI 向美国国会议员询问全行业放缓 AI 开发是否合法。",
-        "该消息来自多位知情人士，由 The Decoder AI 报道。",
-        "报道未披露 OpenAI 提出该问题的具体背景或国会议员的回应。"
+        "消息来自多位匿名知情人士，OpenAI 和国会均未正式回应。",
+        "报道未披露具体议员、时间、形式或法律依据。"
       ],
-      "impactZh": "该事件表明 OpenAI 正在主动评估全行业 AI 减速的法律可行性，可能推动国会就 AI 发展速度与监管框架展开讨论，进而影响未来 AI 政策走向。",
+      "impactZh": "若 OpenAI 的询问推动国会考虑全行业 AI 减速的合法性，可能影响未来 AI 监管立法方向，并引发关于 AI 发展速度与安全平衡的公共讨论。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道事实：OpenAI 向国会议员询问全行业 AI 减速是否合法。合理推断：OpenAI 可能在评估监管风险或行业协调机制，但具体动机和后续行动尚不明确。",
-      "limitationsZh": "报道仅提及 OpenAI 向国会询问，未提供具体背景、国会议员回应、是否涉及立法提案等细节，信息有限，需谨慎对待。",
+      "interpretationZh": "报道仅陈述 OpenAI 向国会询问全行业 AI 减速合法性这一事实，未提供动机或后续计划。可以合理推断，OpenAI 可能在评估行业协调减速的法律可行性，但这一推断尚未得到证实。",
+      "limitationsZh": "信息仅来自匿名消息源，缺乏 OpenAI 或国会的官方确认；具体询问对象、时间、形式和法律依据均未披露；无法判断该询问是否代表正式政策立场或仅属初步探讨。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -108,7 +601,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T11:59:19.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -119,8 +612,32 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T12:56:21.304Z",
+            "label": "9/11 20:56",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T13:53:23.608Z",
+            "label": "9/11 21:53",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T14:50:25.912Z",
+            "label": "9/11 22:50",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T15:47:28.216Z",
+            "label": "9/11 23:47",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 64,
             "reports": 1
           }
@@ -174,47 +691,45 @@
         }
       ],
       "importance": 65,
-      "importanceReasonZh": "该事件涉及AI订阅服务的透明度与消费者权益，可能影响用户对AI服务定价和宣传的信任，并引发行业对订阅模式披露的审视。",
-      "importanceReasonEn": "This event concerns transparency in AI subscription services and consumer rights, potentially affecting user trust in AI service pricing and marketing, and prompting industry scrutiny of subscription model disclosures.",
+      "importanceReasonZh": "该诉讼直接涉及Anthropic的Claude订阅商业模式和消费者宣传，可能影响其订阅增长、定价策略和监管审查，对AI订阅服务行业具有参考意义。",
+      "importanceReasonEn": "The lawsuit directly concerns Anthropic's Claude subscription business model and consumer messaging, potentially affecting subscription growth, pricing strategy, and regulatory scrutiny, with relevance to the AI subscription industry.",
       "scoringMode": "ai",
-      "titleZh": "集体诉讼指控Anthropic以欺骗性使用倍数夸大Claude订阅服务",
+      "titleZh": "集体诉讼指控Anthropic以欺骗性使用倍率夸大Claude订阅服务",
       "titleEn": "Class action lawsuit accuses Anthropic of overselling Claude subscriptions with deceptive usage multipliers",
-      "summaryZh": "一项集体诉讼指控Anthropic在Claude订阅服务中虚假宣传用户实际可用的使用量，通过欺骗性的使用倍数误导消费者。",
-      "summaryEn": "A class action lawsuit accuses Anthropic of misrepresenting how much Claude subscribers actually get to use the service, alleging deceptive usage multipliers.",
+      "summaryZh": "一项集体诉讼指控Anthropic虚假宣传Claude订阅用户实际可使用的服务量。",
+      "summaryEn": "A class action lawsuit accuses Anthropic of misrepresenting how much Claude subscribers actually get to use the service.",
       "keywords": [
         "Anthropic",
         "Claude",
         "集体诉讼",
         "订阅",
-        "使用倍数",
+        "使用倍率",
         "虚假宣传"
       ],
       "topics": [
         "Anthropic",
         "Claude",
-        "subscription",
-        "class action lawsuit",
-        "deceptive practices"
+        "订阅服务",
+        "集体诉讼",
+        "消费者保护"
       ],
       "models": [
         "Claude"
       ],
-      "detailZh": "根据The Decoder AI的报道，一项集体诉讼指控Anthropic在销售Claude订阅服务时，通过欺骗性的使用倍数夸大用户实际可获得的服务量。诉讼称Anthropic对订阅者实际能使用多少服务进行了虚假陈述。报道未提供诉讼的具体细节，如提交法院、原告信息、具体使用倍数或索赔金额。目前Anthropic尚未对此诉讼作出公开回应。该报道仅提供了事件的基本轮廓，缺乏深入的事实核查或双方立场。",
+      "detailZh": "一项集体诉讼指控Anthropic在宣传Claude订阅服务时，通过具有欺骗性的使用倍率夸大订阅用户实际能够获得的服务量。该诉讼称，Anthropic对订阅用户实际可使用的服务量作出了不实陈述。\n\n根据现有信息，争议核心在于Anthropic如何向消费者描述Claude订阅所包含的使用额度，以及所谓的“使用倍率”是否让用户对实际可用量产生了错误预期。诉讼以集体诉讼形式提出，意味着可能代表一批认为受到类似误导的订阅用户。\n\n目前公开信息有限，未披露具体的原告、索赔金额、诉讼法院或Anthropic的正式回应。该报道由The Decoder AI发布，属于对诉讼的初步报道，更多细节和双方立场尚待进一步披露。",
       "keyPointsZh": [
-        "集体诉讼指控Anthropic虚假宣传Claude订阅服务的使用量。",
-        "诉讼称Anthropic使用了欺骗性的使用倍数来夸大服务价值。",
-        "报道未披露诉讼的具体细节或Anthropic的回应。"
+        "一项集体诉讼指控Anthropic虚假宣传Claude订阅服务。",
+        "诉讼焦点是Anthropic被指使用欺骗性使用倍率夸大订阅用户实际可用的服务量。",
+        "该诉讼以集体诉讼形式提出，可能代表多名订阅用户。",
+        "目前公开信息有限，未披露具体原告、索赔金额或Anthropic回应。"
       ],
-      "impactZh": "该诉讼可能促使AI订阅服务提供商更加透明地披露使用限制和实际可用量，并可能引发用户对订阅条款的更多关注。如果诉讼成立，可能影响Anthropic的声誉和订阅业务，同时为其他AI公司的订阅模式敲响警钟。",
-      "readerImpactZh": "普通用户在选择AI订阅服务时，可能需要更仔细地阅读使用条款，并对宣传中的“使用倍数”等指标保持警惕。",
-      "userImpactZh": "AI用户和开发者应关注订阅服务的实际使用限制，避免因宣传误导而影响工作流程或成本预算。",
+      "impactZh": "该诉讼可能促使外界关注AI订阅服务中“使用倍率”等宣传方式的透明度，并可能影响Anthropic的订阅业务、用户信任以及行业对订阅额度表述的合规做法。",
+      "readerImpactZh": "对于普通Claude订阅用户而言，该诉讼可能推动更清晰的使用额度说明，但当前尚无具体赔偿或服务变更信息。",
+      "userImpactZh": "对于AI用户和开发者，该诉讼提醒在评估订阅服务时需关注实际可用额度与宣传倍率之间的差异，并可能促使厂商调整订阅条款的表述方式。",
       "howItWorksZh": "",
-      "interpretationZh": "报道称Anthropic因Claude订阅服务的宣传方式面临集体诉讼，指控其使用欺骗性使用倍数。目前信息有限，无法判断诉讼的具体依据和Anthropic的立场。这反映了AI服务订阅模式中可能存在的透明度问题。",
-      "limitationsZh": "报道未提供诉讼的具体细节，如法院、原告、具体指控内容、使用倍数的定义等。Anthropic尚未回应，无法核实指控的真实性。信息仅来自单一来源，缺乏独立验证。",
-      "actionStepsZh": [
-        "关注该诉讼的后续进展，了解Anthropic的官方回应。",
-        "在选择AI订阅服务时，仔细阅读使用条款和限制说明。"
-      ],
+      "interpretationZh": "已报道的事实是：一项集体诉讼指控Anthropic通过欺骗性使用倍率夸大Claude订阅服务。合理推断是：争议可能围绕订阅页面或营销材料中对使用额度的描述是否准确。由于缺乏诉讼文件和Anthropic回应，目前无法判断指控是否成立。",
+      "limitationsZh": "现有信息仅来自一篇简短报道，未提供诉讼文件、具体指控细节、原告身份、索赔金额、法院信息或Anthropic的回应。因此对事件全貌和双方论据的了解非常有限。",
+      "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
@@ -241,7 +756,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T09:45:58.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -252,20 +767,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T10:34:24.691Z",
-            "label": "9/11 18:34",
-            "value": 30,
+            "at": "2026-09-11T10:45:45.503Z",
+            "label": "9/11 18:45",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:22:51.383Z",
-            "label": "9/11 19:22",
-            "value": 45,
+            "at": "2026-09-11T11:45:33.006Z",
+            "label": "9/11 19:45",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T12:45:20.509Z",
+            "label": "9/11 20:45",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T13:45:08.012Z",
+            "label": "9/11 21:45",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T14:44:55.515Z",
+            "label": "9/11 22:44",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T15:44:43.018Z",
+            "label": "9/11 23:44",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 61,
             "reports": 1
           }
@@ -378,7 +917,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T09:15:10.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -389,20 +928,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T10:13:52.691Z",
-            "label": "9/11 18:13",
-            "value": 28,
+            "at": "2026-09-11T10:11:20.065Z",
+            "label": "9/11 18:11",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:12:35.383Z",
-            "label": "9/11 19:12",
-            "value": 42,
+            "at": "2026-09-11T11:07:30.130Z",
+            "label": "9/11 19:07",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T12:03:40.195Z",
+            "label": "9/11 20:03",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T12:59:50.260Z",
+            "label": "9/11 20:59",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T13:56:00.325Z",
+            "label": "9/11 21:56",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T14:52:10.390Z",
+            "label": "9/11 22:52",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T15:48:20.455Z",
+            "label": "9/11 23:48",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 55,
             "reports": 1
           }
@@ -520,7 +1089,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T08:40:01.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -531,26 +1100,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T09:32:50.268Z",
-            "label": "9/11 17:32",
-            "value": 27,
+            "at": "2026-09-11T09:33:50.946Z",
+            "label": "9/11 17:33",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:25:39.537Z",
-            "label": "9/11 18:25",
-            "value": 40,
+            "at": "2026-09-11T10:27:40.893Z",
+            "label": "9/11 18:27",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:18:28.806Z",
-            "label": "9/11 19:18",
-            "value": 53,
+            "at": "2026-09-11T11:21:30.840Z",
+            "label": "9/11 19:21",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T12:15:20.787Z",
+            "label": "9/11 20:15",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T13:09:10.733Z",
+            "label": "9/11 21:09",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T14:03:00.680Z",
+            "label": "9/11 22:03",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T14:56:50.627Z",
+            "label": "9/11 22:56",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T15:50:40.574Z",
+            "label": "9/11 23:50",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 66,
             "reports": 1
           }
@@ -630,7 +1229,9 @@
         "developer tools",
         "sandbox environments"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "OpenAI 发布了 Agents API，目前处于公开测试阶段。该 API 面向开发者，用于构建在云端运行的代理。根据现有信息，这些代理可以自主运行数小时，执行代码，并将任务交接给子代理。\n\nOpenAI 表示，除 token 用量外不会收取额外费用。这意味着计费方式与常规模型调用一致，代理运行本身不产生单独的附加费用。\n\n该 API 被描述为 Codex 和 ChatGPT 背后的基础设施，说明它并非全新独立系统，而是将 OpenAI 内部用于代理产品的底层能力对外开放。\n\n在运行环境方面，Cloudflare、Vercel 和 Oracle 提供额外的沙箱环境，供开发者在这些平台上运行代理相关任务。\n\n目前公开信息有限，尚未披露具体的 API 端点、定价细节、速率限制或正式发布时间表。",
       "keyPointsZh": [
         "OpenAI 以公开测试版形式发布 Agents API。",
@@ -673,7 +1274,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T08:11:46.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -684,26 +1285,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T09:11:39.018Z",
-            "label": "9/11 17:11",
-            "value": 28,
+            "at": "2026-09-11T09:08:44.280Z",
+            "label": "9/11 17:08",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:11:32.037Z",
-            "label": "9/11 18:11",
-            "value": 41,
+            "at": "2026-09-11T10:05:42.560Z",
+            "label": "9/11 18:05",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:11:25.056Z",
-            "label": "9/11 19:11",
-            "value": 55,
+            "at": "2026-09-11T11:02:40.840Z",
+            "label": "9/11 19:02",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T11:59:39.120Z",
+            "label": "9/11 19:59",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T12:56:37.400Z",
+            "label": "9/11 20:56",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T13:53:35.680Z",
+            "label": "9/11 21:53",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T14:50:33.960Z",
+            "label": "9/11 22:50",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T15:47:32.240Z",
+            "label": "9/11 23:47",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 68,
             "reports": 1
           }
@@ -840,7 +1471,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T04:24:28.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -851,51 +1482,454 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T05:22:49.259Z",
-            "label": "9/11 13:22",
-            "value": 20,
+            "at": "2026-09-11T05:31:44.592Z",
+            "label": "9/11 13:31",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:21:10.518Z",
-            "label": "9/11 14:21",
-            "value": 27,
+            "at": "2026-09-11T06:39:01.185Z",
+            "label": "9/11 14:39",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:19:31.778Z",
-            "label": "9/11 15:19",
-            "value": 33,
+            "at": "2026-09-11T07:46:17.778Z",
+            "label": "9/11 15:46",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:17:53.037Z",
-            "label": "9/11 16:17",
-            "value": 39,
+            "at": "2026-09-11T08:53:34.371Z",
+            "label": "9/11 16:53",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:16:14.296Z",
-            "label": "9/11 17:16",
+            "at": "2026-09-11T10:00:50.964Z",
+            "label": "9/11 18:00",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T11:08:07.556Z",
+            "label": "9/11 19:08",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T12:15:24.149Z",
+            "label": "9/11 20:15",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:14:35.556Z",
-            "label": "9/11 18:14",
-            "value": 52,
+            "at": "2026-09-11T13:22:40.742Z",
+            "label": "9/11 21:22",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:12:56.815Z",
-            "label": "9/11 19:12",
-            "value": 58,
+            "at": "2026-09-11T14:29:57.335Z",
+            "label": "9/11 22:29",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T15:37:13.928Z",
+            "label": "9/11 23:37",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f0504633da00f3c2",
+      "normalizedUrl": "https://arxiv.org/abs/2609.10702",
+      "originalUrl": "https://arxiv.org/abs/2609.10702",
+      "titleOriginal": "Data-Efficient Language Modeling: From Frontier Advancement to Principle-Guided Model Improvement",
+      "summaryOriginal": "arXiv:2609.10702v1 Announce Type: new Abstract: Learning from limited text requires models to use context, generalize to new inputs, and retain useful capabilities. Qiushi Engine conducted a long-horizon, end-to-end autonomous research program on BabyLM 2026 Strict-Small, within 10 million corpus words and 100 million cumulative word presentations. Three stages connected frontier advancement, principle discovery, and principle-guided model improvement. Stage I combined compact restatements, budget reinvestment, and residual incremental learning to build a frontier model. Stage II found that exact repetition and aligned restatement produce different patterns of context use, depending on target relations and prediction windows. In controlled tasks, recovering familiar performance did not ensure that unseen inputs could still use learned computations. These findings support a testable data-efficient learning principle: organize experience around the contextual dependencies needed for prediction; separately design visible information, supervision, and preservation; test learning, generalization, and retention. Stage III retained source text, masked more local clues, supervised selected",
+      "originalLanguage": "en",
+      "author": "Shuxing Yang, Kaihao Zhu, Junjie Yang, Rui Zhao, Junyao Wu, Yize Wang, Wenhao Li, Fujia Chen, Taowen Deng, Shenzhan Hong, Yaqi Li, Zichen Li, Jincheng Mi, Yuang Pan, Hongsheng Chen, Yihao Yang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-11T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.10702",
+          "publishedAt": "2026-09-11T04:00:00.000Z",
+          "title": "Data-Efficient Language Modeling: From Frontier Advancement to Principle-Guided Model Improvement",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文提出了一条可检验的数据高效学习原则，并展示了在严格小语料预算下从模型构建到原则发现再到原则指导改进的完整研究流程，对低资源语言建模有参考价值，但结果尚未经独立验证。",
+      "importanceReasonEn": "The paper proposes a testable data-efficient learning principle and demonstrates a full pipeline from model building to principle discovery to principle-guided improvement under a strict small-corpus budget, offering reference value for low-resource language modeling, though results are not yet inde",
+      "scoringMode": "ai",
+      "titleZh": "数据高效语言建模：从前沿进展到原则指导的模型改进",
+      "titleEn": "Data-Efficient Language Modeling: From Frontier Advancement to Principle-Guided Model Improvement",
+      "summaryZh": "arXiv:2609.10702v1 新投稿。摘要：从有限文本中学习要求模型利用上下文、泛化到新输入并保留有用能力。Qiushi Engine 在 BabyLM 2026 Strict-Small 上开展了一项长周期、端到端的自主研究计划，语料不超过1000万词，累计词呈现不超过1亿次。三个阶段连接了前沿推进、原则发现和原则指导的模型改进。第一阶段结合紧凑重述、预算再投资和残差增量学习来构建前沿模型。第二阶段发现，精确重复和对齐重述会产生不同的上下文使用模式，具体取决于目标关系和预测窗口。在受控任务中，恢复熟悉性能并不能保证未见输入仍能使用已学计算。这些发现支持一条可检验的数据高效学习原则：围绕预测所需的上下文依赖来组织经验；分别设计可见信息、监督和保持；测试学习、泛化和保持。第三阶段保留源文本、掩盖更多局部线索、监督选定内容。",
+      "summaryEn": "arXiv:2609.10702v1 Announce Type: new Abstract: Learning from limited text requires models to use context, generalize to new inputs, and retain useful capabilities. Qiushi Engine conducted a long-horizon, end-to-end autonomous research program on BabyLM 2026 Strict-Small, within 10 million corpus words and 100 million cumulative word presentations. Three stages connected frontier advancement, principle discovery, and principle-guided model improvement. Stage I combined compact restatements, budget reinvestment, and residual incremental learning to build a frontier model. Stage II found that exact repetition and aligned restatement produce different patterns of context use, depending on target relations and prediction windows. In controlled tasks, recovering familiar performance did not ens",
+      "keywords": [
+        "数据高效学习",
+        "BabyLM",
+        "上下文依赖",
+        "泛化",
+        "保持",
+        "自主研究"
+      ],
+      "topics": [
+        "数据高效语言建模",
+        "BabyLM 2026",
+        "上下文使用",
+        "泛化与保持",
+        "自主研究"
+      ],
+      "models": [
+        "Qiushi Engine"
+      ],
+      "detailZh": "该工作来自 arXiv 新投稿（编号 2609.10702v1），研究主体为 Qiushi Engine，目标是在 BabyLM 2026 Strict-Small 约束下开展数据高效语言建模。约束条件为语料不超过1000万词，累计词呈现不超过1亿次。研究采用长周期、端到端的自主研究计划，分为三个阶段。\n\n第一阶段结合紧凑重述、预算再投资和残差增量学习，构建出一个前沿模型。第二阶段通过受控实验发现，精确重复和对齐重述会产生不同的上下文使用模式，具体取决于目标关系和预测窗口；并且恢复熟悉任务的性能，并不能保证模型对未见输入仍能使用已学计算。\n\n基于这些发现，研究提出一条可检验的数据高效学习原则：围绕预测所需的上下文依赖来组织经验；分别设计可见信息、监督和保持；并分别测试学习、泛化和保持。第三阶段据此保留源文本、掩盖更多局部线索并监督选定内容，以改进模型。\n\n摘要未给出具体数值结果、基准名称或对比数据，因此无法量化其性能提升幅度。该研究属于方法学与原则性探索，其实验细节和可复现性有待论文全文及后续独立验证。",
+      "keyPointsZh": [
+        "研究在 BabyLM 2026 Strict-Small 约束下进行，语料不超过1000万词，累计词呈现不超过1亿次。",
+        "研究分三阶段：构建前沿模型、发现数据高效学习原则、按原则改进模型。",
+        "第二阶段发现精确重复与对齐重述产生不同上下文使用模式，且熟悉任务性能恢复不保证未见输入仍能使用已学计算。",
+        "提出可检验原则：围绕预测所需的上下文依赖组织经验，分别设计可见信息、监督和保持，并分别测试学习、泛化和保持。",
+        "摘要未提供具体性能数值或基准对比结果。"
+      ],
+      "impactZh": "该研究为低资源条件下的语言模型训练提供了一条可检验的原则性路径，强调上下文依赖组织与学习、泛化、保持的分离测试，可能影响未来小语料建模的实验设计思路。",
+      "readerImpactZh": "",
+      "userImpactZh": "对从事小语料或低资源语言模型训练的开发者与团队，该研究提示应分别评估学习、泛化和保持，并关注重复与重述策略对上下文使用模式的不同影响。",
+      "howItWorksZh": "研究流程分三阶段。第一阶段：结合紧凑重述、预算再投资和残差增量学习构建前沿模型。第二阶段：在受控任务中对比精确重复与对齐重述，观察不同目标关系和预测窗口下的上下文使用模式，并测试熟悉任务性能恢复后未见输入是否仍能使用已学计算。第三阶段：依据第二阶段得出的原则，保留源文本、掩盖更多局部线索并监督选定内容，以改进模型。",
+      "interpretationZh": "摘要报告了在严格小语料预算下开展的三阶段自主研究，并据此提出一条数据高效学习原则。可合理推断，该工作试图把模型改进与对学习机制的受控观察结合起来；但摘要未给出具体指标、基准或统计结果，因此其实际效果和原则的普适性仍需全文与独立复现来确认。",
+      "limitationsZh": "摘要未提供具体性能数值、基准名称、对比基线或统计显著性；研究由 Qiushi Engine 自主开展，尚未见独立复现或同行评审结论；原则的普适性是否适用于更大语料或其他架构尚不明确。",
+      "actionStepsZh": [
+        "阅读论文全文以获取具体实验设置、基准和数值结果。",
+        "在小语料建模实验中分别评估学习、泛化和保持三个维度。",
+        "对比精确重复与对齐重述对上下文使用模式的影响，并结合目标关系与预测窗口进行设计。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.10702",
+          "publishedAt": "2026-09-11T04:00:00.000Z",
+          "title": "Data-Efficient Language Modeling: From Frontier Advancement to Principle-Guided Model Improvement",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-11T04:00:00.000Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-11T04:00:00.000Z",
+            "label": "9/11 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-11T05:09:30.047Z",
+            "label": "9/11 13:09",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:19:00.094Z",
+            "label": "9/11 14:19",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T07:28:30.142Z",
+            "label": "9/11 15:28",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T08:38:00.189Z",
+            "label": "9/11 16:38",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T09:47:30.236Z",
+            "label": "9/11 17:47",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T10:57:00.284Z",
+            "label": "9/11 18:57",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T12:06:30.331Z",
+            "label": "9/11 20:06",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T13:16:00.378Z",
+            "label": "9/11 21:16",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T14:25:30.426Z",
+            "label": "9/11 22:25",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T15:35:00.473Z",
+            "label": "9/11 23:35",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "75ee456968c00a69",
+      "normalizedUrl": "https://arxiv.org/abs/2609.10715",
+      "originalUrl": "https://arxiv.org/abs/2609.10715",
+      "titleOriginal": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+      "summaryOriginal": "arXiv:2609.10715v1 Announce Type: new Abstract: We introduce NCP-ArchPreview, a latent-space language model that pushes autoregressive pretraining beyond standard next-token prediction (NTP). Alongside NTP, the model learns through Next Concept Prediction (NCP) to predict discrete concepts that span multiple tokens, introducing an explicit and more challenging concept-level objective while preserving standard token-level autoregressive generation. NCP-ArchPreview builds a latent space by constructing a product-quantized concept vocabulary directly from its hidden states, and subsequently learns to predict future concepts via a dedicated Concept Module. These predicted concepts are then fed back to the token level to guide subsequent generation, with NTP and NCP trained jointly end-to-end. We scale this architecture to 8.9B parameters and train it on 5.73T tokens from the Dolma-3 dataset, marking the largest demonstration of a latent-space language model to date. Remarkably, by consuming only 51.3% of the total training tokens, NCP-ArchPreview achieves the final pretraining loss of OLMo-3-7B. Following full pretraining, it outperforms OLMo-3-7B by 2.45 points on the downstream macro",
+      "originalLanguage": "en",
+      "author": "NCP Team, Jiaqi Cao, Chiyu Chen, Shuang Cheng, Xu Cheng, Beiya Dai, Yufan Feng, Kewen Ge, Ruijun Ge, Jiayi Huang, Yang Jiao, Dahua Lin, Zhouhan Lin, Yifan Liu, Yuliang Liu, Biqing Qi, Mowen Ruan, Junzhe Shen, Yunchong Song, Hao Sun, Zhongbo Tian, Yixuan Wang, Rubin Wei, Jiaxin Xiong, Kangyu Yang, Qian Yao, Qi Zhang, Bowen Zhou",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-11T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.10715",
+          "publishedAt": "2026-09-11T04:00:00.000Z",
+          "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 82,
+      "importanceReasonZh": "该工作首次将潜在空间语言模型扩展到 89 亿参数和 5.73 万亿词元规模，提出可端到端训练的下一概念预测目标，并在训练效率与下游指标上均优于同规模基线，对语言模型预训练范式具有参考价值。",
+      "importanceReasonEn": "It is the largest demonstration of a latent-space language model to date, scaling to 8.9B parameters and 5.73T tokens, and introduces an end-to-end trainable Next Concept Prediction objective that improves both training efficiency and downstream performance over a comparable baseline.",
+      "scoringMode": "ai",
+      "titleZh": "NCP-ArchPreview 技术报告：通过下一概念预测迈向潜在空间语言模型",
+      "titleEn": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+      "summaryZh": "NCP-ArchPreview 是一种潜在空间语言模型，在标准下一词元预测（NTP）之外引入下一概念预测（NCP），通过从隐藏状态构建乘积量化概念词表并预测跨多个词元的离散概念，将预测概念反馈至词元级指导生成，NTP 与 NCP 端到端联合训练。模型规模达 89 亿参数，在 Dolma-3 数据集的 5.73 万亿词元上训练，仅消耗 51.3% 的训练词元即达到 OLMo-3-7B 的最终预训练损失，并在下游宏观指标上超出 2.45 分。",
+      "summaryEn": "NCP-ArchPreview is a latent-space language model that adds Next Concept Prediction (NCP) on top of standard next-token prediction (NTP). It builds a product-quantized concept vocabulary from hidden states, predicts discrete concepts spanning multiple tokens, feeds predicted concepts back to the token level to guide generation, and trains NTP and NCP jointly end-to-end. Scaled to 8.9B parameters and trained on 5.73T tokens from Dolma-3, it reaches OLMo-3-7B's final pretraining loss using only 51.3% of the training tokens and outperforms OLMo-3-7B by 2.45 points on a downstream macro metric.",
+      "keywords": [
+        "NCP-ArchPreview",
+        "Next Concept Prediction",
+        "latent space",
+        "product quantization",
+        "Dolma-3",
+        "OLMo-3-7B"
+      ],
+      "topics": [
+        "latent space language model",
+        "next concept prediction",
+        "autoregressive pretraining",
+        "product quantization",
+        "concept vocabulary"
+      ],
+      "models": [
+        "NCP-ArchPreview",
+        "OLMo-3-7B"
+      ],
+      "detailZh": "NCP-ArchPreview 是一份技术报告，提出在标准自回归预训练之外增加“下一概念预测”（Next Concept Prediction, NCP）目标。标准语言模型通常只做下一词元预测（NTP），而 NCP 要求模型预测跨越多个词元的离散概念，从而在词元级目标之上引入更抽象、更具挑战性的概念级目标。\n\n该模型通过从自身隐藏状态构建乘积量化（product-quantized）的概念词表来形成潜在空间，并训练一个专门的 Concept Module 来预测未来的概念。预测出的概念会被反馈到词元级，用于指导后续生成。NTP 与 NCP 两个目标端到端联合训练，模型在保留标准词元级自回归生成能力的同时，学习概念级的预测。\n\n作者将架构扩展到 89 亿参数，并在 Dolma-3 数据集的 5.73 万亿词元上进行训练，称这是迄今为止潜在空间语言模型的最大规模演示。报告给出的关键结果是：NCP-ArchPreview 仅消耗总训练词元的 51.3%，就达到了 OLMo-3-7B 的最终预训练损失；在完整预训练后，其在一个下游宏观指标上比 OLMo-3-7B 高出 2.45 分。\n\n目前可获取的信息来自论文摘要，未提供具体基准名称、评测细节、消融实验或计算成本数据，因此上述效率与性能结论应视为作者报告的结果。",
+      "keyPointsZh": [
+        "NCP-ArchPreview 在标准下一词元预测（NTP）之外引入下一概念预测（NCP），预测跨多个词元的离散概念。",
+        "模型从隐藏状态构建乘积量化概念词表，并用专门的 Concept Module 预测未来概念，预测结果反馈到词元级指导生成。",
+        "NTP 与 NCP 端到端联合训练，模型规模 89 亿参数，训练数据为 Dolma-3 的 5.73 万亿词元。",
+        "仅使用 51.3% 的训练词元即达到 OLMo-3-7B 的最终预训练损失，完整预训练后在一个下游宏观指标上高出 2.45 分。"
+      ],
+      "impactZh": "该工作表明，在词元级自回归目标之外加入概念级潜在预测，可能提升预训练的数据效率，并为语言模型预训练提供一条不同于纯 NTP 扩展的路线。若结果可复现，将影响未来大模型预训练目标的设计与算力分配策略。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 研究者和开发者而言，NCP 提供了一种可端到端训练的预训练目标，可能降低达到同等损失所需的训练词元量；但其实现依赖乘积量化概念词表和 Concept Module，实际采用前需评估工程复杂度与训练稳定性。",
+      "howItWorksZh": "模型在标准 NTP 之外增加 NCP 目标：首先从模型隐藏状态构建乘积量化的概念词表，将连续表示映射为离散概念；然后由专门的 Concept Module 学习预测未来的概念；预测出的概念再反馈到词元级，用于指导后续词元生成。NTP 与 NCP 两个目标端到端联合训练，使模型同时优化词元级和概念级预测。",
+      "interpretationZh": "报告的核心主张是：在词元级预测之外显式建模跨词元概念，可以在更少训练词元下达到与同规模基线相当的预训练损失，并在下游指标上略有优势。这属于作者报告的结果，摘要未披露具体下游任务、评测协议和统计显著性，因此应理解为有前景的初步证据，而非已确立的通用结论。",
+      "limitationsZh": "当前信息仅来自论文摘要，未提供具体下游基准名称、评测细节、消融实验、训练计算成本、概念词表规模及超参数设置；51.3% 词元效率与 2.45 分提升均为作者报告值，尚未经独立复现验证。",
+      "actionStepsZh": [
+        "阅读 arXiv:2609.10715v1 全文，核实下游宏观指标的具体定义与评测协议。",
+        "关注乘积量化概念词表的构建方式与 Concept Module 的实现细节，评估复现可行性。",
+        "若关注预训练效率，可对比 NCP 与纯 NTP 在同等算力下的损失曲线与下游表现。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "NCP-ArchPreview 仅用 51.3% 的训练词元即达到 OLMo-3-7B 的最终预训练损失，并在下游宏观指标上高出 2.45 分。",
+        "data": [
+          {
+            "label": "NCP-ArchPreview 训练词元占比",
+            "value": 51.3,
+            "display": ""
+          },
+          {
+            "label": "OLMo-3-7B 训练词元占比（基准）",
+            "value": 100,
+            "display": ""
+          },
+          {
+            "label": "NCP-ArchPreview 下游宏观指标领先",
+            "value": 2.45,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.10715",
+          "publishedAt": "2026-09-11T04:00:00.000Z",
+          "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-11T04:00:00.000Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
+        "current": 70,
+        "peak": 70,
+        "history": [
+          {
+            "at": "2026-09-11T04:00:00.000Z",
+            "label": "9/11 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-11T05:09:30.047Z",
+            "label": "9/11 13:09",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:19:00.094Z",
+            "label": "9/11 14:19",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T07:28:30.142Z",
+            "label": "9/11 15:28",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T08:38:00.189Z",
+            "label": "9/11 16:38",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T09:47:30.236Z",
+            "label": "9/11 17:47",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T10:57:00.284Z",
+            "label": "9/11 18:57",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T12:06:30.331Z",
+            "label": "9/11 20:06",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T13:16:00.378Z",
+            "label": "9/11 21:16",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T14:25:30.426Z",
+            "label": "9/11 22:25",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T15:35:00.473Z",
+            "label": "9/11 23:35",
+            "value": 65,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
+            "value": 70,
             "reports": 1
           }
         ],
@@ -995,7 +2029,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T04:00:00.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1006,56 +2040,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T04:54:35.341Z",
-            "label": "9/11 12:54",
-            "value": 19,
+            "at": "2026-09-11T05:09:30.047Z",
+            "label": "9/11 13:09",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:49:10.683Z",
-            "label": "9/11 13:49",
-            "value": 24,
+            "at": "2026-09-11T06:19:00.094Z",
+            "label": "9/11 14:19",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:43:46.025Z",
-            "label": "9/11 14:43",
-            "value": 29,
+            "at": "2026-09-11T07:28:30.142Z",
+            "label": "9/11 15:28",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:38:21.366Z",
-            "label": "9/11 15:38",
-            "value": 34,
+            "at": "2026-09-11T08:38:00.189Z",
+            "label": "9/11 16:38",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:32:56.708Z",
-            "label": "9/11 16:32",
+            "at": "2026-09-11T09:47:30.236Z",
+            "label": "9/11 17:47",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T10:57:00.284Z",
+            "label": "9/11 18:57",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:27:32.050Z",
-            "label": "9/11 17:27",
-            "value": 44,
+            "at": "2026-09-11T12:06:30.331Z",
+            "label": "9/11 20:06",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:22:07.391Z",
-            "label": "9/11 18:22",
-            "value": 49,
+            "at": "2026-09-11T13:16:00.378Z",
+            "label": "9/11 21:16",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:16:42.733Z",
-            "label": "9/11 19:16",
-            "value": 54,
+            "at": "2026-09-11T14:25:30.426Z",
+            "label": "9/11 22:25",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T15:35:00.473Z",
+            "label": "9/11 23:35",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 59,
             "reports": 1
           }
@@ -1184,7 +2230,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T04:00:00.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1195,56 +2241,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T04:54:35.341Z",
-            "label": "9/11 12:54",
-            "value": 19,
+            "at": "2026-09-11T05:09:30.047Z",
+            "label": "9/11 13:09",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:49:10.683Z",
-            "label": "9/11 13:49",
-            "value": 24,
+            "at": "2026-09-11T06:19:00.094Z",
+            "label": "9/11 14:19",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:43:46.025Z",
-            "label": "9/11 14:43",
-            "value": 29,
+            "at": "2026-09-11T07:28:30.142Z",
+            "label": "9/11 15:28",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:38:21.366Z",
-            "label": "9/11 15:38",
-            "value": 34,
+            "at": "2026-09-11T08:38:00.189Z",
+            "label": "9/11 16:38",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:32:56.708Z",
-            "label": "9/11 16:32",
+            "at": "2026-09-11T09:47:30.236Z",
+            "label": "9/11 17:47",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T10:57:00.284Z",
+            "label": "9/11 18:57",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:27:32.050Z",
-            "label": "9/11 17:27",
-            "value": 44,
+            "at": "2026-09-11T12:06:30.331Z",
+            "label": "9/11 20:06",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:22:07.391Z",
-            "label": "9/11 18:22",
-            "value": 49,
+            "at": "2026-09-11T13:16:00.378Z",
+            "label": "9/11 21:16",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:16:42.733Z",
-            "label": "9/11 19:16",
-            "value": 54,
+            "at": "2026-09-11T14:25:30.426Z",
+            "label": "9/11 22:25",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T15:35:00.473Z",
+            "label": "9/11 23:35",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 59,
             "reports": 1
           }
@@ -1400,7 +2458,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T04:00:00.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1411,56 +2469,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T04:54:35.341Z",
-            "label": "9/11 12:54",
-            "value": 20,
+            "at": "2026-09-11T05:09:30.047Z",
+            "label": "9/11 13:09",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:49:10.683Z",
-            "label": "9/11 13:49",
-            "value": 25,
+            "at": "2026-09-11T06:19:00.094Z",
+            "label": "9/11 14:19",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:43:46.025Z",
-            "label": "9/11 14:43",
-            "value": 31,
+            "at": "2026-09-11T07:28:30.142Z",
+            "label": "9/11 15:28",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:38:21.366Z",
-            "label": "9/11 15:38",
+            "at": "2026-09-11T08:38:00.189Z",
+            "label": "9/11 16:38",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T09:47:30.236Z",
+            "label": "9/11 17:47",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:32:56.708Z",
-            "label": "9/11 16:32",
+            "at": "2026-09-11T10:57:00.284Z",
+            "label": "9/11 18:57",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:27:32.050Z",
-            "label": "9/11 17:27",
-            "value": 48,
+            "at": "2026-09-11T12:06:30.331Z",
+            "label": "9/11 20:06",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:22:07.391Z",
-            "label": "9/11 18:22",
-            "value": 54,
+            "at": "2026-09-11T13:16:00.378Z",
+            "label": "9/11 21:16",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:16:42.733Z",
-            "label": "9/11 19:16",
-            "value": 59,
+            "at": "2026-09-11T14:25:30.426Z",
+            "label": "9/11 22:25",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T15:35:00.473Z",
+            "label": "9/11 23:35",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
             "reports": 1
           }
@@ -1599,7 +2669,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T04:00:00.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 48,
         "peak": 48,
         "history": [
@@ -1610,56 +2680,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T04:54:35.341Z",
-            "label": "9/11 12:54",
-            "value": 18,
+            "at": "2026-09-11T05:09:30.047Z",
+            "label": "9/11 13:09",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:49:10.683Z",
-            "label": "9/11 13:49",
-            "value": 22,
+            "at": "2026-09-11T06:19:00.094Z",
+            "label": "9/11 14:19",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:43:46.025Z",
-            "label": "9/11 14:43",
-            "value": 25,
+            "at": "2026-09-11T07:28:30.142Z",
+            "label": "9/11 15:28",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:38:21.366Z",
-            "label": "9/11 15:38",
-            "value": 29,
+            "at": "2026-09-11T08:38:00.189Z",
+            "label": "9/11 16:38",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:32:56.708Z",
-            "label": "9/11 16:32",
+            "at": "2026-09-11T09:47:30.236Z",
+            "label": "9/11 17:47",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T10:57:00.284Z",
+            "label": "9/11 18:57",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:27:32.050Z",
-            "label": "9/11 17:27",
-            "value": 37,
+            "at": "2026-09-11T12:06:30.331Z",
+            "label": "9/11 20:06",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:22:07.391Z",
-            "label": "9/11 18:22",
-            "value": 41,
+            "at": "2026-09-11T13:16:00.378Z",
+            "label": "9/11 21:16",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:16:42.733Z",
-            "label": "9/11 19:16",
-            "value": 44,
+            "at": "2026-09-11T14:25:30.426Z",
+            "label": "9/11 22:25",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T15:35:00.473Z",
+            "label": "9/11 23:35",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 48,
             "reports": 1
           }
@@ -1805,7 +2887,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T03:27:16.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1816,56 +2898,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T04:25:29.563Z",
-            "label": "9/11 12:25",
-            "value": 20,
+            "at": "2026-09-11T04:39:44.592Z",
+            "label": "9/11 12:39",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:23:43.127Z",
-            "label": "9/11 13:23",
-            "value": 25,
+            "at": "2026-09-11T05:52:13.185Z",
+            "label": "9/11 13:52",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:21:56.691Z",
-            "label": "9/11 14:21",
-            "value": 31,
+            "at": "2026-09-11T07:04:41.778Z",
+            "label": "9/11 15:04",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:20:10.255Z",
-            "label": "9/11 15:20",
+            "at": "2026-09-11T08:17:10.371Z",
+            "label": "9/11 16:17",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T09:29:38.964Z",
+            "label": "9/11 17:29",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:18:23.819Z",
-            "label": "9/11 16:18",
+            "at": "2026-09-11T10:42:07.556Z",
+            "label": "9/11 18:42",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:16:37.383Z",
-            "label": "9/11 17:16",
-            "value": 48,
+            "at": "2026-09-11T11:54:36.149Z",
+            "label": "9/11 19:54",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:14:50.947Z",
-            "label": "9/11 18:14",
-            "value": 54,
+            "at": "2026-09-11T13:07:04.742Z",
+            "label": "9/11 21:07",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:13:04.511Z",
-            "label": "9/11 19:13",
-            "value": 59,
+            "at": "2026-09-11T14:19:33.335Z",
+            "label": "9/11 22:19",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T15:32:01.928Z",
+            "label": "9/11 23:32",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
             "reports": 1
           }
@@ -1978,7 +3072,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T01:09:06.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 35,
         "peak": 35,
         "history": [
@@ -1989,68 +3083,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T02:09:18.006Z",
-            "label": "9/11 10:09",
+            "at": "2026-09-11T02:34:08.229Z",
+            "label": "9/11 10:34",
             "value": 16,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:09:30.013Z",
-            "label": "9/11 11:09",
+            "at": "2026-09-11T03:59:10.458Z",
+            "label": "9/11 11:59",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:09:42.020Z",
-            "label": "9/11 12:09",
+            "at": "2026-09-11T05:24:12.687Z",
+            "label": "9/11 13:24",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:09:54.027Z",
-            "label": "9/11 13:09",
+            "at": "2026-09-11T06:49:14.916Z",
+            "label": "9/11 14:49",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:10:06.034Z",
-            "label": "9/11 14:10",
+            "at": "2026-09-11T08:14:17.145Z",
+            "label": "9/11 16:14",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:10:18.040Z",
-            "label": "9/11 15:10",
+            "at": "2026-09-11T09:39:19.375Z",
+            "label": "9/11 17:39",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:10:30.047Z",
-            "label": "9/11 16:10",
+            "at": "2026-09-11T11:04:21.604Z",
+            "label": "9/11 19:04",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:10:42.054Z",
-            "label": "9/11 17:10",
+            "at": "2026-09-11T12:29:23.833Z",
+            "label": "9/11 20:29",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:10:54.061Z",
-            "label": "9/11 18:10",
+            "at": "2026-09-11T13:54:26.062Z",
+            "label": "9/11 21:54",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:11:06.068Z",
-            "label": "9/11 19:11",
+            "at": "2026-09-11T15:19:28.291Z",
+            "label": "9/11 23:19",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 35,
             "reports": 1
           }
@@ -2196,7 +3290,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T23:44:15.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2207,68 +3301,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T00:52:09.825Z",
-            "label": "9/11 08:52",
+            "at": "2026-09-11T01:17:00.047Z",
+            "label": "9/11 09:17",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-11T02:00:04.650Z",
-            "label": "9/11 10:00",
+            "at": "2026-09-11T02:49:45.094Z",
+            "label": "9/11 10:49",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:07:59.475Z",
-            "label": "9/11 11:07",
+            "at": "2026-09-11T04:22:30.142Z",
+            "label": "9/11 12:22",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:15:54.300Z",
-            "label": "9/11 12:15",
+            "at": "2026-09-11T05:55:15.189Z",
+            "label": "9/11 13:55",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:23:49.125Z",
-            "label": "9/11 13:23",
+            "at": "2026-09-11T07:28:00.236Z",
+            "label": "9/11 15:28",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:31:43.950Z",
-            "label": "9/11 14:31",
+            "at": "2026-09-11T09:00:45.284Z",
+            "label": "9/11 17:00",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:39:38.775Z",
-            "label": "9/11 15:39",
+            "at": "2026-09-11T10:33:30.331Z",
+            "label": "9/11 18:33",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:47:33.600Z",
-            "label": "9/11 16:47",
+            "at": "2026-09-11T12:06:15.378Z",
+            "label": "9/11 20:06",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:55:28.425Z",
-            "label": "9/11 17:55",
+            "at": "2026-09-11T13:39:00.426Z",
+            "label": "9/11 21:39",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T11:03:23.250Z",
-            "label": "9/11 19:03",
+            "at": "2026-09-11T15:11:45.473Z",
+            "label": "9/11 23:11",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
             "reports": 1
           }
@@ -2367,7 +3461,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T21:51:59.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2378,68 +3472,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T23:10:06.188Z",
-            "label": "9/11 07:10",
+            "at": "2026-09-10T23:34:56.411Z",
+            "label": "9/11 07:34",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:28:13.377Z",
-            "label": "9/11 08:28",
+            "at": "2026-09-11T01:17:53.822Z",
+            "label": "9/11 09:17",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:46:20.565Z",
-            "label": "9/11 09:46",
+            "at": "2026-09-11T03:00:51.233Z",
+            "label": "9/11 11:00",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:04:27.754Z",
-            "label": "9/11 11:04",
+            "at": "2026-09-11T04:43:48.644Z",
+            "label": "9/11 12:43",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:22:34.943Z",
-            "label": "9/11 12:22",
+            "at": "2026-09-11T06:26:46.055Z",
+            "label": "9/11 14:26",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:40:42.131Z",
-            "label": "9/11 13:40",
+            "at": "2026-09-11T08:09:43.466Z",
+            "label": "9/11 16:09",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:58:49.320Z",
-            "label": "9/11 14:58",
+            "at": "2026-09-11T09:52:40.877Z",
+            "label": "9/11 17:52",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:16:56.509Z",
-            "label": "9/11 16:16",
+            "at": "2026-09-11T11:35:38.288Z",
+            "label": "9/11 19:35",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:35:03.697Z",
-            "label": "9/11 17:35",
+            "at": "2026-09-11T13:18:35.699Z",
+            "label": "9/11 21:18",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:53:10.886Z",
-            "label": "9/11 18:53",
+            "at": "2026-09-11T15:01:33.110Z",
+            "label": "9/11 23:01",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 55,
             "reports": 1
           }
@@ -2541,7 +3635,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T21:35:00.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -2552,68 +3646,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:54:39.825Z",
-            "label": "9/11 06:54",
+            "at": "2026-09-10T23:19:30.047Z",
+            "label": "9/11 07:19",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:14:19.650Z",
-            "label": "9/11 08:14",
+            "at": "2026-09-11T01:04:00.094Z",
+            "label": "9/11 09:04",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:33:59.475Z",
-            "label": "9/11 09:33",
+            "at": "2026-09-11T02:48:30.142Z",
+            "label": "9/11 10:48",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-11T02:53:39.300Z",
-            "label": "9/11 10:53",
+            "at": "2026-09-11T04:33:00.189Z",
+            "label": "9/11 12:33",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:13:19.125Z",
-            "label": "9/11 12:13",
+            "at": "2026-09-11T06:17:30.236Z",
+            "label": "9/11 14:17",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:32:58.950Z",
-            "label": "9/11 13:32",
+            "at": "2026-09-11T08:02:00.284Z",
+            "label": "9/11 16:02",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:52:38.775Z",
-            "label": "9/11 14:52",
+            "at": "2026-09-11T09:46:30.331Z",
+            "label": "9/11 17:46",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:12:18.600Z",
-            "label": "9/11 16:12",
+            "at": "2026-09-11T11:31:00.378Z",
+            "label": "9/11 19:31",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:31:58.425Z",
-            "label": "9/11 17:31",
+            "at": "2026-09-11T13:15:30.426Z",
+            "label": "9/11 21:15",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:51:38.250Z",
-            "label": "9/11 18:51",
+            "at": "2026-09-11T15:00:00.473Z",
+            "label": "9/11 23:00",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 44,
             "reports": 1
           }
@@ -2731,7 +3825,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T21:31:19.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2742,68 +3836,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:51:18.915Z",
-            "label": "9/11 06:51",
+            "at": "2026-09-10T23:16:09.138Z",
+            "label": "9/11 07:16",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:11:18.831Z",
-            "label": "9/11 08:11",
+            "at": "2026-09-11T01:00:59.276Z",
+            "label": "9/11 09:00",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:31:18.747Z",
-            "label": "9/11 09:31",
+            "at": "2026-09-11T02:45:49.414Z",
+            "label": "9/11 10:45",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-11T02:51:18.663Z",
-            "label": "9/11 10:51",
+            "at": "2026-09-11T04:30:39.553Z",
+            "label": "9/11 12:30",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:11:18.579Z",
-            "label": "9/11 12:11",
+            "at": "2026-09-11T06:15:29.691Z",
+            "label": "9/11 14:15",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:31:18.495Z",
-            "label": "9/11 13:31",
+            "at": "2026-09-11T08:00:19.829Z",
+            "label": "9/11 16:00",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:51:18.411Z",
-            "label": "9/11 14:51",
+            "at": "2026-09-11T09:45:09.967Z",
+            "label": "9/11 17:45",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:11:18.327Z",
-            "label": "9/11 16:11",
+            "at": "2026-09-11T11:30:00.106Z",
+            "label": "9/11 19:30",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:31:18.243Z",
-            "label": "9/11 17:31",
+            "at": "2026-09-11T13:14:50.244Z",
+            "label": "9/11 21:14",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:51:18.159Z",
-            "label": "9/11 18:51",
+            "at": "2026-09-11T14:59:40.382Z",
+            "label": "9/11 22:59",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 55,
             "reports": 1
           }
@@ -2969,7 +4063,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T21:11:15.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2980,68 +4074,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:33:04.370Z",
-            "label": "9/11 06:33",
+            "at": "2026-09-10T22:57:54.592Z",
+            "label": "9/11 06:57",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:54:53.740Z",
-            "label": "9/11 07:54",
+            "at": "2026-09-11T00:44:34.185Z",
+            "label": "9/11 08:44",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:16:43.111Z",
-            "label": "9/11 09:16",
+            "at": "2026-09-11T02:31:13.778Z",
+            "label": "9/11 10:31",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T02:38:32.481Z",
-            "label": "9/11 10:38",
+            "at": "2026-09-11T04:17:53.371Z",
+            "label": "9/11 12:17",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:00:21.852Z",
-            "label": "9/11 12:00",
+            "at": "2026-09-11T06:04:32.964Z",
+            "label": "9/11 14:04",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:22:11.222Z",
-            "label": "9/11 13:22",
+            "at": "2026-09-11T07:51:12.556Z",
+            "label": "9/11 15:51",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:44:00.593Z",
-            "label": "9/11 14:44",
+            "at": "2026-09-11T09:37:52.149Z",
+            "label": "9/11 17:37",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:05:49.963Z",
-            "label": "9/11 16:05",
+            "at": "2026-09-11T11:24:31.742Z",
+            "label": "9/11 19:24",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:27:39.334Z",
-            "label": "9/11 17:27",
+            "at": "2026-09-11T13:11:11.335Z",
+            "label": "9/11 21:11",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:49:28.704Z",
-            "label": "9/11 18:49",
+            "at": "2026-09-11T14:57:50.928Z",
+            "label": "9/11 22:57",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
             "reports": 1
           }
@@ -3148,7 +4242,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T20:59:51.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -3159,68 +4253,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:22:42.552Z",
-            "label": "9/11 06:22",
+            "at": "2026-09-10T22:47:32.774Z",
+            "label": "9/11 06:47",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:45:34.104Z",
-            "label": "9/11 07:45",
+            "at": "2026-09-11T00:35:14.549Z",
+            "label": "9/11 08:35",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:08:25.656Z",
-            "label": "9/11 09:08",
+            "at": "2026-09-11T02:22:56.323Z",
+            "label": "9/11 10:22",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T02:31:17.209Z",
-            "label": "9/11 10:31",
+            "at": "2026-09-11T04:10:38.098Z",
+            "label": "9/11 12:10",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:54:08.761Z",
-            "label": "9/11 11:54",
+            "at": "2026-09-11T05:58:19.873Z",
+            "label": "9/11 13:58",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:17:00.313Z",
-            "label": "9/11 13:17",
+            "at": "2026-09-11T07:46:01.647Z",
+            "label": "9/11 15:46",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:39:51.865Z",
-            "label": "9/11 14:39",
+            "at": "2026-09-11T09:33:43.422Z",
+            "label": "9/11 17:33",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:02:43.418Z",
-            "label": "9/11 16:02",
+            "at": "2026-09-11T11:21:25.197Z",
+            "label": "9/11 19:21",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:25:34.970Z",
-            "label": "9/11 17:25",
+            "at": "2026-09-11T13:09:06.971Z",
+            "label": "9/11 21:09",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:48:26.522Z",
-            "label": "9/11 18:48",
+            "at": "2026-09-11T14:56:48.746Z",
+            "label": "9/11 22:56",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
             "reports": 1
           }
@@ -3362,7 +4456,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T20:57:30.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 90,
         "peak": 90,
         "history": [
@@ -3373,68 +4467,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:20:34.370Z",
-            "label": "9/11 06:20",
+            "at": "2026-09-10T22:45:24.592Z",
+            "label": "9/11 06:45",
             "value": 34,
             "reports": 2
           },
           {
-            "at": "2026-09-10T23:43:38.740Z",
-            "label": "9/11 07:43",
+            "at": "2026-09-11T00:33:19.185Z",
+            "label": "9/11 08:33",
             "value": 39,
             "reports": 2
           },
           {
-            "at": "2026-09-11T01:06:43.111Z",
-            "label": "9/11 09:06",
+            "at": "2026-09-11T02:21:13.778Z",
+            "label": "9/11 10:21",
             "value": 45,
             "reports": 2
           },
           {
-            "at": "2026-09-11T02:29:47.481Z",
-            "label": "9/11 10:29",
+            "at": "2026-09-11T04:09:08.371Z",
+            "label": "9/11 12:09",
             "value": 51,
             "reports": 2
           },
           {
-            "at": "2026-09-11T03:52:51.852Z",
-            "label": "9/11 11:52",
+            "at": "2026-09-11T05:57:02.964Z",
+            "label": "9/11 13:57",
             "value": 56,
             "reports": 2
           },
           {
-            "at": "2026-09-11T05:15:56.222Z",
-            "label": "9/11 13:15",
+            "at": "2026-09-11T07:44:57.556Z",
+            "label": "9/11 15:44",
             "value": 62,
             "reports": 2
           },
           {
-            "at": "2026-09-11T06:39:00.593Z",
-            "label": "9/11 14:39",
+            "at": "2026-09-11T09:32:52.149Z",
+            "label": "9/11 17:32",
             "value": 67,
             "reports": 2
           },
           {
-            "at": "2026-09-11T08:02:04.963Z",
-            "label": "9/11 16:02",
+            "at": "2026-09-11T11:20:46.742Z",
+            "label": "9/11 19:20",
             "value": 73,
             "reports": 2
           },
           {
-            "at": "2026-09-11T09:25:09.334Z",
-            "label": "9/11 17:25",
+            "at": "2026-09-11T13:08:41.335Z",
+            "label": "9/11 21:08",
             "value": 79,
             "reports": 2
           },
           {
-            "at": "2026-09-11T10:48:13.704Z",
-            "label": "9/11 18:48",
+            "at": "2026-09-11T14:56:35.928Z",
+            "label": "9/11 22:56",
             "value": 84,
             "reports": 2
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 90,
             "reports": 2
           }
@@ -3534,7 +4628,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T19:50:04.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -3545,68 +4639,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T21:19:16.188Z",
-            "label": "9/11 05:19",
+            "at": "2026-09-10T21:44:06.411Z",
+            "label": "9/11 05:44",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:48:28.377Z",
-            "label": "9/11 06:48",
+            "at": "2026-09-10T23:38:08.822Z",
+            "label": "9/11 07:38",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:17:40.565Z",
-            "label": "9/11 08:17",
+            "at": "2026-09-11T01:32:11.233Z",
+            "label": "9/11 09:32",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:46:52.754Z",
-            "label": "9/11 09:46",
+            "at": "2026-09-11T03:26:13.644Z",
+            "label": "9/11 11:26",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:16:04.943Z",
-            "label": "9/11 11:16",
+            "at": "2026-09-11T05:20:16.055Z",
+            "label": "9/11 13:20",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:45:17.131Z",
-            "label": "9/11 12:45",
+            "at": "2026-09-11T07:14:18.466Z",
+            "label": "9/11 15:14",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:14:29.320Z",
-            "label": "9/11 14:14",
+            "at": "2026-09-11T09:08:20.877Z",
+            "label": "9/11 17:08",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:43:41.509Z",
-            "label": "9/11 15:43",
+            "at": "2026-09-11T11:02:23.288Z",
+            "label": "9/11 19:02",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-11T09:12:53.697Z",
-            "label": "9/11 17:12",
+            "at": "2026-09-11T12:56:25.699Z",
+            "label": "9/11 20:56",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:42:05.886Z",
-            "label": "9/11 18:42",
+            "at": "2026-09-11T14:50:28.110Z",
+            "label": "9/11 22:50",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 55,
             "reports": 1
           }
@@ -3709,7 +4803,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T17:54:44.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -3720,68 +4814,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T19:34:25.279Z",
-            "label": "9/11 03:34",
+            "at": "2026-09-10T19:59:15.501Z",
+            "label": "9/11 03:59",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:14:06.559Z",
-            "label": "9/11 05:14",
+            "at": "2026-09-10T22:03:47.003Z",
+            "label": "9/11 06:03",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:53:47.838Z",
-            "label": "9/11 06:53",
+            "at": "2026-09-11T00:08:18.505Z",
+            "label": "9/11 08:08",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:33:29.118Z",
-            "label": "9/11 08:33",
+            "at": "2026-09-11T02:12:50.007Z",
+            "label": "9/11 10:12",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-11T02:13:10.397Z",
-            "label": "9/11 10:13",
+            "at": "2026-09-11T04:17:21.509Z",
+            "label": "9/11 12:17",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:52:51.677Z",
-            "label": "9/11 11:52",
+            "at": "2026-09-11T06:21:53.011Z",
+            "label": "9/11 14:21",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:32:32.956Z",
-            "label": "9/11 13:32",
+            "at": "2026-09-11T08:26:24.513Z",
+            "label": "9/11 16:26",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:12:14.236Z",
-            "label": "9/11 15:12",
+            "at": "2026-09-11T10:30:56.015Z",
+            "label": "9/11 18:30",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:51:55.515Z",
-            "label": "9/11 16:51",
+            "at": "2026-09-11T12:35:27.517Z",
+            "label": "9/11 20:35",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:31:36.795Z",
-            "label": "9/11 18:31",
+            "at": "2026-09-11T14:39:59.019Z",
+            "label": "9/11 22:39",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 55,
             "reports": 1
           }
@@ -3920,7 +5014,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T17:47:35.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -3931,68 +5025,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T19:27:55.279Z",
-            "label": "9/11 03:27",
+            "at": "2026-09-10T19:52:45.501Z",
+            "label": "9/11 03:52",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:08:15.559Z",
-            "label": "9/11 05:08",
+            "at": "2026-09-10T21:57:56.003Z",
+            "label": "9/11 05:57",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:48:35.838Z",
-            "label": "9/11 06:48",
+            "at": "2026-09-11T00:03:06.505Z",
+            "label": "9/11 08:03",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:28:56.118Z",
-            "label": "9/11 08:28",
+            "at": "2026-09-11T02:08:17.007Z",
+            "label": "9/11 10:08",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T02:09:16.397Z",
-            "label": "9/11 10:09",
+            "at": "2026-09-11T04:13:27.509Z",
+            "label": "9/11 12:13",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:49:36.677Z",
-            "label": "9/11 11:49",
+            "at": "2026-09-11T06:18:38.011Z",
+            "label": "9/11 14:18",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:29:56.956Z",
-            "label": "9/11 13:29",
+            "at": "2026-09-11T08:23:48.513Z",
+            "label": "9/11 16:23",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:10:17.236Z",
-            "label": "9/11 15:10",
+            "at": "2026-09-11T10:28:59.015Z",
+            "label": "9/11 18:28",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:50:37.515Z",
-            "label": "9/11 16:50",
+            "at": "2026-09-11T12:34:09.517Z",
+            "label": "9/11 20:34",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:30:57.795Z",
-            "label": "9/11 18:30",
+            "at": "2026-09-11T14:39:20.019Z",
+            "label": "9/11 22:39",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
             "reports": 1
           }
@@ -4110,7 +5204,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T17:45:00.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -4121,68 +5215,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T19:25:34.370Z",
-            "label": "9/11 03:25",
+            "at": "2026-09-10T19:50:24.592Z",
+            "label": "9/11 03:50",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:06:08.740Z",
-            "label": "9/11 05:06",
+            "at": "2026-09-10T21:55:49.185Z",
+            "label": "9/11 05:55",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:46:43.111Z",
-            "label": "9/11 06:46",
+            "at": "2026-09-11T00:01:13.778Z",
+            "label": "9/11 08:01",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:27:17.481Z",
-            "label": "9/11 08:27",
+            "at": "2026-09-11T02:06:38.371Z",
+            "label": "9/11 10:06",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-11T02:07:51.852Z",
-            "label": "9/11 10:07",
+            "at": "2026-09-11T04:12:02.964Z",
+            "label": "9/11 12:12",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:48:26.222Z",
-            "label": "9/11 11:48",
+            "at": "2026-09-11T06:17:27.556Z",
+            "label": "9/11 14:17",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:29:00.593Z",
-            "label": "9/11 13:29",
+            "at": "2026-09-11T08:22:52.149Z",
+            "label": "9/11 16:22",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:09:34.963Z",
-            "label": "9/11 15:09",
+            "at": "2026-09-11T10:28:16.742Z",
+            "label": "9/11 18:28",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:50:09.334Z",
-            "label": "9/11 16:50",
+            "at": "2026-09-11T12:33:41.335Z",
+            "label": "9/11 20:33",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:30:43.704Z",
-            "label": "9/11 18:30",
+            "at": "2026-09-11T14:39:05.928Z",
+            "label": "9/11 22:39",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 59,
             "reports": 1
           }
@@ -4195,7 +5289,7 @@
       "normalizedUrl": "https://anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
       "originalUrl": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
       "titleOriginal": "Anthropic 评估 AI 模型的战术情报定位与常规武器能力",
-      "summaryOriginal": "Anthropic Frontier Red Team 发布新评测，衡量模型在战术情报定位（账户关联、照片与文本地理定位）和常规武器开发（无人机末段制导、投送、GPS 干扰下导航）上的能力。",
+      "summaryOriginal": "Anthropic Frontier Red Team 发布新评测，衡量模型在战术情报定位（账号关联、照片与文本地理定位）和常规武器开发（无人机末制导、投放、GPS 拒止导航）上的能力，发现模型在模拟任务上持续进步，部分任务接近或超过人类专家基线。",
       "originalLanguage": "zh",
       "author": "Anthropic：Research（发表成果 · 网页）",
       "category": "research",
@@ -4299,7 +5393,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T17:28:52.100Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -4310,68 +5404,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T19:10:54.461Z",
-            "label": "9/11 03:10",
+            "at": "2026-09-10T19:35:44.683Z",
+            "label": "9/11 03:35",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:52:56.822Z",
-            "label": "9/11 04:52",
+            "at": "2026-09-10T21:42:37.267Z",
+            "label": "9/11 05:42",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:34:59.184Z",
-            "label": "9/11 06:34",
+            "at": "2026-09-10T23:49:29.851Z",
+            "label": "9/11 07:49",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:17:01.545Z",
-            "label": "9/11 08:17",
+            "at": "2026-09-11T01:56:22.434Z",
+            "label": "9/11 09:56",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:59:03.906Z",
-            "label": "9/11 09:59",
+            "at": "2026-09-11T04:03:15.018Z",
+            "label": "9/11 12:03",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:41:06.268Z",
-            "label": "9/11 11:41",
+            "at": "2026-09-11T06:10:07.602Z",
+            "label": "9/11 14:10",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:23:08.629Z",
-            "label": "9/11 13:23",
+            "at": "2026-09-11T08:17:00.186Z",
+            "label": "9/11 16:17",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T07:05:10.990Z",
-            "label": "9/11 15:05",
+            "at": "2026-09-11T10:23:52.769Z",
+            "label": "9/11 18:23",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:47:13.352Z",
-            "label": "9/11 16:47",
+            "at": "2026-09-11T12:30:45.353Z",
+            "label": "9/11 20:30",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:29:15.713Z",
-            "label": "9/11 18:29",
+            "at": "2026-09-11T14:37:37.937Z",
+            "label": "9/11 22:37",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
             "reports": 1
           }
@@ -4530,7 +5624,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T16:33:44.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 93,
         "peak": 93,
         "history": [
@@ -4541,68 +5635,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T18:20:47.097Z",
-            "label": "9/11 02:20",
+            "at": "2026-09-10T18:45:37.320Z",
+            "label": "9/11 02:45",
             "value": 34,
             "reports": 2
           },
           {
-            "at": "2026-09-10T20:07:50.195Z",
-            "label": "9/11 04:07",
+            "at": "2026-09-10T20:57:30.640Z",
+            "label": "9/11 04:57",
             "value": 40,
             "reports": 2
           },
           {
-            "at": "2026-09-10T21:54:53.293Z",
-            "label": "9/11 05:54",
+            "at": "2026-09-10T23:09:23.960Z",
+            "label": "9/11 07:09",
             "value": 46,
             "reports": 2
           },
           {
-            "at": "2026-09-10T23:41:56.390Z",
-            "label": "9/11 07:41",
+            "at": "2026-09-11T01:21:17.280Z",
+            "label": "9/11 09:21",
             "value": 52,
             "reports": 2
           },
           {
-            "at": "2026-09-11T01:28:59.488Z",
-            "label": "9/11 09:28",
+            "at": "2026-09-11T03:33:10.600Z",
+            "label": "9/11 11:33",
             "value": 58,
             "reports": 2
           },
           {
-            "at": "2026-09-11T03:16:02.586Z",
-            "label": "9/11 11:16",
+            "at": "2026-09-11T05:45:03.920Z",
+            "label": "9/11 13:45",
             "value": 64,
             "reports": 2
           },
           {
-            "at": "2026-09-11T05:03:05.684Z",
-            "label": "9/11 13:03",
+            "at": "2026-09-11T07:56:57.240Z",
+            "label": "9/11 15:56",
             "value": 70,
             "reports": 2
           },
           {
-            "at": "2026-09-11T06:50:08.781Z",
-            "label": "9/11 14:50",
+            "at": "2026-09-11T10:08:50.560Z",
+            "label": "9/11 18:08",
             "value": 75,
             "reports": 2
           },
           {
-            "at": "2026-09-11T08:37:11.879Z",
-            "label": "9/11 16:37",
+            "at": "2026-09-11T12:20:43.880Z",
+            "label": "9/11 20:20",
             "value": 81,
             "reports": 2
           },
           {
-            "at": "2026-09-11T10:24:14.977Z",
-            "label": "9/11 18:24",
+            "at": "2026-09-11T14:32:37.200Z",
+            "label": "9/11 22:32",
             "value": 87,
             "reports": 2
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 93,
             "reports": 2
           }
@@ -4719,7 +5813,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T16:31:02.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -4730,68 +5824,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T18:18:19.825Z",
-            "label": "9/11 02:18",
+            "at": "2026-09-10T18:43:10.047Z",
+            "label": "9/11 02:43",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:05:37.650Z",
-            "label": "9/11 04:05",
+            "at": "2026-09-10T20:55:18.094Z",
+            "label": "9/11 04:55",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:52:55.475Z",
-            "label": "9/11 05:52",
+            "at": "2026-09-10T23:07:26.142Z",
+            "label": "9/11 07:07",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:40:13.300Z",
-            "label": "9/11 07:40",
+            "at": "2026-09-11T01:19:34.189Z",
+            "label": "9/11 09:19",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:27:31.125Z",
-            "label": "9/11 09:27",
+            "at": "2026-09-11T03:31:42.236Z",
+            "label": "9/11 11:31",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:14:48.950Z",
-            "label": "9/11 11:14",
+            "at": "2026-09-11T05:43:50.284Z",
+            "label": "9/11 13:43",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T05:02:06.775Z",
-            "label": "9/11 13:02",
+            "at": "2026-09-11T07:55:58.331Z",
+            "label": "9/11 15:55",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:49:24.600Z",
-            "label": "9/11 14:49",
+            "at": "2026-09-11T10:08:06.378Z",
+            "label": "9/11 18:08",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:36:42.425Z",
-            "label": "9/11 16:36",
+            "at": "2026-09-11T12:20:14.426Z",
+            "label": "9/11 20:20",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:24:00.250Z",
-            "label": "9/11 18:24",
+            "at": "2026-09-11T14:32:22.473Z",
+            "label": "9/11 22:32",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 59,
             "reports": 1
           }
@@ -4900,7 +5994,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T16:00:00.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -4911,68 +6005,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T17:50:07.097Z",
-            "label": "9/11 01:50",
+            "at": "2026-09-10T18:14:57.320Z",
+            "label": "9/11 02:14",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:40:14.195Z",
-            "label": "9/11 03:40",
+            "at": "2026-09-10T20:29:54.640Z",
+            "label": "9/11 04:29",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:30:21.293Z",
-            "label": "9/11 05:30",
+            "at": "2026-09-10T22:44:51.960Z",
+            "label": "9/11 06:44",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:20:28.390Z",
-            "label": "9/11 07:20",
+            "at": "2026-09-11T00:59:49.280Z",
+            "label": "9/11 08:59",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:10:35.488Z",
-            "label": "9/11 09:10",
+            "at": "2026-09-11T03:14:46.600Z",
+            "label": "9/11 11:14",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:00:42.586Z",
-            "label": "9/11 11:00",
+            "at": "2026-09-11T05:29:43.920Z",
+            "label": "9/11 13:29",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:50:49.684Z",
-            "label": "9/11 12:50",
+            "at": "2026-09-11T07:44:41.240Z",
+            "label": "9/11 15:44",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:40:56.781Z",
-            "label": "9/11 14:40",
+            "at": "2026-09-11T09:59:38.560Z",
+            "label": "9/11 17:59",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:31:03.879Z",
-            "label": "9/11 16:31",
+            "at": "2026-09-11T12:14:35.880Z",
+            "label": "9/11 20:14",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:21:10.977Z",
-            "label": "9/11 18:21",
+            "at": "2026-09-11T14:29:33.200Z",
+            "label": "9/11 22:29",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 44,
             "reports": 1
           }
@@ -5075,7 +6169,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T16:00:00.000Z",
-        "endedAt": "2026-09-11T12:11:18.075Z",
+        "endedAt": "2026-09-11T16:44:30.521Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -5086,68 +6180,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T17:50:07.097Z",
-            "label": "9/11 01:50",
+            "at": "2026-09-10T18:14:57.320Z",
+            "label": "9/11 02:14",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:40:14.195Z",
-            "label": "9/11 03:40",
+            "at": "2026-09-10T20:29:54.640Z",
+            "label": "9/11 04:29",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:30:21.293Z",
-            "label": "9/11 05:30",
+            "at": "2026-09-10T22:44:51.960Z",
+            "label": "9/11 06:44",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:20:28.390Z",
-            "label": "9/11 07:20",
+            "at": "2026-09-11T00:59:49.280Z",
+            "label": "9/11 08:59",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:10:35.488Z",
-            "label": "9/11 09:10",
+            "at": "2026-09-11T03:14:46.600Z",
+            "label": "9/11 11:14",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T03:00:42.586Z",
-            "label": "9/11 11:00",
+            "at": "2026-09-11T05:29:43.920Z",
+            "label": "9/11 13:29",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T04:50:49.684Z",
-            "label": "9/11 12:50",
+            "at": "2026-09-11T07:44:41.240Z",
+            "label": "9/11 15:44",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-11T06:40:56.781Z",
-            "label": "9/11 14:40",
+            "at": "2026-09-11T09:59:38.560Z",
+            "label": "9/11 17:59",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T08:31:03.879Z",
-            "label": "9/11 16:31",
+            "at": "2026-09-11T12:14:35.880Z",
+            "label": "9/11 20:14",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T10:21:10.977Z",
-            "label": "9/11 18:21",
+            "at": "2026-09-11T14:29:33.200Z",
+            "label": "9/11 22:29",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-11T12:11:18.075Z",
-            "label": "9/11 20:11",
+            "at": "2026-09-11T16:44:30.521Z",
+            "label": "9/12 00:44",
             "value": 65,
             "reports": 1
           }
