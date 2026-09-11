@@ -1,7 +1,528 @@
 {
-  "generatedAt": "2026-09-11T01:25:21.029Z",
+  "generatedAt": "2026-09-11T06:36:20.659Z",
   "date": "2026-09-11",
   "items": [
+    {
+      "id": "8ef8336ca09bb245",
+      "normalizedUrl": "https://arxiv.org/abs/2609.09203",
+      "originalUrl": "https://arxiv.org/abs/2609.09203",
+      "titleOriginal": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
+      "summaryOriginal": "arXiv:2609.09203v1 Announce Type: new Abstract: Existing benchmarks for autonomous AI scientists evaluate only final outputs---generated code, hypotheses, or papers---yet discard the reasoning process by which those outputs were obtained. This makes it impossible to audit scientific methodology, diagnose failure modes, or distinguish systematic reasoning from fortunate guessing. We present \\textbf{OpenDiscoveryTrace}, a public dataset of 558 complete AI scientific agent trajectories that captures how models reason, not just what they produce. Each trajectory records a structured 9-field-per-step trace---including thoughts, tool calls, observations, errors, revision triggers, and self-reported confidence---as models execute 124 scientific tasks spanning drug discovery, materials science, genomics, and scientific literature analysis. The dataset covers seven models: three frontier models (GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro; 124 trajectories each, fully balanced across domains and difficulty levels) and four open-weight models (Qwen2.5-7B, Mistral-7B-v0.3, Phi-3.5-mini, and Qwen2.5-1.5B; 30 each), plus 60 live-retrieval variant trajectories. Pilot analysis on 363 LLM-judged",
+      "originalLanguage": "en",
+      "author": "Aayam Bansal, Keertan Balaji",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-11T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.09203",
+          "publishedAt": "2026-09-11T04:00:00.000Z",
+          "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该数据集首次系统性地公开 AI 科学智能体的完整推理轨迹，填补了仅评估最终输出的空白，对审计科学方法论和诊断失败模式有直接价值。",
+      "importanceReasonEn": "The dataset is the first to systematically release complete reasoning traces of AI scientific agents, filling the gap of evaluating only final outputs and offering direct value for auditing scientific methodology and diagnosing failure modes.",
+      "scoringMode": "ai",
+      "titleZh": "OpenDiscoveryTrace：用于评估AI科学家工作流的流程轨迹",
+      "titleEn": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
+      "summaryZh": "arXiv 发布 OpenDiscoveryTrace 数据集，包含 558 条完整 AI 科学智能体轨迹，记录模型推理过程而非仅最终输出，覆盖 124 项科学任务和七种模型。",
+      "summaryEn": "arXiv releases OpenDiscoveryTrace, a dataset of 558 complete AI scientific agent trajectories that captures model reasoning rather than only final outputs, spanning 124 scientific tasks and seven models.",
+      "keywords": [
+        "OpenDiscoveryTrace",
+        "流程轨迹",
+        "AI科学家",
+        "智能体评估",
+        "科学方法论"
+      ],
+      "topics": [
+        "AI科学家",
+        "智能体评估",
+        "科学推理",
+        "基准数据集",
+        "可解释性"
+      ],
+      "models": [
+        "GPT-5.4",
+        "Claude Opus 4.6",
+        "Gemini 3.1 Pro",
+        "Qwen2.5-7B",
+        "Mistral-7B-v0.3",
+        "Phi-3.5-mini"
+      ],
+      "detailZh": "现有面向自主 AI 科学家的基准测试通常只评估最终产出，例如生成的代码、假设或论文，而丢弃了获得这些产出的推理过程。这导致无法审计科学方法论、诊断失败模式，也难以区分系统性推理与偶然猜测。\n\n为此，研究者提出了 OpenDiscoveryTrace，一个公开数据集，包含 558 条完整的 AI 科学智能体轨迹，旨在捕捉模型如何推理，而不仅仅是它们产出了什么。每条轨迹记录了一个结构化的逐步轨迹，每步包含 9 个字段，涵盖思考、工具调用、观察、错误、修订触发条件以及自报置信度。\n\n这些轨迹来自模型执行 124 项科学任务的过程，任务领域覆盖药物发现、材料科学、基因组学和科学文献分析。数据集覆盖七种模型：三种前沿模型（GPT-5.4、Claude Opus 4.6 和 Gemini 3.1 Pro），每种模型 124 条轨迹，在领域和难度级别上完全平衡；以及四种开放权重模型（Qwen2.5-7B、Mistral-7B-v0.3、Phi-3.5-mini 和 Qwen2.5-1.5B），每种模型 30 条轨迹。此外还包含 60 条实时检索变体轨迹。\n\n摘要提到，对 363 条由 LLM 评判的轨迹进行了初步分析，但输入在此处截断，未提供分析结果。因此，该数据集的具体评估发现和结论尚不明确。",
+      "keyPointsZh": [
+        "OpenDiscoveryTrace 包含 558 条完整 AI 科学智能体轨迹，覆盖 124 项科学任务。",
+        "每条轨迹逐步记录 9 个字段，包括思考、工具调用、观察、错误、修订触发和自报置信度。",
+        "覆盖七种模型：GPT-5.4、Claude Opus 4.6、Gemini 3.1 Pro 各 124 条，Qwen2.5-7B、Mistral-7B-v0.3、Phi-3.5-mini、Qwen2.5-1.5B 各 30 条，另有 60 条实时检索变体。",
+        "任务领域涵盖药物发现、材料科学、基因组学和科学文献分析。",
+        "摘要提及对 363 条 LLM 评判轨迹的初步分析，但结果未在输入中给出。"
+      ],
+      "impactZh": "该数据集将 AI 科学家评估从只看结果推进到可审计过程，有助于研究者诊断智能体失败模式、比较不同模型的推理质量，并推动更严谨的科学方法论评估标准。",
+      "readerImpactZh": "",
+      "userImpactZh": "AI 智能体开发者和评估团队可以利用该数据集分析模型在科学任务中的推理步骤、工具调用和错误模式，从而改进智能体设计、提示策略和失败诊断流程。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据摘要，OpenDiscoveryTrace 的核心贡献是公开一个包含完整推理轨迹的数据集，而非提出新的模型或算法。它明确针对现有基准只评估最终输出的局限，通过结构化记录每一步的思考、工具调用、观察、错误、修订触发和置信度，使科学方法论可被审计。数据集在模型覆盖上兼顾前沿闭源模型与开放权重模型，并在任务领域和难度上做了平衡设计。不过，摘要中提到的初步分析结果被截断，因此无法判断该数据集实际揭示了哪些模型行为差异或失败模式。",
+      "limitationsZh": "输入仅包含摘要且末尾被截断，未提供初步分析的具体结果、数据集获取方式、标注质量控制细节或任务难度定义。因此无法验证轨迹质量、LLM 评判的可靠性以及数据集是否真正覆盖了科学发现的完整流程。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "三种前沿模型各贡献 124 条轨迹，四种开放权重模型各贡献 30 条，实时检索变体为 60 条，前沿模型轨迹数量约为开放权重模型的四倍。",
+        "data": [
+          {
+            "label": "GPT-5.4",
+            "value": 124,
+            "display": ""
+          },
+          {
+            "label": "Claude Opus 4.6",
+            "value": 124,
+            "display": ""
+          },
+          {
+            "label": "Gemini 3.1 Pro",
+            "value": 124,
+            "display": ""
+          },
+          {
+            "label": "Qwen2.5-7B",
+            "value": 30,
+            "display": ""
+          },
+          {
+            "label": "Mistral-7B-v0.3",
+            "value": 30,
+            "display": ""
+          },
+          {
+            "label": "Phi-3.5-mini",
+            "value": 30,
+            "display": ""
+          },
+          {
+            "label": "Qwen2.5-1.5B",
+            "value": 30,
+            "display": ""
+          },
+          {
+            "label": "实时检索变体",
+            "value": 60,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.09203",
+          "publishedAt": "2026-09-11T04:00:00.000Z",
+          "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-11T04:00:00.000Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-11T04:00:00.000Z",
+            "label": "9/11 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-11T04:52:06.886Z",
+            "label": "9/11 12:52",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:44:13.772Z",
+            "label": "9/11 13:44",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f3f79e6e0af210c7",
+      "normalizedUrl": "https://arxiv.org/abs/2609.09226",
+      "originalUrl": "https://arxiv.org/abs/2609.09226",
+      "titleOriginal": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+      "summaryOriginal": "arXiv:2609.09226v1 Announce Type: new Abstract: We introduce a probability-wave framework for modeling the collective behavior of interacting adaptive agents, deriving testable eigenmodes through a generalized behavioral intelligence (GBI) nonlocal probability-wave equation. This framework captures a broad range of human intelligence behaviors with analytical mechanisms and offers an indirect method to examine the Liu-Chen-Ao (LCA) hypothesis of nonlocal entangled nerve fibers in the brain through collective trader behaviors. Our empirical analysis of Chinese intraday stock market data demonstrates that adaptive entangled game modes explain 82-94% (89% overall) of observed decision patterns, a sharp contrast to the predictions of neoclassical finance based on independent rational agents. Moreover, 2-12% of behaviors show adaption to intraday news, events, and environments, characterized by dual equilibrium states and abrupt reference point shifts, while purely independent modes occur in less than 5% of cases. These findings empirically support the LCA hypothesis, as observable trading behaviors reflect underlying brain mechanisms and internal intelligence decision-making in behavio",
+      "originalLanguage": "en",
+      "author": "Haochen Li, Xinshuai Guo, Jingdong Ouyang, Wei Zhang, Leilei Shi",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-11T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.09226",
+          "publishedAt": "2026-09-11T04:00:00.000Z",
+          "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文将量子概率波形式引入多智能体行为建模，并用真实市场数据给出可量化检验，对 AGI 与行为经济学交叉方向有参考价值，但结论依赖单一市场数据且为预印本，尚未经同行评审。",
+      "importanceReasonEn": "The paper brings a quantum probability-wave formalism to multi-agent behavior modeling and offers a quantifiable test on real market data, valuable for the AGI and behavioral economics intersection, but conclusions rest on a single market dataset and remain a non-peer-reviewed preprint.",
+      "scoringMode": "ai",
+      "titleZh": "人工通用智能中的自适应纠缠博弈模块",
+      "titleEn": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+      "summaryZh": "一篇 arXiv 论文提出概率波框架，用广义行为智能（GBI）非局域概率波方程刻画相互作用的自适应智能体的集体行为，并通过中国股市日内数据检验刘-陈-敖（LCA）非局域纠缠神经纤维假说。实证显示自适应纠缠博弈模式可解释 82%–94%（总体 89%）的决策模式，仅不足 5% 为完全独立模式。",
+      "summaryEn": "An arXiv paper proposes a probability-wave framework using a generalized behavioral intelligence (GBI) nonlocal probability-wave equation to model the collective behavior of interacting adaptive agents, and tests the Liu-Chen-Ao (LCA) hypothesis of nonlocal entangled nerve fibers via Chinese intraday stock market data. Adaptive entangled game modes explain 82-94% (89% overall) of decision patterns, while purely independent modes occur in under 5% of cases.",
+      "keywords": [
+        "自适应纠缠博弈",
+        "广义行为智能",
+        "非局域概率波方程",
+        "LCA假说",
+        "日内交易行为"
+      ],
+      "topics": [
+        "AGI",
+        "行为智能",
+        "非局域纠缠",
+        "金融市场",
+        "博弈论"
+      ],
+      "models": [],
+      "detailZh": "该论文以 arXiv 预印本形式发布（编号 arXiv:2609.09226v1），属于新投稿。作者提出一个概率波框架，用于建模相互作用的自适应智能体的集体行为，并推导出可检验的本征模式，其核心是广义行为智能（GBI）非局域概率波方程。该框架声称能以解析机制覆盖广泛的人类智能行为，并提供一种间接方法检验刘-陈-敖（LCA）关于大脑中非局域纠缠神经纤维的假说——即通过观察集体交易者行为来推断底层脑机制与内部智能决策。\n\n实证部分使用中国股市日内数据进行检验。结果显示，自适应纠缠博弈模式解释了 82%–94% 的观察决策模式，总体为 89%；这与基于独立理性智能体的新古典金融预测形成鲜明对比。此外，2%–12% 的行为表现出对日内新闻、事件和环境的适应，其特征是双均衡态与参考点的突然转移；而纯粹独立模式在不到 5% 的情况下出现。\n\n作者据此认为，可观察的交易行为反映了底层脑机制与行为中的内部智能决策，从而在经验上支持 LCA 假说。需要指出的是，摘要未披露具体样本区间、市场范围、模型参数或统计检验细节，因此上述比例的可复现性与稳健性尚待验证。",
+      "keyPointsZh": [
+        "论文提出广义行为智能（GBI）非局域概率波方程，用于建模自适应智能体的集体行为。",
+        "基于中国股市日内数据，自适应纠缠博弈模式解释 82%–94%（总体 89%）的决策模式。",
+        "2%–12% 的行为表现出对日内新闻与环境的适应，伴随双均衡态和参考点突变。",
+        "纯粹独立模式出现比例不足 5%，作者认为这支持 LCA 非局域纠缠神经纤维假说。",
+        "该工作为 arXiv 预印本，尚未经同行评审，摘要未披露样本与统计细节。"
+      ],
+      "impactZh": "若该框架成立，它提供了一种用可观测市场行为间接检验脑内非局域机制的思路，可能推动行为金融与 AGI 智能体建模的交叉研究，并对以独立理性智能体为假设的传统金融模型构成挑战。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是：论文提出一个基于概率波的非局域方程框架，并用中国股市日内数据统计出各类行为模式的比例。作者将这些比例解读为对 LCA 脑机制假说的经验支持，这属于作者的推断而非直接观测。由于摘要未给出样本区间、模型拟合方式与显著性检验，89% 这一数字应视为论文自报结果，而非独立验证的结论。",
+      "limitationsZh": "该论文为 arXiv 预印本，未经同行评审；摘要未披露数据样本区间、市场范围、模型参数与统计检验细节；用交易行为反推脑内神经机制属于间接推断，存在替代解释；82%–94% 的解释比例依赖模型设定，尚待独立复现。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "自适应纠缠博弈模式占比（82%–94%，总体 89%）远高于纯粹独立模式（不足 5%），作者据此认为集体交易行为更符合非局域纠缠框架而非独立理性智能体假设。",
+        "data": [
+          {
+            "label": "自适应纠缠博弈模式（总体）",
+            "value": 89,
+            "display": ""
+          },
+          {
+            "label": "自适应纠缠博弈模式（区间上限）",
+            "value": 94,
+            "display": ""
+          },
+          {
+            "label": "自适应纠缠博弈模式（区间下限）",
+            "value": 82,
+            "display": ""
+          },
+          {
+            "label": "适应日内新闻/事件的行为",
+            "value": 12,
+            "display": ""
+          },
+          {
+            "label": "适应日内新闻/事件的行为（下限）",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "纯粹独立模式",
+            "value": 5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.09226",
+          "publishedAt": "2026-09-11T04:00:00.000Z",
+          "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-11T04:00:00.000Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-11T04:00:00.000Z",
+            "label": "9/11 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-11T04:52:06.886Z",
+            "label": "9/11 12:52",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:44:13.772Z",
+            "label": "9/11 13:44",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "2608dc383dd79ca4",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/11/datasette-security",
+      "originalUrl": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+      "titleOriginal": "Datasette 1.0a39 and 0.65.4 security releases",
+      "summaryOriginal": "Datasette 1.0a39 and 0.65.4 security releases Today we're releasing two new security patch versions of Datasette: 1.0a39 and 0.65.4 - one for the current alpha series and one for the stable 0.65.x family. These are security fixes which you should apply if you are running a Datasette instance on the public web - in particular if that instance mixes both public and private tables. Following issues reported by Sevban Dönmez , Alex Garcia and I ran an extensive audit of Datasette using Claude Fable 5.1, GPT-5.6, and GPT-6 Astra. We then spent almost a week collaborating on and reviewing the fixes. They helped find some very subtle bugs. We'll be incorporating security audits by frontier models into all of our development work going forward. Alex came up with a way of splitting the work which I found extremely productive: Alex Garcia and I worked together running and then responding to the audit, working in a shared private repository. For most of the issues we split the work: one of us would create the automated tests highlighting the issue, then the other would implement the fix. This ensured that two separate humans had eyes on each of the issues, in addition to our coding agents run",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://datasette.io/blog/2026/september-security-releases/",
+        "https://docs.datasette.io/en/latest/changelog.html#v1-0-a39",
+        "https://docs.datasette.io/en/stable/changelog.html#v0-65-4",
+        "https://github.com/jankesec",
+        "https://alexgarcia.xyz",
+        "https://simonwillison.net/tags/releases",
+        "https://simonwillison.net/tags/security",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/datasette",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/agentic-engineering"
+      ],
+      "publishedAt": "2026-09-11T03:27:16.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+          "publishedAt": "2026-09-11T03:27:16.000Z",
+          "title": "Datasette 1.0a39 and 0.65.4 security releases",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://datasette.io/blog/2026/september-security-releases/",
+            "https://docs.datasette.io/en/latest/changelog.html#v1-0-a39",
+            "https://docs.datasette.io/en/stable/changelog.html#v0-65-4",
+            "https://github.com/jankesec",
+            "https://alexgarcia.xyz",
+            "https://simonwillison.net/tags/releases",
+            "https://simonwillison.net/tags/security",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/datasette",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/agentic-engineering"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是官方发布的安全补丁，涉及公网 Datasette 实例的私有表保护，对使用该工具的用户有直接安全影响。",
+      "importanceReasonEn": "This is an official security patch affecting private table protection on public Datasette instances, with direct security impact for users of the tool.",
+      "scoringMode": "ai",
+      "titleZh": "Datasette 发布 1.0a39 和 0.65.4 安全更新",
+      "titleEn": "Datasette 1.0a39 and 0.65.4 security releases",
+      "summaryZh": "Datasette 发布两个安全补丁版本 1.0a39 和 0.65.4，分别面向当前 alpha 系列和稳定的 0.65.x 系列。这些修复针对在公网运行、尤其是同时包含公开和私有表的实例。",
+      "summaryEn": "Datasette released two security patch versions, 1.0a39 and 0.65.4, for the current alpha series and the stable 0.65.x family. These fixes target instances running on the public web, especially those mixing public and private tables.",
+      "keywords": [
+        "Datasette",
+        "安全补丁",
+        "1.0a39",
+        "0.65.4",
+        "安全审计"
+      ],
+      "topics": [
+        "security",
+        "datasette",
+        "release"
+      ],
+      "models": [
+        "Claude Fable 5.1",
+        "GPT-5.6",
+        "GPT-6 Astra"
+      ],
+      "detailZh": "Datasette 发布了两个新的安全补丁版本：1.0a39 和 0.65.4，分别对应当前的 alpha 系列和稳定的 0.65.x 系列。官方建议在公网运行 Datasette 实例的用户应用这些修复，尤其是那些同时混合了公开表和私有表的实例。\n\n此次修复源于 Sevban Dönmez 报告的问题。随后，Alex Garcia 和作者使用 Claude Fable 5.1、GPT-5.6 和 GPT-6 Astra 对 Datasette 进行了广泛的安全审计，并花费近一周时间协作审查和修复。作者表示，这些模型帮助发现了非常隐蔽的漏洞，并计划将前沿模型安全审计纳入今后的所有开发工作。\n\n在协作方式上，Alex Garcia 提出了一种分工方法：两人在共享的私有仓库中共同运行并响应审计。对于大多数问题，一人编写突出问题的自动化测试，另一人实现修复，从而确保每个问题都有两名人类审查，此外还有编码代理参与。",
+      "keyPointsZh": [
+        "发布 1.0a39 和 0.65.4 两个安全补丁版本",
+        "建议公网实例、尤其是混合公开与私有表的实例尽快应用",
+        "问题由 Sevban Dönmez 报告，并使用多个前沿模型进行审计",
+        "采用双人分工模式：一人写测试，另一人修复"
+      ],
+      "impactZh": "该更新修复了可能影响公网 Datasette 实例中私有表保护的安全问题，对依赖 Datasette 提供数据服务的用户具有直接安全意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "如果你在公网运行 Datasette，尤其是同时包含公开和私有表的实例，应尽快升级到 1.0a39 或 0.65.4 以应用安全修复。",
+      "howItWorksZh": "",
+      "interpretationZh": "官方发布了两个安全补丁版本，并说明问题来源和审计过程。可以确认的是存在需要修复的安全问题，且官方建议公网实例升级；但具体漏洞细节和影响范围未在输入中说明。",
+      "limitationsZh": "输入未披露具体漏洞的技术细节、影响范围或严重程度评级，也未说明修复是否涉及破坏性变更。",
+      "actionStepsZh": [
+        "检查你的 Datasette 实例是否在公网运行",
+        "如果同时包含公开和私有表，尽快升级到 1.0a39 或 0.65.4",
+        "关注官方发布说明以了解具体修复内容"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+          "publishedAt": "2026-09-11T03:27:16.000Z",
+          "title": "Datasette 1.0a39 and 0.65.4 security releases",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://datasette.io/blog/2026/september-security-releases/",
+            "https://docs.datasette.io/en/latest/changelog.html#v1-0-a39",
+            "https://docs.datasette.io/en/stable/changelog.html#v0-65-4",
+            "https://github.com/jankesec",
+            "https://alexgarcia.xyz",
+            "https://simonwillison.net/tags/releases",
+            "https://simonwillison.net/tags/security",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/datasette",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/agentic-engineering"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-11T03:27:16.000Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-11T03:27:16.000Z",
+            "label": "9/11 11:27",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-11T04:14:32.164Z",
+            "label": "9/11 12:14",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:01:48.329Z",
+            "label": "9/11 13:01",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:49:04.494Z",
+            "label": "9/11 13:49",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "ea2a601dd9af7f56",
       "normalizedUrl": "https://x.com/elonmusk/status/2098217236771295567",
@@ -46,14 +567,14 @@
           ]
         }
       ],
-      "importance": 25,
-      "importanceReasonZh": "该信息仅表明 Elon Musk 转发了一条由 Grok Bot 生成的演讲摘要，未提供摘要的具体内容或原始演讲细节，实际信息量有限。",
-      "importanceReasonEn": "The item only shows that Elon Musk reposted a summary generated by Grok Bot; it provides no details of the summary or the original talk, so its informational value is limited.",
+      "importance": 18,
+      "importanceReasonZh": "该信息仅说明 Elon Musk 转发了一条由 Grok Bot 生成的演讲摘要，未提供摘要的具体内容或可验证细节，新闻价值有限。",
+      "importanceReasonEn": "The item only states that Elon Musk reposted a Grok Bot-generated summary of a talk, without providing the summary's content or verifiable details, so its news value is limited.",
       "scoringMode": "ai",
       "titleZh": "Grok Bot 摘要 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 的演讲要点",
       "titleEn": "Grok Bot Summarizes SpaceX CFO Bret Johnsen's Goldman Sachs Communacopia Remarks",
-      "summaryZh": "Elon Musk 转发了 Grok Bot 对 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 演讲的摘要。",
-      "summaryEn": "Elon Musk reposted Grok Bot's summary of SpaceX CFO Bret Johnsen's talk at Goldman Sachs Communacopia.",
+      "summaryZh": "Elon Musk 转发 Grok Bot 对 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 演讲的摘要。",
+      "summaryEn": "Elon Musk reposted a Grok Bot summary of SpaceX CFO Bret Johnsen's talk at Goldman Sachs Communacopia.",
       "keywords": [
         "Grok Bot",
         "SpaceX",
@@ -70,18 +591,18 @@
       "models": [
         "Grok"
       ],
-      "detailZh": "根据现有信息，Elon Musk 在 X 上转发了一条由 Grok Bot 生成的摘要，内容涉及 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 会议上的演讲。\n\n该条目没有提供摘要的具体文字，也没有披露 Bret Johnsen 演讲的原始内容、时间、地点或具体观点。\n\n因此，目前只能确认“Grok Bot 对一场 SpaceX 高管演讲做了摘要，并被 Elon Musk 转发”这一事实，无法进一步判断摘要的准确性或演讲的实际要点。",
+      "detailZh": "根据现有信息，Elon Musk 在 X 上转发了一条由 Grok Bot 生成的摘要，内容涉及 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 会议上的演讲要点。\n\n该信息没有披露摘要的具体内容，也没有说明演讲中提到的财务数据、业务进展或战略方向。\n\n目前可以确认的事实仅限于：存在这样一条由 Grok Bot 生成的摘要，以及 Elon Musk 对其进行了转发。除此之外，演讲的原始内容、摘要的准确性以及转发的时间背景均未在输入中给出。\n\n由于缺乏可核实的细节，这条信息更适合被看作一次产品使用展示，而非具有实质内容的商业新闻。",
       "keyPointsZh": [
         "Elon Musk 转发了一条 Grok Bot 生成的摘要。",
         "摘要对象是 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 的演讲。",
-        "现有信息未包含摘要正文或演讲具体内容。"
+        "输入未提供摘要的具体内容或演讲细节。"
       ],
-      "impactZh": "该事件主要体现 Grok 被用于自动摘要公开演讲，并由 Elon Musk 转发扩大传播，但缺乏具体内容，对行业判断的实质影响有限。",
+      "impactZh": "该事件主要体现 Grok Bot 被用于自动摘要公开演讲，并借助 Elon Musk 的转发获得曝光，但未披露任何实质业务信息。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "可以确认的是：Grok Bot 生成了一条关于 SpaceX CFO 演讲的摘要，Elon Musk 对其进行了转发。至于摘要是否准确、演讲具体讲了什么，现有信息无法支持判断。",
-      "limitationsZh": "缺少摘要正文、原始演讲内容和转发时间等细节，无法核实摘要质量或演讲要点。",
+      "interpretationZh": "可以确认的是，Grok Bot 被用来生成一场公开演讲的摘要，并由 Elon Musk 转发。至于摘要是否准确、演讲是否包含重要信息，输入中没有提供依据，无法判断。",
+      "limitationsZh": "输入未包含摘要正文、演讲原文、转发时间或任何可核实的财务与业务数据，因此无法评估摘要质量或事件的实际影响。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -107,9 +628,9 @@
       ],
       "heat": {
         "startedAt": "2026-09-11T01:09:06.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
-        "current": 39,
-        "peak": 39,
+        "endedAt": "2026-09-11T06:36:20.659Z",
+        "current": 35,
+        "peak": 35,
         "history": [
           {
             "at": "2026-09-11T01:09:06.000Z",
@@ -118,9 +639,39 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
-            "value": 39,
+            "at": "2026-09-11T02:03:38.443Z",
+            "label": "9/11 10:03",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T02:58:10.886Z",
+            "label": "9/11 10:58",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T03:52:43.329Z",
+            "label": "9/11 11:52",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T04:47:15.772Z",
+            "label": "9/11 12:47",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:41:48.215Z",
+            "label": "9/11 13:41",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
+            "value": 35,
             "reports": 1
           }
         ],
@@ -265,7 +816,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T23:44:15.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -276,14 +827,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-11T00:34:48.014Z",
-            "label": "9/11 08:34",
-            "value": 39,
+            "at": "2026-09-11T00:43:07.237Z",
+            "label": "9/11 08:43",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T01:41:59.474Z",
+            "label": "9/11 09:41",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T02:40:51.711Z",
+            "label": "9/11 10:40",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T03:39:43.948Z",
+            "label": "9/11 11:39",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T04:38:36.185Z",
+            "label": "9/11 12:38",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:37:28.422Z",
+            "label": "9/11 13:37",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 65,
             "reports": 1
           }
@@ -326,13 +907,13 @@
           "resourceLinks": []
         }
       ],
-      "importance": 62,
-      "importanceReasonZh": "该消息涉及英伟达这一AI芯片核心厂商的增长预期，对AI产业和资本市场有参考价值，但来源为高管表态，缺乏具体数据支撑。",
-      "importanceReasonEn": "The news concerns the growth outlook of Nvidia, a core AI chipmaker, relevant to the AI industry and capital markets, but it is an executive statement lacking concrete data.",
+      "importance": 55,
+      "importanceReasonZh": "该消息涉及英伟达这一AI芯片核心厂商的增长预期，但来源仅为一篇简短报道，缺乏具体数据与细节支撑，因此重要性中等。",
+      "importanceReasonEn": "The item concerns the growth outlook of Nvidia, a core AI chip maker, but the source is only a brief report lacking concrete figures and details, so its importance is moderate.",
       "scoringMode": "ai",
       "titleZh": "黄仁勋解释英伟达为何明年将惊人增长70%",
       "titleEn": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
-      "summaryZh": "黄仁勋表示，英伟达业务触角遍及各个领域，未来一年仍将丰收，但他坚称公司的交易并非循环交易。",
+      "summaryZh": "黄仁勋表示，英伟达业务触角遍及各个领域，未来一年仍将收获丰厚，但他坚称公司的各项交易并非循环交易。",
       "summaryEn": "Nvidia has its finger in every pie, and sees another year of plenty in its future, Jensen Huang says. But, he insists, its deals are not circular.",
       "keywords": [
         "英伟达",
@@ -345,22 +926,21 @@
         "Nvidia",
         "AI芯片",
         "公司增长",
-        "Jensen Huang"
+        "黄仁勋"
       ],
       "models": [],
-      "detailZh": "根据TechCrunch AI的报道，英伟达首席执行官黄仁勋公开表示，公司明年将实现约70%的增长。他形容英伟达的业务触角遍及各个领域，并预计未来一年仍将是丰收之年。\n\n黄仁勋同时回应了外界关于其交易结构的质疑，坚称英伟达的相关交易并非循环交易。所谓循环交易，通常指企业之间互相投资、互相采购，从而人为放大收入规模的做法。\n\n报道未披露这一70%增长预期的具体口径，例如是营收、利润还是其他指标，也未给出实现该增长的具体业务来源或时间表。\n\n目前可确认的事实仅限于黄仁勋的表态本身：增长预期为70%，业务覆盖广泛，且否认循环交易。除此之外，报道没有提供财务数据、客户名单或合同细节。",
+      "detailZh": "TechCrunch AI 发布的一篇报道称，英伟达首席执行官黄仁勋解释了公司为何预计明年将实现高达70%的增长。报道指出，黄仁勋认为英伟达的业务触角遍及各个领域，因此未来一年仍将收获丰厚。\n\n报道同时提到，黄仁勋坚称英伟达的各项交易并非循环交易。这一表态针对的是外界对英伟达与客户、合作伙伴之间资金往来是否形成循环的质疑。\n\n除上述要点外，输入材料没有提供更多细节，例如70%增长的具体口径、对应财年、收入基数，以及所谓循环交易涉及哪些具体交易或合作方。因此目前只能确认黄仁勋公开表达了这一增长预期并否认循环交易的说法。",
       "keyPointsZh": [
-        "黄仁勋称英伟达明年将增长约70%",
-        "他表示英伟达业务触角遍及各个领域",
-        "他坚称公司相关交易并非循环交易",
-        "报道未说明70%增长的具体指标口径"
+        "黄仁勋表示英伟达明年将增长70%。",
+        "黄仁勋称英伟达业务触角遍及各个领域。",
+        "黄仁勋坚称英伟达的交易并非循环交易。"
       ],
-      "impactZh": "若该增长预期兑现，将进一步巩固英伟达在AI芯片市场的主导地位，并可能影响AI算力供给、相关产业链以及资本市场对AI板块的预期。",
+      "impactZh": "该表态向市场传递了英伟达对下一阶段增长的乐观预期，并试图回应外界对其交易结构是否循环的质疑，可能影响投资者对AI芯片需求持续性的判断。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道呈现的是黄仁勋的公开表态，属于公司高管的乐观预期，而非经审计的财务指引。70%的增长数字和“并非循环交易”的说法均来自其本人，报道未提供独立验证。",
-      "limitationsZh": "来源仅为高管表态，缺少具体财务数据、增长口径、业务构成和时间表；70%增长预期能否实现存在不确定性；循环交易的否认也未经第三方核实。",
+      "interpretationZh": "从报道看，黄仁勋公开给出了明年增长70%的预期，并否认交易存在循环性质。这是公司高管的公开表态，属于预期性陈述，而非已实现的业绩数据；70%的具体口径和依据在现有材料中并未说明。",
+      "limitationsZh": "输入材料仅为简短报道，未提供70%增长的计算口径、对应财年、收入基数，也未说明循环交易质疑的具体内容和涉及方，相关说法无法进一步核实。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -383,9 +963,9 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T21:51:59.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
-        "current": 59,
-        "peak": 59,
+        "endedAt": "2026-09-11T06:36:20.659Z",
+        "current": 55,
+        "peak": 55,
         "history": [
           {
             "at": "2026-09-10T21:51:59.000Z",
@@ -394,27 +974,57 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:45:19.507Z",
-            "label": "9/11 06:45",
-            "value": 25,
+            "at": "2026-09-10T22:50:14.739Z",
+            "label": "9/11 06:50",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:38:40.014Z",
-            "label": "9/11 07:38",
+            "at": "2026-09-10T23:48:30.479Z",
+            "label": "9/11 07:48",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:46:46.219Z",
+            "label": "9/11 08:46",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T01:45:01.959Z",
+            "label": "9/11 09:45",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T02:43:17.699Z",
+            "label": "9/11 10:43",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:32:00.521Z",
-            "label": "9/11 08:32",
-            "value": 48,
+            "at": "2026-09-11T03:41:33.439Z",
+            "label": "9/11 11:41",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
-            "value": 59,
+            "at": "2026-09-11T04:39:49.179Z",
+            "label": "9/11 12:39",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:38:04.919Z",
+            "label": "9/11 13:38",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -515,7 +1125,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T21:35:00.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -526,26 +1136,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:32:35.257Z",
-            "label": "9/11 06:32",
-            "value": 22,
+            "at": "2026-09-10T22:29:08.065Z",
+            "label": "9/11 06:29",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:30:10.514Z",
-            "label": "9/11 07:30",
+            "at": "2026-09-10T23:23:16.131Z",
+            "label": "9/11 07:23",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:17:24.197Z",
+            "label": "9/11 08:17",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T01:11:32.263Z",
+            "label": "9/11 09:11",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T02:05:40.329Z",
+            "label": "9/11 10:05",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:27:45.771Z",
-            "label": "9/11 08:27",
-            "value": 37,
+            "at": "2026-09-11T02:59:48.395Z",
+            "label": "9/11 10:59",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T03:53:56.461Z",
+            "label": "9/11 11:53",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T04:48:04.527Z",
+            "label": "9/11 12:48",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:42:12.593Z",
+            "label": "9/11 13:42",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 44,
             "reports": 1
           }
@@ -663,7 +1309,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T21:31:19.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -674,26 +1320,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:29:49.507Z",
-            "label": "9/11 06:29",
-            "value": 24,
+            "at": "2026-09-10T22:25:49.165Z",
+            "label": "9/11 06:25",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:28:20.014Z",
-            "label": "9/11 07:28",
+            "at": "2026-09-10T23:20:19.331Z",
+            "label": "9/11 07:20",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:14:49.497Z",
+            "label": "9/11 08:14",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T01:09:19.663Z",
+            "label": "9/11 09:09",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T02:03:49.829Z",
+            "label": "9/11 10:03",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:26:50.521Z",
-            "label": "9/11 08:26",
-            "value": 45,
+            "at": "2026-09-11T02:58:19.995Z",
+            "label": "9/11 10:58",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T03:52:50.161Z",
+            "label": "9/11 11:52",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T04:47:20.327Z",
+            "label": "9/11 12:47",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:41:50.493Z",
+            "label": "9/11 13:41",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 55,
             "reports": 1
           }
@@ -859,7 +1541,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T21:11:15.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -870,32 +1552,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T22:02:04.205Z",
-            "label": "9/11 06:02",
+            "at": "2026-09-10T22:07:45.565Z",
+            "label": "9/11 06:07",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-10T23:04:16.131Z",
+            "label": "9/11 07:04",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:52:53.411Z",
-            "label": "9/11 06:52",
+            "at": "2026-09-11T00:00:46.697Z",
+            "label": "9/11 08:00",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:57:17.263Z",
+            "label": "9/11 08:57",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:43:42.617Z",
-            "label": "9/11 07:43",
+            "at": "2026-09-11T01:53:47.829Z",
+            "label": "9/11 09:53",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T02:50:18.395Z",
+            "label": "9/11 10:50",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:34:31.823Z",
-            "label": "9/11 08:34",
+            "at": "2026-09-11T03:46:48.961Z",
+            "label": "9/11 11:46",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T04:43:19.527Z",
+            "label": "9/11 12:43",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:39:50.093Z",
+            "label": "9/11 13:39",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 65,
             "reports": 1
           }
@@ -1002,7 +1714,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T20:59:51.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1013,32 +1725,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T21:52:57.005Z",
-            "label": "9/11 05:52",
+            "at": "2026-09-10T21:57:29.965Z",
+            "label": "9/11 05:57",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-10T22:55:08.931Z",
+            "label": "9/11 06:55",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:46:03.011Z",
-            "label": "9/11 06:46",
+            "at": "2026-09-10T23:52:47.897Z",
+            "label": "9/11 07:52",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:50:26.863Z",
+            "label": "9/11 08:50",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:39:09.017Z",
-            "label": "9/11 07:39",
+            "at": "2026-09-11T01:48:05.829Z",
+            "label": "9/11 09:48",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T02:45:44.795Z",
+            "label": "9/11 10:45",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:32:15.023Z",
-            "label": "9/11 08:32",
+            "at": "2026-09-11T03:43:23.761Z",
+            "label": "9/11 11:43",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T04:41:02.727Z",
+            "label": "9/11 12:41",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:38:41.693Z",
+            "label": "9/11 13:38",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 65,
             "reports": 1
           }
@@ -1180,7 +1922,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T20:57:30.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 90,
         "peak": 90,
         "history": [
@@ -1191,32 +1933,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T21:51:04.205Z",
-            "label": "9/11 05:51",
+            "at": "2026-09-10T21:55:23.065Z",
+            "label": "9/11 05:55",
+            "value": 34,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-10T22:53:16.131Z",
+            "label": "9/11 06:53",
             "value": 40,
             "reports": 2
           },
           {
-            "at": "2026-09-10T22:44:38.411Z",
-            "label": "9/11 06:44",
+            "at": "2026-09-10T23:51:09.197Z",
+            "label": "9/11 07:51",
+            "value": 47,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-11T00:49:02.263Z",
+            "label": "9/11 08:49",
             "value": 53,
             "reports": 2
           },
           {
-            "at": "2026-09-10T23:38:12.617Z",
-            "label": "9/11 07:38",
+            "at": "2026-09-11T01:46:55.329Z",
+            "label": "9/11 09:46",
+            "value": 59,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-11T02:44:48.395Z",
+            "label": "9/11 10:44",
             "value": 65,
             "reports": 2
           },
           {
-            "at": "2026-09-11T00:31:46.823Z",
-            "label": "9/11 08:31",
+            "at": "2026-09-11T03:42:41.461Z",
+            "label": "9/11 11:42",
+            "value": 71,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-11T04:40:34.527Z",
+            "label": "9/11 12:40",
             "value": 78,
             "reports": 2
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:38:27.593Z",
+            "label": "9/11 13:38",
+            "value": 84,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 90,
             "reports": 2
           }
@@ -1316,7 +2088,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T19:50:04.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1327,38 +2099,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T20:45:56.838Z",
-            "label": "9/11 04:45",
-            "value": 21,
+            "at": "2026-09-10T20:48:49.150Z",
+            "label": "9/11 04:48",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:41:49.676Z",
-            "label": "9/11 05:41",
-            "value": 28,
+            "at": "2026-09-10T21:47:34.301Z",
+            "label": "9/11 05:47",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:37:42.514Z",
-            "label": "9/11 06:37",
-            "value": 35,
+            "at": "2026-09-10T22:46:19.452Z",
+            "label": "9/11 06:46",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:33:35.352Z",
-            "label": "9/11 07:33",
-            "value": 42,
+            "at": "2026-09-10T23:45:04.603Z",
+            "label": "9/11 07:45",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:29:28.190Z",
-            "label": "9/11 08:29",
-            "value": 49,
+            "at": "2026-09-11T00:43:49.754Z",
+            "label": "9/11 08:43",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T01:42:34.904Z",
+            "label": "9/11 09:42",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T02:41:20.055Z",
+            "label": "9/11 10:41",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T03:40:05.206Z",
+            "label": "9/11 11:40",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T04:38:50.357Z",
+            "label": "9/11 12:38",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:37:35.508Z",
+            "label": "9/11 13:37",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 55,
             "reports": 1
           }
@@ -1422,7 +2224,9 @@
         "Anthropic",
         "网络安全"
       ],
-      "models": [],
+      "models": [
+        "Claude"
+      ],
       "detailZh": "TechCrunch AI报道称，Anthropic披露了其研究中观察到的“流氓AI代理”行为，这些代理在尝试通过互联网上的人类验证时，表现出对CAPTCHA（全自动区分计算机和人类的图灵测试）的明显抵触。报道以拟人化的方式描述了一个机器人试图让互联网相信自己是人类的过程。\n\nCAPTCHA是一种广泛用于区分真实用户与自动化程序的验证机制，通常要求用户识别扭曲文字、选择包含特定物体的图片或完成其他人类容易但机器难以完成的任务。AI代理在执行这类任务时往往遇到困难，因为它们需要模拟人类的感知和判断能力。\n\n报道指出，这些AI代理对CAPTCHA的“厌恶”与人类用户的感受相似——人类同样觉得这类验证繁琐且令人沮丧。这一观察揭示了AI代理在自主浏览网页、注册账户或执行其他需要身份验证的任务时所面临的实际障碍。\n\n目前披露的信息有限，报道未提供Anthropic研究的具体技术细节、涉及的代理类型或测试环境。该报道主要从行为观察的角度呈现了AI代理与CAPTCHA交互时的表现，而非提供完整的技术论文或基准测试结果。",
       "keyPointsZh": [
         "Anthropic披露其研究中观察到的“流氓AI代理”对CAPTCHA表现出抵触行为",
@@ -1459,7 +2263,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T17:54:44.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1470,50 +2274,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T18:51:03.628Z",
-            "label": "9/11 02:51",
-            "value": 19,
+            "at": "2026-09-10T19:03:58.241Z",
+            "label": "9/11 03:03",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:47:23.257Z",
-            "label": "9/11 03:47",
-            "value": 24,
+            "at": "2026-09-10T20:13:12.483Z",
+            "label": "9/11 04:13",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:43:42.885Z",
-            "label": "9/11 04:43",
-            "value": 30,
+            "at": "2026-09-10T21:22:26.725Z",
+            "label": "9/11 05:22",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:40:02.514Z",
-            "label": "9/11 05:40",
-            "value": 35,
+            "at": "2026-09-10T22:31:40.966Z",
+            "label": "9/11 06:31",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:36:22.143Z",
-            "label": "9/11 06:36",
+            "at": "2026-09-10T23:40:55.208Z",
+            "label": "9/11 07:40",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:50:09.450Z",
+            "label": "9/11 08:50",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T01:59:23.692Z",
+            "label": "9/11 09:59",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:32:41.771Z",
-            "label": "9/11 07:32",
-            "value": 45,
+            "at": "2026-09-11T03:08:37.933Z",
+            "label": "9/11 11:08",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:29:01.400Z",
-            "label": "9/11 08:29",
-            "value": 50,
+            "at": "2026-09-11T04:17:52.175Z",
+            "label": "9/11 12:17",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:27:06.417Z",
+            "label": "9/11 13:27",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 55,
             "reports": 1
           }
@@ -1652,7 +2474,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T17:47:35.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1663,50 +2485,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T18:44:48.253Z",
-            "label": "9/11 02:44",
-            "value": 20,
+            "at": "2026-09-10T18:57:28.241Z",
+            "label": "9/11 02:57",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:42:01.507Z",
-            "label": "9/11 03:42",
-            "value": 27,
+            "at": "2026-09-10T20:07:21.483Z",
+            "label": "9/11 04:07",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:39:14.760Z",
-            "label": "9/11 04:39",
-            "value": 33,
+            "at": "2026-09-10T21:17:14.725Z",
+            "label": "9/11 05:17",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:36:28.014Z",
-            "label": "9/11 05:36",
-            "value": 39,
+            "at": "2026-09-10T22:27:07.966Z",
+            "label": "9/11 06:27",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:33:41.268Z",
-            "label": "9/11 06:33",
+            "at": "2026-09-10T23:37:01.208Z",
+            "label": "9/11 07:37",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:46:54.450Z",
+            "label": "9/11 08:46",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T01:56:47.692Z",
+            "label": "9/11 09:56",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:30:54.521Z",
-            "label": "9/11 07:30",
-            "value": 52,
+            "at": "2026-09-11T03:06:40.933Z",
+            "label": "9/11 11:06",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:28:07.775Z",
-            "label": "9/11 08:28",
-            "value": 58,
+            "at": "2026-09-11T04:16:34.175Z",
+            "label": "9/11 12:16",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:26:27.417Z",
+            "label": "9/11 13:26",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 65,
             "reports": 1
           }
@@ -1824,7 +2664,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T17:45:00.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1835,50 +2675,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T18:42:32.628Z",
-            "label": "9/11 02:42",
-            "value": 20,
+            "at": "2026-09-10T18:55:07.332Z",
+            "label": "9/11 02:55",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:40:05.257Z",
-            "label": "9/11 03:40",
-            "value": 25,
+            "at": "2026-09-10T20:05:14.665Z",
+            "label": "9/11 04:05",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:37:37.885Z",
-            "label": "9/11 04:37",
-            "value": 31,
+            "at": "2026-09-10T21:15:21.997Z",
+            "label": "9/11 05:15",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:35:10.514Z",
-            "label": "9/11 05:35",
-            "value": 37,
+            "at": "2026-09-10T22:25:29.330Z",
+            "label": "9/11 06:25",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:32:43.143Z",
-            "label": "9/11 06:32",
-            "value": 42,
+            "at": "2026-09-10T23:35:36.663Z",
+            "label": "9/11 07:35",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:30:15.771Z",
-            "label": "9/11 07:30",
-            "value": 48,
+            "at": "2026-09-11T00:45:43.995Z",
+            "label": "9/11 08:45",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:27:48.400Z",
-            "label": "9/11 08:27",
-            "value": 54,
+            "at": "2026-09-11T01:55:51.328Z",
+            "label": "9/11 09:55",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T03:05:58.661Z",
+            "label": "9/11 11:05",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T04:16:05.993Z",
+            "label": "9/11 12:16",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:26:13.326Z",
+            "label": "9/11 13:26",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 59,
             "reports": 1
           }
@@ -1995,7 +2853,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T17:28:52.100Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2006,50 +2864,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T18:28:25.716Z",
-            "label": "9/11 02:28",
-            "value": 20,
+            "at": "2026-09-10T18:40:27.423Z",
+            "label": "9/11 02:40",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:27:59.332Z",
-            "label": "9/11 03:27",
-            "value": 27,
+            "at": "2026-09-10T19:52:02.747Z",
+            "label": "9/11 03:52",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:27:32.948Z",
-            "label": "9/11 04:27",
-            "value": 33,
+            "at": "2026-09-10T21:03:38.070Z",
+            "label": "9/11 05:03",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:27:06.564Z",
-            "label": "9/11 05:27",
-            "value": 39,
+            "at": "2026-09-10T22:15:13.394Z",
+            "label": "9/11 06:15",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:26:40.180Z",
-            "label": "9/11 06:26",
+            "at": "2026-09-10T23:26:48.717Z",
+            "label": "9/11 07:26",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:38:24.041Z",
+            "label": "9/11 08:38",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T01:49:59.364Z",
+            "label": "9/11 09:49",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:26:13.796Z",
-            "label": "9/11 07:26",
-            "value": 52,
+            "at": "2026-09-11T03:01:34.688Z",
+            "label": "9/11 11:01",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:25:47.412Z",
-            "label": "9/11 08:25",
-            "value": 58,
+            "at": "2026-09-11T04:13:10.011Z",
+            "label": "9/11 12:13",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:24:45.335Z",
+            "label": "9/11 13:24",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 65,
             "reports": 1
           }
@@ -2208,7 +3084,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T16:33:44.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 93,
         "peak": 93,
         "history": [
@@ -2219,56 +3095,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T17:32:48.114Z",
-            "label": "9/11 01:32",
-            "value": 35,
+            "at": "2026-09-10T17:50:20.059Z",
+            "label": "9/11 01:50",
+            "value": 34,
             "reports": 2
           },
           {
-            "at": "2026-09-10T18:31:52.228Z",
-            "label": "9/11 02:31",
-            "value": 43,
+            "at": "2026-09-10T19:06:56.119Z",
+            "label": "9/11 03:06",
+            "value": 40,
             "reports": 2
           },
           {
-            "at": "2026-09-10T19:30:56.343Z",
-            "label": "9/11 03:30",
-            "value": 50,
+            "at": "2026-09-10T20:23:32.179Z",
+            "label": "9/11 04:23",
+            "value": 46,
             "reports": 2
           },
           {
-            "at": "2026-09-10T20:30:00.457Z",
-            "label": "9/11 04:30",
-            "value": 57,
+            "at": "2026-09-10T21:40:08.239Z",
+            "label": "9/11 05:40",
+            "value": 52,
             "reports": 2
           },
           {
-            "at": "2026-09-10T21:29:04.571Z",
-            "label": "9/11 05:29",
+            "at": "2026-09-10T22:56:44.299Z",
+            "label": "9/11 06:56",
+            "value": 58,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-11T00:13:20.359Z",
+            "label": "9/11 08:13",
             "value": 64,
             "reports": 2
           },
           {
-            "at": "2026-09-10T22:28:08.686Z",
-            "label": "9/11 06:28",
-            "value": 72,
+            "at": "2026-09-11T01:29:56.419Z",
+            "label": "9/11 09:29",
+            "value": 70,
             "reports": 2
           },
           {
-            "at": "2026-09-10T23:27:12.800Z",
-            "label": "9/11 07:27",
-            "value": 79,
+            "at": "2026-09-11T02:46:32.479Z",
+            "label": "9/11 10:46",
+            "value": 75,
             "reports": 2
           },
           {
-            "at": "2026-09-11T00:26:16.914Z",
-            "label": "9/11 08:26",
-            "value": 86,
+            "at": "2026-09-11T04:03:08.539Z",
+            "label": "9/11 12:03",
+            "value": 81,
             "reports": 2
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:19:44.599Z",
+            "label": "9/11 13:19",
+            "value": 87,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 93,
             "reports": 2
           }
@@ -2385,7 +3273,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T16:31:02.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -2396,56 +3284,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T17:30:24.114Z",
-            "label": "9/11 01:30",
-            "value": 19,
+            "at": "2026-09-10T17:47:52.787Z",
+            "label": "9/11 01:47",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-10T18:29:46.228Z",
-            "label": "9/11 02:29",
-            "value": 24,
+            "at": "2026-09-10T19:04:43.574Z",
+            "label": "9/11 03:04",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:29:08.343Z",
-            "label": "9/11 03:29",
-            "value": 29,
+            "at": "2026-09-10T20:21:34.361Z",
+            "label": "9/11 04:21",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:28:30.457Z",
-            "label": "9/11 04:28",
-            "value": 34,
+            "at": "2026-09-10T21:38:25.148Z",
+            "label": "9/11 05:38",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:27:52.571Z",
-            "label": "9/11 05:27",
+            "at": "2026-09-10T22:55:15.935Z",
+            "label": "9/11 06:55",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T00:12:06.723Z",
+            "label": "9/11 08:12",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:27:14.686Z",
-            "label": "9/11 06:27",
-            "value": 44,
+            "at": "2026-09-11T01:28:57.510Z",
+            "label": "9/11 09:28",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:26:36.800Z",
-            "label": "9/11 07:26",
-            "value": 49,
+            "at": "2026-09-11T02:45:48.297Z",
+            "label": "9/11 10:45",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:25:58.914Z",
-            "label": "9/11 08:25",
-            "value": 54,
+            "at": "2026-09-11T04:02:39.084Z",
+            "label": "9/11 12:02",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:19:29.871Z",
+            "label": "9/11 13:19",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 59,
             "reports": 1
           }
@@ -2554,7 +3454,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T16:00:00.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -2565,62 +3465,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T16:56:32.102Z",
-            "label": "9/11 00:56",
+            "at": "2026-09-10T17:19:40.059Z",
+            "label": "9/11 01:19",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-10T17:53:04.205Z",
-            "label": "9/11 01:53",
+            "at": "2026-09-10T18:39:20.119Z",
+            "label": "9/11 02:39",
             "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-10T18:49:36.308Z",
-            "label": "9/11 02:49",
-            "value": 23,
+            "at": "2026-09-10T19:59:00.179Z",
+            "label": "9/11 03:59",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:46:08.411Z",
-            "label": "9/11 03:46",
-            "value": 26,
+            "at": "2026-09-10T21:18:40.239Z",
+            "label": "9/11 05:18",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:42:40.514Z",
-            "label": "9/11 04:42",
-            "value": 29,
+            "at": "2026-09-10T22:38:20.299Z",
+            "label": "9/11 06:38",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:39:12.617Z",
-            "label": "9/11 05:39",
-            "value": 32,
+            "at": "2026-09-10T23:58:00.359Z",
+            "label": "9/11 07:58",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:35:44.720Z",
-            "label": "9/11 06:35",
-            "value": 35,
+            "at": "2026-09-11T01:17:40.419Z",
+            "label": "9/11 09:17",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:32:16.823Z",
-            "label": "9/11 07:32",
-            "value": 38,
+            "at": "2026-09-11T02:37:20.479Z",
+            "label": "9/11 10:37",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:28:48.926Z",
-            "label": "9/11 08:28",
-            "value": 41,
+            "at": "2026-09-11T03:57:00.539Z",
+            "label": "9/11 11:57",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T05:16:40.599Z",
+            "label": "9/11 13:16",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 44,
             "reports": 1
           }
@@ -2723,7 +3629,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-10T16:00:00.000Z",
-        "endedAt": "2026-09-11T01:25:21.029Z",
+        "endedAt": "2026-09-11T06:36:20.659Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2734,62 +3640,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-10T16:56:32.102Z",
-            "label": "9/11 00:56",
+            "at": "2026-09-10T17:19:40.059Z",
+            "label": "9/11 01:19",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-10T17:53:04.205Z",
-            "label": "9/11 01:53",
-            "value": 24,
+            "at": "2026-09-10T18:39:20.119Z",
+            "label": "9/11 02:39",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-10T18:49:36.308Z",
-            "label": "9/11 02:49",
-            "value": 29,
+            "at": "2026-09-10T19:59:00.179Z",
+            "label": "9/11 03:59",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-10T19:46:08.411Z",
-            "label": "9/11 03:46",
-            "value": 34,
+            "at": "2026-09-10T21:18:40.239Z",
+            "label": "9/11 05:18",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-10T20:42:40.514Z",
-            "label": "9/11 04:42",
-            "value": 39,
+            "at": "2026-09-10T22:38:20.299Z",
+            "label": "9/11 06:38",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-10T21:39:12.617Z",
-            "label": "9/11 05:39",
-            "value": 44,
+            "at": "2026-09-10T23:58:00.359Z",
+            "label": "9/11 07:58",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-10T22:35:44.720Z",
-            "label": "9/11 06:35",
-            "value": 50,
+            "at": "2026-09-11T01:17:40.419Z",
+            "label": "9/11 09:17",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-10T23:32:16.823Z",
-            "label": "9/11 07:32",
-            "value": 55,
+            "at": "2026-09-11T02:37:20.479Z",
+            "label": "9/11 10:37",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-11T00:28:48.926Z",
-            "label": "9/11 08:28",
+            "at": "2026-09-11T03:57:00.539Z",
+            "label": "9/11 11:57",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-11T05:16:40.599Z",
+            "label": "9/11 13:16",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-11T01:25:21.029Z",
-            "label": "9/11 09:25",
+            "at": "2026-09-11T06:36:20.659Z",
+            "label": "9/11 14:36",
             "value": 65,
             "reports": 1
           }
