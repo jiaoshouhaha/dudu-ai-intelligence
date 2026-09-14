@@ -1,7 +1,424 @@
 {
-  "generatedAt": "2026-09-13T23:26:31.904Z",
+  "generatedAt": "2026-09-14T01:32:56.978Z",
   "date": "2026-09-14",
   "items": [
+    {
+      "id": "5ec4f014855370da",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/14/commit-rewriter",
+      "originalUrl": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+      "titleOriginal": "commit-rewriter 0.1",
+      "summaryOriginal": "Release: commit-rewriter 0.1 I built this little web app the other day to help edit the commit messages for the Datasette security releases . The initial commits were full of coding agent cruft and references to issue IDs from our private repository, so they weren't fit for publication. If you want to edit the commit messages for a repository you can run it like this: uvx commit-rewriter path/to/repo Omit the path if you are already in the directory for that repo. When you submit your edits the tool creates a timestamped branch of your current repo state - to allow you to revert if you need to - and then rewrites every commit from the first one you edited to the most recent. Tags: git , projects , python , ai-assisted-programming",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/commit-rewriter.webp"
+      ],
+      "resourceLinks": [
+        "https://github.com/simonw/commit-rewriter/releases/tag/0.1",
+        "https://datasette.io/blog/2026/september-security-releases/",
+        "https://simonwillison.net/tags/git",
+        "https://simonwillison.net/tags/projects",
+        "https://simonwillison.net/tags/python",
+        "https://simonwillison.net/tags/ai-assisted-programming"
+      ],
+      "publishedAt": "2026-09-14T00:28:10.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+          "publishedAt": "2026-09-14T00:28:10.000Z",
+          "title": "commit-rewriter 0.1",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/commit-rewriter.webp"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/commit-rewriter/releases/tag/0.1",
+            "https://datasette.io/blog/2026/september-security-releases/",
+            "https://simonwillison.net/tags/git",
+            "https://simonwillison.net/tags/projects",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/ai-assisted-programming"
+          ]
+        }
+      ],
+      "importance": 42,
+      "importanceReasonZh": "这是一个实用的开发者小工具，解决 AI 辅助编程产生的提交信息杂乱问题，对使用编码代理的团队有直接价值，但影响范围限于 Git 工作流。",
+      "importanceReasonEn": "A practical developer utility that addresses messy commit messages from AI-assisted coding, directly useful for teams using coding agents, though its scope is limited to Git workflows.",
+      "scoringMode": "ai",
+      "titleZh": "commit-rewriter 0.1 发布",
+      "titleEn": "commit-rewriter 0.1",
+      "summaryZh": "Simon Willison 发布 commit-rewriter 0.1，一个用于批量编辑 Git 提交信息的网页应用，最初用于清理 Datasette 安全版本中由编码代理产生的杂乱提交信息。",
+      "summaryEn": "Simon Willison released commit-rewriter 0.1, a small web app for editing Git commit messages in bulk, originally built to clean up coding-agent cruft in Datasette security release commits.",
+      "keywords": [
+        "commit-rewriter",
+        "git",
+        "commit messages",
+        "uvx",
+        "Datasette",
+        "coding agent"
+      ],
+      "topics": [
+        "git",
+        "developer-tools",
+        "ai-assisted-programming",
+        "python"
+      ],
+      "models": [],
+      "detailZh": "Simon Willison 发布了 commit-rewriter 0.1，这是一个小型网页应用，用于编辑 Git 仓库的提交信息。他提到自己前几天构建这个工具，是为了帮助编辑 Datasette 安全版本发布时的提交信息。\n\n问题背景是：这些初始提交中充满了编码代理（coding agent）产生的杂乱内容，并且引用了私有仓库中的 issue ID，因此不适合公开发布。\n\n使用方式是通过 uvx 运行：uvx commit-rewriter path/to/repo，如果已经在该仓库目录下则可以省略路径。\n\n当用户提交编辑后，工具会为当前仓库状态创建一个带时间戳的分支，以便在需要时回退，然后重写从第一个被编辑的提交到最新提交之间的每一个提交。",
+      "keyPointsZh": [
+        "commit-rewriter 0.1 是一个用于编辑 Git 提交信息的网页应用",
+        "最初用于清理 Datasette 安全版本中编码代理产生的杂乱提交信息",
+        "通过 uvx commit-rewriter path/to/repo 运行，在当前目录可省略路径",
+        "提交编辑后会创建带时间戳的分支以便回退，并重写从首个被编辑提交到最新提交的所有提交"
+      ],
+      "impactZh": "该工具针对 AI 辅助编程中常见的提交信息杂乱问题提供了可回退的批量重写方案，有助于团队在公开发布前清理包含私有 issue 引用的提交历史。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用编码代理的开发者可以用它批量清理提交信息，并在重写前自动创建带时间戳的分支以便回退，降低改写历史的操作风险。",
+      "howItWorksZh": "通过 uvx 运行 commit-rewriter 并指定仓库路径（已在仓库目录时可省略路径）。在网页界面中提交编辑后，工具会先为当前仓库状态创建一个带时间戳的分支作为回退点，然后重写从第一个被编辑的提交到最新提交之间的每一个提交。",
+      "interpretationZh": "根据作者描述，这是一个为解决自身发布流程问题而构建的小工具，核心功能是批量编辑提交信息并保留回退分支。工具的具体实现细节、界面形态和限制在来源中未展开说明。",
+      "limitationsZh": "来源仅提供简短发布说明，未说明工具对已推送提交、合并提交或多人协作仓库的处理方式，也未提及重写历史可能带来的其他风险。",
+      "actionStepsZh": [
+        "使用 uvx commit-rewriter path/to/repo 运行工具，已在仓库目录时可省略路径",
+        "在提交编辑前确认已了解重写提交历史的影响，并利用工具自动创建的带时间戳分支作为回退点"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+          "publishedAt": "2026-09-14T00:28:10.000Z",
+          "title": "commit-rewriter 0.1",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/commit-rewriter.webp"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/commit-rewriter/releases/tag/0.1",
+            "https://datasette.io/blog/2026/september-security-releases/",
+            "https://simonwillison.net/tags/git",
+            "https://simonwillison.net/tags/projects",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/ai-assisted-programming"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-14T00:28:10.000Z",
+        "endedAt": "2026-09-14T01:32:56.978Z",
+        "current": 48,
+        "peak": 48,
+        "history": [
+          {
+            "at": "2026-09-14T00:28:10.000Z",
+            "label": "9/14 08:28",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-14T01:00:33.489Z",
+            "label": "9/14 09:00",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:32:56.978Z",
+            "label": "9/14 09:32",
+            "value": 48,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "968c32634dc2a1cb",
+      "normalizedUrl": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "originalUrl": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "titleOriginal": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "summaryOriginal": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "models",
+      "sourceType": "official",
+      "authority": 100,
+      "sourcePriority": 100,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-14T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+          "publishedAt": "2026-09-14T00:00:00.000Z",
+          "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该消息显示前沿模型 Astra 被用于撰写沟通、修改软件和监控生产系统等端到端任务，且人工检查频率明显降低，反映出 AI 代理在真实业务系统中的信任度提升。",
+      "importanceReasonEn": "This signals that the frontier model Astra is being trusted with end-to-end tasks such as communications, software changes, and production monitoring, with much less human checking, reflecting growing trust in AI agents in real business systems.",
+      "scoringMode": "ai",
+      "titleZh": "Perplexity 信任 GPT-6 Astra 处理端到端系统",
+      "titleEn": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "summaryZh": "Perplexity 使用 Astra 撰写沟通内容、修改软件并监控生产系统，且与早期模型相比，人工检查频率大幅降低。",
+      "summaryEn": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+      "keywords": [
+        "Perplexity",
+        "GPT-6 Astra",
+        "端到端系统",
+        "生产监控",
+        "软件修改"
+      ],
+      "topics": [
+        "GPT-6 Astra",
+        "Perplexity",
+        "AI 代理",
+        "生产系统",
+        "软件开发"
+      ],
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "detailZh": "根据 OpenAI 发布的信息，Perplexity 正在使用 GPT-6 Astra 承担多项端到端工作，包括撰写沟通内容、修改软件以及监控生产系统。与早期模型相比，Perplexity 对 Astra 的检查频率大幅降低。\n\n该信息来自 OpenAI 官方渠道，发布时间为 2026 年 9 月 14 日。目前披露的内容较为概括，没有提供具体的部署规模、任务成功率、错误率或人工复核流程等细节。\n\n从已知事实看，Astra 被用于三类任务：对外或对内沟通写作、代码与软件变更、以及生产系统监控。这三类任务通常对准确性和可靠性要求较高，尤其是生产系统监控和软件修改，一旦出错可能带来实际影响。\n\nPerplexity 减少人工检查这一做法，说明其对 Astra 的输出质量有较高信心，但具体减少到什么程度、是否仍保留关键环节的人工审核，目前没有公开说明。",
+      "keyPointsZh": [
+        "Perplexity 使用 GPT-6 Astra 撰写沟通内容、修改软件并监控生产系统。",
+        "与早期模型相比，Perplexity 对 Astra 的检查频率大幅降低。",
+        "信息由 OpenAI 发布，时间为 2026 年 9 月 14 日。",
+        "目前没有公开具体的部署规模、成功率或人工复核流程细节。"
+      ],
+      "impactZh": "该事件表明前沿模型正在从辅助工具转向承担端到端业务任务，企业可能进一步减少人工检查环节，这会影响 AI 代理在软件开发和运维领域的采用方式。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 用户和开发团队而言，这意味着可以尝试让模型承担更完整的任务链，例如代码修改与生产监控，但需要自行评估在减少人工检查后如何控制风险。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：Perplexity 使用 Astra 完成沟通写作、软件修改和生产监控，并减少了人工检查。可以合理推断的是，Perplexity 对 Astra 的可靠性有较高信任；但减少检查的具体幅度、是否保留关键审核节点，以及实际运行效果，均未在现有信息中说明。",
+      "limitationsZh": "现有信息来自 OpenAI 的概括性描述，缺少部署规模、任务成功率、错误率、人工复核机制和具体案例等细节，无法验证 Astra 在这些任务中的实际表现和风险控制水平。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+          "publishedAt": "2026-09-14T00:00:00.000Z",
+          "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-14T00:00:00.000Z",
+        "endedAt": "2026-09-14T01:32:56.978Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-14T00:00:00.000Z",
+            "label": "9/14 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-14T00:46:28.489Z",
+            "label": "9/14 08:46",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:32:56.978Z",
+            "label": "9/14 09:32",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e72ad3b066661bb0",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/13/shot-scraper",
+      "originalUrl": "https://simonwillison.net/2026/Sep/13/shot-scraper/",
+      "titleOriginal": "shot-scraper 1.12",
+      "summaryOriginal": "Release: shot-scraper 1.12 I've added WebP support to my shot-scraper screenshot automation tool. You can now take a WebP screenshot of a web page like this: shot-scraper https://simonwillison.net -o screenshot.webp --quality 80 The --quality option sets the quality - without that option the WebP file will be lossless. In my experience WebP screenshots are almost always significantly smaller in file size than their JPEG or PNG equivalents. See the PR for some examples. I shipped this feature so I could use it to generate the screenshot for my new commit-rewriter tool . Tags: playwright , shot-scraper",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/shot-scraper/releases/tag/1.12",
+        "https://shot-scraper.datasette.io/",
+        "https://simonwillison.net",
+        "https://github.com/simonw/shot-scraper/pull/210",
+        "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+        "https://simonwillison.net/tags/playwright",
+        "https://simonwillison.net/tags/shot-scraper"
+      ],
+      "publishedAt": "2026-09-13T23:58:14.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/13/shot-scraper/",
+          "publishedAt": "2026-09-13T23:58:14.000Z",
+          "title": "shot-scraper 1.12",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/shot-scraper/releases/tag/1.12",
+            "https://shot-scraper.datasette.io/",
+            "https://simonwillison.net",
+            "https://github.com/simonw/shot-scraper/pull/210",
+            "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+            "https://simonwillison.net/tags/playwright",
+            "https://simonwillison.net/tags/shot-scraper"
+          ]
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "这是一个实用的开源工具更新，为截图自动化增加了 WebP 格式支持，有助于减小文件体积，对开发者和自动化工作流有直接帮助。",
+      "importanceReasonEn": "This is a practical open-source tool update that adds WebP format support to screenshot automation, helping reduce file size and directly benefiting developers and automation workflows.",
+      "scoringMode": "ai",
+      "titleZh": "shot-scraper 1.12",
+      "titleEn": "shot-scraper 1.12",
+      "summaryZh": "shot-scraper 1.12 版本发布，新增 WebP 截图支持，可通过 --quality 选项控制质量，未指定时使用无损模式。",
+      "summaryEn": "shot-scraper 1.12 released, adding WebP screenshot support with a --quality option to control quality; without it, WebP files are lossless.",
+      "keywords": [
+        "shot-scraper",
+        "WebP",
+        "screenshot",
+        "quality",
+        "Playwright"
+      ],
+      "topics": [
+        "screenshot automation",
+        "WebP",
+        "image optimization",
+        "Playwright"
+      ],
+      "models": [],
+      "detailZh": "shot-scraper 是 Simon Willison 开发的基于 Playwright 的截图自动化工具。在 1.12 版本中，作者为其添加了 WebP 格式支持。用户现在可以通过命令行参数指定输出为 WebP 格式，例如：shot-scraper https://simonwillison.net -o screenshot.webp --quality 80。其中 --quality 选项用于设置图片质量，如果不指定该选项，生成的 WebP 文件将是无损的。作者表示，根据其经验，WebP 截图在文件大小上几乎总是显著小于同等 JPEG 或 PNG 格式。该功能已通过 PR 提交，并附有示例。作者还提到，他开发这个功能是为了给自己的新工具 commit-rewriter 生成截图。",
+      "keyPointsZh": [
+        "shot-scraper 1.12 新增 WebP 截图支持",
+        "可通过 --quality 选项控制 WebP 质量，未指定时为无损",
+        "作者称 WebP 截图文件大小通常显著小于 JPEG 或 PNG",
+        "该功能已通过 PR 提交并附有示例",
+        "作者使用该功能为新工具 commit-rewriter 生成截图"
+      ],
+      "impactZh": "该更新为使用 shot-scraper 的开发者提供了更高效的图片格式选择，有助于减少存储和传输成本，尤其是在需要大量截图的自动化场景中。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用 shot-scraper 的开发者，现在可以直接生成 WebP 格式截图，并通过 --quality 参数平衡质量与文件大小，从而优化自动化流程中的图片输出。",
+      "howItWorksZh": "shot-scraper 基于 Playwright 进行网页截图。在 1.12 版本中，输出格式增加了 WebP 支持。用户通过 -o 参数指定 .webp 扩展名即可输出 WebP 格式。--quality 选项接受一个数值（如 80）来设置有损压缩的质量；若不提供该选项，则输出无损 WebP。具体实现可参考对应的 PR。",
+      "interpretationZh": "根据作者描述，WebP 截图在文件大小上通常优于 JPEG 和 PNG，但实际压缩效果可能因网页内容而异。该功能为开发者提供了更多格式选择，尤其适合对文件大小敏感的场景。",
+      "limitationsZh": "作者的经验性说法（WebP 几乎总是显著更小）未提供具体对比数据，实际效果可能因图像内容而异。此外，WebP 的浏览器兼容性虽已广泛，但在某些旧环境中可能仍有限制。",
+      "actionStepsZh": [
+        "使用 shot-scraper 1.12 或更高版本，通过 -o screenshot.webp 生成 WebP 截图",
+        "通过 --quality 选项（如 80）控制有损压缩质量，省略则使用无损模式",
+        "参考 PR 中的示例了解不同质量设置下的文件大小差异"
+      ],
+      "detailCompleteness": "full",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/13/shot-scraper/",
+          "publishedAt": "2026-09-13T23:58:14.000Z",
+          "title": "shot-scraper 1.12",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/shot-scraper/releases/tag/1.12",
+            "https://shot-scraper.datasette.io/",
+            "https://simonwillison.net",
+            "https://github.com/simonw/shot-scraper/pull/210",
+            "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+            "https://simonwillison.net/tags/playwright",
+            "https://simonwillison.net/tags/shot-scraper"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-13T23:58:14.000Z",
+        "endedAt": "2026-09-14T01:32:56.978Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-09-13T23:58:14.000Z",
+            "label": "9/14 07:58",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-14T00:45:35.489Z",
+            "label": "9/14 08:45",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:32:56.978Z",
+            "label": "9/14 09:32",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "c0831241d2a42460",
       "normalizedUrl": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom",
@@ -38,37 +455,37 @@
         }
       ],
       "importance": 35,
-      "importanceReasonZh": "该内容仅为播客讨论的简要描述，缺乏具体事实、数据或可验证细节，信息量有限。",
-      "importanceReasonEn": "This is only a brief description of a podcast discussion, lacking specific facts, data, or verifiable details, with limited information value.",
+      "importanceReasonZh": "该条目仅提及一档播客讨论了AI行业关于生存威胁的最新争论，未提供具体事实、数据或可验证细节，信息量有限。",
+      "importanceReasonEn": "This item only mentions a podcast discussing the AI industry's latest debate about existential threats, with no specific facts, data, or verifiable details, offering limited information.",
       "scoringMode": "ai",
-      "titleZh": "AI行业最新末日警告背后是什么？",
+      "titleZh": "AI行业最新末日警告的背后是什么？",
       "titleEn": "What's behind the AI industry's latest warnings of doom?",
-      "summaryZh": "在Equity播客中，我们讨论了AI行业关于其是否对人类构成生存威胁的最新争论。",
+      "summaryZh": "在Equity播客中，我们讨论了AI行业围绕其是否对人类构成生存威胁的最新争论。",
       "summaryEn": "On Equity, we discussed the AI industry's latest debate about whether it poses an existential threat to humanity.",
       "keywords": [
         "AI末日警告",
         "生存威胁",
         "Equity播客",
-        "行业争论"
+        "AI行业争论"
       ],
       "topics": [
         "AI风险",
-        "行业争论",
+        "AI行业",
         "生存威胁"
       ],
       "models": [],
-      "detailZh": "TechCrunch AI发布了一条简短内容，提到在Equity播客中讨论了AI行业关于其是否对人类构成生存威胁的最新争论。\n\n该内容没有提供争论的具体参与者、论点、时间线或任何数据支撑，仅指出这一辩论正在行业内发生。\n\n由于来源材料极为有限，无法确认相关警告的具体内容、发布者或背景。",
+      "detailZh": "TechCrunch AI发布了一则简短条目，标题为“AI行业最新末日警告的背后是什么？”。摘要说明，在Equity播客中，讨论者探讨了AI行业围绕其是否对人类构成生存威胁的最新争论。\n\n该条目没有提供争论的具体内容、参与方、时间线或任何数据支撑，仅指出这一争论正在发生。因此，目前可确认的事实仅限于：存在一场关于AI是否构成生存威胁的行业讨论，且该讨论被Equity播客作为话题。\n\n由于来源材料非常有限，无法进一步说明争论的背景、各方立场或可能的影响。",
       "keyPointsZh": [
-        "TechCrunch AI报道了AI行业关于生存威胁的最新争论",
-        "讨论发生在Equity播客中",
-        "内容未提供争论的具体细节或数据"
+        "TechCrunch AI发布了关于AI行业末日警告的简短条目。",
+        "Equity播客讨论了AI是否对人类构成生存威胁。",
+        "条目未提供争论的具体细节、参与方或数据。"
       ],
-      "impactZh": "该内容反映了AI行业内部持续存在的关于生存风险的讨论，但未提供足够信息以评估其实际影响。",
+      "impactZh": "该条目本身信息量有限，但反映出AI行业内部关于生存威胁的讨论仍在持续，可能影响公众和投资者对AI风险的认知。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "已报道的事实是：Equity播客讨论了AI行业关于生存威胁的最新争论。由于缺乏具体细节，无法进一步推断争论的性质或重要性。",
-      "limitationsZh": "来源仅为播客讨论的简短描述，缺少具体论点、参与者、数据或可验证信息，无法确认争论的实质内容。",
+      "interpretationZh": "已报道的事实是：Equity播客讨论了AI行业关于生存威胁的最新争论。合理推断是：这类讨论可能涉及AI安全、监管或行业立场，但来源未提供具体内容，因此无法确认。",
+      "limitationsZh": "来源仅为播客讨论的简短摘要，缺乏具体事实、数据、参与方和时间线，无法验证争论的实质内容或代表性。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -91,7 +508,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-13T19:40:15.000Z",
-        "endedAt": "2026-09-13T23:26:31.904Z",
+        "endedAt": "2026-09-14T01:32:56.978Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -102,26 +519,38 @@
             "reports": 0
           },
           {
-            "at": "2026-09-13T20:36:49.226Z",
-            "label": "9/14 04:36",
-            "value": 22,
+            "at": "2026-09-13T20:39:01.996Z",
+            "label": "9/14 04:39",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-13T21:33:23.452Z",
-            "label": "9/14 05:33",
+            "at": "2026-09-13T21:37:48.992Z",
+            "label": "9/14 05:37",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-13T22:36:35.989Z",
+            "label": "9/14 06:36",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-13T22:29:57.678Z",
-            "label": "9/14 06:29",
-            "value": 37,
+            "at": "2026-09-13T23:35:22.985Z",
+            "label": "9/14 07:35",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-13T23:26:31.904Z",
-            "label": "9/14 07:26",
+            "at": "2026-09-14T00:34:09.981Z",
+            "label": "9/14 08:34",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:32:56.978Z",
+            "label": "9/14 09:32",
             "value": 44,
             "reports": 1
           }
@@ -174,13 +603,13 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该文涉及 AI 行业领袖关于发展速度与监管的公开辩论，对理解 AI 治理讨论有参考价值，但属于观点评论而非事实性事件。",
-      "importanceReasonEn": "The piece concerns a public debate among AI industry leaders about development speed and regulation, offering reference value for understanding AI governance discussions, but it is opinion commentary rather than a factual event.",
+      "importanceReasonZh": "该文涉及 AI 安全与治理领域重要人物的公开立场交锋，对理解当前 AI 监管辩论有参考价值，但属于观点评论而非事实性突破。",
+      "importanceReasonEn": "The article covers a public exchange of positions among key figures in AI safety and governance, offering reference value for understanding the current AI regulation debate, but it is opinion commentary rather than a factual breakthrough.",
       "scoringMode": "ai",
       "titleZh": "Gary Marcus 评 Dario Amodei 的放慢 AI 发展提议：三份赞誉加两分怀疑",
-      "titleEn": "Gary Marcus on Dario Amodei's Proposal to Slow AI Development: Three Praises and Two Doubts",
+      "titleEn": "Gary Marcus Reviews Dario Amodei's Proposal to Slow AI Development: Three Praises and Two Doubts",
       "summaryZh": "Gary Marcus 评析 Dario Amodei 倡导放慢 AI 发展并支持透明度的文章，Sam Altman 与 Elon Musk 迅速表示认同。Marcus 肯定其透明度承诺，但列举多方质疑：METR 与 AI 公司关系过近、Anthropic 借对华威胁维持加速、以及该提议可能意在抢先于真正的监管。",
-      "summaryEn": "Gary Marcus reviews Dario Amodei's essay advocating for slowing AI development and supporting transparency, with Sam Altman and Elon Musk quickly endorsing it. Marcus praises the transparency commitment but raises multiple doubts: METR's close ties to AI companies, Anthropic using the China threat to sustain acceleration, and the possibility that the proposal aims to preempt genuine regulation.",
+      "summaryEn": "Gary Marcus reviews Dario Amodei's article advocating for slowing AI development and supporting transparency, which Sam Altman and Elon Musk quickly endorsed. Marcus praises the transparency commitment but lists several doubts: METR's ties to AI companies are too close, Anthropic uses the China threat to sustain acceleration, and the proposal may aim to preempt genuine regulation.",
       "keywords": [
         "Gary Marcus",
         "Dario Amodei",
@@ -193,23 +622,23 @@
       "topics": [
         "AI governance",
         "AI safety",
-        "regulation",
+        "AI regulation",
         "transparency"
       ],
       "models": [],
-      "detailZh": "Gary Marcus 在其博客 The Road to AI We Can Trust 上发表文章，评析 Anthropic 首席执行官 Dario Amodei 关于放慢 AI 发展并支持透明度的提议。Marcus 表示，Sam Altman 与 Elon Musk 都迅速对该提议表示认同。\n\nMarcus 对 Amodei 的透明度承诺给予肯定，将其列为赞誉之一。但他同时提出多项怀疑。首先，他质疑 METR 与 AI 公司之间的关系过于密切，可能影响其评估的独立性。其次，他认为 Anthropic 可能借对华威胁论来维持加速发展的立场。第三，他提出该提议可能意在抢先于真正的监管，而非真正推动放缓。\n\n文章整体呈现为对 Amodei 提议的评论性分析，既承认其积极面，也指出潜在动机与结构性利益冲突。Marcus 的立场是：透明度值得肯定，但仅凭企业自律难以替代有效监管。",
+      "detailZh": "Gary Marcus 在其 Substack 通讯中评析了 Anthropic 首席执行官 Dario Amodei 的一篇文章。Amodei 在文中倡导放慢 AI 发展，并表达了对透明度的支持。Marcus 称 Sam Altman 与 Elon Musk 迅速对该文表示认同。\n\nMarcus 的评析结构为“三份赞誉加两分怀疑”。他肯定了 Amodei 对透明度的承诺，但随后列举了多方质疑。其中一项质疑指向评估机构 METR，认为其与 AI 公司关系过近，可能影响评估的独立性。\n\n另一项质疑涉及 Anthropic 的立场：Marcus 提到有观点认为 Anthropic 借对华威胁来维持加速发展的叙事。此外，他还提出该提议可能意在抢先于真正的监管，即通过主动表态来塑造规则、避免更严格的外部约束。\n\n需要说明的是，以上内容均来自 Marcus 的评论文章，属于观点性材料，并非对 Amodei 原文或相关机构立场的独立核实。",
       "keyPointsZh": [
-        "Gary Marcus 评析 Dario Amodei 放慢 AI 发展并支持透明度的提议",
-        "Sam Altman 与 Elon Musk 迅速表示认同",
-        "Marcus 肯定透明度承诺，但提出多项质疑",
-        "质疑包括 METR 与 AI 公司关系过近、Anthropic 借对华威胁维持加速、提议可能意在抢先于真正监管"
+        "Gary Marcus 评析了 Dario Amodei 倡导放慢 AI 发展并支持透明度的文章。",
+        "Sam Altman 与 Elon Musk 迅速对 Amodei 的文章表示认同。",
+        "Marcus 肯定透明度承诺，但提出多项质疑。",
+        "质疑包括 METR 与 AI 公司关系过近、Anthropic 借对华威胁维持加速、以及提议可能意在抢先于真正的监管。"
       ],
-      "impactZh": "该评论反映了 AI 行业内部关于发展速度与监管的持续争论，凸显企业自律与独立监管之间的张力。",
+      "impactZh": "该评论反映了 AI 安全与治理辩论中关于“放慢发展”与“监管抢占”的立场分歧，有助于观察行业领袖在监管议题上的公开表态与相互制衡。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "Marcus 的评论属于观点性分析，其核心论点是：企业提出的透明度承诺虽有价值，但可能被用来替代或延缓真正的监管。文中提到的质疑均基于 Marcus 的判断，而非可验证的事实结论。",
-      "limitationsZh": "该文为观点评论，所引质疑（如 METR 关系过近、Anthropic 借对华威胁维持加速）均为 Marcus 的个人判断，缺乏独立证据支持。原文未提供具体数据或文件佐证。",
+      "interpretationZh": "从报道事实看，Amodei 发文倡导放慢 AI 发展并支持透明度，Altman 与 Musk 表示认同，Marcus 则给出肯定与质疑并存的评析。可以合理推断，这场公开讨论的核心分歧在于：行业自我约束与外部监管之间应由谁主导、以及安全评估机构能否保持独立。但 Marcus 提出的质疑属于其个人判断，尚需更多证据支持。",
+      "limitationsZh": "输入材料仅为 Marcus 的评论文章摘要，未包含 Amodei 原文、Altman 与 Musk 表态的具体内容，也未提供 METR 与 AI 公司关系的证据。因此对各方立场的描述均转述自 Marcus，无法独立核实。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -235,7 +664,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-13T18:34:31.000Z",
-        "endedAt": "2026-09-13T23:26:31.904Z",
+        "endedAt": "2026-09-14T01:32:56.978Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -246,32 +675,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-13T19:32:55.180Z",
-            "label": "9/14 03:32",
-            "value": 22,
+            "at": "2026-09-13T19:34:17.568Z",
+            "label": "9/14 03:34",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-13T20:31:19.361Z",
-            "label": "9/14 04:31",
-            "value": 31,
+            "at": "2026-09-13T20:34:04.136Z",
+            "label": "9/14 04:34",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-13T21:29:43.542Z",
-            "label": "9/14 05:29",
-            "value": 39,
+            "at": "2026-09-13T21:33:50.704Z",
+            "label": "9/14 05:33",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-13T22:28:07.723Z",
-            "label": "9/14 06:28",
-            "value": 47,
+            "at": "2026-09-13T22:33:37.273Z",
+            "label": "9/14 06:33",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-09-13T23:26:31.904Z",
-            "label": "9/14 07:26",
+            "at": "2026-09-13T23:33:23.841Z",
+            "label": "9/14 07:33",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T00:33:10.409Z",
+            "label": "9/14 08:33",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:32:56.978Z",
+            "label": "9/14 09:32",
             "value": 55,
             "reports": 1
           }
@@ -371,7 +812,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-13T16:30:00.000Z",
-        "endedAt": "2026-09-13T23:26:31.904Z",
+        "endedAt": "2026-09-14T01:32:56.978Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -382,44 +823,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-13T17:29:30.272Z",
-            "label": "9/14 01:29",
-            "value": 20,
+            "at": "2026-09-13T17:24:17.697Z",
+            "label": "9/14 01:24",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-13T18:29:00.544Z",
-            "label": "9/14 02:29",
+            "at": "2026-09-13T18:18:35.395Z",
+            "label": "9/14 02:18",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-13T19:12:53.093Z",
+            "label": "9/14 03:12",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-13T19:28:30.816Z",
-            "label": "9/14 03:28",
-            "value": 32,
+            "at": "2026-09-13T20:07:10.791Z",
+            "label": "9/14 04:07",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-13T20:28:01.088Z",
-            "label": "9/14 04:28",
-            "value": 38,
+            "at": "2026-09-13T21:01:28.489Z",
+            "label": "9/14 05:01",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-13T21:27:31.360Z",
-            "label": "9/14 05:27",
-            "value": 44,
+            "at": "2026-09-13T21:55:46.186Z",
+            "label": "9/14 05:55",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-13T22:27:01.632Z",
-            "label": "9/14 06:27",
-            "value": 50,
+            "at": "2026-09-13T22:50:03.884Z",
+            "label": "9/14 06:50",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-13T23:26:31.904Z",
-            "label": "9/14 07:26",
+            "at": "2026-09-13T23:44:21.582Z",
+            "label": "9/14 07:44",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T00:38:39.280Z",
+            "label": "9/14 08:38",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:32:56.978Z",
+            "label": "9/14 09:32",
             "value": 55,
             "reports": 1
           }
