@@ -1,7 +1,345 @@
 {
-  "generatedAt": "2026-09-14T01:32:56.978Z",
+  "generatedAt": "2026-09-14T07:03:01.222Z",
   "date": "2026-09-14",
   "items": [
+    {
+      "id": "c55282bb18e67812",
+      "normalizedUrl": "https://arxiv.org/abs/2609.11955",
+      "originalUrl": "https://arxiv.org/abs/2609.11955",
+      "titleOriginal": "R2VC: Modular Fact-Checking with Retrieval, Verification, and Confidence Calibration",
+      "summaryOriginal": "arXiv:2609.11955v1 Announce Type: new Abstract: Large language models are increasingly used for automated fact checking, but end-to-end prompting often entangles evidence retrieval, reasoning, and uncertainty estimation, making failures difficult to diagnose and confidence difficult to trust. We present R2VC, a modular retrieve, reason, verify, calibrate architecture for evidence-grounded fact checking with citations and abstention. R2VC combines hybrid sparse+dense retrieval over Wikipedia, a supervised fine-tuned and DPO-aligned generator that produces diverse structured verdict candidates, an external NLI cross-encoder for evidence-based candidate selection, and a lightweight sequence-level calibrator for confidence estimation and selective abstention. On FEVER, an 8B backbone with R2VC achieves 13.74% higher accuracy than baseline. Ablation studies show that verifier-based candidate selection and confidence calibration are the largest contributors to performance. Removing candidate selection drops FEVER accuracy to 76.24%, while removing calibration nearly doubles the Brier score to 0.161. A manual analysis of 250 errors further shows that retrieval failures, especially wrong-e",
+      "originalLanguage": "en",
+      "author": "Dhruv Dixit, Paritosh Pandey",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-14T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.11955",
+          "publishedAt": "2026-09-14T04:00:00.000Z",
+          "title": "R2VC: Modular Fact-Checking with Retrieval, Verification, and Confidence Calibration",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文提出模块化事实核查架构，通过消融实验量化各组件贡献，对可信 AI 和事实核查系统设计有参考价值，但属于学术研究，实际应用尚需验证。",
+      "importanceReasonEn": "The paper proposes a modular fact-checking architecture and quantifies component contributions via ablations, offering reference value for trustworthy AI and fact-checking system design, though it remains academic research pending practical validation.",
+      "scoringMode": "ai",
+      "titleZh": "R2VC：结合检索、验证与置信度校准的模块化事实核查",
+      "titleEn": "R2VC: Modular Fact-Checking with Retrieval, Verification, and Confidence Calibration",
+      "summaryZh": "R2VC 是一种模块化的事实核查架构，将证据检索、推理、验证和置信度校准分离，在 FEVER 数据集上以 8B 模型实现比基线高 13.74% 的准确率，并通过消融实验证明验证器候选选择和置信度校准是性能提升的最大贡献者。",
+      "summaryEn": "R2VC is a modular fact-checking architecture that separates evidence retrieval, reasoning, verification, and confidence calibration, achieving 13.74% higher accuracy than baseline on FEVER with an 8B backbone, with ablations showing verifier-based candidate selection and confidence calibration as the largest contributors.",
+      "keywords": [
+        "R2VC",
+        "fact-checking",
+        "retrieval",
+        "verification",
+        "confidence calibration",
+        "FEVER",
+        "NLI",
+        "abstention"
+      ],
+      "topics": [
+        "fact-checking",
+        "retrieval-augmented generation",
+        "confidence calibration",
+        "NLI",
+        "abstention"
+      ],
+      "models": [
+        "R2VC",
+        "8B backbone"
+      ],
+      "detailZh": "R2VC 是一种模块化的事实核查架构，旨在解决端到端提示方法中证据检索、推理和不确定性估计相互纠缠、难以诊断失败和信任置信度的问题。该架构包含四个模块：混合稀疏+稠密检索（基于 Wikipedia）、经过监督微调和 DPO 对齐的生成器（产生多样化的结构化裁决候选）、外部 NLI 交叉编码器（基于证据选择候选）以及轻量级序列级校准器（用于置信度估计和选择性弃权）。\n\n在 FEVER 数据集上，使用 8B 骨干模型的 R2VC 比基线准确率高出 13.74%。消融实验表明，基于验证器的候选选择和置信度校准是性能提升的最大贡献者。移除候选选择后，FEVER 准确率降至 76.24%；移除校准后，Brier 分数几乎翻倍至 0.161。\n\n对 250 个错误的人工分析进一步显示，检索失败（尤其是错误证据）是主要错误来源。该研究强调了模块化设计在事实核查中的优势，使各组件可独立诊断和优化。",
+      "keyPointsZh": [
+        "R2VC 将事实核查拆分为检索、推理、验证和校准四个模块。",
+        "在 FEVER 上，8B 骨干模型使用 R2VC 比基线准确率高 13.74%。",
+        "移除候选选择后准确率降至 76.24%，移除校准后 Brier 分数几乎翻倍至 0.161。",
+        "人工分析 250 个错误显示检索失败是主要错误来源。"
+      ],
+      "impactZh": "该研究为事实核查系统提供了一种可诊断、可优化的模块化设计范式，有助于提升大模型事实核查的可靠性和置信度可信度，对可信 AI 研究有推动作用。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于开发事实核查或 RAG 系统的团队，R2VC 表明将验证和校准作为独立模块能显著提升性能，且检索质量仍是关键瓶颈，值得在架构设计中优先考虑。",
+      "howItWorksZh": "R2VC 的工作流程：1）使用混合稀疏+稠密检索从 Wikipedia 获取证据；2）经监督微调和 DPO 对齐的生成器产生多个结构化裁决候选；3）外部 NLI 交叉编码器基于证据对候选进行选择；4）轻量级序列级校准器估计置信度并支持选择性弃权。",
+      "interpretationZh": "论文报告了 R2VC 在 FEVER 上的准确率提升和消融结果，表明模块化设计中的验证和校准组件对性能贡献最大。检索失败是主要错误来源，说明检索质量仍是瓶颈。这些是论文报告的事实，实际部署效果需进一步验证。",
+      "limitationsZh": "结果仅在 FEVER 数据集上报告，未涉及其他事实核查基准或真实场景；8B 骨干模型的具体身份未在摘要中说明；人工分析仅覆盖 250 个错误，可能不足以全面反映错误模式。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "R2VC 比基线准确率高 13.74%，移除候选选择后准确率降至 76.24%，移除校准后 Brier 分数几乎翻倍至 0.161。",
+        "data": [
+          {
+            "label": "R2VC 准确率提升",
+            "value": 13.74,
+            "display": ""
+          },
+          {
+            "label": "移除候选选择后准确率",
+            "value": 76.24,
+            "display": ""
+          },
+          {
+            "label": "移除校准后 Brier 分数",
+            "value": 0.161,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.11955",
+          "publishedAt": "2026-09-14T04:00:00.000Z",
+          "title": "R2VC: Modular Fact-Checking with Retrieval, Verification, and Confidence Calibration",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-14T04:00:00.000Z",
+        "endedAt": "2026-09-14T07:03:01.222Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-14T04:00:00.000Z",
+            "label": "9/14 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-14T04:45:45.305Z",
+            "label": "9/14 12:45",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T05:31:30.611Z",
+            "label": "9/14 13:31",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T06:17:15.916Z",
+            "label": "9/14 14:17",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T07:03:01.222Z",
+            "label": "9/14 15:03",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d3db2627c41968c6",
+      "normalizedUrl": "https://arxiv.org/abs/2609.12085",
+      "originalUrl": "https://arxiv.org/abs/2609.12085",
+      "titleOriginal": "What Counts as a Mistake? Annotating Recitation Events in Quran Memorization Transcripts",
+      "summaryOriginal": "arXiv:2609.12085v1 Announce Type: new Abstract: Checking Quran recitation from an ASR transcript requires distinguishing unresolved mistakes from repetitions, repairs, opening formulas and accepted spelling differences. We report a completed human annotation of 100 production recording cases: 348 scored units and 162 localized events across ten combined labels. An executable evaluator scores labels and word positions together. A plain diff reaches label-aware F1 0.525 and localization F1 0.826; adapted production cleaner/alignment components reach 0.518 and 0.786, with exact-span F1 0.505 for both. Correcting the adapter's word coordinates recovers all five annotated repetition events, showing why annotation interfaces must be checked before interpreting baseline failures. In a preliminary pilot, eight single 20-minute runs across three coding agents and eight models span label-aware F1 0.143 to 0.892: seven land far above every baseline, and one collapses below the naive diff from a missing normalization step. Across the six, 970 of 972 gold-event instances draw an overlapping prediction, so what remains is not detection but convention: span extent, and the labels whose boundary i",
+      "originalLanguage": "en",
+      "author": "Mohamad Al Mdfaa, Nursultan Askarbekuly, Ahmed Helaly, Ubai Sandouk, Manuel Mazzara",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-14T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.12085",
+          "publishedAt": "2026-09-14T04:00:00.000Z",
+          "title": "What Counts as a Mistake? Annotating Recitation Events in Quran Memorization Transcripts",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该研究针对古兰经背诵检查中的标注与评估问题，提供了可执行评估器和初步基准，对语音识别在特定宗教文本场景的应用有参考价值，但属于较窄领域的研究。",
+      "importanceReasonEn": "This study addresses annotation and evaluation for Quran recitation checking, offering an executable evaluator and preliminary benchmarks. It is useful for ASR in religious text scenarios but remains a narrow-domain research contribution.",
+      "scoringMode": "ai",
+      "titleZh": "什么算错误？古兰经背诵转录中诵读事件的标注",
+      "titleEn": "What Counts as a Mistake? Annotating Recitation Events in Quran Memorization Transcripts",
+      "summaryZh": "一篇arXiv论文报告了对100个古兰经诵读录音案例的完整人工标注，包含348个评分单元和162个定位事件，覆盖十种组合标签。研究提出一个可执行评估器，同时评估标签和词位置。普通diff达到标签感知F1 0.525和定位F1 0.826；适配的生产清洗/对齐组件达到0.518和0.786，精确跨度F1均为0.505。修正适配器的词坐标后恢复了全部五个标注的重复事件。初步试点中，三个编码代理和八个模型的八次20分钟单次运行，标签感知F1从0.143到0.892不等。",
+      "summaryEn": "An arXiv paper reports a completed human annotation of 100 Quran recitation recording cases, with 348 scored units and 162 localized events across ten combined labels. It introduces an executable evaluator that scores labels and word positions together. A plain diff reaches label-aware F1 0.525 and localization F1 0.826; adapted production cleaner/alignment components reach 0.518 and 0.786, with exact-span F1 0.505 for both. Correcting the adapter's word coordinates recovers all five annotated repetition events. In a preliminary pilot, eight single 20-minute runs across three coding agents and eight models span label-aware F1 0.143 to 0.892.",
+      "keywords": [
+        "古兰经背诵",
+        "ASR转录",
+        "标注",
+        "评估器",
+        "F1"
+      ],
+      "topics": [
+        "语音识别",
+        "标注方法",
+        "评估基准",
+        "古兰经背诵"
+      ],
+      "models": [],
+      "detailZh": "该论文关注从自动语音识别（ASR）转录中检查古兰经背诵的任务。核心难点在于区分未解决的错误与重复、修复、开场公式以及可接受的拼写差异。作者报告了一项已完成的人工标注工作，覆盖100个制作录音案例，共348个评分单元和162个定位事件，使用十种组合标签。\n\n研究提出了一个可执行评估器，能够同时评估标签和词位置。作为基线，普通diff达到标签感知F1 0.525和定位F1 0.826；适配的生产清洗/对齐组件达到0.518和0.786，两者的精确跨度F1均为0.505。作者指出，修正适配器的词坐标后，恢复了全部五个标注的重复事件，这说明在解释基线失败之前必须检查标注接口。\n\n在初步试点中，作者进行了八次单次20分钟的运行，涉及三个编码代理和八个模型，标签感知F1范围从0.143到0.892。其中七次远高于所有基线，一次因缺少归一化步骤而低于朴素diff。在六次运行中，972个金标事件实例中有970个获得了重叠预测，因此剩余问题不是检测，而是约定：跨度范围和标签边界。",
+      "keyPointsZh": [
+        "对100个古兰经诵读录音案例完成人工标注，含348个评分单元和162个定位事件。",
+        "提出可执行评估器，同时评估标签和词位置。",
+        "普通diff基线标签感知F1为0.525，定位F1为0.826。",
+        "修正适配器词坐标后恢复全部五个标注重复事件。",
+        "初步试点中八个模型/代理的标签感知F1从0.143到0.892不等。"
+      ],
+      "impactZh": "该工作为古兰经背诵自动检查提供了标注规范和评估工具，揭示了当前基线在标签约定上的不足，并展示了大型模型在该任务上的潜力与不稳定性。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发宗教文本ASR评估工具的团队，该研究提示需先验证标注接口和词坐标对齐，再解读基线失败；同时表明缺少归一化步骤可能导致模型表现大幅下降。",
+      "howItWorksZh": "评估器将标签预测与词位置预测结合评分：标签感知F1衡量事件类型是否正确，定位F1衡量预测位置是否与金标重叠，精确跨度F1要求边界完全一致。基线包括普通diff和适配的生产清洗/对齐组件。试点使用编码代理和模型在20分钟单次运行中生成预测，再与人工标注对比。",
+      "interpretationZh": "论文报告了标注结果和基线表现，并指出剩余挑战主要是标注约定而非检测能力。试点结果来自初步运行，样本量有限，但显示了模型间巨大差异。",
+      "limitationsZh": "试点仅八次运行，涉及三个编码代理和八个模型，样本量小；结果可能受具体配置影响；论文未提供完整模型列表和详细超参数；标注约定问题仍需进一步标准化。",
+      "actionStepsZh": [
+        "在评估ASR转录前，先检查标注接口和词坐标对齐是否正确。",
+        "在比较模型时，确保包含必要的归一化步骤，避免性能崩溃。",
+        "关注标签边界和跨度范围的约定，而不仅是检测是否存在事件。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "普通diff在标签感知和定位F1上均略高于适配的生产组件，而试点中模型表现差异极大，最高0.892远高于基线，最低0.143低于朴素diff。",
+        "data": [
+          {
+            "label": "普通diff标签感知F1",
+            "value": 0.525,
+            "display": ""
+          },
+          {
+            "label": "适配组件标签感知F1",
+            "value": 0.518,
+            "display": ""
+          },
+          {
+            "label": "普通diff定位F1",
+            "value": 0.826,
+            "display": ""
+          },
+          {
+            "label": "适配组件定位F1",
+            "value": 0.786,
+            "display": ""
+          },
+          {
+            "label": "精确跨度F1（两者）",
+            "value": 0.505,
+            "display": ""
+          },
+          {
+            "label": "试点最低标签感知F1",
+            "value": 0.143,
+            "display": ""
+          },
+          {
+            "label": "试点最高标签感知F1",
+            "value": 0.892,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.12085",
+          "publishedAt": "2026-09-14T04:00:00.000Z",
+          "title": "What Counts as a Mistake? Annotating Recitation Events in Quran Memorization Transcripts",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-14T04:00:00.000Z",
+        "endedAt": "2026-09-14T07:03:01.222Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-09-14T04:00:00.000Z",
+            "label": "9/14 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-14T04:45:45.305Z",
+            "label": "9/14 12:45",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T05:31:30.611Z",
+            "label": "9/14 13:31",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T06:17:15.916Z",
+            "label": "9/14 14:17",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T07:03:01.222Z",
+            "label": "9/14 15:03",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "5ec4f014855370da",
       "normalizedUrl": "https://simonwillison.net/2026/Sep/14/commit-rewriter",
@@ -56,13 +394,13 @@
         }
       ],
       "importance": 42,
-      "importanceReasonZh": "这是一个实用的开发者小工具，解决 AI 辅助编程产生的提交信息杂乱问题，对使用编码代理的团队有直接价值，但影响范围限于 Git 工作流。",
-      "importanceReasonEn": "A practical developer utility that addresses messy commit messages from AI-assisted coding, directly useful for teams using coding agents, though its scope is limited to Git workflows.",
+      "importanceReasonZh": "这是一个面向开发者的实用小工具，解决 AI 辅助编程产生的提交信息不整洁、含私有信息的问题，但影响范围限于使用 Git 的开发者群体。",
+      "importanceReasonEn": "A practical developer tool addressing messy commit messages and leaked private references from AI-assisted coding, but its impact is limited to Git-using developers.",
       "scoringMode": "ai",
       "titleZh": "commit-rewriter 0.1 发布",
       "titleEn": "commit-rewriter 0.1",
-      "summaryZh": "Simon Willison 发布 commit-rewriter 0.1，一个用于批量编辑 Git 提交信息的网页应用，最初用于清理 Datasette 安全版本中由编码代理产生的杂乱提交信息。",
-      "summaryEn": "Simon Willison released commit-rewriter 0.1, a small web app for editing Git commit messages in bulk, originally built to clean up coding-agent cruft in Datasette security release commits.",
+      "summaryZh": "Simon Willison 发布 commit-rewriter 0.1，一个用于批量编辑 Git 提交信息的网页小工具，最初用于清理 Datasette 安全版本中带有编码代理痕迹和私有仓库 issue ID 的提交。",
+      "summaryEn": "Simon Willison released commit-rewriter 0.1, a small web app for editing Git commit messages in bulk, originally built to clean up commits for Datasette security releases that contained coding agent cruft and private repository issue IDs.",
       "keywords": [
         "commit-rewriter",
         "git",
@@ -75,25 +413,26 @@
         "git",
         "developer-tools",
         "ai-assisted-programming",
-        "python"
+        "open-source"
       ],
       "models": [],
-      "detailZh": "Simon Willison 发布了 commit-rewriter 0.1，这是一个小型网页应用，用于编辑 Git 仓库的提交信息。他提到自己前几天构建这个工具，是为了帮助编辑 Datasette 安全版本发布时的提交信息。\n\n问题背景是：这些初始提交中充满了编码代理（coding agent）产生的杂乱内容，并且引用了私有仓库中的 issue ID，因此不适合公开发布。\n\n使用方式是通过 uvx 运行：uvx commit-rewriter path/to/repo，如果已经在该仓库目录下则可以省略路径。\n\n当用户提交编辑后，工具会为当前仓库状态创建一个带时间戳的分支，以便在需要时回退，然后重写从第一个被编辑的提交到最新提交之间的每一个提交。",
+      "detailZh": "Simon Willison 发布了 commit-rewriter 0.1，这是一个用于编辑 Git 仓库提交信息的网页小应用。他提到自己是在为 Datasette 安全版本准备发布时构建了这个工具，因为最初的提交信息中充满了编码代理产生的杂乱内容，并且引用了私有仓库中的 issue ID，不适合公开发布。\n\n使用方式是通过 uvx 运行：uvx commit-rewriter path/to/repo，如果已经处于目标仓库目录中，可以省略路径参数。工具会启动一个网页界面供用户编辑提交信息。\n\n当用户提交编辑后，工具会先为当前仓库状态创建一个带时间戳的分支，以便在需要时回退，然后从第一个被编辑的提交开始，一直重写到最新的提交。该工具与 git、python 以及 AI 辅助编程相关。",
       "keyPointsZh": [
-        "commit-rewriter 0.1 是一个用于编辑 Git 提交信息的网页应用",
-        "最初用于清理 Datasette 安全版本中编码代理产生的杂乱提交信息",
-        "通过 uvx commit-rewriter path/to/repo 运行，在当前目录可省略路径",
-        "提交编辑后会创建带时间戳的分支以便回退，并重写从首个被编辑提交到最新提交的所有提交"
+        "commit-rewriter 0.1 是一个用于编辑 Git 提交信息的网页应用。",
+        "它最初用于清理 Datasette 安全版本中带有编码代理痕迹和私有 issue ID 的提交。",
+        "通过 uvx commit-rewriter path/to/repo 运行，在仓库目录内可省略路径。",
+        "提交编辑时会先创建带时间戳的分支以便回退，然后重写从首个被编辑提交到最新的所有提交。"
       ],
-      "impactZh": "该工具针对 AI 辅助编程中常见的提交信息杂乱问题提供了可回退的批量重写方案，有助于团队在公开发布前清理包含私有 issue 引用的提交历史。",
+      "impactZh": "它帮助开发者清理 AI 辅助编程产生的杂乱提交信息，并避免将私有仓库的 issue ID 等敏感引用公开发布，降低了发布前手动逐个修改提交的成本。",
       "readerImpactZh": "",
-      "userImpactZh": "使用编码代理的开发者可以用它批量清理提交信息，并在重写前自动创建带时间戳的分支以便回退，降低改写历史的操作风险。",
-      "howItWorksZh": "通过 uvx 运行 commit-rewriter 并指定仓库路径（已在仓库目录时可省略路径）。在网页界面中提交编辑后，工具会先为当前仓库状态创建一个带时间戳的分支作为回退点，然后重写从第一个被编辑的提交到最新提交之间的每一个提交。",
-      "interpretationZh": "根据作者描述，这是一个为解决自身发布流程问题而构建的小工具，核心功能是批量编辑提交信息并保留回退分支。工具的具体实现细节、界面形态和限制在来源中未展开说明。",
-      "limitationsZh": "来源仅提供简短发布说明，未说明工具对已推送提交、合并提交或多人协作仓库的处理方式，也未提及重写历史可能带来的其他风险。",
+      "userImpactZh": "使用 AI 编码代理的开发者可以用它批量修正提交信息，去除代理生成的冗余内容和私有引用，并在重写前通过时间戳分支保留回退能力。",
+      "howItWorksZh": "工具以网页应用形式运行，通过 uvx 启动并指向目标仓库路径（已在仓库目录内时可省略）。用户在网页界面中编辑提交信息并提交后，工具会为当前仓库状态创建一个带时间戳的分支作为回退点，随后从第一个被编辑的提交开始，重写到最新的提交。",
+      "interpretationZh": "根据作者描述，这是一个为解决实际发布问题而构建的小工具，核心价值在于批量重写提交信息并保留回退分支。其具体实现细节和界面能力在来源中未展开说明。",
+      "limitationsZh": "来源仅提供简要发布说明，未说明工具支持的 Git 操作边界、冲突处理方式、是否支持推送或仅限本地重写，也未提供截图或更详细的使用文档。",
       "actionStepsZh": [
-        "使用 uvx commit-rewriter path/to/repo 运行工具，已在仓库目录时可省略路径",
-        "在提交编辑前确认已了解重写提交历史的影响，并利用工具自动创建的带时间戳分支作为回退点"
+        "在仓库目录中运行 uvx commit-rewriter path/to/repo 启动工具（已在目录内可省略路径）。",
+        "在网页界面中编辑需要修改的提交信息并提交。",
+        "如需回退，使用工具自动创建的带时间戳分支恢复原状态。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -125,7 +464,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-14T00:28:10.000Z",
-        "endedAt": "2026-09-14T01:32:56.978Z",
+        "endedAt": "2026-09-14T07:03:01.222Z",
         "current": 48,
         "peak": 48,
         "history": [
@@ -136,14 +475,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-14T01:00:33.489Z",
-            "label": "9/14 09:00",
-            "value": 31,
+            "at": "2026-09-14T01:24:34.460Z",
+            "label": "9/14 09:24",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-14T01:32:56.978Z",
-            "label": "9/14 09:32",
+            "at": "2026-09-14T02:20:58.920Z",
+            "label": "9/14 10:20",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T03:17:23.380Z",
+            "label": "9/14 11:17",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T04:13:47.841Z",
+            "label": "9/14 12:13",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T05:10:12.301Z",
+            "label": "9/14 13:10",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T06:06:36.761Z",
+            "label": "9/14 14:06",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T07:03:01.222Z",
+            "label": "9/14 15:03",
             "value": 48,
             "reports": 1
           }
@@ -187,45 +556,45 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "该消息显示前沿模型 Astra 被用于撰写沟通、修改软件和监控生产系统等端到端任务，且人工检查频率明显降低，反映出 AI 代理在真实业务系统中的信任度提升。",
-      "importanceReasonEn": "This signals that the frontier model Astra is being trusted with end-to-end tasks such as communications, software changes, and production monitoring, with much less human checking, reflecting growing trust in AI agents in real business systems.",
+      "importanceReasonZh": "该消息显示前沿模型 Astra 被用于端到端系统操作，可能反映 AI 代理在真实生产环境中的信任度提升。",
+      "importanceReasonEn": "This report suggests a frontier model, Astra, is being used for end-to-end system operations, potentially reflecting increased trust in AI agents in real production environments.",
       "scoringMode": "ai",
       "titleZh": "Perplexity 信任 GPT-6 Astra 处理端到端系统",
       "titleEn": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-      "summaryZh": "Perplexity 使用 Astra 撰写沟通内容、修改软件并监控生产系统，且与早期模型相比，人工检查频率大幅降低。",
+      "summaryZh": "Perplexity 使用 Astra 撰写沟通内容、修改软件并监控生产系统，且与早期模型相比，检查频率大幅降低。",
       "summaryEn": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
       "keywords": [
-        "Perplexity",
         "GPT-6 Astra",
+        "Perplexity",
         "端到端系统",
         "生产监控",
-        "软件修改"
+        "软件变更"
       ],
       "topics": [
         "GPT-6 Astra",
         "Perplexity",
         "AI 代理",
         "生产系统",
-        "软件开发"
+        "软件变更"
       ],
       "models": [
         "GPT-6 Astra"
       ],
-      "detailZh": "根据 OpenAI 发布的信息，Perplexity 正在使用 GPT-6 Astra 承担多项端到端工作，包括撰写沟通内容、修改软件以及监控生产系统。与早期模型相比，Perplexity 对 Astra 的检查频率大幅降低。\n\n该信息来自 OpenAI 官方渠道，发布时间为 2026 年 9 月 14 日。目前披露的内容较为概括，没有提供具体的部署规模、任务成功率、错误率或人工复核流程等细节。\n\n从已知事实看，Astra 被用于三类任务：对外或对内沟通写作、代码与软件变更、以及生产系统监控。这三类任务通常对准确性和可靠性要求较高，尤其是生产系统监控和软件修改，一旦出错可能带来实际影响。\n\nPerplexity 减少人工检查这一做法，说明其对 Astra 的输出质量有较高信心，但具体减少到什么程度、是否仍保留关键环节的人工审核，目前没有公开说明。",
+      "detailZh": "根据 OpenAI 发布的信息，Perplexity 正在使用 GPT-6 Astra 处理端到端系统任务。具体用途包括撰写沟通内容、修改软件以及监控生产系统。\n\n与早期模型相比，Perplexity 对 Astra 的检查频率明显降低，表明其在部分工作流中获得了更高的自主性。\n\n目前披露的信息较为有限，未说明 Astra 的具体技术架构、部署规模、安全措施或性能指标。该消息主要来自 OpenAI 一方，尚缺乏 Perplexity 的独立确认或第三方验证。",
       "keyPointsZh": [
-        "Perplexity 使用 GPT-6 Astra 撰写沟通内容、修改软件并监控生产系统。",
+        "Perplexity 使用 GPT-6 Astra 撰写沟通内容。",
+        "Astra 被用于修改软件和监控生产系统。",
         "与早期模型相比，Perplexity 对 Astra 的检查频率大幅降低。",
-        "信息由 OpenAI 发布，时间为 2026 年 9 月 14 日。",
-        "目前没有公开具体的部署规模、成功率或人工复核流程细节。"
+        "信息来自 OpenAI，缺乏独立验证。"
       ],
-      "impactZh": "该事件表明前沿模型正在从辅助工具转向承担端到端业务任务，企业可能进一步减少人工检查环节，这会影响 AI 代理在软件开发和运维领域的采用方式。",
+      "impactZh": "若属实，这表明前沿 AI 模型正从辅助工具转向承担端到端系统操作，可能推动企业更广泛地信任 AI 代理处理生产任务。",
       "readerImpactZh": "",
-      "userImpactZh": "对 AI 用户和开发团队而言，这意味着可以尝试让模型承担更完整的任务链，例如代码修改与生产监控，但需要自行评估在减少人工检查后如何控制风险。",
+      "userImpactZh": "AI 用户和开发团队可能看到更多将前沿模型用于软件变更与生产监控的实践案例，但需注意当前信息有限，尚不足以直接照搬。",
       "howItWorksZh": "",
-      "interpretationZh": "已报告的事实是：Perplexity 使用 Astra 完成沟通写作、软件修改和生产监控，并减少了人工检查。可以合理推断的是，Perplexity 对 Astra 的可靠性有较高信任；但减少检查的具体幅度、是否保留关键审核节点，以及实际运行效果，均未在现有信息中说明。",
-      "limitationsZh": "现有信息来自 OpenAI 的概括性描述，缺少部署规模、任务成功率、错误率、人工复核机制和具体案例等细节，无法验证 Astra 在这些任务中的实际表现和风险控制水平。",
+      "interpretationZh": "已报告的事实是 Perplexity 使用 Astra 进行沟通、软件修改和生产监控，并减少了检查频率。合理推断是 Astra 在这些任务中表现出较高可靠性，但具体机制和验证方式未披露。",
+      "limitationsZh": "信息仅来自 OpenAI，缺少 Perplexity 的独立确认、具体技术细节、安全措施和性能数据，无法验证 Astra 的实际自主程度和可靠性。",
       "actionStepsZh": [],
-      "detailCompleteness": "summary",
+      "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
       "reportCount": 1,
@@ -246,7 +615,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-14T00:00:00.000Z",
-        "endedAt": "2026-09-14T01:32:56.978Z",
+        "endedAt": "2026-09-14T07:03:01.222Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -257,14 +626,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-14T00:46:28.489Z",
-            "label": "9/14 08:46",
+            "at": "2026-09-14T00:52:52.652Z",
+            "label": "9/14 08:52",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:45:45.305Z",
+            "label": "9/14 09:45",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T02:38:37.958Z",
+            "label": "9/14 10:38",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T03:31:30.611Z",
+            "label": "9/14 11:31",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-14T01:32:56.978Z",
-            "label": "9/14 09:32",
+            "at": "2026-09-14T04:24:23.263Z",
+            "label": "9/14 12:24",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T05:17:15.916Z",
+            "label": "9/14 13:17",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T06:10:08.569Z",
+            "label": "9/14 14:10",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T07:03:01.222Z",
+            "label": "9/14 15:03",
             "value": 65,
             "reports": 1
           }
@@ -393,7 +798,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-13T23:58:14.000Z",
-        "endedAt": "2026-09-14T01:32:56.978Z",
+        "endedAt": "2026-09-14T07:03:01.222Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -404,14 +809,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-14T00:45:35.489Z",
-            "label": "9/14 08:45",
+            "at": "2026-09-14T00:51:19.902Z",
+            "label": "9/14 08:51",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:44:25.805Z",
+            "label": "9/14 09:44",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T02:37:31.708Z",
+            "label": "9/14 10:37",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T03:30:37.611Z",
+            "label": "9/14 11:30",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-14T01:32:56.978Z",
-            "label": "9/14 09:32",
+            "at": "2026-09-14T04:23:43.513Z",
+            "label": "9/14 12:23",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T05:16:49.416Z",
+            "label": "9/14 13:16",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T06:09:55.319Z",
+            "label": "9/14 14:09",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T07:03:01.222Z",
+            "label": "9/14 15:03",
             "value": 50,
             "reports": 1
           }
@@ -508,7 +949,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-13T19:40:15.000Z",
-        "endedAt": "2026-09-14T01:32:56.978Z",
+        "endedAt": "2026-09-14T07:03:01.222Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -519,38 +960,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-13T20:39:01.996Z",
-            "label": "9/14 04:39",
-            "value": 19,
+            "at": "2026-09-13T20:42:19.202Z",
+            "label": "9/14 04:42",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-13T21:37:48.992Z",
-            "label": "9/14 05:37",
-            "value": 24,
+            "at": "2026-09-13T21:44:23.404Z",
+            "label": "9/14 05:44",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-13T22:36:35.989Z",
-            "label": "9/14 06:36",
-            "value": 29,
+            "at": "2026-09-13T22:46:27.606Z",
+            "label": "9/14 06:46",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-13T23:35:22.985Z",
-            "label": "9/14 07:35",
-            "value": 34,
+            "at": "2026-09-13T23:48:31.808Z",
+            "label": "9/14 07:48",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-14T00:34:09.981Z",
-            "label": "9/14 08:34",
+            "at": "2026-09-14T00:50:36.010Z",
+            "label": "9/14 08:50",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:52:40.212Z",
+            "label": "9/14 09:52",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T02:54:44.414Z",
+            "label": "9/14 10:54",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T03:56:48.616Z",
+            "label": "9/14 11:56",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T04:58:52.818Z",
+            "label": "9/14 12:58",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-14T01:32:56.978Z",
-            "label": "9/14 09:32",
+            "at": "2026-09-14T06:00:57.020Z",
+            "label": "9/14 14:00",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T07:03:01.222Z",
+            "label": "9/14 15:03",
             "value": 44,
             "reports": 1
           }
@@ -625,7 +1096,9 @@
         "AI regulation",
         "transparency"
       ],
-      "models": [],
+      "models": [
+        "Claude"
+      ],
       "detailZh": "Gary Marcus 在其 Substack 通讯中评析了 Anthropic 首席执行官 Dario Amodei 的一篇文章。Amodei 在文中倡导放慢 AI 发展，并表达了对透明度的支持。Marcus 称 Sam Altman 与 Elon Musk 迅速对该文表示认同。\n\nMarcus 的评析结构为“三份赞誉加两分怀疑”。他肯定了 Amodei 对透明度的承诺，但随后列举了多方质疑。其中一项质疑指向评估机构 METR，认为其与 AI 公司关系过近，可能影响评估的独立性。\n\n另一项质疑涉及 Anthropic 的立场：Marcus 提到有观点认为 Anthropic 借对华威胁来维持加速发展的叙事。此外，他还提出该提议可能意在抢先于真正的监管，即通过主动表态来塑造规则、避免更严格的外部约束。\n\n需要说明的是，以上内容均来自 Marcus 的评论文章，属于观点性材料，并非对 Amodei 原文或相关机构立场的独立核实。",
       "keyPointsZh": [
         "Gary Marcus 评析了 Dario Amodei 倡导放慢 AI 发展并支持透明度的文章。",
@@ -664,7 +1137,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-13T18:34:31.000Z",
-        "endedAt": "2026-09-14T01:32:56.978Z",
+        "endedAt": "2026-09-14T07:03:01.222Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -675,44 +1148,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-13T19:34:17.568Z",
-            "label": "9/14 03:34",
-            "value": 20,
+            "at": "2026-09-13T19:42:33.747Z",
+            "label": "9/14 03:42",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-13T20:34:04.136Z",
-            "label": "9/14 04:34",
-            "value": 26,
+            "at": "2026-09-13T20:50:36.494Z",
+            "label": "9/14 04:50",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-13T21:33:50.704Z",
-            "label": "9/14 05:33",
-            "value": 32,
+            "at": "2026-09-13T21:58:39.242Z",
+            "label": "9/14 05:58",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-13T22:33:37.273Z",
-            "label": "9/14 06:33",
-            "value": 38,
+            "at": "2026-09-13T23:06:41.989Z",
+            "label": "9/14 07:06",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-13T23:33:23.841Z",
-            "label": "9/14 07:33",
+            "at": "2026-09-14T00:14:44.737Z",
+            "label": "9/14 08:14",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T01:22:47.484Z",
+            "label": "9/14 09:22",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T02:30:50.232Z",
+            "label": "9/14 10:30",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T03:38:52.979Z",
+            "label": "9/14 11:38",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-14T00:33:10.409Z",
-            "label": "9/14 08:33",
-            "value": 50,
+            "at": "2026-09-14T04:46:55.727Z",
+            "label": "9/14 12:46",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-14T01:32:56.978Z",
-            "label": "9/14 09:32",
+            "at": "2026-09-14T05:54:58.474Z",
+            "label": "9/14 13:54",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T07:03:01.222Z",
+            "label": "9/14 15:03",
             "value": 55,
             "reports": 1
           }
@@ -812,7 +1309,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-13T16:30:00.000Z",
-        "endedAt": "2026-09-14T01:32:56.978Z",
+        "endedAt": "2026-09-14T07:03:01.222Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -823,62 +1320,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-13T17:24:17.697Z",
-            "label": "9/14 01:24",
+            "at": "2026-09-13T17:49:21.929Z",
+            "label": "9/14 01:49",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-13T18:18:35.395Z",
-            "label": "9/14 02:18",
+            "at": "2026-09-13T19:08:43.858Z",
+            "label": "9/14 03:08",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-13T19:12:53.093Z",
-            "label": "9/14 03:12",
-            "value": 26,
+            "at": "2026-09-13T20:28:05.787Z",
+            "label": "9/14 04:28",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-13T20:07:10.791Z",
-            "label": "9/14 04:07",
-            "value": 31,
+            "at": "2026-09-13T21:47:27.717Z",
+            "label": "9/14 05:47",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-13T21:01:28.489Z",
-            "label": "9/14 05:01",
-            "value": 35,
+            "at": "2026-09-13T23:06:49.646Z",
+            "label": "9/14 07:06",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-13T21:55:46.186Z",
-            "label": "9/14 05:55",
-            "value": 39,
+            "at": "2026-09-14T00:26:11.575Z",
+            "label": "9/14 08:26",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-13T22:50:03.884Z",
-            "label": "9/14 06:50",
-            "value": 43,
+            "at": "2026-09-14T01:45:33.504Z",
+            "label": "9/14 09:45",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-13T23:44:21.582Z",
-            "label": "9/14 07:44",
-            "value": 47,
+            "at": "2026-09-14T03:04:55.434Z",
+            "label": "9/14 11:04",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-14T00:38:39.280Z",
-            "label": "9/14 08:38",
-            "value": 51,
+            "at": "2026-09-14T04:24:17.363Z",
+            "label": "9/14 12:24",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-14T01:32:56.978Z",
-            "label": "9/14 09:32",
+            "at": "2026-09-14T05:43:39.292Z",
+            "label": "9/14 13:43",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-14T07:03:01.222Z",
+            "label": "9/14 15:03",
             "value": 55,
             "reports": 1
           }
