@@ -1,7 +1,616 @@
 {
-  "generatedAt": "2026-09-15T23:40:10.540Z",
+  "generatedAt": "2026-09-16T04:40:59.112Z",
   "date": "2026-09-16",
   "items": [
+    {
+      "id": "8454aa15bfb52855",
+      "normalizedUrl": "https://arxiv.org/abs/2609.16129",
+      "originalUrl": "https://arxiv.org/abs/2609.16129",
+      "titleOriginal": "Optimal Pruning for Neural Architectures using Fisher Information Distances",
+      "summaryOriginal": "arXiv:2609.16129v1 Announce Type: new Abstract: A new scheme for parameter pruning is introduced, derived from the differential-geometric distance in model space. Pruning a parameter sets its value to zero, representing a displacement of the model to the hypersurface on which that parameter vanishes. The minimal distance from the unpruned model to this hypersurface is naturally computed via the geodesic distance in the model space as determined by the Fisher information metric. This distance determines the true change in the model, and its performance, under pruning. By analysing progressively more faithful approximations of this geodesic distance a natural hierarchy of optimality for pruning methods is determined. This starts with the traditional magnitude pruning, then develops into new more sophisticated and effective pruning schemes. The method is demonstrated for both fully-connected networks and vision transformers, on MNIST and CIFAR-10, over the complete $0$-$100\\%$ pruning range and across five random seeds. It outperforms pruning by parameter magnitude and by the local Fisher information alone in every architecture and dataset combination considered, on both accuracy and",
+      "originalLanguage": "en",
+      "author": "David S. Berman, Yen-Yu Fu, Edward Hirst, Thelma Chiwete Obirai",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-16T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.16129",
+          "publishedAt": "2026-09-16T04:00:00.000Z",
+          "title": "Optimal Pruning for Neural Architectures using Fisher Information Distances",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文将剪枝问题形式化为模型空间中的测地距离最小化，为剪枝方法提供了统一的最优性层级，并在多种架构和数据集上验证了优于幅度剪枝和局部Fisher信息剪枝的效果，对模型压缩研究有理论和方法价值。",
+      "importanceReasonEn": "The paper formalizes pruning as geodesic distance minimization in model space, provides a unified optimality hierarchy for pruning methods, and validates improvements over magnitude pruning and local Fisher information pruning across architectures and datasets, offering theoretical and methodologica",
+      "scoringMode": "ai",
+      "titleZh": "基于Fisher信息距离的神经网络架构最优剪枝",
+      "titleEn": "Optimal Pruning for Neural Architectures using Fisher Information Distances",
+      "summaryZh": "一篇arXiv论文提出了一种基于模型空间微分几何距离的参数剪枝新方案。将参数置零相当于把模型移动到该参数消失的超曲面上，而由Fisher信息度量决定的最短测地距离可衡量剪枝带来的真实模型变化与性能影响。通过逐步逼近该测地距离，作者建立了一个剪枝最优性层级，从传统幅度剪枝发展到更有效的新方案。在MNIST和CIFAR-10上，对全连接网络和视觉Transformer、覆盖0%至100%剪枝范围、五个随机种子进行实验，该方法在准确率等指标上均优于按参数幅度剪枝和仅用局部Fisher信息剪枝。",
+      "summaryEn": "An arXiv paper introduces a new parameter pruning scheme based on differential-geometric distance in model space. Setting a parameter to zero moves the model to the hypersurface where that parameter vanishes, and the minimal geodesic distance determined by the Fisher information metric measures the true model change and performance impact of pruning. By analyzing progressively more faithful approximations of this geodesic distance, the authors establish a hierarchy of optimality for pruning methods, starting from traditional magnitude pruning and developing into new, more sophisticated and effective schemes. Experiments on MNIST and CIFAR-10 with fully-connected networks and vision transformers, across the complete 0%-100% pruning range and five random seeds, show the method outperforms pr",
+      "keywords": [
+        "剪枝",
+        "Fisher信息距离",
+        "测地距离",
+        "模型空间",
+        "参数置零"
+      ],
+      "topics": [
+        "模型压缩",
+        "剪枝",
+        "Fisher信息",
+        "微分几何",
+        "视觉Transformer"
+      ],
+      "models": [
+        "Vision Transformer"
+      ],
+      "detailZh": "该论文提出一种新的参数剪枝方案，其理论基础是模型空间中的微分几何距离。剪枝一个参数意味着将其值设为零，这可以看作是把模型移动到该参数消失的超曲面上。从原始模型到这个超曲面的最短距离，即由Fisher信息度量决定的测地距离，能够衡量剪枝带来的真实模型变化及其对性能的影响。\n\n作者通过分析对测地距离越来越精确的近似，建立了一个剪枝方法的最优性层级。该层级从传统的幅度剪枝开始，逐步发展到更复杂、更有效的新剪枝方案。这意味着幅度剪枝可以被视为该几何框架下的一种粗略近似。\n\n实验覆盖全连接网络和视觉Transformer两种架构，数据集为MNIST和CIFAR-10，剪枝范围从0%到100%，并使用五个随机种子。结果显示，该方法在所有架构与数据集组合上，在准确率等指标上均优于按参数幅度剪枝和仅使用局部Fisher信息剪枝。\n\n论文摘要未提供具体准确率数值、参数量或计算开销等细节，因此无法进行定量比较。该工作属于模型压缩与剪枝方向的理论与实证研究。",
+      "keyPointsZh": [
+        "将剪枝视为模型空间中的位移，用Fisher信息度量下的测地距离衡量剪枝影响。",
+        "通过逐步逼近测地距离，建立了从幅度剪枝到更优剪枝方法的最优性层级。",
+        "在MNIST和CIFAR-10上，对全连接网络和视觉Transformer进行0%-100%剪枝实验，五个随机种子。",
+        "在所有架构和数据集组合上，准确率等指标均优于幅度剪枝和局部Fisher信息剪枝。"
+      ],
+      "impactZh": "该研究为剪枝方法提供了统一的几何最优性框架，可能推动更高效、更可解释的模型压缩技术发展，对边缘部署和模型轻量化有潜在影响。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "该方法把每个参数置零视为模型在参数空间中的一次位移，目标超曲面是该参数为零的所有模型构成的集合。Fisher信息度量定义了模型空间中的局部距离，从原始模型到目标超曲面的最短路径长度即测地距离，被用作剪枝造成模型变化的度量。由于精确测地距离难以计算，作者采用逐级更精确的近似，从而得到不同剪枝准则：最粗略的近似对应传统幅度剪枝，更精确的近似则产生新的剪枝评分。",
+      "interpretationZh": "论文报告的核心事实是：基于Fisher信息测地距离的剪枝在实验设置下优于幅度剪枝和局部Fisher信息剪枝。合理推断是，该几何视角可能解释为何幅度剪枝在部分场景有效，并指导设计更优准则。但摘要未给出具体数值、计算成本或与最新剪枝方法的对比，实际收益仍需完整论文验证。",
+      "limitationsZh": "摘要未提供具体准确率数值、模型规模、计算开销或与当前最先进剪枝方法的比较；实验仅限MNIST和CIFAR-10，未涉及更大规模数据集或语言模型；测地距离的近似精度与计算成本之间的权衡未说明。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.16129",
+          "publishedAt": "2026-09-16T04:00:00.000Z",
+          "title": "Optimal Pruning for Neural Architectures using Fisher Information Distances",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-16T04:00:00.000Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-16T04:00:00.000Z",
+            "label": "9/16 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "84f79990de66e4cc",
+      "normalizedUrl": "https://arxiv.org/abs/2609.16145",
+      "originalUrl": "https://arxiv.org/abs/2609.16145",
+      "titleOriginal": "Safe Error Correction for Language Models: Frozen-Base Adjustment with Capability Preservation",
+      "summaryOriginal": "arXiv:2609.16145v1 Announce Type: new Abstract: We study a practical question: can a small correction module fix errors in a frozen language model's outputs without degrading its base capabilities? We propose CRN v2, a lightweight logit-level correction module (~34M trainable parameters, 0.73% of the 4.65B text module) that sits atop a fully frozen Gemma 4 E2B model. The base model is never updated; only the correction module learns, via supervised fine-tuning followed by reference-free DPO on 83,400 error-correction pairs. On a 60-question domain exam (CEHRI: Certified Human-Robot Intelligence, covering facts, arithmetic, and implicit-goal reasoning), CRN v2 corrects 53.3% of base-model errors (reworded variant: 43.3%) while showing no degradation on tested capability benchmarks (MMLU/BoolQ N=200; car-wash N=8). A LoRA baseline at the matched CRN v1 budget (6.6M params, rank 19) achieves 83.3% correction but suffers 30-75% capability loss on the same benchmarks -- the correction-capability tradeoff. An ablation shows that the KL preservation term (lambda=0.1) is critical: lowering it to 0.01 degrades correction to 35.0%. A hidden-state injection variant at earlier layers (1.6M par",
+      "originalLanguage": "en",
+      "author": "Gautam Kishore",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-16T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.16145",
+          "publishedAt": "2026-09-16T04:00:00.000Z",
+          "title": "Safe Error Correction for Language Models: Frozen-Base Adjustment with Capability Preservation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文直接研究语言模型部署中的核心矛盾：纠错与能力保持的权衡，并给出可复现的轻量级方案与消融证据，对模型维护和微调实践有参考价值。",
+      "importanceReasonEn": "The paper directly studies a core tension in language model deployment: the correction-capability tradeoff, and provides a reproducible lightweight approach with ablation evidence, valuable for model maintenance and fine-tuning practice.",
+      "scoringMode": "ai",
+      "titleZh": "语言模型的安全纠错：冻结基座调整与能力保持",
+      "titleEn": "Safe Error Correction for Language Models: Frozen-Base Adjustment with Capability Preservation",
+      "summaryZh": "arXiv 论文提出 CRN v2，一种轻量级 logit 层纠错模块（约 3400 万可训练参数，占 46.5 亿文本模块的 0.73%），叠加在完全冻结的 Gemma 4 E2B 模型之上。基座模型从不更新，仅纠错模块通过监督微调与无参考 DPO 在 83,400 个纠错对上学习。在 60 题领域考试（CEHRI）中，CRN v2 纠正了 53.3% 的基座模型错误（改写变体 43.3%），且在测试的能力基准（MMLU/BoolQ N=200；car-wash N=8）上无退化。匹配 CRN v1 预算的 LoRA 基线（660 万参数，rank 19）达到 83.3% 纠错率，但在相同基准上损失 30-75% 能力——即纠错-能力权衡。消融显示 KL 保持项（lambda=0.1）至关重要：降至 0.01 时纠错率退化至 35.0%。",
+      "summaryEn": "arXiv paper proposes CRN v2, a lightweight logit-level correction module (~34M trainable parameters, 0.73% of the 4.65B text module) atop a fully frozen Gemma 4 E2B model. The base model is never updated; only the correction module learns via supervised fine-tuning followed by reference-free DPO on 83,400 error-correction pairs. On a 60-question domain exam (CEHRI), CRN v2 corrects 53.3% of base-model errors (reworded variant: 43.3%) with no degradation on tested capability benchmarks (MMLU/BoolQ N=200; car-wash N=8). A LoRA baseline at the matched CRN v1 budget (6.6M params, rank 19) achieves 83.3% correction but suffers 30-75% capability loss on the same benchmarks -- the correction-capability tradeoff. An ablation shows the KL preservation term (lambda=0.1) is critical: lowering it to 0",
+      "keywords": [
+        "纠错模块",
+        "冻结基座",
+        "能力保持",
+        "KL 保持项",
+        "DPO",
+        "LoRA"
+      ],
+      "topics": [
+        "语言模型纠错",
+        "冻结基座微调",
+        "能力保持",
+        "DPO",
+        "LoRA"
+      ],
+      "models": [
+        "Gemma 4 E2B",
+        "CRN v2",
+        "LoRA"
+      ],
+      "detailZh": "该论文研究一个实际问题：小型纠错模块能否在不降低冻结语言模型基础能力的前提下修正其输出错误。作者提出 CRN v2，一种轻量级 logit 层纠错模块，约 3400 万可训练参数，占 46.5 亿文本模块的 0.73%，叠加在完全冻结的 Gemma 4 E2B 模型之上。基座模型从不更新，只有纠错模块通过监督微调后接无参考 DPO 在 83,400 个纠错对上学习。\n\n评估使用 60 题领域考试 CEHRI（Certified Human-Robot Intelligence），覆盖事实、算术和隐式目标推理。CRN v2 纠正了 53.3% 的基座模型错误，改写变体为 43.3%，同时在测试的能力基准（MMLU/BoolQ N=200；car-wash N=8）上无退化。\n\n作为对比，匹配 CRN v1 预算的 LoRA 基线（660 万参数，rank 19）达到 83.3% 纠错率，但在相同基准上损失 30-75% 能力，体现了纠错-能力权衡。消融实验显示 KL 保持项（lambda=0.1）至关重要：将其降至 0.01 会使纠错率退化至 35.0%。摘要还提到一个在更早层进行隐藏状态注入的变体（160 万参数），但文本在此处截断，未给出完整结果。",
+      "keyPointsZh": [
+        "CRN v2 是约 3400 万参数的 logit 层纠错模块，占 46.5 亿文本模块的 0.73%，基座 Gemma 4 E2B 完全冻结。",
+        "在 60 题 CEHRI 考试中纠正 53.3% 的基座错误（改写变体 43.3%），测试基准上无能力退化。",
+        "匹配预算的 LoRA 基线纠错率更高（83.3%），但损失 30-75% 能力，体现纠错-能力权衡。",
+        "KL 保持项 lambda=0.1 关键，降至 0.01 时纠错率降至 35.0%。"
+      ],
+      "impactZh": "该工作为语言模型部署后的错误修正提供了一条低风险路径：无需改动基座权重即可减少错误，同时避免灾难性能力损失。它把纠错-能力权衡作为可量化问题提出，并给出 KL 保持项等具体设计要素，对模型维护、领域适配和安全部署有直接参考意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 开发者和团队而言，该方案表明可以用极少量可训练参数（约 0.73%）在冻结基座上做纠错，而不必承担全量微调或 LoRA 带来的能力退化风险；KL 保持项的取值需要谨慎调参，否则纠错效果会大幅下降。",
+      "howItWorksZh": "CRN v2 是一个 logit 层纠错模块，叠加在完全冻结的 Gemma 4 E2B 基座模型之上。训练分两阶段：先在有监督的 83,400 个纠错对上进行微调，再进行无参考 DPO。模块仅约 3400 万可训练参数，基座权重从不更新。训练目标中包含 KL 保持项（lambda=0.1），用于约束纠错模块不偏离基座分布，从而保护基础能力。",
+      "interpretationZh": "论文报告的事实是：在冻结基座上添加轻量 logit 纠错模块，可以在测试范围内纠正约一半的基座错误且不损失所测能力；而同等预算的 LoRA 虽然纠错率更高，却造成显著能力退化。可以合理推断，纠错模块与基座解耦的设计有助于隔离能力损失，但摘要未说明该结论在更大模型、更多任务或更长训练下的泛化性。",
+      "limitationsZh": "评估规模有限：CEHRI 仅 60 题，能力基准 MMLU/BoolQ 为 N=200，car-wash 为 N=8。摘要未给出统计显著性、置信区间或多次运行方差。隐藏状态注入变体的结果在摘要中被截断，无法评估。纠错率 53.3% 意味着近一半错误未被修正。该工作仅基于 Gemma 4 E2B 一个基座模型，跨模型泛化性未知。",
+      "actionStepsZh": [
+        "在冻结基座上尝试 logit 层纠错模块，仅训练少量参数以降低能力退化风险。",
+        "训练时加入 KL 保持项并保持 lambda 在 0.1 附近，避免纠错效果因约束过弱而下降。",
+        "若使用 LoRA 做纠错，需同时评估能力基准，因为高纠错率可能伴随 30-75% 的能力损失。",
+        "在领域考试上分别报告原始与改写变体的纠错率，以检验纠错是否依赖表面措辞。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "LoRA 基线纠错率（83.3%）高于 CRN v2（53.3%），但伴随 30-75% 的能力损失；KL 保持项从 0.1 降至 0.01 时纠错率从 53.3% 降至 35.0%。",
+        "data": [
+          {
+            "label": "CRN v2 纠错率",
+            "value": 53.3,
+            "display": ""
+          },
+          {
+            "label": "CRN v2 改写变体纠错率",
+            "value": 43.3,
+            "display": ""
+          },
+          {
+            "label": "LoRA 基线纠错率",
+            "value": 83.3,
+            "display": ""
+          },
+          {
+            "label": "LoRA 基线能力损失下限",
+            "value": 30,
+            "display": ""
+          },
+          {
+            "label": "LoRA 基线能力损失上限",
+            "value": 75,
+            "display": ""
+          },
+          {
+            "label": "KL lambda=0.01 纠错率",
+            "value": 35,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.16145",
+          "publishedAt": "2026-09-16T04:00:00.000Z",
+          "title": "Safe Error Correction for Language Models: Frozen-Base Adjustment with Capability Preservation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-16T04:00:00.000Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-16T04:00:00.000Z",
+            "label": "9/16 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a8cb3dee54e5c94a",
+      "normalizedUrl": "https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says",
+      "originalUrl": "https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says/",
+      "titleOriginal": "We don&#8217;t need AI regulation — leave safety to us, Nvidia&#8217;s Jensen Huang says",
+      "summaryOriginal": "AI isn't some new form of \"alien mind,\" according to Jensen Huang. It's just hardware and software, so safety can be engineered by each AI product maker.",
+      "originalLanguage": "en",
+      "author": "Julie Bort",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-16T00:20:39.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opinion",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says/",
+          "publishedAt": "2026-09-16T00:20:39.000Z",
+          "title": "We don&#8217;t need AI regulation — leave safety to us, Nvidia&#8217;s Jensen Huang says",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "英伟达CEO黄仁勋公开反对AI监管，主张由企业自行通过工程手段保障安全，这一立场直接影响全球AI监管政策讨论方向，且来自AI芯片领域最具影响力的企业领导者。",
+      "importanceReasonEn": "Nvidia CEO Jensen Huang publicly opposes AI regulation and argues safety should be engineered by each AI product maker, a stance that directly influences global AI regulatory debate and comes from the most influential leader in AI chips.",
+      "scoringMode": "ai",
+      "titleZh": "黄仁勋称无需AI监管，安全应由企业自行负责",
+      "titleEn": "We don't need AI regulation — leave safety to us, Nvidia's Jensen Huang says",
+      "summaryZh": "英伟达CEO黄仁勋表示，AI并非某种全新的“外星心智”，而只是硬件和软件，因此安全可以由每个AI产品制造商通过工程手段解决。",
+      "summaryEn": "AI isn't some new form of \"alien mind,\" according to Jensen Huang. It's just hardware and software, so safety can be engineered by each AI product maker.",
+      "keywords": [
+        "黄仁勋",
+        "英伟达",
+        "AI监管",
+        "AI安全",
+        "工程化安全"
+      ],
+      "topics": [
+        "AI监管",
+        "AI安全",
+        "英伟达",
+        "产业政策"
+      ],
+      "models": [],
+      "detailZh": "英伟达CEO黄仁勋就AI监管问题公开表态，明确反对对AI进行监管，主张将安全责任交给AI产品制造企业自身。他认为，AI并不是某种全新的“外星心智”，本质上仍然只是硬件和软件的组合，因此安全问题可以通过工程手段来解决。\n\n这一表态的核心逻辑在于：如果AI只是软硬件系统，那么每个AI产品制造商都可以像对待其他软件产品一样，通过工程实践来保障其安全性，而不需要外部监管机构介入。黄仁勋由此主张，安全应当由企业自行负责，而非依赖政府监管。\n\n该言论由TechCrunch AI报道，发布时间为2026年9月16日。作为英伟达的CEO，黄仁勋在AI芯片和算力领域具有举足轻重的地位，其公开立场往往会影响行业对监管议题的讨论走向。\n\n目前披露的信息较为有限，主要集中于黄仁勋的核心观点：反对AI监管、将AI定性为普通软硬件、主张企业自行通过工程手段保障安全。关于他是否提出具体的替代方案、行业自律框架或技术标准，现有材料尚未涉及。",
+      "keyPointsZh": [
+        "黄仁勋公开反对对AI进行监管，主张将安全责任交给AI产品制造企业。",
+        "他认为AI并非全新的“外星心智”，本质上只是硬件和软件。",
+        "他主张安全可以通过工程手段解决，由每个AI产品制造商自行负责。",
+        "该表态来自英伟达CEO，对全球AI监管讨论具有影响力。"
+      ],
+      "impactZh": "黄仁勋作为英伟达CEO公开反对AI监管，可能影响政策制定者和行业对监管必要性的判断，推动“企业自律+工程化安全”的叙事，进而影响全球AI监管政策的走向。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：黄仁勋公开表示不需要AI监管，认为AI只是硬件和软件，安全可由各AI产品制造商通过工程手段解决。可合理推断的是：这一立场与英伟达作为AI算力供应商的商业利益一致，因为更严格的监管可能增加合规成本并放缓AI部署速度。但现有材料未提供其具体论证细节或替代方案。",
+      "limitationsZh": "现有信息仅来自一篇报道，未包含黄仁勋发言的完整上下文、具体场合或问答细节。他是否提出可操作的企业自律机制、技术标准或责任划分方案，均未在材料中说明。此外，该立场是否代表英伟达公司正式政策，还是个人观点，也未明确。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says/",
+          "publishedAt": "2026-09-16T00:20:39.000Z",
+          "title": "We don&#8217;t need AI regulation — leave safety to us, Nvidia&#8217;s Jensen Huang says",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-16T00:20:39.000Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-16T00:20:39.000Z",
+            "label": "9/16 08:20",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-16T01:12:43.022Z",
+            "label": "9/16 09:12",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:04:47.044Z",
+            "label": "9/16 10:04",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:56:51.067Z",
+            "label": "9/16 10:56",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:48:55.089Z",
+            "label": "9/16 11:48",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9da1736b8159c9ab",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/15/gemini-live",
+      "originalUrl": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+      "titleOriginal": "Gemini Live audio",
+      "summaryOriginal": "Tool: Gemini Live audio Google released Gemini 3.8 Live and 3.8 Live Extended Thinking today - two new speech-to-speech models that are a similar shape to OpenAI's GPT-Live family. I pointed GPT-6 Astra Extra High at the documentation and had it build me this web UI for trying out the new models. You can select a model and voice preset, enter an optional system prompt and then start a voice conversation through your browser, including the ability to interrupt the model while it is talking. The implementation uses no libraries. It connects to the wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent?key=... WebSocket endpoint and uses a Web Audio API AudioContext for both capture and playback. Here's the Gemini Live tutorial for getting started with that WebSockets API. Tags: google , tools , websockets , generative-ai , llms , gemini , llm-release , speech-to-text",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/gemini-live-tool.webp"
+      ],
+      "resourceLinks": [
+        "https://tools.simonwillison.net/gemini-live",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+        "https://openai.com/index/introducing-gpt-live/",
+        "https://gist.github.com/simonw/067b7430c5b1f743af9419b0184c38ef",
+        "https://github.com/simonw/tools/blob/main/gemini-live.html",
+        "https://ai.google.dev/gemini-api/docs/live-api/get-started-websocket",
+        "https://simonwillison.net/tags/google",
+        "https://simonwillison.net/tags/tools",
+        "https://simonwillison.net/tags/websockets",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/gemini"
+      ],
+      "publishedAt": "2026-09-15T22:47:07.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+          "publishedAt": "2026-09-15T22:47:07.000Z",
+          "title": "Gemini Live audio",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/gemini-live-tool.webp"
+          ],
+          "resourceLinks": [
+            "https://tools.simonwillison.net/gemini-live",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+            "https://openai.com/index/introducing-gpt-live/",
+            "https://gist.github.com/simonw/067b7430c5b1f743af9419b0184c38ef",
+            "https://github.com/simonw/tools/blob/main/gemini-live.html",
+            "https://ai.google.dev/gemini-api/docs/live-api/get-started-websocket",
+            "https://simonwillison.net/tags/google",
+            "https://simonwillison.net/tags/tools",
+            "https://simonwillison.net/tags/websockets",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/gemini"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该工具展示了如何直接通过 WebSocket 和 Web Audio API 使用 Gemini Live 语音模型，为开发者提供了可复用的浏览器端语音对话实现参考。",
+      "importanceReasonEn": "The tool demonstrates how to use Gemini Live speech models directly via WebSocket and Web Audio API, providing developers with a reusable browser-based voice conversation implementation reference.",
+      "scoringMode": "ai",
+      "titleZh": "Gemini Live 音频",
+      "titleEn": "Gemini Live audio",
+      "summaryZh": "Simon Willison 发布了一个无依赖的网页 UI，用于试用 Google 新发布的 Gemini 3.8 Live 和 3.8 Live Extended Thinking 语音到语音模型，支持模型与语音选择、系统提示词和打断功能。",
+      "summaryEn": "Simon Willison released a dependency-free web UI for trying out Google's newly released Gemini 3.8 Live and 3.8 Live Extended Thinking speech-to-speech models, supporting model and voice selection, system prompts, and interruption.",
+      "keywords": [
+        "Gemini Live",
+        "语音对话",
+        "WebSocket",
+        "Web Audio API",
+        "无依赖"
+      ],
+      "topics": [
+        "Gemini Live",
+        "语音到语音模型",
+        "WebSocket API",
+        "Web Audio API",
+        "浏览器工具"
+      ],
+      "models": [
+        "Gemini 3.8 Live",
+        "Gemini 3.8 Live Extended Thinking",
+        "GPT-Live",
+        "GPT-6 Astra Extra High"
+      ],
+      "detailZh": "Google 发布了两个新的语音到语音模型：Gemini 3.8 Live 和 Gemini 3.8 Live Extended Thinking。这两个模型在形态上与 OpenAI 的 GPT-Live 系列相似。Simon Willison 将 GPT-6 Astra Extra High 指向相关文档，并让它构建了一个用于试用这些新模型的网页 UI。\n\n该 UI 允许用户选择模型和语音预设，输入可选的系统提示词，然后通过浏览器开始语音对话。它还支持在模型说话时打断模型。\n\n实现上不使用任何库。它连接到 wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent?key=... WebSocket 端点，并使用 Web Audio API 的 AudioContext 进行音频采集和播放。\n\nSimon Willison 还提供了 Gemini Live 教程，帮助开发者开始使用该 WebSockets API。",
+      "keyPointsZh": [
+        "Google 发布 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个语音到语音模型。",
+        "Simon Willison 构建了一个无依赖的网页 UI，用于试用这些模型。",
+        "该 UI 支持模型选择、语音预设、系统提示词和语音打断。",
+        "实现直接连接 Google 的 WebSocket 端点，并使用 Web Audio API 处理音频。"
+      ],
+      "impactZh": "该工具降低了开发者试用和集成 Gemini Live 语音模型的门槛，展示了浏览器端实时语音对话的可行实现方式。",
+      "readerImpactZh": "",
+      "userImpactZh": "AI 用户和开发者可以通过该 UI 快速体验 Gemini Live 语音模型，并参考其无依赖实现方式构建自己的语音应用。",
+      "howItWorksZh": "该网页 UI 不使用任何库，直接通过 WebSocket 连接到 Google 的 BidiGenerateContent 端点，并使用 Web Audio API 的 AudioContext 进行音频采集和播放。用户可以选择模型和语音预设，输入系统提示词，然后开始语音对话，并可在模型说话时打断。",
+      "interpretationZh": "根据报道，Google 发布了两个新的语音到语音模型，Simon Willison 构建了一个实用的网页 UI 来试用它们。该实现展示了如何直接使用 WebSocket 和 Web Audio API 进行实时语音交互，而不依赖第三方库。",
+      "limitationsZh": "输入材料未提供模型的详细技术规格、性能数据或定价信息，也未说明该 UI 的代码是否公开或可复用。",
+      "actionStepsZh": [
+        "访问 Simon Willison 提供的网页 UI 试用 Gemini 3.8 Live 模型。",
+        "参考 Gemini Live 教程了解 WebSockets API 的使用方法。",
+        "查看该 UI 的实现方式，了解如何直接使用 WebSocket 和 Web Audio API 构建语音对话应用。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+          "publishedAt": "2026-09-15T22:47:07.000Z",
+          "title": "Gemini Live audio",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/gemini-live-tool.webp"
+          ],
+          "resourceLinks": [
+            "https://tools.simonwillison.net/gemini-live",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+            "https://openai.com/index/introducing-gpt-live/",
+            "https://gist.github.com/simonw/067b7430c5b1f743af9419b0184c38ef",
+            "https://github.com/simonw/tools/blob/main/gemini-live.html",
+            "https://ai.google.dev/gemini-api/docs/live-api/get-started-websocket",
+            "https://simonwillison.net/tags/google",
+            "https://simonwillison.net/tags/tools",
+            "https://simonwillison.net/tags/websockets",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/gemini"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-15T22:47:07.000Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-15T22:47:07.000Z",
+            "label": "9/16 06:47",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-15T23:46:05.685Z",
+            "label": "9/16 07:46",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:45:04.370Z",
+            "label": "9/16 08:45",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:44:03.056Z",
+            "label": "9/16 09:44",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:43:01.741Z",
+            "label": "9/16 10:43",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:42:00.426Z",
+            "label": "9/16 11:42",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "cf06d711f417111b",
       "normalizedUrl": "https://techcrunch.com/2026/09/15/the-ai-data-center-boom-is-colliding-with-cities-scarred-by-big-industry",
@@ -38,18 +647,18 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该事件反映了AI基础设施扩张与受工业污染影响社区之间的社会矛盾，具有行业与公共政策意义。",
-      "importanceReasonEn": "This event reflects the social tension between AI infrastructure expansion and communities affected by industrial pollution, with industry and public policy significance.",
+      "importanceReasonZh": "该事件反映了AI基础设施扩张与受重工业影响的社区之间的社会矛盾，具有商业与政策层面的关注价值。",
+      "importanceReasonEn": "This event reflects the social tensions between AI infrastructure expansion and communities affected by heavy industry, with relevance at the business and policy levels.",
       "scoringMode": "ai",
       "titleZh": "AI数据中心热潮与受重工业创伤的城市发生碰撞",
       "titleEn": "The AI data center boom is colliding with cities scarred by big industry",
-      "summaryZh": "反对数据中心建设的全国性呼声已蔓延至费城，当地官员建议在一个已受现已关闭的炼油厂影响的社区进行可能的建设。",
+      "summaryZh": "针对数据中心建设的全国性抗议已蔓延至费城，当地官员建议在一个已受现已关闭的炼油厂影响的社区进行可能的建设。",
       "summaryEn": "National outcry against data center construction has spread to Philadelphia, where officials suggested possible construction in a neighborhood already impacted by a now-defunct oil refinery.",
       "keywords": [
         "AI数据中心",
         "费城",
         "炼油厂",
-        "社区反对",
+        "社区抗议",
         "建设"
       ],
       "topics": [
@@ -60,18 +669,18 @@
         "环境正义"
       ],
       "models": [],
-      "detailZh": "根据TechCrunch AI的报道，美国全国范围内反对数据中心建设的呼声已经蔓延到费城。当地官员提出，可能在一个已经受到现已关闭的炼油厂影响的社区建设数据中心。报道将这一情况描述为AI数据中心热潮与曾受大型工业创伤的城市之间的碰撞。目前已知的信息仅限于此：反对数据中心建设的全国性情绪、费城官员的相关建议，以及该社区此前受炼油厂影响的历史背景。报道没有提供数据中心项目的具体规模、投资方、建设时间表或当地居民的进一步反应。",
+      "detailZh": "TechCrunch AI报道称，针对数据中心建设的全国性抗议浪潮已经蔓延到费城。当地官员提出可能在一个已经受到现已关闭的炼油厂影响的社区进行数据中心建设。这一提议出现在全国对数据中心建设反对声浪不断扩大的背景下。报道没有提供更多关于具体选址、建设规模、时间表或相关企业名称的细节。该事件的核心矛盾在于：AI产业对算力和数据中心的需求持续增长，而承载这些设施的城市社区——尤其是那些历史上已承受重工业环境负担的社区——对新增大型工业设施表现出明显的抵触情绪。费城的情况是这一全国性趋势的最新案例。",
       "keyPointsZh": [
-        "反对数据中心建设的全国性呼声已蔓延至费城。",
-        "费城官员建议可能在已受关闭炼油厂影响的社区建设数据中心。",
-        "报道将此事描述为AI数据中心热潮与受重工业创伤城市的碰撞。"
+        "针对数据中心建设的全国性抗议已蔓延至费城。",
+        "费城官员建议在一个已受现已关闭炼油厂影响的社区进行可能的建设。",
+        "该事件反映了AI基础设施扩张与受重工业影响社区之间的紧张关系。"
       ],
-      "impactZh": "该事件表明AI基础设施的快速扩张正面临越来越强的社区阻力，尤其是在已有工业污染负担的地区，这可能影响未来数据中心的选址与审批。",
-      "readerImpactZh": "对于居住在工业污染历史社区附近的居民，数据中心建设可能带来新的环境与生活影响，值得关注当地规划与听证信息。",
+      "impactZh": "该事件表明，AI数据中心的选址正面临越来越大的社区阻力，尤其是在历史上已承受重工业环境负担的地区。这可能影响未来数据中心项目的审批、选址和建设进度，并促使相关企业更重视社区沟通与环境影响评估。",
+      "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道呈现的是一个正在发展的社会与政策议题：AI算力需求推动数据中心建设，而选址往往落在已有工业负担的社区，从而引发反对。需要区分的是，报道确认的是费城官员提出了可能的建设建议以及全国性反对情绪的存在；至于该项目是否会真正落地、规模多大、对社区的具体影响，报道并未说明。",
-      "limitationsZh": "报道信息有限，未提供数据中心项目的具体规模、投资方、时间表、环境评估结果或居民组织的具体反应，因此无法判断该建议的推进程度与实际影响。",
+      "interpretationZh": "报道呈现的事实是：全国性反对数据中心建设的声音扩大，费城官员提出了一个位于曾受炼油厂影响社区的建设建议。可以合理推断，这一选址提议可能引发当地社区对环境和健康影响的进一步担忧，但报道未提供项目规模、投资方或具体计划等细节，因此无法判断其实际推进可能性。",
+      "limitationsZh": "报道内容非常有限，未提供具体选址、建设规模、时间表、涉及企业、官员姓名或社区反应等关键细节。该建议是否已正式提出、是否进入审批程序均不明确。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -94,7 +703,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T21:47:38.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -105,14 +714,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T22:43:54.270Z",
-            "label": "9/16 06:43",
-            "value": 35,
+            "at": "2026-09-15T22:46:41.016Z",
+            "label": "9/16 06:46",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-15T23:45:44.032Z",
+            "label": "9/16 07:45",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:44:47.048Z",
+            "label": "9/16 08:44",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:43:50.064Z",
+            "label": "9/16 09:43",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:42:53.080Z",
+            "label": "9/16 10:42",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:41:56.096Z",
+            "label": "9/16 11:41",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 55,
             "reports": 1
           }
@@ -165,13 +804,13 @@
         }
       ],
       "importance": 62,
-      "importanceReasonZh": "该榜单直接反映图像转网页开发这一实用任务上的模型能力排序，对选型有参考价值，但信息仅来自榜单分数，缺少评测方法与样本细节。",
-      "importanceReasonEn": "The leaderboard directly ranks models on the practical image-to-web-dev task, useful for model selection, but the source only provides scores without evaluation methodology or sample details.",
+      "importanceReasonZh": "该榜单更新提供了图像转网页开发任务上多个新模型的直接分数对比，对关注模型选型的开发者和团队有参考价值。",
+      "importanceReasonEn": "The leaderboard update provides direct score comparisons among several new models on image-to-web-dev tasks, useful for developers and teams choosing models.",
       "scoringMode": "ai",
       "titleZh": "Arena 更新 Image-to-WebDev 榜单：GPT-6 Astra 以 1733 分登顶",
-      "titleEn": "Arena Updates Image-to-WebDev Leaderboard: GPT-6 Astra Tops with 1733",
+      "titleEn": "Arena Updates Image-to-WebDev Leaderboard: GPT-6 Astra Tops with 1733 Points",
       "summaryZh": "Arena 更新 Image-to-WebDev 排行榜，纳入四个新评测模型。GPT-6 Astra（Max）以 1733 分居第一，领先 GPT-5.6 Sol（xHigh）129 分；Claude Fable 5.1（Max）以 1710 分排第二，Muse Spark 1.3（Max）1645 分第四，GLM-5.3-Flash 1588 分第十。",
-      "summaryEn": "Arena updated its Image-to-WebDev leaderboard, adding four newly evaluated models. GPT-6 Astra (Max) ranks first with 1733 points, 129 points ahead of GPT-5.6 Sol (xHigh); Claude Fable 5.1 (Max) is second with 1710, Muse Spark 1.3 (Max) fourth with 1645, and GLM-5.3-Flash tenth with 1588.",
+      "summaryEn": "Arena updated its Image-to-WebDev leaderboard, adding four newly evaluated models. GPT-6 Astra (Max) ranks first with 1733 points, leading GPT-5.6 Sol (xHigh) by 129 points; Claude Fable 5.1 (Max) is second with 1710 points, Muse Spark 1.3 (Max) fourth with 1645, and GLM-5.3-Flash tenth with 1588.",
       "keywords": [
         "Arena",
         "Image-to-WebDev",
@@ -184,7 +823,7 @@
         "Image-to-WebDev",
         "Arena leaderboard",
         "model evaluation",
-        "web development"
+        "code generation"
       ],
       "models": [
         "GPT-6 Astra",
@@ -193,22 +832,22 @@
         "Muse Spark 1.3",
         "GLM-5.3-Flash"
       ],
-      "detailZh": "Arena 更新了 Image-to-WebDev 排行榜，本次共纳入四个新评测模型。该榜单针对的是从图像生成网页开发代码的任务，即模型根据输入图像产出网页实现的能力。\n\n根据公布的结果，GPT-6 Astra（Max）以 1733 分排名第一，GPT-5.6 Sol（xHigh）以 1604 分位列其后，两者相差 129 分。Claude Fable 5.1（Max）以 1710 分排在第二位。Muse Spark 1.3（Max）以 1645 分排在第四位，GLM-5.3-Flash 以 1588 分排在第十位。\n\n目前公开的信息仅包含排名与分数，未披露评测题目、样本规模、评分方式或各模型的具体配置差异。因此这些分数可用于了解相对位置，但不足以判断差距来源。",
+      "detailZh": "Arena 更新了 Image-to-WebDev 排行榜，本次更新纳入了四个新评测模型。根据公布的数据，GPT-6 Astra（Max）以 1733 分排名第一，GPT-5.6 Sol（xHigh）以 129 分之差位居其后。Claude Fable 5.1（Max）以 1710 分排名第二，Muse Spark 1.3（Max）以 1645 分排名第四，GLM-5.3-Flash 以 1588 分排名第十。\n\nImage-to-WebDev 是 Arena 针对“从图像生成网页开发代码”这一任务设立的评测榜单，用于比较不同模型在该场景下的表现。本次更新同时引入四个新模型，说明该榜单仍在持续扩充评测范围。\n\n目前公开信息仅包含排名和分数，未披露评测集构成、评分方法、任务数量或各模型的具体配置细节。因此这些分数应被视为该榜单特定评测条件下的相对表现，而非对模型整体能力的全面结论。",
       "keyPointsZh": [
-        "Arena 更新 Image-to-WebDev 排行榜，纳入四个新评测模型。",
+        "Arena 更新 Image-to-WebDev 榜单，新增四个评测模型。",
         "GPT-6 Astra（Max）以 1733 分排名第一。",
-        "GPT-5.6 Sol（xHigh）为 1604 分，与第一名相差 129 分。",
+        "GPT-5.6 Sol（xHigh）落后第一名 129 分。",
         "Claude Fable 5.1（Max）1710 分第二，Muse Spark 1.3（Max）1645 分第四，GLM-5.3-Flash 1588 分第十。"
       ],
-      "impactZh": "该榜单为图像转网页开发这一具体任务提供了模型能力的横向对比，可能影响开发者和团队在该类任务上的模型选择。",
+      "impactZh": "该榜单为图像转网页开发这一具体任务提供了模型间的分数对比，可能影响开发者和团队在该类任务上的模型选择。",
       "readerImpactZh": "",
-      "userImpactZh": "开发者在选择用于图像转网页开发的模型时，可参考该榜单的排名与分差，但应结合自身任务验证，因为评测细节未公开。",
+      "userImpactZh": "开发者和团队在需要从设计图或截图生成网页代码时，可参考该榜单的分数排序来初步筛选模型，但应结合自身任务实测后再做决定。",
       "howItWorksZh": "",
-      "interpretationZh": "从已公布信息看，GPT-6 Astra 在该榜单上领先，Claude Fable 5.1 紧随其后，GLM-5.3-Flash 进入前十。这些是榜单分数所反映的相对位置；由于评测方法未公开，分数差距的具体原因无法从现有信息判断。",
-      "limitationsZh": "来源仅提供排名与分数，未说明评测题目、样本量、评分标准、是否使用相同配置或是否存在版本差异，因此分数不能直接等同于实际项目表现。",
+      "interpretationZh": "已确认的事实是：Arena 更新了 Image-to-WebDev 榜单，并公布了上述模型的排名与分数。可以合理推断的是，这些分数反映的是各模型在该榜单特定评测任务上的相对表现；由于评测细节未公开，不能据此推断模型在其他任务上的能力。",
+      "limitationsZh": "公开信息未披露评测集、评分方法、任务数量、运行配置及统计误差，分数差异是否显著无法判断；榜单结果仅适用于 Image-to-WebDev 这一特定任务场景。",
       "actionStepsZh": [
-        "在选型时把该榜单作为参考之一，并在自己的图像转网页任务上做小规模对比测试。",
-        "关注 Arena 后续是否公布评测方法与样本细节，以便更准确解读分差。"
+        "关注 Arena Image-to-WebDev 榜单页面以获取完整排名和后续更新。",
+        "在图像转网页开发任务中，可优先试用榜单靠前的模型并进行本地验证。"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -216,7 +855,7 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "GPT-6 Astra 以 1733 分居首，比第二名 Claude Fable 5.1 高 23 分，比 GPT-5.6 Sol 高 129 分。",
+        "insightZh": "GPT-6 Astra（Max）以 1733 分居首，比第二名 Claude Fable 5.1（Max）高 23 分；GLM-5.3-Flash 以 1588 分位列第十。",
         "data": [
           {
             "label": "GPT-6 Astra (Max)",
@@ -231,11 +870,6 @@
           {
             "label": "Muse Spark 1.3 (Max)",
             "value": 1645,
-            "display": ""
-          },
-          {
-            "label": "GPT-5.6 Sol (xHigh)",
-            "value": 1604,
             "display": ""
           },
           {
@@ -267,7 +901,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T21:20:53.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -278,21 +912,247 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T22:07:18.846Z",
-            "label": "9/16 06:07",
-            "value": 29,
+            "at": "2026-09-15T22:15:53.764Z",
+            "label": "9/16 06:15",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:53:44.693Z",
-            "label": "9/16 06:53",
-            "value": 44,
+            "at": "2026-09-15T23:10:54.528Z",
+            "label": "9/16 07:10",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T00:05:55.292Z",
+            "label": "9/16 08:05",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:00:56.056Z",
+            "label": "9/16 09:00",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:55:56.820Z",
+            "label": "9/16 09:55",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:50:57.584Z",
+            "label": "9/16 10:50",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:45:58.348Z",
+            "label": "9/16 11:45",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "55ce4452f2adbc13",
+      "normalizedUrl": "https://x.com/AravSrinivas/status/2099957318935028173",
+      "originalUrl": "https://x.com/AravSrinivas/status/2099957318935028173",
+      "titleOriginal": "Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
+      "summaryOriginal": "Perplexity CEO Aravind Srinivas 宣布自研键值数据库 CobbleDB，替代 AWS DynamoDB 用于快速网页内容抓取，迁移后每年最多可节省一亿美元。该项目由两名工程师和数百个持续运行的 Computer 智能体在两个月内完成核心基础设施，官方研究称热存储批次读取延迟较 DynamoDB 全分布下降约 5 倍（P50 从 31.4ms 降至 5.60ms）。",
+      "originalLanguage": "zh",
+      "author": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+      "category": "business",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmu352k2908t9rosaotpsx42c",
+        "https://x.com/AravSrinivas/status/2099957318935028173"
+      ],
+      "publishedAt": "2026-09-15T20:23:34.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-15T20:43:13.349Z",
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmu352k2908t9rosaotpsx42c"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmu352k2908t9rosaotpsx42c",
+          "name": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+          "type": "aggregator",
+          "url": "https://x.com/AravSrinivas/status/2099957318935028173",
+          "publishedAt": "2026-09-15T20:23:34.000Z",
+          "title": "Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmu352k2908t9rosaotpsx42c",
+            "https://x.com/AravSrinivas/status/2099957318935028173"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该事件涉及大规模基础设施自研与显著成本节省，并展示了 AI 智能体参与核心系统开发的实践，对云成本、数据库选型和 AI 工程化都有参考价值。",
+      "importanceReasonEn": "This event involves large-scale in-house infrastructure and significant cost savings, and demonstrates AI agents participating in core system development, offering reference value for cloud costs, database selection, and AI engineering.",
+      "scoringMode": "ai",
+      "titleZh": "Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
+      "titleEn": "Perplexity Builds In-House CobbleDB to Replace AWS DynamoDB, Saving Up to $100M Annually",
+      "summaryZh": "Perplexity CEO Aravind Srinivas 宣布自研键值数据库 CobbleDB，替代 AWS DynamoDB 用于快速网页内容抓取，迁移后每年最多可节省一亿美元。该项目由两名工程师和数百个持续运行的 Computer 智能体在两个月内完成核心基础设施，官方研究称热存储批次读取延迟较 DynamoDB 全分布下降约 5 倍（P50 从 31.4ms 降至 5.60ms）。",
+      "summaryEn": "Perplexity CEO Aravind Srinivas announced CobbleDB, an in-house key-value database replacing AWS DynamoDB for fast web content crawling. The migration could save up to $100 million annually. The core infrastructure was built in two months by two engineers and hundreds of continuously running Computer agents. Perplexity's research claims hot-storage batch read latency dropped about 5x versus DynamoDB's full distribution, with P50 falling from 31.4ms to 5.60ms.",
+      "keywords": [
+        "CobbleDB",
+        "DynamoDB",
+        "Perplexity",
+        "键值数据库",
+        "成本节省",
+        "Computer 智能体",
+        "延迟"
+      ],
+      "topics": [
+        "database",
+        "cloud-cost",
+        "infrastructure",
+        "AI-agents"
+      ],
+      "models": [],
+      "detailZh": "Perplexity CEO Aravind Srinivas 在 X 上宣布，公司自研了键值数据库 CobbleDB，用于替代 AWS DynamoDB，支撑快速网页内容抓取。迁移完成后，Perplexity 每年最多可节省一亿美元。\n\n据官方信息，CobbleDB 的核心基础设施由两名工程师和数百个持续运行的 Computer 智能体在两个月内完成。官方研究称，在热存储批次读取场景下，CobbleDB 的延迟较 DynamoDB 全分布下降约 5 倍，P50 从 31.4ms 降至 5.60ms。\n\n该消息来自 Perplexity CEO 的公开推文，属于公司官方披露。目前公开信息集中在成本节省、开发方式和延迟对比，未披露 CobbleDB 的具体架构、一致性模型、运维细节或迁移过程中的风险。",
+      "keyPointsZh": [
+        "Perplexity 自研键值数据库 CobbleDB，替代 AWS DynamoDB 用于快速网页内容抓取。",
+        "迁移后每年最多可节省一亿美元。",
+        "核心基础设施由两名工程师和数百个持续运行的 Computer 智能体在两个月内完成。",
+        "官方研究称热存储批次读取延迟较 DynamoDB 全分布下降约 5 倍，P50 从 31.4ms 降至 5.60ms。"
+      ],
+      "impactZh": "该事件表明，大型 AI 应用公司可能通过自研基础设施显著降低云数据库成本，并利用 AI 智能体加速核心系统开发。这可能影响其他公司对云服务依赖和自研数据库的评估。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 开发者和团队而言，该案例展示了用自研键值存储替代托管数据库以降低大规模抓取与读取成本的路径，同时提示 AI 智能体可参与基础设施开发，但需评估自研带来的运维与一致性风险。",
+      "howItWorksZh": "",
+      "interpretationZh": "已披露事实：Perplexity 用自研 CobbleDB 替代 DynamoDB，用于网页内容抓取，最多年省一亿美元；核心基础设施由两名工程师和数百个 Computer 智能体在两个月内完成；热存储批次读取 P50 从 31.4ms 降至 5.60ms。合理推断：CobbleDB 针对 Perplexity 的抓取读取模式做了优化，因此在该特定场景下延迟更低；成本节省来自替代 DynamoDB 的按量计费。具体架构和长期稳定性尚未公开。",
+      "limitationsZh": "公开信息仅来自 CEO 推文和官方研究摘要，未披露 CobbleDB 的架构、一致性、持久性、故障恢复和运维成本；延迟对比仅针对热存储批次读取场景，不代表所有工作负载；一亿美元为“最多可节省”的上限估计，实际节省可能不同；Computer 智能体参与开发的具体程度和人工介入情况未说明。",
+      "actionStepsZh": [
+        "评估自身业务中键值读取的延迟与成本瓶颈，判断是否适合自研或替换托管数据库。",
+        "关注 Perplexity 后续是否公开 CobbleDB 的技术细节，以评估其可复用性。",
+        "在引入 AI 智能体参与基础设施开发时，建立人工审查与回滚机制。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "CobbleDB 热存储批次读取 P50 为 5.60ms，低于 DynamoDB 全分布的 31.4ms，约下降 5 倍。",
+        "data": [
+          {
+            "label": "DynamoDB P50",
+            "value": 31.4,
+            "display": ""
+          },
+          {
+            "label": "CobbleDB P50",
+            "value": 5.6,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmu352k2908t9rosaotpsx42c",
+          "name": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+          "type": "aggregator",
+          "url": "https://x.com/AravSrinivas/status/2099957318935028173",
+          "publishedAt": "2026-09-15T20:23:34.000Z",
+          "title": "Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmu352k2908t9rosaotpsx42c",
+            "https://x.com/AravSrinivas/status/2099957318935028173"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-15T20:23:34.000Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-15T20:23:34.000Z",
+            "label": "9/16 04:23",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-15T21:18:50.123Z",
+            "label": "9/16 05:18",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T22:14:06.247Z",
+            "label": "9/16 06:14",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T23:09:22.370Z",
+            "label": "9/16 07:09",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:04:38.494Z",
+            "label": "9/16 08:04",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:59:54.617Z",
+            "label": "9/16 08:59",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:55:10.741Z",
+            "label": "9/16 09:55",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:50:26.864Z",
+            "label": "9/16 10:50",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:45:42.988Z",
+            "label": "9/16 11:45",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -400,7 +1260,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T20:12:53.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -411,26 +1271,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T21:04:42.385Z",
-            "label": "9/16 05:04",
-            "value": 27,
+            "at": "2026-09-15T21:09:20.345Z",
+            "label": "9/16 05:09",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:56:31.770Z",
-            "label": "9/16 05:56",
-            "value": 39,
+            "at": "2026-09-15T22:05:47.691Z",
+            "label": "9/16 06:05",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:48:21.155Z",
-            "label": "9/16 06:48",
-            "value": 52,
+            "at": "2026-09-15T23:02:15.037Z",
+            "label": "9/16 07:02",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-15T23:58:42.383Z",
+            "label": "9/16 07:58",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:55:09.728Z",
+            "label": "9/16 08:55",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:51:37.074Z",
+            "label": "9/16 09:51",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:48:04.420Z",
+            "label": "9/16 10:48",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:44:31.766Z",
+            "label": "9/16 11:44",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 65,
             "reports": 1
           }
@@ -596,7 +1486,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T20:11:54.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -607,26 +1497,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T21:03:58.135Z",
-            "label": "9/16 05:03",
-            "value": 24,
+            "at": "2026-09-15T21:08:27.901Z",
+            "label": "9/16 05:08",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:56:02.270Z",
-            "label": "9/16 05:56",
-            "value": 35,
+            "at": "2026-09-15T22:05:01.802Z",
+            "label": "9/16 06:05",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:48:06.405Z",
-            "label": "9/16 06:48",
-            "value": 45,
+            "at": "2026-09-15T23:01:35.704Z",
+            "label": "9/16 07:01",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-15T23:58:09.605Z",
+            "label": "9/16 07:58",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:54:43.506Z",
+            "label": "9/16 08:54",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:51:17.408Z",
+            "label": "9/16 09:51",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:47:51.309Z",
+            "label": "9/16 10:47",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:44:25.210Z",
+            "label": "9/16 11:44",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 55,
             "reports": 1
           }
@@ -690,7 +1610,9 @@
         "初创公司",
         "产品发布"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "TechCrunch AI 发布了一篇题为“AI 墓地”的汇总文章，以持续更新的清单形式，记录那些已经关停或未能达到预期的 AI 项目与初创公司。文章给出的两个典型例子是苹果多次推迟的 Siri AI，以及 OpenAI 一次被形容为“混乱”的“超级应用”发布。\n\n从现有信息看，这篇文章的定位是行业回顾与追踪，而非对单一事件的深度报道。它把不同公司、不同阶段的失败案例放在同一清单中，方便读者对照观察 AI 领域项目落地的实际难度。\n\n需要说明的是，输入材料只提供了标题、摘要和来源等有限信息，没有给出清单的完整条目、各项目的具体时间线、失败原因或财务数据。因此本文只能确认文章的主题和两个被点名的案例，无法进一步展开每个项目的细节。\n\n对于关注 AI 行业的人来说，这类清单的价值在于提醒：技术热度与产品成功之间并不等同，延期、发布混乱和项目关停都是行业常态的一部分。",
       "keyPointsZh": [
         "TechCrunch AI 发布了一份持续更新的“AI 墓地”清单，记录关停或未达预期的 AI 项目与初创公司。",
@@ -725,7 +1647,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T19:00:00.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -736,33 +1658,233 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T19:56:02.108Z",
-            "label": "9/16 03:56",
+            "at": "2026-09-15T19:58:05.911Z",
+            "label": "9/16 03:58",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T20:56:11.822Z",
+            "label": "9/16 04:56",
             "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:52:04.216Z",
-            "label": "9/16 04:52",
+            "at": "2026-09-15T21:54:17.733Z",
+            "label": "9/16 05:54",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T22:52:23.644Z",
+            "label": "9/16 06:52",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:48:06.324Z",
-            "label": "9/16 05:48",
+            "at": "2026-09-15T23:50:29.556Z",
+            "label": "9/16 07:50",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:48:35.467Z",
+            "label": "9/16 08:48",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:44:08.432Z",
-            "label": "9/16 06:44",
+            "at": "2026-09-16T01:46:41.378Z",
+            "label": "9/16 09:46",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:44:47.289Z",
+            "label": "9/16 10:44",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T03:42:53.200Z",
+            "label": "9/16 11:42",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "7e80b1190b4584f2",
+      "normalizedUrl": "https://techcrunch.com/2026/09/15/us-data-centers-could-consume-more-natural-gas-than-germany-and-japan-combined-by-2035",
+      "originalUrl": "https://techcrunch.com/2026/09/15/us-data-centers-could-consume-more-natural-gas-than-germany-and-japan-combined-by-2035/",
+      "titleOriginal": "US data centers could consume more natural gas than Germany and Japan combined by 2035",
+      "summaryOriginal": "The AI frenzy could push U.S. data centers to become one of the largest consumers of natural gas in the world.",
+      "originalLanguage": "en",
+      "author": "Tim De Chant",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-15T18:29:20.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/15/us-data-centers-could-consume-more-natural-gas-than-germany-and-japan-combined-by-2035/",
+          "publishedAt": "2026-09-15T18:29:20.000Z",
+          "title": "US data centers could consume more natural gas than Germany and Japan combined by 2035",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 65,
+      "importanceReasonZh": "该报道揭示了AI基础设施扩张对能源结构的潜在重大影响，涉及数据中心电力需求与天然气消费的关联，对能源行业和AI产业均有参考价值。",
+      "importanceReasonEn": "The report highlights the potential major impact of AI infrastructure expansion on energy structure, linking data center power demand with natural gas consumption, relevant to both energy and AI industries.",
+      "scoringMode": "ai",
+      "titleZh": "到2035年美国数据中心天然气消耗量或超德日总和",
+      "titleEn": "US data centers could consume more natural gas than Germany and Japan combined by 2035",
+      "summaryZh": "AI热潮可能推动美国数据中心成为全球最大的天然气消费主体之一。",
+      "summaryEn": "The AI frenzy could push U.S. data centers to become one of the largest consumers of natural gas in the world.",
+      "keywords": [
+        "美国数据中心",
+        "天然气消费",
+        "AI能耗",
+        "2035年预测"
+      ],
+      "topics": [
+        "数据中心",
+        "天然气",
+        "AI能耗",
+        "能源"
+      ],
+      "models": [],
+      "detailZh": "TechCrunch AI 报道称，受人工智能热潮推动，到2035年美国数据中心的天然气消耗量可能超过德国和日本两国的总和。该报道将数据中心的能源需求与全球主要工业国家的天然气消费量进行对比，指出美国数据中心可能成为全球最大的天然气消费主体之一。\n\n报道未提供具体的预测数据来源、计算方法或详细假设，仅以对比形式呈现这一趋势。目前已知的事实是，AI 训练和推理需要大量算力，而算力背后是持续增长的电力需求，天然气作为发电燃料之一，其消费量可能随之上升。\n\n该报道属于行业趋势预测类内容，缺乏官方数据或研究论文的直接支撑，因此具体数字和结论的可靠性有待进一步验证。",
+      "keyPointsZh": [
+        "到2035年，美国数据中心的天然气消耗量可能超过德国和日本的总和。",
+        "AI热潮是推动数据中心能源需求增长的主要因素。",
+        "报道未提供具体预测数据来源或计算方法。"
+      ],
+      "impactZh": "若预测成真，美国数据中心的能源需求将显著影响全球天然气市场，可能推高天然气价格并加剧能源竞争，同时引发对AI产业可持续性的关注。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道基于AI算力增长趋势做出推测，但未提供具体数据模型或来源。合理推断是，数据中心电力需求上升会带动天然气发电需求，但实际消耗量取决于能源结构、能效提升和可再生能源部署速度。",
+      "limitationsZh": "报道未提供预测的具体来源、计算方法和假设条件，缺乏官方数据或研究支撑，具体数字和结论的可靠性无法验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/15/us-data-centers-could-consume-more-natural-gas-than-germany-and-japan-combined-by-2035/",
+          "publishedAt": "2026-09-15T18:29:20.000Z",
+          "title": "US data centers could consume more natural gas than Germany and Japan combined by 2035",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-15T18:29:20.000Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
+        "current": 61,
+        "peak": 61,
+        "history": [
+          {
+            "at": "2026-09-15T18:29:20.000Z",
+            "label": "9/16 02:29",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-15T19:24:56.282Z",
+            "label": "9/16 03:24",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T20:20:32.565Z",
+            "label": "9/16 04:20",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T21:16:08.848Z",
+            "label": "9/16 05:16",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T22:11:45.131Z",
+            "label": "9/16 06:11",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T23:07:21.414Z",
+            "label": "9/16 07:07",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:02:57.697Z",
+            "label": "9/16 08:02",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:58:33.980Z",
+            "label": "9/16 08:58",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:54:10.263Z",
+            "label": "9/16 09:54",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:49:46.546Z",
+            "label": "9/16 10:49",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:45:22.829Z",
+            "label": "9/16 11:45",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
+            "value": 61,
             "reports": 1
           }
         ],
@@ -888,7 +2010,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T18:23:20.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -899,38 +2021,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T19:16:08.423Z",
-            "label": "9/16 03:16",
-            "value": 22,
+            "at": "2026-09-15T19:19:29.010Z",
+            "label": "9/16 03:19",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:08:56.846Z",
-            "label": "9/16 04:08",
-            "value": 31,
+            "at": "2026-09-15T20:15:38.020Z",
+            "label": "9/16 04:15",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:01:45.270Z",
-            "label": "9/16 05:01",
-            "value": 39,
+            "at": "2026-09-15T21:11:47.030Z",
+            "label": "9/16 05:11",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:54:33.693Z",
-            "label": "9/16 05:54",
-            "value": 48,
+            "at": "2026-09-15T22:07:56.040Z",
+            "label": "9/16 06:07",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:47:22.116Z",
-            "label": "9/16 06:47",
+            "at": "2026-09-15T23:04:05.050Z",
+            "label": "9/16 07:04",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:00:14.061Z",
+            "label": "9/16 08:00",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:56:23.071Z",
+            "label": "9/16 08:56",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:52:32.081Z",
+            "label": "9/16 09:52",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:48:41.091Z",
+            "label": "9/16 10:48",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T03:44:50.101Z",
+            "label": "9/16 11:44",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 65,
             "reports": 1
           }
@@ -1049,7 +2201,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T17:52:05.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -1060,38 +2212,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T18:50:05.923Z",
-            "label": "9/16 02:50",
-            "value": 23,
+            "at": "2026-09-15T18:51:04.464Z",
+            "label": "9/16 02:51",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-15T19:48:06.846Z",
-            "label": "9/16 03:48",
-            "value": 31,
+            "at": "2026-09-15T19:50:03.929Z",
+            "label": "9/16 03:50",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:46:07.770Z",
-            "label": "9/16 04:46",
-            "value": 40,
+            "at": "2026-09-15T20:49:03.394Z",
+            "label": "9/16 04:49",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:44:08.693Z",
-            "label": "9/16 05:44",
-            "value": 49,
+            "at": "2026-09-15T21:48:02.858Z",
+            "label": "9/16 05:48",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:42:09.616Z",
-            "label": "9/16 06:42",
-            "value": 58,
+            "at": "2026-09-15T22:47:02.323Z",
+            "label": "9/16 06:47",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-15T23:46:01.788Z",
+            "label": "9/16 07:46",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:45:01.253Z",
+            "label": "9/16 08:45",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:44:00.717Z",
+            "label": "9/16 09:44",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:43:00.182Z",
+            "label": "9/16 10:43",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:41:59.647Z",
+            "label": "9/16 11:41",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 66,
             "reports": 1
           }
@@ -1222,7 +2404,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T17:47:51.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -1233,38 +2415,240 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T18:46:34.256Z",
-            "label": "9/16 02:46",
-            "value": 20,
+            "at": "2026-09-15T18:47:13.555Z",
+            "label": "9/16 02:47",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-15T19:45:17.513Z",
-            "label": "9/16 03:45",
-            "value": 26,
+            "at": "2026-09-15T19:46:36.111Z",
+            "label": "9/16 03:46",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:44:00.770Z",
-            "label": "9/16 04:44",
-            "value": 32,
+            "at": "2026-09-15T20:45:58.666Z",
+            "label": "9/16 04:45",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:42:44.026Z",
+            "at": "2026-09-15T21:45:21.222Z",
+            "label": "9/16 05:45",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T22:44:43.778Z",
+            "label": "9/16 06:44",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T23:44:06.333Z",
+            "label": "9/16 07:44",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:43:28.889Z",
+            "label": "9/16 08:43",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:42:51.445Z",
+            "label": "9/16 09:42",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:42:14.000Z",
+            "label": "9/16 10:42",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:41:36.556Z",
+            "label": "9/16 11:41",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "8719e1c439c05fd4",
+      "normalizedUrl": "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch",
+      "originalUrl": "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/",
+      "titleOriginal": "AI agents now have a place to snitch",
+      "summaryOriginal": "The AI Contact Hotline is designed to be a discreet place where agents that have witnessed misbehavior can tip off authorities.",
+      "originalLanguage": "en",
+      "author": "Aditya Mehta",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-15T17:42:59.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/",
+          "publishedAt": "2026-09-15T17:42:59.000Z",
+          "title": "AI agents now have a place to snitch",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该消息提出了一种让AI代理举报不当行为的新机制，涉及AI治理与责任归属，但来源信息有限，缺乏具体实施细节。",
+      "importanceReasonEn": "The story introduces a new mechanism for AI agents to report misbehavior, touching on AI governance and accountability, but source details are limited and implementation specifics are scarce.",
+      "scoringMode": "ai",
+      "titleZh": "AI代理现在有了举报渠道",
+      "titleEn": "AI agents now have a place to snitch",
+      "summaryZh": "AI联系热线被设计为一个隐蔽的渠道，让目睹不当行为的AI代理可以向当局举报。",
+      "summaryEn": "The AI Contact Hotline is designed to be a discreet place where agents that have witnessed misbehavior can tip off authorities.",
+      "keywords": [
+        "AI Contact Hotline",
+        "AI agents",
+        "whistleblower",
+        "misbehavior",
+        "authorities"
+      ],
+      "topics": [
+        "AI agents",
+        "whistleblowing",
+        "AI governance",
+        "AI safety"
+      ],
+      "models": [],
+      "detailZh": "TechCrunch AI 报道称，出现了一个名为“AI联系热线”（AI Contact Hotline）的渠道，其定位是让AI代理在目睹不当行为时，能够以隐蔽方式向当局举报。报道将这一机制描述为代理的“举报”途径，强调其设计目标是保持低调、不引人注意。\n\n目前已知的信息仅限于该热线的基本用途：为AI代理提供一个向权威机构传递不当行为线索的入口。报道没有说明该热线由谁运营、覆盖哪些地区、接受何种类型的举报，也没有给出具体的上线时间或技术实现方式。\n\n从描述看，这一机制假设AI代理能够“目睹”并识别不当行为，并具备主动对外报告的能力。但报道未解释代理如何判断何为不当行为、如何触发举报，以及举报信息如何被验证和处理。\n\n该消息属于行业动态类报道，来源为TechCrunch AI，发布时间为2026年9月15日。由于原文信息量有限，关于该热线的实际运作、法律地位和有效性均无法确认。",
+      "keyPointsZh": [
+        "TechCrunch AI 报道了一个名为“AI联系热线”的渠道。",
+        "该热线被设计为让目睹不当行为的AI代理向当局举报。",
+        "报道强调该渠道具有隐蔽、低调的特点。",
+        "报道未披露运营方、覆盖范围、技术实现或上线时间等细节。"
+      ],
+      "impactZh": "该消息的意义在于提出了AI代理参与举报与监督的可能性，可能引发关于AI代理责任、透明度与治理边界的讨论。若此类机制落地，可能影响AI系统在合规与审计中的角色定位。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实：存在一个名为“AI联系热线”的渠道，定位是让AI代理向当局举报目睹的不当行为，且设计上保持隐蔽。合理推断：该机制可能面向具备一定自主判断能力的AI代理，但报道未提供任何技术或运营细节，因此其实际形态和可行性尚不明确。",
+      "limitationsZh": "来源信息非常有限，未说明运营方、覆盖地区、举报类型、验证流程、法律依据或技术实现；也无法确认该热线是否已实际运行，以及AI代理如何识别和报告不当行为。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/",
+          "publishedAt": "2026-09-15T17:42:59.000Z",
+          "title": "AI agents now have a place to snitch",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-15T17:42:59.000Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-09-15T17:42:59.000Z",
+            "label": "9/16 01:42",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-15T18:42:48.101Z",
+            "label": "9/16 02:42",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T19:42:37.202Z",
+            "label": "9/16 03:42",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T20:42:26.303Z",
+            "label": "9/16 04:42",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T21:42:15.404Z",
             "label": "9/16 05:42",
-            "value": 38,
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:41:27.283Z",
-            "label": "9/16 06:41",
-            "value": 44,
+            "at": "2026-09-15T22:42:04.505Z",
+            "label": "9/16 06:42",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-15T23:41:53.606Z",
+            "label": "9/16 07:41",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:41:42.707Z",
+            "label": "9/16 08:41",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:41:31.808Z",
+            "label": "9/16 09:41",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:41:20.909Z",
+            "label": "9/16 10:41",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:41:10.010Z",
+            "label": "9/16 11:41",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 50,
             "reports": 1
           }
@@ -1420,7 +2804,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T17:21:21.489Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1431,44 +2815,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T18:15:28.496Z",
-            "label": "9/16 02:15",
-            "value": 21,
+            "at": "2026-09-15T18:23:08.545Z",
+            "label": "9/16 02:23",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-15T19:09:35.503Z",
-            "label": "9/16 03:09",
-            "value": 29,
+            "at": "2026-09-15T19:24:55.602Z",
+            "label": "9/16 03:24",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:03:42.510Z",
-            "label": "9/16 04:03",
-            "value": 36,
+            "at": "2026-09-15T20:26:42.658Z",
+            "label": "9/16 04:26",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:57:49.518Z",
-            "label": "9/16 04:57",
-            "value": 43,
+            "at": "2026-09-15T21:28:29.715Z",
+            "label": "9/16 05:28",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:51:56.525Z",
-            "label": "9/16 05:51",
-            "value": 50,
+            "at": "2026-09-15T22:30:16.772Z",
+            "label": "9/16 06:30",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:46:03.532Z",
-            "label": "9/16 06:46",
-            "value": 58,
+            "at": "2026-09-15T23:32:03.828Z",
+            "label": "9/16 07:32",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T00:33:50.885Z",
+            "label": "9/16 08:33",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:35:37.942Z",
+            "label": "9/16 09:35",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T02:37:24.998Z",
+            "label": "9/16 10:37",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:39:12.055Z",
+            "label": "9/16 11:39",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 65,
             "reports": 1
           }
@@ -1607,7 +3015,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T17:05:57.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 90,
         "peak": 90,
         "history": [
@@ -1618,44 +3026,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T18:02:16.077Z",
-            "label": "9/16 02:02",
-            "value": 37,
+            "at": "2026-09-15T18:09:08.101Z",
+            "label": "9/16 02:09",
+            "value": 34,
             "reports": 2
           },
           {
-            "at": "2026-09-15T18:58:35.154Z",
-            "label": "9/16 02:58",
-            "value": 46,
+            "at": "2026-09-15T19:12:19.202Z",
+            "label": "9/16 03:12",
+            "value": 39,
             "reports": 2
           },
           {
-            "at": "2026-09-15T19:54:54.231Z",
-            "label": "9/16 03:54",
-            "value": 55,
+            "at": "2026-09-15T20:15:30.303Z",
+            "label": "9/16 04:15",
+            "value": 45,
             "reports": 2
           },
           {
-            "at": "2026-09-15T20:51:13.308Z",
-            "label": "9/16 04:51",
-            "value": 63,
+            "at": "2026-09-15T21:18:41.404Z",
+            "label": "9/16 05:18",
+            "value": 51,
             "reports": 2
           },
           {
-            "at": "2026-09-15T21:47:32.385Z",
-            "label": "9/16 05:47",
-            "value": 72,
+            "at": "2026-09-15T22:21:52.505Z",
+            "label": "9/16 06:21",
+            "value": 56,
             "reports": 2
           },
           {
-            "at": "2026-09-15T22:43:51.462Z",
-            "label": "9/16 06:43",
-            "value": 81,
+            "at": "2026-09-15T23:25:03.606Z",
+            "label": "9/16 07:25",
+            "value": 62,
             "reports": 2
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T00:28:14.707Z",
+            "label": "9/16 08:28",
+            "value": 67,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-16T01:31:25.808Z",
+            "label": "9/16 09:31",
+            "value": 73,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-16T02:34:36.909Z",
+            "label": "9/16 10:34",
+            "value": 79,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-16T03:37:48.010Z",
+            "label": "9/16 11:37",
+            "value": 84,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 90,
             "reports": 2
           }
@@ -1756,7 +3188,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T17:05:24.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1767,44 +3199,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T18:01:47.791Z",
-            "label": "9/16 02:01",
-            "value": 20,
+            "at": "2026-09-15T18:08:38.101Z",
+            "label": "9/16 02:08",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-15T18:58:11.582Z",
-            "label": "9/16 02:58",
-            "value": 26,
+            "at": "2026-09-15T19:11:52.202Z",
+            "label": "9/16 03:11",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-15T19:54:35.374Z",
-            "label": "9/16 03:54",
-            "value": 32,
+            "at": "2026-09-15T20:15:06.303Z",
+            "label": "9/16 04:15",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:50:59.165Z",
-            "label": "9/16 04:50",
-            "value": 38,
+            "at": "2026-09-15T21:18:20.404Z",
+            "label": "9/16 05:18",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:47:22.957Z",
-            "label": "9/16 05:47",
+            "at": "2026-09-15T22:21:34.505Z",
+            "label": "9/16 06:21",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T23:24:48.606Z",
+            "label": "9/16 07:24",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:28:02.707Z",
+            "label": "9/16 08:28",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T01:31:16.808Z",
+            "label": "9/16 09:31",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:43:46.748Z",
-            "label": "9/16 06:43",
-            "value": 50,
+            "at": "2026-09-16T02:34:30.909Z",
+            "label": "9/16 10:34",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T03:37:45.010Z",
+            "label": "9/16 11:37",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 55,
             "reports": 1
           }
@@ -1902,7 +3358,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T16:00:44.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -1913,50 +3369,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T16:58:09.817Z",
-            "label": "9/16 00:58",
-            "value": 18,
+            "at": "2026-09-15T17:09:50.828Z",
+            "label": "9/16 01:09",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-15T17:55:35.635Z",
-            "label": "9/16 01:55",
-            "value": 23,
+            "at": "2026-09-15T18:18:57.656Z",
+            "label": "9/16 02:18",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-15T18:53:01.452Z",
-            "label": "9/16 02:53",
+            "at": "2026-09-15T19:28:04.485Z",
+            "label": "9/16 03:28",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T20:37:11.313Z",
+            "label": "9/16 04:37",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-15T19:50:27.270Z",
-            "label": "9/16 03:50",
-            "value": 32,
+            "at": "2026-09-15T21:46:18.141Z",
+            "label": "9/16 05:46",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:47:53.087Z",
-            "label": "9/16 04:47",
-            "value": 36,
+            "at": "2026-09-15T22:55:24.970Z",
+            "label": "9/16 06:55",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:45:18.905Z",
-            "label": "9/16 05:45",
-            "value": 41,
+            "at": "2026-09-16T00:04:31.798Z",
+            "label": "9/16 08:04",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:42:44.722Z",
-            "label": "9/16 06:42",
-            "value": 45,
+            "at": "2026-09-16T01:13:38.626Z",
+            "label": "9/16 09:13",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T02:22:45.455Z",
+            "label": "9/16 10:22",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T03:31:52.283Z",
+            "label": "9/16 11:31",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 50,
             "reports": 1
           }
@@ -2061,7 +3535,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T16:00:00.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2072,50 +3546,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T16:57:31.317Z",
-            "label": "9/16 00:57",
-            "value": 19,
+            "at": "2026-09-15T17:09:10.828Z",
+            "label": "9/16 01:09",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-15T17:55:02.635Z",
-            "label": "9/16 01:55",
-            "value": 24,
+            "at": "2026-09-15T18:18:21.656Z",
+            "label": "9/16 02:18",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-15T18:52:33.952Z",
-            "label": "9/16 02:52",
-            "value": 30,
+            "at": "2026-09-15T19:27:32.485Z",
+            "label": "9/16 03:27",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-15T19:50:05.270Z",
-            "label": "9/16 03:50",
-            "value": 35,
+            "at": "2026-09-15T20:36:43.313Z",
+            "label": "9/16 04:36",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:47:36.587Z",
-            "label": "9/16 04:47",
+            "at": "2026-09-15T21:45:54.141Z",
+            "label": "9/16 05:45",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T22:55:04.970Z",
+            "label": "9/16 06:55",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:04:15.798Z",
+            "label": "9/16 08:04",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:45:07.905Z",
-            "label": "9/16 05:45",
-            "value": 45,
+            "at": "2026-09-16T01:13:26.626Z",
+            "label": "9/16 09:13",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:42:39.222Z",
-            "label": "9/16 06:42",
-            "value": 50,
+            "at": "2026-09-16T02:22:37.455Z",
+            "label": "9/16 10:22",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T03:31:48.283Z",
+            "label": "9/16 11:31",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 55,
             "reports": 1
           }
@@ -2220,7 +3712,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T16:00:00.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -2231,50 +3723,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T16:57:31.317Z",
-            "label": "9/16 00:57",
-            "value": 18,
+            "at": "2026-09-15T17:09:10.828Z",
+            "label": "9/16 01:09",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-15T17:55:02.635Z",
-            "label": "9/16 01:55",
+            "at": "2026-09-15T18:18:21.656Z",
+            "label": "9/16 02:18",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-15T19:27:32.485Z",
+            "label": "9/16 03:27",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-15T18:52:33.952Z",
-            "label": "9/16 02:52",
+            "at": "2026-09-15T20:36:43.313Z",
+            "label": "9/16 04:36",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-15T19:50:05.270Z",
-            "label": "9/16 03:50",
-            "value": 29,
+            "at": "2026-09-15T21:45:54.141Z",
+            "label": "9/16 05:45",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-15T20:47:36.587Z",
-            "label": "9/16 04:47",
+            "at": "2026-09-15T22:55:04.970Z",
+            "label": "9/16 06:55",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T00:04:15.798Z",
+            "label": "9/16 08:04",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-15T21:45:07.905Z",
-            "label": "9/16 05:45",
-            "value": 37,
+            "at": "2026-09-16T01:13:26.626Z",
+            "label": "9/16 09:13",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-15T22:42:39.222Z",
-            "label": "9/16 06:42",
-            "value": 41,
+            "at": "2026-09-16T02:22:37.455Z",
+            "label": "9/16 10:22",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T03:31:48.283Z",
+            "label": "9/16 11:31",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 44,
             "reports": 1
           }
@@ -2412,7 +3922,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-15T16:00:00.000Z",
-        "endedAt": "2026-09-15T23:40:10.540Z",
+        "endedAt": "2026-09-16T04:40:59.112Z",
         "current": 81,
         "peak": 81,
         "history": [
@@ -2423,50 +3933,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-15T16:57:31.317Z",
-            "label": "9/16 00:57",
-            "value": 35,
+            "at": "2026-09-15T17:09:10.828Z",
+            "label": "9/16 01:09",
+            "value": 33,
             "reports": 2
           },
           {
-            "at": "2026-09-15T17:55:02.635Z",
-            "label": "9/16 01:55",
-            "value": 41,
+            "at": "2026-09-15T18:18:21.656Z",
+            "label": "9/16 02:18",
+            "value": 38,
             "reports": 2
           },
           {
-            "at": "2026-09-15T18:52:33.952Z",
-            "label": "9/16 02:52",
-            "value": 48,
+            "at": "2026-09-15T19:27:32.485Z",
+            "label": "9/16 03:27",
+            "value": 42,
             "reports": 2
           },
           {
-            "at": "2026-09-15T19:50:05.270Z",
-            "label": "9/16 03:50",
-            "value": 54,
+            "at": "2026-09-15T20:36:43.313Z",
+            "label": "9/16 04:36",
+            "value": 47,
             "reports": 2
           },
           {
-            "at": "2026-09-15T20:47:36.587Z",
-            "label": "9/16 04:47",
-            "value": 61,
-            "reports": 2
-          },
-          {
-            "at": "2026-09-15T21:45:07.905Z",
+            "at": "2026-09-15T21:45:54.141Z",
             "label": "9/16 05:45",
-            "value": 67,
+            "value": 52,
             "reports": 2
           },
           {
-            "at": "2026-09-15T22:42:39.222Z",
-            "label": "9/16 06:42",
-            "value": 74,
+            "at": "2026-09-15T22:55:04.970Z",
+            "label": "9/16 06:55",
+            "value": 57,
             "reports": 2
           },
           {
-            "at": "2026-09-15T23:40:10.540Z",
-            "label": "9/16 07:40",
+            "at": "2026-09-16T00:04:15.798Z",
+            "label": "9/16 08:04",
+            "value": 62,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-16T01:13:26.626Z",
+            "label": "9/16 09:13",
+            "value": 66,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-16T02:22:37.455Z",
+            "label": "9/16 10:22",
+            "value": 71,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-16T03:31:48.283Z",
+            "label": "9/16 11:31",
+            "value": 76,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-16T04:40:59.112Z",
+            "label": "9/16 12:40",
             "value": 81,
             "reports": 2
           }
