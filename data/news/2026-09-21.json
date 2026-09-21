@@ -1,7 +1,666 @@
 {
-  "generatedAt": "2026-09-21T01:33:45.841Z",
+  "generatedAt": "2026-09-21T07:07:30.073Z",
   "date": "2026-09-21",
   "items": [
+    {
+      "id": "7517c50358dbe9ce",
+      "normalizedUrl": "https://arxiv.org/abs/2609.20971",
+      "originalUrl": "https://arxiv.org/abs/2609.20971",
+      "titleOriginal": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+      "summaryOriginal": "arXiv:2609.20971v1 Announce Type: new Abstract: Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse block selection can reduce this cost, but a block centroid may hide a highly relevant token among many irrelevant ones. We call this failure mode mean dilution and propose RBS-Attention, a training-free sparse-prefill method with two complementary selection branches. A centroid base branch captures average relevance, while a rescue branch uses the maximum key-block radius and its prompt-, layer-, and head-dependent distribution to identify blocks at risk of underestimation. Independently thresholding the two branches and combining their masks controls the contribution of rescue blocks while preserving regular block-sparse FlashAttention execution. On H100 GPUs, RBS-Attention achieves 20.65$\\times$ standalone prefill-attention speedup, 11.92$\\times$ vLLM prefill-attention speedup, and 5.97$\\times$ end-to-end time-to-first-token speedup at 128K on Qwen3-30B-A3B-Instruct-2507-FP8. On the dense Qwen3-32B model, it obtains 88.65 overall RULER accuracy versus 89.52 for dense",
+      "originalLanguage": "en",
+      "author": "Chuxu Song, Jiuqi Wei, Zhencan Peng",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-21T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.20971",
+          "publishedAt": "2026-09-21T04:00:00.000Z",
+          "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该工作针对长上下文推理中最昂贵的预填充阶段提出免训练稀疏方案，并在真实硬件与主流模型上给出加速与精度数据，对推理部署有直接参考价值。",
+      "importanceReasonEn": "It targets the costly prefill stage of long-context inference with a training-free sparse method and reports speedup and accuracy data on real hardware and mainstream models, offering direct reference value for inference deployment.",
+      "scoringMode": "ai",
+      "titleZh": "RBS-Attention：面向长上下文大语言模型的半径约束稀疏预填充",
+      "titleEn": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+      "summaryZh": "arXiv 论文提出 RBS-Attention，一种免训练的稀疏预填充方法，通过质心基分支与救援分支双路选择缓解“均值稀释”问题，在 H100 上实现最高 20.65 倍预填充注意力加速，并在 RULER 基准上接近稠密模型精度。",
+      "summaryEn": "An arXiv paper proposes RBS-Attention, a training-free sparse-prefill method that mitigates 'mean dilution' via centroid-base and rescue selection branches, achieving up to 20.65x prefill-attention speedup on H100 while nearly matching dense-model RULER accuracy.",
+      "keywords": [
+        "RBS-Attention",
+        "稀疏预填充",
+        "均值稀释",
+        "FlashAttention",
+        "RULER",
+        "TTFT"
+      ],
+      "topics": [
+        "长上下文推理",
+        "稀疏注意力",
+        "预填充优化",
+        "LLM推理加速"
+      ],
+      "models": [
+        "Qwen3-30B-A3B-Instruct-2507-FP8",
+        "Qwen3-32B"
+      ],
+      "detailZh": "长上下文大语言模型推理的主要瓶颈正在从解码转向预填充：在生成开始前，稠密自注意力需要处理整个提示。稀疏块选择可以降低这一成本，但论文指出一个失败模式——块质心可能掩盖块内少数高度相关的 token，作者将其称为“均值稀释”。\n\n为解决该问题，论文提出 RBS-Attention，一种免训练的稀疏预填充方法，包含两个互补的选择分支。质心基分支捕捉平均相关性；救援分支利用最大键块半径及其随提示、层、头变化的分布，识别可能被低估的块。两个分支分别独立阈值化，再合并掩码，从而控制救援块的贡献，同时保持规则的块稀疏 FlashAttention 执行。\n\n实验方面，在 H100 GPU 上，RBS-Attention 在 128K 上下文、Qwen3-30B-A3B-Instruct-2507-FP8 模型上取得 20.65 倍独立预填充注意力加速、11.92 倍 vLLM 预填充注意力加速，以及 5.97 倍端到端首 token 时间（TTFT）加速。在稠密 Qwen3-32B 模型上，其 RULER 总体准确率为 88.65，对比稠密基线为 89.52。\n\n论文摘要未披露更多实现细节、完整评测配置或与其他稀疏方法的对比，因此上述数据应视为作者报告结果。",
+      "keyPointsZh": [
+        "提出免训练稀疏预填充方法 RBS-Attention，针对长上下文预填充瓶颈。",
+        "识别“均值稀释”失败模式：块质心可能掩盖块内高相关 token。",
+        "双分支设计：质心基分支捕捉平均相关性，救援分支基于最大键块半径识别被低估的块。",
+        "在 H100 上，128K 上下文、Qwen3-30B-A3B-Instruct-2507-FP8 取得 20.65 倍独立预填充注意力加速、11.92 倍 vLLM 预填充注意力加速、5.97 倍端到端 TTFT 加速。",
+        "在稠密 Qwen3-32B 上 RULER 总体准确率 88.65，对比稠密基线 89.52。"
+      ],
+      "impactZh": "长上下文推理的预填充成本是部署中的关键开销。若该方法可复现，将显著降低首 token 延迟，使 128K 级上下文在现有 GPU 上更具实用性，同时保持接近稠密模型的精度。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用长上下文模型的开发者与团队而言，该方法若落地可降低预填充延迟与显存压力，提升 128K 级提示的响应速度；由于是免训练方法，理论上可直接集成到现有推理栈，但需验证与具体框架的兼容性。",
+      "howItWorksZh": "RBS-Attention 在预填充阶段进行块稀疏注意力选择，包含两个分支：质心基分支用块质心衡量平均相关性；救援分支计算最大键块半径，并利用其随提示、层、头变化的分布，找出可能因均值稀释而被低估的块。两个分支分别独立阈值化后合并掩码，救援块的贡献由阈值控制，最终仍以规则的块稀疏 FlashAttention 方式执行，因此无需训练即可接入。",
+      "interpretationZh": "论文报告了明确的加速与精度数据，但摘要未提供完整实验设置、基线对比细节或代码可用性。加速倍数与精度损失之间的权衡需在更多模型与任务上验证。",
+      "limitationsZh": "摘要未披露实现细节、完整评测配置、与其他稀疏方法的对比，也未说明是否开源代码。RULER 准确率略低于稠密基线，且加速数据仅来自特定模型与硬件组合，泛化性待验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "独立预填充注意力加速（20.65 倍）明显高于 vLLM 集成后的加速（11.92 倍），端到端 TTFT 加速进一步降至 5.97 倍，说明实际部署中的收益受框架开销影响。",
+        "data": [
+          {
+            "label": "独立预填充注意力加速",
+            "value": 20.65,
+            "display": ""
+          },
+          {
+            "label": "vLLM 预填充注意力加速",
+            "value": 11.92,
+            "display": ""
+          },
+          {
+            "label": "端到端 TTFT 加速",
+            "value": 5.97,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.20971",
+          "publishedAt": "2026-09-21T04:00:00.000Z",
+          "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T04:00:00.000Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-21T04:00:00.000Z",
+            "label": "9/21 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T04:46:52.518Z",
+            "label": "9/21 12:46",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:33:45.036Z",
+            "label": "9/21 13:33",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T06:20:37.554Z",
+            "label": "9/21 14:20",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a51d145ffe436938",
+      "normalizedUrl": "https://arxiv.org/abs/2609.20974",
+      "originalUrl": "https://arxiv.org/abs/2609.20974",
+      "titleOriginal": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+      "summaryOriginal": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We propose Attention-Aware Routing (AAR), which augments the router with temporal and spectral features extracted from a sliding window of attention weights that represent a summary of the model's contextual state, disentangled from the hidden state. Keeping the base transformer entirely frozen, we train only the routing parameters, isolating routing as the sole variable. AAR improves GSM8K by +3.37 pp over a routing-only SFT baseline on OLMoE. Beyond performance, we show that routing and attention form a coupled circuit: routing changes at layer l propagate through the residual stream to amplify attention sinks at layer l+1, reshaping attention without any direct update to the attention mechanism itself. Further, AAR reduces long diverging generation, with incorrect answers getting shorter, while correct answers remain unchanged in length. Finally, AAR is strongly depth-sensitive: applying it indiscriminately across layers can degrade factual retrieval, whereas mathematic",
+      "originalLanguage": "en",
+      "author": "Despoina Kosmopoulou, Anastasios Tsetsilas, Efthymios Georgiou, Giannis Karamanolakis, Swastik Roy, Alexandros Potamianos",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-21T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.20974",
+          "publishedAt": "2026-09-21T04:00:00.000Z",
+          "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究提出一种仅训练路由参数即可提升混合专家模型推理表现的方法，并揭示了路由与注意力之间的耦合回路，对理解与改进 MoE 架构具有参考价值。",
+      "importanceReasonEn": "The work proposes a method that improves MoE reasoning performance by training only routing parameters, and reveals a coupled circuit between routing and attention, offering reference value for understanding and improving MoE architectures.",
+      "scoringMode": "ai",
+      "titleZh": "注意力感知路由：在混合专家模型中耦合路由与注意力",
+      "titleEn": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+      "summaryZh": "一篇 arXiv 论文提出注意力感知路由（AAR），从注意力权重的滑动窗口中提取时序与频谱特征来增强混合专家模型的路由器，在保持基础 Transformer 完全冻结的情况下仅训练路由参数，在 OLMoE 上使 GSM8K 提升 3.37 个百分点。",
+      "summaryEn": "An arXiv paper proposes Attention-Aware Routing (AAR), which augments the router in Mixture-of-Experts models with temporal and spectral features extracted from a sliding window of attention weights, training only routing parameters while keeping the base transformer entirely frozen, improving GSM8K by 3.37 percentage points on OLMoE.",
+      "keywords": [
+        "注意力感知路由",
+        "混合专家",
+        "路由器",
+        "注意力汇",
+        "OLMoE"
+      ],
+      "topics": [
+        "混合专家模型",
+        "路由机制",
+        "注意力机制",
+        "大语言模型架构"
+      ],
+      "models": [
+        "OLMoE"
+      ],
+      "detailZh": "该论文关注混合专家（MoE）语言模型中的路由机制。传统路由器仅依据 token 的隐藏状态来选择并加权专家，所利用的上下文信息有限。作者提出注意力感知路由（AAR），从注意力权重的滑动窗口中提取时序与频谱特征，用以增强路由器，这些特征被视为模型上下文状态的摘要，并与隐藏状态解耦。\n\n在实验设置上，研究保持基础 Transformer 完全冻结，只训练路由参数，从而将路由作为唯一变量进行隔离观察。在 OLMoE 模型上，AAR 相比仅训练路由的 SFT 基线，在 GSM8K 上提升了 3.37 个百分点。\n\n论文进一步指出，路由与注意力构成一个耦合回路：第 l 层的路由变化会通过残差流传播，放大第 l+1 层的注意力汇，从而在未直接更新注意力机制的情况下重塑注意力。此外，AAR 减少了长程发散生成，错误答案变短，而正确答案长度保持不变。\n\n研究还发现 AAR 具有强烈的深度敏感性：不加区分地在各层应用可能损害事实检索能力，而数学推理方面的表现则有所不同。",
+      "keyPointsZh": [
+        "AAR 从注意力权重滑动窗口中提取时序与频谱特征来增强 MoE 路由器。",
+        "基础 Transformer 完全冻结，仅训练路由参数，路由是唯一变量。",
+        "在 OLMoE 上 GSM8K 相比仅路由 SFT 基线提升 3.37 个百分点。",
+        "路由变化会通过残差流放大下一层注意力汇，形成耦合回路。",
+        "AAR 具有深度敏感性，跨层 indiscriminate 应用可能损害事实检索。"
+      ],
+      "impactZh": "该研究揭示了 MoE 中路由与注意力之间的耦合关系，并提出一种低成本的路由微调思路，可能影响未来 MoE 模型的路由设计与训练策略。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用或微调 MoE 模型的开发者，该研究提示仅调整路由参数即可带来推理能力提升，同时需注意按层选择性应用，避免损害事实检索。",
+      "howItWorksZh": "AAR 在路由器原有输入（token 隐藏状态）之外，加入从注意力权重滑动窗口中提取的时序与频谱特征。这些特征被视作模型上下文状态的摘要，与隐藏状态解耦。训练时冻结基础 Transformer，仅更新路由参数，使路由成为唯一被优化的变量。",
+      "interpretationZh": "论文报告的核心事实是：在 OLMoE 上，仅训练路由参数并加入注意力窗口特征，可使 GSM8K 提升 3.37 个百分点，并观察到路由变化通过残差流影响下一层注意力汇。这属于作者在特定模型与基准上的实验结果，其普适性仍需更多验证。",
+      "limitationsZh": "结果主要基于 OLMoE 与 GSM8K，尚未说明在其他模型规模、任务或数据集上的表现；路由与注意力耦合回路的机制解释来自作者观察，仍需独立复现；深度敏感性的具体边界与原因未在摘要中充分展开。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "AAR 在 OLMoE 的 GSM8K 上相比仅路由 SFT 基线提升 3.37 个百分点。",
+        "data": [
+          {
+            "label": "仅路由 SFT 基线",
+            "value": 0,
+            "display": ""
+          },
+          {
+            "label": "AAR 提升",
+            "value": 3.37,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.20974",
+          "publishedAt": "2026-09-21T04:00:00.000Z",
+          "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T04:00:00.000Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-21T04:00:00.000Z",
+            "label": "9/21 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T04:46:52.518Z",
+            "label": "9/21 12:46",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:33:45.036Z",
+            "label": "9/21 13:33",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T06:20:37.554Z",
+            "label": "9/21 14:20",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c266aa7102334958",
+      "normalizedUrl": "https://x.com/Alibaba_Qwen/status/2101866671900401913",
+      "originalUrl": "https://x.com/Alibaba_Qwen/status/2101866671900401913",
+      "titleOriginal": "通义千问发布 Qwen-Image-2.1：7B 单检查点同时支持图像生成与编辑",
+      "summaryOriginal": "通义千问发布 Qwen-Image-2.1，一个 7B 参数的原生图像生成与编辑模型，生成和编辑共用单一检查点，最多支持 10 张参考图。模型自带提示词增强 LLM，已集成 diffusers 和 ComfyUI，并在 Hugging Face Spaces 提供免安装的浏览器在线 demo：https://huggingface.co/spaces/hugging-apps/qwen-image-2-1",
+      "originalLanguage": "zh",
+      "author": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [
+        "https://huggingface.co/spaces/hugging-apps/qwen-image-2-1"
+      ],
+      "resourceLinks": [
+        "https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj",
+        "https://x.com/Alibaba_Qwen/status/2101866671900401913",
+        "https://huggingface.co/spaces/hugging-apps/qwen-image-2-1"
+      ],
+      "publishedAt": "2026-09-21T02:50:40.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-21T03:07:37.253Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmuao05at0q8uro5tpc85e2kj",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2101866671900401913",
+          "publishedAt": "2026-09-21T02:50:40.000Z",
+          "title": "通义千问发布 Qwen-Image-2.1：7B 单检查点同时支持图像生成与编辑",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://huggingface.co/spaces/hugging-apps/qwen-image-2-1"
+          ],
+          "resourceLinks": [
+            "https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj",
+            "https://x.com/Alibaba_Qwen/status/2101866671900401913",
+            "https://huggingface.co/spaces/hugging-apps/qwen-image-2-1"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该模型以 7B 规模在单一检查点内同时覆盖图像生成与编辑，并支持最多 10 张参考图，同时提供 diffusers、ComfyUI 集成和免安装在线 demo，降低了使用门槛，对开源图像模型生态有实际影响。",
+      "importanceReasonEn": "At 7B scale, the model covers both image generation and editing in a single checkpoint, supports up to 10 reference images, and ships with diffusers/ComfyUI integrations plus an install-free online demo, lowering the barrier to use and having a practical impact on the open image-model ecosystem.",
+      "scoringMode": "ai",
+      "titleZh": "通义千问发布 Qwen-Image-2.1：7B 单检查点同时支持图像生成与编辑",
+      "titleEn": "Qwen Releases Qwen-Image-2.1: A 7B Single Checkpoint for Both Image Generation and Editing",
+      "summaryZh": "通义千问发布 Qwen-Image-2.1，一个 7B 参数的原生图像生成与编辑模型，生成和编辑共用单一检查点，最多支持 10 张参考图。模型自带提示词增强 LLM，已集成 diffusers 和 ComfyUI，并在 Hugging Face Spaces 提供免安装的浏览器在线 demo。",
+      "summaryEn": "Qwen released Qwen-Image-2.1, a 7B native image generation and editing model that uses a single checkpoint for both generation and editing and supports up to 10 reference images. It includes a built-in prompt-enhancement LLM, is integrated with diffusers and ComfyUI, and offers an install-free browser demo on Hugging Face Spaces.",
+      "keywords": [
+        "Qwen-Image-2.1",
+        "通义千问",
+        "7B",
+        "图像生成",
+        "图像编辑",
+        "diffusers",
+        "ComfyUI",
+        "Hugging Face Spaces"
+      ],
+      "topics": [
+        "图像生成",
+        "图像编辑",
+        "开源模型",
+        "多模态"
+      ],
+      "models": [
+        "Qwen-Image-2.1"
+      ],
+      "detailZh": "通义千问（Qwen）团队发布了 Qwen-Image-2.1，这是一个 7B 参数的原生图像生成与编辑模型。根据官方发布信息，该模型的核心特点是生成与编辑共用同一个检查点（single checkpoint），而不是为两类任务分别提供不同权重。\n\n在能力方面，Qwen-Image-2.1 最多支持 10 张参考图，可用于生成和编辑任务。模型内置了一个提示词增强 LLM，用于改善输入提示词的效果。\n\n在生态集成方面，该模型已集成 diffusers 和 ComfyUI，方便开发者在现有工作流中调用。同时，官方在 Hugging Face Spaces 上提供了免安装的浏览器在线 demo，地址为 https://huggingface.co/spaces/hugging-apps/qwen-image-2-1。\n\n目前公开信息主要来自通义千问官方账号的发布内容，未披露训练数据、评测分数、许可证细节或与同类模型的定量对比。",
+      "keyPointsZh": [
+        "Qwen-Image-2.1 是一个 7B 参数的原生图像生成与编辑模型。",
+        "生成和编辑共用单一检查点，最多支持 10 张参考图。",
+        "模型自带提示词增强 LLM。",
+        "已集成 diffusers 和 ComfyUI，并在 Hugging Face Spaces 提供免安装在线 demo。"
+      ],
+      "impactZh": "该发布把图像生成与编辑统一到一个 7B 检查点中，并同时提供主流工具链集成和在线 demo，可能降低开发者部署与切换成本，并推动开源图像模型向“生成+编辑一体化”方向发展。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者和团队可以直接通过 diffusers 或 ComfyUI 接入该模型，无需分别维护生成与编辑两套权重；普通用户可通过 Hugging Face Spaces 在线 demo 免安装试用。",
+      "howItWorksZh": "根据官方信息，Qwen-Image-2.1 使用单一检查点同时处理图像生成与编辑任务，并支持最多 10 张参考图作为条件输入。模型内置提示词增强 LLM，用于在推理前优化用户输入的提示词。使用方式上，可通过 diffusers 或 ComfyUI 集成调用，也可直接在 Hugging Face Spaces 的在线 demo 中体验。",
+      "interpretationZh": "官方公布的事实是：模型规模为 7B，生成与编辑共用一个检查点，支持最多 10 张参考图，内置提示词增强 LLM，并已集成 diffusers、ComfyUI 及提供在线 demo。至于其实际生成质量、编辑一致性、推理速度与硬件需求，目前公开信息未给出数据，需以实际测试为准。",
+      "limitationsZh": "官方发布未披露训练数据、评测分数、许可证条款、推理硬件要求及与同类模型的定量对比；在线 demo 的实际可用性和生成质量也需自行验证。",
+      "actionStepsZh": [
+        "在 Hugging Face Spaces 打开官方在线 demo 试用生成与编辑功能。",
+        "通过 diffusers 或 ComfyUI 集成，将 Qwen-Image-2.1 接入现有图像工作流。",
+        "在正式采用前，自行测试多参考图（最多 10 张）场景下的生成与编辑效果。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmuao05at0q8uro5tpc85e2kj",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2101866671900401913",
+          "publishedAt": "2026-09-21T02:50:40.000Z",
+          "title": "通义千问发布 Qwen-Image-2.1：7B 单检查点同时支持图像生成与编辑",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://huggingface.co/spaces/hugging-apps/qwen-image-2-1"
+          ],
+          "resourceLinks": [
+            "https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj",
+            "https://x.com/Alibaba_Qwen/status/2101866671900401913",
+            "https://huggingface.co/spaces/hugging-apps/qwen-image-2-1"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T02:50:40.000Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-21T02:50:40.000Z",
+            "label": "9/21 10:50",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T03:42:02.014Z",
+            "label": "9/21 11:42",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T04:33:24.029Z",
+            "label": "9/21 12:33",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:24:46.043Z",
+            "label": "9/21 13:24",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T06:16:08.058Z",
+            "label": "9/21 14:16",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "592bef8feb4a6cd7",
+      "normalizedUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686509&idx=1&sn=1b5ee8ab30c5825eaff76083e1f8dbcc",
+      "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686509&idx=1&sn=1b5ee8ab30c5825eaff76083e1f8dbcc",
+      "titleOriginal": "数字生命卡兹克访谈汉化组：AI 时代字幕组与漫画组的真实处境",
+      "summaryOriginal": "作者访谈多位字幕组与漫画汉化组成员，发现他们并不抵触AI。Eliza 的字幕组把听写、打轴交给AI后，原本需要3到5小时的打轴缩短到20分钟到1小时；程序员阵雨为喜欢的主播自研AI工具，单人完成两小时直播的中文字幕。漫画汉化组则因嵌字质量等原因仍坚持人工制作，成员看重的是同好社群与爱好本身。",
+      "originalLanguage": "zh",
+      "author": "公众号：数字生命卡兹克",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmualyqxc0nztro5tbldva2bh",
+        "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686509&idx=1&sn=1b5ee8ab30c5825eaff76083e1f8dbcc"
+      ],
+      "publishedAt": "2026-09-21T01:52:57.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-21T02:10:32.014Z",
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmualyqxc0nztro5tbldva2bh"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmualyqxc0nztro5tbldva2bh",
+          "name": "公众号：数字生命卡兹克",
+          "type": "practitioner",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686509&idx=1&sn=1b5ee8ab30c5825eaff76083e1f8dbcc",
+          "publishedAt": "2026-09-21T01:52:57.000Z",
+          "title": "数字生命卡兹克访谈汉化组：AI 时代字幕组与漫画组的真实处境",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmualyqxc0nztro5tbldva2bh",
+            "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686509&idx=1&sn=1b5ee8ab30c5825eaff76083e1f8dbcc"
+          ]
+        }
+      ],
+      "importance": 42,
+      "importanceReasonZh": "这是一篇来自从业者访谈的实践观察，展示了AI在字幕与汉化工作流中的真实落地方式与边界，对理解AI对兴趣社群的影响有参考价值，但缺乏具体工具与量化数据。",
+      "importanceReasonEn": "This is a practitioner interview offering real-world observations of how AI lands in subtitling and scanlation workflows and where its limits are. It is useful for understanding AI's impact on hobby communities, but lacks specific tools and quantitative data.",
+      "scoringMode": "ai",
+      "titleZh": "数字生命卡兹克访谈汉化组：AI 时代字幕组与漫画组的真实处境",
+      "titleEn": "Digital Life Kazik Interviews Fansub and Scanlation Groups: The Real Situation of Subtitling and Manga Translation Groups in the AI Era",
+      "summaryZh": "作者访谈多位字幕组与漫画汉化组成员，发现他们并不抵触AI。Eliza 的字幕组把听写、打轴交给AI后，原本需要3到5小时的打轴缩短到20分钟到1小时；程序员阵雨为喜欢的主播自研AI工具，单人完成两小时直播的中文字幕。漫画汉化组则因嵌字质量等原因仍坚持人工制作，成员看重的是同好社群与爱好本身。",
+      "summaryEn": "The author interviewed members of several fansub and manga scanlation groups and found that they do not resist AI. Eliza's fansub group hands transcription and timing to AI, cutting timing work that used to take 3-5 hours down to 20 minutes to 1 hour; programmer Zhenyu built his own AI tool for a streamer he likes, single-handedly producing Chinese subtitles for a two-hour livestream. Manga scanlation groups still insist on manual work due to typesetting quality and other reasons, with members valuing the fan community and the hobby itself.",
+      "keywords": [
+        "字幕组",
+        "汉化组",
+        "AI听写",
+        "AI打轴",
+        "直播字幕",
+        "嵌字"
+      ],
+      "topics": [
+        "AI字幕",
+        "字幕组",
+        "漫画汉化",
+        "AI辅助翻译",
+        "同好社群"
+      ],
+      "models": [],
+      "detailZh": "公众号“数字生命卡兹克”发布了一篇访谈文章，采访了多位字幕组与漫画汉化组成员，主题是AI时代这些兴趣社群的处境。文章的核心发现是，这些成员并不像外界想象的那样抵触AI，反而在部分环节主动使用AI。\n\n在字幕组方面，受访者Eliza所在的字幕组把听写和打轴工作交给AI处理。原本需要3到5小时完成的打轴工作，在使用AI后缩短到20分钟到1小时。另一位受访者是程序员阵雨，他为喜欢的主播自研AI工具，单人完成了两小时直播的中文字幕制作。\n\n在漫画汉化方面，情况有所不同。漫画汉化组因为嵌字质量等原因，仍然坚持人工制作。文章指出，成员们看重的是同好社群和爱好本身，这构成了他们继续投入的动力。\n\n文章没有披露具体使用的AI工具名称、模型或技术细节，也没有给出成本、准确率等量化指标，主要呈现的是访谈对象的经验与态度。",
+      "keyPointsZh": [
+        "字幕组受访者Eliza将听写、打轴交给AI，打轴时间从3到5小时缩短到20分钟到1小时。",
+        "程序员阵雨为喜欢的主播自研AI工具，单人完成两小时直播的中文字幕。",
+        "漫画汉化组因嵌字质量等原因仍坚持人工制作。",
+        "汉化组成员看重的是同好社群与爱好本身，而非单纯效率。",
+        "文章未披露具体AI工具、模型或量化指标。"
+      ],
+      "impactZh": "文章提供了一个来自一线的观察：AI正在被兴趣社群主动吸收进工作流，而不是简单地取代他们。字幕环节的效率提升明显，但漫画汉化因质量要求仍保留人工，说明AI的渗透是有选择性的。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用AI做字幕或翻译的用户和团队来说，这篇文章提示了一条可行路径：把听写、打轴等重复性环节交给AI，可以大幅压缩时间成本；但涉及排版、嵌字等对质量要求高的环节，人工仍然不可替代。",
+      "howItWorksZh": "",
+      "interpretationZh": "从访谈内容看，字幕组对AI的态度是实用主义的：能用AI提速的环节就用，比如听写和打轴；而漫画汉化因为嵌字质量难以保证，仍选择人工。需要说明的是，这些是受访者的个人经验，文章没有提供工具名称或可复现的配置，因此不能推断出通用的效率提升幅度。",
+      "limitationsZh": "文章没有披露具体使用的AI工具、模型或技术方案，也没有给出准确率、成本等量化数据；受访者样本有限，效率提升幅度仅代表个别字幕组的经验，不能推广到所有团队。",
+      "actionStepsZh": [
+        "在字幕制作中，可尝试把听写和打轴环节交给AI，人工专注于校对与润色。",
+        "对直播等长内容，可参考阵雨的做法，针对特定主播自建AI字幕工具。",
+        "在漫画汉化等对排版质量要求高的场景，保留人工嵌字环节。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "使用AI后，打轴耗时从3到5小时降至20分钟到1小时，效率提升明显。",
+        "data": [
+          {
+            "label": "AI前打轴耗时（小时）",
+            "value": 3,
+            "display": ""
+          },
+          {
+            "label": "AI后打轴耗时下限（小时）",
+            "value": 0.33,
+            "display": ""
+          },
+          {
+            "label": "AI后打轴耗时上限（小时）",
+            "value": 1,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmualyqxc0nztro5tbldva2bh",
+          "name": "公众号：数字生命卡兹克",
+          "type": "practitioner",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686509&idx=1&sn=1b5ee8ab30c5825eaff76083e1f8dbcc",
+          "publishedAt": "2026-09-21T01:52:57.000Z",
+          "title": "数字生命卡兹克访谈汉化组：AI 时代字幕组与漫画组的真实处境",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmualyqxc0nztro5tbldva2bh",
+            "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686509&idx=1&sn=1b5ee8ab30c5825eaff76083e1f8dbcc"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T01:52:57.000Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
+        "current": 48,
+        "peak": 48,
+        "history": [
+          {
+            "at": "2026-09-21T01:52:57.000Z",
+            "label": "9/21 09:52",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T02:45:22.512Z",
+            "label": "9/21 10:45",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T03:37:48.024Z",
+            "label": "9/21 11:37",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T04:30:13.536Z",
+            "label": "9/21 12:30",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:22:39.048Z",
+            "label": "9/21 13:22",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T06:15:04.560Z",
+            "label": "9/21 14:15",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
+            "value": 48,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "93f24197b661dc20",
       "normalizedUrl": "https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026",
@@ -38,40 +697,43 @@
         }
       ],
       "importance": 35,
-      "importanceReasonZh": "这是一则会议门票促销信息，对关注科技创投生态的人有参考价值，但不涉及技术或产品实质进展。",
-      "importanceReasonEn": "This is a conference ticket promotion, useful for those tracking the tech startup ecosystem but without substantive technical or product developments.",
+      "importanceReasonZh": "这是一则会议门票促销信息，对关注科技创业生态的人有实际参考价值，但不涉及技术或产品进展。",
+      "importanceReasonEn": "This is a conference ticket promotion with practical value for those following the tech startup ecosystem, but it does not involve technical or product developments.",
       "scoringMode": "ai",
-      "titleZh": "TechCrunch Disrupt 2026 门票优惠仅剩6天",
+      "titleZh": "TechCrunch Disrupt 2026 门票优惠倒计时 6 天",
       "titleEn": "6 days left to get ahead at TechCrunch Disrupt 2026",
-      "summaryZh": "当前门票价格将于9月25日太平洋时间晚上11:59结束，仅剩6天。加入Disrupt的10,000多名创始人、投资者和科技领袖，在此之前购票可节省最高200美元。",
-      "summaryEn": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+      "summaryZh": "TechCrunch Disrupt 2026 当前票价将于 9 月 25 日太平洋时间晚上 11:59 结束，在此之前购票最多可节省 200 美元。届时将有 1 万多名创始人、投资者和科技领袖参加。",
+      "summaryEn": "Current ticket pricing for TechCrunch Disrupt 2026 ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
       "keywords": [
         "TechCrunch Disrupt 2026",
-        "门票",
-        "优惠",
+        "门票优惠",
         "创始人",
-        "投资者"
+        "投资者",
+        "科技领袖"
       ],
       "topics": [
         "TechCrunch Disrupt",
         "科技会议",
+        "创业活动",
         "门票优惠"
       ],
       "models": [],
-      "detailZh": "TechCrunch 发布消息称，TechCrunch Disrupt 2026 的当前门票价格将在6天后结束，具体截止时间为9月25日太平洋时间晚上11:59。在此之前购票，最高可节省200美元。\n\n该活动预计将汇集10,000多名创始人、投资者和科技领袖。TechCrunch 鼓励有意参会者尽快购票以锁定当前价格。\n\n目前披露的信息仅限于票价截止时间和优惠金额，未提及具体议程、演讲嘉宾或活动地点等细节。",
+      "detailZh": "TechCrunch 发布消息称，TechCrunch Disrupt 2026 的当前票价将在 6 天后结束，具体截止时间为 9 月 25 日太平洋时间晚上 11:59。在此之前购票，参会者最多可节省 200 美元。\n\n该活动预计将汇集 1 万多名创始人、投资者和科技领袖。TechCrunch 在宣传中鼓励有意参会者尽快购票，以锁定当前价格。\n\n目前披露的信息仅限于票价截止时间和优惠金额，以及预计参会人数规模。活动的具体议程、演讲嘉宾、举办地点和完整票价档位等细节尚未在本次信息中说明。",
       "keyPointsZh": [
-        "TechCrunch Disrupt 2026 当前门票价格将于9月25日太平洋时间晚上11:59结束。",
-        "在此之前购票最高可节省200美元。",
-        "活动预计有10,000多名创始人、投资者和科技领袖参加。"
+        "TechCrunch Disrupt 2026 当前票价将于 9 月 25 日太平洋时间晚上 11:59 结束。",
+        "在此之前购票最多可节省 200 美元。",
+        "活动预计吸引 1 万多名创始人、投资者和科技领袖参加。",
+        "距离票价截止还有 6 天。"
       ],
-      "impactZh": "该消息主要影响计划参加 TechCrunch Disrupt 2026 的科技从业者和投资者，提醒他们及时购票以享受优惠价格。",
-      "readerImpactZh": "如果你计划参加 TechCrunch Disrupt 2026，需在9月25日太平洋时间晚上11:59前购票，否则可能错过最高200美元的优惠。",
+      "impactZh": "该消息主要影响计划参加 TechCrunch Disrupt 2026 的创业者和投资者，提醒他们在票价上涨前完成购票以节省费用。对更广泛的科技行业没有直接影响。",
+      "readerImpactZh": "对于计划参加该活动的普通读者，如果打算购票，需要在 9 月 25 日太平洋时间晚上 11:59 前完成购买，否则可能面临更高的票价。",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道事实：TechCrunch 宣布门票优惠截止日期和节省金额。合理推断：这是常规的会议早鸟票促销，旨在推动提前注册。",
-      "limitationsZh": "信息仅来自 TechCrunch 的促销公告，未提供活动议程、嘉宾、地点等具体细节，也未说明原价或优惠后的具体价格。",
+      "interpretationZh": "已确认的事实是：TechCrunch Disrupt 2026 的当前票价将在 9 月 25 日太平洋时间晚上 11:59 截止，此前购票最多可省 200 美元，活动预计有 1 万多名创始人、投资者和科技领袖参与。合理推断是，这是一则常规的会议早鸟票促销，旨在推动参会者尽早购票。",
+      "limitationsZh": "本次信息未披露活动的具体举办日期、地点、议程、演讲嘉宾阵容以及不同票档的完整价格，因此无法评估优惠幅度相对于总票价的比例。",
       "actionStepsZh": [
-        "如果计划参会，在9月25日太平洋时间晚上11:59前完成购票以节省最高200美元。"
+        "如果计划参加 TechCrunch Disrupt 2026，可在 9 月 25 日太平洋时间晚上 11:59 前购票以锁定当前价格。",
+        "关注 TechCrunch 官方渠道，获取活动议程、嘉宾和地点等后续信息。"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -79,20 +741,15 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "购票可节省200美元，优惠仅剩6天，活动预计吸引10,000多人。",
+        "insightZh": "当前票价最多可节省 200 美元，活动预计吸引 1 万多名参会者。",
         "data": [
           {
-            "label": "节省金额（美元）",
+            "label": "当前票价优惠上限（美元）",
             "value": 200,
             "display": ""
           },
           {
-            "label": "剩余天数",
-            "value": 6,
-            "display": ""
-          },
-          {
-            "label": "预计参会人数",
+            "label": "预计参会人数（人）",
             "value": 10000,
             "display": ""
           }
@@ -117,7 +774,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T21:41:08.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -128,26 +785,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T22:39:17.460Z",
-            "label": "9/21 06:39",
-            "value": 22,
+            "at": "2026-09-20T22:37:46.207Z",
+            "label": "9/21 06:37",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:37:26.920Z",
-            "label": "9/21 07:37",
+            "at": "2026-09-20T23:34:24.414Z",
+            "label": "9/21 07:34",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T00:31:02.621Z",
+            "label": "9/21 08:31",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T01:27:40.829Z",
+            "label": "9/21 09:27",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T02:24:19.036Z",
+            "label": "9/21 10:24",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:35:36.380Z",
-            "label": "9/21 08:35",
-            "value": 37,
+            "at": "2026-09-21T03:20:57.243Z",
+            "label": "9/21 11:20",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T04:17:35.451Z",
+            "label": "9/21 12:17",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:14:13.658Z",
+            "label": "9/21 13:14",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T06:10:51.865Z",
+            "label": "9/21 14:10",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 44,
             "reports": 1
           }
@@ -202,52 +895,45 @@
           ]
         }
       ],
-      "importance": 62,
-      "importanceReasonZh": "这是一则来自一线工程师的匿名观察，经 Simon Willison 引用后传播，反映了 AI 编码工具在大公司被强制大规模使用后可能出现的组织性异化：工具生成一切、人类只负责按回车、无人阅读产出。它没有可验证的数据或官方来源，但触及 AI 落地中的真实痛点，对技术管理者和开发者都有讨论价值。",
-      "importanceReasonEn": "This is an anonymous frontline engineer's observation, amplified by Simon Willison, reflecting possible organizational dysfunction when AI coding tools are mandated at scale: the tool generates everything, humans just press enter, and nobody reads the output. It lacks verifiable data or official sou",
+      "importance": 55,
+      "importanceReasonZh": "这是一则关于大公司内部滥用 AI 编码工具的一手爆料，反映了 AI 工具在工程组织中可能带来的文化与管理问题，对关注 AI 落地实践的人有参考价值，但属于个人匿名叙述，缺乏独立验证。",
+      "importanceReasonEn": "This is a first-hand anecdote about AI coding tool misuse inside a big company, reflecting cultural and management problems AI tools can create in engineering organizations. It is useful for those tracking AI adoption, but it is an anonymous personal account without independent verification.",
       "scoringMode": "ai",
-      "titleZh": "引用 voxium：大公司内 Claude Code 生成一切，工程师每天工作 12-13 小时只为按回车",
-      "titleEn": "Quoting voxium: At a Big Company, Claude Code Makes Everything and Engineers Work 12–13 Hours Just to Press Enter",
-      "summaryZh": "Simon Willison 引用 voxium 的一则匿名叙述：作者入职一家大公司半个月，发现规格、代码、测试、PRD、工单、报告等全部由 Claude Code 生成；团队无人喜欢这种做法，却被强制尽可能多地交付。高层多次表示“推代码不是瓶颈”，但人们每天工作 12 到 13 小时，只为按回车，从 L1 到 L7 工程师都在做同样的事，没有人阅读任何内容。",
-      "summaryEn": "Simon Willison quotes an anonymous account from voxium: half a month into a new role at a big company, the author finds specs, code, tests, PRDs, tickets, reports and more all generated by Claude Code. Nobody on the team likes it, but they are forced to ship as much as possible. Management repeatedly says pushing code is not the bottleneck, yet people work 12–13 hours a day just to press enter, from L1 to L7 engineers, and nobody reads anything.",
+      "titleZh": "引用 voxium 的爆料：大公司内部全靠 Claude Code 生成一切",
+      "titleEn": "Quoting voxium: Everything at a Big Company Is Made by Claude Code",
+      "summaryZh": "Simon Willison 引用了一位名为 voxium 的工程师的爆料：其入职大公司半个月，发现规格、代码、测试、PRD、工单、报告等全部由 Claude Code 生成，团队无人喜欢这种做法，却被高层逼迫尽可能多地交付，员工每天工作 12 到 13 小时只为按回车，从 L1 到 L7 的工程师都在做同样的事。",
+      "summaryEn": "Simon Willison quotes an engineer named voxium who, half a month into a new role at a big company, found that specs, code, tests, PRDs, tickets, reports and more are all generated by Claude Code. Nobody on the team likes it, yet management forces maximum shipping; people work 12-13 hours a day just pressing enter, and everyone from L1 to L7 engineers does the same thing.",
       "keywords": [
         "Claude Code",
-        "AI 滥用",
-        "大公司",
-        "工程师",
-        "强制交付",
-        "12-13 小时",
-        "L1-L7",
-        "无人阅读"
+        "AI misuse",
+        "LLM",
+        "engineering culture",
+        "developer burnout"
       ],
       "topics": [
-        "AI 滥用",
-        "大语言模型",
-        "生成式 AI",
-        "软件工程文化"
+        "AI misuse",
+        "LLM-generated code",
+        "engineering culture",
+        "developer productivity"
       ],
       "models": [
         "Claude Code"
       ],
-      "detailZh": "Simon Willison 在其博客中引用了一段来自 voxium 的匿名叙述。作者表示自己入职一家大公司才半个月，发现公司内部几乎所有的工程产出——规格说明、代码、测试、PRD、工单、工单处理结果、报告等——都是由 Claude Code 生成的。\n\n作者称团队里没有人喜欢这种工作方式，但大家被强制要求尽可能多地交付。作者多次从高层管理那里听到“推代码不是瓶颈，那我们为什么还慢？”的说法。\n\n实际结果是，人们每天工作 12 到 13 个小时，主要动作只是按回车。没有人阅读任何产出。作者强调，从 L1 到 L7 的工程师， literally 每个人都在做同样的事情：和 Claude 对话。\n\n这则叙述没有提供公司名称、具体项目或可验证的数据，属于个人观察和抱怨。Simon Willison 以“Quoting voxium”的形式转载，并附上 ai-misuse、llms、ai、generative-ai 等标签，表明其关注的是 AI 工具被误用或滥用的问题。",
+      "detailZh": "Simon Willison 在其博客中引用了一位署名 voxium 的工程师的叙述。voxium 表示自己入职一家大公司才半个月，发现公司内部几乎没有人真正了解系统：规格说明、代码、测试、产品需求文档（PRD）、工单、工单的解决记录、报告等，全部由 Claude Code 生成。\n\n据 voxium 描述，团队里没有人喜欢这种工作方式，但大家被要求尽可能多地交付。高层多次表示“推送代码不是瓶颈，那我们为什么还这么慢”，于是员工每天工作 12 到 13 个小时，主要动作只是按回车。没有人真正阅读这些由 AI 生成的内容。\n\nvoxium 强调，从 L1 到 L7 的工程师，几乎每一个人都在做同样的事情——和 Claude 对话。该帖被 Simon Willison 以“Quoting voxium”的形式收录，并打上了 ai-misuse、llms、ai、generative-ai 等标签。\n\n需要说明的是，这是一则匿名个人叙述，没有提供公司名称、具体项目或可核实的证据，因此其真实性和普遍性无法独立确认。它更多是作为一则行业观察和警示被传播。",
       "keyPointsZh": [
-        "作者入职大公司半个月，发现规格、代码、测试、PRD、工单、报告等全部由 Claude Code 生成。",
-        "团队无人喜欢这种做法，但被强制尽可能多地交付。",
-        "高层多次表示“推代码不是瓶颈”，质疑为何仍然慢。",
-        "人们每天工作 12 到 13 小时，主要动作只是按回车，没有人阅读产出。",
-        "从 L1 到 L7 的工程师都在做同样的事：与 Claude 对话。"
+        "一位署名 voxium 的工程师称，入职大公司半个月后发现规格、代码、测试、PRD、工单、报告等全部由 Claude Code 生成。",
+        "团队无人喜欢这种做法，但被高层要求尽可能多地交付，理由是“推送代码不是瓶颈”。",
+        "员工每天工作 12 到 13 小时，主要动作只是按回车，几乎没有人阅读 AI 生成的内容。",
+        "从 L1 到 L7 的工程师都在做同样的事：与 Claude 对话。",
+        "该叙述为匿名个人爆料，缺乏独立验证。"
       ],
-      "impactZh": "这则叙述揭示了 AI 编码工具在大公司被强制推行时可能带来的组织问题：如果管理层只关注产出数量而忽视理解与审查，工程师可能沦为“按回车”的角色，工作强度不降反升，代码质量和系统可维护性面临风险。它也为讨论 AI 生产力叙事与实际落地之间的落差提供了一个具体案例。",
-      "readerImpactZh": "对普通读者而言，这则叙述本身不直接改变生活，但它提醒人们：AI 工具在职场中的大规模强制使用，可能带来更长的工作时间和更机械的劳动，而非更轻松的工作。",
-      "userImpactZh": "对 AI 用户、开发者和团队而言，这则叙述是一个警示：把 AI 生成内容直接当作交付物而不加阅读和审查，可能导致质量失控、责任模糊和团队士气下降。团队在引入 Claude Code 等工具时，需要明确人工审查环节和合理的交付预期。",
+      "impactZh": "这则爆料引发了对 AI 编码工具在大型组织中实际落地方式的讨论：当 AI 被用来批量生成代码、文档和工单，而人类不再阅读或理解这些产出时，工程质量和组织知识可能被侵蚀。它也折射出管理层以“AI 提效”为由施加的交付压力。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 AI 编码工具的开发者与团队而言，这则爆料是一个警示：把 AI 生成内容直接当作交付物而不加审阅，可能造成无人理解系统的局面；同时，管理层以 AI 为由压缩工期、拉长工时，会带来倦怠与质量风险。",
       "howItWorksZh": "",
-      "interpretationZh": "已报告的事实是：一位匿名作者称其所在大公司几乎所有工程产出都由 Claude Code 生成，团队被强制多交付，高层认为推代码不是瓶颈，工程师每天工作 12-13 小时且无人阅读产出。合理的推断是：这种模式可能造成审查缺失、质量风险和员工倦怠。但公司名称、具体数据、管理层原话的完整语境均未提供，无法验证其普遍性。",
-      "limitationsZh": "这是一则匿名个人叙述，没有公司名称、项目细节或可验证数据，无法确认其真实性和代表性。它反映的是单一视角的体验，不能推断为整个行业或所有大公司的普遍状况。Simon Willison 的引用增加了传播度，但不构成独立验证。",
-      "actionStepsZh": [
-        "团队引入 AI 编码工具时，应明确哪些产出必须经过人工阅读和审查，避免“无人阅读”的交付。",
-        "管理者应关注工程师的实际工作内容和时长，而不是仅以代码推送量衡量效率。",
-        "开发者在使用 Claude Code 等工具时，保留对关键规格、测试和代码的理解与判断，不把生成结果直接当作最终交付。"
-      ],
+      "interpretationZh": "可以确认的是：Simon Willison 引用了一段署名 voxium 的叙述，内容描述了大公司内部全面依赖 Claude Code 生成代码与文档、员工被迫长时间工作且无人审阅的现象。这属于个人主观描述，无法核实其真实性、普遍性或具体公司背景。合理的推断是，它反映了部分组织中 AI 工具被当作交付压力工具而非辅助工具使用的倾向，但不能据此推断整个行业或所有大公司都如此。",
+      "limitationsZh": "该内容为匿名个人叙述，没有公司名称、项目细节或可验证证据；无法确认其真实性、代表性和普遍程度；也无法判断所述现象是短期项目冲刺还是长期常态。",
+      "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
       "processingError": null,
@@ -275,9 +961,9 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T21:06:43.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
-        "current": 59,
-        "peak": 59,
+        "endedAt": "2026-09-21T07:07:30.073Z",
+        "current": 55,
+        "peak": 55,
         "history": [
           {
             "at": "2026-09-20T21:06:43.000Z",
@@ -286,33 +972,69 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T22:00:07.568Z",
-            "label": "9/21 06:00",
-            "value": 23,
+            "at": "2026-09-20T22:01:20.006Z",
+            "label": "9/21 06:01",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:53:32.136Z",
-            "label": "9/21 06:53",
-            "value": 32,
+            "at": "2026-09-20T22:55:57.013Z",
+            "label": "9/21 06:55",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:46:56.704Z",
-            "label": "9/21 07:46",
-            "value": 41,
+            "at": "2026-09-20T23:50:34.019Z",
+            "label": "9/21 07:50",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:40:21.272Z",
-            "label": "9/21 08:40",
-            "value": 50,
+            "at": "2026-09-21T00:45:11.026Z",
+            "label": "9/21 08:45",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
-            "value": 59,
+            "at": "2026-09-21T01:39:48.033Z",
+            "label": "9/21 09:39",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T02:34:25.039Z",
+            "label": "9/21 10:34",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T03:29:02.046Z",
+            "label": "9/21 11:29",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T04:23:39.053Z",
+            "label": "9/21 12:23",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:18:16.059Z",
+            "label": "9/21 13:18",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T06:12:53.066Z",
+            "label": "9/21 14:12",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -437,7 +1159,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T20:29:07.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 70,
         "peak": 70,
         "history": [
@@ -448,38 +1170,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T21:19:53.473Z",
-            "label": "9/21 05:19",
-            "value": 35,
+            "at": "2026-09-20T21:27:09.097Z",
+            "label": "9/21 05:27",
+            "value": 32,
             "reports": 2
           },
           {
-            "at": "2026-09-20T22:10:39.947Z",
-            "label": "9/21 06:10",
-            "value": 42,
+            "at": "2026-09-20T22:25:11.195Z",
+            "label": "9/21 06:25",
+            "value": 36,
             "reports": 2
           },
           {
-            "at": "2026-09-20T23:01:26.420Z",
-            "label": "9/21 07:01",
-            "value": 49,
+            "at": "2026-09-20T23:23:13.292Z",
+            "label": "9/21 07:23",
+            "value": 39,
             "reports": 2
           },
           {
-            "at": "2026-09-20T23:52:12.894Z",
-            "label": "9/21 07:52",
-            "value": 56,
+            "at": "2026-09-21T00:21:15.390Z",
+            "label": "9/21 08:21",
+            "value": 43,
             "reports": 2
           },
           {
-            "at": "2026-09-21T00:42:59.367Z",
-            "label": "9/21 08:42",
-            "value": 63,
+            "at": "2026-09-21T01:19:17.487Z",
+            "label": "9/21 09:19",
+            "value": 47,
             "reports": 2
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T02:17:19.585Z",
+            "label": "9/21 10:17",
+            "value": 51,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-21T03:15:21.682Z",
+            "label": "9/21 11:15",
+            "value": 55,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-21T04:13:23.780Z",
+            "label": "9/21 12:13",
+            "value": 58,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-21T05:11:25.877Z",
+            "label": "9/21 13:11",
+            "value": 62,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-21T06:09:27.975Z",
+            "label": "9/21 14:09",
+            "value": 66,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 70,
             "reports": 2
           }
@@ -603,7 +1355,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T20:20:56.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 63,
         "peak": 63,
         "history": [
@@ -614,38 +1366,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T21:13:04.306Z",
-            "label": "9/21 05:13",
-            "value": 22,
+            "at": "2026-09-20T21:19:42.733Z",
+            "label": "9/21 05:19",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:05:12.613Z",
-            "label": "9/21 06:05",
-            "value": 30,
+            "at": "2026-09-20T22:18:29.467Z",
+            "label": "9/21 06:18",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:57:20.920Z",
-            "label": "9/21 06:57",
-            "value": 38,
+            "at": "2026-09-20T23:17:16.201Z",
+            "label": "9/21 07:17",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:49:29.227Z",
-            "label": "9/21 07:49",
-            "value": 46,
+            "at": "2026-09-21T00:16:02.935Z",
+            "label": "9/21 08:16",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:41:37.534Z",
-            "label": "9/21 08:41",
-            "value": 55,
+            "at": "2026-09-21T01:14:49.669Z",
+            "label": "9/21 09:14",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T02:13:36.403Z",
+            "label": "9/21 10:13",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T03:12:23.137Z",
+            "label": "9/21 11:12",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T04:11:09.871Z",
+            "label": "9/21 12:11",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:09:56.605Z",
+            "label": "9/21 13:09",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T06:08:43.339Z",
+            "label": "9/21 14:08",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 63,
             "reports": 1
           }
@@ -780,7 +1562,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T19:22:19.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -791,44 +1573,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T20:15:22.834Z",
-            "label": "9/21 04:15",
-            "value": 20,
+            "at": "2026-09-20T20:26:25.461Z",
+            "label": "9/21 04:26",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-20T21:08:26.668Z",
-            "label": "9/21 05:08",
-            "value": 26,
+            "at": "2026-09-20T21:30:31.922Z",
+            "label": "9/21 05:30",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:01:30.503Z",
-            "label": "9/21 06:01",
-            "value": 32,
+            "at": "2026-09-20T22:34:38.383Z",
+            "label": "9/21 06:34",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:54:34.337Z",
-            "label": "9/21 06:54",
-            "value": 38,
+            "at": "2026-09-20T23:38:44.844Z",
+            "label": "9/21 07:38",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:47:38.172Z",
-            "label": "9/21 07:47",
+            "at": "2026-09-21T00:42:51.305Z",
+            "label": "9/21 08:42",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T01:46:57.767Z",
+            "label": "9/21 09:46",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T02:51:04.228Z",
+            "label": "9/21 10:51",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T03:55:10.689Z",
+            "label": "9/21 11:55",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:40:42.006Z",
-            "label": "9/21 08:40",
-            "value": 50,
+            "at": "2026-09-21T04:59:17.150Z",
+            "label": "9/21 12:59",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T06:03:23.611Z",
+            "label": "9/21 14:03",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 55,
             "reports": 1
           }
@@ -925,7 +1731,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T18:56:04.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -936,44 +1742,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T19:52:52.834Z",
-            "label": "9/21 03:52",
-            "value": 18,
+            "at": "2026-09-20T20:02:33.643Z",
+            "label": "9/21 04:02",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-20T20:49:41.668Z",
-            "label": "9/21 04:49",
-            "value": 23,
+            "at": "2026-09-20T21:09:03.286Z",
+            "label": "9/21 05:09",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-20T21:46:30.503Z",
-            "label": "9/21 05:46",
-            "value": 27,
+            "at": "2026-09-20T22:15:32.929Z",
+            "label": "9/21 06:15",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:43:19.337Z",
-            "label": "9/21 06:43",
+            "at": "2026-09-20T23:22:02.572Z",
+            "label": "9/21 07:22",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T00:28:32.215Z",
+            "label": "9/21 08:28",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T01:35:01.858Z",
+            "label": "9/21 09:35",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:40:08.172Z",
-            "label": "9/21 07:40",
+            "at": "2026-09-21T02:41:31.501Z",
+            "label": "9/21 10:41",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T03:48:01.144Z",
+            "label": "9/21 11:48",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:36:57.006Z",
-            "label": "9/21 08:36",
-            "value": 40,
+            "at": "2026-09-21T04:54:30.787Z",
+            "label": "9/21 12:54",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T06:01:00.430Z",
+            "label": "9/21 14:01",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 44,
             "reports": 1
           }
@@ -1072,7 +1902,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T18:32:52.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -1083,50 +1913,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T19:25:28.730Z",
-            "label": "9/21 03:25",
-            "value": 18,
+            "at": "2026-09-20T19:41:28.188Z",
+            "label": "9/21 03:41",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-20T20:18:05.460Z",
-            "label": "9/21 04:18",
-            "value": 23,
+            "at": "2026-09-20T20:50:04.376Z",
+            "label": "9/21 04:50",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-20T21:10:42.190Z",
-            "label": "9/21 05:10",
+            "at": "2026-09-20T21:58:40.565Z",
+            "label": "9/21 05:58",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-20T23:07:16.753Z",
+            "label": "9/21 07:07",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:03:18.920Z",
-            "label": "9/21 06:03",
-            "value": 32,
+            "at": "2026-09-21T00:15:52.942Z",
+            "label": "9/21 08:15",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:55:55.650Z",
-            "label": "9/21 06:55",
-            "value": 36,
+            "at": "2026-09-21T01:24:29.130Z",
+            "label": "9/21 09:24",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:48:32.380Z",
-            "label": "9/21 07:48",
-            "value": 41,
+            "at": "2026-09-21T02:33:05.319Z",
+            "label": "9/21 10:33",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:41:09.110Z",
-            "label": "9/21 08:41",
-            "value": 45,
+            "at": "2026-09-21T03:41:41.507Z",
+            "label": "9/21 11:41",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T04:50:17.696Z",
+            "label": "9/21 12:50",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:58:53.884Z",
+            "label": "9/21 13:58",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 50,
             "reports": 1
           }
@@ -1246,7 +2094,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T18:05:38.317Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1257,50 +2105,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T19:01:39.257Z",
-            "label": "9/21 03:01",
-            "value": 20,
+            "at": "2026-09-20T19:16:43.022Z",
+            "label": "9/21 03:16",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-20T19:57:40.198Z",
-            "label": "9/21 03:57",
-            "value": 25,
+            "at": "2026-09-20T20:27:47.727Z",
+            "label": "9/21 04:27",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-20T20:53:41.138Z",
-            "label": "9/21 04:53",
-            "value": 31,
+            "at": "2026-09-20T21:38:52.432Z",
+            "label": "9/21 05:38",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-20T21:49:42.079Z",
-            "label": "9/21 05:49",
-            "value": 37,
+            "at": "2026-09-20T22:49:57.137Z",
+            "label": "9/21 06:49",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:45:43.019Z",
-            "label": "9/21 06:45",
-            "value": 42,
+            "at": "2026-09-21T00:01:01.842Z",
+            "label": "9/21 08:01",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:41:43.960Z",
-            "label": "9/21 07:41",
-            "value": 48,
+            "at": "2026-09-21T01:12:06.547Z",
+            "label": "9/21 09:12",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:37:44.900Z",
-            "label": "9/21 08:37",
-            "value": 54,
+            "at": "2026-09-21T02:23:11.252Z",
+            "label": "9/21 10:23",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T03:34:15.957Z",
+            "label": "9/21 11:34",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T04:45:20.662Z",
+            "label": "9/21 12:45",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:56:25.367Z",
+            "label": "9/21 13:56",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 59,
             "reports": 1
           }
@@ -1399,7 +2265,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T18:00:00.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -1410,50 +2276,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T18:56:43.230Z",
-            "label": "9/21 02:56",
-            "value": 18,
+            "at": "2026-09-20T19:11:35.461Z",
+            "label": "9/21 03:11",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-20T19:53:26.460Z",
-            "label": "9/21 03:53",
-            "value": 23,
+            "at": "2026-09-20T20:23:10.922Z",
+            "label": "9/21 04:23",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-20T20:50:09.690Z",
-            "label": "9/21 04:50",
+            "at": "2026-09-20T21:34:46.383Z",
+            "label": "9/21 05:34",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-20T22:46:21.844Z",
+            "label": "9/21 06:46",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-20T21:46:52.920Z",
-            "label": "9/21 05:46",
-            "value": 32,
+            "at": "2026-09-20T23:57:57.305Z",
+            "label": "9/21 07:57",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:43:36.150Z",
-            "label": "9/21 06:43",
-            "value": 36,
+            "at": "2026-09-21T01:09:32.767Z",
+            "label": "9/21 09:09",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:40:19.380Z",
-            "label": "9/21 07:40",
-            "value": 41,
+            "at": "2026-09-21T02:21:08.228Z",
+            "label": "9/21 10:21",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:37:02.610Z",
-            "label": "9/21 08:37",
-            "value": 45,
+            "at": "2026-09-21T03:32:43.689Z",
+            "label": "9/21 11:32",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T04:44:19.150Z",
+            "label": "9/21 12:44",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:55:54.611Z",
+            "label": "9/21 13:55",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 50,
             "reports": 1
           }
@@ -1577,7 +2461,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-20T16:10:52.000Z",
-        "endedAt": "2026-09-21T01:33:45.841Z",
+        "endedAt": "2026-09-21T07:07:30.073Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1588,62 +2472,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-20T17:07:09.384Z",
-            "label": "9/21 01:07",
+            "at": "2026-09-20T17:32:22.733Z",
+            "label": "9/21 01:32",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-20T18:03:26.768Z",
-            "label": "9/21 02:03",
-            "value": 24,
+            "at": "2026-09-20T18:53:53.467Z",
+            "label": "9/21 02:53",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-20T18:59:44.152Z",
-            "label": "9/21 02:59",
-            "value": 29,
+            "at": "2026-09-20T20:15:24.201Z",
+            "label": "9/21 04:15",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-20T19:56:01.536Z",
-            "label": "9/21 03:56",
-            "value": 34,
+            "at": "2026-09-20T21:36:54.935Z",
+            "label": "9/21 05:36",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-20T20:52:18.920Z",
-            "label": "9/21 04:52",
-            "value": 39,
+            "at": "2026-09-20T22:58:25.669Z",
+            "label": "9/21 06:58",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-20T21:48:36.304Z",
-            "label": "9/21 05:48",
-            "value": 44,
+            "at": "2026-09-21T00:19:56.403Z",
+            "label": "9/21 08:19",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-20T22:44:53.688Z",
-            "label": "9/21 06:44",
-            "value": 50,
+            "at": "2026-09-21T01:41:27.137Z",
+            "label": "9/21 09:41",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-20T23:41:11.072Z",
-            "label": "9/21 07:41",
-            "value": 55,
+            "at": "2026-09-21T03:02:57.871Z",
+            "label": "9/21 11:02",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-21T00:37:28.456Z",
-            "label": "9/21 08:37",
+            "at": "2026-09-21T04:24:28.605Z",
+            "label": "9/21 12:24",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T05:45:59.339Z",
+            "label": "9/21 13:45",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-09-21T01:33:45.841Z",
-            "label": "9/21 09:33",
+            "at": "2026-09-21T07:07:30.073Z",
+            "label": "9/21 15:07",
             "value": 65,
             "reports": 1
           }
