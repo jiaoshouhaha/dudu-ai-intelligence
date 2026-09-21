@@ -1,7 +1,1133 @@
 {
-  "generatedAt": "2026-09-21T19:44:29.864Z",
+  "generatedAt": "2026-09-21T23:13:08.629Z",
   "date": "2026-09-22",
   "items": [
+    {
+      "id": "012242336f7588da",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/21/jev",
+      "originalUrl": "https://simonwillison.net/2026/Sep/21/jev/",
+      "titleOriginal": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+      "summaryOriginal": "Last week TypeSafe AI unveiled Jev , their first example of a new category of model that they are calling \"System One models\" (I'm with Maggie Appleton, I think \"decision models\" is a better name for these). Jev is an interesting variant on the usual LLM format: it still accepts text inputs, but instead of text output it returns floating point numbers corresponding to categories, yes/no questions, ratings, and associated confidence scores. TypeSafe describe Jev like this: Think of Jev as a frontier-intelligence function call: unstructured state in, typed probabilistic decisions out. It's also very fast, and really cheap . Regular LLMs are priced in terms of input and output tokens, with output generally charged at significantly higher rates. Jev charges only for input - output is free - and the input price of their first model is $0.042 per million tokens - cheaper even than OpenAI's GPT-5 Nano ($0.05/million). Jev lets you ask questions about text or semi-structured data. You compose a \"state\" object containing a string, array of strings, or set of name-value pairs - this might describe an article, or a customer, or any other kind of record. You then send that to their API with on",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "models",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://typesafe.ai/",
+        "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+        "https://twitter.com/Mappletons/status/2101560333441610133",
+        "https://www.llm-prices.com",
+        "https://developers.openai.com/api/docs/models/gpt-5-nano",
+        "https://news.ycombinator.com/item?id=49717558#49718407",
+        "https://en.wikipedia.org/wiki/Bernoulli_distribution",
+        "https://en.wikipedia.org/wiki/Cupertino,_California",
+        "https://en.wikipedia.org/wiki/East_Palo_Alto,_California",
+        "https://github.com/kyle-pena-nlp/jevchat/",
+        "https://news.ycombinator.com/item?id=49778162#49778423",
+        "https://github.com/f/jev-leftpad"
+      ],
+      "publishedAt": "2026-09-21T23:09:20.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/21/jev/",
+          "publishedAt": "2026-09-21T23:09:20.000Z",
+          "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://typesafe.ai/",
+            "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+            "https://twitter.com/Mappletons/status/2101560333441610133",
+            "https://www.llm-prices.com",
+            "https://developers.openai.com/api/docs/models/gpt-5-nano",
+            "https://news.ycombinator.com/item?id=49717558#49718407",
+            "https://en.wikipedia.org/wiki/Bernoulli_distribution",
+            "https://en.wikipedia.org/wiki/Cupertino,_California",
+            "https://en.wikipedia.org/wiki/East_Palo_Alto,_California",
+            "https://github.com/kyle-pena-nlp/jevchat/",
+            "https://news.ycombinator.com/item?id=49778162#49778423",
+            "https://github.com/f/jev-leftpad"
+          ]
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "Jev 代表了一种不同于传统文本生成 LLM 的新模型类别，专注于结构化决策输出，且价格极具竞争力，可能影响未来模型设计和应用方式。",
+      "importanceReasonEn": "Jev represents a new model category distinct from traditional text-generating LLMs, focused on structured decision outputs with highly competitive pricing, potentially influencing future model design and applications.",
+      "scoringMode": "ai",
+      "titleZh": "Jev 推出新型 LLM 形态——System One，即决策模型",
+      "titleEn": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+      "summaryZh": "TypeSafe AI 发布 Jev，一种被称为“System One 模型”（决策模型）的新型模型。它接受文本输入，但输出浮点数形式的分类、是/否判断、评分及置信度，而非文本。Jev 速度极快且价格低廉，仅按输入计费，输出免费，输入价格为每百万 token 0.042 美元，低于 OpenAI GPT-5 Nano 的 0.05 美元。",
+      "summaryEn": "TypeSafe AI released Jev, a new type of model called a \"System One model\" (decision model). It accepts text input but returns floating-point numbers for categories, yes/no questions, ratings, and confidence scores instead of text. Jev is very fast and cheap, charging only for input at $0.042 per million tokens, cheaper than OpenAI's GPT-5 Nano at $0.05 per million.",
+      "keywords": [
+        "Jev",
+        "System One",
+        "decision models",
+        "TypeSafe AI",
+        "LLM",
+        "API",
+        "pricing"
+      ],
+      "topics": [
+        "LLM",
+        "decision models",
+        "API pricing",
+        "TypeSafe AI"
+      ],
+      "models": [
+        "Jev",
+        "GPT-5 Nano"
+      ],
+      "detailZh": "TypeSafe AI 上周发布了 Jev，这是他们所称的“System One 模型”新类别的首个示例。评论者 Maggie Appleton 等人更倾向于称之为“决策模型”。Jev 是对常规 LLM 格式的一种有趣变体：它仍然接受文本输入，但输出不是文本，而是与类别、是/否问题、评分相对应的浮点数，以及相关的置信度分数。TypeSafe 将 Jev 描述为“前沿智能函数调用：非结构化状态输入，类型化概率决策输出”。\n\nJev 的速度非常快，而且非常便宜。常规 LLM 按输入和输出 token 计价，输出通常收费显著更高。Jev 仅对输入收费——输出免费——其首个模型的输入价格为每百万 token 0.042 美元，甚至比 OpenAI 的 GPT-5 Nano（每百万 0.05 美元）还要便宜。\n\nJev 允许用户就文本或半结构化数据提问。用户构建一个“状态”对象，其中包含字符串、字符串数组或名称-值对集合——这可能描述一篇文章、一个客户或任何其他类型的记录。然后将该对象发送到他们的 API，并附带问题或决策任务。",
+      "keyPointsZh": [
+        "TypeSafe AI 发布 Jev，首个“System One 模型”或“决策模型”。",
+        "Jev 接受文本输入，但输出浮点数形式的分类、是/否判断、评分及置信度。",
+        "Jev 仅按输入计费，输出免费，输入价格为每百万 token 0.042 美元。",
+        "该价格低于 OpenAI GPT-5 Nano 的每百万 token 0.05 美元。",
+        "用户通过构建“状态”对象（字符串、字符串数组或名称-值对）来使用 API。"
+      ],
+      "impactZh": "Jev 引入了一种新的模型范式，将 LLM 从文本生成器转变为结构化决策引擎，可能推动更多针对特定决策任务的专用模型发展。其极低的输入价格和免费的输出可能降低 AI 应用的成本，尤其是需要大量分类或评分任务的场景。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于开发者和团队，Jev 提供了一种低成本、高速的方式来执行文本分类、情感分析、评分等决策任务，无需支付高昂的输出 token 费用。其 API 设计简单，适合集成到现有工作流中。",
+      "howItWorksZh": "用户构建一个“状态”对象，包含字符串、字符串数组或名称-值对集合，描述待处理的记录（如文章、客户信息）。将该状态发送到 Jev API，并附带问题或决策任务。Jev 返回浮点数，对应类别、是/否答案、评分以及置信度分数。模型仅对输入 token 计费，输出免费。",
+      "interpretationZh": "Jev 是一种专注于决策输出的新型 LLM，其设计理念是接收非结构化输入并产生类型化的概率决策。它不生成文本，而是输出数值和置信度，适合分类、评分等任务。其定价模式仅对输入收费，输出免费，使其在成本上具有优势。目前信息来自 TypeSafe AI 的发布和 Simon Willison 的报道，具体性能和应用效果尚待验证。",
+      "limitationsZh": "目前关于 Jev 的详细信息有限，仅来自 TypeSafe AI 的发布和 Simon Willison 的报道。其实际性能、准确性、支持的决策类型范围、API 限制等尚未有独立验证。输出仅为浮点数和置信度，可能不适用于需要文本生成的任务。",
+      "actionStepsZh": [
+        "访问 TypeSafe AI 官网或 API 文档，了解 Jev 的详细使用方法和定价。",
+        "尝试构建一个简单的“状态”对象，测试 Jev 在分类或评分任务上的表现。",
+        "对比 Jev 与现有 LLM 在决策任务上的成本和速度，评估是否适合你的应用场景。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Jev 的输入价格（每百万 token 0.042 美元）低于 GPT-5 Nano（每百万 token 0.05 美元）。",
+        "data": [
+          {
+            "label": "Jev 输入价格",
+            "value": 0.042,
+            "display": ""
+          },
+          {
+            "label": "GPT-5 Nano 输入价格",
+            "value": 0.05,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/21/jev/",
+          "publishedAt": "2026-09-21T23:09:20.000Z",
+          "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://typesafe.ai/",
+            "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+            "https://twitter.com/Mappletons/status/2101560333441610133",
+            "https://www.llm-prices.com",
+            "https://developers.openai.com/api/docs/models/gpt-5-nano",
+            "https://news.ycombinator.com/item?id=49717558#49718407",
+            "https://en.wikipedia.org/wiki/Bernoulli_distribution",
+            "https://en.wikipedia.org/wiki/Cupertino,_California",
+            "https://en.wikipedia.org/wiki/East_Palo_Alto,_California",
+            "https://github.com/kyle-pena-nlp/jevchat/",
+            "https://news.ycombinator.com/item?id=49778162#49778423",
+            "https://github.com/f/jev-leftpad"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T23:09:20.000Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
+        "current": 66,
+        "peak": 66,
+        "history": [
+          {
+            "at": "2026-09-21T23:09:20.000Z",
+            "label": "9/22 07:09",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
+            "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "1d4c089b9c3b10f4",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker",
+      "originalUrl": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
+      "titleOriginal": "Cloudflare Python Workers are now generally available",
+      "summaryOriginal": "Cloudflare Python Workers are now generally available After a two year preview, Cloudflare's support for running Python code in their server-side Workers platform is now stable: \"Python is now a first-class, fully supported language on the Cloudflare Developer Platform\". A neat thing about this is how it works. Cloudflare are running Python compiled to WebAssembly via Pyodide in their V8-based workerd runtime. This comes with some limitations, documented here - most notably both multiprocessing and threading are non-functional in the WebAssembly VM. One particularly interesting detail of this is the local development environment story - their pywrangler development tool (confusingly packaged as workers-py on PyPI) runs a full local simulation of their stack, including executing code with Pyodide in WebAssembly in V8 in a 123MB workerd binary, which for me ended up in node_modules/@cloudflare/workerd-darwin-arm64/bin/workerd . Python Workers represent a significant investment in the wider Python ecosystem by Cloudflare. The release announcement is credited to Gyeongjae Choi, Dominik Picheta, and Hood Chatham - Gyeongjae and Hood are both Pyodide core maintainers. Via Hacker News Tag",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "products",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://blog.cloudflare.com/python-workers-ga/",
+        "https://github.com/cloudflare/workerd",
+        "https://developers.cloudflare.com/workers/languages/python/stdlib/",
+        "https://developers.cloudflare.com/workers/languages/python/#the-pywrangler-cli-tool",
+        "https://pypi.org/project/workers-py/",
+        "https://news.ycombinator.com/item?id=49787142",
+        "https://simonwillison.net/tags/python",
+        "https://simonwillison.net/tags/cloudflare",
+        "https://simonwillison.net/tags/webassembly",
+        "https://simonwillison.net/tags/pyodide"
+      ],
+      "publishedAt": "2026-09-21T22:25:44.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
+          "publishedAt": "2026-09-21T22:25:44.000Z",
+          "title": "Cloudflare Python Workers are now generally available",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://blog.cloudflare.com/python-workers-ga/",
+            "https://github.com/cloudflare/workerd",
+            "https://developers.cloudflare.com/workers/languages/python/stdlib/",
+            "https://developers.cloudflare.com/workers/languages/python/#the-pywrangler-cli-tool",
+            "https://pypi.org/project/workers-py/",
+            "https://news.ycombinator.com/item?id=49787142",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/cloudflare",
+            "https://simonwillison.net/tags/webassembly",
+            "https://simonwillison.net/tags/pyodide"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是 Cloudflare 对 Python 生态的重要投入，将 Python 正式纳入其边缘计算平台，并采用 Pyodide/WebAssembly 这一独特技术路线，对使用 Workers 的开发者有实际影响。",
+      "importanceReasonEn": "This is a significant Cloudflare investment in the Python ecosystem, formally bringing Python to its edge platform via the distinctive Pyodide/WebAssembly route, with practical impact for Workers developers.",
+      "scoringMode": "ai",
+      "titleZh": "Cloudflare Python Workers 正式发布",
+      "titleEn": "Cloudflare Python Workers are now generally available",
+      "summaryZh": "Cloudflare 的 Python Workers 在经历两年预览后正式稳定，Python 成为其开发者平台的一等支持语言。其实现方式是将 Python 通过 Pyodide 编译为 WebAssembly，运行在基于 V8 的 workerd 运行时中，但多进程和多线程在 WebAssembly 虚拟机中不可用。",
+      "summaryEn": "Cloudflare's Python Workers are now stable after a two-year preview, making Python a first-class, fully supported language on its Developer Platform. It works by compiling Python to WebAssembly via Pyodide running in the V8-based workerd runtime, though multiprocessing and threading are non-functional in the WebAssembly VM.",
+      "keywords": [
+        "Cloudflare Workers",
+        "Python",
+        "Pyodide",
+        "WebAssembly",
+        "workerd",
+        "pywrangler"
+      ],
+      "topics": [
+        "serverless",
+        "webassembly",
+        "python",
+        "cloudflare"
+      ],
+      "models": [],
+      "detailZh": "Cloudflare 宣布其 Python Workers 在经历两年预览后正式可用，Python 现在成为 Cloudflare 开发者平台上的一等、完全支持的语言。该消息由 Simon Willison 转述，发布公告署名 Gyeongjae Choi、Dominik Picheta 和 Hood Chatham，其中 Gyeongjae 和 Hood 都是 Pyodide 核心维护者。\n\n其实现方式较为特别：Cloudflare 将 Python 通过 Pyodide 编译为 WebAssembly，并运行在基于 V8 的 workerd 运行时中。这一架构带来了一些限制，官方文档中已有说明，其中最值得注意的是多进程（multiprocessing）和多线程（threading）在 WebAssembly 虚拟机中无法工作。\n\n本地开发体验是另一个值得关注的细节。其 pywrangler 开发工具（在 PyPI 上以 workers-py 为名发布）会在本地完整模拟 Cloudflare 的技术栈，包括在 V8 中通过 WebAssembly 执行 Pyodide 代码，运行在一个 123MB 的 workerd 二进制文件中；在作者的环境中，该二进制位于 node_modules/@cloudflare/workerd-darwin-arm64/bin/workerd。\n\n整体来看，Python Workers 代表了 Cloudflare 对更广泛 Python 生态的一次重要投入，同时也展示了在边缘运行时中运行 Python 的一种独特技术路径。",
+      "keyPointsZh": [
+        "Cloudflare Python Workers 结束两年预览，正式一般可用。",
+        "Python 成为 Cloudflare 开发者平台上的一等、完全支持语言。",
+        "实现方式为 Python 经 Pyodide 编译为 WebAssembly，运行在基于 V8 的 workerd 中。",
+        "多进程和多线程在 WebAssembly 虚拟机中不可用。",
+        "本地开发工具 pywrangler（PyPI 包名 workers-py）可在本地完整模拟该技术栈。"
+      ],
+      "impactZh": "这使开发者可以在 Cloudflare 的边缘平台上直接使用 Python，而不必依赖其他语言或外部服务，同时其 Pyodide/WebAssembly 路线也为在受限运行时中运行 Python 提供了参考。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Cloudflare Workers 的 Python 开发者现在可以将其用于生产环境，但需要避开多进程和多线程，并可通过 pywrangler 在本地模拟运行环境进行开发调试。",
+      "howItWorksZh": "Python 代码通过 Pyodide 编译为 WebAssembly，然后在 Cloudflare 基于 V8 的 workerd 运行时中执行。本地开发时，pywrangler 工具（PyPI 包名 workers-py）会在本地模拟整套技术栈，包括在 V8 中以 WebAssembly 方式运行 Pyodide，依赖一个 123MB 的 workerd 二进制文件。",
+      "interpretationZh": "已确认的事实是：Python Workers 结束预览正式可用，Python 成为一等支持语言，底层采用 Pyodide 编译为 WebAssembly 并运行在 V8 的 workerd 中，且多进程与多线程不可用。可合理推断的是，这一架构选择在带来兼容性的同时也会限制依赖原生线程或进程的 Python 库。",
+      "limitationsZh": "多进程和多线程在 WebAssembly 虚拟机中无法工作，这是官方文档明确指出的限制。输入未提供性能数据、定价变化或与其他运行时的对比，因此无法评估其性能或成本影响。",
+      "actionStepsZh": [
+        "在 Cloudflare Workers 上使用 Python 时，避免依赖 multiprocessing 或 threading 的库。",
+        "使用 pywrangler（PyPI 包名 workers-py）在本地模拟运行环境进行开发。",
+        "查阅官方文档了解 WebAssembly 环境下的具体限制。"
+      ],
+      "detailCompleteness": "full",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
+          "publishedAt": "2026-09-21T22:25:44.000Z",
+          "title": "Cloudflare Python Workers are now generally available",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://blog.cloudflare.com/python-workers-ga/",
+            "https://github.com/cloudflare/workerd",
+            "https://developers.cloudflare.com/workers/languages/python/stdlib/",
+            "https://developers.cloudflare.com/workers/languages/python/#the-pywrangler-cli-tool",
+            "https://pypi.org/project/workers-py/",
+            "https://news.ycombinator.com/item?id=49787142",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/cloudflare",
+            "https://simonwillison.net/tags/webassembly",
+            "https://simonwillison.net/tags/pyodide"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T22:25:44.000Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-21T22:25:44.000Z",
+            "label": "9/22 06:25",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d1e0a1c2db3acc01",
+      "normalizedUrl": "https://latent.space/p/jev",
+      "originalUrl": "https://www.latent.space/p/jev",
+      "titleOriginal": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+      "summaryOriginal": "The definitive Jev podcast with its lead creator.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "agent",
+      "sourceType": "community",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+        "https://substackcdn.com/image/fetch/$s_!MPbn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+        "https://substackcdn.com/image/fetch/$s_!MPbn!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+        "https://substackcdn.com/image/fetch/$s_!MPbn!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+        "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+        "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+        "https://substack-post-media.s3.amazonaws.com/public/images/5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png\",\"srcNoWatermark\":null,\"fullscreen\":null,\"imageSize\":null,\"height\":644,\"width\":600,\"resizeWidth\":null,\"bytes\":116983,\"alt\":null,\"title\":null,\"type\":\"image/png\",\"href\":null,\"belowTheFold\":true,\"topImage\":false,\"internalRedirect\":\"https://www.latent.space/i/216783460?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png\",\"isProcessing\":false,\"align\":null,\"offset\":false}",
+        "https://substackcdn.com/image/fetch/$s_!MPbn!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png"
+      ],
+      "resourceLinks": [
+        "https://ai.engineer/nyc/2026",
+        "https://ai.engineer/code/2026/apply",
+        "https://ai.engineer/code/2026",
+        "https://x.com/aiDotEngineer/status/2078502554200359344",
+        "https://arxiv.org/abs/2203.02155",
+        "https://www.youtube.com/watch?v=cJ0EOzey--o",
+        "https://docs.typesafe.ai/introduction/machine-learning-primer#the-problems-with-rlhf",
+        "https://www.youtube-nocookie.com/embed/cFx9Z3ZXca0?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+        "https://x.com/OpenAI/status/1790072174117613963?s=20",
+        "https://x.com/AnthropicAI/status/2072163884430229756?s=20",
+        "https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in",
+        "https://x.com/OpenAI/status/2095595741528125780?s=20"
+      ],
+      "publishedAt": "2026-09-21T22:13:49.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opinion",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/jev",
+          "publishedAt": "2026-09-21T22:13:49.000Z",
+          "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substack-post-media.s3.amazonaws.com/public/images/5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png\",\"srcNoWatermark\":null,\"fullscreen\":null,\"imageSize\":null,\"height\":644,\"width\":600,\"resizeWidth\":null,\"bytes\":116983,\"alt\":null,\"title\":null,\"type\":\"image/png\",\"href\":null,\"belowTheFold\":true,\"topImage\":false,\"internalRedirect\":\"https://www.latent.space/i/216783460?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png\",\"isProcessing\":false,\"align\":null,\"offset\":false}",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png"
+          ],
+          "resourceLinks": [
+            "https://ai.engineer/nyc/2026",
+            "https://ai.engineer/code/2026/apply",
+            "https://ai.engineer/code/2026",
+            "https://x.com/aiDotEngineer/status/2078502554200359344",
+            "https://arxiv.org/abs/2203.02155",
+            "https://www.youtube.com/watch?v=cJ0EOzey--o",
+            "https://docs.typesafe.ai/introduction/machine-learning-primer#the-problems-with-rlhf",
+            "https://www.youtube-nocookie.com/embed/cFx9Z3ZXca0?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+            "https://x.com/OpenAI/status/1790072174117613963?s=20",
+            "https://x.com/AnthropicAI/status/2072163884430229756?s=20",
+            "https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in",
+            "https://x.com/OpenAI/status/2095595741528125780?s=20"
+          ]
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该内容为播客访谈，讨论面向生产环境的System One模型理念，但源材料仅提供标题和摘要，缺乏具体技术细节或可验证数据，因此重要性中等。",
+      "importanceReasonEn": "This is a podcast interview discussing the concept of System One models for production, but the source material only provides a title and summary without specific technical details or verifiable data, resulting in moderate importance.",
+      "scoringMode": "ai",
+      "titleZh": "Jev：面向生产环境的System One模型，而非“上帝模型”——对话TypeSafe AI首席执行官Diogo Almeida",
+      "titleEn": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+      "summaryZh": "Jev播客与其主要创作者Diogo Almeida（TypeSafe AI首席执行官）的权威对话。",
+      "summaryEn": "The definitive Jev podcast with its lead creator.",
+      "keywords": [
+        "Jev",
+        "System One",
+        "TypeSafe AI",
+        "Diogo Almeida",
+        "生产环境"
+      ],
+      "topics": [
+        "AI代理",
+        "System One模型",
+        "生产环境AI"
+      ],
+      "models": [],
+      "detailZh": "该条目来自Latent Space播客，标题为“Jev：面向生产环境的System One模型，而非‘上帝模型’”，嘉宾为TypeSafe AI首席执行官Diogo Almeida。摘要称这是与Jev主要创作者进行的权威对话。\n\n目前可获取的信息仅限于标题和摘要，没有提供播客的具体内容、讨论的技术细节、发布时间线或任何可验证的数据。因此，无法确定Jev的具体功能、System One模型的技术架构，或TypeSafe AI的产品细节。\n\n从标题推断，对话可能围绕“System One模型”与“上帝模型”的对比展开，强调前者更适合生产环境。但这一推断缺乏源材料支持，仅基于标题措辞。\n\n由于源材料极为有限，本条目无法提供更深入的事实描述或背景信息。",
+      "keyPointsZh": [
+        "该内容为Latent Space播客的一期节目，标题提及Jev和System One模型。",
+        "嘉宾为TypeSafe AI首席执行官Diogo Almeida，被描述为Jev的主要创作者。",
+        "摘要称这是关于Jev的权威对话。",
+        "源材料仅包含标题和摘要，无具体技术细节或数据。"
+      ],
+      "impactZh": "该播客可能为关注AI代理和生产环境模型部署的听众提供理念参考，但由于缺乏具体内容，其实际影响尚不明确。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "源材料仅提供播客标题和摘要，无法确认Jev或System One模型的具体工作原理。标题暗示存在一种面向生产环境的模型设计理念，与所谓“上帝模型”相对，但这一解读基于标题措辞，缺乏实质内容支持。",
+      "limitationsZh": "源材料仅有标题和摘要，没有播客正文、技术细节、数据或可验证声明。所有关于Jev和System One模型的描述均无法核实。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/jev",
+          "publishedAt": "2026-09-21T22:13:49.000Z",
+          "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png",
+            "https://substack-post-media.s3.amazonaws.com/public/images/5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png\",\"srcNoWatermark\":null,\"fullscreen\":null,\"imageSize\":null,\"height\":644,\"width\":600,\"resizeWidth\":null,\"bytes\":116983,\"alt\":null,\"title\":null,\"type\":\"image/png\",\"href\":null,\"belowTheFold\":true,\"topImage\":false,\"internalRedirect\":\"https://www.latent.space/i/216783460?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png\",\"isProcessing\":false,\"align\":null,\"offset\":false}",
+            "https://substackcdn.com/image/fetch/$s_!MPbn!,w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ad289d5-2a03-4b50-804b-ae4413cbe521_600x644.png"
+          ],
+          "resourceLinks": [
+            "https://ai.engineer/nyc/2026",
+            "https://ai.engineer/code/2026/apply",
+            "https://ai.engineer/code/2026",
+            "https://x.com/aiDotEngineer/status/2078502554200359344",
+            "https://arxiv.org/abs/2203.02155",
+            "https://www.youtube.com/watch?v=cJ0EOzey--o",
+            "https://docs.typesafe.ai/introduction/machine-learning-primer#the-problems-with-rlhf",
+            "https://www.youtube-nocookie.com/embed/cFx9Z3ZXca0?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+            "https://x.com/OpenAI/status/1790072174117613963?s=20",
+            "https://x.com/AnthropicAI/status/2072163884430229756?s=20",
+            "https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in",
+            "https://x.com/OpenAI/status/2095595741528125780?s=20"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T22:13:49.000Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-09-21T22:13:49.000Z",
+            "label": "9/22 06:13",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "685702840f714883",
+      "normalizedUrl": "https://x.com/arena/status/2102142912943489220",
+      "originalUrl": "https://x.com/arena/status/2102142912943489220",
+      "titleOriginal": "小米 MiMo-V2.6-Pro 登上 Code Arena： WebDev 榜约第10名，开源权重中约第3",
+      "summaryOriginal": "小米发布 MiMo-V2.6-Pro 与 Flash 两款全模态模型，MiMo-V2.6-Pro 在 Code Arena： WebDev 榜以 1628 分（AutoEval）位列约第10名，开源权重（MIT 许可）中约第3，较 MiMo-V2.5-Pro 的 1475 分上涨 153 分。",
+      "originalLanguage": "zh",
+      "author": "X：Arena (@arena)",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmubr2enk04a1rociadivcsjt",
+        "https://x.com/arena/status/2102142912943489220"
+      ],
+      "publishedAt": "2026-09-21T21:08:21.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-21T21:21:06.694Z",
+      "contentType": "benchmark",
+      "evidenceLevel": "verified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmubr2enk04a1rociadivcsjt"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmubr2enk04a1rociadivcsjt",
+          "name": "X：Arena (@arena)",
+          "type": "aggregator",
+          "url": "https://x.com/arena/status/2102142912943489220",
+          "publishedAt": "2026-09-21T21:08:21.000Z",
+          "title": "小米 MiMo-V2.6-Pro 登上 Code Arena： WebDev 榜约第10名，开源权重中约第3",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubr2enk04a1rociadivcsjt",
+            "https://x.com/arena/status/2102142912943489220"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该消息提供了可核验的榜单分数与排名，并显示开源权重模型在代码竞技榜上的位置，对关注开源代码模型选型的开发者有参考价值。",
+      "importanceReasonEn": "The item provides verifiable leaderboard scores and rankings, and shows where an open-weight model stands on a code arena, which is useful for developers choosing open code models.",
+      "scoringMode": "ai",
+      "titleZh": "小米 MiMo-V2.6-Pro 登上 Code Arena：WebDev 榜约第10名，开源权重中约第3",
+      "titleEn": "Xiaomi MiMo-V2.6-Pro Enters Code Arena: ~10th on WebDev Leaderboard, ~3rd Among Open-Weight Models",
+      "summaryZh": "小米发布 MiMo-V2.6-Pro 与 Flash 两款全模态模型，MiMo-V2.6-Pro 在 Code Arena：WebDev 榜以 1628 分（AutoEval）位列约第10名，开源权重（MIT 许可）中约第3，较 MiMo-V2.5-Pro 的 1475 分上涨 153 分。",
+      "summaryEn": "Xiaomi released two omni-modal models, MiMo-V2.6-Pro and Flash. MiMo-V2.6-Pro scored 1628 (AutoEval) on the Code Arena: WebDev leaderboard, ranking around 10th overall and around 3rd among open-weight models, up 153 points from MiMo-V2.5-Pro's 1475.",
+      "keywords": [
+        "小米",
+        "MiMo-V2.6-Pro",
+        "Code Arena",
+        "WebDev",
+        "开源权重",
+        "MIT 许可",
+        "AutoEval",
+        "全模态模型"
+      ],
+      "topics": [
+        "大语言模型",
+        "代码生成",
+        "开源模型",
+        "模型评测"
+      ],
+      "models": [
+        "MiMo-V2.6-Pro",
+        "MiMo-V2.6-Flash",
+        "MiMo-V2.5-Pro"
+      ],
+      "detailZh": "小米发布了 MiMo-V2.6-Pro 与 MiMo-V2.6-Flash 两款全模态模型。根据 Arena 在 X 上发布的信息，MiMo-V2.6-Pro 进入了 Code Arena 的 WebDev 榜单，AutoEval 得分为 1628 分。\n\n在同一榜单上，该模型整体排名约第 10 名；在开源权重模型中排名约第 3 名。其权重以 MIT 许可发布。\n\n作为对比，上一代 MiMo-V2.5-Pro 在同一榜单上的得分为 1475 分，MiMo-V2.6-Pro 相比提升了 153 分。\n\n目前公开信息仅包含榜单分数、排名区间、许可方式以及两代模型的分数变化，未披露模型参数规模、训练数据、上下文长度、推理成本或 Flash 版本的具体表现。",
+      "keyPointsZh": [
+        "小米发布 MiMo-V2.6-Pro 与 MiMo-V2.6-Flash 两款全模态模型。",
+        "MiMo-V2.6-Pro 在 Code Arena：WebDev 榜 AutoEval 得分 1628，整体约第 10 名。",
+        "在开源权重模型中约排第 3，权重采用 MIT 许可。",
+        "相比 MiMo-V2.5-Pro 的 1475 分提升 153 分。"
+      ],
+      "impactZh": "该结果显示开源权重模型在代码生成竞技榜上已接近头部位置，可能影响开发者在闭源与开源代码模型之间的选型判断，也强化了小米在大模型开源阵营中的存在感。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者在选择代码生成模型时，多了一个 MIT 许可、可自托管的开源权重选项，且在 WebDev 类任务上具备接近榜单前十的表现。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：MiMo-V2.6-Pro 在 Code Arena：WebDev 榜取得 1628 分（AutoEval），整体约第 10、开源权重中约第 3，权重为 MIT 许可，较上一代 1475 分提升 153 分。可以合理推断其代码生成能力较上一代有明显进步，但榜单分数只反映特定评测设置下的表现，不能直接等同于真实项目中的综合能力。",
+      "limitationsZh": "公开信息未说明评测的具体任务构成、样本量、是否使用工具调用或多次采样，也未披露模型参数规模、上下文长度、推理成本与 Flash 版本表现；排名为约数，可能随榜单更新而变化。",
+      "actionStepsZh": [
+        "关注 Code Arena：WebDev 榜单的后续更新，确认排名与分数是否稳定。",
+        "在采用前，用自身项目的 WebDev 任务对 MiMo-V2.6-Pro 做小规模验证。",
+        "确认 MIT 许可的具体条款与商用条件后再集成到产品中。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "MiMo-V2.6-Pro 的 AutoEval 得分比 MiMo-V2.5-Pro 高 153 分。",
+        "data": [
+          {
+            "label": "MiMo-V2.5-Pro",
+            "value": 1475,
+            "display": ""
+          },
+          {
+            "label": "MiMo-V2.6-Pro",
+            "value": 1628,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmubr2enk04a1rociadivcsjt",
+          "name": "X：Arena (@arena)",
+          "type": "aggregator",
+          "url": "https://x.com/arena/status/2102142912943489220",
+          "publishedAt": "2026-09-21T21:08:21.000Z",
+          "title": "小米 MiMo-V2.6-Pro 登上 Code Arena： WebDev 榜约第10名，开源权重中约第3",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubr2enk04a1rociadivcsjt",
+            "https://x.com/arena/status/2102142912943489220"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T21:08:21.000Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-21T21:08:21.000Z",
+            "label": "9/22 05:08",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T21:49:56.876Z",
+            "label": "9/22 05:49",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:31:32.752Z",
+            "label": "9/22 06:31",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "730221ad0df23c0d",
+      "normalizedUrl": "https://x.com/ClementDelangue/status/2102141768674222323",
+      "originalUrl": "https://x.com/ClementDelangue/status/2102141768674222323",
+      "titleOriginal": "小米发布开放权重模型 MiMo-V2.6-Pro，登顶 Artificial Analysis 开放权重模型智能指数",
+      "summaryOriginal": "小米（Xiaomi）发布开放权重模型 MiMo-V2.6-Pro，在 Artificial Analysis Intelligence Index 得分 46，超越前代 MiMo-V2.5-Pro 的 26，为开放权重模型中最高。",
+      "originalLanguage": "zh",
+      "author": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmubqsb9b03v9rocigei56crg",
+        "https://x.com/ClementDelangue/status/2102141768674222323"
+      ],
+      "publishedAt": "2026-09-21T21:03:48.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-21T21:13:13.250Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmubqsb9b03v9rocigei56crg"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmubqsb9b03v9rocigei56crg",
+          "name": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+          "type": "aggregator",
+          "url": "https://x.com/ClementDelangue/status/2102141768674222323",
+          "publishedAt": "2026-09-21T21:03:48.000Z",
+          "title": "小米发布开放权重模型 MiMo-V2.6-Pro，登顶 Artificial Analysis 开放权重模型智能指数",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubqsb9b03v9rocigei56crg",
+            "https://x.com/ClementDelangue/status/2102141768674222323"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是开放权重模型领域的一次明显跃升：MiMo-V2.6-Pro 在 Artificial Analysis Intelligence Index 上从前代的 26 提升到 46，并成为该指数上得分最高的开放权重模型，说明开放权重模型与闭源前沿模型的差距可能正在缩小。",
+      "importanceReasonEn": "This marks a clear jump in the open-weight model space: MiMo-V2.6-Pro rose from 26 to 46 on the Artificial Analysis Intelligence Index and became the highest-scoring open-weight model on that index, suggesting the gap between open-weight and closed frontier models may be narrowing.",
+      "scoringMode": "ai",
+      "titleZh": "小米发布开放权重模型 MiMo-V2.6-Pro，登顶 Artificial Analysis 开放权重模型智能指数",
+      "titleEn": "Xiaomi Releases Open-Weight Model MiMo-V2.6-Pro, Tops Artificial Analysis Open-Weight Intelligence Index",
+      "summaryZh": "小米发布开放权重模型 MiMo-V2.6-Pro，在 Artificial Analysis Intelligence Index 上得分 46，超过前代 MiMo-V2.5-Pro 的 26，成为开放权重模型中得分最高者。",
+      "summaryEn": "Xiaomi released the open-weight model MiMo-V2.6-Pro, which scored 46 on the Artificial Analysis Intelligence Index, surpassing its predecessor MiMo-V2.5-Pro's 26 and becoming the highest-scoring open-weight model.",
+      "keywords": [
+        "小米",
+        "MiMo-V2.6-Pro",
+        "开放权重",
+        "Artificial Analysis",
+        "智能指数"
+      ],
+      "topics": [
+        "开放权重模型",
+        "模型评测",
+        "大模型发布"
+      ],
+      "models": [
+        "MiMo-V2.6-Pro",
+        "MiMo-V2.5-Pro"
+      ],
+      "detailZh": "小米发布了开放权重模型 MiMo-V2.6-Pro。根据 Artificial Analysis Intelligence Index 的评分，该模型得分为 46，高于小米前代开放权重模型 MiMo-V2.5-Pro 的 26 分。\n\n该消息由 Hugging Face CEO Clément Delangue 在 X 上发布，属于一手来源的发布信息。消息的核心事实是两项评分：MiMo-V2.6-Pro 为 46，MiMo-V2.5-Pro 为 26。\n\n按照该评分，MiMo-V2.6-Pro 成为 Artificial Analysis 开放权重模型智能指数上得分最高的开放权重模型。目前输入中没有提供模型参数规模、训练数据、许可证条款、推理成本或具体基准分项等细节。",
+      "keyPointsZh": [
+        "小米发布开放权重模型 MiMo-V2.6-Pro。",
+        "MiMo-V2.6-Pro 在 Artificial Analysis Intelligence Index 得分为 46。",
+        "前代 MiMo-V2.5-Pro 在同一指数上的得分为 26。",
+        "MiMo-V2.6-Pro 成为该指数上得分最高的开放权重模型。"
+      ],
+      "impactZh": "如果该评分成立，开放权重模型在通用智能评测上的最好成绩被明显推高，可能促使更多团队重新评估开放权重模型的能力上限，并影响开源与闭源模型之间的竞争格局。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用开放权重模型的开发者和团队而言，这意味着多了一个在 Artificial Analysis 智能指数上得分更高的可选模型，可能值得在选型或评测中纳入对比。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：小米发布了 MiMo-V2.6-Pro，该模型在 Artificial Analysis Intelligence Index 上得分为 46，前代 MiMo-V2.5-Pro 为 26，因此 MiMo-V2.6-Pro 成为该指数上得分最高的开放权重模型。可以合理推断的是，小米在开放权重模型能力上取得了明显进步；但输入未说明提升来自架构、训练数据还是训练方法，也未提供其他基准或实际使用表现。",
+      "limitationsZh": "输入仅包含一条社交平台发布信息和两个指数分数，缺少模型参数规模、训练细节、许可证、推理成本、上下文长度以及分项基准成绩。Artificial Analysis Intelligence Index 只是单一评测口径，不能完全代表真实使用表现。",
+      "actionStepsZh": [
+        "关注小米 MiMo-V2.6-Pro 的正式发布渠道，确认模型权重、许可证和可用方式。",
+        "在选型评测中把 MiMo-V2.6-Pro 与现有开放权重模型按同一任务集做对比。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "MiMo-V2.6-Pro 在 Artificial Analysis Intelligence Index 上得分为 46，比前代 MiMo-V2.5-Pro 的 26 高出 20 分。",
+        "data": [
+          {
+            "label": "MiMo-V2.6-Pro",
+            "value": 46,
+            "display": ""
+          },
+          {
+            "label": "MiMo-V2.5-Pro",
+            "value": 26,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmubqsb9b03v9rocigei56crg",
+          "name": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+          "type": "aggregator",
+          "url": "https://x.com/ClementDelangue/status/2102141768674222323",
+          "publishedAt": "2026-09-21T21:03:48.000Z",
+          "title": "小米发布开放权重模型 MiMo-V2.6-Pro，登顶 Artificial Analysis 开放权重模型智能指数",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubqsb9b03v9rocigei56crg",
+            "https://x.com/ClementDelangue/status/2102141768674222323"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T21:03:48.000Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-21T21:03:48.000Z",
+            "label": "9/22 05:03",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T21:46:54.876Z",
+            "label": "9/22 05:46",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:30:01.752Z",
+            "label": "9/22 06:30",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d758837fc8bf6d86",
+      "normalizedUrl": "https://x.com/XiaomiMiMo/status/2102138559952290106",
+      "originalUrl": "https://x.com/XiaomiMiMo/status/2102138559952290106",
+      "titleOriginal": "小米发布 MiMo-V2.6 Pro 与 Flash 全模态开源模型",
+      "summaryOriginal": "小米 MiMo 发布 MiMo-V2.6 Pro 与 Flash 两个全模态模型，通过规模化强化学习训练。Pro 在多数 Agent 基准上与 Claude Opus 5 和 GPT-5.6 Sol 表现相当，在 Artificial Analysis Intelligence Index 得分 46，为开源模型中最高；能力覆盖编码、computer use、3D 推理和创作。",
+      "originalLanguage": "zh",
+      "author": "X：小米 MiMo (@XiaomiMiMo)",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmubqsb9l03vbrociqf22sr07",
+        "https://x.com/XiaomiMiMo/status/2102138559952290106"
+      ],
+      "publishedAt": "2026-09-21T20:51:03.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-21T21:13:13.250Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmubqsb9l03vbrociqf22sr07"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmubqsb9l03vbrociqf22sr07",
+          "name": "X：小米 MiMo (@XiaomiMiMo)",
+          "type": "aggregator",
+          "url": "https://x.com/XiaomiMiMo/status/2102138559952290106",
+          "publishedAt": "2026-09-21T20:51:03.000Z",
+          "title": "小米发布 MiMo-V2.6 Pro 与 Flash 全模态开源模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubqsb9l03vbrociqf22sr07",
+            "https://x.com/XiaomiMiMo/status/2102138559952290106"
+          ]
+        }
+      ],
+      "importance": 82,
+      "importanceReasonZh": "这是开源模型首次在 Artificial Analysis Intelligence Index 上取得 46 分并成为开源最高分，同时在多数 Agent 基准上对标 Claude Opus 5 与 GPT-5.6 Sol，对开源与闭源模型的能力差距具有标志性意义。",
+      "importanceReasonEn": "This is the first time an open-source model reaches 46 on the Artificial Analysis Intelligence Index as the top open-source score, while matching Claude Opus 5 and GPT-5.6 Sol on most agent benchmarks — a landmark for the open- vs closed-source capability gap.",
+      "scoringMode": "ai",
+      "titleZh": "小米发布 MiMo-V2.6 Pro 与 Flash 全模态开源模型",
+      "titleEn": "Xiaomi Releases MiMo-V2.6 Pro and Flash Omni-Modal Open-Source Models",
+      "summaryZh": "小米 MiMo 发布 MiMo-V2.6 Pro 与 Flash 两个全模态模型，通过规模化强化学习训练。Pro 在多数 Agent 基准上与 Claude Opus 5 和 GPT-5.6 Sol 表现相当，在 Artificial Analysis Intelligence Index 得分 46，为开源模型中最高；能力覆盖编码、computer use、3D 推理和创作。",
+      "summaryEn": "Xiaomi MiMo released MiMo-V2.6 Pro and Flash, two omni-modal models trained with scaled reinforcement learning. Pro performs comparably to Claude Opus 5 and GPT-5.6 Sol on most agent benchmarks, scores 46 on the Artificial Analysis Intelligence Index — the highest among open-source models — and covers coding, computer use, 3D reasoning and creation.",
+      "keywords": [
+        "小米 MiMo",
+        "MiMo-V2.6 Pro",
+        "MiMo-V2.6 Flash",
+        "全模态",
+        "开源模型",
+        "强化学习",
+        "Artificial Analysis Intelligence Index",
+        "Agent 基准"
+      ],
+      "topics": [
+        "omni-modal models",
+        "open-source LLM",
+        "reinforcement learning",
+        "agent benchmarks",
+        "computer use"
+      ],
+      "models": [
+        "MiMo-V2.6 Pro",
+        "MiMo-V2.6 Flash",
+        "Claude Opus 5",
+        "GPT-5.6 Sol"
+      ],
+      "detailZh": "小米 MiMo 团队通过官方 X 账号发布 MiMo-V2.6 Pro 与 MiMo-V2.6 Flash 两个全模态模型。两者均采用规模化强化学习（scaled reinforcement learning）进行训练，属于同一代模型的两个版本。\n\n根据发布信息，Pro 版本在多数 Agent 基准测试中与 Claude Opus 5 和 GPT-5.6 Sol 表现相当，并在 Artificial Analysis Intelligence Index 上取得 46 分，为开源模型中的最高分。\n\n能力范围方面，官方称模型覆盖编码、computer use、3D 推理和创作等任务。Flash 版本与 Pro 一同发布，但来源未给出 Flash 的具体基准数据或定位说明。\n\n目前公开信息仅来自小米 MiMo 的官方发布帖，未提供模型参数量、上下文长度、许可证、权重下载地址或完整评测表格等细节。",
+      "keyPointsZh": [
+        "小米 MiMo 发布 MiMo-V2.6 Pro 与 Flash 两个全模态模型",
+        "两个模型均通过规模化强化学习训练",
+        "Pro 在多数 Agent 基准上与 Claude Opus 5、GPT-5.6 Sol 表现相当",
+        "Pro 在 Artificial Analysis Intelligence Index 得分 46，为开源模型最高",
+        "能力覆盖编码、computer use、3D 推理和创作"
+      ],
+      "impactZh": "该发布把开源模型在通用智能指数上的最高分推至 46，并在 Agent 类任务上对标 Claude Opus 5 与 GPT-5.6 Sol，意味着开源模型与头部闭源模型在 Agent 与全模态方向上的差距进一步收窄，可能影响开发者在模型选型时对开源方案的权重。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 用户与开发者而言，多了一个在 Agent、编码、computer use 和 3D 推理任务上可对标头部闭源模型的开源选项，但来源未公布参数量、许可证与权重获取方式，实际部署成本与可用性仍需等待更多信息。",
+      "howItWorksZh": "官方仅说明两个模型通过规模化强化学习训练，并具备全模态能力，覆盖编码、computer use、3D 推理和创作。来源未披露模型架构、训练数据、强化学习具体方法或推理配置，因此无法给出可复现的步骤或参数。",
+      "interpretationZh": "已报道的事实是：小米 MiMo 发布了 Pro 与 Flash 两个全模态模型，采用规模化强化学习训练；Pro 在多数 Agent 基准上与 Claude Opus 5、GPT-5.6 Sol 相当，Artificial Analysis Intelligence Index 得分 46，为开源最高。可合理推断的是，小米正把 MiMo 系列定位为面向 Agent 与多模态任务的开源模型家族。但 Flash 的定位、两版差异以及“开源”的具体许可条件，来源均未说明。",
+      "limitationsZh": "来源为单条官方发布帖，未提供参数量、上下文长度、许可证、权重下载地址、完整评测方法与基准明细；Artificial Analysis Intelligence Index 的 46 分及与 Claude Opus 5、GPT-5.6 Sol 的对比均为官方陈述，缺少第三方复现。Flash 版本没有独立数据。",
+      "actionStepsZh": [
+        "关注小米 MiMo 官方渠道，等待模型权重、许可证与评测细节公布",
+        "在选型时把 MiMo-V2.6 Pro 纳入 Agent 与全模态任务的候选对比清单",
+        "对官方基准分数保持审慎，待第三方评测或独立复现后再做部署决策"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmubqsb9l03vbrociqf22sr07",
+          "name": "X：小米 MiMo (@XiaomiMiMo)",
+          "type": "aggregator",
+          "url": "https://x.com/XiaomiMiMo/status/2102138559952290106",
+          "publishedAt": "2026-09-21T20:51:03.000Z",
+          "title": "小米发布 MiMo-V2.6 Pro 与 Flash 全模态开源模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubqsb9l03vbrociqf22sr07",
+            "https://x.com/XiaomiMiMo/status/2102138559952290106"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T20:51:03.000Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
+        "current": 70,
+        "peak": 70,
+        "history": [
+          {
+            "at": "2026-09-21T20:51:03.000Z",
+            "label": "9/22 04:51",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T21:38:24.876Z",
+            "label": "9/22 05:38",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:25:46.752Z",
+            "label": "9/22 06:25",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
+            "value": 70,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "dd4a49b1ba5892bb",
+      "normalizedUrl": "https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8",
+      "originalUrl": "https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8",
+      "titleOriginal": "小米发布并开源 MiMo-V2.6 系列，扩展强化学习规模迈向自我提升",
+      "summaryOriginal": "Xiaomi MiMo 于今日正式发布并开源 MiMo-V2.6 系列模型，包含 Pro 与 Flash 两个原生全模态模型，称这是探索 RSI（递归自我改进）路径的关键一步。",
+      "originalLanguage": "zh",
+      "author": "公众号：小米 MiMo",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmubpn8sw05u5ro4vlvacy22d",
+        "https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8"
+      ],
+      "publishedAt": "2026-09-21T20:18:52.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-21T20:41:22.028Z",
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmubpn8sw05u5ro4vlvacy22d"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmubpn8sw05u5ro4vlvacy22d",
+          "name": "公众号：小米 MiMo",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8",
+          "publishedAt": "2026-09-21T20:18:52.000Z",
+          "title": "小米发布并开源 MiMo-V2.6 系列，扩展强化学习规模迈向自我提升",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubpn8sw05u5ro4vlvacy22d",
+            "https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "小米以官方渠道发布并开源新一代全模态模型系列，同时明确指向递归自我改进这一前沿方向，对开源模型生态和强化学习规模化路线具有参考价值。",
+      "importanceReasonEn": "Xiaomi released and open-sourced a new omni-modal model series through official channels while explicitly pointing to recursive self-improvement, offering reference value for the open-source model ecosystem and scaled reinforcement learning routes.",
+      "scoringMode": "ai",
+      "titleZh": "小米发布并开源 MiMo-V2.6 系列，扩展强化学习规模迈向自我提升",
+      "titleEn": "Xiaomi Releases and Open-Sources MiMo-V2.6 Series, Scaling Reinforcement Learning Toward Self-Improvement",
+      "summaryZh": "小米 MiMo 正式发布并开源 MiMo-V2.6 系列模型，包含 Pro 与 Flash 两个原生全模态模型，官方称这是探索 RSI（递归自我改进）路径的关键一步。",
+      "summaryEn": "Xiaomi MiMo officially released and open-sourced the MiMo-V2.6 series, comprising the Pro and Flash native omni-modal models, which the team describes as a key step in exploring the RSI (recursive self-improvement) path.",
+      "keywords": [
+        "小米 MiMo",
+        "MiMo-V2.6",
+        "开源",
+        "全模态",
+        "强化学习",
+        "RSI"
+      ],
+      "topics": [
+        "大模型",
+        "开源模型",
+        "全模态",
+        "强化学习",
+        "递归自我改进"
+      ],
+      "models": [
+        "MiMo-V2.6 Pro",
+        "MiMo-V2.6 Flash"
+      ],
+      "detailZh": "小米 MiMo 于今日正式发布并开源 MiMo-V2.6 系列模型。根据官方公众号信息，该系列包含 Pro 与 Flash 两个原生全模态模型，即两个版本均以全模态为原生设计，而非在纯文本模型上外挂其他模态能力。\n\n官方将此次发布定位为扩展强化学习规模、迈向自我提升的关键一步，并明确提到 RSI（递归自我改进）路径。这意味着小米 MiMo 在训练方法上把强化学习规模的扩大作为核心手段，并把递归自我改进作为长期探索方向。\n\n发布形式为发布并开源，即模型对外公开。目前公开信息集中在系列构成、模型定位与训练方向三个层面，尚未披露具体的参数规模、基准测试成绩、开源许可证类型以及权重下载渠道等细节。\n\n从时间线看，这是小米 MiMo 在既有模型基础上的新一代迭代，Pro 与 Flash 的双版本划分延续了常见的能力分层思路，分别对应更强的综合能力与更轻量的部署需求。",
+      "keyPointsZh": [
+        "小米 MiMo 正式发布并开源 MiMo-V2.6 系列模型。",
+        "该系列包含 Pro 与 Flash 两个版本，均为原生全模态模型。",
+        "官方称此次发布是扩展强化学习规模、迈向自我提升的关键一步。",
+        "官方明确将 RSI（递归自我改进）作为探索路径。",
+        "具体参数规模、基准成绩与开源许可证等细节尚未在现有信息中披露。"
+      ],
+      "impactZh": "该发布把开源全模态模型与强化学习规模化、递归自我改进这两个前沿议题联系在一起，可能推动更多团队关注以强化学习扩展为核心的训练路线，并丰富开源全模态模型的供给。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和团队而言，MiMo-V2.6 系列提供了新的开源全模态模型选项，Pro 与 Flash 的双版本划分便于按能力与部署成本做取舍；但现有信息未给出参数规模、许可证与权重获取方式，实际选型前仍需等待更完整的发布材料。",
+      "howItWorksZh": "",
+      "interpretationZh": "可以确认的事实是：小米 MiMo 发布并开源了 MiMo-V2.6 系列，包含 Pro 与 Flash 两个原生全模态模型，官方将其定位为扩展强化学习规模、探索递归自我改进的关键一步。至于模型具体能力、训练细节与开源范围，现有信息尚不足以判断，需要以官方后续披露为准。",
+      "limitationsZh": "现有信息未披露模型参数规模、基准测试成绩、训练数据与强化学习具体方法、开源许可证类型、权重下载渠道及硬件要求，因此无法评估其实际能力水平与开源开放程度。",
+      "actionStepsZh": [
+        "关注小米 MiMo 官方渠道，获取 MiMo-V2.6 系列的权重、许可证与技术报告等后续材料。",
+        "在官方材料补齐后，再评估 Pro 与 Flash 两个版本在自身场景中的能力与成本取舍。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmubpn8sw05u5ro4vlvacy22d",
+          "name": "公众号：小米 MiMo",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8",
+          "publishedAt": "2026-09-21T20:18:52.000Z",
+          "title": "小米发布并开源 MiMo-V2.6 系列，扩展强化学习规模迈向自我提升",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubpn8sw05u5ro4vlvacy22d",
+            "https://mp.weixin.qq.com/s?__biz=Mzk3NTkxMTM2NA%3D%3D&mid=2247484969&idx=1&sn=76c4757b26a2b646e1b690bf78c386d8"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T20:18:52.000Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-21T20:18:52.000Z",
+            "label": "9/22 04:18",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T21:16:57.543Z",
+            "label": "9/22 05:16",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:15:03.086Z",
+            "label": "9/22 06:15",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "4c045e0925c89f1a",
       "normalizedUrl": "https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch",
@@ -37,48 +1163,47 @@
           "resourceLinks": []
         }
       ],
-      "importance": 72,
-      "importanceReasonZh": "该事件反映AI代理移动端竞争格局变化，Meta的Muse在早期用户增长上超过ChatGPT，可能影响市场格局。",
-      "importanceReasonEn": "This event reflects a shift in the competitive landscape of AI agent mobile apps, with Meta's Muse surpassing ChatGPT in early user growth, potentially impacting market dynamics.",
+      "importance": 62,
+      "importanceReasonZh": "该事件反映了AI智能体移动端市场竞争格局的变化，Meta的Muse在早期用户增长上超越ChatGPT，可能影响AI助手市场的份额分配。",
+      "importanceReasonEn": "This event reflects a shift in the competitive landscape of AI agent mobile apps, with Meta's Muse surpassing ChatGPT in early user growth, potentially affecting market share distribution in the AI assistant market.",
       "scoringMode": "ai",
-      "titleZh": "Meta的Muse在移动端早期表现超越ChatGPT",
+      "titleZh": "Meta的Muse在移动端早期发布阶段超越ChatGPT",
       "titleEn": "Meta's Muse is outpacing ChatGPT's early mobile launch",
-      "summaryZh": "据Appfigures的新估算，Meta的新AI代理Muse在美国和加拿大上线后同期的下载量和日活跃用户数均超过ChatGPT移动端发布时的表现。",
+      "summaryZh": "据Appfigures的最新估算，Meta的新AI智能体Muse在美国和加拿大的下载量和日活跃用户数均超过了ChatGPT移动端发布后同期水平。",
       "summaryEn": "Meta's new AI agent Muse has racked up more downloads and daily active users in the U.S. and Canada than ChatGPT did over the same period after its mobile debut, according to new estimates from Appfigures.",
       "keywords": [
         "Meta",
         "Muse",
         "ChatGPT",
         "Appfigures",
-        "移动端下载量",
+        "移动端",
+        "下载量",
         "日活跃用户"
       ],
       "topics": [
-        "AI代理",
-        "移动应用增长",
-        "Meta",
-        "ChatGPT",
+        "AI智能体",
+        "移动应用",
+        "用户增长",
         "市场竞争"
       ],
       "models": [
         "Muse",
         "ChatGPT"
       ],
-      "detailZh": "根据TechCrunch AI报道，Meta推出的新AI代理Muse在移动端发布后，其在美国和加拿大的下载量和日活跃用户数超过了ChatGPT在移动端发布后同期的表现。这一数据来自Appfigures的估算。报道未提供具体的下载量或日活跃用户数字，也未说明统计的时间窗口长度。Muse是Meta新推出的AI代理产品，此次比较聚焦于移动端发布后的早期阶段。该报道属于行业动态，基于第三方估算数据，尚未得到官方确认。",
+      "detailZh": "根据TechCrunch AI于2026年9月21日报道，Meta推出的新AI智能体Muse在移动端发布后的早期阶段，其在美国和加拿大的下载量和日活跃用户数均超过了ChatGPT移动端发布后同期水平。这一数据来自应用分析机构Appfigures的估算。\n\n报道指出，Muse是Meta新推出的AI智能体产品，其移动端表现被拿来与ChatGPT的早期移动端发布进行对比。Appfigures的估算显示，Muse在美加两国的下载量和日活跃用户数均领先于ChatGPT在相同发布周期内的表现。\n\n目前已知的信息仅限于Appfigures的估算数据，Meta和OpenAI均未对此发表官方评论。报道未披露具体的下载量或日活跃用户数字，也未说明统计的时间窗口长度。\n\n该报道属于行业分析类新闻，基于第三方估算数据，尚未得到官方确认。",
       "keyPointsZh": [
-        "Meta的新AI代理Muse在移动端发布后，美国和加拿大的下载量超过ChatGPT同期。",
-        "Muse的日活跃用户数也高于ChatGPT移动端发布后同期。",
-        "数据来自Appfigures的估算，非官方公布。",
-        "报道未提供具体数字或统计时间窗口。"
+        "Meta的新AI智能体Muse在移动端发布后的早期阶段，下载量和日活跃用户数超过ChatGPT同期水平。",
+        "数据来自应用分析机构Appfigures的估算，覆盖美国和加拿大市场。",
+        "报道未披露具体数字，也未获得Meta或OpenAI的官方确认。"
       ],
-      "impactZh": "若估算准确，这表明Meta在AI代理移动端市场可能对ChatGPT构成早期竞争压力，可能影响用户获取和市场份额分布。",
+      "impactZh": "这一数据表明Meta在AI智能体移动端市场的早期用户获取能力可能强于ChatGPT发布时，可能改变AI助手市场的竞争格局，促使其他厂商加快移动端布局。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道基于Appfigures的估算，显示Muse在移动端早期用户增长上优于ChatGPT。但缺乏具体数字和官方确认，应视为初步信号而非定论。",
-      "limitationsZh": "数据来自第三方估算，未经Meta或OpenAI官方确认；未提供具体下载量、日活跃用户数及统计时间窗口；无法判断增长是否可持续。",
+      "interpretationZh": "报道基于Appfigures的第三方估算，显示Muse在美加市场的早期移动端下载量和日活跃用户数超过ChatGPT同期。这属于合理的市场观察，但具体数字和统计方法未公开，需谨慎看待。",
+      "limitationsZh": "数据来自第三方估算机构Appfigures，未经Meta或OpenAI官方确认；报道未披露具体下载量、日活跃用户数及统计时间窗口；仅覆盖美国和加拿大市场，不代表全球表现。",
       "actionStepsZh": [],
-      "detailCompleteness": "limited",
+      "detailCompleteness": "summary",
       "visual": null,
       "processingError": null,
       "reportCount": 1,
@@ -99,9 +1224,9 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T19:19:21.000Z",
-        "endedAt": "2026-09-21T19:44:29.864Z",
-        "current": 65,
-        "peak": 65,
+        "endedAt": "2026-09-21T23:13:08.629Z",
+        "current": 59,
+        "peak": 59,
         "history": [
           {
             "at": "2026-09-21T19:19:21.000Z",
@@ -110,9 +1235,27 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T19:44:29.864Z",
-            "label": "9/22 03:44",
-            "value": 65,
+            "at": "2026-09-21T20:17:47.907Z",
+            "label": "9/22 04:17",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T21:16:14.814Z",
+            "label": "9/22 05:16",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:14:41.721Z",
+            "label": "9/22 06:14",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -155,43 +1298,40 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该事件反映了大型科技公司之间围绕AI代理访问权的竞争态势，涉及平台封锁与生态壁垒问题，对AI代理的跨平台可用性具有指示意义。",
-      "importanceReasonEn": "This event reflects competition among big tech companies over AI agent access, involving platform blocking and ecosystem barriers, and signals implications for cross-platform availability of AI agents.",
+      "importanceReasonZh": "该事件反映了 AI 智能体与电商平台之间的访问控制冲突，涉及平台竞争与生态封闭问题，对 AI 智能体的实际可用性有直接影响。",
+      "importanceReasonEn": "This event reflects access-control conflicts between AI agents and e-commerce platforms, involving platform competition and ecosystem closure, with direct impact on the practical usability of AI agents.",
       "scoringMode": "ai",
-      "titleZh": "Meta的AI代理被禁止使用Amazon.com",
+      "titleZh": "Meta 的 AI 智能体被禁止使用 Amazon.com",
       "titleEn": "Meta's AI agent has been blocked from using Amazon.com",
-      "summaryZh": "亚马逊拥有自己的基础模型系列，以及互联网上最受欢迎的推理平台之一。既然没有法律义务向Muse开放大门，他们为什么要这么做？",
+      "summaryZh": "亚马逊拥有自己的基础模型阵营，以及互联网上最受欢迎的推理平台之一。既然没有法律义务向 Muse 敞开大门，他们为什么要这么做呢？",
       "summaryEn": "Amazon has its own cohort of foundation models, along with one of the most popular inference platforms on the internet. As long as they're under no legal obligation to open the doors to Muse, why would they?",
       "keywords": [
         "Meta",
-        "Muse",
         "Amazon",
+        "Muse",
         "AI agent",
-        "platform blocking"
+        "blocked"
       ],
       "topics": [
-        "AI agents",
+        "AI agent",
         "platform access",
-        "big tech competition",
-        "Amazon",
-        "Meta"
+        "competition"
       ],
       "models": [
         "Muse"
       ],
-      "detailZh": "据TechCrunch AI报道，Meta的AI代理Muse已被禁止使用Amazon.com。报道指出，亚马逊拥有自己的基础模型系列，并且运营着互联网上最受欢迎的推理平台之一。报道提出的核心问题是：只要亚马逊没有法律义务向Muse开放大门，它为什么要这么做？\n\n目前已知的事实仅限于上述内容：Meta的AI代理Muse被Amazon.com屏蔽，以及亚马逊自身拥有基础模型和推理平台这一背景。报道没有说明屏蔽的具体技术方式、发生时间、是否涉及正式政策，也没有说明Meta是否作出回应。\n\n从竞争格局看，这一事件被置于大型科技公司各自构建AI生态的背景下。亚马逊既有自研模型，又运营着广泛使用的推理平台，因此对第三方AI代理进入其电商平台持保留态度，符合其商业利益逻辑。",
+      "detailZh": "根据 TechCrunch AI 的报道，Meta 的 AI 智能体 Muse 已被禁止使用 Amazon.com。报道指出，亚马逊拥有自己的基础模型阵营，并且运营着互联网上最受欢迎的推理平台之一。报道提出的核心问题是：只要亚马逊没有法律义务向 Muse 敞开大门，它为什么要允许 Muse 访问？\n\n目前已知的事实仅限于上述内容：Meta 的 AI 智能体 Muse 被 Amazon.com 屏蔽，亚马逊自身拥有基础模型和推理平台，且报道以反问形式暗示亚马逊缺乏开放访问的法律义务。报道没有提供屏蔽的具体技术方式、发生时间、是否涉及用户账户或 API 层面，也没有说明 Meta 是否作出回应。\n\n该事件发生在 AI 智能体日益被用于自动化网页操作和电商任务的背景下。平台对第三方 AI 智能体的访问控制，可能成为影响智能体实际可用性的关键因素。由于来源信息有限，目前无法确认屏蔽的范围和持续时间。",
       "keyPointsZh": [
-        "Meta的AI代理Muse被禁止使用Amazon.com",
-        "亚马逊拥有自己的基础模型系列和流行的推理平台",
-        "报道认为亚马逊没有法律义务向Muse开放平台",
-        "事件反映了大型科技公司之间的AI生态竞争"
+        "Meta 的 AI 智能体 Muse 被禁止使用 Amazon.com。",
+        "亚马逊拥有自己的基础模型和流行的推理平台。",
+        "报道认为亚马逊没有法律义务向 Muse 开放访问。"
       ],
-      "impactZh": "该事件表明，AI代理在跨平台使用时可能面临来自平台方的主动限制，尤其是当平台自身拥有竞争性AI产品时。这可能影响AI代理在电商等场景中的实际可用性，并加剧大型科技公司之间围绕AI入口的生态割裂。",
+      "impactZh": "该事件凸显了电商平台对第三方 AI 智能体的访问控制权，可能影响 AI 智能体在购物和网页自动化场景中的实际可用性，并引发关于平台开放性与竞争的新讨论。",
       "readerImpactZh": "",
-      "userImpactZh": "",
+      "userImpactZh": "使用 AI 智能体进行电商比价、下单或网页自动化的用户和开发者可能面临平台屏蔽风险，需要关注目标平台对第三方智能体的访问政策。",
       "howItWorksZh": "",
-      "interpretationZh": "报道陈述的事实是Meta的AI代理Muse被Amazon.com屏蔽，且亚马逊拥有自己的基础模型和推理平台。报道的推论是，在没有法律义务的情况下，亚马逊缺乏向竞争对手AI代理开放平台的商业动机。屏蔽的具体机制和范围在现有信息中并未说明。",
-      "limitationsZh": "现有信息非常有限：没有说明屏蔽的具体技术手段、生效时间、是否属于正式政策，也没有Meta或亚马逊的官方声明。Muse的具体功能、访问Amazon.com的方式以及屏蔽是否影响其他Meta产品均不明确。",
+      "interpretationZh": "报道确认了 Meta 的 AI 智能体 Muse 被 Amazon.com 屏蔽这一事实，并指出亚马逊拥有自己的基础模型和推理平台。报道以反问方式表达的观点——亚马逊没有法律义务开放访问——属于评论性推断，而非已证实的事实。屏蔽的具体机制和范围尚不明确。",
+      "limitationsZh": "来源仅为一篇简短报道，未提供屏蔽的技术细节、时间线、影响范围或双方回应。亚马逊是否基于竞争原因、服务条款或安全策略进行屏蔽，以及屏蔽是否针对所有 AI 智能体还是仅限 Muse，均未得到证实。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -214,7 +1354,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T17:55:18.000Z",
-        "endedAt": "2026-09-21T19:44:29.864Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -225,14 +1365,38 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T18:49:53.932Z",
-            "label": "9/22 02:49",
+            "at": "2026-09-21T18:48:16.438Z",
+            "label": "9/22 02:48",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T19:41:14.876Z",
+            "label": "9/22 03:41",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T20:34:13.314Z",
+            "label": "9/22 04:34",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-21T19:44:29.864Z",
-            "label": "9/22 03:44",
+            "at": "2026-09-21T21:27:11.752Z",
+            "label": "9/22 05:27",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:20:10.190Z",
+            "label": "9/22 06:20",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
             "value": 55,
             "reports": 1
           }
@@ -382,7 +1546,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T16:56:36.000Z",
-        "endedAt": "2026-09-21T19:44:29.864Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -393,20 +1557,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T17:52:33.954Z",
-            "label": "9/22 01:52",
-            "value": 31,
+            "at": "2026-09-21T17:50:23.518Z",
+            "label": "9/22 01:50",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-21T18:48:31.909Z",
-            "label": "9/22 02:48",
-            "value": 48,
+            "at": "2026-09-21T18:44:11.036Z",
+            "label": "9/22 02:44",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-21T19:44:29.864Z",
-            "label": "9/22 03:44",
+            "at": "2026-09-21T19:37:58.555Z",
+            "label": "9/22 03:37",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T20:31:46.073Z",
+            "label": "9/22 04:31",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T21:25:33.592Z",
+            "label": "9/22 05:25",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:19:21.110Z",
+            "label": "9/22 06:19",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
             "value": 65,
             "reports": 1
           }
@@ -548,7 +1736,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T16:38:05.000Z",
-        "endedAt": "2026-09-21T19:44:29.864Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -559,26 +1747,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T17:24:41.216Z",
-            "label": "9/22 01:24",
-            "value": 27,
+            "at": "2026-09-21T17:34:31.232Z",
+            "label": "9/22 01:34",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-21T18:11:17.432Z",
-            "label": "9/22 02:11",
-            "value": 39,
+            "at": "2026-09-21T18:30:57.465Z",
+            "label": "9/22 02:30",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-21T18:57:53.648Z",
-            "label": "9/22 02:57",
-            "value": 52,
+            "at": "2026-09-21T19:27:23.698Z",
+            "label": "9/22 03:27",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-21T19:44:29.864Z",
-            "label": "9/22 03:44",
+            "at": "2026-09-21T20:23:49.930Z",
+            "label": "9/22 04:23",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T21:20:16.163Z",
+            "label": "9/22 05:20",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:16:42.396Z",
+            "label": "9/22 06:16",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
             "value": 65,
             "reports": 1
           }
@@ -716,7 +1922,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T16:01:31.000Z",
-        "endedAt": "2026-09-21T19:44:29.864Z",
+        "endedAt": "2026-09-21T23:13:08.629Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -727,26 +1933,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T16:57:15.716Z",
-            "label": "9/22 00:57",
+            "at": "2026-09-21T16:55:28.203Z",
+            "label": "9/22 00:55",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T17:49:25.407Z",
+            "label": "9/22 01:49",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-21T17:53:00.432Z",
-            "label": "9/22 01:53",
+            "at": "2026-09-21T18:43:22.610Z",
+            "label": "9/22 02:43",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T19:37:19.814Z",
+            "label": "9/22 03:37",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-21T18:48:45.148Z",
-            "label": "9/22 02:48",
+            "at": "2026-09-21T20:31:17.018Z",
+            "label": "9/22 04:31",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T21:25:14.221Z",
+            "label": "9/22 05:25",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-09-21T19:44:29.864Z",
-            "label": "9/22 03:44",
+            "at": "2026-09-21T22:19:11.425Z",
+            "label": "9/22 06:19",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:13:08.629Z",
+            "label": "9/22 07:13",
             "value": 65,
             "reports": 1
           }
