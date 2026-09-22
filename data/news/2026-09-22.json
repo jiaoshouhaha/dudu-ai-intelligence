@@ -1,7 +1,174 @@
 {
-  "generatedAt": "2026-09-21T23:13:08.629Z",
+  "generatedAt": "2026-09-22T01:48:42.877Z",
   "date": "2026-09-22",
   "items": [
+    {
+      "id": "9ca33057d7c3c21a",
+      "normalizedUrl": "https://openrouter.ai/blog/insights/nemotron-3-5-lightning",
+      "originalUrl": "https://openrouter.ai/blog/insights/nemotron-3-5-lightning",
+      "titleOriginal": "OpenRouter 解读 NVIDIA Nemotron 3.5 Lightning 如何承担 Agent 高频执行调用",
+      "summaryOriginal": "OpenRouter 发文解读 NVIDIA 的 Nemotron 3.5 Lightning，这是一款 30B 总参数、约 3B 激活参数的混合专家开源权重模型，定位于工具调用、编码等高频、边界清晰的 Agent 执行步骤，与负责复杂推理的 Nemotron 3 Ultra（550B 总参数、55B 激活）形成分工。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmubyl2o004y7ro9i986nyhfy",
+        "https://openrouter.ai/blog/insights/nemotron-3-5-lightning"
+      ],
+      "publishedAt": "2026-09-22T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-22T00:51:34.102Z",
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmubyl2o004y7ro9i986nyhfy"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmubyl2o004y7ro9i986nyhfy",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/nemotron-3-5-lightning",
+          "publishedAt": "2026-09-22T00:00:00.000Z",
+          "title": "OpenRouter 解读 NVIDIA Nemotron 3.5 Lightning 如何承担 Agent 高频执行调用",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubyl2o004y7ro9i986nyhfy",
+            "https://openrouter.ai/blog/insights/nemotron-3-5-lightning"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该解读给出了 Agent 系统中大小模型分工的具体参数与定位，对构建多模型 Agent 流水线的开发者有直接参考价值。",
+      "importanceReasonEn": "The explainer provides concrete parameters and positioning for splitting work between large and small models in agent systems, offering direct reference value for developers building multi-model agent pipelines.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 解读 NVIDIA Nemotron 3.5 Lightning 如何承担 Agent 高频执行调用",
+      "titleEn": "OpenRouter Explains How NVIDIA Nemotron 3.5 Lightning Handles High-Frequency Agent Execution Calls",
+      "summaryZh": "OpenRouter 发文解读 NVIDIA 的 Nemotron 3.5 Lightning，这是一款 30B 总参数、约 3B 激活参数的混合专家开源权重模型，定位于工具调用、编码等高频、边界清晰的 Agent 执行步骤，与负责复杂推理的 Nemotron 3 Ultra（550B 总参数、55B 激活）形成分工。",
+      "summaryEn": "OpenRouter published an explainer on NVIDIA's Nemotron 3.5 Lightning, a 30B-total-parameter, roughly 3B-active-parameter mixture-of-experts open-weight model positioned for high-frequency, well-bounded agent execution steps such as tool calling and coding, dividing labor with the Nemotron 3 Ultra (550B total, 55B active) that handles complex reasoning.",
+      "keywords": [
+        "OpenRouter",
+        "NVIDIA",
+        "Nemotron 3.5 Lightning",
+        "Nemotron 3 Ultra",
+        "混合专家",
+        "MoE",
+        "Agent",
+        "工具调用"
+      ],
+      "topics": [
+        "agent",
+        "opensource",
+        "models"
+      ],
+      "models": [
+        "NVIDIA Nemotron 3.5 Lightning",
+        "NVIDIA Nemotron 3 Ultra"
+      ],
+      "detailZh": "OpenRouter 在其公告中解读了 NVIDIA 的 Nemotron 3.5 Lightning 模型，重点说明它在 Agent 工作流中的定位。根据该文，Nemotron 3.5 Lightning 是一款混合专家（MoE）架构的开源权重模型，总参数量为 30B，激活参数约 3B。\n\nOpenRouter 将这款模型定位为承担 Agent 中高频、边界清晰的执行步骤，例如工具调用和编码。与之相对，NVIDIA 的 Nemotron 3 Ultra 拥有 550B 总参数、55B 激活参数，负责复杂推理任务。两者形成分工：Ultra 处理需要深度推理的环节，Lightning 处理大量重复、明确的执行调用。\n\n该文的核心观点是，Agent 系统不必让同一个大模型完成所有步骤，而可以把高频执行交给更小、更快的模型，从而在整体上更高效地运行。OpenRouter 作为模型路由与调用平台，发布此类解读也与其聚合多模型、按任务分派的定位一致。\n\n需要说明的是，输入材料仅包含标题、摘要与来源信息，未提供基准测试数据、定价、上下文长度或具体部署细节，因此上述内容仅反映 OpenRouter 公告中明确提到的信息。",
+      "keyPointsZh": [
+        "Nemotron 3.5 Lightning 为混合专家开源权重模型，30B 总参数、约 3B 激活参数。",
+        "它被定位用于工具调用、编码等高频且边界清晰的 Agent 执行步骤。",
+        "Nemotron 3 Ultra 为 550B 总参数、55B 激活参数，负责复杂推理。",
+        "OpenRouter 的解读强调在 Agent 中按任务分工使用不同规模模型。"
+      ],
+      "impactZh": "该解读反映出 Agent 系统设计的一种趋势：把高频、明确的执行调用交给小激活参数模型，把复杂推理留给大模型，从而在成本与速度上取得平衡。对模型路由平台和多模型编排工具而言，这类分工思路具有参考意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用或开发 Agent 的团队可以据此考虑将工具调用、编码等高频步骤路由到更小的模型，而把复杂推理保留给大模型，以优化整体调用成本与响应速度。",
+      "howItWorksZh": "",
+      "interpretationZh": "OpenRouter 的公告把 Nemotron 3.5 Lightning 描述为 Agent 执行层的轻量模型，与负责推理的 Ultra 形成互补。这属于厂商与平台方的定位说明，而非独立评测结论；其实际效果取决于具体任务、路由策略与部署环境。",
+      "limitationsZh": "输入材料仅为 OpenRouter 公告的标题与摘要，未包含基准测试、延迟、吞吐、定价、上下文长度或许可条款等细节，也未提供与同类模型的对比数据。因此关于性能与成本优势的说法尚缺乏可验证的量化依据。",
+      "actionStepsZh": [
+        "在 Agent 流水线中评估将工具调用、编码等高频步骤交给 Nemotron 3.5 Lightning 一类小激活参数模型。",
+        "保留 Nemotron 3 Ultra 等大模型处理需要复杂推理的环节，形成分层调用策略。",
+        "关注 OpenRouter 后续是否发布该模型的可用性、定价与基准数据，再决定是否接入。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Nemotron 3 Ultra 的总参数约为 Lightning 的 18 倍，激活参数约为 18 倍，体现两者在推理与执行上的规模分工。",
+        "data": [
+          {
+            "label": "Nemotron 3.5 Lightning 总参数",
+            "value": 30,
+            "display": ""
+          },
+          {
+            "label": "Nemotron 3.5 Lightning 激活参数",
+            "value": 3,
+            "display": ""
+          },
+          {
+            "label": "Nemotron 3 Ultra 总参数",
+            "value": 550,
+            "display": ""
+          },
+          {
+            "label": "Nemotron 3 Ultra 激活参数",
+            "value": 55,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmubyl2o004y7ro9i986nyhfy",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/nemotron-3-5-lightning",
+          "publishedAt": "2026-09-22T00:00:00.000Z",
+          "title": "OpenRouter 解读 NVIDIA Nemotron 3.5 Lightning 如何承担 Agent 高频执行调用",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubyl2o004y7ro9i986nyhfy",
+            "https://openrouter.ai/blog/insights/nemotron-3-5-lightning"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-22T00:00:00.000Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-22T00:00:00.000Z",
+            "label": "9/22 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-22T00:54:21.438Z",
+            "label": "9/22 08:54",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "012242336f7588da",
       "normalizedUrl": "https://simonwillison.net/2026/Sep/21/jev",
@@ -63,67 +230,66 @@
           ]
         }
       ],
-      "importance": 75,
-      "importanceReasonZh": "Jev 代表了一种不同于传统文本生成 LLM 的新模型类别，专注于结构化决策输出，且价格极具竞争力，可能影响未来模型设计和应用方式。",
-      "importanceReasonEn": "Jev represents a new model category distinct from traditional text-generating LLMs, focused on structured decision outputs with highly competitive pricing, potentially influencing future model design and applications.",
+      "importance": 72,
+      "importanceReasonZh": "Jev 提出了一种不同于常规文本生成 LLM 的新模型形态，输出类型化概率决策，且定价模式（仅按输入计费）和速度具有差异化，可能影响需要分类、评分等结构化判断的应用场景。",
+      "importanceReasonEn": "Jev proposes a new model shape distinct from conventional text-generating LLMs, outputting typed probabilistic decisions, with a differentiated pricing model (input-only) and speed that could affect applications needing classification, ratings and structured judgments.",
       "scoringMode": "ai",
-      "titleZh": "Jev 推出新型 LLM 形态——System One，即决策模型",
-      "titleEn": "Jev introduces a new shape of LLM - System One, aka Decision Models",
-      "summaryZh": "TypeSafe AI 发布 Jev，一种被称为“System One 模型”（决策模型）的新型模型。它接受文本输入，但输出浮点数形式的分类、是/否判断、评分及置信度，而非文本。Jev 速度极快且价格低廉，仅按输入计费，输出免费，输入价格为每百万 token 0.042 美元，低于 OpenAI GPT-5 Nano 的 0.05 美元。",
-      "summaryEn": "TypeSafe AI released Jev, a new type of model called a \"System One model\" (decision model). It accepts text input but returns floating-point numbers for categories, yes/no questions, ratings, and confidence scores instead of text. Jev is very fast and cheap, charging only for input at $0.042 per million tokens, cheaper than OpenAI's GPT-5 Nano at $0.05 per million.",
+      "titleZh": "TypeSafe AI 推出新型 LLM 形态 Jev：System One 决策模型",
+      "titleEn": "TypeSafe AI Introduces Jev: A New Shape of LLM Called System One Decision Models",
+      "summaryZh": "TypeSafe AI 发布 Jev，一种被称为“System One 模型”（决策模型）的新型模型。它接受文本输入，但输出浮点数形式的分类、是/否判断、评分及置信度，而非文本。Jev 按输入 token 计费，输出免费，输入价格为每百万 token 0.042 美元，比 OpenAI GPT-5 Nano 的 0.05 美元更便宜，且速度很快。",
+      "summaryEn": "TypeSafe AI released Jev, a new category of model it calls \"System One models\" (decision models). It accepts text input but returns floating point numbers for categories, yes/no questions, ratings and confidence scores instead of text. Jev charges only for input tokens; output is free, at $0.042 per million input tokens, cheaper than OpenAI's GPT-5 Nano at $0.05 per million, and it is very fast.",
       "keywords": [
         "Jev",
+        "TypeSafe AI",
         "System One",
         "decision models",
-        "TypeSafe AI",
-        "LLM",
-        "API",
-        "pricing"
+        "floating point output",
+        "input-only pricing"
       ],
       "topics": [
         "LLM",
         "decision models",
         "API pricing",
-        "TypeSafe AI"
+        "structured output"
       ],
       "models": [
         "Jev",
         "GPT-5 Nano"
       ],
-      "detailZh": "TypeSafe AI 上周发布了 Jev，这是他们所称的“System One 模型”新类别的首个示例。评论者 Maggie Appleton 等人更倾向于称之为“决策模型”。Jev 是对常规 LLM 格式的一种有趣变体：它仍然接受文本输入，但输出不是文本，而是与类别、是/否问题、评分相对应的浮点数，以及相关的置信度分数。TypeSafe 将 Jev 描述为“前沿智能函数调用：非结构化状态输入，类型化概率决策输出”。\n\nJev 的速度非常快，而且非常便宜。常规 LLM 按输入和输出 token 计价，输出通常收费显著更高。Jev 仅对输入收费——输出免费——其首个模型的输入价格为每百万 token 0.042 美元，甚至比 OpenAI 的 GPT-5 Nano（每百万 0.05 美元）还要便宜。\n\nJev 允许用户就文本或半结构化数据提问。用户构建一个“状态”对象，其中包含字符串、字符串数组或名称-值对集合——这可能描述一篇文章、一个客户或任何其他类型的记录。然后将该对象发送到他们的 API，并附带问题或决策任务。",
+      "detailZh": "TypeSafe AI 上周发布了 Jev，这是他们所称“System One 模型”新类别的首个示例。Simon Willison 引用 Maggie Appleton 的说法，认为“决策模型”是更合适的名称。Jev 与常规 LLM 格式不同：它仍然接受文本输入，但不输出文本，而是返回与类别、是/否问题、评分相对应的浮点数以及相关置信度分数。TypeSafe 将 Jev 描述为“前沿智能函数调用：非结构化状态输入，类型化概率决策输出”。\n\nJev 的速度很快，而且非常便宜。常规 LLM 按输入和输出 token 计费，输出通常单价显著更高。Jev 只对输入收费，输出免费。其首个模型的输入价格为每百万 token 0.042 美元，甚至比 OpenAI 的 GPT-5 Nano（每百万 0.05 美元）更便宜。\n\nJev 允许用户就文本或半结构化数据提问。用户构造一个“state”对象，其中包含字符串、字符串数组或名称-值对集合，用来描述一篇文章、一位客户或任何其他类型的记录，然后将该对象发送到其 API。",
       "keyPointsZh": [
-        "TypeSafe AI 发布 Jev，首个“System One 模型”或“决策模型”。",
-        "Jev 接受文本输入，但输出浮点数形式的分类、是/否判断、评分及置信度。",
-        "Jev 仅按输入计费，输出免费，输入价格为每百万 token 0.042 美元。",
-        "该价格低于 OpenAI GPT-5 Nano 的每百万 token 0.05 美元。",
-        "用户通过构建“状态”对象（字符串、字符串数组或名称-值对）来使用 API。"
+        "TypeSafe AI 发布 Jev，属于其称为“System One 模型”或“决策模型”的新类别。",
+        "Jev 接受文本输入，但输出浮点数形式的分类、是/否判断、评分及置信度，而非文本。",
+        "Jev 仅按输入 token 计费，输出免费，输入价格为每百万 token 0.042 美元。",
+        "该价格低于 OpenAI GPT-5 Nano 的每百万 0.05 美元。",
+        "用户通过构造包含字符串、字符串数组或名称-值对的 state 对象来调用 API。"
       ],
-      "impactZh": "Jev 引入了一种新的模型范式，将 LLM 从文本生成器转变为结构化决策引擎，可能推动更多针对特定决策任务的专用模型发展。其极低的输入价格和免费的输出可能降低 AI 应用的成本，尤其是需要大量分类或评分任务的场景。",
+      "impactZh": "Jev 代表了一种将 LLM 用于结构化决策而非文本生成的新思路，其仅按输入计费的定价模式和速度可能降低分类、评分等任务的成本，并影响开发者选择模型的方式。",
       "readerImpactZh": "",
-      "userImpactZh": "对于开发者和团队，Jev 提供了一种低成本、高速的方式来执行文本分类、情感分析、评分等决策任务，无需支付高昂的输出 token 费用。其 API 设计简单，适合集成到现有工作流中。",
-      "howItWorksZh": "用户构建一个“状态”对象，包含字符串、字符串数组或名称-值对集合，描述待处理的记录（如文章、客户信息）。将该状态发送到 Jev API，并附带问题或决策任务。Jev 返回浮点数，对应类别、是/否答案、评分以及置信度分数。模型仅对输入 token 计费，输出免费。",
-      "interpretationZh": "Jev 是一种专注于决策输出的新型 LLM，其设计理念是接收非结构化输入并产生类型化的概率决策。它不生成文本，而是输出数值和置信度，适合分类、评分等任务。其定价模式仅对输入收费，输出免费，使其在成本上具有优势。目前信息来自 TypeSafe AI 的发布和 Simon Willison 的报道，具体性能和应用效果尚待验证。",
-      "limitationsZh": "目前关于 Jev 的详细信息有限，仅来自 TypeSafe AI 的发布和 Simon Willison 的报道。其实际性能、准确性、支持的决策类型范围、API 限制等尚未有独立验证。输出仅为浮点数和置信度，可能不适用于需要文本生成的任务。",
+      "userImpactZh": "开发者和团队可以用 Jev 对文本或半结构化数据做分类、是/否判断和评分，输出直接是浮点数和置信度，便于程序化处理；其输入价格低于 GPT-5 Nano，适合高频、低成本的决策类调用。",
+      "howItWorksZh": "用户构造一个 state 对象，内容可以是字符串、字符串数组或名称-值对集合，用来描述文章、客户或其他记录。将该对象发送到 Jev 的 API 后，模型返回与类别、是/否问题、评分对应的浮点数及置信度分数。计费上只计算输入 token，输出不收费。",
+      "interpretationZh": "根据已有信息，Jev 的定位是把 LLM 当作“函数调用”来使用：输入非结构化状态，输出类型化的概率决策。这不同于常规文本生成模型，更适合需要明确判断结果的场景。其低价和速度是明确报道的特点，但实际效果和适用边界尚需更多验证。",
+      "limitationsZh": "目前信息来自 TypeSafe AI 的发布和 Simon Willison 的介绍，缺少独立评测、模型能力细节、输出类型的具体范围以及与其他模型在决策任务上的对比数据。",
       "actionStepsZh": [
-        "访问 TypeSafe AI 官网或 API 文档，了解 Jev 的详细使用方法和定价。",
-        "尝试构建一个简单的“状态”对象，测试 Jev 在分类或评分任务上的表现。",
-        "对比 Jev 与现有 LLM 在决策任务上的成本和速度，评估是否适合你的应用场景。"
+        "构造包含字符串、字符串数组或名称-值对的 state 对象，描述需要判断的记录。",
+        "将 state 对象发送到 Jev API，获取浮点数形式的分类、是/否判断、评分及置信度。",
+        "在需要低成本、高频结构化决策的场景中，可对比 Jev 与 GPT-5 Nano 的输入价格和输出形式。"
       ],
-      "detailCompleteness": "full",
+      "detailCompleteness": "summary",
       "visual": {
         "type": "bar",
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "Jev 的输入价格（每百万 token 0.042 美元）低于 GPT-5 Nano（每百万 token 0.05 美元）。",
+        "insightZh": "Jev 的输入价格（0.042 美元/百万 token）低于 GPT-5 Nano（0.05 美元/百万 token）。",
         "data": [
           {
-            "label": "Jev 输入价格",
+            "label": "Jev 输入价格（美元/百万 token）",
             "value": 0.042,
             "display": ""
           },
           {
-            "label": "GPT-5 Nano 输入价格",
+            "label": "GPT-5 Nano 输入价格（美元/百万 token）",
             "value": 0.05,
             "display": ""
           }
@@ -161,9 +327,9 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T23:09:20.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
-        "current": 66,
-        "peak": 66,
+        "endedAt": "2026-09-22T01:48:42.877Z",
+        "current": 65,
+        "peak": 65,
         "history": [
           {
             "at": "2026-09-21T23:09:20.000Z",
@@ -172,9 +338,21 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
-            "value": 66,
+            "at": "2026-09-22T00:02:27.625Z",
+            "label": "9/22 08:02",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:55:35.251Z",
+            "label": "9/22 08:55",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -239,46 +417,47 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "这是 Cloudflare 对 Python 生态的重要投入，将 Python 正式纳入其边缘计算平台，并采用 Pyodide/WebAssembly 这一独特技术路线，对使用 Workers 的开发者有实际影响。",
-      "importanceReasonEn": "This is a significant Cloudflare investment in the Python ecosystem, formally bringing Python to its edge platform via the distinctive Pyodide/WebAssembly route, with practical impact for Workers developers.",
+      "importanceReasonZh": "这是 Cloudflare 对 Python 生态的重要投入，将 Python 正式纳入其边缘计算平台，并采用 Pyodide/WebAssembly 这一独特技术路线。",
+      "importanceReasonEn": "This is a significant Cloudflare investment in the Python ecosystem, formally bringing Python to its edge platform via the distinctive Pyodide/WebAssembly route.",
       "scoringMode": "ai",
       "titleZh": "Cloudflare Python Workers 正式发布",
       "titleEn": "Cloudflare Python Workers are now generally available",
       "summaryZh": "Cloudflare 的 Python Workers 在经历两年预览后正式稳定，Python 成为其开发者平台的一等支持语言。其实现方式是将 Python 通过 Pyodide 编译为 WebAssembly，运行在基于 V8 的 workerd 运行时中，但多进程和多线程在 WebAssembly 虚拟机中不可用。",
       "summaryEn": "Cloudflare's Python Workers are now stable after a two-year preview, making Python a first-class, fully supported language on its Developer Platform. It works by compiling Python to WebAssembly via Pyodide running in the V8-based workerd runtime, though multiprocessing and threading are non-functional in the WebAssembly VM.",
       "keywords": [
-        "Cloudflare Workers",
-        "Python",
+        "Cloudflare",
+        "Python Workers",
         "Pyodide",
         "WebAssembly",
         "workerd",
         "pywrangler"
       ],
       "topics": [
-        "serverless",
-        "webassembly",
-        "python",
-        "cloudflare"
+        "Python",
+        "WebAssembly",
+        "Serverless",
+        "Cloudflare Workers",
+        "Pyodide"
       ],
       "models": [],
-      "detailZh": "Cloudflare 宣布其 Python Workers 在经历两年预览后正式可用，Python 现在成为 Cloudflare 开发者平台上的一等、完全支持的语言。该消息由 Simon Willison 转述，发布公告署名 Gyeongjae Choi、Dominik Picheta 和 Hood Chatham，其中 Gyeongjae 和 Hood 都是 Pyodide 核心维护者。\n\n其实现方式较为特别：Cloudflare 将 Python 通过 Pyodide 编译为 WebAssembly，并运行在基于 V8 的 workerd 运行时中。这一架构带来了一些限制，官方文档中已有说明，其中最值得注意的是多进程（multiprocessing）和多线程（threading）在 WebAssembly 虚拟机中无法工作。\n\n本地开发体验是另一个值得关注的细节。其 pywrangler 开发工具（在 PyPI 上以 workers-py 为名发布）会在本地完整模拟 Cloudflare 的技术栈，包括在 V8 中通过 WebAssembly 执行 Pyodide 代码，运行在一个 123MB 的 workerd 二进制文件中；在作者的环境中，该二进制位于 node_modules/@cloudflare/workerd-darwin-arm64/bin/workerd。\n\n整体来看，Python Workers 代表了 Cloudflare 对更广泛 Python 生态的一次重要投入，同时也展示了在边缘运行时中运行 Python 的一种独特技术路径。",
+      "detailZh": "Cloudflare 宣布其 Python Workers 在经历两年预览后正式可用，Python 现在成为 Cloudflare 开发者平台上“一等、完全支持”的语言。该消息由 Gyeongjae Choi、Dominik Picheta 和 Hood Chatham 署名发布，其中 Gyeongjae 和 Hood 都是 Pyodide 核心维护者。\n\n实现方式上，Cloudflare 将 Python 通过 Pyodide 编译为 WebAssembly，并运行在其基于 V8 的 workerd 运行时中。这一架构带来了一些限制，官方文档中已有说明，其中最值得注意的是多进程（multiprocessing）和多线程（threading）在 WebAssembly 虚拟机中无法工作。\n\n本地开发体验方面，Cloudflare 的 pywrangler 开发工具（在 PyPI 上以 workers-py 为包名发布）会在本地完整模拟其技术栈，包括在 V8 中通过 WebAssembly 执行 Pyodide 代码，运行在一个 123MB 的 workerd 二进制文件中。该二进制文件在本地会出现在 node_modules/@cloudflare/workerd-darwin-arm64/bin/workerd 路径下。\n\n整体来看，Python Workers 代表了 Cloudflare 对更广泛 Python 生态的一项重要投入。",
       "keyPointsZh": [
-        "Cloudflare Python Workers 结束两年预览，正式一般可用。",
-        "Python 成为 Cloudflare 开发者平台上的一等、完全支持语言。",
-        "实现方式为 Python 经 Pyodide 编译为 WebAssembly，运行在基于 V8 的 workerd 中。",
+        "Cloudflare Python Workers 结束两年预览，正式稳定可用。",
+        "Python 通过 Pyodide 编译为 WebAssembly，运行在基于 V8 的 workerd 运行时中。",
         "多进程和多线程在 WebAssembly 虚拟机中不可用。",
-        "本地开发工具 pywrangler（PyPI 包名 workers-py）可在本地完整模拟该技术栈。"
+        "本地开发工具 pywrangler（PyPI 包名 workers-py）可完整模拟该技术栈。",
+        "发布署名者中包含两位 Pyodide 核心维护者。"
       ],
-      "impactZh": "这使开发者可以在 Cloudflare 的边缘平台上直接使用 Python，而不必依赖其他语言或外部服务，同时其 Pyodide/WebAssembly 路线也为在受限运行时中运行 Python 提供了参考。",
+      "impactZh": "这使 Python 开发者可以直接在 Cloudflare 的边缘平台上部署代码，而无需转向 JavaScript 或 Rust，同时以 WebAssembly 方式运行 Python 也展示了服务端 Python 的一种新部署路径。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 Cloudflare Workers 的 Python 开发者现在可以将其用于生产环境，但需要避开多进程和多线程，并可通过 pywrangler 在本地模拟运行环境进行开发调试。",
-      "howItWorksZh": "Python 代码通过 Pyodide 编译为 WebAssembly，然后在 Cloudflare 基于 V8 的 workerd 运行时中执行。本地开发时，pywrangler 工具（PyPI 包名 workers-py）会在本地模拟整套技术栈，包括在 V8 中以 WebAssembly 方式运行 Pyodide，依赖一个 123MB 的 workerd 二进制文件。",
-      "interpretationZh": "已确认的事实是：Python Workers 结束预览正式可用，Python 成为一等支持语言，底层采用 Pyodide 编译为 WebAssembly 并运行在 V8 的 workerd 中，且多进程与多线程不可用。可合理推断的是，这一架构选择在带来兼容性的同时也会限制依赖原生线程或进程的 Python 库。",
-      "limitationsZh": "多进程和多线程在 WebAssembly 虚拟机中无法工作，这是官方文档明确指出的限制。输入未提供性能数据、定价变化或与其他运行时的对比，因此无法评估其性能或成本影响。",
+      "userImpactZh": "Python 开发者现在可以在 Cloudflare Workers 上使用 Python 编写和部署服务端逻辑，但需注意多进程和多线程不可用，相关并发模型需要调整。",
+      "howItWorksZh": "Cloudflare 将 Python 代码通过 Pyodide 编译为 WebAssembly，再运行在基于 V8 的 workerd 运行时中。本地开发时，pywrangler 工具（PyPI 包名 workers-py）会在本地模拟整套技术栈，包括在 V8 中通过 WebAssembly 执行 Pyodide 代码，依赖一个 123MB 的 workerd 二进制文件。",
+      "interpretationZh": "已确认的事实是：Python Workers 正式可用，采用 Pyodide/WebAssembly 方案，多进程和多线程不可用，本地开发由 pywrangler 模拟。可以合理推断，这一方案在兼容性和性能上可能与原生 CPython 存在差异，但输入未提供具体性能数据。",
+      "limitationsZh": "多进程和多线程在 WebAssembly 虚拟机中无法工作，这是官方文档明确指出的限制。输入未提供性能基准、冷启动时间或与原生 Python 的兼容性细节。",
       "actionStepsZh": [
-        "在 Cloudflare Workers 上使用 Python 时，避免依赖 multiprocessing 或 threading 的库。",
-        "使用 pywrangler（PyPI 包名 workers-py）在本地模拟运行环境进行开发。",
-        "查阅官方文档了解 WebAssembly 环境下的具体限制。"
+        "查阅 Cloudflare 官方文档了解 Python Workers 的限制，尤其是多进程和多线程不可用的问题。",
+        "在本地使用 pywrangler（PyPI 包名 workers-py）搭建开发环境以模拟生产行为。",
+        "评估现有 Python 代码是否依赖多进程或多线程，必要时调整并发模型。"
       ],
       "detailCompleteness": "full",
       "visual": null,
@@ -312,7 +491,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T22:25:44.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -323,8 +502,26 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-21T23:16:28.719Z",
+            "label": "9/22 07:16",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:07:13.438Z",
+            "label": "9/22 08:07",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:57:58.157Z",
+            "label": "9/22 08:57",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 65,
             "reports": 1
           }
@@ -489,7 +686,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T22:13:49.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -500,8 +697,26 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-21T23:07:32.469Z",
+            "label": "9/22 07:07",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:01:15.938Z",
+            "label": "9/22 08:01",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:54:59.407Z",
+            "label": "9/22 08:54",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 50,
             "reports": 1
           }
@@ -642,7 +857,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T21:08:21.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -653,20 +868,32 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T21:49:56.876Z",
-            "label": "9/22 05:49",
-            "value": 29,
+            "at": "2026-09-21T22:04:25.375Z",
+            "label": "9/22 06:04",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:31:32.752Z",
-            "label": "9/22 06:31",
-            "value": 44,
+            "at": "2026-09-21T23:00:29.750Z",
+            "label": "9/22 07:00",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-21T23:56:34.126Z",
+            "label": "9/22 07:56",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:52:38.501Z",
+            "label": "9/22 08:52",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 59,
             "reports": 1
           }
@@ -801,7 +1028,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T21:03:48.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -812,20 +1039,32 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T21:46:54.876Z",
-            "label": "9/22 05:46",
-            "value": 31,
+            "at": "2026-09-21T22:00:46.975Z",
+            "label": "9/22 06:00",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:30:01.752Z",
-            "label": "9/22 06:30",
-            "value": 48,
+            "at": "2026-09-21T22:57:45.950Z",
+            "label": "9/22 06:57",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-21T23:54:44.926Z",
+            "label": "9/22 07:54",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:51:43.901Z",
+            "label": "9/22 08:51",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 65,
             "reports": 1
           }
@@ -951,7 +1190,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T20:51:03.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 70,
         "peak": 70,
         "history": [
@@ -962,20 +1201,32 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T21:38:24.876Z",
-            "label": "9/22 05:38",
-            "value": 33,
+            "at": "2026-09-21T21:50:34.975Z",
+            "label": "9/22 05:50",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:25:46.752Z",
-            "label": "9/22 06:25",
-            "value": 52,
+            "at": "2026-09-21T22:50:06.950Z",
+            "label": "9/22 06:50",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-21T23:49:38.926Z",
+            "label": "9/22 07:49",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:49:10.901Z",
+            "label": "9/22 08:49",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 70,
             "reports": 1
           }
@@ -1096,7 +1347,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T20:18:52.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1107,20 +1358,237 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T21:16:57.543Z",
-            "label": "9/22 05:16",
+            "at": "2026-09-21T21:13:50.479Z",
+            "label": "9/22 05:13",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:08:48.959Z",
+            "label": "9/22 06:08",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:15:03.086Z",
-            "label": "9/22 06:15",
+            "at": "2026-09-21T23:03:47.438Z",
+            "label": "9/22 07:03",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:58:45.918Z",
+            "label": "9/22 07:58",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-22T00:53:44.397Z",
+            "label": "9/22 08:53",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "653374de70e1e415",
+      "normalizedUrl": "https://artificialanalysis.ai/articles/benchmarking-grok-4-7",
+      "originalUrl": "https://artificialanalysis.ai/articles/benchmarking-grok-4-7",
+      "titleOriginal": "Artificial Analysis 评测 Grok 4.7：智能体知识工作跻身前沿，编码代理得分升至 56",
+      "summaryOriginal": "Artificial Analysis 发布 Grok 4.7 评测，该模型在 Intelligence Index 得 46 分，较 Grok 4.6 高 2 分，AA-Briefcase 得 1657 Elo（+111），仅次于 Claude Opus 5 和 Claude Fable 5.1。",
+      "originalLanguage": "zh",
+      "author": "Artificial Analysis 完整文章（网页）",
+      "category": "models",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmubni6yr03ihro4v6pea4amm",
+        "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+      ],
+      "publishedAt": "2026-09-21T19:41:25.079Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-21T19:41:25.079Z",
+      "contentType": "benchmark",
+      "evidenceLevel": "verified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmubni6yr03ihro4v6pea4amm"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmubni6yr03ihro4v6pea4amm",
+          "name": "Artificial Analysis 完整文章（网页）",
+          "type": "practitioner",
+          "url": "https://artificialanalysis.ai/articles/benchmarking-grok-4-7",
+          "publishedAt": "2026-09-21T19:41:25.079Z",
+          "title": "Artificial Analysis 评测 Grok 4.7：智能体知识工作跻身前沿，编码代理得分升至 56",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubni6yr03ihro4v6pea4amm",
+            "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该评测提供了 Grok 4.7 与上一代及竞品的可比较分数，显示其在智能体知识工作和编码代理方向进入前沿梯队，对模型选型有直接参考价值。",
+      "importanceReasonEn": "The evaluation provides comparable scores for Grok 4.7 against its predecessor and competitors, showing it has entered the frontier tier for agentic knowledge work and coding agents, offering direct reference value for model selection.",
+      "scoringMode": "ai",
+      "titleZh": "Artificial Analysis 评测 Grok 4.7：智能体知识工作跻身前沿，编码代理得分升至 56",
+      "titleEn": "Artificial Analysis Evaluates Grok 4.7: Agentic Knowledge Work Reaches the Frontier, Coding Agent Score Rises to 56",
+      "summaryZh": "Artificial Analysis 发布 Grok 4.7 评测，该模型在 Intelligence Index 得 46 分，较 Grok 4.6 高 2 分，AA-Briefcase 得 1657 Elo（+111），仅次于 Claude Opus 5 和 Claude Fable 5.1。",
+      "summaryEn": "Artificial Analysis released its evaluation of Grok 4.7, which scores 46 on the Intelligence Index, 2 points above Grok 4.6, and 1657 Elo (+111) on AA-Briefcase, trailing only Claude Opus 5 and Claude Fable 5.1.",
+      "keywords": [
+        "Grok 4.7",
+        "Artificial Analysis",
+        "Intelligence Index",
+        "AA-Briefcase",
+        "编码代理",
+        "智能体知识工作"
+      ],
+      "topics": [
+        "Grok 4.7",
+        "Artificial Analysis",
+        "智能体知识工作",
+        "编码代理",
+        "模型评测"
+      ],
+      "models": [
+        "Grok 4.7",
+        "Grok 4.6",
+        "Claude Opus 5",
+        "Claude Fable 5.1"
+      ],
+      "detailZh": "Artificial Analysis 发布了针对 Grok 4.7 的评测结果。根据该评测，Grok 4.7 在 Intelligence Index 上获得 46 分，比上一代 Grok 4.6 高出 2 分。\n\n在面向智能体知识工作的 AA-Briefcase 评测中，Grok 4.7 取得 1657 Elo，较此前提升 111 分。这一成绩使其仅次于 Claude Opus 5 和 Claude Fable 5.1，进入该方向的前沿梯队。\n\n评测同时提到，Grok 4.7 的编码代理得分升至 56。Artificial Analysis 认为该模型在智能体知识工作方面已跻身前沿。\n\n上述数据来自 Artificial Analysis 的完整评测文章，属于第三方基准评测结果，反映的是特定评测集下的表现。",
+      "keyPointsZh": [
+        "Grok 4.7 在 Intelligence Index 得 46 分，比 Grok 4.6 高 2 分。",
+        "AA-Briefcase 得 1657 Elo，提升 111 分，仅次于 Claude Opus 5 和 Claude Fable 5.1。",
+        "编码代理得分升至 56。",
+        "Artificial Analysis 认为其在智能体知识工作方面跻身前沿。"
+      ],
+      "impactZh": "该评测为 Grok 4.7 在智能体知识工作和编码代理方向的能力提供了可比较的第三方数据，可能影响开发者和团队在模型选型时的判断，并加剧前沿模型在该方向的竞争。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者和团队在评估用于智能体知识工作或编码代理任务的模型时，可将 Grok 4.7 的 46 分 Intelligence Index、1657 Elo AA-Briefcase 和 56 分编码代理成绩作为选型参考，与 Claude Opus 5、Claude Fable 5.1 等竞品进行对比。",
+      "howItWorksZh": "",
+      "interpretationZh": "从已报告的数据看，Grok 4.7 相比 Grok 4.6 在 Intelligence Index 和 AA-Briefcase 上均有提升，尤其在智能体知识工作方向提升明显（+111 Elo），排名仅次于 Claude Opus 5 和 Claude Fable 5.1。编码代理得分 56 也显示该方向能力增强。这些是 Artificial Analysis 特定评测集下的结果，可视为该模型在这些基准上的表现证据，但不直接等同于所有实际任务中的表现。",
+      "limitationsZh": "目前仅有 Artificial Analysis 的评测数据，缺少评测方法细节、任务覆盖范围和误差信息；AA-Briefcase 与编码代理得分的具体评测集和评分标准未在输入中说明；这些分数不能直接推广到所有真实使用场景。",
+      "actionStepsZh": [
+        "查阅 Artificial Analysis 完整评测文章，了解 Grok 4.7 在 Intelligence Index、AA-Briefcase 和编码代理上的具体评测方法与任务覆盖。",
+        "在选型时，将 Grok 4.7 的 46 分、1657 Elo 和 56 分与 Claude Opus 5、Claude Fable 5.1 等竞品进行对比。",
+        "针对自身智能体知识工作或编码代理场景，用代表性任务对 Grok 4.7 做小规模验证后再决定是否采用。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Grok 4.7 的 Intelligence Index 为 46，比 Grok 4.6 高 2 分；AA-Briefcase 为 1657 Elo，较此前提升 111 分。",
+        "data": [
+          {
+            "label": "Grok 4.7 Intelligence Index",
+            "value": 46,
+            "display": ""
+          },
+          {
+            "label": "Grok 4.6 Intelligence Index",
+            "value": 44,
+            "display": ""
+          },
+          {
+            "label": "Grok 4.7 AA-Briefcase Elo",
+            "value": 1657,
+            "display": ""
+          },
+          {
+            "label": "Grok 4.7 编码代理得分",
+            "value": 56,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmubni6yr03ihro4v6pea4amm",
+          "name": "Artificial Analysis 完整文章（网页）",
+          "type": "practitioner",
+          "url": "https://artificialanalysis.ai/articles/benchmarking-grok-4-7",
+          "publishedAt": "2026-09-21T19:41:25.079Z",
+          "title": "Artificial Analysis 评测 Grok 4.7：智能体知识工作跻身前沿，编码代理得分升至 56",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmubni6yr03ihro4v6pea4amm",
+            "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-21T19:41:25.079Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-21T19:41:25.079Z",
+            "label": "9/22 03:41",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-21T20:33:53.335Z",
+            "label": "9/22 04:33",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T21:26:21.592Z",
+            "label": "9/22 05:26",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T22:18:49.849Z",
+            "label": "9/22 06:18",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:11:18.106Z",
+            "label": "9/22 07:11",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:03:46.363Z",
+            "label": "9/22 08:03",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:56:14.620Z",
+            "label": "9/22 08:56",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 65,
             "reports": 1
           }
@@ -1224,7 +1692,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T19:19:21.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1235,26 +1703,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T20:17:47.907Z",
-            "label": "9/22 04:17",
-            "value": 25,
+            "at": "2026-09-21T20:14:58.411Z",
+            "label": "9/22 04:14",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-21T21:16:14.814Z",
-            "label": "9/22 05:16",
-            "value": 37,
+            "at": "2026-09-21T21:10:35.822Z",
+            "label": "9/22 05:10",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:14:41.721Z",
-            "label": "9/22 06:14",
-            "value": 48,
+            "at": "2026-09-21T22:06:13.233Z",
+            "label": "9/22 06:06",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-21T23:01:50.644Z",
+            "label": "9/22 07:01",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:57:28.055Z",
+            "label": "9/22 07:57",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:53:05.466Z",
+            "label": "9/22 08:53",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 59,
             "reports": 1
           }
@@ -1354,7 +1840,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T17:55:18.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1365,38 +1851,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T18:48:16.438Z",
-            "label": "9/22 02:48",
-            "value": 21,
+            "at": "2026-09-21T18:54:28.609Z",
+            "label": "9/22 02:54",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-21T19:41:14.876Z",
-            "label": "9/22 03:41",
-            "value": 28,
+            "at": "2026-09-21T19:53:39.219Z",
+            "label": "9/22 03:53",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-21T20:34:13.314Z",
-            "label": "9/22 04:34",
+            "at": "2026-09-21T20:52:49.828Z",
+            "label": "9/22 04:52",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T21:52:00.438Z",
+            "label": "9/22 05:52",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-21T21:27:11.752Z",
-            "label": "9/22 05:27",
-            "value": 42,
+            "at": "2026-09-21T22:51:11.048Z",
+            "label": "9/22 06:51",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:20:10.190Z",
-            "label": "9/22 06:20",
-            "value": 49,
+            "at": "2026-09-21T23:50:21.657Z",
+            "label": "9/22 07:50",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-22T00:49:32.267Z",
+            "label": "9/22 08:49",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 55,
             "reports": 1
           }
@@ -1546,7 +2044,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T16:56:36.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1557,44 +2055,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T17:50:23.518Z",
-            "label": "9/22 01:50",
-            "value": 21,
+            "at": "2026-09-21T17:55:43.430Z",
+            "label": "9/22 01:55",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-21T18:44:11.036Z",
-            "label": "9/22 02:44",
-            "value": 29,
+            "at": "2026-09-21T18:54:50.861Z",
+            "label": "9/22 02:54",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-21T19:37:58.555Z",
-            "label": "9/22 03:37",
-            "value": 36,
+            "at": "2026-09-21T19:53:58.292Z",
+            "label": "9/22 03:53",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-21T20:31:46.073Z",
-            "label": "9/22 04:31",
-            "value": 43,
+            "at": "2026-09-21T20:53:05.723Z",
+            "label": "9/22 04:53",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-21T21:25:33.592Z",
-            "label": "9/22 05:25",
-            "value": 50,
+            "at": "2026-09-21T21:52:13.153Z",
+            "label": "9/22 05:52",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:19:21.110Z",
-            "label": "9/22 06:19",
-            "value": 58,
+            "at": "2026-09-21T22:51:20.584Z",
+            "label": "9/22 06:51",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-21T23:50:28.015Z",
+            "label": "9/22 07:50",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T00:49:35.446Z",
+            "label": "9/22 08:49",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 65,
             "reports": 1
           }
@@ -1736,7 +2246,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T16:38:05.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1747,44 +2257,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T17:34:31.232Z",
-            "label": "9/22 01:34",
-            "value": 21,
+            "at": "2026-09-21T17:33:08.787Z",
+            "label": "9/22 01:33",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-21T18:30:57.465Z",
-            "label": "9/22 02:30",
+            "at": "2026-09-21T18:28:12.575Z",
+            "label": "9/22 02:28",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T19:23:16.363Z",
+            "label": "9/22 03:23",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-21T19:27:23.698Z",
-            "label": "9/22 03:27",
-            "value": 36,
+            "at": "2026-09-21T20:18:20.150Z",
+            "label": "9/22 04:18",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-21T20:23:49.930Z",
-            "label": "9/22 04:23",
-            "value": 43,
+            "at": "2026-09-21T21:13:23.938Z",
+            "label": "9/22 05:13",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-21T21:20:16.163Z",
-            "label": "9/22 05:20",
+            "at": "2026-09-21T22:08:27.726Z",
+            "label": "9/22 06:08",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T23:03:31.513Z",
+            "label": "9/22 07:03",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:16:42.396Z",
-            "label": "9/22 06:16",
-            "value": 58,
+            "at": "2026-09-21T23:58:35.301Z",
+            "label": "9/22 07:58",
+            "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-22T00:53:39.089Z",
+            "label": "9/22 08:53",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 65,
             "reports": 1
           }
@@ -1922,7 +2450,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-21T16:01:31.000Z",
-        "endedAt": "2026-09-21T23:13:08.629Z",
+        "endedAt": "2026-09-22T01:48:42.877Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1933,50 +2461,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-21T16:55:28.203Z",
-            "label": "9/22 00:55",
-            "value": 20,
+            "at": "2026-09-21T17:00:14.187Z",
+            "label": "9/22 01:00",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-21T17:49:25.407Z",
-            "label": "9/22 01:49",
-            "value": 27,
+            "at": "2026-09-21T17:58:57.375Z",
+            "label": "9/22 01:58",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-21T18:43:22.610Z",
-            "label": "9/22 02:43",
-            "value": 33,
+            "at": "2026-09-21T18:57:40.563Z",
+            "label": "9/22 02:57",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-21T19:37:19.814Z",
-            "label": "9/22 03:37",
+            "at": "2026-09-21T19:56:23.750Z",
+            "label": "9/22 03:56",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-21T20:55:06.938Z",
+            "label": "9/22 04:55",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-21T20:31:17.018Z",
-            "label": "9/22 04:31",
-            "value": 46,
+            "at": "2026-09-21T21:53:50.126Z",
+            "label": "9/22 05:53",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-21T21:25:14.221Z",
-            "label": "9/22 05:25",
-            "value": 52,
+            "at": "2026-09-21T22:52:33.313Z",
+            "label": "9/22 06:52",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-21T22:19:11.425Z",
-            "label": "9/22 06:19",
-            "value": 58,
+            "at": "2026-09-21T23:51:16.501Z",
+            "label": "9/22 07:51",
+            "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-09-21T23:13:08.629Z",
-            "label": "9/22 07:13",
+            "at": "2026-09-22T00:49:59.689Z",
+            "label": "9/22 08:49",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T01:48:42.877Z",
+            "label": "9/22 09:48",
             "value": 65,
             "reports": 1
           }
