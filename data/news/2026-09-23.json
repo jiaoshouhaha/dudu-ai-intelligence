@@ -1,7 +1,1052 @@
 {
-  "generatedAt": "2026-09-22T23:47:55.543Z",
+  "generatedAt": "2026-09-23T04:37:24.513Z",
   "date": "2026-09-23",
   "items": [
+    {
+      "id": "358a9874393c4d6e",
+      "normalizedUrl": "https://arxiv.org/abs/2609.22161",
+      "originalUrl": "https://arxiv.org/abs/2609.22161",
+      "titleOriginal": "Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models",
+      "summaryOriginal": "arXiv:2609.22161v1 Announce Type: new Abstract: Medical large language models are commonly trained on mixtures of didactic data (e.g., textbooks) and clinical data (e.g., patient records), yet how these data types differentially shape model capabilities remains unclear. We address this issue with token-matched experiments that vary the didactic-to-clinical ratio and analyze how data composition affects performance, capability profiles, and error patterns across knowledge-intensive and clinic-oriented tasks. We uncover an asymmetric transfer across task types: clinical data improves clinic-oriented tasks while remaining competitive on knowledge-intensive ones, whereas didactic data mainly improves knowledge-intensive tasks. Error analysis suggests a knowing-doing gap, where improvements in knowledge recall do not reliably generalize to clinical reasoning. We further observe that modest amounts of clinical data yield most of the gains on EHR-grounded tasks, while the optimal mixture ratio varies with the knowledge and clinical reasoning demands of downstream tasks. These findings suggest that medical LLM data curation should be application-driven, with higher proportions of clinical",
+      "originalLanguage": "en",
+      "author": "Yuzheng Fan, Haochun Wang, Sendong Zhao, Xiao Han, Ming Ma, Bing Qin",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-23T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.22161",
+          "publishedAt": "2026-09-23T04:00:00.000Z",
+          "title": "Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究直接回答医疗大模型训练中一个实际的数据配比问题，并给出可操作的结论：数据策展应以应用为导向，临床数据对临床任务更有效且不牺牲知识任务。对医疗 AI 团队的数据策略有参考价值。",
+      "importanceReasonEn": "The study directly addresses a practical data-mixture question in medical LLM training and offers an actionable conclusion: data curation should be application-driven, and clinical data benefits clinical tasks without sacrificing knowledge tasks. It is useful for medical AI teams' data strategy.",
+      "scoringMode": "ai",
+      "titleZh": "教学知识还是临床病例？数据类型如何塑造医疗大语言模型",
+      "titleEn": "Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models",
+      "summaryZh": "一项 arXiv 预印本研究通过 token 匹配实验，改变教学数据与临床数据的配比，分析数据构成如何影响医疗大语言模型在知识密集型任务和临床导向任务上的表现、能力画像与错误模式。研究发现存在非对称迁移：临床数据能提升临床导向任务，同时在知识密集型任务上保持竞争力；教学数据主要提升知识密集型任务。错误分析提示存在“知—行差距”，知识回忆的改善不能可靠地泛化到临床推理。少量临床数据即可在电子健康记录（EHR）相关任务上带来大部分收益，最优配比随下游任务的知识与临床推理需求而变化。",
+      "summaryEn": "An arXiv preprint uses token-matched experiments to vary the didactic-to-clinical data ratio and analyze how data composition affects medical large language model performance, capability profiles, and error patterns on knowledge-intensive and clinic-oriented tasks. It finds asymmetric transfer: clinical data improves clinic-oriented tasks while remaining competitive on knowledge-intensive ones, whereas didactic data mainly improves knowledge-intensive tasks. Error analysis suggests a knowing-doing gap, where gains in knowledge recall do not reliably generalize to clinical reasoning. Modest amounts of clinical data yield most of the gains on EHR-grounded tasks, and the optimal mixture ratio varies with the knowledge and clinical reasoning demands of downstream tasks.",
+      "keywords": [
+        "医疗LLM",
+        "教学数据",
+        "临床数据",
+        "数据配比",
+        "知—行差距",
+        "EHR"
+      ],
+      "topics": [
+        "医疗大语言模型",
+        "训练数据配比",
+        "临床推理",
+        "知识迁移",
+        "EHR"
+      ],
+      "models": [],
+      "detailZh": "该论文关注医疗大语言模型训练中常见的数据混合做法：模型通常同时使用教学数据（如教科书）和临床数据（如患者记录），但两类数据如何差异化地塑造模型能力尚不清楚。作者采用 token 匹配实验，在控制总训练 token 数的前提下改变教学数据与临床数据的比例，并在知识密集型任务和临床导向任务上评估模型表现、能力画像和错误模式。\n\n实验发现存在非对称迁移。临床数据能够提升临床导向任务，同时在知识密集型任务上保持竞争力；而教学数据主要提升知识密集型任务。这意味着两类数据并非简单互补，其收益方向不同。\n\n错误分析进一步提示存在“知—行差距”：模型在知识回忆上的改善并不能可靠地转化为临床推理能力的提升。也就是说，记住更多医学知识不等于更会做临床决策。\n\n研究还观察到，在基于电子健康记录（EHR）的任务上，少量临床数据就能带来大部分收益；而最优的数据混合比例会随下游任务对知识和临床推理的需求程度而变化。作者据此建议，医疗大模型的数据策展应当以应用为导向，对临床推理需求高的场景提高临床数据比例。",
+      "keyPointsZh": [
+        "采用 token 匹配实验，控制总训练量后改变教学数据与临床数据比例。",
+        "临床数据提升临床导向任务，且在知识密集型任务上保持竞争力；教学数据主要提升知识密集型任务。",
+        "错误分析显示“知—行差距”：知识回忆改善不能可靠泛化到临床推理。",
+        "少量临床数据即可在 EHR 相关任务上带来大部分收益。",
+        "最优混合比例随下游任务的知识与临床推理需求而变化，数据策展应以应用为导向。"
+      ],
+      "impactZh": "该研究为医疗大语言模型的数据策展提供了实证依据，说明不能简单追求教学数据规模，而应根据下游应用调整临床数据比例。它同时提醒，知识问答成绩的提升未必代表临床推理能力提升，评估体系需要区分这两类能力。",
+      "readerImpactZh": "",
+      "userImpactZh": "对训练或微调医疗大模型的团队而言，该研究提示应优先按目标应用配置数据：面向临床决策支持的任务可提高临床数据比例，而面向医学知识问答的任务可保留较多教学数据；同时应分别评估知识回忆与临床推理，避免用单一知识指标判断模型是否适合临床场景。",
+      "howItWorksZh": "研究采用 token 匹配实验设计：在固定总训练 token 数的条件下，系统改变教学数据（如教科书）与临床数据（如患者记录）的混合比例，训练医疗大语言模型，并在知识密集型任务和临床导向任务上比较性能、能力画像与错误模式。通过错误分析识别知识回忆与临床推理之间的差距，并观察不同临床数据比例下 EHR 相关任务的收益变化，从而推断最优混合比例与下游任务需求的关系。",
+      "interpretationZh": "论文报告的核心事实是：在 token 匹配条件下，临床数据与教学数据对模型能力的提升方向不同，临床数据对临床任务更有效且不损害知识任务，而知识提升不必然带来临床推理提升。基于这些结果，作者推断医疗 LLM 的数据配比应依据应用场景决定。需要注意，这些结论来自该研究的实验设置，具体最优比例可能因模型、任务和数据来源而异。",
+      "limitationsZh": "该研究为 arXiv 预印本，尚未经过同行评审。实验结论基于作者选定的教学数据、临床数据、任务集和模型配置，最优混合比例可能随模型规模、数据质量、任务定义和评估方式变化。摘要未给出具体数值、数据集名称和统计显著性，实际迁移效果仍需独立验证。",
+      "actionStepsZh": [
+        "根据下游应用的知识与临床推理需求，调整教学数据与临床数据的混合比例。",
+        "在 EHR 相关任务中优先尝试加入少量临床数据，观察收益是否已达到大部分。",
+        "分别评估模型的知识回忆能力和临床推理能力，避免用单一知识指标替代临床能力判断。",
+        "对临床推理要求高的场景，提高临床数据比例并验证是否出现“知—行差距”。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.22161",
+          "publishedAt": "2026-09-23T04:00:00.000Z",
+          "title": "Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-23T04:00:00.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-23T04:00:00.000Z",
+            "label": "9/23 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "388050199468b6a4",
+      "normalizedUrl": "https://arxiv.org/abs/2609.22277",
+      "originalUrl": "https://arxiv.org/abs/2609.22277",
+      "titleOriginal": "An Affordable AI-Integrated Smart Cane for Multimodal Mobility Assistance of Visually Impaired Users",
+      "summaryOriginal": "arXiv:2609.22277v1 Announce Type: new Abstract: Visual impairment affects over 2.2 billion people worldwide, yet conventional white canes cannot detect elevated hazards or provide semantic environmental context. Existing AI-assisted navigation systems typically rely on expensive hardware or cloud connectivity, limiting accessibility in resource-constrained settings. This paper presents an affordable (\\$88 USD), fully offline AI-integrated smart cane designed for multimodal mobility assistance on an ultra-low-power Raspberry Pi Zero 2W. The system fuses RGB vision sensing with Time-of-Flight (ToF) distance estimation, pairing an INT8-quantized SSD MobileNet V1 model with distance-aware vibrotactile feedback and real-time audio alerts. To ensure operational robustness on constrained hardware, a multiprocessing architecture isolates sensor acquisition, neural inference, and haptic feedback into independent processes with fail-safe sensing support. Experimental evaluation across indoor mobility scenarios demonstrates a macro-averaged F1-score of 0.82 (precision: 0.85, recall: 0.81), a mean end-to-end latency of 330\\,ms, and a peak power draw of 2.8\\,W. A preliminary usability study wit",
+      "originalLanguage": "en",
+      "author": "Ali Akarma, Adeel Ahmad, Toqeer Ali Syed",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-23T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.22277",
+          "publishedAt": "2026-09-23T04:00:00.000Z",
+          "title": "An Affordable AI-Integrated Smart Cane for Multimodal Mobility Assistance of Visually Impaired Users",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该工作把AI辅助导航的成本压到88美元并实现完全离线运行，直接针对资源受限地区视障人群的可及性问题，同时给出了F1、延迟和功耗等可验证指标，具有明确的实用价值。",
+      "importanceReasonEn": "The work lowers AI-assisted navigation cost to $88 with fully offline operation, directly addressing accessibility in resource-constrained settings, and reports verifiable metrics such as F1, latency and power draw, giving it clear practical value.",
+      "scoringMode": "ai",
+      "titleZh": "面向视障用户多模态出行辅助的低成本AI智能手杖",
+      "titleEn": "An Affordable AI-Integrated Smart Cane for Multimodal Mobility Assistance of Visually Impaired Users",
+      "summaryZh": "一篇arXiv论文提出了一款售价88美元、完全离线的AI智能手杖，在Raspberry Pi Zero 2W上融合RGB视觉与ToF测距，通过INT8量化的SSD MobileNet V1模型提供振动触觉反馈和实时音频提示，室内场景宏平均F1为0.82，端到端延迟330毫秒，峰值功耗2.8瓦。",
+      "summaryEn": "An arXiv paper presents an $88 fully offline AI smart cane that fuses RGB vision and ToF ranging on a Raspberry Pi Zero 2W, using an INT8-quantized SSD MobileNet V1 model to deliver vibrotactile feedback and real-time audio alerts, achieving a macro-averaged F1 of 0.82, 330 ms end-to-end latency and 2.8 W peak power in indoor scenarios.",
+      "keywords": [
+        "智能手杖",
+        "视障辅助",
+        "Raspberry Pi Zero 2W",
+        "ToF测距",
+        "INT8量化",
+        "离线推理"
+      ],
+      "topics": [
+        "辅助技术",
+        "边缘AI",
+        "计算机视觉",
+        "视障出行",
+        "低成本硬件"
+      ],
+      "models": [
+        "SSD MobileNet V1"
+      ],
+      "detailZh": "全球视障人士超过22亿，传统白手杖无法探测高处障碍，也无法提供语义化的环境信息。现有的AI辅助导航系统通常依赖昂贵硬件或云端连接，在资源受限环境中难以普及。\n\n这篇论文提出一款售价88美元、完全离线的AI集成智能手杖，运行在超低功耗的Raspberry Pi Zero 2W上。系统融合RGB视觉传感与飞行时间（ToF）距离估计，将INT8量化的SSD MobileNet V1模型与距离感知的振动触觉反馈、实时音频提示相结合。\n\n为在受限硬件上保证运行稳健性，作者采用多进程架构，把传感器采集、神经网络推理和触觉反馈隔离为独立进程，并支持失效安全传感。\n\n实验评估覆盖室内出行场景，结果显示宏平均F1为0.82（精确率0.85，召回率0.81），平均端到端延迟330毫秒，峰值功耗2.8瓦。论文还包含一项初步可用性研究，但摘要中未给出该研究的具体结果。",
+      "keyPointsZh": [
+        "系统售价88美元，完全离线运行，硬件为Raspberry Pi Zero 2W",
+        "融合RGB视觉与ToF距离估计，使用INT8量化的SSD MobileNet V1模型",
+        "提供距离感知的振动触觉反馈和实时音频提示",
+        "室内场景宏平均F1为0.82，精确率0.85，召回率0.81",
+        "平均端到端延迟330毫秒，峰值功耗2.8瓦"
+      ],
+      "impactZh": "该研究说明在极低成本、无网络连接的硬件上也能实现多模态障碍检测与反馈，为资源受限地区的视障辅助设备提供了可复制的技术路线，并给出了延迟与功耗等工程可行性证据。",
+      "readerImpactZh": "对视障人士而言，这类设备若成熟，可能以远低于现有AI导航方案的价格提供高处障碍探测和语音提示；但论文仅报告了初步可用性研究，距离实际日常使用仍有距离。",
+      "userImpactZh": "对AI开发者和硬件团队而言，该方案展示了在Raspberry Pi Zero 2W级别设备上通过INT8量化、多进程隔离和ToF+RGB融合实现实时推理的可行配置，可作为边缘辅助设备的参考架构。",
+      "howItWorksZh": "系统在Raspberry Pi Zero 2W上运行：RGB摄像头提供视觉输入，ToF传感器提供距离估计；INT8量化的SSD MobileNet V1模型执行目标检测；检测结果结合距离信息转化为振动触觉反馈和实时音频提示。软件采用多进程架构，将传感器采集、神经网络推理和触觉反馈拆分为独立进程，并带有失效安全传感支持，以在受限硬件上维持稳定运行。",
+      "interpretationZh": "论文报告的是室内场景下的实验结果和一项初步可用性研究，F1、延迟和功耗均为作者自测数据。88美元成本和完全离线设计是明确主张，但摘要未披露可用性研究的样本量、参与者反馈或室外场景表现，因此实际使用效果仍需进一步验证。",
+      "limitationsZh": "摘要未给出可用性研究的具体结果、参与者人数和用户反馈；评估仅覆盖室内出行场景，未说明室外、夜间或复杂光照条件下的表现；F1为0.82意味着仍存在漏检和误检；论文为arXiv预印本，尚未确认经过同行评审。",
+      "actionStepsZh": [
+        "关注该论文的完整版本，查看可用性研究细节和室外场景评估",
+        "对边缘AI开发者，可参考其INT8量化与多进程隔离的部署思路",
+        "在评估类似辅助设备时，重点核对延迟、功耗和实际漏检率"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "metrics",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "精确率0.85高于召回率0.81，说明系统漏检略多于误检；330毫秒延迟和2.8瓦功耗体现了在Raspberry Pi Zero 2W上的实时运行约束。",
+        "data": [
+          {
+            "label": "宏平均F1",
+            "value": 0.82,
+            "display": ""
+          },
+          {
+            "label": "精确率",
+            "value": 0.85,
+            "display": ""
+          },
+          {
+            "label": "召回率",
+            "value": 0.81,
+            "display": ""
+          },
+          {
+            "label": "端到端延迟(ms)",
+            "value": 330,
+            "display": ""
+          },
+          {
+            "label": "峰值功耗(W)",
+            "value": 2.8,
+            "display": ""
+          },
+          {
+            "label": "成本(USD)",
+            "value": 88,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.22277",
+          "publishedAt": "2026-09-23T04:00:00.000Z",
+          "title": "An Affordable AI-Integrated Smart Cane for Multimodal Mobility Assistance of Visually Impaired Users",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-23T04:00:00.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-23T04:00:00.000Z",
+            "label": "9/23 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "16d87fa5b1873fae",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering",
+      "originalUrl": "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/",
+      "titleOriginal": "SF October 14th: A Birds of a Feather Session on Agentic Engineering",
+      "summaryOriginal": "SF October 14th: A Birds of a Feather Session on Agentic Engineering I'm hosting an evening event with Jesse Vincent in San Francisco on Wednesday 14th October for people who are building weird and interesting things with and on top of coding agents. Think of it as an agentic show-and-tell: ​Compare notes with other builders and experimenters on things you’re trying, what you're learning, and what you haven’t figured out yet. We’re especially interested in work you haven’t discussed publicly, odd experiments, or unfinished projects that don’t have an obvious market. ​Expect one flowing conversation with an informal show-and-tell. Sharing something you’re working on is encouraged but no presentation is required. This isn't about product pitches, it's about much earlier explorations than that. This agentic AI stuff is weird! Let's celebrate and lean into that weirdness. Tags: events , ai , generative-ai , llms , coding-agents , jesse-vincent , agentic-engineering",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://luma.com/vxuiuyvg",
+        "https://simonwillison.net/tags/events",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/coding-agents",
+        "https://simonwillison.net/tags/jesse-vincent",
+        "https://simonwillison.net/tags/agentic-engineering"
+      ],
+      "publishedAt": "2026-09-23T02:53:19.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/",
+          "publishedAt": "2026-09-23T02:53:19.000Z",
+          "title": "SF October 14th: A Birds of a Feather Session on Agentic Engineering",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://luma.com/vxuiuyvg",
+            "https://simonwillison.net/tags/events",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/coding-agents",
+            "https://simonwillison.net/tags/jesse-vincent",
+            "https://simonwillison.net/tags/agentic-engineering"
+          ]
+        }
+      ],
+      "importance": 28,
+      "importanceReasonZh": "这是一场面向编码智能体实践者的线下交流活动，对关注智能体工程早期探索的开发者有参考价值，但不涉及具体产品或技术发布。",
+      "importanceReasonEn": "This is an offline community event for coding-agent practitioners, useful for developers tracking early agentic-engineering exploration, but it involves no product or technical release.",
+      "scoringMode": "ai",
+      "titleZh": "旧金山10月14日：关于智能体工程的非正式交流会",
+      "titleEn": "SF October 14th: A Birds of a Feather Session on Agentic Engineering",
+      "summaryZh": "Simon Willison 与 Jesse Vincent 将于 10 月 14 日（周三）在旧金山举办一场晚间非正式交流会，面向用编码智能体构建新奇有趣项目的人。活动形式是智能体展示与交流，鼓励分享未公开的尝试、奇怪实验和没有明确市场前景的未完成项目，不要求正式演讲，也不是产品推介。",
+      "summaryEn": "Simon Willison and Jesse Vincent are hosting an evening Birds of a Feather session in San Francisco on Wednesday, October 14th, for people building weird and interesting things with and on top of coding agents. It's an informal agentic show-and-tell encouraging sharing of undisclosed experiments, odd projects, and unfinished work with no obvious market, with no formal presentation or product pitch required.",
+      "keywords": [
+        "智能体工程",
+        "编码智能体",
+        "非正式交流会",
+        "旧金山活动",
+        "Simon Willison",
+        "Jesse Vincent"
+      ],
+      "topics": [
+        "coding-agents",
+        "agentic-engineering",
+        "events",
+        "developer-community"
+      ],
+      "models": [],
+      "detailZh": "Simon Willison 在其博客上宣布，他将与 Jesse Vincent 于 10 月 14 日（周三）在旧金山举办一场晚间活动，形式为“Birds of a Feather”（非正式同好交流会）。活动面向正在用编码智能体、或在编码智能体之上构建“奇怪而有趣”东西的人。\n\n活动的定位是一场“智能体展示与交流”（agentic show-and-tell）。组织者希望参与者与其他构建者和实验者交流正在尝试的事情、学到的东西，以及尚未解决的问题。\n\n组织者特别感兴趣的是那些尚未公开讨论过的工作、奇怪的实验，或者没有明显市场前景的未完成项目。活动预期是一场流畅的对话加上非正式的展示交流，鼓励分享但不需要正式演讲。\n\n组织者明确表示这不是产品推介，而是比产品更早期的探索。他们认为智能体 AI 这件事本身就很“奇怪”，希望庆祝并拥抱这种奇怪之处。活动带有 events、ai、generative-ai、llms、coding-agents、jesse-vincent、agentic-engineering 等标签。",
+      "keyPointsZh": [
+        "活动时间为 10 月 14 日周三晚间，地点在旧金山。",
+        "由 Simon Willison 与 Jesse Vincent 共同主办。",
+        "面向用编码智能体构建项目的开发者与实验者。",
+        "形式为非正式展示交流，不要求正式演讲，也不是产品推介。",
+        "特别欢迎未公开的工作、奇怪实验和没有明显市场的未完成项目。"
+      ],
+      "impactZh": "该活动为编码智能体领域的早期探索者提供了一个线下交流机会，有助于分享尚未公开的实验和经验，推动智能体工程这一新兴实践方向的社区形成。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用或开发编码智能体的开发者而言，这是一个与同行交流未公开实验、未完成项目和实际经验的机会，可能获得关于智能体工作流的非正式反馈与灵感。",
+      "howItWorksZh": "",
+      "interpretationZh": "从已公布信息看，这是一场小规模、非正式的线下聚会，重点在于早期探索和经验交流，而非成果发布。它反映出编码智能体领域仍处于实验阶段，实践者更关注尚未成型的想法。",
+      "limitationsZh": "目前仅有活动公告，没有具体议程、场地、参与人数或报名方式等细节；活动是否会产生公开成果或记录尚不明确。",
+      "actionStepsZh": [
+        "如果你在旧金山且正在用编码智能体做实验，可以考虑参加这场 10 月 14 日晚间的交流会。",
+        "准备一个你正在做的、尚未公开或没有明确市场的实验项目，用于非正式分享。",
+        "无需准备正式演讲，带着问题和未解决的困惑参与对话即可。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/",
+          "publishedAt": "2026-09-23T02:53:19.000Z",
+          "title": "SF October 14th: A Birds of a Feather Session on Agentic Engineering",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://luma.com/vxuiuyvg",
+            "https://simonwillison.net/tags/events",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/coding-agents",
+            "https://simonwillison.net/tags/jesse-vincent",
+            "https://simonwillison.net/tags/agentic-engineering"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-23T02:53:19.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 41,
+        "peak": 41,
+        "history": [
+          {
+            "at": "2026-09-23T02:53:19.000Z",
+            "label": "9/23 10:53",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-23T03:45:21.756Z",
+            "label": "9/23 11:45",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 41,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b35fb67f07ba02e3",
+      "normalizedUrl": "https://x.com/Alibaba_Qwen/status/2102569821997346912",
+      "originalUrl": "https://x.com/Alibaba_Qwen/status/2102569821997346912",
+      "titleOriginal": "Qwen-Image-2.1 登顶 Arena 图像编辑与文生图开源榜第一",
+      "summaryOriginal": "通义千问宣布 Qwen-Image-2.1 在 Arena 的 Image Edit Arena 和 Text-to-Image Arena 均为开源模型第一。引用内容显示其 Image Edit Arena 得分 1367，总榜第 16，距第 15 名 GPT-Image-1.5-high-fidelity 仅 3 分，官方邀请用户体验该模型。",
+      "originalLanguage": "zh",
+      "author": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmudfo3yi090orogg6bl51tiq",
+        "https://x.com/Alibaba_Qwen/status/2102569821997346912"
+      ],
+      "publishedAt": "2026-09-23T01:24:44.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-23T01:37:37.014Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmudfo3yi090orogg6bl51tiq"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmudfo3yi090orogg6bl51tiq",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2102569821997346912",
+          "publishedAt": "2026-09-23T01:24:44.000Z",
+          "title": "Qwen-Image-2.1 登顶 Arena 图像编辑与文生图开源榜第一",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmudfo3yi090orogg6bl51tiq",
+            "https://x.com/Alibaba_Qwen/status/2102569821997346912"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该消息来自通义千问官方账号，给出了具体榜单与分数，属于可核验的产品进展；开源模型在图像编辑与文生图两个 Arena 榜单同时登顶，对开源生态和模型选型有直接参考价值。",
+      "importanceReasonEn": "The news comes from Qwen's official account with specific leaderboards and scores, making it a verifiable product update; an open-source model topping both the image editing and text-to-image Arena boards is directly relevant to the open-source ecosystem and model selection.",
+      "scoringMode": "ai",
+      "titleZh": "Qwen-Image-2.1 登顶 Arena 图像编辑与文生图开源榜第一",
+      "titleEn": "Qwen-Image-2.1 Tops Arena Open-Source Rankings for Image Editing and Text-to-Image",
+      "summaryZh": "通义千问宣布 Qwen-Image-2.1 在 Arena 的 Image Edit Arena 和 Text-to-Image Arena 两个榜单上均位列开源模型第一。引用内容显示其 Image Edit Arena 得分为 1367，总榜排名第 16，距离第 15 名 GPT-Image-1.5-high-fidelity 仅差 3 分，官方邀请用户体验该模型。",
+      "summaryEn": "Qwen announced that Qwen-Image-2.1 ranks first among open-source models on both the Image Edit Arena and Text-to-Image Arena leaderboards. The cited content shows an Image Edit Arena score of 1367, placing it 16th overall, just 3 points behind 15th-place GPT-Image-1.5-high-fidelity, and the team invited users to try the model.",
+      "keywords": [
+        "Qwen-Image-2.1",
+        "Arena",
+        "Image Edit Arena",
+        "Text-to-Image Arena",
+        "开源第一",
+        "图像编辑",
+        "文生图"
+      ],
+      "topics": [
+        "image-generation",
+        "image-editing",
+        "open-source-models",
+        "arena-leaderboard",
+        "qwen"
+      ],
+      "models": [
+        "Qwen-Image-2.1",
+        "GPT-Image-1.5-high-fidelity"
+      ],
+      "detailZh": "通义千问官方账号发布消息称，Qwen-Image-2.1 在 Arena 的 Image Edit Arena 和 Text-to-Image Arena 两个榜单上均取得开源模型第一的位置。\n\n引用内容显示，Qwen-Image-2.1 在 Image Edit Arena 的得分为 1367，在总榜中排名第 16。排在其前面的第 15 名是 GPT-Image-1.5-high-fidelity，两者分差仅为 3 分。\n\n官方同时邀请用户体验该模型。除上述榜单排名与分数外，输入材料未提供模型架构、训练数据、开放许可、API 价格或具体使用入口等更多细节。",
+      "keyPointsZh": [
+        "Qwen-Image-2.1 在 Arena 的 Image Edit Arena 和 Text-to-Image Arena 均为开源模型第一。",
+        "Image Edit Arena 得分为 1367，总榜排名第 16。",
+        "距离总榜第 15 名 GPT-Image-1.5-high-fidelity 仅差 3 分。",
+        "官方邀请用户体验该模型。"
+      ],
+      "impactZh": "开源模型在图像编辑与文生图两个 Arena 榜单同时登顶，意味着开源方案在图像生成与编辑能力上已接近闭源头部模型，可能影响开发者和团队在图像生成工具上的选型倾向。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用图像生成或图像编辑工具的开发者与团队而言，Qwen-Image-2.1 提供了一个在 Arena 榜单上表现靠前的开源选项，可作为模型选型时的候选之一；但输入材料未给出部署方式、许可与成本信息，实际采用前仍需进一步核实。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：通义千问官方称 Qwen-Image-2.1 在两个 Arena 榜单上为开源模型第一，并给出 Image Edit Arena 得分 1367、总榜第 16、距第 15 名差 3 分。可合理推断的是，该模型在图像编辑任务上的表现已接近部分闭源头部模型。但输入材料未说明榜单的评测方式、参评模型范围与统计口径，因此“开源第一”的具体含义仍需结合 Arena 官方榜单核实。",
+      "limitationsZh": "输入材料仅包含官方账号的简短声明与引用分数，未提供模型架构、训练数据、开放许可、API 价格、使用入口及 Arena 榜单的评测细节；分数与排名来自引用内容，未独立核实。",
+      "actionStepsZh": [
+        "查看 Arena 官方榜单，核实 Qwen-Image-2.1 在 Image Edit Arena 与 Text-to-Image Arena 的排名与分数。",
+        "关注通义千问官方渠道，获取该模型的体验入口与开放方式。",
+        "如有图像编辑或文生图需求，可将该模型纳入候选并与其他方案做实际对比测试。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Qwen-Image-2.1 的 Image Edit Arena 得分为 1367，比第 15 名 GPT-Image-1.5-high-fidelity 低 3 分（后者分数由 1367+3 推算得出）。",
+        "data": [
+          {
+            "label": "Qwen-Image-2.1（Image Edit Arena）",
+            "value": 1367,
+            "display": ""
+          },
+          {
+            "label": "GPT-Image-1.5-high-fidelity（Image Edit Arena）",
+            "value": 1370,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmudfo3yi090orogg6bl51tiq",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2102569821997346912",
+          "publishedAt": "2026-09-23T01:24:44.000Z",
+          "title": "Qwen-Image-2.1 登顶 Arena 图像编辑与文生图开源榜第一",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmudfo3yi090orogg6bl51tiq",
+            "https://x.com/Alibaba_Qwen/status/2102569821997346912"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-23T01:24:44.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-23T01:24:44.000Z",
+            "label": "9/23 09:24",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-23T02:12:54.128Z",
+            "label": "9/23 10:12",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:01:04.256Z",
+            "label": "9/23 11:01",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:49:14.384Z",
+            "label": "9/23 11:49",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "76a73497d10e3466",
+      "normalizedUrl": "https://openrouter.ai/blog/insights/best-embedding-models-2026",
+      "originalUrl": "https://openrouter.ai/blog/insights/best-embedding-models-2026",
+      "titleOriginal": "OpenRouter 发布 2026 年最佳嵌入模型选型指南，覆盖 37 个目录条目",
+      "summaryOriginal": "OpenRouter 于 2026 年 9 月 11 日核实嵌入模型目录共 37 个条目，并通过自家 embeddings API 向 19 个模型发送批量请求、共 28 项检查，确认请求与响应行为。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmude350u077jroggw7odbigk",
+        "https://openrouter.ai/blog/insights/best-embedding-models-2026"
+      ],
+      "publishedAt": "2026-09-23T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-23T00:53:18.852Z",
+      "contentType": "practical",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmude350u077jroggw7odbigk"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmude350u077jroggw7odbigk",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/best-embedding-models-2026",
+          "publishedAt": "2026-09-23T00:00:00.000Z",
+          "title": "OpenRouter 发布 2026 年最佳嵌入模型选型指南，覆盖 37 个目录条目",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmude350u077jroggw7odbigk",
+            "https://openrouter.ai/blog/insights/best-embedding-models-2026"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该内容提供了嵌入模型选型的实用参考，并公开了 OpenRouter 对自家 embeddings API 的验证结果，对使用嵌入模型的开发者有直接帮助。",
+      "importanceReasonEn": "This content offers practical guidance for choosing embedding models and discloses OpenRouter's verification results for its own embeddings API, directly helping developers who use embedding models.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 发布 2026 年最佳嵌入模型选型指南，覆盖 37 个目录条目",
+      "titleEn": "OpenRouter Publishes 2026 Guide to Choosing the Best Embedding Models, Covering 37 Catalog Entries",
+      "summaryZh": "OpenRouter 于 2026 年 9 月 11 日核实嵌入模型目录共 37 个条目，并通过自家 embeddings API 向 19 个模型发送批量请求、共 28 项检查，确认请求与响应行为。",
+      "summaryEn": "On September 11, 2026, OpenRouter verified that its embedding model catalog contains 37 entries, and sent batch requests through its own embeddings API to 19 models across 28 checks to confirm request and response behavior.",
+      "keywords": [
+        "OpenRouter",
+        "嵌入模型",
+        "embeddings API",
+        "选型指南",
+        "目录条目"
+      ],
+      "topics": [
+        "embedding models",
+        "model selection",
+        "OpenRouter",
+        "API"
+      ],
+      "models": [],
+      "detailZh": "OpenRouter 发布了一份面向 2026 年的嵌入模型选型指南。根据其公告，OpenRouter 在 2026 年 9 月 11 日核实其嵌入模型目录共有 37 个条目。\n\n为了确认这些模型在自家平台上的实际可用性，OpenRouter 通过其 embeddings API 向 19 个模型发送了批量请求，共执行 28 项检查，用于确认请求与响应行为是否符合预期。\n\n公告同时给出了这份指南的定位：帮助用户从目录中挑选合适的嵌入模型。目前公开的信息集中在目录规模与 API 验证结果上，未披露各模型的具体性能、价格或维度等细节。",
+      "keyPointsZh": [
+        "OpenRouter 于 2026 年 9 月 11 日核实嵌入模型目录共 37 个条目。",
+        "OpenRouter 通过自家 embeddings API 向 19 个模型发送批量请求。",
+        "验证共执行 28 项检查，用于确认请求与响应行为。",
+        "公告定位为 2026 年嵌入模型选型指南。"
+      ],
+      "impactZh": "嵌入模型是检索、聚类和语义搜索等应用的基础组件，OpenRouter 公开目录规模与 API 验证结果，有助于开发者判断其平台上的嵌入模型可用性，并作为选型参考。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 OpenRouter embeddings API 的开发者可以据此了解平台上嵌入模型的覆盖范围与请求响应行为已通过批量验证，从而在选型时减少对可用性的不确定性。",
+      "howItWorksZh": "OpenRouter 通过其 embeddings API 向目录中的 19 个模型发送批量请求，共执行 28 项检查，以确认请求与响应行为。公告未披露具体的请求参数、批量大小或检查项细节。",
+      "interpretationZh": "已报告的事实是：OpenRouter 核实目录有 37 个条目，并对 19 个模型执行了 28 项 API 检查。可以合理推断，这份指南意在帮助用户在其平台上选择嵌入模型，但公告未给出模型间的性能或价格对比，因此无法据此判断哪个模型更优。",
+      "limitationsZh": "公告未披露各嵌入模型的性能指标、价格、向量维度、上下文长度等关键选型信息，也未说明 28 项检查的具体内容与判定标准，因此该指南目前更多是目录与可用性说明，而非完整的选型对比。",
+      "actionStepsZh": [
+        "查阅 OpenRouter 的嵌入模型目录，确认 37 个条目中哪些模型符合自身需求。",
+        "在 OpenRouter embeddings API 上对候选模型发送批量请求，验证请求与响应行为是否符合预期。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "目录共 37 个条目，其中 19 个模型经过 28 项 API 检查，说明并非所有目录条目都在本次验证范围内。",
+        "data": [
+          {
+            "label": "目录条目",
+            "value": 37,
+            "display": ""
+          },
+          {
+            "label": "测试模型数",
+            "value": 19,
+            "display": ""
+          },
+          {
+            "label": "检查项数",
+            "value": 28,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmude350u077jroggw7odbigk",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/best-embedding-models-2026",
+          "publishedAt": "2026-09-23T00:00:00.000Z",
+          "title": "OpenRouter 发布 2026 年最佳嵌入模型选型指南，覆盖 37 个目录条目",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmude350u077jroggw7odbigk",
+            "https://openrouter.ai/blog/insights/best-embedding-models-2026"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-23T00:00:00.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-09-23T00:00:00.000Z",
+            "label": "9/23 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-23T00:55:28.902Z",
+            "label": "9/23 08:55",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:50:57.805Z",
+            "label": "9/23 09:50",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:46:26.707Z",
+            "label": "9/23 10:46",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:41:55.610Z",
+            "label": "9/23 11:41",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "5b206843ef211175",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna",
+      "originalUrl": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna",
+      "titleOriginal": "Claude Opus 5.5 与 GPT-6 Sol/Luna 发布，Simon Willison 详解新一轮价格战",
+      "summaryOriginal": "Yesterday was Grok 4.7 ( pelicans ) and MiMo v2.6 Flash/Pro ( more pelicans ). Today Anthropic released Claude Opus 5.5 , and around an hour later OpenAI released GPT-6 Sol and GPT-6 Luna . It's going to take a while to get a good read on all of these new models, but here are my impressions so far. GPT-6 Sol and Luna are half the price of their GPT-5.6 equivalents GPT-5.6 Luna was already my favorite model for building applications against, because it combined excellent performance with being really cheap . Somehow GPT-6 Luna is half the price of that again - and GPT-6 Sol had a similar reduction compared to GPT-5.6 Sol. Here's what the pricing landscape looks like today: Model Input Cached input Output GPT-6 Luna $0.10/M $0.01/M $0.50/M GPT-5.6 Luna $0.20/M $0.02/M $1.20/M Grok 4.7 $2/M $0.50/M $6/M GPT-6 Sol $2/M $0.20/M $10/M GPT-5.6 Terra $2/M $0.20/M $12/M Claude Opus 5.5 $4/M $0.20/M $20/M GPT-5.6 Sol $4/M $0.40/M $20/M Claude Fable 5.1 $10/M $0.25/M $50/M GPT-6 Astra $10/M $1/M $50/M Note that GPT-5.6 has a scheduled 25% price increase for November, so GPT-6 is half the price of the promotional pricing for those models. (With GPT-5.6 Terra priced the same as GPT-6 Sol, any r",
+      "originalLanguage": "zh",
+      "author": "Simon Willison 博客",
+      "category": "models",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 96,
+      "images": [
+        "https://static.simonwillison.net/static/2026/gpt-pelicans-grid.webp",
+        "https://static.simonwillison.net/static/2026/claude-pelicans-grid.webp"
+      ],
+      "resourceLinks": [
+        "https://aihot.news/items/cmudch57g05bqroggl65fi9vo",
+        "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna",
+        "https://x.ai/news/grok-4-7",
+        "https://news.ycombinator.com/item?id=49788838#49790209",
+        "https://mimo.xiaomi.com/mimo-v2-6",
+        "https://news.ycombinator.com/item?id=49792730#49793480",
+        "https://www.anthropic.com/claude-opus-5-5",
+        "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F40d129fc140faca378b9c9f4f16c6ec2",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbe7ae25af2634b68bc34b7b7aaf02cb2",
+        "https://static.simonwillison.net/static/2026/gpt-pelicans-grid.html",
+        "https://twitter.com/trq212/status/2102437686967738431"
+      ],
+      "publishedAt": "2026-09-22T23:46:41.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-23T00:08:14.545Z",
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmudch57g05bqroggl65fi9vo"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmudch57g05bqroggl65fi9vo",
+          "name": "Simon Willison 博客",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna",
+          "publishedAt": "2026-09-22T23:46:41.000Z",
+          "title": "Claude Opus 5.5 与 GPT-6 Sol/Luna 发布，Simon Willison 详解新一轮价格战",
+          "authority": 81,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmudch57g05bqroggl65fi9vo",
+            "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna"
+          ]
+        },
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+          "publishedAt": "2026-09-22T23:46:41.000Z",
+          "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/gpt-pelicans-grid.webp",
+            "https://static.simonwillison.net/static/2026/claude-pelicans-grid.webp"
+          ],
+          "resourceLinks": [
+            "https://x.ai/news/grok-4-7",
+            "https://news.ycombinator.com/item?id=49788838#49790209",
+            "https://mimo.xiaomi.com/mimo-v2-6",
+            "https://news.ycombinator.com/item?id=49792730#49793480",
+            "https://www.anthropic.com/claude-opus-5-5",
+            "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F40d129fc140faca378b9c9f4f16c6ec2",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbe7ae25af2634b68bc34b7b7aaf02cb2",
+            "https://static.simonwillison.net/static/2026/gpt-pelicans-grid.html",
+            "https://twitter.com/trq212/status/2102437686967738431",
+            "https://twitter.com/alexalbert__/status/2102466523164274839",
+            "https://simonwillison.net/tags/pelican-riding-a-bicycle/"
+          ]
+        }
+      ],
+      "importance": 82,
+      "importanceReasonZh": "同一天内 Anthropic 与 OpenAI 相继发布新旗舰模型，且 GPT-6 系列价格直接腰斩，对开发者的模型选型和成本结构有直接影响。",
+      "importanceReasonEn": "Anthropic and OpenAI released new flagship models on the same day, with GPT-6 pricing cut in half, directly affecting developer model selection and cost structures.",
+      "scoringMode": "ai",
+      "titleZh": "Claude Opus 5.5 与 GPT-6 Sol/Luna 发布，Simon Willison 详解新一轮价格战",
+      "titleEn": "Claude Opus 5.5 and GPT-6 Sol/Luna Released: Simon Willison Breaks Down the New Price War",
+      "summaryZh": "Anthropic 发布 Claude Opus 5.5，约一小时后 OpenAI 发布 GPT-6 Sol 与 GPT-6 Luna。Simon Willison 指出 GPT-6 Sol 和 Luna 的价格仅为对应 GPT-5.6 型号的一半，并整理了当前主流模型的价格对比表。",
+      "summaryEn": "Anthropic released Claude Opus 5.5, and about an hour later OpenAI released GPT-6 Sol and GPT-6 Luna. Simon Willison notes that GPT-6 Sol and Luna are half the price of their GPT-5.6 equivalents, and compiled a pricing comparison of current leading models.",
+      "keywords": [
+        "Claude Opus 5.5",
+        "GPT-6 Sol",
+        "GPT-6 Luna",
+        "价格战",
+        "模型定价",
+        "Simon Willison"
+      ],
+      "topics": [
+        "LLM pricing",
+        "Claude Opus 5.5",
+        "GPT-6 Sol",
+        "GPT-6 Luna",
+        "model releases"
+      ],
+      "models": [
+        "Claude Opus 5.5",
+        "GPT-6 Sol",
+        "GPT-6 Luna",
+        "GPT-5.6 Luna",
+        "GPT-5.6 Sol",
+        "GPT-5.6 Terra"
+      ],
+      "detailZh": "Anthropic 发布了 Claude Opus 5.5，大约一小时后 OpenAI 发布了 GPT-6 Sol 和 GPT-6 Luna。Simon Willison 表示，要全面评估这些新模型还需要一段时间，但他已经给出初步印象。\n\n他指出，GPT-6 Sol 和 Luna 的价格是各自 GPT-5.6 对应型号的一半。GPT-5.6 Luna 此前已经是他最喜欢的应用开发模型，因为它在出色性能的同时价格非常便宜，而 GPT-6 Luna 的价格又在此基础上再降一半，GPT-6 Sol 相对 GPT-5.6 Sol 也有类似幅度的降价。\n\nWillison 整理了当前的价格格局：GPT-6 Luna 输入 $0.10/M、缓存输入 $0.01/M、输出 $0.50/M；GPT-5.6 Luna 为 $0.20/M、$0.02/M、$1.20/M；Grok 4.7 为 $2/M、$0.50/M、$6/M；GPT-6 Sol 为 $2/M、$0.20/M、$10/M；GPT-5.6 Terra 为 $2/M、$0.20/M、$12/M；Claude Opus 5.5 为 $4/M、$0.20/M、$20/M；GPT-5.6 Sol 为 $4/M、$0.40/M、$20/M；Claude Fable 5.1 为 $10/M、$0.25/M、$50/M；GPT-6 Astra 为 $10/M、$1/M、$50/M。\n\n他还提到，GPT-5.6 计划在 11 月涨价 25%，因此 GPT-6 的价格实际上只有这些型号促销价的一半。此外，GPT-5.6 Terra 的定价与 GPT-6 Sol 相同。",
+      "keyPointsZh": [
+        "Anthropic 发布 Claude Opus 5.5，约一小时后 OpenAI 发布 GPT-6 Sol 和 GPT-6 Luna。",
+        "GPT-6 Sol 和 Luna 的价格是各自 GPT-5.6 对应型号的一半。",
+        "GPT-5.6 Luna 此前是 Simon Willison 最喜欢的应用开发模型，GPT-6 Luna 价格再降一半。",
+        "GPT-5.6 计划 11 月涨价 25%，GPT-6 价格约为其促销价的一半。",
+        "GPT-5.6 Terra 定价与 GPT-6 Sol 相同。"
+      ],
+      "impactZh": "头部模型厂商在同一天密集发布新品并大幅降价，表明大模型推理价格竞争进一步加剧，开发者的单位调用成本有望继续下降。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者可以以更低成本使用 GPT-6 Luna 构建应用，其输入价格仅为 GPT-5.6 Luna 的一半，适合对成本敏感的高频调用场景。",
+      "howItWorksZh": "",
+      "interpretationZh": "从已披露信息看，这是一轮由头部厂商主导的模型发布与降价：Anthropic 先发 Claude Opus 5.5，OpenAI 随后以 GPT-6 Sol/Luna 回应，并通过将价格降至前代一半来争夺开发者。Simon Willison 的初步判断偏向正面，尤其是对低价位的 GPT-6 Luna。需要注意的是，这些仍属初步印象，模型实际能力尚待更全面评测。",
+      "limitationsZh": "Simon Willison 明确表示全面评估这些新模型还需要时间，目前只是初步印象；除价格外，输入中未提供各模型的能力评测数据，因此无法判断性能是否同步提升。",
+      "actionStepsZh": [
+        "关注 GPT-6 Luna 的低价档位，评估是否用于成本敏感的应用开发场景。",
+        "留意 GPT-5.6 计划于 11 月涨价 25% 的时间点，提前规划模型迁移或成本预算。",
+        "参考 Simon Willison 整理的价格表，对比各模型输入、缓存输入与输出价格后再做选型。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "GPT-6 Luna 输入价格（$0.10/M）是 GPT-5.6 Luna（$0.20/M）的一半；GPT-6 Sol 输入价格（$2/M）也是 GPT-5.6 Sol（$4/M）的一半。",
+        "data": [
+          {
+            "label": "GPT-6 Luna 输入",
+            "value": 0.1,
+            "display": ""
+          },
+          {
+            "label": "GPT-5.6 Luna 输入",
+            "value": 0.2,
+            "display": ""
+          },
+          {
+            "label": "GPT-6 Sol 输入",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "GPT-5.6 Sol 输入",
+            "value": 4,
+            "display": ""
+          },
+          {
+            "label": "Claude Opus 5.5 输入",
+            "value": 4,
+            "display": ""
+          },
+          {
+            "label": "GPT-6 Astra 输入",
+            "value": 10,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 2,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmudch57g05bqroggl65fi9vo",
+          "name": "Simon Willison 博客",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna",
+          "publishedAt": "2026-09-22T23:46:41.000Z",
+          "title": "Claude Opus 5.5 与 GPT-6 Sol/Luna 发布，Simon Willison 详解新一轮价格战",
+          "authority": 81,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmudch57g05bqroggl65fi9vo",
+            "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna"
+          ]
+        },
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+          "publishedAt": "2026-09-22T23:46:41.000Z",
+          "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/gpt-pelicans-grid.webp",
+            "https://static.simonwillison.net/static/2026/claude-pelicans-grid.webp"
+          ],
+          "resourceLinks": [
+            "https://x.ai/news/grok-4-7",
+            "https://news.ycombinator.com/item?id=49788838#49790209",
+            "https://mimo.xiaomi.com/mimo-v2-6",
+            "https://news.ycombinator.com/item?id=49792730#49793480",
+            "https://www.anthropic.com/claude-opus-5-5",
+            "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F40d129fc140faca378b9c9f4f16c6ec2",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbe7ae25af2634b68bc34b7b7aaf02cb2",
+            "https://static.simonwillison.net/static/2026/gpt-pelicans-grid.html",
+            "https://twitter.com/trq212/status/2102437686967738431",
+            "https://twitter.com/alexalbert__/status/2102466523164274839",
+            "https://simonwillison.net/tags/pelican-riding-a-bicycle/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-22T23:46:41.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 96,
+        "peak": 96,
+        "history": [
+          {
+            "at": "2026-09-22T23:46:41.000Z",
+            "label": "9/23 07:46",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-23T00:44:49.702Z",
+            "label": "9/23 08:44",
+            "value": 42,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T01:42:58.405Z",
+            "label": "9/23 09:42",
+            "value": 55,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T02:41:07.107Z",
+            "label": "9/23 10:41",
+            "value": 69,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T03:39:15.810Z",
+            "label": "9/23 11:39",
+            "value": 82,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 96,
+            "reports": 2
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "73461b3e97af0d93",
       "normalizedUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
@@ -77,8 +1122,8 @@
         }
       ],
       "importance": 88,
-      "importanceReasonZh": "OpenAI 官方发布两款新模型，并将 API 价格较上一代促销价直接减半，对开发者和企业成本影响显著。",
-      "importanceReasonEn": "OpenAI officially releases two new models and halves API prices versus the previous generation's promotional pricing, significantly affecting developer and enterprise costs.",
+      "importanceReasonZh": "OpenAI 官方发布两款新模型，并将 API 价格较上一代促销价下调 50%，属于重要模型发布与定价变动。",
+      "importanceReasonEn": "OpenAI officially released two new models and cut API prices 50% versus the previous generation's promotional pricing, making this a significant model release and pricing change.",
       "scoringMode": "ai",
       "titleZh": "OpenAI 发布 GPT-6 Sol 与 GPT-6 Luna",
       "titleEn": "Introducing GPT-6 Sol and Luna",
@@ -87,16 +1132,14 @@
       "keywords": [
         "GPT-6 Sol",
         "GPT-6 Luna",
-        "GPT-6 Astra",
         "OpenAI",
-        "API价格",
-        "降价"
+        "API 价格",
+        "GPT-6 Astra"
       ],
       "topics": [
-        "OpenAI",
-        "GPT-6",
-        "API定价",
-        "模型发布"
+        "模型发布",
+        "API 定价",
+        "OpenAI"
       ],
       "models": [
         "GPT-6 Sol",
@@ -104,22 +1147,22 @@
         "GPT-6 Astra",
         "GPT-5.6"
       ],
-      "detailZh": "OpenAI 发布了 GPT-6 Sol 和 GPT-6 Luna 两款新模型。根据官方信息，这两款模型采用了 GPT-6 Astra 的训练方法，目标是提供更快、更便宜的模型。\n\n此次发布最受关注的是 API 定价调整。与 GPT-5.6 的促销价相比，新模型价格下调了 50%。具体来看，GPT-6 Sol 的输入价格从每百万 token 4 美元降至 2 美元，输出价格从 20 美元降至 10 美元；GPT-6 Luna 的输入价格从 0.20 美元降至 0.10 美元，输出价格从 1.20 美元降至 0.50 美元。\n\n目前公开的信息集中在模型名称、训练方法来源和价格变化上，关于模型的具体能力、上下文长度、基准测试表现等细节尚未在现有材料中披露。",
+      "detailZh": "OpenAI 发布了 GPT-6 Sol 和 GPT-6 Luna 两款新模型。根据官方信息，这两款模型采用了 GPT-6 Astra 的训练方法，目标是提供更快、更便宜的模型。\n\n在定价方面，OpenAI 将这两款模型的 API 价格较 GPT-5.6 的促销价下调了 50%。具体而言，GPT-6 Sol 的输入价格从每百万 token 4 美元降至 2 美元，输出价格从 20 美元降至 10 美元；GPT-6 Luna 的输入价格从每百万 token 0.20 美元降至 0.10 美元，输出价格从 1.20 美元降至 0.50 美元。\n\n目前公开的信息集中在模型名称、训练方法来源和价格调整上，关于模型的具体能力、上下文长度、基准测试表现等细节尚未在现有材料中披露。",
       "keyPointsZh": [
         "OpenAI 发布 GPT-6 Sol 和 GPT-6 Luna 两款新模型。",
         "两款模型采用了 GPT-6 Astra 的训练方法。",
         "API 价格较 GPT-5.6 促销价下调 50%。",
         "Sol 输入 $4→$2、输出 $20→$10；Luna 输入 $0.20→$0.10、输出 $1.20→$0.50（每百万 token）。"
       ],
-      "impactZh": "此次发布将 GPT-6 级别的训练方法下放到更快更便宜的模型中，同时 API 价格减半，可能降低开发者和企业使用先进模型的门槛，并加剧大模型 API 市场的价格竞争。",
+      "impactZh": "此次发布将 GPT-6 Astra 的训练方法下放到更快更便宜的模型，并大幅下调 API 价格，可能降低开发者使用先进模型的门槛，并加剧大模型 API 市场的价格竞争。",
       "readerImpactZh": "",
-      "userImpactZh": "对 AI 开发者和团队而言，调用 GPT-6 Sol 和 Luna 的成本较 GPT-5.6 促销价降低一半，尤其是 Luna 的输出价格从每百万 token 1.20 美元降至 0.50 美元，适合高频、大批量的推理场景。",
+      "userImpactZh": "对开发者和团队而言，GPT-6 Sol 和 Luna 的 API 调用成本较 GPT-5.6 促销价降低一半，有助于降低基于这些模型构建应用的成本。",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：OpenAI 发布了 GPT-6 Sol 和 GPT-6 Luna，二者使用 GPT-6 Astra 的训练方法，且 API 价格较 GPT-5.6 促销价下调 50%。可以合理推断的是，OpenAI 正试图通过复用 Astra 的训练方法来降低新模型的研发与推理成本，并以价格优势吸引开发者。但模型的实际性能、适用场景和与 Astra 的差距，目前尚无公开数据支持。",
-      "limitationsZh": "现有材料未披露 GPT-6 Sol 和 Luna 的基准测试成绩、上下文窗口、多模态能力、可用地区及正式上线时间；价格对比对象是 GPT-5.6 的促销价而非标准价，实际长期定价可能不同。",
+      "interpretationZh": "已确认的事实是：OpenAI 发布了 GPT-6 Sol 和 GPT-6 Luna，二者采用 GPT-6 Astra 的训练方法，且 API 价格较 GPT-5.6 促销价下调 50%。可以合理推断，OpenAI 意在通过更低价格和更快模型吸引更多 API 用户。但模型的实际性能、适用场景和与 Astra 的具体差异，现有材料并未说明。",
+      "limitationsZh": "现有信息未披露模型的具体能力、上下文长度、基准测试成绩、可用性范围及发布地区等细节，价格调整的持续时间也未说明。",
       "actionStepsZh": [
-        "开发者可对比 GPT-6 Sol/Luna 与 GPT-5.6 的每百万 token 成本，评估迁移或新增调用的预算影响。",
-        "高频批量推理场景可优先评估 GPT-6 Luna，其输出价格降幅最大。"
+        "开发者可查阅 OpenAI 官方定价页面，确认 GPT-6 Sol 和 Luna 的最新 API 价格。",
+        "评估现有应用中使用的模型，判断是否可迁移至成本更低的 GPT-6 Sol 或 Luna。"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -127,45 +1170,25 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "GPT-6 Sol 和 Luna 的输入与输出价格均较 GPT-5.6 促销价下降 50%，其中 Luna 输出价格从 1.20 美元降至 0.50 美元，降幅最大。",
+        "insightZh": "GPT-6 Sol 的输入和输出价格均高于 GPT-6 Luna，其中 Sol 输出价格为 Luna 的 20 倍。",
         "data": [
           {
-            "label": "Sol 输入 (GPT-5.6)",
-            "value": 4,
-            "display": ""
-          },
-          {
-            "label": "Sol 输入 (GPT-6)",
+            "label": "Sol 输入",
             "value": 2,
             "display": ""
           },
           {
-            "label": "Sol 输出 (GPT-5.6)",
-            "value": 20,
-            "display": ""
-          },
-          {
-            "label": "Sol 输出 (GPT-6)",
+            "label": "Sol 输出",
             "value": 10,
             "display": ""
           },
           {
-            "label": "Luna 输入 (GPT-5.6)",
-            "value": 0.2,
-            "display": ""
-          },
-          {
-            "label": "Luna 输入 (GPT-6)",
+            "label": "Luna 输入",
             "value": 0.1,
             "display": ""
           },
           {
-            "label": "Luna 输出 (GPT-5.6)",
-            "value": 1.2,
-            "display": ""
-          },
-          {
-            "label": "Luna 输出 (GPT-6)",
+            "label": "Luna 输出",
             "value": 0.5,
             "display": ""
           }
@@ -222,7 +1245,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T21:25:03.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -233,20 +1256,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T22:12:40.514Z",
-            "label": "9/23 06:12",
-            "value": 69,
+            "at": "2026-09-22T22:19:05.689Z",
+            "label": "9/23 06:19",
+            "value": 52,
             "reports": 3
           },
           {
-            "at": "2026-09-22T23:00:18.028Z",
-            "label": "9/23 07:00",
-            "value": 97,
+            "at": "2026-09-22T23:13:08.378Z",
+            "label": "9/23 07:13",
+            "value": 63,
             "reports": 3
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T00:07:11.067Z",
+            "label": "9/23 08:07",
+            "value": 73,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-23T01:01:13.756Z",
+            "label": "9/23 09:01",
+            "value": 83,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-23T01:55:16.445Z",
+            "label": "9/23 09:55",
+            "value": 93,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-23T02:49:19.134Z",
+            "label": "9/23 10:49",
+            "value": 100,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-23T03:43:21.823Z",
+            "label": "9/23 11:43",
+            "value": 100,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 100,
             "reports": 3
           }
@@ -293,10 +1346,10 @@
         }
       ],
       "importance": 75,
-      "importanceReasonZh": "这是 OpenAI 官方发布的关于 GPT-6 提示缓存改进的说明，直接影响使用该模型的开发者的延迟与成本。",
-      "importanceReasonEn": "This is an official OpenAI announcement about prompt caching improvements in GPT-6, directly affecting latency and cost for developers using the model.",
+      "importanceReasonZh": "GPT-6 的提示缓存改进直接影响开发者的延迟和成本，是模型推理优化的重要更新。",
+      "importanceReasonEn": "GPT-6's prompt caching improvements directly affect developer latency and cost, making it a significant update for model inference optimization.",
       "scoringMode": "ai",
-      "titleZh": "GPT-6 更佳的提示缓存",
+      "titleZh": "GPT-6 改进提示缓存",
       "titleEn": "Better prompt caching for GPT-6",
       "summaryZh": "了解 GPT-6 如何通过更高的缓存命中率、新的诊断功能、显式断点以及降低延迟和成本的控制来改进提示缓存。",
       "summaryEn": "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.",
@@ -305,7 +1358,7 @@
         "prompt caching",
         "cache hit rate",
         "diagnostics",
-        "explicit breakpoints",
+        "breakpoints",
         "latency",
         "cost"
       ],
@@ -318,23 +1371,24 @@
       "models": [
         "GPT-6"
       ],
-      "detailZh": "OpenAI 发布了关于 GPT-6 提示缓存改进的官方说明。该说明指出，GPT-6 在提示缓存方面带来了多项提升，包括更高的缓存命中率、新的诊断功能、显式断点以及用于降低延迟和成本的控制。\n\n提示缓存是一种让模型复用先前处理过的提示前缀、从而避免重复计算的技术。GPT-6 的改进集中在让缓存更频繁地命中，并提供诊断工具帮助开发者理解缓存行为。显式断点允许开发者标记提示中适合缓存的位置，从而更精确地控制缓存范围。\n\n这些控制措施旨在减少请求延迟并降低使用成本。该说明面向使用 GPT-6 的开发者，属于官方产品更新，但输入材料仅提供了摘要级别信息，未包含具体数值、配置示例或技术实现细节。",
+      "detailZh": "OpenAI 发布了关于 GPT-6 提示缓存改进的官方介绍。该更新旨在通过提高缓存命中率、引入新的诊断工具、支持显式断点以及提供更多控制选项，来降低使用 GPT-6 时的延迟和成本。\n\n提示缓存是一种优化技术，允许模型重复使用之前处理过的提示部分，从而避免重复计算。GPT-6 在此基础上进行了增强，使缓存更高效、更可控。\n\n具体改进包括：更高的缓存命中率，意味着更多请求能够受益于缓存；新的诊断功能，帮助开发者了解缓存的使用情况和效果；显式断点，允许开发者精确指定缓存边界；以及额外的控制选项，用于调整缓存行为以平衡延迟和成本。\n\n这些改进对于需要频繁调用 GPT-6 的应用尤其有价值，可以显著减少响应时间和 API 调用费用。OpenAI 通过官方渠道分享了这些信息，但未提供具体的性能数据或基准测试结果。",
       "keyPointsZh": [
-        "GPT-6 改进了提示缓存，带来更高的缓存命中率。",
-        "新增诊断功能，帮助开发者了解缓存行为。",
-        "引入显式断点，允许更精确地控制缓存位置。",
-        "提供控制措施以降低延迟和成本。"
+        "GPT-6 提升了提示缓存的命中率",
+        "新增诊断功能帮助监控缓存效果",
+        "支持显式断点以精确控制缓存范围",
+        "提供更多控制选项以降低延迟和成本"
       ],
-      "impactZh": "该更新可能降低使用 GPT-6 的延迟和成本，并让开发者对缓存行为有更强的控制力，从而影响基于该模型构建的应用的经济性和响应速度。",
+      "impactZh": "这一改进将帮助开发者更高效地使用 GPT-6，减少重复计算，从而降低运营成本并提升用户体验。对于依赖大模型的应用，缓存优化是提升性能的关键手段之一。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 GPT-6 的开发者可以通过更高的缓存命中率和显式断点来优化提示结构，减少重复计算，从而降低延迟和 API 成本；诊断功能有助于排查缓存未命中的原因。",
-      "howItWorksZh": "提示缓存通过复用先前请求中已处理过的提示前缀来避免重复计算。GPT-6 提高了缓存命中率，并新增诊断功能以观察缓存行为；显式断点让开发者标记提示中可缓存的位置，从而更精确地控制哪些部分被缓存。这些机制共同作用以减少延迟和成本。",
-      "interpretationZh": "根据官方说明，GPT-6 在提示缓存上做了多项改进，包括命中率、诊断、显式断点和成本控制。这些属于已报告的功能更新；具体提升幅度和实现方式未在输入材料中给出，因此无法进一步推断。",
-      "limitationsZh": "输入材料仅为摘要，未提供具体的缓存命中率数值、延迟或成本降低幅度、显式断点的配置方式、诊断功能的具体形式，也未说明这些改进是否适用于所有 GPT-6 部署环境。",
+      "userImpactZh": "对于使用 GPT-6 的开发者，可以通过新的诊断和断点功能更精细地管理提示缓存，从而减少 API 调用延迟和费用。建议在频繁重复使用相同提示前缀的场景中启用缓存优化。",
+      "howItWorksZh": "提示缓存通过存储和重用之前计算过的提示表示来工作。当相同或相似的提示再次出现时，模型可以直接从缓存中读取，而不必重新计算。GPT-6 的改进包括：1）提高缓存命中率，可能通过更智能的匹配算法；2）显式断点允许开发者在提示中标记缓存边界，确保只有稳定部分被缓存；3）诊断工具提供缓存命中率、节省的令牌数等指标；4）控制选项可能包括缓存过期时间、最大缓存大小等参数。",
+      "interpretationZh": "根据 OpenAI 的官方信息，GPT-6 在提示缓存方面进行了多项改进，旨在优化延迟和成本。这些改进是工程上的增强，而非模型能力的根本变化。具体效果取决于实际使用模式，但官方未提供量化数据。",
+      "limitationsZh": "官方未提供具体的性能提升数据或基准测试结果，因此实际效果可能因使用场景而异。此外，缓存优化可能对某些类型的提示效果有限，例如高度动态或唯一的提示。",
       "actionStepsZh": [
-        "在使用 GPT-6 时，利用显式断点标记提示中适合缓存的部分。",
-        "通过新的诊断功能检查缓存命中情况，定位未命中的原因。",
-        "根据缓存行为调整提示结构，以降低延迟和成本。"
+        "在调用 GPT-6 时启用提示缓存功能",
+        "利用新的诊断工具监控缓存命中率和节省情况",
+        "在提示中设置显式断点以优化缓存边界",
+        "根据应用需求调整缓存控制参数以平衡延迟和成本"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -357,7 +1411,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T21:00:00.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -368,20 +1422,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T21:55:58.514Z",
-            "label": "9/23 05:55",
-            "value": 31,
+            "at": "2026-09-22T21:57:10.564Z",
+            "label": "9/23 05:57",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:51:57.028Z",
-            "label": "9/23 06:51",
-            "value": 49,
+            "at": "2026-09-22T22:54:21.128Z",
+            "label": "9/23 06:54",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-22T23:51:31.692Z",
+            "label": "9/23 07:51",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:48:42.256Z",
+            "label": "9/23 08:48",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:45:52.820Z",
+            "label": "9/23 09:45",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:43:03.384Z",
+            "label": "9/23 10:43",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:40:13.948Z",
+            "label": "9/23 11:40",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 66,
             "reports": 1
           }
@@ -529,7 +1613,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T20:12:31.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -540,26 +1624,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T21:06:22.135Z",
-            "label": "9/23 05:06",
-            "value": 29,
+            "at": "2026-09-22T21:08:36.945Z",
+            "label": "9/23 05:08",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:00:13.271Z",
-            "label": "9/23 06:00",
-            "value": 44,
+            "at": "2026-09-22T22:04:42.891Z",
+            "label": "9/23 06:04",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:54:04.407Z",
-            "label": "9/23 06:54",
-            "value": 59,
+            "at": "2026-09-22T23:00:48.837Z",
+            "label": "9/23 07:00",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-22T23:56:54.783Z",
+            "label": "9/23 07:56",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:53:00.729Z",
+            "label": "9/23 08:53",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:49:06.675Z",
+            "label": "9/23 09:49",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:45:12.621Z",
+            "label": "9/23 10:45",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:41:18.567Z",
+            "label": "9/23 11:41",
+            "value": 67,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 74,
             "reports": 1
           }
@@ -681,7 +1795,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T20:06:51.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -692,26 +1806,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T21:02:07.135Z",
-            "label": "9/23 05:02",
-            "value": 25,
+            "at": "2026-09-22T21:03:34.723Z",
+            "label": "9/23 05:03",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:57:23.271Z",
-            "label": "9/23 05:57",
-            "value": 37,
+            "at": "2026-09-22T22:00:18.447Z",
+            "label": "9/23 06:00",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:52:39.407Z",
-            "label": "9/23 06:52",
-            "value": 48,
+            "at": "2026-09-22T22:57:02.171Z",
+            "label": "9/23 06:57",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-22T23:53:45.894Z",
+            "label": "9/23 07:53",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:50:29.618Z",
+            "label": "9/23 08:50",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:47:13.342Z",
+            "label": "9/23 09:47",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:43:57.065Z",
+            "label": "9/23 10:43",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:40:40.789Z",
+            "label": "9/23 11:40",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 59,
             "reports": 1
           }
@@ -813,7 +1957,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T20:00:00.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -824,26 +1968,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T20:56:58.885Z",
-            "label": "9/23 04:56",
-            "value": 25,
+            "at": "2026-09-22T20:57:29.390Z",
+            "label": "9/23 04:57",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:53:57.771Z",
-            "label": "9/23 05:53",
-            "value": 36,
+            "at": "2026-09-22T21:54:58.780Z",
+            "label": "9/23 05:54",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:50:56.657Z",
-            "label": "9/23 06:50",
-            "value": 47,
+            "at": "2026-09-22T22:52:28.171Z",
+            "label": "9/23 06:52",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-22T23:49:57.561Z",
+            "label": "9/23 07:49",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:47:26.951Z",
+            "label": "9/23 08:47",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:44:56.342Z",
+            "label": "9/23 09:44",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:42:25.732Z",
+            "label": "9/23 10:42",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:39:55.122Z",
+            "label": "9/23 11:39",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 58,
             "reports": 1
           }
@@ -961,7 +2135,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T19:29:49.288Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -972,32 +2146,62 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T20:21:26.539Z",
-            "label": "9/23 04:21",
+            "at": "2026-09-22T20:24:34.810Z",
+            "label": "9/23 04:24",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T21:19:20.333Z",
+            "label": "9/23 05:19",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:13:03.790Z",
-            "label": "9/23 05:13",
+            "at": "2026-09-22T22:14:05.855Z",
+            "label": "9/23 06:14",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:08:51.378Z",
+            "label": "9/23 07:08",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:04:41.041Z",
-            "label": "9/23 06:04",
+            "at": "2026-09-23T00:03:36.900Z",
+            "label": "9/23 08:03",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:58:22.423Z",
+            "label": "9/23 08:58",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:56:18.292Z",
-            "label": "9/23 06:56",
+            "at": "2026-09-23T01:53:07.945Z",
+            "label": "9/23 09:53",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:47:53.468Z",
+            "label": "9/23 10:47",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:42:38.990Z",
+            "label": "9/23 11:42",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 68,
             "reports": 1
           }
@@ -1116,7 +2320,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T19:29:01.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1127,33 +2331,248 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T20:20:47.908Z",
-            "label": "9/23 04:20",
+            "at": "2026-09-22T20:23:51.351Z",
+            "label": "9/23 04:23",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T21:18:41.702Z",
+            "label": "9/23 05:18",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:12:34.817Z",
-            "label": "9/23 05:12",
+            "at": "2026-09-22T22:13:32.053Z",
+            "label": "9/23 06:13",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:08:22.405Z",
+            "label": "9/23 07:08",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:04:21.725Z",
-            "label": "9/23 06:04",
+            "at": "2026-09-23T00:03:12.756Z",
+            "label": "9/23 08:03",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:58:03.107Z",
+            "label": "9/23 08:58",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:56:08.634Z",
-            "label": "9/23 06:56",
+            "at": "2026-09-23T01:52:53.459Z",
+            "label": "9/23 09:52",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:47:43.810Z",
+            "label": "9/23 10:47",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:42:34.161Z",
+            "label": "9/23 11:42",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "de0493e40ab04f04",
+      "normalizedUrl": "https://bloomberg.com/graphics/2026-iran-school-attack",
+      "originalUrl": "https://www.bloomberg.com/graphics/2026-iran-school-attack",
+      "titleOriginal": "五角大楼调查：过度依赖 Maven AI 是美军误击伊朗米纳布学校的原因之一",
+      "summaryOriginal": "五角大楼内部调查发现，2026 年 2 月 28 日两枚 Tomahawk 导弹击中伊朗米纳布 Shajarah Tayyebeh 小学，造成超过 150 人死亡、其中至少 123 名儿童，原因是情报过时、卫星图像七年未更新，以及 Centcom 部分人员过度依赖 Palantir 的 Maven Smart System。",
+      "originalLanguage": "zh",
+      "author": "Hacker News：AI 热帖",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 86,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmud57mjw02snrora28mvi2h0",
+        "https://www.bloomberg.com/graphics/2026-iran-school-attack"
+      ],
+      "publishedAt": "2026-09-22T19:03:38.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-22T20:44:52.774Z",
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmud57mjw02snrora28mvi2h0"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmud57mjw02snrora28mvi2h0",
+          "name": "Hacker News：AI 热帖",
+          "type": "practitioner",
+          "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack",
+          "publishedAt": "2026-09-22T19:03:38.000Z",
+          "title": "五角大楼调查：过度依赖 Maven AI 是美军误击伊朗米纳布学校的原因之一",
+          "authority": 86,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmud57mjw02snrora28mvi2h0",
+            "https://www.bloomberg.com/graphics/2026-iran-school-attack"
+          ]
+        }
+      ],
+      "importance": 82,
+      "importanceReasonZh": "该事件直接涉及 AI 辅助目标选择系统在实战中导致大规模平民伤亡，是 AI 军事应用风险的重要案例，对 AI 治理、军事伦理和系统设计都有广泛影响。",
+      "importanceReasonEn": "The incident directly involves an AI-assisted targeting system contributing to mass civilian casualties in combat, making it a significant case for AI military risk with broad implications for AI governance, military ethics and system design.",
+      "scoringMode": "ai",
+      "titleZh": "五角大楼调查：过度依赖 Maven AI 是美军误击伊朗米纳布学校的原因之一",
+      "titleEn": "Pentagon Probe: Over-Reliance on Maven AI Contributed to Errant U.S. Strike on Iran's Minab School",
+      "summaryZh": "五角大楼内部调查发现，2026 年 2 月 28 日两枚 Tomahawk 导弹击中伊朗米纳布 Shajarah Tayyebeh 小学，造成超过 150 人死亡、其中至少 123 名儿童，原因是情报过时、卫星图像七年未更新，以及 Centcom 部分人员过度依赖 Palantir 的 Maven Smart System。",
+      "summaryEn": "An internal Pentagon investigation found that two Tomahawk missiles struck the Shajarah Tayyebeh primary school in Minab, Iran, on February 28, 2026, killing more than 150 people, at least 123 of them children, due to outdated intelligence, satellite imagery that had not been updated in seven years, and over-reliance by some Centcom personnel on Palantir's Maven Smart System.",
+      "keywords": [
+        "Maven Smart System",
+        "Palantir",
+        "Centcom",
+        "Tomahawk",
+        "米纳布",
+        "误击",
+        "卫星图像",
+        "情报过时"
+      ],
+      "topics": [
+        "AI 军事应用",
+        "Maven Smart System",
+        "Palantir",
+        "目标识别",
+        "平民伤亡",
+        "五角大楼调查"
+      ],
+      "models": [
+        "Maven Smart System"
+      ],
+      "detailZh": "五角大楼一项内部调查认定，2026 年 2 月 28 日两枚 Tomahawk 导弹击中了伊朗米纳布（Minab）的 Shajarah Tayyebeh 小学，造成超过 150 人死亡，其中至少 123 名儿童。调查将这一误击归因于多重因素叠加，而非单一失误。\n\n调查指出的核心问题包括：情报已经过时，用于目标确认的卫星图像长达七年没有更新，导致目标识别所依据的基础数据与地面实际情况严重脱节。\n\n与此同时，Centcom 部分人员在目标确认流程中过度依赖 Palantir 的 Maven Smart System。该系统被用于辅助分析情报与目标信息，但调查认为部分人员对其输出给予了过高信任，未能通过其他独立手段核实目标性质。\n\n上述因素共同作用，最终导致导弹击中了本应是学校的建筑。调查结论强调，问题不在于 AI 系统本身单独造成事故，而在于过时数据、流程缺陷与对自动化系统过度依赖的叠加。",
+      "keyPointsZh": [
+        "2026 年 2 月 28 日两枚 Tomahawk 导弹击中伊朗米纳布 Shajarah Tayyebeh 小学，超过 150 人死亡，其中至少 123 名儿童。",
+        "五角大楼内部调查认定，情报过时与卫星图像七年未更新是重要原因。",
+        "Centcom 部分人员被指过度依赖 Palantir 的 Maven Smart System 进行目标确认。",
+        "调查将事故归因于数据、流程与人员对 AI 系统信任度叠加，而非单一因素。"
+      ],
+      "impactZh": "该事件凸显 AI 辅助目标识别系统在实战中的风险：当基础情报数据过时、人员又过度信任系统输出时，可能造成严重平民伤亡。这将对军事 AI 的部署规范、人工复核要求和 AI 治理讨论产生直接影响。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用 AI 辅助决策系统的团队，该事件说明：系统输出不能替代独立核实，尤其在数据可能过时的高风险场景中，必须保留人工复核与多源交叉验证环节。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据调查披露的信息，事故并非由 AI 系统单独导致，而是过时情报、七年未更新的卫星图像，以及部分人员对 Maven Smart System 输出的过度信任共同作用的结果。可以合理推断，若目标确认流程中包含独立核实或数据时效性检查，误击可能被避免；但调查的具体技术细节与责任认定尚未在来源中完整披露。",
+      "limitationsZh": "来源为 Hacker News 上的 AI 热帖，属于二手转述，未提供五角大楼调查报告原文、具体调查方法、责任认定结论或 Maven Smart System 在本次目标确认中的具体输出内容。伤亡数字与时间线来自该转述，尚待独立核实。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmud57mjw02snrora28mvi2h0",
+          "name": "Hacker News：AI 热帖",
+          "type": "practitioner",
+          "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack",
+          "publishedAt": "2026-09-22T19:03:38.000Z",
+          "title": "五角大楼调查：过度依赖 Maven AI 是美军误击伊朗米纳布学校的原因之一",
+          "authority": 86,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmud57mjw02snrora28mvi2h0",
+            "https://www.bloomberg.com/graphics/2026-iran-school-attack"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-22T19:03:38.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 70,
+        "peak": 70,
+        "history": [
+          {
+            "at": "2026-09-22T19:03:38.000Z",
+            "label": "9/23 03:03",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-22T20:01:00.651Z",
+            "label": "9/23 04:01",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T20:58:23.302Z",
+            "label": "9/23 04:58",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T21:55:45.953Z",
+            "label": "9/23 05:55",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T22:53:08.605Z",
+            "label": "9/23 06:53",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:50:31.256Z",
+            "label": "9/23 07:50",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:47:53.907Z",
+            "label": "9/23 08:47",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:45:16.559Z",
+            "label": "9/23 09:45",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:42:39.210Z",
+            "label": "9/23 10:42",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:40:01.861Z",
+            "label": "9/23 11:40",
+            "value": 65,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 70,
             "reports": 1
           }
         ],
@@ -1300,7 +2719,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T18:59:35.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1311,33 +2730,276 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T19:57:15.108Z",
+            "at": "2026-09-22T19:57:21.951Z",
             "label": "9/23 03:57",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T20:55:08.902Z",
+            "label": "9/23 04:55",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:54:55.217Z",
-            "label": "9/23 04:54",
+            "at": "2026-09-22T21:52:55.853Z",
+            "label": "9/23 05:52",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T22:50:42.805Z",
+            "label": "9/23 06:50",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:52:35.325Z",
-            "label": "9/23 05:52",
+            "at": "2026-09-22T23:48:29.756Z",
+            "label": "9/23 07:48",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:46:16.707Z",
+            "label": "9/23 08:46",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:50:15.434Z",
-            "label": "9/23 06:50",
+            "at": "2026-09-23T01:44:03.659Z",
+            "label": "9/23 09:44",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:41:50.610Z",
+            "label": "9/23 10:41",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:39:37.561Z",
+            "label": "9/23 11:39",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 68,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "8a51114d4adb208f",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/22/llm",
+      "originalUrl": "https://simonwillison.net/2026/Sep/22/llm/",
+      "titleOriginal": "llm 0.36",
+      "summaryOriginal": "Release: llm 0.36 New OpenAI models: gpt-6-sol for GPT-6 Sol and gpt-6-luna for GPT-6 Luna . #1702 Model plugins can now declare supports_conversation = False for models that only accept single-turn prompts. LLM raises llm.ConversationNotSupported when these models receive assistant or tool history, and llm chat rejects them before starting a session. See Models that do not support conversations . The first plugin to use this is llm-typesafe . #1692 Reasoning traces in the Markdown output of llm logs are now wrapped in tags. #1701 Plus bug fixes from five new contributors . Tags: openai , llm",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/llm/releases/tag/0.36",
+        "https://developers.openai.com/api/docs/models/gpt-6-sol",
+        "https://developers.openai.com/api/docs/models/gpt-6-luna",
+        "https://github.com/simonw/llm/issues/1702",
+        "https://llm.datasette.io/en/stable/plugins/advanced-model-plugins.html#advanced-model-plugins-conversations",
+        "https://github.com/simonw/llm-typesafe",
+        "https://github.com/simonw/llm/issues/1692",
+        "https://github.com/simonw/llm/issues/1701",
+        "https://llm.datasette.io/en/stable/changelog.html#v0-36",
+        "https://simonwillison.net/tags/openai",
+        "https://simonwillison.net/tags/llm"
+      ],
+      "publishedAt": "2026-09-22T18:48:37.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/22/llm/",
+          "publishedAt": "2026-09-22T18:48:37.000Z",
+          "title": "llm 0.36",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm/releases/tag/0.36",
+            "https://developers.openai.com/api/docs/models/gpt-6-sol",
+            "https://developers.openai.com/api/docs/models/gpt-6-luna",
+            "https://github.com/simonw/llm/issues/1702",
+            "https://llm.datasette.io/en/stable/plugins/advanced-model-plugins.html#advanced-model-plugins-conversations",
+            "https://github.com/simonw/llm-typesafe",
+            "https://github.com/simonw/llm/issues/1692",
+            "https://github.com/simonw/llm/issues/1701",
+            "https://llm.datasette.io/en/stable/changelog.html#v0-36",
+            "https://simonwillison.net/tags/openai",
+            "https://simonwillison.net/tags/llm"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "这是 llm 工具的一次常规版本更新，新增模型和对话支持声明机制，对使用该工具的开发者和团队有实际影响。",
+      "importanceReasonEn": "This is a routine release of the llm tool with new models and a conversation support declaration mechanism, with practical impact for developers and teams using the tool.",
+      "scoringMode": "ai",
+      "titleZh": "llm 0.36 版本发布",
+      "titleEn": "llm 0.36",
+      "summaryZh": "llm 0.36 发布，新增 OpenAI 模型 gpt-6-sol 和 gpt-6-luna，模型插件可声明不支持多轮对话，日志中的推理轨迹被包裹在标签中，并包含五位新贡献者的错误修复。",
+      "summaryEn": "llm 0.36 released with new OpenAI models gpt-6-sol and gpt-6-luna, model plugins can declare no conversation support, reasoning traces in logs are wrapped in tags, plus bug fixes from five new contributors.",
+      "keywords": [
+        "llm 0.36",
+        "gpt-6-sol",
+        "gpt-6-luna",
+        "supports_conversation",
+        "llm-typesafe",
+        "reasoning traces",
+        "llm logs"
+      ],
+      "topics": [
+        "llm",
+        "openai",
+        "model-plugins",
+        "conversation-support",
+        "logging"
+      ],
+      "models": [
+        "gpt-6-sol",
+        "gpt-6-luna"
+      ],
+      "detailZh": "llm 0.36 是一次版本发布，主要包含几项更新。首先，新增了两个 OpenAI 模型：gpt-6-sol 对应 GPT-6 Sol，gpt-6-luna 对应 GPT-6 Luna。其次，模型插件现在可以声明 supports_conversation = False，用于那些只接受单轮提示的模型。当这些模型收到助手或工具历史时，LLM 会抛出 llm.ConversationNotSupported 异常，而 llm chat 会在开始会话前拒绝它们。第一个使用该功能的插件是 llm-typesafe。此外，llm logs 的 Markdown 输出中的推理轨迹现在被包裹在标签中。本次发布还包含来自五位新贡献者的错误修复。",
+      "keyPointsZh": [
+        "新增 OpenAI 模型 gpt-6-sol 和 gpt-6-luna",
+        "模型插件可声明 supports_conversation = False，仅支持单轮提示",
+        "llm-typesafe 是首个使用该声明的插件",
+        "llm logs 的 Markdown 输出中推理轨迹被包裹在标签中",
+        "包含五位新贡献者的错误修复"
+      ],
+      "impactZh": "该版本让 llm 工具能够更准确地处理仅支持单轮提示的模型，避免在会话中错误传入历史记录，同时新增的 OpenAI 模型扩展了可用模型范围。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 llm 工具的开发者和团队可以升级到 0.36 版本，以使用新的 OpenAI 模型，并通过 supports_conversation 声明避免对单轮模型误用多轮对话；日志中推理轨迹的标签化也便于解析和展示。",
+      "howItWorksZh": "模型插件通过设置 supports_conversation = False 来声明其仅支持单轮提示。当此类模型收到助手或工具历史时，LLM 会抛出 llm.ConversationNotSupported 异常；llm chat 命令会在启动会话前检测并拒绝这些模型。llm logs 的 Markdown 输出中，推理轨迹会被包裹在特定标签内，便于区分和提取。",
+      "interpretationZh": "根据发布说明，llm 0.36 主要增加了两个 OpenAI 模型，并引入了一种让插件声明不支持多轮对话的机制，同时改进了日志中推理轨迹的标记方式。这些更新属于工具的功能性改进，具体效果取决于实际使用场景。",
+      "limitationsZh": "发布说明未提供新模型的具体能力、定价或上下文长度等细节，也未说明标签的具体名称和格式。错误修复的具体内容未列出。",
+      "actionStepsZh": [
+        "升级到 llm 0.36 以使用 gpt-6-sol 和 gpt-6-luna 模型",
+        "在开发仅支持单轮提示的模型插件时，设置 supports_conversation = False",
+        "检查 llm logs 的 Markdown 输出，确认推理轨迹标签是否符合解析需求"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/22/llm/",
+          "publishedAt": "2026-09-22T18:48:37.000Z",
+          "title": "llm 0.36",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm/releases/tag/0.36",
+            "https://developers.openai.com/api/docs/models/gpt-6-sol",
+            "https://developers.openai.com/api/docs/models/gpt-6-luna",
+            "https://github.com/simonw/llm/issues/1702",
+            "https://llm.datasette.io/en/stable/plugins/advanced-model-plugins.html#advanced-model-plugins-conversations",
+            "https://github.com/simonw/llm-typesafe",
+            "https://github.com/simonw/llm/issues/1692",
+            "https://github.com/simonw/llm/issues/1701",
+            "https://llm.datasette.io/en/stable/changelog.html#v0-36",
+            "https://simonwillison.net/tags/openai",
+            "https://simonwillison.net/tags/llm"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-22T18:48:37.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-09-22T18:48:37.000Z",
+            "label": "9/23 02:48",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-22T19:47:29.751Z",
+            "label": "9/23 03:47",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T20:46:22.502Z",
+            "label": "9/23 04:46",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T21:45:15.253Z",
+            "label": "9/23 05:45",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T22:44:08.005Z",
+            "label": "9/23 06:44",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:43:00.756Z",
+            "label": "9/23 07:43",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:41:53.507Z",
+            "label": "9/23 08:41",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:40:46.259Z",
+            "label": "9/23 09:40",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:39:39.010Z",
+            "label": "9/23 10:39",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:38:31.761Z",
+            "label": "9/23 11:38",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -1511,7 +3173,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T18:25:02.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 93,
         "peak": 93,
         "history": [
@@ -1522,38 +3184,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T19:18:50.923Z",
-            "label": "9/23 03:18",
-            "value": 39,
+            "at": "2026-09-22T19:20:42.228Z",
+            "label": "9/23 03:20",
+            "value": 34,
             "reports": 2
           },
           {
-            "at": "2026-09-22T20:12:39.847Z",
-            "label": "9/23 04:12",
-            "value": 50,
+            "at": "2026-09-22T20:16:22.456Z",
+            "label": "9/23 04:16",
+            "value": 40,
             "reports": 2
           },
           {
-            "at": "2026-09-22T21:06:28.771Z",
-            "label": "9/23 05:06",
-            "value": 61,
+            "at": "2026-09-22T21:12:02.685Z",
+            "label": "9/23 05:12",
+            "value": 46,
             "reports": 2
           },
           {
-            "at": "2026-09-22T22:00:17.695Z",
-            "label": "9/23 06:00",
-            "value": 72,
+            "at": "2026-09-22T22:07:42.913Z",
+            "label": "9/23 06:07",
+            "value": 52,
             "reports": 2
           },
           {
-            "at": "2026-09-22T22:54:06.619Z",
-            "label": "9/23 06:54",
-            "value": 82,
+            "at": "2026-09-22T23:03:23.142Z",
+            "label": "9/23 07:03",
+            "value": 58,
             "reports": 2
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-22T23:59:03.370Z",
+            "label": "9/23 07:59",
+            "value": 64,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T00:54:43.599Z",
+            "label": "9/23 08:54",
+            "value": 70,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T01:50:23.827Z",
+            "label": "9/23 09:50",
+            "value": 75,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T02:46:04.056Z",
+            "label": "9/23 10:46",
+            "value": 81,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T03:41:44.284Z",
+            "label": "9/23 11:41",
+            "value": 87,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 93,
             "reports": 2
           }
@@ -1702,7 +3394,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T18:23:35.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1713,38 +3405,288 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T19:17:38.423Z",
-            "label": "9/23 03:17",
-            "value": 22,
+            "at": "2026-09-22T19:19:23.137Z",
+            "label": "9/23 03:19",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:11:41.847Z",
-            "label": "9/23 04:11",
-            "value": 31,
+            "at": "2026-09-22T20:15:11.275Z",
+            "label": "9/23 04:15",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:05:45.271Z",
-            "label": "9/23 05:05",
-            "value": 39,
+            "at": "2026-09-22T21:10:59.412Z",
+            "label": "9/23 05:10",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:59:48.695Z",
-            "label": "9/23 05:59",
-            "value": 48,
+            "at": "2026-09-22T22:06:47.550Z",
+            "label": "9/23 06:06",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:53:52.119Z",
-            "label": "9/23 06:53",
+            "at": "2026-09-22T23:02:35.687Z",
+            "label": "9/23 07:02",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:58:23.825Z",
+            "label": "9/23 07:58",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:54:11.962Z",
+            "label": "9/23 08:54",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:50:00.100Z",
+            "label": "9/23 09:50",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:45:48.237Z",
+            "label": "9/23 10:45",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:41:36.375Z",
+            "label": "9/23 11:41",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "ec2c60180e3cf5cf",
+      "normalizedUrl": "https://x.com/ArtificialAnlys/status/2102462962758033624",
+      "originalUrl": "https://x.com/ArtificialAnlys/status/2102462962758033624",
+      "titleOriginal": "Artificial Analysis 评测 GPT-6 Sol 与 Luna：成本减半，智能指数持平",
+      "summaryOriginal": "Artificial Analysis 评测 GPT-6 Sol 和 Luna，两模型价格约为 GPT-5.6 对应版本一半，Sol 定价 $2/$10、Luna $0.10/$0.50 每百万输入/输出 token，Intelligence Index 与 GPT-5.6 持平。",
+      "originalLanguage": "zh",
+      "author": "X：Artificial Analysis (@ArtificialAnlys)",
+      "category": "models",
+      "sourceType": "practitioner",
+      "authority": 84,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmud02r5503swro7nhqpu7dgu",
+        "https://x.com/ArtificialAnlys/status/2102462962758033624"
+      ],
+      "publishedAt": "2026-09-22T18:20:06.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-22T18:21:06.239Z",
+      "contentType": "benchmark",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmud02r5503swro7nhqpu7dgu"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmud02r5503swro7nhqpu7dgu",
+          "name": "X：Artificial Analysis (@ArtificialAnlys)",
+          "type": "practitioner",
+          "url": "https://x.com/ArtificialAnlys/status/2102462962758033624",
+          "publishedAt": "2026-09-22T18:20:06.000Z",
+          "title": "Artificial Analysis 评测 GPT-6 Sol 与 Luna：成本减半，智能指数持平",
+          "authority": 84,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmud02r5503swro7nhqpu7dgu",
+            "https://x.com/ArtificialAnlys/status/2102462962758033624"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该评测显示新一代模型在保持智能水平的同时将价格减半，直接影响模型选型与使用成本。",
+      "importanceReasonEn": "The evaluation shows a new generation matching prior intelligence at half the price, directly affecting model selection and usage cost.",
+      "scoringMode": "ai",
+      "titleZh": "Artificial Analysis 评测 GPT-6 Sol 与 Luna：成本减半，智能指数持平",
+      "titleEn": "Artificial Analysis Evaluates GPT-6 Sol and Luna: Half the Cost, Same Intelligence Index",
+      "summaryZh": "Artificial Analysis 评测 GPT-6 Sol 和 Luna，两模型价格约为 GPT-5.6 对应版本一半，Sol 定价 $2/$10、Luna $0.10/$0.50 每百万输入/输出 token，Intelligence Index 与 GPT-5.6 持平。",
+      "summaryEn": "Artificial Analysis evaluated GPT-6 Sol and Luna; both models cost roughly half of the corresponding GPT-5.6 versions, with Sol priced at $2/$10 and Luna at $0.10/$0.50 per million input/output tokens, while matching GPT-5.6 on the Intelligence Index.",
+      "keywords": [
+        "GPT-6 Sol",
+        "GPT-6 Luna",
+        "Artificial Analysis",
+        "Intelligence Index",
+        "定价"
+      ],
+      "topics": [
+        "GPT-6",
+        "模型定价",
+        "基准评测",
+        "Artificial Analysis"
+      ],
+      "models": [
+        "GPT-6 Sol",
+        "GPT-6 Luna",
+        "GPT-5.6"
+      ],
+      "detailZh": "Artificial Analysis 在 X 上发布了对 GPT-6 Sol 和 GPT-6 Luna 的评测结果。根据该评测，这两款模型的价格约为 GPT-5.6 对应版本的一半。具体定价为：Sol 每百万输入/输出 token 为 $2/$10，Luna 为 $0.10/$0.50。\n\n在智能水平方面，评测指出 GPT-6 Sol 和 Luna 的 Intelligence Index 与 GPT-5.6 持平。这意味着在 Artificial Analysis 的评测口径下，新一代模型并未在智能指数上取得提升，但显著降低了单位 token 成本。\n\n目前公开信息仅来自 Artificial Analysis 的这条评测摘要，未包含具体的基准测试项目、评测方法细节或与 GPT-5.6 的逐项对比数据。因此，关于模型能力的具体表现、适用场景以及价格减半背后的技术原因，尚缺乏进一步说明。",
+      "keyPointsZh": [
+        "Artificial Analysis 评测了 GPT-6 Sol 与 GPT-6 Luna。",
+        "两款模型价格约为 GPT-5.6 对应版本的一半。",
+        "Sol 定价 $2/$10，Luna 定价 $0.10/$0.50 每百万输入/输出 token。",
+        "两款模型的 Intelligence Index 与 GPT-5.6 持平。"
+      ],
+      "impactZh": "若评测结论成立，开发者和企业在同等智能水平下可将模型调用成本降低约一半，可能促使更多应用从 GPT-5.6 迁移到 GPT-6 系列，尤其是对成本敏感的高并发场景。",
+      "readerImpactZh": "",
+      "userImpactZh": "AI 用户和开发团队在保持相近智能水平的前提下，使用 GPT-6 Sol 或 Luna 的 token 成本约为 GPT-5.6 对应版本的一半，可降低 API 调用开销，适合成本敏感或高吞吐的应用。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：Artificial Analysis 评测显示 GPT-6 Sol 和 Luna 的定价约为 GPT-5.6 对应版本的一半，且 Intelligence Index 持平。可合理推断的是，这两款模型在单位智能成本上更具优势。但评测未披露具体基准项目、测试条件和逐项得分，因此“智能指数持平”仅代表 Artificial Analysis 的评测口径，不能直接等同于所有任务上的能力相同。",
+      "limitationsZh": "目前仅有 Artificial Analysis 的评测摘要，缺少具体基准测试项目、评测方法、样本量和逐项对比数据；Intelligence Index 持平不等于所有任务表现一致；价格信息未说明是否包含缓存、批量等折扣；也未提供模型上下文长度、延迟、吞吐等其他关键指标。",
+      "actionStepsZh": [
+        "关注 Artificial Analysis 的完整评测报告，查看具体基准项目与逐项得分。",
+        "在成本敏感的场景中，可评估将 GPT-5.6 替换为 GPT-6 Sol 或 Luna 的可行性。",
+        "在正式迁移前，针对自身任务做小规模对比测试，验证智能水平是否满足需求。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "GPT-6 Sol 的输入/输出价格分别是 Luna 的 20 倍，两者定位不同；评测称二者价格均约为 GPT-5.6 对应版本的一半。",
+        "data": [
+          {
+            "label": "GPT-6 Sol 输入",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "GPT-6 Sol 输出",
+            "value": 10,
+            "display": ""
+          },
+          {
+            "label": "GPT-6 Luna 输入",
+            "value": 0.1,
+            "display": ""
+          },
+          {
+            "label": "GPT-6 Luna 输出",
+            "value": 0.5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmud02r5503swro7nhqpu7dgu",
+          "name": "X：Artificial Analysis (@ArtificialAnlys)",
+          "type": "practitioner",
+          "url": "https://x.com/ArtificialAnlys/status/2102462962758033624",
+          "publishedAt": "2026-09-22T18:20:06.000Z",
+          "title": "Artificial Analysis 评测 GPT-6 Sol 与 Luna：成本减半，智能指数持平",
+          "authority": 84,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmud02r5503swro7nhqpu7dgu",
+            "https://x.com/ArtificialAnlys/status/2102462962758033624"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-22T18:20:06.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-22T18:20:06.000Z",
+            "label": "9/23 02:20",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-22T19:16:13.137Z",
+            "label": "9/23 03:16",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T20:12:20.275Z",
+            "label": "9/23 04:12",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T21:08:27.412Z",
+            "label": "9/23 05:08",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T22:04:34.550Z",
+            "label": "9/23 06:04",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:00:41.687Z",
+            "label": "9/23 07:00",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:56:48.825Z",
+            "label": "9/23 07:56",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:52:55.962Z",
+            "label": "9/23 08:52",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:49:03.100Z",
+            "label": "9/23 09:49",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:45:10.237Z",
+            "label": "9/23 10:45",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:41:17.375Z",
+            "label": "9/23 11:41",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 65,
             "reports": 1
           }
@@ -1848,7 +3790,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T18:00:00.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1859,39 +3801,258 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T18:57:59.257Z",
+            "at": "2026-09-22T18:57:56.773Z",
             "label": "9/23 02:57",
-            "value": 22,
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T19:55:58.514Z",
+            "at": "2026-09-22T19:55:53.547Z",
             "label": "9/23 03:55",
-            "value": 31,
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:53:57.771Z",
+            "at": "2026-09-22T20:53:50.321Z",
             "label": "9/23 04:53",
-            "value": 39,
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:51:57.028Z",
+            "at": "2026-09-22T21:51:47.095Z",
             "label": "9/23 05:51",
-            "value": 48,
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:49:56.285Z",
+            "at": "2026-09-22T22:49:43.869Z",
             "label": "9/23 06:49",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:47:40.643Z",
+            "label": "9/23 07:47",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:45:37.417Z",
+            "label": "9/23 08:45",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:43:34.191Z",
+            "label": "9/23 09:43",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:41:30.965Z",
+            "label": "9/23 10:41",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:39:27.739Z",
+            "label": "9/23 11:39",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "2568bb3ee3fd85c6",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/22/llm-anthropic",
+      "originalUrl": "https://simonwillison.net/2026/Sep/22/llm-anthropic/",
+      "titleOriginal": "llm-anthropic 0.29",
+      "summaryOriginal": "Release: llm-anthropic 0.29 Adds support for Claude Opus 5.5 : llm -m claude-opus-5.5 \"prompt goes here\" Tags: llm , anthropic",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/llm-anthropic/releases/tag/0.29",
+        "https://www.anthropic.com/claude-opus-5-5",
+        "https://simonwillison.net/tags/llm",
+        "https://simonwillison.net/tags/anthropic"
+      ],
+      "publishedAt": "2026-09-22T17:14:55.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/22/llm-anthropic/",
+          "publishedAt": "2026-09-22T17:14:55.000Z",
+          "title": "llm-anthropic 0.29",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-anthropic/releases/tag/0.29",
+            "https://www.anthropic.com/claude-opus-5-5",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/anthropic"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该版本为 llm 命令行工具新增了对 Claude Opus 5.5 的支持，方便开发者通过统一接口调用新模型。",
+      "importanceReasonEn": "This release adds Claude Opus 5.5 support to the llm CLI tool, making it easier for developers to call the new model through a unified interface.",
+      "scoringMode": "ai",
+      "titleZh": "llm-anthropic 0.29 发布",
+      "titleEn": "llm-anthropic 0.29 Released",
+      "summaryZh": "llm-anthropic 0.29 版本发布，新增对 Claude Opus 5.5 模型的支持，可通过命令行 llm -m claude-opus-5.5 \"prompt goes here\" 调用。",
+      "summaryEn": "llm-anthropic 0.29 adds support for the Claude Opus 5.5 model, callable via the command line with llm -m claude-opus-5.5 \"prompt goes here\".",
+      "keywords": [
+        "llm-anthropic",
+        "Claude Opus 5.5",
+        "CLI",
+        "Simon Willison"
+      ],
+      "topics": [
+        "llm",
+        "anthropic",
+        "claude"
+      ],
+      "models": [
+        "Claude Opus 5.5"
+      ],
+      "detailZh": "llm-anthropic 是 Simon Willison 开发的 llm 命令行工具的 Anthropic 插件，用于在终端中调用 Claude 系列模型。2026 年 9 月 22 日，llm-anthropic 发布 0.29 版本，主要更新是新增对 Claude Opus 5.5 模型的支持。用户可以通过命令 llm -m claude-opus-5.5 \"prompt goes here\" 直接调用该模型。该版本被标记为 llm 和 anthropic 相关更新。",
+      "keyPointsZh": [
+        "llm-anthropic 0.29 发布，新增 Claude Opus 5.5 支持",
+        "可通过 llm -m claude-opus-5.5 \"prompt goes here\" 调用",
+        "该插件属于 Simon Willison 的 llm 命令行工具生态"
+      ],
+      "impactZh": "该更新让使用 llm 命令行工具的用户能够直接调用 Claude Opus 5.5，简化了模型切换和测试流程。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用 llm 命令行工具的开发者，升级到 0.29 后即可通过统一命令调用 Claude Opus 5.5，无需额外配置。",
+      "howItWorksZh": "llm 是一个命令行工具，通过插件机制支持不同模型提供商。llm-anthropic 插件封装了 Anthropic 的 API，用户安装插件后，使用 llm -m <model> 指定模型名称即可发送提示并获取回复。0.29 版本在插件中注册了 claude-opus-5.5 模型标识，使其可被 llm 识别和调用。",
+      "interpretationZh": "根据发布信息，llm-anthropic 0.29 的主要变化是增加对 Claude Opus 5.5 的支持。这属于工具层面的常规更新，方便用户通过命令行访问新模型。",
+      "limitationsZh": "输入信息仅包含版本号和新增模型支持，未提供 Claude Opus 5.5 的具体能力、定价或性能数据，也未说明该版本的其他改动或兼容性要求。",
+      "actionStepsZh": [
+        "升级 llm-anthropic 到 0.29 版本",
+        "使用 llm -m claude-opus-5.5 \"prompt goes here\" 测试新模型"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/22/llm-anthropic/",
+          "publishedAt": "2026-09-22T17:14:55.000Z",
+          "title": "llm-anthropic 0.29",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-anthropic/releases/tag/0.29",
+            "https://www.anthropic.com/claude-opus-5-5",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/anthropic"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-22T17:14:55.000Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-09-22T17:14:55.000Z",
+            "label": "9/23 01:14",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-22T18:16:57.683Z",
+            "label": "9/23 02:16",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T19:19:00.366Z",
+            "label": "9/23 03:19",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T20:21:03.049Z",
+            "label": "9/23 04:21",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T21:23:05.732Z",
+            "label": "9/23 05:23",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T22:25:08.415Z",
+            "label": "9/23 06:25",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:27:11.098Z",
+            "label": "9/23 07:27",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:29:13.781Z",
+            "label": "9/23 08:29",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:31:16.464Z",
+            "label": "9/23 09:31",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:33:19.147Z",
+            "label": "9/23 10:33",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:35:21.830Z",
+            "label": "9/23 11:35",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -2033,7 +4194,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T17:11:07.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -2044,44 +4205,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T18:07:48.220Z",
-            "label": "9/23 02:07",
-            "value": 22,
+            "at": "2026-09-22T18:13:30.410Z",
+            "label": "9/23 02:13",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T19:04:29.440Z",
-            "label": "9/23 03:04",
+            "at": "2026-09-22T19:15:53.820Z",
+            "label": "9/23 03:15",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T20:18:17.230Z",
+            "label": "9/23 04:18",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:01:10.661Z",
-            "label": "9/23 04:01",
-            "value": 37,
+            "at": "2026-09-22T21:20:40.641Z",
+            "label": "9/23 05:20",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:57:51.881Z",
-            "label": "9/23 04:57",
-            "value": 45,
+            "at": "2026-09-22T22:23:04.051Z",
+            "label": "9/23 06:23",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:54:33.102Z",
-            "label": "9/23 05:54",
+            "at": "2026-09-22T23:25:27.461Z",
+            "label": "9/23 07:25",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:27:50.871Z",
+            "label": "9/23 08:27",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:30:14.282Z",
+            "label": "9/23 09:30",
             "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:51:14.322Z",
-            "label": "9/23 06:51",
-            "value": 60,
+            "at": "2026-09-23T02:32:37.692Z",
+            "label": "9/23 10:32",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:35:01.102Z",
+            "label": "9/23 11:35",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 68,
             "reports": 1
           }
@@ -2218,7 +4403,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T16:53:30.664Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 72,
         "peak": 72,
         "history": [
@@ -2229,44 +4414,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T17:52:42.789Z",
-            "label": "9/23 01:52",
-            "value": 22,
+            "at": "2026-09-22T17:57:30.104Z",
+            "label": "9/23 01:57",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T18:51:54.915Z",
-            "label": "9/23 02:51",
-            "value": 31,
+            "at": "2026-09-22T19:01:29.545Z",
+            "label": "9/23 03:01",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-22T19:51:07.040Z",
-            "label": "9/23 03:51",
-            "value": 39,
+            "at": "2026-09-22T20:05:28.986Z",
+            "label": "9/23 04:05",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:50:19.166Z",
-            "label": "9/23 04:50",
-            "value": 47,
+            "at": "2026-09-22T21:09:28.427Z",
+            "label": "9/23 05:09",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:49:31.291Z",
-            "label": "9/23 05:49",
-            "value": 55,
+            "at": "2026-09-22T22:13:27.868Z",
+            "label": "9/23 06:13",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:48:43.417Z",
-            "label": "9/23 06:48",
-            "value": 64,
+            "at": "2026-09-22T23:17:27.308Z",
+            "label": "9/23 07:17",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T00:21:26.749Z",
+            "label": "9/23 08:21",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T01:25:26.190Z",
+            "label": "9/23 09:25",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T02:29:25.631Z",
+            "label": "9/23 10:29",
+            "value": 61,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T03:33:25.072Z",
+            "label": "9/23 11:33",
+            "value": 67,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 72,
             "reports": 1
           }
@@ -2406,7 +4615,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T16:44:34.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -2417,50 +4626,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T17:37:29.192Z",
-            "label": "9/23 01:37",
-            "value": 21,
+            "at": "2026-09-22T17:49:22.228Z",
+            "label": "9/23 01:49",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T18:30:24.385Z",
-            "label": "9/23 02:30",
-            "value": 28,
+            "at": "2026-09-22T18:54:10.456Z",
+            "label": "9/23 02:54",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-22T19:23:19.578Z",
-            "label": "9/23 03:23",
+            "at": "2026-09-22T19:58:58.685Z",
+            "label": "9/23 03:58",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T21:03:46.913Z",
+            "label": "9/23 05:03",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:16:14.771Z",
-            "label": "9/23 04:16",
-            "value": 41,
+            "at": "2026-09-22T22:08:35.142Z",
+            "label": "9/23 06:08",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:09:09.964Z",
-            "label": "9/23 05:09",
+            "at": "2026-09-22T23:13:23.370Z",
+            "label": "9/23 07:13",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:18:11.599Z",
+            "label": "9/23 08:18",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:02:05.157Z",
-            "label": "9/23 06:02",
-            "value": 55,
+            "at": "2026-09-23T01:22:59.827Z",
+            "label": "9/23 09:22",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:55:00.350Z",
-            "label": "9/23 06:55",
-            "value": 61,
+            "at": "2026-09-23T02:27:48.056Z",
+            "label": "9/23 10:27",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:32:36.284Z",
+            "label": "9/23 11:32",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 68,
             "reports": 1
           }
@@ -2598,7 +4825,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T16:38:58.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -2609,50 +4836,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T17:32:35.192Z",
-            "label": "9/23 01:32",
-            "value": 21,
+            "at": "2026-09-22T17:44:16.773Z",
+            "label": "9/23 01:44",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T18:26:12.385Z",
-            "label": "9/23 02:26",
-            "value": 28,
+            "at": "2026-09-22T18:49:35.547Z",
+            "label": "9/23 02:49",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-22T19:19:49.578Z",
-            "label": "9/23 03:19",
+            "at": "2026-09-22T19:54:54.321Z",
+            "label": "9/23 03:54",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T21:00:13.095Z",
+            "label": "9/23 05:00",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:13:26.771Z",
-            "label": "9/23 04:13",
-            "value": 41,
+            "at": "2026-09-22T22:05:31.869Z",
+            "label": "9/23 06:05",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:07:03.964Z",
-            "label": "9/23 05:07",
+            "at": "2026-09-22T23:10:50.643Z",
+            "label": "9/23 07:10",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:16:09.417Z",
+            "label": "9/23 08:16",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:00:41.157Z",
-            "label": "9/23 06:00",
-            "value": 55,
+            "at": "2026-09-23T01:21:28.191Z",
+            "label": "9/23 09:21",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:54:18.350Z",
-            "label": "9/23 06:54",
-            "value": 61,
+            "at": "2026-09-23T02:26:46.965Z",
+            "label": "9/23 10:26",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:32:05.739Z",
+            "label": "9/23 11:32",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 68,
             "reports": 1
           }
@@ -2795,7 +5040,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T16:38:14.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2806,50 +5051,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T17:31:56.692Z",
-            "label": "9/23 01:31",
-            "value": 20,
+            "at": "2026-09-22T17:43:36.773Z",
+            "label": "9/23 01:43",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T18:25:39.385Z",
-            "label": "9/23 02:25",
-            "value": 27,
+            "at": "2026-09-22T18:48:59.547Z",
+            "label": "9/23 02:48",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-22T19:19:22.078Z",
-            "label": "9/23 03:19",
-            "value": 33,
+            "at": "2026-09-22T19:54:22.321Z",
+            "label": "9/23 03:54",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:13:04.771Z",
-            "label": "9/23 04:13",
-            "value": 39,
+            "at": "2026-09-22T20:59:45.095Z",
+            "label": "9/23 04:59",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:06:47.464Z",
-            "label": "9/23 05:06",
+            "at": "2026-09-22T22:05:07.869Z",
+            "label": "9/23 06:05",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:10:30.643Z",
+            "label": "9/23 07:10",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:15:53.417Z",
+            "label": "9/23 08:15",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:00:30.157Z",
-            "label": "9/23 06:00",
-            "value": 52,
+            "at": "2026-09-23T01:21:16.191Z",
+            "label": "9/23 09:21",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:54:12.850Z",
-            "label": "9/23 06:54",
-            "value": 58,
+            "at": "2026-09-23T02:26:38.965Z",
+            "label": "9/23 10:26",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:32:01.739Z",
+            "label": "9/23 11:32",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 65,
             "reports": 1
           }
@@ -2986,7 +5249,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T16:31:01.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -2997,50 +5260,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T17:25:37.817Z",
-            "label": "9/23 01:25",
-            "value": 21,
+            "at": "2026-09-22T17:37:03.137Z",
+            "label": "9/23 01:37",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T18:20:14.635Z",
-            "label": "9/23 02:20",
-            "value": 28,
+            "at": "2026-09-22T18:43:05.275Z",
+            "label": "9/23 02:43",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-22T19:14:51.453Z",
-            "label": "9/23 03:14",
+            "at": "2026-09-22T19:49:07.412Z",
+            "label": "9/23 03:49",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T20:55:09.550Z",
+            "label": "9/23 04:55",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:09:28.271Z",
-            "label": "9/23 04:09",
-            "value": 41,
+            "at": "2026-09-22T22:01:11.687Z",
+            "label": "9/23 06:01",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:04:05.089Z",
-            "label": "9/23 05:04",
+            "at": "2026-09-22T23:07:13.825Z",
+            "label": "9/23 07:07",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:13:15.962Z",
+            "label": "9/23 08:13",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:58:41.907Z",
-            "label": "9/23 05:58",
-            "value": 55,
+            "at": "2026-09-23T01:19:18.100Z",
+            "label": "9/23 09:19",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:53:18.725Z",
-            "label": "9/23 06:53",
-            "value": 61,
+            "at": "2026-09-23T02:25:20.237Z",
+            "label": "9/23 10:25",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:31:22.375Z",
+            "label": "9/23 11:31",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 68,
             "reports": 1
           }
@@ -3142,7 +5423,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-22T16:30:07.000Z",
-        "endedAt": "2026-09-22T23:47:55.543Z",
+        "endedAt": "2026-09-23T04:37:24.513Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -3153,50 +5434,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-22T17:24:50.567Z",
-            "label": "9/23 01:24",
-            "value": 20,
+            "at": "2026-09-22T17:36:14.046Z",
+            "label": "9/23 01:36",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-22T18:19:34.135Z",
-            "label": "9/23 02:19",
-            "value": 27,
+            "at": "2026-09-22T18:42:21.093Z",
+            "label": "9/23 02:42",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-22T19:14:17.703Z",
-            "label": "9/23 03:14",
-            "value": 33,
+            "at": "2026-09-22T19:48:28.139Z",
+            "label": "9/23 03:48",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-22T20:09:01.271Z",
-            "label": "9/23 04:09",
-            "value": 39,
+            "at": "2026-09-22T20:54:35.186Z",
+            "label": "9/23 04:54",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:03:44.839Z",
-            "label": "9/23 05:03",
+            "at": "2026-09-22T22:00:42.233Z",
+            "label": "9/23 06:00",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-22T23:06:49.279Z",
+            "label": "9/23 07:06",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T00:12:56.326Z",
+            "label": "9/23 08:12",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-22T21:58:28.407Z",
-            "label": "9/23 05:58",
-            "value": 52,
+            "at": "2026-09-23T01:19:03.373Z",
+            "label": "9/23 09:19",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-22T22:53:11.975Z",
-            "label": "9/23 06:53",
-            "value": 58,
+            "at": "2026-09-23T02:25:10.419Z",
+            "label": "9/23 10:25",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-22T23:47:55.543Z",
-            "label": "9/23 07:47",
+            "at": "2026-09-23T03:31:17.466Z",
+            "label": "9/23 11:31",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T04:37:24.513Z",
+            "label": "9/23 12:37",
             "value": 65,
             "reports": 1
           }
