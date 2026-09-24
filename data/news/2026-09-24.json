@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T22:14:37.224Z",
+  "generatedAt": "2026-09-24T00:51:24.349Z",
   "date": "2026-09-24",
   "items": [
     {
@@ -47,64 +47,65 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "该发布直接针对大模型推理成本与 token 消耗这一核心痛点，声称在保持 Kimi K3 质量的同时减少约 40% 的 token 用量，并以 Serverless 形式开放，对开发者和团队具有实际部署价值。",
-      "importanceReasonEn": "This release directly targets the core pain point of inference cost and token consumption, claiming to match Kimi K3 quality while cutting token usage by roughly 40%, and is offered via Serverless, giving it practical deployment value for developers and teams.",
+      "importanceReasonZh": "该发布直接针对推理模型 token 消耗这一核心成本问题，声称在保持质量的同时减少约 40% token，对使用大模型推理服务的开发者和团队具有实际成本意义。",
+      "importanceReasonEn": "The release directly targets token consumption, a core cost issue for reasoning models, claiming roughly 40% fewer tokens at comparable quality, which has practical cost implications for developers and teams using LLM inference services.",
       "scoringMode": "ai",
       "titleZh": "Fireworks Research 发布 Ember-1，以更少推理 token 保持 Kimi K3 质量",
       "titleEn": "Fireworks Research Releases Ember-1, Matching Kimi K3 Quality with Fewer Reasoning Tokens",
       "summaryZh": "Fireworks Research 发布基于 Kimi K3 的专用模型 Ember-1，以约少 40% 的 token 达到与 Kimi K3 相当的质量，今日以 Research Preview 形式在 Serverless 上线。",
-      "summaryEn": "Fireworks Research has released Ember-1, a specialized model built on Kimi K3 that matches Kimi K3 quality while using roughly 40% fewer tokens, available today as a Research Preview on Serverless.",
+      "summaryEn": "Fireworks Research released Ember-1, a specialized model built on Kimi K3 that matches Kimi K3 quality while using roughly 40% fewer tokens, available today as a Research Preview on Serverless.",
       "keywords": [
         "Ember-1",
         "Kimi K3",
         "Fireworks Research",
-        "token 效率",
+        "token efficiency",
         "Research Preview",
         "Serverless"
       ],
       "topics": [
-        "Kimi K3",
-        "Ember-1",
-        "推理效率",
-        "Serverless",
-        "模型发布"
+        "reasoning models",
+        "token efficiency",
+        "model release",
+        "serverless inference"
       ],
       "models": [
         "Ember-1",
         "Kimi K3"
       ],
-      "detailZh": "Fireworks Research 发布了名为 Ember-1 的专用模型。该模型基于 Kimi K3 构建，官方称其在保持与 Kimi K3 相当质量的前提下，使用的推理 token 数量约少 40%。\n\nEmber-1 今日以 Research Preview 的形式在 Serverless 上线，意味着用户可以通过 Fireworks 的 Serverless 服务直接调用该模型，而无需自行部署基础设施。\n\n目前公开信息仅包含上述核心指标与上线方式，关于模型的具体架构、训练方法、评测基准、定价以及可用区域等细节尚未披露。",
+      "detailZh": "Fireworks Research 发布了名为 Ember-1 的模型。根据官方信息，Ember-1 是基于 Kimi K3 构建的专用模型，其目标是在保持与 Kimi K3 相当质量的前提下，显著减少推理所需的 token 数量。\n\n官方给出的量化说法是：Ember-1 使用的推理 token 比 Kimi K3 少约 40%，同时质量与 Kimi K3 相当。这意味着在相同任务上，模型生成推理过程所消耗的 token 更少。\n\n发布形式方面，Ember-1 今日以 Research Preview（研究预览）的形式在 Serverless 上线，用户可以通过 Fireworks AI 的 Serverless 服务访问该模型。\n\n目前公开信息仅包含上述要点，官方未披露 Ember-1 的具体架构改动、训练方法、评测基准细节，也未说明“质量相当”是在哪些任务或数据集上测得的。",
       "keyPointsZh": [
-        "Fireworks Research 发布基于 Kimi K3 的专用模型 Ember-1。",
-        "官方称 Ember-1 以约少 40% 的 token 达到与 Kimi K3 相当的质量。",
-        "Ember-1 今日以 Research Preview 形式在 Serverless 上线。"
+        "Fireworks Research 发布 Ember-1，基于 Kimi K3 构建。",
+        "官方称 Ember-1 以约少 40% 的推理 token 达到与 Kimi K3 相当的质量。",
+        "Ember-1 今日以 Research Preview 形式在 Serverless 上线。",
+        "官方未披露具体架构、训练方法与评测细节。"
       ],
-      "impactZh": "如果 Ember-1 的 token 效率提升在实际使用中得到验证，将直接降低基于 Kimi K3 的推理成本，并可能推动更多团队在 Serverless 场景下采用更高效的专用模型。",
+      "impactZh": "推理模型的 token 消耗直接决定调用成本与响应延迟。若 Ember-1 的 40% token 削减在真实任务中成立，使用 Kimi K3 类推理能力的开发者可能以更低成本获得相近输出，这对推理模型的部署经济性有直接影响。",
       "readerImpactZh": "",
-      "userImpactZh": "对 AI 开发者和团队而言，Ember-1 提供了在 Serverless 上以更少 token 获得 Kimi K3 级别质量的选项，可能降低调用成本并简化部署；但作为 Research Preview，其稳定性、限流和长期可用性仍需观察。",
-      "howItWorksZh": "Ember-1 是基于 Kimi K3 构建的专用模型，官方称其通过减少推理 token 用量（约少 40%）来保持与 Kimi K3 相当的质量。用户可通过 Fireworks 的 Serverless 服务调用，无需自行部署。具体实现机制未在来源中说明。",
-      "interpretationZh": "已报告的事实是：Fireworks Research 发布了 Ember-1，基于 Kimi K3，官方称 token 用量约少 40% 且质量相当，并以 Research Preview 在 Serverless 上线。合理推断是：该模型面向推理效率优化，可能降低使用成本。但“质量相当”和“少 40% token”均为官方说法，尚无独立评测验证。",
-      "limitationsZh": "来源未提供具体评测基准、测试方法、模型架构、训练细节、定价、速率限制或可用区域；“质量相当”与“少 40% token”均为官方声明，缺乏第三方验证；Research Preview 状态意味着功能与可用性可能变化。",
+      "userImpactZh": "使用 Fireworks AI Serverless 服务的开发者可以立即以 Research Preview 形式试用 Ember-1，在相同任务上对比其与 Kimi K3 的输出质量与 token 用量，评估是否可降低推理成本。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：Fireworks Research 发布了基于 Kimi K3 的 Ember-1，官方称其以约少 40% 的 token 达到与 Kimi K3 相当的质量，并以 Research Preview 形式在 Serverless 上线。可以合理推断的是，Ember-1 属于针对推理 token 效率优化的专用模型，而非全新基座模型。但“质量相当”的具体评测范围、40% 的测量条件以及是否在所有任务上成立，均未在现有信息中说明。",
+      "limitationsZh": "现有信息未披露 Ember-1 的架构改动、训练数据与方法、评测基准和具体分数；“质量相当”与“少 40% token”均为官方说法，缺少第三方验证；Research Preview 通常意味着能力与稳定性可能变化，尚不适合直接用于生产关键场景。",
       "actionStepsZh": [
-        "在 Fireworks Serverless 上试用 Ember-1 Research Preview，对比其与 Kimi K3 的输出质量和 token 消耗。",
-        "关注 Fireworks 官方后续发布的评测数据、定价和正式版可用性信息。"
+        "在 Fireworks AI Serverless 上以 Research Preview 形式试用 Ember-1。",
+        "在自身任务上对比 Ember-1 与 Kimi K3 的输出质量和 token 用量。",
+        "关注 Fireworks Research 后续是否公布评测细节与正式版本。"
       ],
       "detailCompleteness": "summary",
       "visual": {
-        "type": "bar",
+        "type": "comparison",
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "官方称 Ember-1 的推理 token 用量约为 Kimi K3 的 60%，即少约 40%。",
+        "insightZh": "以 Kimi K3 的推理 token 量为基准 100，Ember-1 约为 60，即官方所称减少约 40%。",
         "data": [
           {
-            "label": "Ember-1 推理 token 用量",
-            "value": 60,
+            "label": "Kimi K3 推理 token",
+            "value": 100,
             "display": ""
           },
           {
-            "label": "Kimi K3 推理 token 用量",
-            "value": 100,
+            "label": "Ember-1 推理 token",
+            "value": 60,
             "display": ""
           }
         ]
@@ -131,7 +132,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T21:40:50.983Z",
-        "endedAt": "2026-09-23T22:14:37.224Z",
+        "endedAt": "2026-09-24T00:51:24.349Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -142,8 +143,26 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T22:14:37.224Z",
-            "label": "9/24 06:14",
+            "at": "2026-09-23T22:28:29.324Z",
+            "label": "9/24 06:28",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:16:07.666Z",
+            "label": "9/24 07:16",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:03:46.007Z",
+            "label": "9/24 08:03",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
             "value": 65,
             "reports": 1
           }
@@ -197,9 +216,9 @@
           ]
         }
       ],
-      "importance": 72,
-      "importanceReasonZh": "这是 Anthropic 官方发布的生态入口，把插件、智能体和服务伙伴集中到统一市场，可能改变 Claude 用户发现和接入第三方能力的方式。",
-      "importanceReasonEn": "This is an official Anthropic ecosystem entry point that centralizes plugins, agents, and service partners in a unified marketplace, potentially changing how Claude users discover and integrate third-party capabilities.",
+      "importance": 62,
+      "importanceReasonZh": "这是 Anthropic 围绕 Claude 构建生态分发的官方动作，把插件、智能体和服务伙伴集中到一个入口，可能影响开发者与企业的接入方式。",
+      "importanceReasonEn": "This is an official Anthropic move to build ecosystem distribution around Claude, centralizing plugins, agents and service partners in one entry point, which may affect how developers and enterprises integrate.",
       "scoringMode": "ai",
       "titleZh": "Claude Marketplace：一站式发现合作伙伴的插件、智能体与服务",
       "titleEn": "Claude Marketplace: one place to discover plugins, agents, and services from our partners",
@@ -223,19 +242,19 @@
       "models": [
         "Claude"
       ],
-      "detailZh": "Anthropic 在其官方博客发布消息，推出 Claude Marketplace。根据标题与摘要，该市场被定位为“一个地方”，用于发现来自合作伙伴的插件、智能体和服务。\n\n从已披露的信息看，Claude Marketplace 的内容被划分为三类：插件与连接器、智能体与产品、服务伙伴。这意味着它不只是应用商店式的插件列表，还覆盖了可调用的智能体以及第三方服务提供方。\n\n目前来源仅包含标题和一句摘要，没有给出具体的合作伙伴名单、上线时间、定价方式、开发者接入流程或可用地区等细节。因此关于该市场的规模、审核机制和实际可用性，尚无法从现有材料确认。\n\n可以确认的是，这是 Anthropic 官方渠道发布的产品信息，属于其围绕 Claude 构建第三方生态的动作。对于使用 Claude 的个人和团队而言，它提供了一个集中发现和接入外部能力的入口。",
+      "detailZh": "Anthropic 发布 Claude Marketplace，定位为一个集中发现入口，用于查找来自其合作伙伴的插件、智能体和服务。根据官方描述，该市场把三类内容聚合在一起：插件与连接器、智能体与产品，以及服务伙伴。\n\n这一动作的背景是 Claude 生态中第三方集成逐渐增多，此前用户和开发者需要在不同渠道寻找可用的扩展与合作伙伴方案。Marketplace 试图用统一入口降低发现成本。\n\n目前公开信息仅说明了市场的定位与内容分类，未披露具体的合作伙伴名单、上架审核机制、分成或定价方式，也未说明是否对开发者开放自助提交。",
       "keyPointsZh": [
-        "Anthropic 官方发布 Claude Marketplace。",
-        "该市场集中展示来自合作伙伴的插件、智能体和服务。",
-        "内容分为插件与连接器、智能体与产品、服务伙伴三类。",
-        "来源仅含标题与摘要，缺少合作伙伴名单、定价和接入细节。"
+        "Anthropic 官方推出 Claude Marketplace。",
+        "市场聚合三类内容：插件与连接器、智能体与产品、服务伙伴。",
+        "定位是集中发现合作伙伴提供的扩展与服务。",
+        "官方未披露合作伙伴名单、审核与定价等细节。"
       ],
-      "impactZh": "Claude Marketplace 把分散的第三方能力收拢到一个官方入口，可能降低用户发现和接入插件、智能体及服务的成本，同时强化 Anthropic 对 Claude 生态的分发控制。",
+      "impactZh": "Claude Marketplace 把分散的第三方集成集中到一个官方入口，意味着 Anthropic 正在强化对 Claude 生态分发渠道的控制，可能改变开发者和企业寻找、接入 Claude 扩展的方式。",
       "readerImpactZh": "",
-      "userImpactZh": "Claude 用户和开发者未来可能通过一个统一入口查找并接入第三方插件、智能体和连接器，而不必在多个来源之间自行搜索；但具体可用范围和接入方式尚未在现有材料中说明。",
+      "userImpactZh": "Claude 用户和开发者未来可能通过一个官方入口发现并接入插件、智能体和第三方服务，减少在多个渠道间搜索的成本；但当前尚无具体可用清单与接入方式。",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：Anthropic 官方发布了一个名为 Claude Marketplace 的入口，用于发现合作伙伴提供的插件、智能体和服务，并将其归为三类。可以合理推断，这是 Anthropic 扩展 Claude 生态、方便用户接入第三方能力的举措。但关于它如何运作、是否收费、如何审核合作伙伴，现有材料没有说明，不应据此推断。",
-      "limitationsZh": "来源只有标题和一句摘要，没有合作伙伴名单、上线时间、定价、开发者接入方式、地区可用性或审核标准等信息，无法验证市场的实际规模和可用性。",
+      "interpretationZh": "可以确认的是 Anthropic 上线了一个名为 Claude Marketplace 的官方发现入口，并按插件与连接器、智能体与产品、服务伙伴三类组织内容。至于它是否支持自助上架、如何审核、是否收费，目前没有公开信息，属于尚未证实的部分。",
+      "limitationsZh": "官方信息仅给出市场定位与内容分类，未提供合作伙伴名单、上架流程、审核标准、定价或分成模式，也未说明开发者能否自助提交，实际可用范围仍不明确。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -261,9 +280,9 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T19:03:25.133Z",
-        "endedAt": "2026-09-23T22:14:37.224Z",
-        "current": 65,
-        "peak": 65,
+        "endedAt": "2026-09-24T00:51:24.349Z",
+        "current": 59,
+        "peak": 59,
         "history": [
           {
             "at": "2026-09-23T19:03:25.133Z",
@@ -272,27 +291,39 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T19:51:13.155Z",
-            "label": "9/24 03:51",
-            "value": 27,
+            "at": "2026-09-23T20:01:25.002Z",
+            "label": "9/24 04:01",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:39:01.178Z",
-            "label": "9/24 04:39",
-            "value": 39,
+            "at": "2026-09-23T20:59:24.871Z",
+            "label": "9/24 04:59",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:26:49.201Z",
-            "label": "9/24 05:26",
+            "at": "2026-09-23T21:57:24.741Z",
+            "label": "9/24 05:57",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T22:55:24.610Z",
+            "label": "9/24 06:55",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:53:24.479Z",
+            "label": "9/24 07:53",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:14:37.224Z",
-            "label": "9/24 06:14",
-            "value": 65,
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -432,7 +463,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T18:54:11.000Z",
-        "endedAt": "2026-09-23T22:14:37.224Z",
+        "endedAt": "2026-09-24T00:51:24.349Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -443,26 +474,38 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T19:44:17.556Z",
-            "label": "9/24 03:44",
-            "value": 25,
+            "at": "2026-09-23T19:53:43.224Z",
+            "label": "9/24 03:53",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:34:24.112Z",
-            "label": "9/24 04:34",
+            "at": "2026-09-23T20:53:15.449Z",
+            "label": "9/24 04:53",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T21:52:47.674Z",
+            "label": "9/24 05:52",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:24:30.668Z",
-            "label": "9/24 05:24",
-            "value": 48,
+            "at": "2026-09-23T22:52:19.899Z",
+            "label": "9/24 06:52",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:14:37.224Z",
-            "label": "9/24 06:14",
+            "at": "2026-09-23T23:51:52.124Z",
+            "label": "9/24 07:51",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
             "value": 59,
             "reports": 1
           }
@@ -567,7 +610,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T18:00:00.000Z",
-        "endedAt": "2026-09-23T22:14:37.224Z",
+        "endedAt": "2026-09-24T00:51:24.349Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -578,32 +621,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T18:50:55.444Z",
-            "label": "9/24 02:50",
-            "value": 21,
+            "at": "2026-09-23T18:58:46.335Z",
+            "label": "9/24 02:58",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:41:50.889Z",
-            "label": "9/24 03:41",
-            "value": 28,
+            "at": "2026-09-23T19:57:32.671Z",
+            "label": "9/24 03:57",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:32:46.334Z",
-            "label": "9/24 04:32",
-            "value": 36,
+            "at": "2026-09-23T20:56:19.006Z",
+            "label": "9/24 04:56",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:23:41.779Z",
-            "label": "9/24 05:23",
-            "value": 43,
+            "at": "2026-09-23T21:55:05.342Z",
+            "label": "9/24 05:55",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:14:37.224Z",
-            "label": "9/24 06:14",
+            "at": "2026-09-23T22:53:51.677Z",
+            "label": "9/24 06:53",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:52:38.013Z",
+            "label": "9/24 07:52",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
             "value": 50,
             "reports": 1
           }
@@ -726,7 +781,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T17:57:37.000Z",
-        "endedAt": "2026-09-23T22:14:37.224Z",
+        "endedAt": "2026-09-24T00:51:24.349Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -737,32 +792,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T18:49:01.044Z",
-            "label": "9/24 02:49",
-            "value": 24,
+            "at": "2026-09-23T18:56:43.764Z",
+            "label": "9/24 02:56",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:40:25.089Z",
-            "label": "9/24 03:40",
-            "value": 34,
+            "at": "2026-09-23T19:55:50.528Z",
+            "label": "9/24 03:55",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:31:49.134Z",
-            "label": "9/24 04:31",
-            "value": 44,
+            "at": "2026-09-23T20:54:57.292Z",
+            "label": "9/24 04:54",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:23:13.179Z",
-            "label": "9/24 05:23",
-            "value": 55,
+            "at": "2026-09-23T21:54:04.056Z",
+            "label": "9/24 05:54",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:14:37.224Z",
-            "label": "9/24 06:14",
+            "at": "2026-09-23T22:53:10.820Z",
+            "label": "9/24 06:53",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:52:17.584Z",
+            "label": "9/24 07:52",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
             "value": 65,
             "reports": 1
           }
@@ -900,7 +967,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T17:39:10.000Z",
-        "endedAt": "2026-09-23T22:14:37.224Z",
+        "endedAt": "2026-09-24T00:51:24.349Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -911,32 +978,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T18:34:15.444Z",
-            "label": "9/24 02:34",
-            "value": 24,
+            "at": "2026-09-23T18:33:11.793Z",
+            "label": "9/24 02:33",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:29:20.889Z",
-            "label": "9/24 03:29",
-            "value": 34,
+            "at": "2026-09-23T19:27:13.587Z",
+            "label": "9/24 03:27",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:24:26.334Z",
-            "label": "9/24 04:24",
-            "value": 44,
+            "at": "2026-09-23T20:21:15.380Z",
+            "label": "9/24 04:21",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:19:31.779Z",
-            "label": "9/24 05:19",
-            "value": 55,
+            "at": "2026-09-23T21:15:17.174Z",
+            "label": "9/24 05:15",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:14:37.224Z",
-            "label": "9/24 06:14",
+            "at": "2026-09-23T22:09:18.968Z",
+            "label": "9/24 06:09",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:03:20.761Z",
+            "label": "9/24 07:03",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:57:22.555Z",
+            "label": "9/24 07:57",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
             "value": 65,
             "reports": 1
           }
@@ -1107,7 +1192,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T17:12:27.000Z",
-        "endedAt": "2026-09-23T22:14:37.224Z",
+        "endedAt": "2026-09-24T00:51:24.349Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1118,38 +1203,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T18:02:48.704Z",
-            "label": "9/24 02:02",
-            "value": 22,
+            "at": "2026-09-23T18:09:49.168Z",
+            "label": "9/24 02:09",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-23T18:53:10.408Z",
-            "label": "9/24 02:53",
-            "value": 29,
+            "at": "2026-09-23T19:07:11.337Z",
+            "label": "9/24 03:07",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:43:32.112Z",
-            "label": "9/24 03:43",
+            "at": "2026-09-23T20:04:33.505Z",
+            "label": "9/24 04:04",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T21:01:55.674Z",
+            "label": "9/24 05:01",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:33:53.816Z",
-            "label": "9/24 04:33",
-            "value": 44,
+            "at": "2026-09-23T21:59:17.843Z",
+            "label": "9/24 05:59",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:24:15.520Z",
-            "label": "9/24 05:24",
-            "value": 52,
+            "at": "2026-09-23T22:56:40.011Z",
+            "label": "9/24 06:56",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:14:37.224Z",
-            "label": "9/24 06:14",
+            "at": "2026-09-23T23:54:02.180Z",
+            "label": "9/24 07:54",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
             "value": 59,
             "reports": 1
           }
@@ -1276,7 +1373,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T16:37:43.000Z",
-        "endedAt": "2026-09-23T22:14:37.224Z",
+        "endedAt": "2026-09-24T00:51:24.349Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1287,39 +1384,215 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T17:33:52.037Z",
-            "label": "9/24 01:33",
-            "value": 22,
+            "at": "2026-09-23T17:32:34.261Z",
+            "label": "9/24 01:32",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-23T18:30:01.074Z",
-            "label": "9/24 02:30",
+            "at": "2026-09-23T18:27:25.522Z",
+            "label": "9/24 02:27",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T19:22:16.783Z",
+            "label": "9/24 03:22",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:26:10.112Z",
-            "label": "9/24 03:26",
-            "value": 37,
+            "at": "2026-09-23T20:17:08.044Z",
+            "label": "9/24 04:17",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:22:19.149Z",
-            "label": "9/24 04:22",
+            "at": "2026-09-23T21:11:59.305Z",
+            "label": "9/24 05:11",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T22:06:50.566Z",
+            "label": "9/24 06:06",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:18:28.186Z",
-            "label": "9/24 05:18",
-            "value": 52,
+            "at": "2026-09-23T23:01:41.827Z",
+            "label": "9/24 07:01",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:14:37.224Z",
-            "label": "9/24 06:14",
+            "at": "2026-09-23T23:56:33.088Z",
+            "label": "9/24 07:56",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
             "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "52e46e8371e1f699",
+      "normalizedUrl": "https://openai.com/index/two-years-of-openai-academy",
+      "originalUrl": "https://openai.com/index/two-years-of-openai-academy",
+      "titleOriginal": "Two years of OpenAI Academy",
+      "summaryOriginal": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "models",
+      "sourceType": "official",
+      "authority": 100,
+      "sourcePriority": 100,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-23T16:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/two-years-of-openai-academy",
+          "publishedAt": "2026-09-23T16:00:00.000Z",
+          "title": "Two years of OpenAI Academy",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 35,
+      "importanceReasonZh": "这是 OpenAI 官方发布的 Academy 两周年纪念信息，属于机构动态，但缺乏具体数据、新功能或可操作细节。",
+      "importanceReasonEn": "This is an official OpenAI post marking the second anniversary of its Academy program, an institutional update lacking concrete data, new features, or actionable details.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI Academy 两周年",
+      "titleEn": "Two years of OpenAI Academy",
+      "summaryZh": "纪念 OpenAI Academy 成立两周年，并将 AI 技能带给更多社区。",
+      "summaryEn": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+      "keywords": [
+        "OpenAI Academy",
+        "AI skills",
+        "community",
+        "education",
+        "two years"
+      ],
+      "topics": [
+        "AI education",
+        "community outreach",
+        "OpenAI Academy"
+      ],
+      "models": [],
+      "detailZh": "OpenAI 发布了一条官方消息，纪念 OpenAI Academy 成立两周年。消息称，该计划旨在将 AI 技能带给更多社区。\n\n目前公开的信息仅包含这一纪念性表述，没有披露过去两年的具体成果、参与人数、课程内容、覆盖地区或未来计划。也没有说明 Academy 提供哪些具体资源、培训形式或合作机构。\n\n因此，这条消息本质上是一则机构里程碑公告，而非产品发布、研究论文或政策变动。其新闻价值主要在于提示 OpenAI 持续投入 AI 教育普及，但缺乏可供进一步分析或验证的实质内容。",
+      "keyPointsZh": [
+        "OpenAI Academy 迎来两周年。",
+        "官方称其目标是把 AI 技能带给更多社区。",
+        "消息未披露具体成果、数据或新计划。"
+      ],
+      "impactZh": "该消息表明 OpenAI 继续将 AI 教育普及作为其公共形象的一部分，但未提供足以评估其实际影响的新信息。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：OpenAI 官方发布了 Academy 两周年纪念消息，并重申其向更多社区推广 AI 技能的使命。除此之外，消息没有提供可验证的细节，因此无法判断该计划的实际规模或效果。",
+      "limitationsZh": "来源仅为一条简短的官方纪念消息，缺少参与人数、课程内容、地区覆盖、合作方或未来路线图等具体信息，无法独立核实其影响。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/two-years-of-openai-academy",
+          "publishedAt": "2026-09-23T16:00:00.000Z",
+          "title": "Two years of OpenAI Academy",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-23T16:00:00.000Z",
+        "endedAt": "2026-09-24T00:51:24.349Z",
+        "current": 44,
+        "peak": 44,
+        "history": [
+          {
+            "at": "2026-09-23T16:00:00.000Z",
+            "label": "9/24 00:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-23T16:59:02.705Z",
+            "label": "9/24 00:59",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T17:58:05.410Z",
+            "label": "9/24 01:58",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T18:57:08.116Z",
+            "label": "9/24 02:57",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T19:56:10.821Z",
+            "label": "9/24 03:56",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T20:55:13.527Z",
+            "label": "9/24 04:55",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T21:54:16.232Z",
+            "label": "9/24 05:54",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T22:53:18.938Z",
+            "label": "9/24 06:53",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:52:21.643Z",
+            "label": "9/24 07:52",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:51:24.349Z",
+            "label": "9/24 08:51",
+            "value": 44,
             "reports": 1
           }
         ],
