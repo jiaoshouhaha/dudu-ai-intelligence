@@ -1,7 +1,723 @@
 {
-  "generatedAt": "2026-09-24T00:51:24.349Z",
+  "generatedAt": "2026-09-24T06:05:33.780Z",
   "date": "2026-09-24",
   "items": [
+    {
+      "id": "5c76f9e2f8d51cc7",
+      "normalizedUrl": "https://arxiv.org/abs/2609.26891",
+      "originalUrl": "https://arxiv.org/abs/2609.26891",
+      "titleOriginal": "Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity",
+      "summaryOriginal": "arXiv:2609.26891v1 Announce Type: new Abstract: Modern language-model agents are built around the \\textit{agent loop}, where the LLM is placed in an environment exposing a set of tools, and the LLM has full control over the workflow by alternating between tool calls and observing their output. However, certain workflows currently require additional engineering beyond the agent loop itself, such as memory systems and self-improving systems. We built an LLM agent framework, JAZ, to explore the extent to which a minimal harness that is little more than the agent loop itself can accomplish tasks these specialized systems are built for. JAZ exposes a single LLM-based primitive invoke and provides a set of built-in hooks that allow the programmer to apply constraints and monitoring. Generalizing existing code-mode agent loops, \\texttt{invoke} is the simplest loop that satisfies two defining properties: (1) the LLM can write arbitrary executable code that can include recursive \\texttt{invoke}; (2) everything visible to the LLM --- all inputs to \\texttt{invoke} as well as its interaction history with the code environment --- are variables in the code environment. We motivate our design fro",
+      "originalLanguage": "en",
+      "author": "Zhening Li, Joshua Liu, Mateja Vukelic, Nicole Shen, Supriya Lall, Amitayush Thakur, Alex Zhang, Omar Khattab, Jonathan Light, Armando Solar-Lezama",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-24T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.26891",
+          "publishedAt": "2026-09-24T04:00:00.000Z",
+          "title": "Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该论文提出一种极简智能体框架设计，对智能体架构研究有参考价值，但尚无论文全文、实验数据或开源实现，实际影响有待验证。",
+      "importanceReasonEn": "The paper proposes a minimalist agent framework design with reference value for agent architecture research, but without full text, experimental data, or open-source implementation, its practical impact remains to be verified.",
+      "scoringMode": "ai",
+      "titleZh": "Harness 即语言：极简智能体框架的最大表达力",
+      "titleEn": "Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity",
+      "summaryZh": "一篇 arXiv 论文提出极简智能体框架 JAZ，仅暴露一个基于 LLM 的原语 invoke，并通过内置钩子实现约束与监控，探索极简 harness 能否完成记忆系统和自我改进系统等专用系统的任务。",
+      "summaryEn": "An arXiv paper proposes JAZ, a minimalist agent framework exposing a single LLM-based primitive invoke with built-in hooks for constraints and monitoring, exploring whether a minimal harness can accomplish tasks handled by specialized systems such as memory and self-improving systems.",
+      "keywords": [
+        "JAZ",
+        "agent loop",
+        "invoke",
+        "harness",
+        "code-mode agent",
+        "hooks"
+      ],
+      "topics": [
+        "agent",
+        "LLM",
+        "framework",
+        "code-mode"
+      ],
+      "models": [],
+      "detailZh": "该论文以 arXiv 预印本形式发布，摘要介绍了一个名为 JAZ 的 LLM 智能体框架。作者指出，现代语言模型智能体通常围绕“智能体循环”构建：LLM 被置于一个暴露工具集的环境中，通过交替调用工具和观察输出，LLM 对工作流拥有完全控制权。然而，某些工作流（如记忆系统和自我改进系统）目前需要在智能体循环之外进行额外工程。\n\nJAZ 的设计目标是探索一个极简 harness（几乎只是智能体循环本身）能在多大程度上完成这些专用系统所承担的任务。JAZ 只暴露一个基于 LLM 的原语 invoke，并提供一组内置钩子，允许程序员施加约束和监控。\n\n作者将 invoke 描述为满足两个定义性质的最简循环：第一，LLM 可以编写任意可执行代码，其中可以包含递归的 invoke；第二，LLM 可见的一切——包括 invoke 的所有输入以及它与代码环境的交互历史——都是代码环境中的变量。这一设计推广了现有的代码模式（code-mode）智能体循环。\n\n摘要提到作者从设计动机出发进行论证，但输入中未提供论文全文、实验结果、基准测试数据或开源代码链接。因此，JAZ 的实际效果、与现有框架的对比以及可复现性目前均无法确认。",
+      "keyPointsZh": [
+        "论文提出极简智能体框架 JAZ，仅暴露一个 LLM 原语 invoke。",
+        "invoke 允许 LLM 编写任意可执行代码，并支持递归调用。",
+        "LLM 可见的所有输入和交互历史都是代码环境中的变量。",
+        "JAZ 提供内置钩子用于施加约束和监控。",
+        "目标是探索极简 harness 能否替代记忆系统和自我改进系统等专用工程。"
+      ],
+      "impactZh": "该工作为智能体框架设计提供了一种“极简 harness”思路，可能影响未来智能体架构对记忆、自我改进等能力的实现方式，但目前仅为预印本摘要，尚无实验证据表明其有效性。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "JAZ 的核心是一个名为 invoke 的原语：LLM 可以生成任意可执行代码，代码中可以再次调用 invoke，形成递归结构。LLM 能看到的所有内容——包括 invoke 的输入以及它与代码环境的交互历史——都被表示为代码环境中的变量，因此 LLM 可以通过操作这些变量来读取上下文或改变自身状态。框架还提供内置钩子，程序员可以在 invoke 执行前后插入约束或监控逻辑。",
+      "interpretationZh": "根据摘要，JAZ 试图用尽可能少的抽象（一个原语加钩子）覆盖通常需要额外工程的能力，如记忆和自我改进。其关键设计是把 LLM 的输入和交互历史都变成代码环境中的变量，从而让 LLM 通过写代码来管理自身状态。这属于设计理念层面的贡献，实际能力仍需实验验证。",
+      "limitationsZh": "输入仅为 arXiv 摘要，未提供论文全文、实验设置、基准结果、消融研究或开源代码。JAZ 与现有智能体框架的对比、可扩展性、安全性和实际任务表现均未经验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.26891",
+          "publishedAt": "2026-09-24T04:00:00.000Z",
+          "title": "Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T04:00:00.000Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-09-24T04:00:00.000Z",
+            "label": "9/24 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T04:41:51.260Z",
+            "label": "9/24 12:41",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:23:42.520Z",
+            "label": "9/24 13:23",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "1bc5b780d9811676",
+      "normalizedUrl": "https://arxiv.org/abs/2609.26929",
+      "originalUrl": "https://arxiv.org/abs/2609.26929",
+      "titleOriginal": "Which Objectives Need a Dial? Predicting Objective Conflict and Covering Trade-offs in Steerable Pluralistic Alignment",
+      "summaryOriginal": "arXiv:2609.26929v1 Announce Type: new Abstract: People hold diverse, sometimes conflicting values, so no single aligned model can satisfy everyone. Pluralistic alignment therefore calls for steerable models that can balance competing objectives differently. Multi-Objective Direct Preference Optimization (MODPO) does this by using an objective weight to span a continuum of trade-offs. We study two questions: when can one model improve two objectives simultaneously, and how can many trade-offs be covered without training a separate model for each? Across seven objective pairs from HelpSteer and UltraFeedback, two pre-training measurements predict whether objectives align or conflict for human-annotated data, but not for AI-annotated data, where response length and repetition confound reward-model scores. For broader trade-off coverage, selecting the nearest trained model and merging model parameters both help, but neither consistently matches direct training. These findings yield practical guidance for building steerable models that serve diverse preferences.",
+      "originalLanguage": "en",
+      "author": "David Tsoi, Esra D\\\"onmez",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-24T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.26929",
+          "publishedAt": "2026-09-24T04:00:00.000Z",
+          "title": "Which Objectives Need a Dial? Predicting Objective Conflict and Covering Trade-offs in Steerable Pluralistic Alignment",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究为构建服务多元偏好的可操控模型提供了实用指导，并揭示了 AI 标注数据中奖励模型分数受长度和重复干扰的问题，对多元对齐和多目标优化方向有参考价值。",
+      "importanceReasonEn": "The study offers practical guidance for building steerable models that serve diverse preferences and highlights that reward-model scores on AI-annotated data are confounded by length and repetition, valuable for pluralistic alignment and multi-objective optimization.",
+      "scoringMode": "ai",
+      "titleZh": "哪些目标需要调节？预测目标冲突并覆盖可操控多元对齐中的权衡",
+      "titleEn": "Which Objectives Need a Dial? Predicting Objective Conflict and Covering Trade-offs in Steerable Pluralistic Alignment",
+      "summaryZh": "一篇 arXiv 论文研究可操控多元对齐中的两个问题：何时一个模型能同时改进两个目标，以及如何在不单独训练每个模型的情况下覆盖多种权衡。研究基于 HelpSteer 和 UltraFeedback 的七组目标对，发现两项预训练测量能预测人类标注数据中目标是协同还是冲突，但在 AI 标注数据中因回复长度和重复会干扰奖励模型分数而失效。对于更广的权衡覆盖，选择最近已训练模型和合并模型参数都有帮助，但都不如直接训练稳定。",
+      "summaryEn": "An arXiv paper studies two questions in steerable pluralistic alignment: when can one model improve two objectives simultaneously, and how can many trade-offs be covered without training a separate model for each. Across seven objective pairs from HelpSteer and UltraFeedback, two pre-training measurements predict whether objectives align or conflict for human-annotated data, but not for AI-annotated data, where response length and repetition confound reward-model scores. For broader trade-off coverage, selecting the nearest trained model and merging model parameters both help, but neither consistently matches direct training.",
+      "keywords": [
+        "可操控多元对齐",
+        "目标冲突预测",
+        "MODPO",
+        "权衡覆盖",
+        "奖励模型"
+      ],
+      "topics": [
+        "pluralistic alignment",
+        "multi-objective optimization",
+        "model steering",
+        "reward models",
+        "preference optimization"
+      ],
+      "models": [
+        "MODPO"
+      ],
+      "detailZh": "论文关注多元对齐中的一个核心难题：人们持有多样甚至冲突的价值观，单一对齐模型无法满足所有人，因此需要可操控模型来以不同方式平衡相互竞争的目标。多目标直接偏好优化（MODPO）通过一个目标权重来覆盖连续的权衡空间。\n\n研究提出两个问题：第一，什么时候一个模型可以同时改进两个目标；第二，如何在不针对每种权衡单独训练一个模型的情况下覆盖大量权衡。作者在 HelpSteer 和 UltraFeedback 的七组目标对上进行了实验。\n\n实验发现，两项预训练阶段的测量指标可以预测人类标注数据中目标是协同还是冲突，但在 AI 标注数据上预测失效，原因是回复长度和重复会干扰奖励模型给出的分数。\n\n在扩大权衡覆盖方面，选择距离最近的已训练模型以及合并模型参数都能带来帮助，但两者都无法稳定达到直接训练的效果。论文据此给出了构建可操控模型以服务多元偏好的实践建议。",
+      "keyPointsZh": [
+        "研究基于 HelpSteer 和 UltraFeedback 的七组目标对，考察目标之间是协同还是冲突。",
+        "两项预训练测量能预测人类标注数据中的目标关系，但对 AI 标注数据无效。",
+        "AI 标注数据中，回复长度和重复会干扰奖励模型分数，导致预测失效。",
+        "选择最近已训练模型和合并模型参数可扩大权衡覆盖，但均不如直接训练稳定。"
+      ],
+      "impactZh": "该研究为多元对齐提供了一条可操作的思路：先判断哪些目标需要单独调节，再决定如何覆盖多种权衡，而不是为每种偏好训练一个模型。它同时提醒，使用 AI 标注数据训练奖励模型时，长度和重复等表面特征可能扭曲多目标权衡的判断。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发多目标对齐系统的团队而言，这项研究提示：在依赖 AI 标注数据做奖励建模前，应先检查长度和重复是否污染了分数；在需要覆盖多种偏好权衡时，直接训练仍比模型选择或参数合并更可靠。",
+      "howItWorksZh": "MODPO 使用一个目标权重来在连续范围内调节多个目标之间的权衡。论文用两项预训练测量来预测目标对是协同还是冲突，并在七组目标对上验证。对于权衡覆盖，论文比较了三种策略：直接训练、选择最近已训练模型、合并模型参数。",
+      "interpretationZh": "论文报告的事实是：两项预训练测量在人类标注数据上能预测目标冲突，在 AI 标注数据上不能；模型选择和参数合并有帮助但不如直接训练。合理推断是，AI 标注数据中的长度和重复偏差会削弱基于奖励模型分数的目标关系判断，因此构建可操控模型时需要更谨慎地处理标注来源。",
+      "limitationsZh": "研究仅覆盖 HelpSteer 和 UltraFeedback 的七组目标对，结论的普适性有待更多数据集验证。AI 标注数据失效的具体机制被归因于长度和重复，但论文未说明是否还有其他混杂因素。模型选择和参数合并未能稳定匹配直接训练，说明覆盖大量权衡仍缺乏高效方案。",
+      "actionStepsZh": [
+        "在使用 AI 标注数据训练多目标奖励模型前，检查回复长度和重复是否与目标分数相关。",
+        "对需要覆盖多种权衡的场景，优先评估直接训练，再将模型选择或参数合并作为备选。",
+        "用预训练测量先判断目标对是协同还是冲突，以决定是否需要单独调节。"
+      ],
+      "detailCompleteness": "full",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.26929",
+          "publishedAt": "2026-09-24T04:00:00.000Z",
+          "title": "Which Objectives Need a Dial? Predicting Objective Conflict and Covering Trade-offs in Steerable Pluralistic Alignment",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T04:00:00.000Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-24T04:00:00.000Z",
+            "label": "9/24 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T04:41:51.260Z",
+            "label": "9/24 12:41",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:23:42.520Z",
+            "label": "9/24 13:23",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "1eff56d18c383f1c",
+      "normalizedUrl": "https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse",
+      "originalUrl": "https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/",
+      "titleOriginal": "Everything new coming to Meta&#8217;s AI agent Muse",
+      "summaryOriginal": "CEO Mark Zuckerberg kicked off the company’s annual Connect event in Menlo Park on Wednesday with a keynote that made one thing clear: Meta is going all-in on Muse. It's even coming to Meta's AI glasses.",
+      "originalLanguage": "en",
+      "author": "Kirsten Korosec, Lucas Ropek",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-24T01:13:32.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/",
+          "publishedAt": "2026-09-24T01:13:32.000Z",
+          "title": "Everything new coming to Meta&#8217;s AI agent Muse",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 60,
+      "importanceReasonZh": "Meta在年度Connect大会上宣布全力投入AI代理Muse，并计划将其引入AI眼镜，这反映了大型科技公司在AI代理和可穿戴设备融合方向上的重要战略动向。",
+      "importanceReasonEn": "Meta announced at its annual Connect event that it is going all-in on its AI agent Muse and plans to bring it to AI glasses, reflecting a significant strategic move by a major tech company toward combining AI agents with wearables.",
+      "scoringMode": "ai",
+      "titleZh": "Meta AI代理Muse即将推出的所有新功能",
+      "titleEn": "Everything new coming to Meta's AI agent Muse",
+      "summaryZh": "Meta首席执行官马克·扎克伯格在门洛帕克举行的年度Connect大会主题演讲中明确表示，Meta将全力投入Muse，该AI代理甚至将登陆Meta的AI眼镜。",
+      "summaryEn": "CEO Mark Zuckerberg kicked off the company's annual Connect event in Menlo Park on Wednesday with a keynote that made one thing clear: Meta is going all-in on Muse. It's even coming to Meta's AI glasses.",
+      "keywords": [
+        "Meta",
+        "Muse",
+        "AI agent",
+        "AI glasses",
+        "Connect",
+        "Zuckerberg"
+      ],
+      "topics": [
+        "Meta",
+        "AI agent",
+        "Muse",
+        "AI glasses",
+        "Connect"
+      ],
+      "models": [
+        "Muse"
+      ],
+      "detailZh": "Meta于周三在门洛帕克举办了年度Connect大会，首席执行官马克·扎克伯格在主题演讲中宣布，公司将全力投入其AI代理Muse。演讲传达的核心信息是Meta对Muse的高度重视，并确认Muse将登陆Meta的AI眼镜。目前已知的信息仅限于此：大会主题演讲明确了Muse的战略地位及其向AI眼镜扩展的计划，但关于Muse的具体功能、发布时间、定价或技术细节，现有材料并未提供。",
+      "keyPointsZh": [
+        "Meta在年度Connect大会上宣布全力投入AI代理Muse",
+        "Muse将登陆Meta的AI眼镜",
+        "该消息由CEO马克·扎克伯格在主题演讲中宣布",
+        "大会在门洛帕克举行"
+      ],
+      "impactZh": "这一宣布表明Meta正将AI代理作为其核心战略方向之一，并试图通过AI眼镜等可穿戴设备拓展AI代理的使用场景，可能推动AI代理与硬件结合的趋势。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "根据现有报道，Meta在Connect大会上明确了对AI代理Muse的战略投入，并计划将其引入AI眼镜。这属于公司战略层面的宣布，而非具体产品功能的详细披露。",
+      "limitationsZh": "现有材料仅来自一篇简短的新闻报道，缺乏Muse的具体功能、技术架构、发布时间、价格以及AI眼镜兼容性等细节，相关计划的实际落地情况尚待验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/",
+          "publishedAt": "2026-09-24T01:13:32.000Z",
+          "title": "Everything new coming to Meta&#8217;s AI agent Muse",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T01:13:32.000Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
+        "current": 58,
+        "peak": 58,
+        "history": [
+          {
+            "at": "2026-09-24T01:13:32.000Z",
+            "label": "9/24 09:13",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T02:11:56.356Z",
+            "label": "9/24 10:11",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T03:10:20.712Z",
+            "label": "9/24 11:10",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T04:08:45.068Z",
+            "label": "9/24 12:08",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:07:09.424Z",
+            "label": "9/24 13:07",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
+            "value": 58,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a0999c90d1d7ac95",
+      "normalizedUrl": "https://ithome.com/1/006/548.htm",
+      "originalUrl": "https://www.ithome.com/1/006/548.htm",
+      "titleOriginal": "OpenAI 称与苹果的 ChatGPT 合作表现远低于预期",
+      "summaryOriginal": "OpenAI 在周三公开的法庭文件中称，2024 年与苹果达成协议由 ChatGPT 为 Apple Intelligence 提供支持后，该功能表现远低于预期，上线一个月后起步缓慢，OpenAI 下调了每周活跃用户预测。",
+      "originalLanguage": "zh",
+      "author": "IT之家（RSS）",
+      "category": "business",
+      "sourceType": "aggregator",
+      "authority": 78,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmueurmte03qqroyqe4rqtu2d",
+        "https://www.ithome.com/1/006/548.htm"
+      ],
+      "publishedAt": "2026-09-24T01:12:13.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-24T01:28:02.163Z",
+      "contentType": "industry",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmueurmte03qqroyqe4rqtu2d"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmueurmte03qqroyqe4rqtu2d",
+          "name": "IT之家（RSS）",
+          "type": "aggregator",
+          "url": "https://www.ithome.com/1/006/548.htm",
+          "publishedAt": "2026-09-24T01:12:13.000Z",
+          "title": "OpenAI 称与苹果的 ChatGPT 合作表现远低于预期",
+          "authority": 78,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmueurmte03qqroyqe4rqtu2d",
+            "https://www.ithome.com/1/006/548.htm"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是来自法庭文件的一手信息，首次量化披露了备受关注的 OpenAI 与苹果合作的实际表现，对理解大型 AI 平台的分发合作价值有参考意义。",
+      "importanceReasonEn": "This is primary information from court documents that for the first time quantifies the actual performance of the closely watched OpenAI-Apple partnership, offering a useful reference for understanding the value of distribution deals for major AI platforms.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI 称与苹果的 ChatGPT 合作表现远低于预期",
+      "titleEn": "OpenAI Says ChatGPT Partnership With Apple Fell Far Short of Expectations",
+      "summaryZh": "OpenAI 在周三公开的法庭文件中称，2024 年与苹果达成协议由 ChatGPT 为 Apple Intelligence 提供支持后，该功能表现远低于预期，上线一个月后起步缓慢，OpenAI 下调了每周活跃用户预测。",
+      "summaryEn": "In court documents made public on Wednesday, OpenAI said that after reaching an agreement with Apple in 2024 for ChatGPT to power Apple Intelligence, the feature performed far below expectations, got off to a slow start a month after launch, and OpenAI lowered its weekly active user forecast.",
+      "keywords": [
+        "OpenAI",
+        "Apple",
+        "ChatGPT",
+        "Apple Intelligence",
+        "weekly active users",
+        "court filing"
+      ],
+      "topics": [
+        "OpenAI",
+        "Apple",
+        "ChatGPT",
+        "Apple Intelligence",
+        "AI partnerships"
+      ],
+      "models": [
+        "ChatGPT"
+      ],
+      "detailZh": "OpenAI 在周三公开的法庭文件中表示，2024 年与苹果达成的协议让 ChatGPT 为 Apple Intelligence 提供支持，但该功能的表现远低于预期。文件称，该功能上线一个月后起步缓慢，OpenAI 因此下调了每周活跃用户预测。\n\n这一合作原本被视为 OpenAI 借助苹果设备触达海量用户的重要分发渠道。法庭文件披露的信息显示，实际用户增长并未达到 OpenAI 内部此前的预期水平。\n\n目前公开的信息仅限于法庭文件中的表述，未包含具体的用户数字、下调幅度或苹果方面的回应。",
+      "keyPointsZh": [
+        "OpenAI 在周三公开的法庭文件中披露，与苹果的 ChatGPT 合作表现远低于预期。",
+        "该合作于 2024 年达成，由 ChatGPT 为 Apple Intelligence 提供支持。",
+        "文件称功能上线一个月后起步缓慢。",
+        "OpenAI 因此下调了每周活跃用户预测。"
+      ],
+      "impactZh": "该披露表明，即便是与苹果这样的超级平台绑定，AI 助手的分发合作也未必能带来预期的用户增长，这可能影响业界对类似平台级分发合作价值的判断。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "从法庭文件披露的信息看，OpenAI 与苹果的合作在用户增长上未达内部预期，OpenAI 据此下调了每周活跃用户预测。这属于已披露的事实。至于表现不佳的具体原因、实际用户规模以及苹果的态度，目前公开信息并未说明，不宜过度推断。",
+      "limitationsZh": "公开信息仅来自法庭文件中的表述，缺少具体用户数字、预测下调幅度、统计口径以及苹果方面的回应，无法判断实际影响程度。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmueurmte03qqroyqe4rqtu2d",
+          "name": "IT之家（RSS）",
+          "type": "aggregator",
+          "url": "https://www.ithome.com/1/006/548.htm",
+          "publishedAt": "2026-09-24T01:12:13.000Z",
+          "title": "OpenAI 称与苹果的 ChatGPT 合作表现远低于预期",
+          "authority": 78,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmueurmte03qqroyqe4rqtu2d",
+            "https://www.ithome.com/1/006/548.htm"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T01:12:13.000Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-24T01:12:13.000Z",
+            "label": "9/24 09:12",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T02:10:53.156Z",
+            "label": "9/24 10:10",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T03:09:33.312Z",
+            "label": "9/24 11:09",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T04:08:13.468Z",
+            "label": "9/24 12:08",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:06:53.624Z",
+            "label": "9/24 13:06",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "3325370ff517c275",
+      "normalizedUrl": "https://openrouter.ai/blog/insights/kimi-k3-open-source",
+      "originalUrl": "https://openrouter.ai/blog/insights/kimi-k3-open-source",
+      "titleOriginal": "OpenRouter 解析 Kimi K3：开源权重与许可证条款，以及如何调用",
+      "summaryOriginal": "OpenRouter 撰文说明 Kimi K3 是开放权重而非开源模型，Moonshot AI 以自定义 Kimi K3 License 在 Hugging Face 发布 moonshotai/Kimi-K3。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 77,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmuetpj5l04curohbgsl4cj6m",
+        "https://openrouter.ai/blog/insights/kimi-k3-open-source"
+      ],
+      "publishedAt": "2026-09-24T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-24T00:58:24.496Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmuetpj5l04curohbgsl4cj6m"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmuetpj5l04curohbgsl4cj6m",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/kimi-k3-open-source",
+          "publishedAt": "2026-09-24T00:00:00.000Z",
+          "title": "OpenRouter 解析 Kimi K3：开源权重与许可证条款，以及如何调用",
+          "authority": 77,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmuetpj5l04curohbgsl4cj6m",
+            "https://openrouter.ai/blog/insights/kimi-k3-open-source"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该文澄清了 Kimi K3 的开放权重定位与自定义许可证，并给出调用方式，对希望使用该模型的开发者具有直接参考价值。",
+      "importanceReasonEn": "The article clarifies Kimi K3's open-weight positioning and custom license while explaining how to call it, offering direct practical value for developers who want to use the model.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 解析 Kimi K3：开放权重与许可证条款，以及如何调用",
+      "titleEn": "OpenRouter Explains Kimi K3: Open Weights, License Terms, and How to Call It",
+      "summaryZh": "OpenRouter 撰文说明 Kimi K3 是开放权重而非开源模型，Moonshot AI 以自定义 Kimi K3 License 在 Hugging Face 发布 moonshotai/Kimi-K3。",
+      "summaryEn": "OpenRouter explains that Kimi K3 is an open-weight rather than open-source model, released by Moonshot AI on Hugging Face as moonshotai/Kimi-K3 under a custom Kimi K3 License.",
+      "keywords": [
+        "Kimi K3",
+        "OpenRouter",
+        "Moonshot AI",
+        "open weights",
+        "Kimi K3 License",
+        "Hugging Face"
+      ],
+      "topics": [
+        "open weights",
+        "model licensing",
+        "model access",
+        "Kimi K3"
+      ],
+      "models": [
+        "Kimi K3"
+      ],
+      "detailZh": "OpenRouter 发布文章，对 Moonshot AI 的 Kimi K3 模型进行解析。文章的核心结论是：Kimi K3 属于开放权重（open weights）模型，而不是通常意义上的开源（open source）模型。这一区分关系到用户在使用、修改和再分发模型时的权利边界。\n\n根据文章，Moonshot AI 在 Hugging Face 上以 moonshotai/Kimi-K3 的名称发布了该模型，并采用自定义的 Kimi K3 License 作为授权条款。这意味着模型权重可以获取，但具体使用条件由该自定义许可证规定，而非标准开源许可证。\n\n文章还说明了如何调用 Kimi K3，属于面向开发者的实用指引。由于来源为 OpenRouter 的公告类文章，内容侧重于模型定位、许可证说明和调用方式，未提供更多技术细节或性能数据。",
+      "keyPointsZh": [
+        "Kimi K3 被定位为开放权重模型，而非开源模型。",
+        "Moonshot AI 在 Hugging Face 以 moonshotai/Kimi-K3 发布该模型。",
+        "模型采用自定义的 Kimi K3 License。",
+        "OpenRouter 的文章同时说明了如何调用 Kimi K3。"
+      ],
+      "impactZh": "该解析帮助开发者正确理解 Kimi K3 的授权性质，避免将其误认为标准开源模型，从而在使用和分发时遵守自定义许可证条款。",
+      "readerImpactZh": "",
+      "userImpactZh": "对希望使用 Kimi K3 的开发者而言，需要先确认自定义 Kimi K3 License 的具体条款，再决定是否将其集成到产品或工作流中；文章提供的调用说明可降低接入门槛。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：Kimi K3 由 Moonshot AI 发布在 Hugging Face，名称为 moonshotai/Kimi-K3，采用自定义 Kimi K3 License，OpenRouter 将其归类为开放权重而非开源，并提供了调用说明。可以合理推断的是，自定义许可证可能对商业使用或再分发设有条件，但输入材料未给出具体条款内容，因此无法确认。",
+      "limitationsZh": "输入材料仅为 OpenRouter 公告的摘要，未包含 Kimi K3 License 的具体条款、模型参数规模、性能基准或调用示例的细节，因此无法验证许可证的实际限制范围。",
+      "actionStepsZh": [
+        "查阅 Hugging Face 上 moonshotai/Kimi-K3 页面以确认 Kimi K3 License 的具体条款。",
+        "参考 OpenRouter 文章中的调用说明接入 Kimi K3。",
+        "在将 Kimi K3 用于商业或再分发场景前，核对许可证是否允许相应用途。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmuetpj5l04curohbgsl4cj6m",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/kimi-k3-open-source",
+          "publishedAt": "2026-09-24T00:00:00.000Z",
+          "title": "OpenRouter 解析 Kimi K3：开源权重与许可证条款，以及如何调用",
+          "authority": 77,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmuetpj5l04curohbgsl4cj6m",
+            "https://openrouter.ai/blog/insights/kimi-k3-open-source"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T00:00:00.000Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-24T00:00:00.000Z",
+            "label": "9/24 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T00:52:13.397Z",
+            "label": "9/24 08:52",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T01:44:26.794Z",
+            "label": "9/24 09:44",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T02:36:40.191Z",
+            "label": "9/24 10:36",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T03:28:53.588Z",
+            "label": "9/24 11:28",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T04:21:06.985Z",
+            "label": "9/24 12:21",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:13:20.382Z",
+            "label": "9/24 13:13",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "ee0a4957fb506dcd",
       "normalizedUrl": "https://fireworks.ai/blog/ember-1",
@@ -72,23 +788,23 @@
         "Ember-1",
         "Kimi K3"
       ],
-      "detailZh": "Fireworks Research 发布了名为 Ember-1 的模型。根据官方信息，Ember-1 是基于 Kimi K3 构建的专用模型，其目标是在保持与 Kimi K3 相当质量的前提下，显著减少推理所需的 token 数量。\n\n官方给出的量化说法是：Ember-1 使用的推理 token 比 Kimi K3 少约 40%，同时质量与 Kimi K3 相当。这意味着在相同任务上，模型生成推理过程所消耗的 token 更少。\n\n发布形式方面，Ember-1 今日以 Research Preview（研究预览）的形式在 Serverless 上线，用户可以通过 Fireworks AI 的 Serverless 服务访问该模型。\n\n目前公开信息仅包含上述要点，官方未披露 Ember-1 的具体架构改动、训练方法、评测基准细节，也未说明“质量相当”是在哪些任务或数据集上测得的。",
+      "detailZh": "Fireworks Research 发布了名为 Ember-1 的模型。根据官方信息，Ember-1 是基于 Kimi K3 构建的专用模型，其目标是在保持与 Kimi K3 相当质量的前提下，显著减少推理所需的 token 数量。\n\n官方给出的量化说法是：Ember-1 使用的 token 比 Kimi K3 少约 40%，同时质量与 Kimi K3 相当。这意味着在相同任务上，调用 Ember-1 可能消耗更少的推理 token。\n\n发布形式方面，Ember-1 今日以 Research Preview 的形式在 Serverless 上线，用户可以通过 Fireworks 的 Serverless 服务访问该模型。Research Preview 通常意味着模型处于早期可用阶段，可能仍在迭代。\n\n目前公开信息仅包含上述要点，没有披露模型的具体架构、训练方法、评测基准细节、定价或上下文长度等信息。因此关于其质量与 token 节省的具体表现，仍需以官方后续说明或独立评测为准。",
       "keyPointsZh": [
         "Fireworks Research 发布 Ember-1，基于 Kimi K3 构建。",
-        "官方称 Ember-1 以约少 40% 的推理 token 达到与 Kimi K3 相当的质量。",
+        "官方称 Ember-1 以约少 40% 的 token 达到与 Kimi K3 相当的质量。",
         "Ember-1 今日以 Research Preview 形式在 Serverless 上线。",
-        "官方未披露具体架构、训练方法与评测细节。"
+        "公开信息未披露架构、评测细节与定价。"
       ],
-      "impactZh": "推理模型的 token 消耗直接决定调用成本与响应延迟。若 Ember-1 的 40% token 削减在真实任务中成立，使用 Kimi K3 类推理能力的开发者可能以更低成本获得相近输出，这对推理模型的部署经济性有直接影响。",
+      "impactZh": "推理模型的 token 消耗直接关系到调用成本与响应延迟。若 Ember-1 的 token 节省说法成立，使用 Kimi K3 类能力的开发者可能以更低成本完成同等任务，这对推理模型的部署经济性有实际影响。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 Fireworks AI Serverless 服务的开发者可以立即以 Research Preview 形式试用 Ember-1，在相同任务上对比其与 Kimi K3 的输出质量与 token 用量，评估是否可降低推理成本。",
+      "userImpactZh": "使用 Fireworks Serverless 的开发者可以试用 Ember-1，在保持与 Kimi K3 相当质量的同时减少约 40% 的推理 token 消耗，从而可能降低调用成本。",
       "howItWorksZh": "",
-      "interpretationZh": "已报告的事实是：Fireworks Research 发布了基于 Kimi K3 的 Ember-1，官方称其以约少 40% 的 token 达到与 Kimi K3 相当的质量，并以 Research Preview 形式在 Serverless 上线。可以合理推断的是，Ember-1 属于针对推理 token 效率优化的专用模型，而非全新基座模型。但“质量相当”的具体评测范围、40% 的测量条件以及是否在所有任务上成立，均未在现有信息中说明。",
-      "limitationsZh": "现有信息未披露 Ember-1 的架构改动、训练数据与方法、评测基准和具体分数；“质量相当”与“少 40% token”均为官方说法，缺少第三方验证；Research Preview 通常意味着能力与稳定性可能变化，尚不适合直接用于生产关键场景。",
+      "interpretationZh": "已报道的事实是：Fireworks Research 发布了 Ember-1，它基于 Kimi K3，官方称其以约少 40% 的 token 达到与 Kimi K3 相当的质量，并以 Research Preview 形式在 Serverless 上线。可以合理推断的是，Ember-1 属于针对推理效率优化的专用模型，而非从零训练的全新基础模型。但“质量相当”和“少 40% token”目前均为官方说法，缺少独立验证与具体评测条件说明。",
+      "limitationsZh": "公开信息有限：未披露模型架构、训练方法、评测基准、具体任务类型、上下文长度与定价。40% token 节省与质量相当的说法来自官方，尚无独立复现或第三方评测。Research Preview 状态意味着能力与接口可能变化。",
       "actionStepsZh": [
-        "在 Fireworks AI Serverless 上以 Research Preview 形式试用 Ember-1。",
-        "在自身任务上对比 Ember-1 与 Kimi K3 的输出质量和 token 用量。",
-        "关注 Fireworks Research 后续是否公布评测细节与正式版本。"
+        "在 Fireworks Serverless 上以 Research Preview 形式试用 Ember-1。",
+        "在自身任务上对比 Ember-1 与 Kimi K3 的 token 用量与输出质量。",
+        "关注 Fireworks 后续是否公布评测细节与定价信息。"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -96,15 +812,15 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "以 Kimi K3 的推理 token 量为基准 100，Ember-1 约为 60，即官方所称减少约 40%。",
+        "insightZh": "官方称 Ember-1 的 token 用量约为 Kimi K3 的 60%，即少约 40%，同时质量相当。",
         "data": [
           {
-            "label": "Kimi K3 推理 token",
+            "label": "Kimi K3 token 用量",
             "value": 100,
             "display": ""
           },
           {
-            "label": "Ember-1 推理 token",
+            "label": "Ember-1 token 用量（约少 40%）",
             "value": 60,
             "display": ""
           }
@@ -132,7 +848,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T21:40:50.983Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -143,27 +859,256 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T22:28:29.324Z",
-            "label": "9/24 06:28",
-            "value": 27,
+            "at": "2026-09-23T22:36:55.738Z",
+            "label": "9/24 06:36",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:16:07.666Z",
-            "label": "9/24 07:16",
+            "at": "2026-09-23T23:33:00.493Z",
+            "label": "9/24 07:33",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:29:05.248Z",
+            "label": "9/24 08:29",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T01:25:10.003Z",
+            "label": "9/24 09:25",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T02:21:14.759Z",
+            "label": "9/24 10:21",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T03:17:19.514Z",
+            "label": "9/24 11:17",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T04:13:24.269Z",
+            "label": "9/24 12:13",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:09:29.024Z",
+            "label": "9/24 13:09",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "25f3d2a26175c828",
+      "normalizedUrl": "https://x.com/ClaudeDevs/status/2102871550974427462",
+      "originalUrl": "https://x.com/ClaudeDevs/status/2102871550974427462",
+      "titleOriginal": "Claude Code 云会话正式上线，Pro 和 Max 订阅者可领一次性额度",
+      "summaryOriginal": "Claude Code 云会话正式可用，结束研究预览阶段，可在笔记本合盖后继续在 Anthropic 托管的基础设施上运行。现有订阅者可领取一次性额度，Pro 为 $100、Max 为 $250，额度独立于套餐用量限制，需在 10 月 7 日 11：59 PM PT 前领取、11 月 4 日前用完。",
+      "originalLanguage": "zh",
+      "author": "X：Claude Devs (@ClaudeDevs)",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmueurvwl03tvroyqdzcth166",
+        "https://x.com/ClaudeDevs/status/2102871550974427462"
+      ],
+      "publishedAt": "2026-09-23T21:23:41.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-24T01:28:13.469Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmueurvwl03tvroyqdzcth166"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmueurvwl03tvroyqdzcth166",
+          "name": "X：Claude Devs (@ClaudeDevs)",
+          "type": "aggregator",
+          "url": "https://x.com/ClaudeDevs/status/2102871550974427462",
+          "publishedAt": "2026-09-23T21:23:41.000Z",
+          "title": "Claude Code 云会话正式上线，Pro 和 Max 订阅者可领一次性额度",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmueurvwl03tvroyqdzcth166",
+            "https://x.com/ClaudeDevs/status/2102871550974427462"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是 Claude Code 从研究预览转为正式可用的产品节点，并附带明确的订阅者补偿额度，对现有用户有直接价值。",
+      "importanceReasonEn": "This marks Claude Code's transition from research preview to general availability, with concrete subscriber credits that have direct value for existing users.",
+      "scoringMode": "ai",
+      "titleZh": "Claude Code 云会话正式上线，Pro 和 Max 订阅者可领一次性额度",
+      "titleEn": "Claude Code Cloud Sessions Launch, Pro and Max Subscribers Get One-Time Credits",
+      "summaryZh": "Claude Code 云会话正式可用，结束研究预览阶段，可在笔记本合盖后继续在 Anthropic 托管的基础设施上运行。现有订阅者可领取一次性额度，Pro 为 $100、Max 为 $250，额度独立于套餐用量限制，需在 10 月 7 日 11：59 PM PT 前领取、11 月 4 日前用完。",
+      "summaryEn": "Claude Code cloud sessions are now generally available, ending the research preview phase, and can continue running on Anthropic-hosted infrastructure even after a laptop is closed. Existing subscribers can claim one-time credits of $100 for Pro and $250 for Max, separate from plan usage limits, claimable by October 7 at 11:59 PM PT and usable until November 4.",
+      "keywords": [
+        "Claude Code",
+        "云会话",
+        "Anthropic",
+        "Pro",
+        "Max",
+        "一次性额度",
+        "研究预览"
+      ],
+      "topics": [
+        "Claude Code",
+        "cloud sessions",
+        "Anthropic",
+        "developer tools",
+        "subscription credits"
+      ],
+      "models": [
+        "Claude Code"
+      ],
+      "detailZh": "Claude Code 云会话正式上线，结束了此前的研究预览阶段。根据官方发布的信息，云会话可以在 Anthropic 托管的基础设施上运行，因此即使用户合上笔记本电脑，会话也能继续执行。\n\n针对现有订阅者，官方提供一次性额度：Pro 订阅者为 $100，Max 订阅者为 $250。该额度独立于套餐本身的用量限制，属于额外补偿性质。\n\n额度有明确的时间窗口：需要在 10 月 7 日 11：59 PM PT 之前领取，并在 11 月 4 日之前用完。官方未在本次信息中说明额度的具体计费方式、是否可结转或过期后的处理方式。\n\n本次发布没有披露云会话的底层实现细节、支持的环境或与本地会话的功能差异，这些内容仍待官方后续说明。",
+      "keyPointsZh": [
+        "Claude Code 云会话正式可用，结束研究预览阶段。",
+        "云会话在 Anthropic 托管基础设施上运行，笔记本合盖后仍可继续。",
+        "Pro 订阅者可领 $100 一次性额度，Max 为 $250。",
+        "额度独立于套餐用量限制，需在 10 月 7 日 11：59 PM PT 前领取、11 月 4 日前用完。"
+      ],
+      "impactZh": "Claude Code 从研究预览转为正式产品，意味着 Anthropic 将其编码代理能力作为稳定服务提供，并以一次性额度补偿现有订阅者，可能影响开发者对云端编码代理工具的选择。",
+      "readerImpactZh": "",
+      "userImpactZh": "现有 Claude Code 的 Pro 和 Max 订阅者可以领取一次性额度，用于在正式版云会话中继续使用，额度独立于套餐限制，但需注意领取和使用的截止时间。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：云会话正式可用、在 Anthropic 托管基础设施上运行、Pro 和 Max 订阅者可领取一次性额度并有明确截止时间。合理推断是：云会话的卖点在于不依赖本地设备持续在线，适合长时间运行的任务。但官方未说明云会话与本地会话在功能、计费或数据保留上的具体差异。",
+      "limitationsZh": "官方信息未披露云会话的底层实现、支持的环境、与本地会话的功能差异、额度的计费折算方式以及过期后的处理规则，这些内容尚待进一步确认。",
+      "actionStepsZh": [
+        "Pro 或 Max 订阅者可在 10 月 7 日 11：59 PM PT 前领取一次性额度。",
+        "在 11 月 4 日前使用完额度，避免过期。",
+        "关注官方后续关于云会话功能与计费细节的说明。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Max 订阅者的一次性额度为 $250，是 Pro 订阅者 $100 的 2.5 倍。",
+        "data": [
+          {
+            "label": "Pro",
+            "value": 100,
+            "display": ""
+          },
+          {
+            "label": "Max",
+            "value": 250,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmueurvwl03tvroyqdzcth166",
+          "name": "X：Claude Devs (@ClaudeDevs)",
+          "type": "aggregator",
+          "url": "https://x.com/ClaudeDevs/status/2102871550974427462",
+          "publishedAt": "2026-09-23T21:23:41.000Z",
+          "title": "Claude Code 云会话正式上线，Pro 和 Max 订阅者可领一次性额度",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmueurvwl03tvroyqdzcth166",
+            "https://x.com/ClaudeDevs/status/2102871550974427462"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-23T21:23:41.000Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-23T21:23:41.000Z",
+            "label": "9/24 05:23",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-23T22:21:40.197Z",
+            "label": "9/24 06:21",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:19:39.395Z",
+            "label": "9/24 07:19",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:17:38.593Z",
+            "label": "9/24 08:17",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T01:15:37.791Z",
+            "label": "9/24 09:15",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T02:13:36.988Z",
+            "label": "9/24 10:13",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:03:46.007Z",
-            "label": "9/24 08:03",
-            "value": 52,
+            "at": "2026-09-24T03:11:36.186Z",
+            "label": "9/24 11:11",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
-            "value": 65,
+            "at": "2026-09-24T04:09:35.384Z",
+            "label": "9/24 12:09",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:07:34.582Z",
+            "label": "9/24 13:07",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -217,8 +1162,8 @@
         }
       ],
       "importance": 62,
-      "importanceReasonZh": "这是 Anthropic 围绕 Claude 构建生态分发的官方动作，把插件、智能体和服务伙伴集中到一个入口，可能影响开发者与企业的接入方式。",
-      "importanceReasonEn": "This is an official Anthropic move to build ecosystem distribution around Claude, centralizing plugins, agents and service partners in one entry point, which may affect how developers and enterprises integrate.",
+      "importanceReasonZh": "这是 Anthropic 官方发布的生态入口，把插件、智能体和服务伙伴集中到统一市场，可能影响 Claude 用户发现和采用第三方能力的方式。",
+      "importanceReasonEn": "This is an official Anthropic ecosystem entry point that centralizes plugins, agents, and service partners in a unified marketplace, potentially changing how Claude users discover and adopt third-party capabilities.",
       "scoringMode": "ai",
       "titleZh": "Claude Marketplace：一站式发现合作伙伴的插件、智能体与服务",
       "titleEn": "Claude Marketplace: one place to discover plugins, agents, and services from our partners",
@@ -234,27 +1179,27 @@
       ],
       "topics": [
         "Claude",
-        "插件生态",
+        "Marketplace",
+        "插件",
         "智能体",
-        "合作伙伴",
-        "开发者平台"
+        "合作伙伴生态"
       ],
       "models": [
         "Claude"
       ],
-      "detailZh": "Anthropic 发布 Claude Marketplace，定位为一个集中发现入口，用于查找来自其合作伙伴的插件、智能体和服务。根据官方描述，该市场把三类内容聚合在一起：插件与连接器、智能体与产品，以及服务伙伴。\n\n这一动作的背景是 Claude 生态中第三方集成逐渐增多，此前用户和开发者需要在不同渠道寻找可用的扩展与合作伙伴方案。Marketplace 试图用统一入口降低发现成本。\n\n目前公开信息仅说明了市场的定位与内容分类，未披露具体的合作伙伴名单、上架审核机制、分成或定价方式，也未说明是否对开发者开放自助提交。",
+      "detailZh": "Anthropic 发布了 Claude Marketplace，官方描述为一个集中发现合作伙伴插件、智能体与服务的入口。根据现有信息，该市场把三类内容聚合在一起：插件与连接器、智能体与产品，以及服务伙伴。\n\n这一发布由 Anthropic 官方博客公布，属于官方产品公告，而非第三方报道或传闻。公告的核心主张是“一站式发现”，即用户不必在多个分散渠道中寻找合作伙伴提供的扩展能力，而是通过统一入口浏览。\n\n目前可确认的信息仅限于市场定位和内容分类，公告未提供具体上架数量、定价模式、分成机制、审核标准或上线时间等细节。因此，关于该市场实际覆盖范围和可用性的判断仍需等待更多官方信息。",
       "keyPointsZh": [
-        "Anthropic 官方推出 Claude Marketplace。",
+        "Anthropic 官方发布 Claude Marketplace。",
         "市场聚合三类内容：插件与连接器、智能体与产品、服务伙伴。",
-        "定位是集中发现合作伙伴提供的扩展与服务。",
-        "官方未披露合作伙伴名单、审核与定价等细节。"
+        "定位是让用户在一个入口发现合作伙伴提供的扩展与服务。",
+        "公告未披露上架数量、定价、审核或分成等具体机制。"
       ],
-      "impactZh": "Claude Marketplace 把分散的第三方集成集中到一个官方入口，意味着 Anthropic 正在强化对 Claude 生态分发渠道的控制，可能改变开发者和企业寻找、接入 Claude 扩展的方式。",
+      "impactZh": "该市场为 Claude 生态提供了统一的第三方能力分发入口，可能降低用户发现和接入合作伙伴工具的成本，同时让合作伙伴获得更集中的曝光渠道。",
       "readerImpactZh": "",
-      "userImpactZh": "Claude 用户和开发者未来可能通过一个官方入口发现并接入插件、智能体和第三方服务，减少在多个渠道间搜索的成本；但当前尚无具体可用清单与接入方式。",
+      "userImpactZh": "Claude 用户和开发者未来可能通过一个统一入口查找并接入插件、连接器与智能体，减少在多个渠道间搜索扩展的成本；但具体可用范围取决于后续上架情况。",
       "howItWorksZh": "",
-      "interpretationZh": "可以确认的是 Anthropic 上线了一个名为 Claude Marketplace 的官方发现入口，并按插件与连接器、智能体与产品、服务伙伴三类组织内容。至于它是否支持自助上架、如何审核、是否收费，目前没有公开信息，属于尚未证实的部分。",
-      "limitationsZh": "官方信息仅给出市场定位与内容分类，未提供合作伙伴名单、上架流程、审核标准、定价或分成模式，也未说明开发者能否自助提交，实际可用范围仍不明确。",
+      "interpretationZh": "可以确定的是 Anthropic 官方推出了一个聚合合作伙伴插件、智能体与服务的市场入口。至于它是否真正简化了安装与使用流程、覆盖多少合作伙伴，目前公告没有给出可验证的细节，属于尚未披露的部分。",
+      "limitationsZh": "公告未提供上架数量、定价、分成、审核标准、上线时间或地区可用性等关键信息，实际功能与覆盖范围尚不明确。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -280,7 +1225,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T19:03:25.133Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -291,38 +1236,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T20:01:25.002Z",
-            "label": "9/24 04:01",
+            "at": "2026-09-23T20:03:36.828Z",
+            "label": "9/24 04:03",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T21:03:48.523Z",
+            "label": "9/24 05:03",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:59:24.871Z",
-            "label": "9/24 04:59",
-            "value": 29,
+            "at": "2026-09-23T22:04:00.218Z",
+            "label": "9/24 06:04",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:57:24.741Z",
-            "label": "9/24 05:57",
-            "value": 37,
+            "at": "2026-09-23T23:04:11.913Z",
+            "label": "9/24 07:04",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:55:24.610Z",
-            "label": "9/24 06:55",
-            "value": 44,
+            "at": "2026-09-24T00:04:23.608Z",
+            "label": "9/24 08:04",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:53:24.479Z",
-            "label": "9/24 07:53",
-            "value": 52,
+            "at": "2026-09-24T01:04:35.304Z",
+            "label": "9/24 09:04",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
+            "at": "2026-09-24T02:04:46.999Z",
+            "label": "9/24 10:04",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T03:04:58.694Z",
+            "label": "9/24 11:04",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T04:05:10.389Z",
+            "label": "9/24 12:05",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:05:22.084Z",
+            "label": "9/24 13:05",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
             "value": 59,
             "reports": 1
           }
@@ -463,7 +1438,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T18:54:11.000Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -474,38 +1449,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T19:53:43.224Z",
-            "label": "9/24 03:53",
+            "at": "2026-09-23T19:55:13.070Z",
+            "label": "9/24 03:55",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T20:56:15.141Z",
+            "label": "9/24 04:56",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:53:15.449Z",
-            "label": "9/24 04:53",
-            "value": 29,
+            "at": "2026-09-23T21:57:17.212Z",
+            "label": "9/24 05:57",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:52:47.674Z",
-            "label": "9/24 05:52",
-            "value": 37,
+            "at": "2026-09-23T22:58:19.283Z",
+            "label": "9/24 06:58",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:52:19.899Z",
-            "label": "9/24 06:52",
-            "value": 44,
+            "at": "2026-09-23T23:59:21.354Z",
+            "label": "9/24 07:59",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:51:52.124Z",
-            "label": "9/24 07:51",
-            "value": 52,
+            "at": "2026-09-24T01:00:23.425Z",
+            "label": "9/24 09:00",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
+            "at": "2026-09-24T02:01:25.496Z",
+            "label": "9/24 10:01",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T03:02:27.567Z",
+            "label": "9/24 11:02",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T04:03:29.638Z",
+            "label": "9/24 12:03",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T05:04:31.709Z",
+            "label": "9/24 13:04",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
             "value": 59,
             "reports": 1
           }
@@ -610,7 +1615,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T18:00:00.000Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -621,44 +1626,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T18:58:46.335Z",
-            "label": "9/24 02:58",
-            "value": 19,
+            "at": "2026-09-23T19:05:57.616Z",
+            "label": "9/24 03:05",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:57:32.671Z",
-            "label": "9/24 03:57",
+            "at": "2026-09-23T20:11:55.232Z",
+            "label": "9/24 04:11",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T21:17:52.849Z",
+            "label": "9/24 05:17",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:56:19.006Z",
-            "label": "9/24 04:56",
-            "value": 29,
+            "at": "2026-09-23T22:23:50.465Z",
+            "label": "9/24 06:23",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:55:05.342Z",
-            "label": "9/24 05:55",
-            "value": 35,
+            "at": "2026-09-23T23:29:48.081Z",
+            "label": "9/24 07:29",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:53:51.677Z",
-            "label": "9/24 06:53",
+            "at": "2026-09-24T00:35:45.698Z",
+            "label": "9/24 08:35",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T01:41:43.314Z",
+            "label": "9/24 09:41",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T02:47:40.930Z",
+            "label": "9/24 10:47",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:52:38.013Z",
-            "label": "9/24 07:52",
-            "value": 45,
+            "at": "2026-09-24T03:53:38.547Z",
+            "label": "9/24 11:53",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
+            "at": "2026-09-24T04:59:36.163Z",
+            "label": "9/24 12:59",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
             "value": 50,
             "reports": 1
           }
@@ -781,7 +1810,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T17:57:37.000Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -792,44 +1821,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T18:56:43.764Z",
-            "label": "9/24 02:56",
-            "value": 21,
+            "at": "2026-09-23T19:03:47.616Z",
+            "label": "9/24 03:03",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:55:50.528Z",
-            "label": "9/24 03:55",
-            "value": 29,
+            "at": "2026-09-23T20:09:58.232Z",
+            "label": "9/24 04:09",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:54:57.292Z",
-            "label": "9/24 04:54",
-            "value": 36,
+            "at": "2026-09-23T21:16:08.849Z",
+            "label": "9/24 05:16",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:54:04.056Z",
-            "label": "9/24 05:54",
-            "value": 43,
+            "at": "2026-09-23T22:22:19.465Z",
+            "label": "9/24 06:22",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:53:10.820Z",
-            "label": "9/24 06:53",
-            "value": 50,
+            "at": "2026-09-23T23:28:30.081Z",
+            "label": "9/24 07:28",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:52:17.584Z",
-            "label": "9/24 07:52",
-            "value": 58,
+            "at": "2026-09-24T00:34:40.698Z",
+            "label": "9/24 08:34",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
+            "at": "2026-09-24T01:40:51.314Z",
+            "label": "9/24 09:40",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T02:47:01.930Z",
+            "label": "9/24 10:47",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T03:53:12.547Z",
+            "label": "9/24 11:53",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T04:59:23.163Z",
+            "label": "9/24 12:59",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
             "value": 65,
             "reports": 1
           }
@@ -967,7 +2020,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T17:39:10.000Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -978,50 +2031,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T18:33:11.793Z",
-            "label": "9/24 02:33",
-            "value": 20,
+            "at": "2026-09-23T18:47:01.252Z",
+            "label": "9/24 02:47",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:27:13.587Z",
-            "label": "9/24 03:27",
-            "value": 27,
+            "at": "2026-09-23T19:54:52.505Z",
+            "label": "9/24 03:54",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:21:15.380Z",
-            "label": "9/24 04:21",
-            "value": 33,
+            "at": "2026-09-23T21:02:43.758Z",
+            "label": "9/24 05:02",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:15:17.174Z",
-            "label": "9/24 05:15",
-            "value": 39,
+            "at": "2026-09-23T22:10:35.010Z",
+            "label": "9/24 06:10",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:09:18.968Z",
-            "label": "9/24 06:09",
+            "at": "2026-09-23T23:18:26.263Z",
+            "label": "9/24 07:18",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T00:26:17.516Z",
+            "label": "9/24 08:26",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T01:34:08.769Z",
+            "label": "9/24 09:34",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:03:20.761Z",
-            "label": "9/24 07:03",
-            "value": 52,
+            "at": "2026-09-24T02:42:00.021Z",
+            "label": "9/24 10:42",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:57:22.555Z",
-            "label": "9/24 07:57",
-            "value": 58,
+            "at": "2026-09-24T03:49:51.274Z",
+            "label": "9/24 11:49",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
+            "at": "2026-09-24T04:57:42.527Z",
+            "label": "9/24 12:57",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
             "value": 65,
             "reports": 1
           }
@@ -1192,7 +2263,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T17:12:27.000Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1203,50 +2274,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T18:09:49.168Z",
-            "label": "9/24 02:09",
-            "value": 20,
+            "at": "2026-09-23T18:22:43.980Z",
+            "label": "9/24 02:22",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:07:11.337Z",
-            "label": "9/24 03:07",
-            "value": 25,
+            "at": "2026-09-23T19:33:00.960Z",
+            "label": "9/24 03:33",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:04:33.505Z",
-            "label": "9/24 04:04",
-            "value": 31,
+            "at": "2026-09-23T20:43:17.940Z",
+            "label": "9/24 04:43",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:01:55.674Z",
-            "label": "9/24 05:01",
-            "value": 37,
+            "at": "2026-09-23T21:53:34.920Z",
+            "label": "9/24 05:53",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:59:17.843Z",
-            "label": "9/24 05:59",
-            "value": 42,
+            "at": "2026-09-23T23:03:51.900Z",
+            "label": "9/24 07:03",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:56:40.011Z",
-            "label": "9/24 06:56",
-            "value": 48,
+            "at": "2026-09-24T00:14:08.880Z",
+            "label": "9/24 08:14",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:54:02.180Z",
-            "label": "9/24 07:54",
-            "value": 54,
+            "at": "2026-09-24T01:24:25.860Z",
+            "label": "9/24 09:24",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
+            "at": "2026-09-24T02:34:42.840Z",
+            "label": "9/24 10:34",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T03:44:59.820Z",
+            "label": "9/24 11:44",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T04:55:16.800Z",
+            "label": "9/24 12:55",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
             "value": 59,
             "reports": 1
           }
@@ -1373,7 +2462,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T16:37:43.000Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1384,56 +2473,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T17:32:34.261Z",
-            "label": "9/24 01:32",
-            "value": 19,
+            "at": "2026-09-23T17:51:09.434Z",
+            "label": "9/24 01:51",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-23T18:27:25.522Z",
-            "label": "9/24 02:27",
-            "value": 24,
+            "at": "2026-09-23T19:04:35.869Z",
+            "label": "9/24 03:04",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:22:16.783Z",
-            "label": "9/24 03:22",
-            "value": 29,
+            "at": "2026-09-23T20:18:02.303Z",
+            "label": "9/24 04:18",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:17:08.044Z",
-            "label": "9/24 04:17",
-            "value": 34,
+            "at": "2026-09-23T21:31:28.738Z",
+            "label": "9/24 05:31",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:11:59.305Z",
-            "label": "9/24 05:11",
+            "at": "2026-09-23T22:44:55.172Z",
+            "label": "9/24 06:44",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T23:58:21.607Z",
+            "label": "9/24 07:58",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:06:50.566Z",
-            "label": "9/24 06:06",
-            "value": 44,
+            "at": "2026-09-24T01:11:48.041Z",
+            "label": "9/24 09:11",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:01:41.827Z",
-            "label": "9/24 07:01",
-            "value": 49,
+            "at": "2026-09-24T02:25:14.476Z",
+            "label": "9/24 10:25",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:56:33.088Z",
-            "label": "9/24 07:56",
-            "value": 54,
+            "at": "2026-09-24T03:38:40.910Z",
+            "label": "9/24 11:38",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
+            "at": "2026-09-24T04:52:07.345Z",
+            "label": "9/24 12:52",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
             "value": 59,
             "reports": 1
           }
@@ -1496,7 +2597,9 @@
         "community outreach",
         "OpenAI Academy"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "OpenAI 发布了一条官方消息，纪念 OpenAI Academy 成立两周年。消息称，该计划旨在将 AI 技能带给更多社区。\n\n目前公开的信息仅包含这一纪念性表述，没有披露过去两年的具体成果、参与人数、课程内容、覆盖地区或未来计划。也没有说明 Academy 提供哪些具体资源、培训形式或合作机构。\n\n因此，这条消息本质上是一则机构里程碑公告，而非产品发布、研究论文或政策变动。其新闻价值主要在于提示 OpenAI 持续投入 AI 教育普及，但缺乏可供进一步分析或验证的实质内容。",
       "keyPointsZh": [
         "OpenAI Academy 迎来两周年。",
@@ -1531,7 +2634,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-23T16:00:00.000Z",
-        "endedAt": "2026-09-24T00:51:24.349Z",
+        "endedAt": "2026-09-24T06:05:33.780Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -1542,56 +2645,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-23T16:59:02.705Z",
-            "label": "9/24 00:59",
+            "at": "2026-09-23T17:16:52.161Z",
+            "label": "9/24 01:16",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-23T17:58:05.410Z",
-            "label": "9/24 01:58",
-            "value": 21,
+            "at": "2026-09-23T18:33:44.323Z",
+            "label": "9/24 02:33",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-23T18:57:08.116Z",
-            "label": "9/24 02:57",
-            "value": 24,
+            "at": "2026-09-23T19:50:36.485Z",
+            "label": "9/24 03:50",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-23T19:56:10.821Z",
-            "label": "9/24 03:56",
+            "at": "2026-09-23T21:07:28.647Z",
+            "label": "9/24 05:07",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-23T22:24:20.809Z",
+            "label": "9/24 06:24",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-23T20:55:13.527Z",
-            "label": "9/24 04:55",
+            "at": "2026-09-23T23:41:12.970Z",
+            "label": "9/24 07:41",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-23T21:54:16.232Z",
-            "label": "9/24 05:54",
-            "value": 34,
+            "at": "2026-09-24T00:58:05.132Z",
+            "label": "9/24 08:58",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-23T22:53:18.938Z",
-            "label": "9/24 06:53",
-            "value": 38,
+            "at": "2026-09-24T02:14:57.294Z",
+            "label": "9/24 10:14",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-23T23:52:21.643Z",
-            "label": "9/24 07:52",
-            "value": 41,
+            "at": "2026-09-24T03:31:49.456Z",
+            "label": "9/24 11:31",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T00:51:24.349Z",
-            "label": "9/24 08:51",
+            "at": "2026-09-24T04:48:41.618Z",
+            "label": "9/24 12:48",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T06:05:33.780Z",
+            "label": "9/24 14:05",
             "value": 44,
             "reports": 1
           }
