@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T20:45:48.350Z",
+  "generatedAt": "2026-09-24T23:52:23.137Z",
   "date": "2026-09-25",
   "items": [
     {
@@ -46,13 +46,13 @@
         }
       ],
       "importance": 35,
-      "importanceReasonZh": "这是一次小型开源工具版本更新，仅新增非默认分支支持，影响范围有限，但对使用该工具的开发者有直接实用价值。",
-      "importanceReasonEn": "This is a minor open-source tool release that only adds non-default branch support. Its scope is limited, but it is directly useful to developers using the tool.",
+      "importanceReasonZh": "这是一个小型开源工具的功能更新，对使用该工具重写提交历史的开发者有直接帮助，但影响范围有限。",
+      "importanceReasonEn": "This is a feature update to a small open-source tool. It directly helps developers who use it to rewrite commit history, but its impact is limited in scope.",
       "scoringMode": "ai",
       "titleZh": "commit-rewriter 0.2 发布",
-      "titleEn": "commit-rewriter 0.2",
-      "summaryZh": "commit-rewriter 0.2 发布，新增对非默认分支的支持，可通过 uvx commit-rewriter --branch other 指定其他分支运行。",
-      "summaryEn": "commit-rewriter 0.2 is released, adding support for branches other than the default branch. Run it against another branch with uvx commit-rewriter --branch other.",
+      "titleEn": "commit-rewriter 0.2 Released",
+      "summaryZh": "commit-rewriter 0.2 版本发布，新增对非默认分支的支持，可通过 uvx commit-rewriter --branch other 命令针对其他分支运行。",
+      "summaryEn": "commit-rewriter 0.2 is released, adding support for branches other than the default branch. You can run it against another branch with uvx commit-rewriter --branch other.",
       "keywords": [
         "commit-rewriter",
         "git",
@@ -63,24 +63,26 @@
       "topics": [
         "git",
         "developer-tools",
-        "cli"
+        "commit-rewriting"
       ],
       "models": [],
-      "detailZh": "commit-rewriter 发布了 0.2 版本。根据发布说明，该版本新增了对非默认分支的支持。此前该工具可能只能在默认分支上运行，现在用户可以通过命令行参数指定其他分支。\n\n具体用法为：uvx commit-rewriter --branch other，其中 other 是目标分支名。uvx 是 Python 生态中用于直接运行 Python 包命令行工具的常用方式，说明该工具以 Python 包形式分发。\n\n发布信息来自 Simon Willison，发布时间为 2026 年 9 月 24 日。该条目被标记为 git 相关标签，属于开发者工具类更新。除上述分支支持外，发布说明未提供其他变更内容。",
+      "detailZh": "commit-rewriter 发布了 0.2 版本。该版本的主要变化是增加了对非默认分支的支持。此前该工具可能只能针对仓库的默认分支运行，现在用户可以通过命令行参数指定其他分支。\n\n具体用法是运行 uvx commit-rewriter --branch other，其中 other 是目标分支名称。uvx 是 Python 生态中用于直接运行 Python 包命令行工具的方式，说明该工具以 Python 包形式分发。\n\n该发布信息来自 Simon Willison，并带有 git 标签，表明这是一个与 Git 提交历史重写相关的工具。除此之外，输入中没有提供更多关于该工具内部实现、其他新功能或修复的细节。",
       "keyPointsZh": [
-        "commit-rewriter 发布 0.2 版本",
-        "新增对非默认分支的支持",
-        "可通过 uvx commit-rewriter --branch other 指定其他分支运行",
-        "该工具以 Python 包形式通过 uvx 调用"
+        "commit-rewriter 发布 0.2 版本。",
+        "新增支持非默认分支。",
+        "可通过 uvx commit-rewriter --branch other 针对其他分支运行。",
+        "该工具与 Git 提交重写相关。"
       ],
-      "impactZh": "该更新让 commit-rewriter 不再局限于默认分支，开发者可以在其他分支上使用同一工具重写提交，扩大了工具的适用范围。",
+      "impactZh": "该更新让开发者能够对非默认分支执行提交重写操作，扩展了工具的使用场景，但整体影响限于使用该工具的用户群体。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 commit-rewriter 的开发者现在可以通过 --branch 参数在非默认分支上运行该工具，无需切换分支或使用其他变通方法。",
-      "howItWorksZh": "该工具通过 uvx 运行，命令格式为 uvx commit-rewriter --branch other。其中 --branch 参数用于指定目标分支，other 为分支名称占位符。uvx 会直接执行该 Python 包提供的命令行入口。",
-      "interpretationZh": "已报告的事实是：commit-rewriter 0.2 新增了非默认分支支持，并提供了 --branch 参数用法。可以合理推断，此前版本可能只针对默认分支工作，但发布说明未明确说明旧版本的具体限制。",
-      "limitationsZh": "发布说明非常简短，未说明该工具的具体功能细节、其他变更、兼容性要求或已知问题。除分支支持外，0.2 版本是否包含其他改动未在来源中提及。",
+      "userImpactZh": "使用 commit-rewriter 的开发者现在可以指定 --branch 参数来重写非默认分支的提交历史，而不必切换到默认分支或手动调整工作流程。",
+      "howItWorksZh": "该工具通过命令行参数 --branch 接收目标分支名称，然后针对该分支执行提交重写操作。运行方式为 uvx commit-rewriter --branch other，其中 uvx 负责从 Python 包索引中获取并执行该工具。",
+      "interpretationZh": "根据发布说明，0.2 版本的核心改进是分支选择能力。这属于功能增强，而非行为变更或破坏性更新。输入未说明该工具具体如何重写提交，也未提供其他技术细节。",
+      "limitationsZh": "输入仅包含发布摘要，没有提供完整的变更日志、工具内部实现细节、兼容性说明或已知问题。无法确认该版本是否包含其他修复或改进。",
       "actionStepsZh": [
-        "使用 uvx commit-rewriter --branch other 在指定分支上运行该工具，将 other 替换为目标分支名"
+        "如果已安装该工具，可升级到 0.2 版本以使用分支参数。",
+        "运行 uvx commit-rewriter --branch other 来针对非默认分支重写提交。",
+        "查阅项目仓库或发布说明以了解完整变更内容。"
       ],
       "detailCompleteness": "limited",
       "visual": null,
@@ -107,7 +109,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T20:06:53.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -118,9 +120,387 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T21:03:15.534Z",
+            "label": "9/25 05:03",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:59:38.068Z",
+            "label": "9/25 05:59",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:56:00.602Z",
+            "label": "9/25 06:56",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 44,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "4135fa3a00799524",
+      "normalizedUrl": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui",
+      "originalUrl": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+      "titleOriginal": "When chat is the wrong UI",
+      "summaryOriginal": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. The post When chat is the wrong UI appeared first on The GitHub Blog .",
+      "originalLanguage": "en",
+      "author": "Burke Holland",
+      "category": "agent",
+      "sourceType": "official",
+      "authority": 94,
+      "sourcePriority": 94,
+      "images": [
+        "https://github.blog/wp-content/uploads/2026/09/validation.png?resize=1024%2C389",
+        "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-9.53.13-AM.png",
+        "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.00.45-AM.png",
+        "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.02.19-AM.png",
+        "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.04.43-AM.png",
+        "https://github.blog/wp-content/uploads/2026/09/validation.png?w=1286",
+        "https://github.blog/wp-content/uploads/2026/09/validation.png?w=300",
+        "https://github.blog/wp-content/uploads/2026/09/validation.png?w=768"
+      ],
+      "resourceLinks": [
+        "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+        "https://github.blog",
+        "http://www.w3.org/TR/REC-html40/loose.dtd",
+        "https://x.com/pmarca",
+        "https://github.com/features/ai/github-app",
+        "https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-canvas-extensions",
+        "https://github.blog/wp-content/uploads/2026/09/connect-4.mp4",
+        "https://github.blog/wp-content/uploads/2026/09/winget.mp4",
+        "https://github.blog/wp-content/uploads/2026/09/sqlite.mp4",
+        "https://github.blog/wp-content/uploads/2026/09/live-writer.mp4",
+        "https://www.youtube.com/embed/wuNpyX20MmA?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en-US&autohide=2&wmode=transparent"
+      ],
+      "publishedAt": "2026-09-24T20:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opinion",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "github-ai-blog",
+          "name": "GitHub AI & ML",
+          "type": "official",
+          "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+          "publishedAt": "2026-09-24T20:00:00.000Z",
+          "title": "When chat is the wrong UI",
+          "authority": 94,
+          "sourcePriority": 94,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://github.blog/wp-content/uploads/2026/09/validation.png?resize=1024%2C389",
+            "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-9.53.13-AM.png",
+            "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.00.45-AM.png",
+            "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.02.19-AM.png",
+            "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.04.43-AM.png",
+            "https://github.blog/wp-content/uploads/2026/09/validation.png?w=1286",
+            "https://github.blog/wp-content/uploads/2026/09/validation.png?w=300",
+            "https://github.blog/wp-content/uploads/2026/09/validation.png?w=768"
+          ],
+          "resourceLinks": [
+            "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+            "https://github.blog",
+            "http://www.w3.org/TR/REC-html40/loose.dtd",
+            "https://x.com/pmarca",
+            "https://github.com/features/ai/github-app",
+            "https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-canvas-extensions",
+            "https://github.blog/wp-content/uploads/2026/09/connect-4.mp4",
+            "https://github.blog/wp-content/uploads/2026/09/winget.mp4",
+            "https://github.blog/wp-content/uploads/2026/09/sqlite.mp4",
+            "https://github.blog/wp-content/uploads/2026/09/live-writer.mp4",
+            "https://www.youtube.com/embed/wuNpyX20MmA?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en-US&autohide=2&wmode=transparent"
+          ]
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该文来自 GitHub 官方博客，讨论聊天界面在开发者场景中的局限，并提出画布作为替代交互方式，对 AI 代理产品设计有参考价值，但摘要信息有限，缺乏具体数据与实现细节。",
+      "importanceReasonEn": "This post from the official GitHub Blog discusses the limits of chat UIs for developers and proposes canvases as an alternative interaction model. It is relevant to AI agent product design, but the summary is limited and lacks concrete data or implementation details.",
+      "scoringMode": "ai",
+      "titleZh": "当聊天界面不再适用",
+      "titleEn": "When chat is the wrong UI",
+      "summaryZh": "当开发者需要比聊天框更具体的东西时该怎么办？答案是画布。这篇文章《当聊天界面不再适用》最初发表在 GitHub 博客上。",
+      "summaryEn": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. The post When chat is the wrong UI appeared first on The GitHub Blog.",
+      "keywords": [
+        "chat UI",
+        "canvas",
+        "developer experience",
+        "agent interface",
+        "GitHub Blog"
+      ],
+      "topics": [
+        "chat-ui",
+        "canvas",
+        "developer-tools",
+        "agent-interfaces"
+      ],
+      "models": [],
+      "detailZh": "GitHub 博客发布了一篇题为《当聊天界面不再适用》的文章。文章的核心观点是：当开发者需要比聊天框更具体、更可操作的界面时，聊天这种交互形式可能并不合适。作者提出“画布”（canvases）作为替代方案。\n\n目前可获取的信息仅来自文章摘要，摘要没有展开说明画布具体指什么、如何实现、适用于哪些开发场景，也没有给出示例或对比数据。因此，关于画布的定义、技术细节和实际效果，均无法从现有材料中确认。\n\n可以确定的是，这篇文章的定位是面向开发者的观点性内容，发布在 GitHub 官方博客上，讨论的是 AI 代理或开发工具的用户界面选择问题。文章标题和摘要都强调“聊天是错误的 UI”这一判断，暗示作者认为在某些任务中，聊天界面会限制开发者的表达和操作能力。\n\n由于原文内容未被完整提供，本文只能基于摘要进行有限解读，无法验证画布方案的具体形态或有效性。",
+      "keyPointsZh": [
+        "GitHub 博客发布文章《当聊天界面不再适用》。",
+        "文章认为聊天框在某些开发者场景中不够具体、不够可操作。",
+        "作者提出“画布”（canvases）作为替代交互方式。",
+        "现有信息仅来自摘要，缺少画布的具体定义与实现细节。"
+      ],
+      "impactZh": "该文反映了 AI 开发工具领域对聊天界面局限性的反思，可能推动更多产品探索画布式、可视化或结构化交互，对代理类产品的界面设计方向有参考意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 工具用户和开发者而言，这篇文章提示聊天界面并非万能，未来可能出现更多非聊天的交互方式，但当前摘要未给出可直接采用的具体方案。",
+      "howItWorksZh": "",
+      "interpretationZh": "从摘要看，文章主张在开发者需要更具体操作时，聊天界面存在不足，画布是作者提出的替代方向。但画布具体如何工作、与聊天如何互补，摘要并未说明，因此只能视为一种观点性倡议，而非已验证的方案。",
+      "limitationsZh": "现有材料仅为文章摘要，缺少原文正文、示例、数据与实现细节；画布的定义、适用场景和效果均无法确认，文章观点也未提供实证支持。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "github-ai-blog",
+          "name": "GitHub AI & ML",
+          "type": "official",
+          "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+          "publishedAt": "2026-09-24T20:00:00.000Z",
+          "title": "When chat is the wrong UI",
+          "authority": 94,
+          "sourcePriority": 94,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://github.blog/wp-content/uploads/2026/09/validation.png?resize=1024%2C389",
+            "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-9.53.13-AM.png",
+            "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.00.45-AM.png",
+            "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.02.19-AM.png",
+            "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-24-at-10.04.43-AM.png",
+            "https://github.blog/wp-content/uploads/2026/09/validation.png?w=1286",
+            "https://github.blog/wp-content/uploads/2026/09/validation.png?w=300",
+            "https://github.blog/wp-content/uploads/2026/09/validation.png?w=768"
+          ],
+          "resourceLinks": [
+            "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+            "https://github.blog",
+            "http://www.w3.org/TR/REC-html40/loose.dtd",
+            "https://x.com/pmarca",
+            "https://github.com/features/ai/github-app",
+            "https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-canvas-extensions",
+            "https://github.blog/wp-content/uploads/2026/09/connect-4.mp4",
+            "https://github.blog/wp-content/uploads/2026/09/winget.mp4",
+            "https://github.blog/wp-content/uploads/2026/09/sqlite.mp4",
+            "https://github.blog/wp-content/uploads/2026/09/live-writer.mp4",
+            "https://www.youtube.com/embed/wuNpyX20MmA?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en-US&autohide=2&wmode=transparent"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T20:00:00.000Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-09-24T20:00:00.000Z",
+            "label": "9/25 04:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T20:58:05.784Z",
+            "label": "9/25 04:58",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:56:11.568Z",
+            "label": "9/25 05:56",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:54:17.352Z",
+            "label": "9/25 06:54",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d5905d2268c74414",
+      "normalizedUrl": "https://simonwillison.net/2026/Sep/24/datasette",
+      "originalUrl": "https://simonwillison.net/2026/Sep/24/datasette/",
+      "titleOriginal": "datasette 1.0a41",
+      "summaryOriginal": "Release: datasette 1.0a41 Alec Garcia added support for OpenTelemetry to Datasette in this release. I've also refactored all of Datasette's modal dialogs to a single Web Component, which is now documented for other plugins to use . Tags: javascript , datasette , web-components , alex-garcia , opentelemetry",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "opensource",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/datasette/releases/tag/1.0a41",
+        "https://docs.datasette.io/en/latest/internals.html#internals-telemetry",
+        "https://docs.datasette.io/en/latest/javascript_plugins.html#javascript-plugins-modals",
+        "https://simonwillison.net/tags/javascript",
+        "https://simonwillison.net/tags/datasette",
+        "https://simonwillison.net/tags/web-components",
+        "https://simonwillison.net/tags/alex-garcia",
+        "https://simonwillison.net/tags/opentelemetry"
+      ],
+      "publishedAt": "2026-09-24T19:15:23.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/24/datasette/",
+          "publishedAt": "2026-09-24T19:15:23.000Z",
+          "title": "datasette 1.0a41",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/datasette/releases/tag/1.0a41",
+            "https://docs.datasette.io/en/latest/internals.html#internals-telemetry",
+            "https://docs.datasette.io/en/latest/javascript_plugins.html#javascript-plugins-modals",
+            "https://simonwillison.net/tags/javascript",
+            "https://simonwillison.net/tags/datasette",
+            "https://simonwillison.net/tags/web-components",
+            "https://simonwillison.net/tags/alex-garcia",
+            "https://simonwillison.net/tags/opentelemetry"
+          ]
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "这是 Datasette 1.0 预发布周期中的一个版本更新，包含可观测性集成和前端组件重构两项实质性改进，对使用 Datasette 的开发者有直接价值，但影响范围限于该工具的用户群体。",
+      "importanceReasonEn": "This is a release update in Datasette's 1.0 pre-release cycle, containing two substantive improvements—observability integration and a frontend component refactor—that are directly valuable to Datasette developers, though the impact is limited to that tool's user base.",
+      "scoringMode": "ai",
+      "titleZh": "Datasette 1.0a41 发布：新增 OpenTelemetry 支持并重构模态对话框",
+      "titleEn": "Datasette 1.0a41 Released with OpenTelemetry Support and Refactored Modal Dialogs",
+      "summaryZh": "Datasette 发布 1.0a41 版本。Alec Garcia 为该版本添加了 OpenTelemetry 支持；Simon Willison 将 Datasette 的所有模态对话框重构为单一 Web Component，并已编写文档供其他插件使用。",
+      "summaryEn": "Datasette released version 1.0a41. Alec Garcia added OpenTelemetry support in this release, and Simon Willison refactored all of Datasette's modal dialogs into a single Web Component, now documented for other plugins to use.",
+      "keywords": [
+        "datasette",
+        "1.0a41",
+        "OpenTelemetry",
+        "Web Component",
+        "模态对话框",
+        "插件"
+      ],
+      "topics": [
+        "datasette",
+        "opentelemetry",
+        "web-components",
+        "release"
+      ],
+      "models": [],
+      "detailZh": "Datasette 发布了 1.0a41 版本，这是其 1.0 系列的一个 alpha 预发布版本。该版本包含两项主要变更。\n\n第一项变更是由 Alec Garcia 贡献的 OpenTelemetry 支持。OpenTelemetry 是一套用于生成、收集和导出遥测数据（如追踪、指标和日志）的开放标准与工具集，加入该支持后，Datasette 的运行状况可以被接入兼容 OpenTelemetry 的可观测性系统。\n\n第二项变更是 Simon Willison 将 Datasette 中所有的模态对话框重构为单一的 Web Component。Web Component 是浏览器原生的可复用自定义元素机制。重构后，该组件已编写文档，其他插件也可以使用它。\n\n该版本被标记的标签包括 javascript、datasette、web-components、alex-garcia 和 opentelemetry。",
+      "keyPointsZh": [
+        "Datasette 发布 1.0a41 版本。",
+        "Alec Garcia 在该版本中为 Datasette 添加了 OpenTelemetry 支持。",
+        "Simon Willison 将 Datasette 的所有模态对话框重构为单一 Web Component。",
+        "该 Web Component 已编写文档，可供其他插件使用。"
+      ],
+      "impactZh": "该版本为 Datasette 引入了标准化的可观测性接入能力，并统一了模态对话框的前端实现，使插件开发者可以复用同一组件，有助于减少重复实现并提升一致性。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Datasette 的开发者可以将运行数据接入 OpenTelemetry 兼容的可观测性系统；开发 Datasette 插件的开发者可以复用新的模态对话框 Web Component，而不必自行实现。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据发布说明，本次更新包含两项明确变更：一是新增 OpenTelemetry 支持，二是将模态对话框统一为单一 Web Component 并公开文档。发布说明未提供具体实现细节、配置方式或性能数据，因此这些方面尚不清楚。",
+      "limitationsZh": "输入仅包含简短的发布说明，未提供 OpenTelemetry 支持的具体配置方法、Web Component 的 API 细节、兼容性说明或任何性能与行为数据。",
+      "actionStepsZh": [
+        "升级到 datasette 1.0a41 以获取 OpenTelemetry 支持和新的模态对话框 Web Component。",
+        "查阅该 Web Component 的文档，评估是否在自有插件中复用它。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Sep/24/datasette/",
+          "publishedAt": "2026-09-24T19:15:23.000Z",
+          "title": "datasette 1.0a41",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/datasette/releases/tag/1.0a41",
+            "https://docs.datasette.io/en/latest/internals.html#internals-telemetry",
+            "https://docs.datasette.io/en/latest/javascript_plugins.html#javascript-plugins-modals",
+            "https://simonwillison.net/tags/javascript",
+            "https://simonwillison.net/tags/datasette",
+            "https://simonwillison.net/tags/web-components",
+            "https://simonwillison.net/tags/alex-garcia",
+            "https://simonwillison.net/tags/opentelemetry"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T19:15:23.000Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-09-24T19:15:23.000Z",
+            "label": "9/25 03:15",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T20:10:47.027Z",
+            "label": "9/25 04:10",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:06:11.054Z",
+            "label": "9/25 05:06",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:01:35.082Z",
+            "label": "9/25 06:01",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:56:59.109Z",
+            "label": "9/25 06:56",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -216,44 +596,40 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该内容来自GitHub官方博客，介绍了一个可实际使用的AI模糊测试任务流，对安全测试和开发团队有直接参考价值，但源材料仅包含标题和摘要，缺少具体技术细节。",
-      "importanceReasonEn": "This comes from the official GitHub blog and introduces a practical AI fuzzing taskflow useful for security testing and development teams, but the source material only includes a title and summary without technical details.",
+      "importanceReasonZh": "该内容来自GitHub官方博客，介绍将AI代理框架用于模糊测试的实践方法，对安全测试和AI代理应用有参考价值，但输入信息有限，缺少具体技术细节和效果数据。",
+      "importanceReasonEn": "This comes from the official GitHub Blog and describes a practical approach to applying an AI agent framework to fuzzing, which is useful for security testing and AI agent applications, but the input is limited and lacks concrete technical details or results.",
       "scoringMode": "ai",
-      "titleZh": "利用GitHub Security Lab Taskflow Agent实现AI驱动的模糊测试",
+      "titleZh": "利用GitHub Security Lab Taskflow Agent进行AI驱动的模糊测试",
       "titleEn": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
       "summaryZh": "GitHub博客发布文章，介绍如何使用基于GitHub Security Lab Taskflow Agent AI框架的新模糊测试任务流。",
-      "summaryEn": "A GitHub blog post explains how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework.",
+      "summaryEn": "A GitHub Blog post explains how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework.",
       "keywords": [
         "AI fuzzing",
         "GitHub Security Lab",
         "Taskflow Agent",
-        "security testing",
-        "fuzzing taskflow"
+        "security testing"
       ],
       "topics": [
-        "AI fuzzing",
-        "security testing",
-        "GitHub Security Lab",
-        "taskflow agent"
+        "fuzzing",
+        "security",
+        "AI agent",
+        "GitHub Security Lab"
       ],
       "models": [],
-      "detailZh": "GitHub博客发布了一篇题为《利用GitHub Security Lab Taskflow Agent实现AI驱动的模糊测试》的文章。文章介绍如何使用基于GitHub Security Lab Taskflow Agent AI框架构建的新模糊测试任务流。\n\n根据现有信息，该任务流将AI代理框架与模糊测试（fuzzing）相结合，目标是帮助开发者和安全研究人员更高效地开展安全测试。GitHub Security Lab此前已推出Taskflow Agent这一AI框架，此次新增的模糊测试任务流是该框架的一个具体应用方向。\n\n目前可获取的源材料仅为文章标题和摘要，未包含任务流的具体配置、使用步骤、支持的编程语言、依赖工具或实测效果等细节。因此本文只能确认该文章的存在及其主题，无法进一步说明其技术实现或实际表现。",
+      "detailZh": "GitHub博客发布了一篇题为《利用GitHub Security Lab Taskflow Agent进行AI驱动的模糊测试》的文章。文章介绍如何使用基于GitHub Security Lab Taskflow Agent AI框架的新模糊测试任务流。\n\n根据现有信息，该文章的核心是展示一个面向模糊测试（fuzzing）的任务流，该任务流构建在GitHub Security Lab Taskflow Agent这一AI框架之上。模糊测试是一种通过向程序输入大量随机或变异数据来发现漏洞的安全测试方法，而该文章讨论的是如何借助AI代理来自动化或增强这一过程。\n\n目前可确认的信息仅限于文章标题、摘要和来源。文章的具体实现方式、支持的编程语言、配置步骤、实际效果以及是否开源等细节，在输入中均未提供。因此本文只能作为该实践指南的索引性介绍，无法展开更深入的技术说明。",
       "keyPointsZh": [
-        "GitHub博客发布了关于AI驱动模糊测试的文章",
-        "该模糊测试基于GitHub Security Lab Taskflow Agent AI框架",
-        "文章主题是介绍如何使用新的模糊测试任务流",
-        "源材料仅包含标题和摘要，缺少具体技术细节"
+        "GitHub博客发布了关于AI驱动模糊测试的实践文章。",
+        "文章基于GitHub Security Lab Taskflow Agent AI框架。",
+        "介绍了一个新的模糊测试任务流（fuzzing taskflow）。",
+        "内容属于安全测试与AI代理结合的实践方向。"
       ],
-      "impactZh": "该内容表明GitHub正在将AI代理框架应用于安全测试领域，为开发者提供AI辅助的模糊测试工作流，可能降低安全测试的门槛。",
+      "impactZh": "该文章展示了将AI代理框架应用于安全测试中的模糊测试环节，可能推动安全团队探索用AI自动化漏洞发现流程，但目前尚不清楚其实际效果和适用范围。",
       "readerImpactZh": "",
-      "userImpactZh": "安全研究人员和开发者可以关注该任务流，了解如何将AI代理用于模糊测试流程，但需等待更多技术细节公布后才能实际采用。",
+      "userImpactZh": "对安全工程师和开发者而言，该文章提供了一个将AI代理用于模糊测试的思路，可能有助于减少手工编写和调整模糊测试用例的工作量，但需要自行评估其适用性和可靠性。",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：GitHub博客发布了一篇介绍基于Taskflow Agent AI框架的模糊测试任务流的文章。合理推断是：该任务流旨在利用AI代理自动化或辅助模糊测试流程。由于源材料仅有标题和摘要，无法确认其具体工作机制、适用范围或实际效果。",
-      "limitationsZh": "源材料仅包含文章标题和摘要，没有提供任务流的具体配置、使用步骤、支持的语言或工具、实测数据或效果评估，因此无法验证其实际可用性和有效性。",
-      "actionStepsZh": [
-        "阅读GitHub博客上的原文以获取完整技术细节",
-        "关注GitHub Security Lab Taskflow Agent框架的后续更新"
-      ],
+      "interpretationZh": "可以确定的是，GitHub Security Lab发布了一个基于Taskflow Agent的模糊测试任务流，并撰文介绍其用法。合理推断是，该任务流利用AI代理来辅助生成、调度或分析模糊测试输入，从而降低安全测试的门槛。但输入中没有提供具体机制、代码示例或验证结果，因此无法确认其实际能力。",
+      "limitationsZh": "输入仅包含标题和摘要，缺少文章正文、代码仓库、配置示例和效果数据。无法确认该任务流支持的语言、依赖环境、是否开源以及实际漏洞发现能力。",
+      "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
@@ -307,7 +683,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T18:26:12.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 81,
         "peak": 81,
         "history": [
@@ -318,20 +694,38 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T19:12:44.116Z",
-            "label": "9/25 03:12",
+            "at": "2026-09-24T19:20:33.856Z",
+            "label": "9/25 03:20",
+            "value": 37,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-24T20:14:55.712Z",
+            "label": "9/25 04:14",
             "value": 46,
             "reports": 2
           },
           {
-            "at": "2026-09-24T19:59:16.233Z",
-            "label": "9/25 03:59",
+            "at": "2026-09-24T21:09:17.568Z",
+            "label": "9/25 05:09",
+            "value": 54,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-24T22:03:39.424Z",
+            "label": "9/25 06:03",
             "value": 63,
             "reports": 2
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T22:58:01.280Z",
+            "label": "9/25 06:58",
+            "value": 72,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 81,
             "reports": 2
           }
@@ -432,7 +826,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T18:11:44.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -443,20 +837,38 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T19:03:05.450Z",
-            "label": "9/25 03:03",
+            "at": "2026-09-24T19:08:30.522Z",
+            "label": "9/25 03:08",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:05:17.045Z",
+            "label": "9/25 04:05",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:54:26.900Z",
-            "label": "9/25 03:54",
+            "at": "2026-09-24T21:02:03.568Z",
+            "label": "9/25 05:02",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:58:50.091Z",
+            "label": "9/25 05:58",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T22:55:36.614Z",
+            "label": "9/25 06:55",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 59,
             "reports": 1
           }
@@ -570,7 +982,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T18:06:13.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -581,20 +993,38 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T18:59:24.783Z",
-            "label": "9/25 02:59",
+            "at": "2026-09-24T19:03:54.689Z",
+            "label": "9/25 03:03",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:01:36.379Z",
+            "label": "9/25 04:01",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:52:36.566Z",
-            "label": "9/25 03:52",
+            "at": "2026-09-24T20:59:18.068Z",
+            "label": "9/25 04:59",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:56:59.758Z",
+            "label": "9/25 05:56",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T22:54:41.447Z",
+            "label": "9/25 06:54",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 59,
             "reports": 1
           }
@@ -731,7 +1161,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T17:45:44.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -742,26 +1172,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T18:30:45.087Z",
-            "label": "9/25 02:30",
-            "value": 27,
+            "at": "2026-09-24T18:38:06.733Z",
+            "label": "9/25 02:38",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:15:46.175Z",
-            "label": "9/25 03:15",
-            "value": 39,
+            "at": "2026-09-24T19:30:29.467Z",
+            "label": "9/25 03:30",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:00:47.262Z",
-            "label": "9/25 04:00",
-            "value": 52,
+            "at": "2026-09-24T20:22:52.201Z",
+            "label": "9/25 04:22",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T21:15:14.935Z",
+            "label": "9/25 05:15",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:07:37.669Z",
+            "label": "9/25 06:07",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:00:00.403Z",
+            "label": "9/25 07:00",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 65,
             "reports": 1
           }
@@ -865,7 +1313,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T17:39:24.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -876,27 +1324,216 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T18:26:00.087Z",
-            "label": "9/25 02:26",
-            "value": 23,
+            "at": "2026-09-24T18:32:41.019Z",
+            "label": "9/25 02:32",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:12:36.175Z",
-            "label": "9/25 03:12",
-            "value": 32,
+            "at": "2026-09-24T19:25:58.039Z",
+            "label": "9/25 03:25",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:59:12.262Z",
-            "label": "9/25 03:59",
-            "value": 41,
+            "at": "2026-09-24T20:19:15.058Z",
+            "label": "9/25 04:19",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T21:12:32.078Z",
+            "label": "9/25 05:12",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:05:49.097Z",
+            "label": "9/25 06:05",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:59:06.117Z",
+            "label": "9/25 06:59",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a9a0142404d9c278",
+      "normalizedUrl": "https://medium.com/@arielsimon/dark-sourcery-how-hackers-manipulate-ai-to-scam-you-88df434d2073",
+      "originalUrl": "https://medium.com/@arielsimon/dark-sourcery-how-hackers-manipulate-ai-to-scam-you-88df434d2073",
+      "titleOriginal": "安全研究者披露黑客用 GEO 污染 ChatGPT、Gemini 和 Google AI Overview，374 家企业被植入诈骗联系方式",
+      "summaryOriginal": "安全研究者发现针对 ChatGPT、Gemini 和 Google AI Overview 的规模化 AI 虚假信息攻击，共检测到 374 家被攻击企业，包括 Delta、Lufthansa、Bank of America、Airbnb 等，AI 会向用户给出诈骗电话和钓鱼链接。",
+      "originalLanguage": "zh",
+      "author": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/cmuft4xrw07varoxz9brnf7vh",
+        "https://medium.com/@arielsimon/dark-sourcery-how-hackers-manipulate-ai-to-scam-you-88df434d2073"
+      ],
+      "publishedAt": "2026-09-24T17:19:34.716Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-09-24T17:30:08.611Z",
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/cmuft4xrw07varoxz9brnf7vh"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:cmuft4xrw07varoxz9brnf7vh",
+          "name": "Hacker News 热门（buzzing.cc 中文翻译）",
+          "type": "practitioner",
+          "url": "https://medium.com/@arielsimon/dark-sourcery-how-hackers-manipulate-ai-to-scam-you-88df434d2073",
+          "publishedAt": "2026-09-24T17:19:34.716Z",
+          "title": "安全研究者披露黑客用 GEO 污染 ChatGPT、Gemini 和 Google AI Overview，374 家企业被植入诈骗联系方式",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmuft4xrw07varoxz9brnf7vh",
+            "https://medium.com/@arielsimon/dark-sourcery-how-hackers-manipulate-ai-to-scam-you-88df434d2073"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该事件揭示生成式 AI 搜索与问答结果可被规模化污染，直接影响用户获取企业联系方式的准确性，涉及 374 家知名企业，具有广泛的安全与信任影响。",
+      "importanceReasonEn": "This event reveals that generative AI search and Q&A results can be poisoned at scale, directly affecting the accuracy of company contact information for users, involving 374 well-known companies with broad security and trust implications.",
+      "scoringMode": "ai",
+      "titleZh": "安全研究者披露黑客用 GEO 污染 ChatGPT、Gemini 和 Google AI Overview，374 家企业被植入诈骗联系方式",
+      "titleEn": "Security Researchers Reveal Hackers Used GEO to Poison ChatGPT, Gemini and Google AI Overview, Injecting Scam Contact Info for 374 Companies",
+      "summaryZh": "安全研究者发现针对 ChatGPT、Gemini 和 Google AI Overview 的规模化 AI 虚假信息攻击，共检测到 374 家被攻击企业，包括 Delta、Lufthansa、Bank of America、Airbnb 等，AI 会向用户给出诈骗电话和钓鱼链接。",
+      "summaryEn": "Security researchers discovered a large-scale AI disinformation attack targeting ChatGPT, Gemini and Google AI Overview, detecting 374 affected companies including Delta, Lufthansa, Bank of America and Airbnb, with AI giving users scam phone numbers and phishing links.",
+      "keywords": [
+        "GEO",
+        "AI虚假信息",
+        "诈骗电话",
+        "钓鱼链接",
+        "ChatGPT",
+        "Gemini",
+        "Google AI Overview"
+      ],
+      "topics": [
+        "AI安全",
+        "GEO污染",
+        "生成式引擎优化",
+        "诈骗",
+        "大模型"
+      ],
+      "models": [
+        "ChatGPT",
+        "Gemini",
+        "Google AI Overview"
+      ],
+      "detailZh": "安全研究者披露了一起针对生成式 AI 的规模化虚假信息攻击。攻击者利用 GEO（生成式引擎优化）手段，向 ChatGPT、Gemini 和 Google AI Overview 等 AI 系统注入虚假内容，使这些 AI 在回答用户关于企业联系方式的问题时，给出诈骗电话和钓鱼链接。\n\n研究者共检测到 374 家被攻击企业，其中包括 Delta、Lufthansa、Bank of America、Airbnb 等知名公司。这意味着当用户向 AI 询问这些企业的客服电话或官方链接时，可能被引导至诈骗渠道。\n\n该攻击的核心在于污染 AI 所依赖的信息来源，而非直接入侵 AI 模型本身。攻击者通过操纵公开网络内容，让 AI 在检索和生成答案时采信虚假信息。\n\n目前披露的信息来自安全研究者的检测结果，具体攻击手法、影响范围和持续时间等细节尚未完全公开。",
+      "keyPointsZh": [
+        "安全研究者发现针对 ChatGPT、Gemini 和 Google AI Overview 的规模化 AI 虚假信息攻击",
+        "攻击利用 GEO 手段污染 AI 输出，使其给出诈骗电话和钓鱼链接",
+        "共检测到 374 家被攻击企业，包括 Delta、Lufthansa、Bank of America、Airbnb 等",
+        "攻击针对的是 AI 依赖的信息来源，而非直接入侵模型"
+      ],
+      "impactZh": "该事件表明生成式 AI 的答案可能被恶意污染，用户通过 AI 获取的企业联系方式可能指向诈骗渠道，影响 AI 搜索与问答结果的可信度。",
+      "readerImpactZh": "普通用户通过 ChatGPT、Gemini 或 Google AI Overview 查询企业客服电话或官方链接时，可能被引导至诈骗电话或钓鱼网站，造成财产损失或信息泄露。",
+      "userImpactZh": "AI 用户和开发者需要警惕 AI 输出中的联系方式可能被污染，企业在监测自身品牌在 AI 中的呈现时也应关注虚假信息注入风险。",
+      "howItWorksZh": "攻击者通过 GEO（生成式引擎优化）手段，在 AI 系统依赖的公开网络信息源中植入虚假内容，使 AI 在检索和生成答案时采信这些内容，从而在回答企业联系方式时输出诈骗电话和钓鱼链接。",
+      "interpretationZh": "已披露的事实是：安全研究者检测到 374 家企业被攻击，AI 会给出诈骗联系方式。可合理推断的是：攻击者利用了 AI 对公开网络信息的依赖，通过污染信息源影响输出。但具体攻击手法和影响范围仍待更多披露。",
+      "limitationsZh": "目前信息来自安全研究者的检测结果，具体攻击手法、受影响企业完整名单、攻击持续时间和实际造成的损失尚未完全公开，需等待更多细节披露。",
+      "actionStepsZh": [
+        "通过 AI 查询企业联系方式时，务必与官方网站核对",
+        "不要直接拨打 AI 给出的客服电话或点击其提供的链接",
+        "企业应监测自身品牌在 AI 问答中的呈现，及时发现虚假信息"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:cmuft4xrw07varoxz9brnf7vh",
+          "name": "Hacker News 热门（buzzing.cc 中文翻译）",
+          "type": "practitioner",
+          "url": "https://medium.com/@arielsimon/dark-sourcery-how-hackers-manipulate-ai-to-scam-you-88df434d2073",
+          "publishedAt": "2026-09-24T17:19:34.716Z",
+          "title": "安全研究者披露黑客用 GEO 污染 ChatGPT、Gemini 和 Google AI Overview，374 家企业被植入诈骗联系方式",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmuft4xrw07varoxz9brnf7vh",
+            "https://medium.com/@arielsimon/dark-sourcery-how-hackers-manipulate-ai-to-scam-you-88df434d2073"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T17:19:34.716Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-24T17:19:34.716Z",
+            "label": "9/25 01:19",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T18:15:41.633Z",
+            "label": "9/25 02:15",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T19:11:48.550Z",
+            "label": "9/25 03:11",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:07:55.467Z",
+            "label": "9/25 04:07",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:04:02.385Z",
+            "label": "9/25 05:04",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:00:09.302Z",
+            "label": "9/25 06:00",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:56:16.219Z",
+            "label": "9/25 06:56",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -1037,7 +1674,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T17:01:03.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1048,26 +1685,44 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:57:14.337Z",
-            "label": "9/25 01:57",
-            "value": 28,
+            "at": "2026-09-24T17:59:48.733Z",
+            "label": "9/25 01:59",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:53:25.675Z",
-            "label": "9/25 02:53",
-            "value": 41,
+            "at": "2026-09-24T18:58:34.467Z",
+            "label": "9/25 02:58",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:49:37.012Z",
-            "label": "9/25 03:49",
-            "value": 55,
+            "at": "2026-09-24T19:57:20.201Z",
+            "label": "9/25 03:57",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T20:56:05.935Z",
+            "label": "9/25 04:56",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:54:51.669Z",
+            "label": "9/25 05:54",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:53:37.403Z",
+            "label": "9/25 06:53",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 68,
             "reports": 1
           }
@@ -1213,7 +1868,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:38:37.757Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1224,32 +1879,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:28:03.875Z",
-            "label": "9/25 01:28",
-            "value": 25,
+            "at": "2026-09-24T17:32:50.929Z",
+            "label": "9/25 01:32",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:17:29.994Z",
-            "label": "9/25 02:17",
-            "value": 36,
+            "at": "2026-09-24T18:27:04.102Z",
+            "label": "9/25 02:27",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:06:56.112Z",
-            "label": "9/25 03:06",
-            "value": 46,
+            "at": "2026-09-24T19:21:17.274Z",
+            "label": "9/25 03:21",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:56:22.231Z",
-            "label": "9/25 03:56",
-            "value": 57,
+            "at": "2026-09-24T20:15:30.447Z",
+            "label": "9/25 04:15",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T21:09:43.619Z",
+            "label": "9/25 05:09",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:03:56.792Z",
+            "label": "9/25 06:03",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:58:09.964Z",
+            "label": "9/25 06:58",
+            "value": 61,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 68,
             "reports": 1
           }
@@ -1350,7 +2023,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:20:39.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -1361,32 +2034,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:13:40.870Z",
-            "label": "9/25 01:13",
-            "value": 23,
+            "at": "2026-09-24T17:17:07.017Z",
+            "label": "9/25 01:17",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:06:42.740Z",
-            "label": "9/25 02:06",
-            "value": 32,
+            "at": "2026-09-24T18:13:35.034Z",
+            "label": "9/25 02:13",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:59:44.610Z",
-            "label": "9/25 02:59",
-            "value": 41,
+            "at": "2026-09-24T19:10:03.051Z",
+            "label": "9/25 03:10",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:52:46.480Z",
-            "label": "9/25 03:52",
-            "value": 49,
+            "at": "2026-09-24T20:06:31.068Z",
+            "label": "9/25 04:06",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T21:02:59.085Z",
+            "label": "9/25 05:02",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:59:27.102Z",
+            "label": "9/25 05:59",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:55:55.119Z",
+            "label": "9/25 06:55",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 58,
             "reports": 1
           }
@@ -1505,7 +2196,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:04:26.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1516,32 +2207,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:00:42.470Z",
-            "label": "9/25 01:00",
-            "value": 22,
+            "at": "2026-09-24T17:02:55.642Z",
+            "label": "9/25 01:02",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-24T17:56:58.940Z",
-            "label": "9/25 01:56",
-            "value": 31,
+            "at": "2026-09-24T18:01:25.284Z",
+            "label": "9/25 02:01",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:53:15.410Z",
-            "label": "9/25 02:53",
-            "value": 39,
+            "at": "2026-09-24T18:59:54.926Z",
+            "label": "9/25 02:59",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:49:31.880Z",
-            "label": "9/25 03:49",
-            "value": 47,
+            "at": "2026-09-24T19:58:24.568Z",
+            "label": "9/25 03:58",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T20:56:54.210Z",
+            "label": "9/25 04:56",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:55:23.852Z",
+            "label": "9/25 05:55",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:53:53.494Z",
+            "label": "9/25 06:53",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 55,
             "reports": 1
           }
@@ -1695,7 +2404,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:03:36.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 95,
         "peak": 95,
         "history": [
@@ -1706,32 +2415,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:00:02.470Z",
-            "label": "9/25 01:00",
-            "value": 53,
+            "at": "2026-09-24T17:02:11.892Z",
+            "label": "9/25 01:02",
+            "value": 49,
             "reports": 3
           },
           {
-            "at": "2026-09-24T17:56:28.940Z",
-            "label": "9/25 01:56",
-            "value": 63,
+            "at": "2026-09-24T18:00:47.784Z",
+            "label": "9/25 02:00",
+            "value": 55,
             "reports": 3
           },
           {
-            "at": "2026-09-24T18:52:55.410Z",
-            "label": "9/25 02:52",
-            "value": 74,
+            "at": "2026-09-24T18:59:23.676Z",
+            "label": "9/25 02:59",
+            "value": 62,
             "reports": 3
           },
           {
-            "at": "2026-09-24T19:49:21.880Z",
-            "label": "9/25 03:49",
-            "value": 84,
+            "at": "2026-09-24T19:57:59.568Z",
+            "label": "9/25 03:57",
+            "value": 68,
             "reports": 3
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T20:56:35.460Z",
+            "label": "9/25 04:56",
+            "value": 75,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-24T21:55:11.352Z",
+            "label": "9/25 05:55",
+            "value": 82,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-24T22:53:47.244Z",
+            "label": "9/25 06:53",
+            "value": 88,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 95,
             "reports": 3
           }
@@ -1865,7 +2592,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:00:18.000Z",
-        "endedAt": "2026-09-24T20:45:48.350Z",
+        "endedAt": "2026-09-24T23:52:23.137Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1876,32 +2603,50 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T16:57:24.070Z",
-            "label": "9/25 00:57",
-            "value": 24,
+            "at": "2026-09-24T16:59:18.642Z",
+            "label": "9/25 00:59",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-09-24T17:54:30.140Z",
-            "label": "9/25 01:54",
-            "value": 34,
+            "at": "2026-09-24T17:58:19.284Z",
+            "label": "9/25 01:58",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:51:36.210Z",
-            "label": "9/25 02:51",
-            "value": 44,
+            "at": "2026-09-24T18:57:19.926Z",
+            "label": "9/25 02:57",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:48:42.280Z",
-            "label": "9/25 03:48",
-            "value": 55,
+            "at": "2026-09-24T19:56:20.568Z",
+            "label": "9/25 03:56",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:45:48.350Z",
-            "label": "9/25 04:45",
+            "at": "2026-09-24T20:55:21.210Z",
+            "label": "9/25 04:55",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:54:21.852Z",
+            "label": "9/25 05:54",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:53:22.494Z",
+            "label": "9/25 06:53",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:52:23.137Z",
+            "label": "9/25 07:52",
             "value": 65,
             "reports": 1
           }
