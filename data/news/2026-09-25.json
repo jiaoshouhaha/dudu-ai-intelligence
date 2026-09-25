@@ -1,7 +1,478 @@
 {
-  "generatedAt": "2026-09-24T23:52:23.137Z",
+  "generatedAt": "2026-09-25T04:46:12.944Z",
   "date": "2026-09-25",
   "items": [
+    {
+      "id": "0e337eac398ad61f",
+      "normalizedUrl": "https://arxiv.org/abs/2609.28475",
+      "originalUrl": "https://arxiv.org/abs/2609.28475",
+      "titleOriginal": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
+      "summaryOriginal": "arXiv:2609.28475v1 Announce Type: new Abstract: Forecasting agents increasingly combine language-model reasoning, retrieval, ensembling, and calibration, but it remains unclear when each behavior should be trusted. We study this question on ForecastBench-style binary forecasting tasks, treating the choice to retrieve, reason, defer to a market prior, or use a historical analog as an observable agent behavior rather than a hidden implementation detail. Our central finding is that mechanism choice is source-dependent: structured analogs dominate for some data-generating processes, while market/crowd-style and conservative baselines are better for others. We introduce ReliabilityRoute, a structural intervention that steers forecasting-agent behavior using reliability features such as historical coverage, market-prior availability, source-prior sharpness, evidence strength, evidence disagreement, and horizon. A fixed 2024-fitted rule closely matches a hand taxonomy without hard-coded source-name decisions, while a walk-forward self-adjusting rule refits thresholds from previously resolved vintages and obtains the best mean Brier score among our deterministic systems across 16 later LLM",
+      "originalLanguage": "en",
+      "author": "Yufeng Wang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/louiswang524/forcastagent"
+      ],
+      "publishedAt": "2026-09-25T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.28475",
+          "publishedAt": "2026-09-25T04:00:00.000Z",
+          "title": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/louiswang524/forcastagent"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究把预测智能体的机制选择作为可观测行为来研究，并提出可复现的可靠性路由规则，对构建可靠预测系统有直接参考价值。",
+      "importanceReasonEn": "The work treats mechanism choice in forecasting agents as observable behavior and proposes a reproducible reliability-routing rule, offering direct value for building reliable forecasting systems.",
+      "scoringMode": "ai",
+      "titleZh": "预测智能体何时该推理？可靠性路由的行为压力测试",
+      "titleEn": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
+      "summaryZh": "一篇 arXiv 论文研究预测智能体在二分类预测任务中何时应检索、推理、参考市场先验或使用历史类比，并提出 ReliabilityRoute 结构干预方法，用可靠性特征引导智能体行为。",
+      "summaryEn": "An arXiv paper studies when forecasting agents should retrieve, reason, defer to a market prior, or use a historical analog on binary forecasting tasks, and introduces ReliabilityRoute, a structural intervention that steers agent behavior using reliability features.",
+      "keywords": [
+        "forecasting agents",
+        "reliability routing",
+        "ForecastBench",
+        "Brier score",
+        "LLM forecasting"
+      ],
+      "topics": [
+        "forecasting agents",
+        "LLM reasoning",
+        "reliability routing",
+        "ForecastBench",
+        "calibration"
+      ],
+      "models": [],
+      "detailZh": "这篇 arXiv 论文关注预测智能体在二分类预测任务中的行为选择问题。作者指出，当前预测智能体常把语言模型推理、检索、集成和校准组合在一起，但尚不清楚每种行为在什么条件下值得信任。\n\n研究基于 ForecastBench 风格的二分类预测任务，把是否检索、是否推理、是否服从市场先验、是否使用历史类比，视为智能体可观测的行为，而不是隐藏的实现细节。\n\n论文的核心发现是机制选择依赖于数据来源：对某些数据生成过程，结构化历史类比占优；对其他过程，市场/群体式先验和保守基线更好。\n\n为此作者提出 ReliabilityRoute，一种结构干预方法，使用历史覆盖率、市场先验可用性、来源先验锐度、证据强度、证据分歧和时间跨度等可靠性特征来引导预测智能体行为。\n\n实验显示，一个基于 2024 年数据拟合的固定规则，在不硬编码来源名称决策的情况下，能接近人工分类法的效果；而一个前向自调整规则根据已解决的历史批次重新拟合阈值，在后续 16 个 LLM 上取得了确定性系统中最好的平均 Brier 分数。",
+      "keyPointsZh": [
+        "研究把检索、推理、市场先验和历史类比视为可观测的智能体行为。",
+        "机制选择依赖数据来源，没有单一机制在所有任务中占优。",
+        "ReliabilityRoute 使用历史覆盖率、市场先验可用性、证据强度等可靠性特征进行路由。",
+        "2024 年拟合的固定规则接近人工分类法，且不硬编码来源名称。",
+        "前向自调整规则在 16 个后续 LLM 上取得确定性系统中最佳平均 Brier 分数。"
+      ],
+      "impactZh": "该研究为预测智能体的可靠性路由提供了可检验的方法，说明不应默认所有任务都使用同一种推理或检索策略，对预测系统设计和评估有参考意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对构建或使用预测智能体的开发者与团队而言，该研究提示应根据数据来源和可靠性特征动态选择检索、推理或市场先验，而不是固定使用单一策略。",
+      "howItWorksZh": "ReliabilityRoute 是一种结构干预：它提取历史覆盖率、市场先验可用性、来源先验锐度、证据强度、证据分歧和时间跨度等可靠性特征，并用规则决定智能体采用检索、推理、市场先验还是历史类比。固定规则基于 2024 年数据拟合；前向自调整规则则从已解决的历史批次中重新拟合阈值。",
+      "interpretationZh": "论文报告的核心事实是机制选择依赖数据来源，且可靠性路由规则在实验中表现良好。可以合理推断，预测智能体的性能不仅取决于模型能力，也取决于是否根据任务条件选择合适的预测机制。",
+      "limitationsZh": "论文摘要未给出具体数据集规模、统计显著性、各基线完整对比和失败案例；前向自调整规则依赖已解决的历史批次，实际部署中的冷启动和分布漂移影响尚不明确。",
+      "actionStepsZh": [
+        "在预测系统中记录每次预测所采用的机制，如检索、推理、市场先验或历史类比。",
+        "根据数据来源和可靠性特征设计路由规则，而不是对所有任务使用同一策略。",
+        "使用已解决的历史预测批次定期重新拟合路由阈值，并监控 Brier 分数变化。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.28475",
+          "publishedAt": "2026-09-25T04:00:00.000Z",
+          "title": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/louiswang524/forcastagent"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-25T04:00:00.000Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-25T04:00:00.000Z",
+            "label": "9/25 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a90838efb94cfb1f",
+      "normalizedUrl": "https://arxiv.org/abs/2609.28506",
+      "originalUrl": "https://arxiv.org/abs/2609.28506",
+      "titleOriginal": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split",
+      "summaryOriginal": "arXiv:2609.28506v1 Announce Type: new Abstract: TW3Cast is a time-series forecasting system that reaches position 3 of 130 entries on the GIFT-Eval benchmark by mean MASE rank, as of 2026-09-14. The two entries above it belong to the leaderboard's agentic category, multi-step systems that use agents or language models to reason about, generate or select forecasts. TW3Cast runs no agent and no language model. Its selection is a table computed once on the training split and then frozen, and its experts are public foundation models lightly fine-tuned on those training splits. For each of the 97 dataset, frequency and horizon configurations, the table serves one of four modes: a specialist, which is a LoRA or full fine-tune of Chronos-2, TiRex or Toto whose training data was cleaned and enriched by explicit rules; a quantile blend that contains a specialist; a blend of base models; or a selection tournament played on a backtest carved from the training split. Every decision in the table was taken on that backtest. A specialist is admitted the moment it beats the tournament there, so a candidate costs a few megabytes and minutes of GPU time, and a failed candidate changes nothing. Three",
+      "originalLanguage": "en",
+      "author": "Nathan Thierry, Andre-Louis Rochet",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-25T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.28506",
+          "publishedAt": "2026-09-25T04:00:00.000Z",
+          "title": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文提出了一种无需智能体或语言模型、完全在训练集上选择并冻结路由表的时间序列预测系统，在 GIFT-Eval 基准上取得第 3 名，展示了轻量微调基础模型组合的有效性，对时间序列预测研究有参考价值。",
+      "importanceReasonEn": "This paper presents a time-series forecasting system that requires no agents or language models, with a routing table selected entirely on the training split and then frozen, achieving 3rd place on the GIFT-Eval benchmark. It demonstrates the effectiveness of combining lightly fine-tuned foundation ",
+      "scoringMode": "ai",
+      "titleZh": "TW3Cast：用于GIFT-Eval时间序列预测的轻量微调基础模型冻结路由器，完全在训练集上选择",
+      "titleEn": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split",
+      "summaryZh": "TW3Cast 是一个时间序列预测系统，截至 2026-09-14 在 GIFT-Eval 基准的 130 个条目中按平均 MASE 排名位列第 3。排在其上的两个条目属于排行榜的智能体类别，即使用智能体或语言模型来推理、生成或选择预测的多步系统。TW3Cast 不运行任何智能体，也不使用语言模型。它的选择是一张在训练集上一次性计算后冻结的表格，其专家是在这些训练集上轻量微调的公开基础模型。对于 97 个数据集、频率和预测范围的配置，该表格提供四种模式之一：专家模型（对 Chronos-2、TiRex 或 Toto 进行 LoRA 或全量微调，训练数据经显式规则清洗和增强）、包含专家的分位数混合、基础模型混合，或在训练集切出的回测上进行的选拔锦标赛。表格中的每个决策都在该回测上做出。专家一旦在回测中击败锦标赛即被接纳，因此一个候选只需几兆字节和几分钟 GPU 时间，失败的候选不会改变任何东西。",
+      "summaryEn": "TW3Cast is a time-series forecasting system that reaches position 3 of 130 entries on the GIFT-Eval benchmark by mean MASE rank, as of 2026-09-14. The two entries above it belong to the leaderboard's agentic category, multi-step systems that use agents or language models to reason about, generate or select forecasts. TW3Cast runs no agent and no language model. Its selection is a table computed once on the training split and then frozen, and its experts are public foundation models lightly fine-tuned on those training splits. For each of the 97 dataset, frequency and horizon configurations, the table serves one of four modes: a specialist, which is a LoRA or full fine-tune of Chronos-2, TiRex or Toto whose training data was cleaned and enriched by explicit rules; a quantile blend that cont",
+      "keywords": [
+        "TW3Cast",
+        "GIFT-Eval",
+        "时间序列预测",
+        "冻结路由器",
+        "LoRA微调",
+        "Chronos-2",
+        "TiRex",
+        "Toto"
+      ],
+      "topics": [
+        "时间序列预测",
+        "基础模型微调",
+        "GIFT-Eval基准",
+        "模型路由",
+        "LoRA"
+      ],
+      "models": [
+        "Chronos-2",
+        "TiRex",
+        "Toto"
+      ],
+      "detailZh": "TW3Cast 是一个时间序列预测系统，根据论文摘要，截至 2026-09-14，它在 GIFT-Eval 基准的 130 个条目中按平均 MASE 排名位列第 3。排在其前面的两个条目属于排行榜的智能体类别，这些是多步系统，使用智能体或语言模型来推理、生成或选择预测。TW3Cast 本身不运行任何智能体，也不使用语言模型。\n\n该系统的核心是一张选择表，它在训练集上一次性计算后即被冻结。其专家是在训练集上轻量微调的公开基础模型。对于 97 个数据集、频率和预测范围的配置，这张表会为每个配置指定四种模式之一：专家模型、包含专家的分位数混合、基础模型混合，或在训练集切出的回测上进行的选拔锦标赛。\n\n专家模型是对 Chronos-2、TiRex 或 Toto 进行 LoRA 或全量微调得到的，其训练数据经过显式规则清洗和增强。表格中的每个决策都在训练集回测上做出。一个专家只要在回测中击败锦标赛就会被接纳，因此一个候选只需几兆字节和几分钟 GPU 时间，失败的候选不会改变任何东西。\n\n摘要未提供更多关于具体实现、超参数或完整实验结果的细节。",
+      "keyPointsZh": [
+        "TW3Cast 在 GIFT-Eval 基准的 130 个条目中按平均 MASE 排名第 3（截至 2026-09-14）。",
+        "排在其上的两个条目属于智能体类别，使用智能体或语言模型；TW3Cast 不使用智能体或语言模型。",
+        "系统使用一张在训练集上计算后冻结的选择表，为 97 个配置指定四种模式之一。",
+        "专家模型是对 Chronos-2、TiRex 或 Toto 进行 LoRA 或全量微调，训练数据经显式规则清洗和增强。",
+        "所有决策在训练集回测上做出，候选专家成本低（几兆字节、几分钟 GPU 时间），失败不影响现有系统。"
+      ],
+      "impactZh": "该工作表明，在不使用智能体或语言模型的情况下，通过轻量微调公开基础模型并冻结路由表，也能在时间序列预测基准上取得接近顶尖的成绩。这为时间序列预测提供了一种低成本、可复现的替代方案，可能影响后续研究对智能体方法的依赖程度。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于时间序列预测的研究者和开发者，TW3Cast 展示了一种低成本策略：在训练集上选择并冻结路由表，仅对基础模型做轻量微调，即可在 GIFT-Eval 上获得有竞争力的排名。这可能降低构建高性能预测系统的计算门槛。",
+      "howItWorksZh": "TW3Cast 的工作方式如下：首先，在训练集上为 97 个数据集、频率和预测范围的配置分别计算一张选择表，计算完成后冻结。对于每个配置，该表指定四种模式之一：1）专家模型，即对 Chronos-2、TiRex 或 Toto 进行 LoRA 或全量微调，训练数据经显式规则清洗和增强；2）包含专家的分位数混合；3）基础模型混合；4）在训练集切出的回测上进行的选拔锦标赛。所有决策基于该回测。一个专家候选只要在回测中击败锦标赛就被接纳，因此候选成本仅为几兆字节和几分钟 GPU 时间，失败候选不会改变系统。",
+      "interpretationZh": "根据摘要，TW3Cast 的核心创新在于用一张在训练集上预先计算并冻结的路由表来组合轻量微调的基础模型，从而避免使用智能体或语言模型。其在 GIFT-Eval 上的第 3 名排名表明这种方法在时间序列预测任务上具有竞争力。摘要未说明该方法与智能体方法的具体性能差距，也未提供详细的实验设置和消融结果。",
+      "limitationsZh": "摘要仅提供了系统的高层描述和排名信息，未给出具体的 MASE 数值、与第 1、2 名的性能差距、训练集回测的具体构建方式、数据清洗和增强的规则细节，以及四种模式的选择标准。此外，排名信息截至 2026-09-14，可能随时间变化。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "TW3Cast 排名第 3，前两名均为使用智能体或语言模型的系统。",
+        "data": [
+          {
+            "label": "TW3Cast",
+            "value": 3,
+            "display": ""
+          },
+          {
+            "label": "智能体条目1",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "智能体条目2",
+            "value": 2,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.28506",
+          "publishedAt": "2026-09-25T04:00:00.000Z",
+          "title": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-25T04:00:00.000Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-25T04:00:00.000Z",
+            "label": "9/25 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9f4512645b417807",
+      "normalizedUrl": "https://latent.space/p/runway",
+      "originalUrl": "https://www.latent.space/p/runway",
+      "titleOriginal": "Runway’s WorldPrompt and the Engineering of Real-Time Worlds",
+      "summaryOriginal": "GWM Worlds 2 uses persistent context and timed actions to steer a world model generating video and audio in real time.",
+      "originalLanguage": "en",
+      "author": "Richard MacManus",
+      "category": "agent",
+      "sourceType": "community",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://substackcdn.com/image/fetch/$s_!DK3x!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png",
+        "https://substackcdn.com/image/fetch/$s_!QtUx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F462b0bdb-0368-49a9-9b29-d6edda97fe9b_1852x832.png",
+        "https://substackcdn.com/image/fetch/$s_!c-7m!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa228c2e6-edb0-4b6e-beda-158ec9da9edf_2066x410.png",
+        "https://substackcdn.com/image/fetch/$s_!Si0m!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F86460b95-67ad-4064-b1cc-0cea6ee480e3_1348x652.png",
+        "https://substackcdn.com/image/fetch/$s_!23HU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F694f331d-bfd9-47ba-a4f6-9cdeaca3ffe0_1346x678.png",
+        "https://substackcdn.com/image/fetch/$s_!tIKC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fea891148-4403-4b72-bb83-5ab03d2e385e_1298x618.png",
+        "https://substackcdn.com/image/fetch/$s_!RtOZ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff95952e9-4d93-4707-aa3b-3a41ebe50f0f_1990x1296.png",
+        "https://substackcdn.com/image/fetch/$s_!DK3x!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png"
+      ],
+      "resourceLinks": [
+        "https://runway.com/research/introducing-gwm-worlds-2",
+        "https://www.linkedin.com/in/kamilsindi/",
+        "https://www.linkedin.com/in/robin-kahlow/",
+        "https://www.linkedin.com/in/agermanidis/",
+        "https://www.youtube-nocookie.com/embed/fGRd5gYhztg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+        "https://news.crunchbase.com/venture/gen-ai-video-startup-unicorn-runway-seriese-raise/",
+        "https://deepmind.google/models/genie/",
+        "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+        "https://odyssey.systems/the-gpt-2-moment-for-world-models",
+        "https://www.worldlabs.ai/blog/rtfm",
+        "https://substack-post-media.s3.amazonaws.com/public/images/d0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:914,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:140134,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.latent.space/i/217255830?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}",
+        "http://www.w3.org/2000/svg"
+      ],
+      "publishedAt": "2026-09-25T01:30:57.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/runway",
+          "publishedAt": "2026-09-25T01:30:57.000Z",
+          "title": "Runway’s WorldPrompt and the Engineering of Real-Time Worlds",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://substackcdn.com/image/fetch/$s_!DK3x!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png",
+            "https://substackcdn.com/image/fetch/$s_!QtUx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F462b0bdb-0368-49a9-9b29-d6edda97fe9b_1852x832.png",
+            "https://substackcdn.com/image/fetch/$s_!c-7m!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa228c2e6-edb0-4b6e-beda-158ec9da9edf_2066x410.png",
+            "https://substackcdn.com/image/fetch/$s_!Si0m!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F86460b95-67ad-4064-b1cc-0cea6ee480e3_1348x652.png",
+            "https://substackcdn.com/image/fetch/$s_!23HU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F694f331d-bfd9-47ba-a4f6-9cdeaca3ffe0_1346x678.png",
+            "https://substackcdn.com/image/fetch/$s_!tIKC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fea891148-4403-4b72-bb83-5ab03d2e385e_1298x618.png",
+            "https://substackcdn.com/image/fetch/$s_!RtOZ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff95952e9-4d93-4707-aa3b-3a41ebe50f0f_1990x1296.png",
+            "https://substackcdn.com/image/fetch/$s_!DK3x!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png"
+          ],
+          "resourceLinks": [
+            "https://runway.com/research/introducing-gwm-worlds-2",
+            "https://www.linkedin.com/in/kamilsindi/",
+            "https://www.linkedin.com/in/robin-kahlow/",
+            "https://www.linkedin.com/in/agermanidis/",
+            "https://www.youtube-nocookie.com/embed/fGRd5gYhztg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+            "https://news.crunchbase.com/venture/gen-ai-video-startup-unicorn-runway-seriese-raise/",
+            "https://deepmind.google/models/genie/",
+            "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+            "https://odyssey.systems/the-gpt-2-moment-for-world-models",
+            "https://www.worldlabs.ai/blog/rtfm",
+            "https://substack-post-media.s3.amazonaws.com/public/images/d0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:914,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:140134,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.latent.space/i/217255830?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}",
+            "http://www.w3.org/2000/svg"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该报道涉及 Runway 的 WorldPrompt 与 GWM Worlds 2，展示世界模型在实时视频与音频生成中的工程化方向，对理解 agent 式交互与生成式世界模型有参考价值，但来源为单一媒体报道，细节有限。",
+      "importanceReasonEn": "The report covers Runway's WorldPrompt and GWM Worlds 2, showing an engineering direction for world models in real-time video and audio generation, useful for understanding agent-style interaction and generative world models, but it comes from a single media report with limited detail.",
+      "scoringMode": "ai",
+      "titleZh": "Runway 的 WorldPrompt 与实时世界工程",
+      "titleEn": "Runway’s WorldPrompt and the Engineering of Real-Time Worlds",
+      "summaryZh": "GWM Worlds 2 使用持久上下文和定时动作来引导一个实时生成视频和音频的世界模型。",
+      "summaryEn": "GWM Worlds 2 uses persistent context and timed actions to steer a world model generating video and audio in real time.",
+      "keywords": [
+        "Runway",
+        "WorldPrompt",
+        "GWM Worlds 2",
+        "world model",
+        "real-time video",
+        "audio generation",
+        "persistent context",
+        "timed actions"
+      ],
+      "topics": [
+        "world models",
+        "real-time video generation",
+        "Runway",
+        "GWM Worlds 2",
+        "WorldPrompt"
+      ],
+      "models": [
+        "GWM Worlds 2"
+      ],
+      "detailZh": "据 Latent Space 报道，Runway 提出了 WorldPrompt，并介绍了 GWM Worlds 2。该系统的核心思路是使用持久上下文（persistent context）和定时动作（timed actions）来引导一个世界模型，使其能够实时生成视频和音频。\n\n报道将这一方向描述为“实时世界的工程”，强调世界模型不只是单次生成一段内容，而是可以在持续运行的上下文中被动作驱动、随时间推进而演化。\n\n目前公开信息仅来自该报道，未提供具体的技术架构、模型规模、训练数据、延迟指标或可复现的配置细节。因此，关于其实际能力、生成质量与实时性能，仍缺乏独立验证。\n\n可以确认的是，Runway 正在把 WorldPrompt 与 GWM Worlds 2 作为一套面向实时世界生成的系统来呈现，重点在于上下文持久性与动作时序控制。",
+      "keyPointsZh": [
+        "Runway 提出 WorldPrompt，用于引导世界模型。",
+        "GWM Worlds 2 可实时生成视频和音频。",
+        "系统使用持久上下文与定时动作进行控制。",
+        "报道将其定位为“实时世界的工程”。",
+        "公开信息有限，缺少技术细节与独立验证。"
+      ],
+      "impactZh": "该事件反映出世界模型正从离线生成走向实时、可交互的持续生成，可能影响视频生成、游戏、仿真与 agent 交互等方向的产品形态。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 用户和开发者而言，这一方向提示未来可通过持久上下文与定时动作来控制生成式世界模型，但当前没有公开的 API、参数或可复现工作流可供直接使用。",
+      "howItWorksZh": "根据报道，GWM Worlds 2 通过持久上下文维持跨时间的状态，并通过定时动作在特定时刻触发或改变生成过程，从而实时输出视频和音频。除此之外，具体实现机制未在来源中说明。",
+      "interpretationZh": "报道事实：Runway 提出 WorldPrompt，GWM Worlds 2 使用持久上下文和定时动作实时生成视频与音频。合理推断：这代表世界模型向可交互、持续运行的生成系统演进，但实际效果与工程成熟度尚无法从现有信息判断。",
+      "limitationsZh": "来源仅为 Latent Space 的一篇报道，未提供技术论文、基准测试、延迟数据或独立复现结果；模型规模、训练方式、硬件需求与生成质量均未说明。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/runway",
+          "publishedAt": "2026-09-25T01:30:57.000Z",
+          "title": "Runway’s WorldPrompt and the Engineering of Real-Time Worlds",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://substackcdn.com/image/fetch/$s_!DK3x!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png",
+            "https://substackcdn.com/image/fetch/$s_!QtUx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F462b0bdb-0368-49a9-9b29-d6edda97fe9b_1852x832.png",
+            "https://substackcdn.com/image/fetch/$s_!c-7m!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa228c2e6-edb0-4b6e-beda-158ec9da9edf_2066x410.png",
+            "https://substackcdn.com/image/fetch/$s_!Si0m!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F86460b95-67ad-4064-b1cc-0cea6ee480e3_1348x652.png",
+            "https://substackcdn.com/image/fetch/$s_!23HU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F694f331d-bfd9-47ba-a4f6-9cdeaca3ffe0_1346x678.png",
+            "https://substackcdn.com/image/fetch/$s_!tIKC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fea891148-4403-4b72-bb83-5ab03d2e385e_1298x618.png",
+            "https://substackcdn.com/image/fetch/$s_!RtOZ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff95952e9-4d93-4707-aa3b-3a41ebe50f0f_1990x1296.png",
+            "https://substackcdn.com/image/fetch/$s_!DK3x!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png"
+          ],
+          "resourceLinks": [
+            "https://runway.com/research/introducing-gwm-worlds-2",
+            "https://www.linkedin.com/in/kamilsindi/",
+            "https://www.linkedin.com/in/robin-kahlow/",
+            "https://www.linkedin.com/in/agermanidis/",
+            "https://www.youtube-nocookie.com/embed/fGRd5gYhztg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+            "https://news.crunchbase.com/venture/gen-ai-video-startup-unicorn-runway-seriese-raise/",
+            "https://deepmind.google/models/genie/",
+            "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+            "https://odyssey.systems/the-gpt-2-moment-for-world-models",
+            "https://www.worldlabs.ai/blog/rtfm",
+            "https://substack-post-media.s3.amazonaws.com/public/images/d0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:914,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:140134,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.latent.space/i/217255830?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0ffa910-ac51-45f1-8fb1-e9c2dcda1e8b_1800x1130.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}",
+            "http://www.w3.org/2000/svg"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-25T01:30:57.000Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-25T01:30:57.000Z",
+            "label": "9/25 09:30",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-25T02:19:45.986Z",
+            "label": "9/25 10:19",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:08:34.972Z",
+            "label": "9/25 11:08",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:57:23.958Z",
+            "label": "9/25 11:57",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "e166ab84e4cc888a",
       "normalizedUrl": "https://simonwillison.net/2026/Sep/24/commit-rewriter",
@@ -46,13 +517,13 @@
         }
       ],
       "importance": 35,
-      "importanceReasonZh": "这是一个小型开源工具的功能更新，对使用该工具重写提交历史的开发者有直接帮助，但影响范围有限。",
-      "importanceReasonEn": "This is a feature update to a small open-source tool. It directly helps developers who use it to rewrite commit history, but its impact is limited in scope.",
+      "importanceReasonZh": "这是一个小型开源工具的版本更新，主要面向使用 Git 的开发者，新增了非默认分支支持，实用但影响范围有限。",
+      "importanceReasonEn": "This is a minor version update of a small open-source tool aimed at Git users, adding non-default branch support. It is practical but limited in scope.",
       "scoringMode": "ai",
       "titleZh": "commit-rewriter 0.2 发布",
       "titleEn": "commit-rewriter 0.2 Released",
-      "summaryZh": "commit-rewriter 0.2 版本发布，新增对非默认分支的支持，可通过 uvx commit-rewriter --branch other 命令针对其他分支运行。",
-      "summaryEn": "commit-rewriter 0.2 is released, adding support for branches other than the default branch. You can run it against another branch with uvx commit-rewriter --branch other.",
+      "summaryZh": "commit-rewriter 0.2 发布，新增对非默认分支的支持，可通过 uvx commit-rewriter --branch other 指定其他分支运行。",
+      "summaryEn": "commit-rewriter 0.2 is released, adding support for branches other than the default branch. It can be run against another branch with uvx commit-rewriter --branch other.",
       "keywords": [
         "commit-rewriter",
         "git",
@@ -66,23 +537,21 @@
         "commit-rewriting"
       ],
       "models": [],
-      "detailZh": "commit-rewriter 发布了 0.2 版本。该版本的主要变化是增加了对非默认分支的支持。此前该工具可能只能针对仓库的默认分支运行，现在用户可以通过命令行参数指定其他分支。\n\n具体用法是运行 uvx commit-rewriter --branch other，其中 other 是目标分支名称。uvx 是 Python 生态中用于直接运行 Python 包命令行工具的方式，说明该工具以 Python 包形式分发。\n\n该发布信息来自 Simon Willison，并带有 git 标签，表明这是一个与 Git 提交历史重写相关的工具。除此之外，输入中没有提供更多关于该工具内部实现、其他新功能或修复的细节。",
+      "detailZh": "commit-rewriter 发布了 0.2 版本。根据发布说明，该版本新增了对非默认分支的支持。用户可以通过 uvx commit-rewriter --branch other 命令，让工具针对名为 other 的分支运行，而不是只作用于默认分支。该工具与 Git 相关，标签为 git。发布信息由 Simon Willison 于 2026 年 9 月 24 日发布。除上述内容外，输入未提供更多关于工具功能、实现方式或兼容性的细节。",
       "keyPointsZh": [
-        "commit-rewriter 发布 0.2 版本。",
-        "新增支持非默认分支。",
-        "可通过 uvx commit-rewriter --branch other 针对其他分支运行。",
-        "该工具与 Git 提交重写相关。"
+        "commit-rewriter 发布 0.2 版本",
+        "新增支持非默认分支",
+        "可通过 uvx commit-rewriter --branch other 指定其他分支运行",
+        "该工具与 Git 相关"
       ],
-      "impactZh": "该更新让开发者能够对非默认分支执行提交重写操作，扩展了工具的使用场景，但整体影响限于使用该工具的用户群体。",
+      "impactZh": "该更新让 commit-rewriter 不再局限于默认分支，开发者可以在其他分支上使用同一工具，提升了在分支工作流中的适用性。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 commit-rewriter 的开发者现在可以指定 --branch 参数来重写非默认分支的提交历史，而不必切换到默认分支或手动调整工作流程。",
-      "howItWorksZh": "该工具通过命令行参数 --branch 接收目标分支名称，然后针对该分支执行提交重写操作。运行方式为 uvx commit-rewriter --branch other，其中 uvx 负责从 Python 包索引中获取并执行该工具。",
-      "interpretationZh": "根据发布说明，0.2 版本的核心改进是分支选择能力。这属于功能增强，而非行为变更或破坏性更新。输入未说明该工具具体如何重写提交，也未提供其他技术细节。",
-      "limitationsZh": "输入仅包含发布摘要，没有提供完整的变更日志、工具内部实现细节、兼容性说明或已知问题。无法确认该版本是否包含其他修复或改进。",
+      "userImpactZh": "使用 Git 的开发者可以在非默认分支上运行 commit-rewriter，通过 --branch 参数指定目标分支，从而在分支开发流程中直接使用该工具。",
+      "howItWorksZh": "根据发布说明，commit-rewriter 0.2 支持通过命令行参数 --branch 指定要操作的分支。示例命令为 uvx commit-rewriter --branch other，其中 uvx 用于运行该工具，--branch other 表示针对名为 other 的分支执行操作。输入未提供更多实现细节。",
+      "interpretationZh": "已确认的事实是：commit-rewriter 发布了 0.2 版本，新增非默认分支支持，并提供了 --branch 参数用法。可以合理推断，此前版本可能只作用于默认分支，而该版本扩展了适用范围。除此之外的细节均未在输入中说明。",
+      "limitationsZh": "输入仅包含简短的发布说明，未提供工具的具体功能、重写提交的方式、兼容的 Git 版本、安装要求或已知问题。",
       "actionStepsZh": [
-        "如果已安装该工具，可升级到 0.2 版本以使用分支参数。",
-        "运行 uvx commit-rewriter --branch other 来针对非默认分支重写提交。",
-        "查阅项目仓库或发布说明以了解完整变更内容。"
+        "使用 uvx commit-rewriter --branch other 在非默认分支上运行 commit-rewriter 0.2"
       ],
       "detailCompleteness": "limited",
       "visual": null,
@@ -109,7 +578,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T20:06:53.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -120,26 +589,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T21:03:15.534Z",
-            "label": "9/25 05:03",
-            "value": 22,
+            "at": "2026-09-24T21:04:35.216Z",
+            "label": "9/25 05:04",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:59:38.068Z",
-            "label": "9/25 05:59",
-            "value": 29,
+            "at": "2026-09-24T22:02:17.432Z",
+            "label": "9/25 06:02",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:56:00.602Z",
-            "label": "9/25 06:56",
-            "value": 37,
+            "at": "2026-09-24T22:59:59.648Z",
+            "label": "9/25 06:59",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-24T23:57:41.864Z",
+            "label": "9/25 07:57",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:55:24.080Z",
+            "label": "9/25 08:55",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:53:06.296Z",
+            "label": "9/25 09:53",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:50:48.512Z",
+            "label": "9/25 10:50",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:48:30.728Z",
+            "label": "9/25 11:48",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 44,
             "reports": 1
           }
@@ -224,20 +723,20 @@
           ]
         }
       ],
-      "importance": 45,
-      "importanceReasonZh": "该文来自 GitHub 官方博客，讨论聊天界面在开发者场景中的局限，并提出画布作为替代交互方式，对 AI 代理产品设计有参考价值，但摘要信息有限，缺乏具体数据与实现细节。",
-      "importanceReasonEn": "This post from the official GitHub Blog discusses the limits of chat UIs for developers and proposes canvases as an alternative interaction model. It is relevant to AI agent product design, but the summary is limited and lacks concrete data or implementation details.",
+      "importance": 42,
+      "importanceReasonZh": "该文章讨论了AI代理交互界面的设计选择，对开发者工具设计有参考价值，但缺乏具体数据或产品发布信息。",
+      "importanceReasonEn": "The post discusses interface design choices for AI agent interaction, offering reference value for developer tool design, but lacks concrete data or product launch details.",
       "scoringMode": "ai",
       "titleZh": "当聊天界面不再适用",
       "titleEn": "When chat is the wrong UI",
-      "summaryZh": "当开发者需要比聊天框更具体的东西时该怎么办？答案是画布。这篇文章《当聊天界面不再适用》最初发表在 GitHub 博客上。",
-      "summaryEn": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. The post When chat is the wrong UI appeared first on The GitHub Blog.",
+      "summaryZh": "当开发者需要比聊天框更具体的东西时该怎么办？答案是画布。本文探讨了聊天界面在开发场景中的局限性以及画布式交互的优势。",
+      "summaryEn": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. This post explores the limitations of chat interfaces in development contexts and the advantages of canvas-based interaction.",
       "keywords": [
         "chat UI",
         "canvas",
         "developer experience",
         "agent interface",
-        "GitHub Blog"
+        "GitHub"
       ],
       "topics": [
         "chat-ui",
@@ -246,19 +745,19 @@
         "agent-interfaces"
       ],
       "models": [],
-      "detailZh": "GitHub 博客发布了一篇题为《当聊天界面不再适用》的文章。文章的核心观点是：当开发者需要比聊天框更具体、更可操作的界面时，聊天这种交互形式可能并不合适。作者提出“画布”（canvases）作为替代方案。\n\n目前可获取的信息仅来自文章摘要，摘要没有展开说明画布具体指什么、如何实现、适用于哪些开发场景，也没有给出示例或对比数据。因此，关于画布的定义、技术细节和实际效果，均无法从现有材料中确认。\n\n可以确定的是，这篇文章的定位是面向开发者的观点性内容，发布在 GitHub 官方博客上，讨论的是 AI 代理或开发工具的用户界面选择问题。文章标题和摘要都强调“聊天是错误的 UI”这一判断，暗示作者认为在某些任务中，聊天界面会限制开发者的表达和操作能力。\n\n由于原文内容未被完整提供，本文只能基于摘要进行有限解读，无法验证画布方案的具体形态或有效性。",
+      "detailZh": "GitHub博客发布了一篇题为《当聊天界面不再适用》的文章，探讨了在开发场景中聊天框作为交互界面的局限性。文章指出，当开发者需要比聊天框更具体、更可操作的交互方式时，画布（canvas）成为一种替代方案。\n\n文章的核心观点是：聊天界面虽然直观，但在某些开发任务中并不适用，因为开发者往往需要更结构化、更可视化的交互空间。画布式界面允许用户以更灵活的方式组织信息、操作对象和查看结果。\n\n该文章属于观点性内容，来自GitHub官方博客，面向开发者群体。文章没有涉及具体产品发布、模型参数或基准测试数据，主要讨论的是交互设计理念。",
       "keyPointsZh": [
-        "GitHub 博客发布文章《当聊天界面不再适用》。",
-        "文章认为聊天框在某些开发者场景中不够具体、不够可操作。",
-        "作者提出“画布”（canvases）作为替代交互方式。",
-        "现有信息仅来自摘要，缺少画布的具体定义与实现细节。"
+        "聊天界面在开发场景中存在局限性",
+        "画布被提出作为聊天框的替代交互方式",
+        "文章来自GitHub官方博客，面向开发者",
+        "内容属于交互设计观点，无具体产品发布"
       ],
-      "impactZh": "该文反映了 AI 开发工具领域对聊天界面局限性的反思，可能推动更多产品探索画布式、可视化或结构化交互，对代理类产品的界面设计方向有参考意义。",
+      "impactZh": "该文章反映了AI代理工具界面设计的一个趋势性讨论：并非所有任务都适合用聊天框完成。这可能影响开发者工具的设计方向，推动更多画布式或结构化交互界面的出现。",
       "readerImpactZh": "",
-      "userImpactZh": "对 AI 工具用户和开发者而言，这篇文章提示聊天界面并非万能，未来可能出现更多非聊天的交互方式，但当前摘要未给出可直接采用的具体方案。",
+      "userImpactZh": "对于使用AI编程助手或代理工具的开发者而言，这篇文章提示了聊天界面可能不是所有任务的最佳选择，未来可能会看到更多支持画布式交互的开发工具。",
       "howItWorksZh": "",
-      "interpretationZh": "从摘要看，文章主张在开发者需要更具体操作时，聊天界面存在不足，画布是作者提出的替代方向。但画布具体如何工作、与聊天如何互补，摘要并未说明，因此只能视为一种观点性倡议，而非已验证的方案。",
-      "limitationsZh": "现有材料仅为文章摘要，缺少原文正文、示例、数据与实现细节；画布的定义、适用场景和效果均无法确认，文章观点也未提供实证支持。",
+      "interpretationZh": "文章的核心主张是聊天界面并非万能，在需要更具体操作的开发场景中，画布式界面可能更合适。这是基于实践经验的观察，而非有数据支撑的研究结论。",
+      "limitationsZh": "文章为观点性内容，未提供具体产品、数据或可复现的案例。画布式界面的具体实现方式和效果未在摘要中说明。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -302,9 +801,9 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T20:00:00.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
-        "current": 50,
-        "peak": 50,
+        "endedAt": "2026-09-25T04:46:12.944Z",
+        "current": 48,
+        "peak": 48,
         "history": [
           {
             "at": "2026-09-24T20:00:00.000Z",
@@ -313,27 +812,256 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T20:58:05.784Z",
+            "at": "2026-09-24T20:58:28.104Z",
             "label": "9/25 04:58",
-            "value": 23,
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:56:11.568Z",
+            "at": "2026-09-24T21:56:56.209Z",
             "label": "9/25 05:56",
-            "value": 32,
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:54:17.352Z",
-            "label": "9/25 06:54",
+            "at": "2026-09-24T22:55:24.314Z",
+            "label": "9/25 06:55",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:53:52.419Z",
+            "label": "9/25 07:53",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:52:20.524Z",
+            "label": "9/25 08:52",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:50:48.629Z",
+            "label": "9/25 09:50",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:49:16.734Z",
+            "label": "9/25 10:49",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T03:47:44.839Z",
+            "label": "9/25 11:47",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
+            "value": 48,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "87a4dd2520e41243",
+      "normalizedUrl": "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds",
+      "originalUrl": "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds/",
+      "titleOriginal": "Top AI experts badly underestimated how fast the field is moving, study finds",
+      "summaryOriginal": "Leading AI experts have consistently underestimated how fast AI is advancing, according to the Forecasting Research Institute. AI reached gold-medal level at the International Mathematical Olympiad five years ahead of the median expert forecast, and Anthropic's annualized revenue is about five times what experts predicted. But forecasts for real-world uses like self-driving cars paint a more mixed picture. The article Top AI experts badly underestimated how fast the field is moving, study finds appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Matthias Bastian",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/09/ai_forecasting.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-09-24T19:18:33.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds/",
+          "publishedAt": "2026-09-24T19:18:33.000Z",
+          "title": "Top AI experts badly underestimated how fast the field is moving, study finds",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/09/ai_forecasting.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该研究揭示了AI领域专家预测系统性偏保守的现象，对行业预期、投资决策和公众认知具有参考价值。",
+      "importanceReasonEn": "The study reveals a systematic conservatism in AI expert forecasts, offering reference value for industry expectations, investment decisions and public perception.",
+      "scoringMode": "ai",
+      "titleZh": "研究发现：顶尖AI专家严重低估了该领域的发展速度",
+      "titleEn": "Top AI experts badly underestimated how fast the field is moving, study finds",
+      "summaryZh": "根据预测研究机构（Forecasting Research Institute）的一项研究，顶尖AI专家一直低估了AI的进步速度。AI在国际数学奥林匹克竞赛中达到金牌水平的时间比专家预测中位数提前了五年，Anthropic的年化收入约为专家预测的五倍。但专家对自动驾驶汽车等现实应用的预测则呈现出更复杂的情况。",
+      "summaryEn": "Leading AI experts have consistently underestimated how fast AI is advancing, according to the Forecasting Research Institute. AI reached gold-medal level at the International Mathematical Olympiad five years ahead of the median expert forecast, and Anthropic's annualized revenue is about five times what experts predicted. But forecasts for real-world uses like self-driving cars paint a more mixed picture.",
+      "keywords": [
+        "AI预测",
+        "专家低估",
+        "国际数学奥林匹克",
+        "Anthropic",
+        "自动驾驶"
+      ],
+      "topics": [
+        "AI预测",
+        "专家判断",
+        "AI发展速度",
+        "行业研究"
+      ],
+      "models": [],
+      "detailZh": "预测研究机构（Forecasting Research Institute）的一项研究发现，顶尖AI专家一直低估了AI领域的发展速度。该研究对比了专家预测与实际进展，发现多个关键指标上实际发展远超预期。\n\n具体而言，AI在国际数学奥林匹克竞赛（IMO）中达到金牌水平的时间比专家预测中位数提前了五年。此外，Anthropic的年化收入约为专家预测的五倍。\n\n不过，研究也指出，对于自动驾驶汽车等现实世界应用的预测，情况更为复杂，并非所有领域都出现同样程度的低估。\n\n该研究由The Decoder AI报道，强调了专家预测在快速发展的AI领域可能存在的系统性偏差。",
+      "keyPointsZh": [
+        "顶尖AI专家持续低估AI发展速度。",
+        "AI达到IMO金牌水平比专家预测中位数提前五年。",
+        "Anthropic年化收入约为专家预测的五倍。",
+        "自动驾驶等现实应用领域的预测结果更为复杂。"
+      ],
+      "impactZh": "该研究结果可能促使行业重新审视AI发展预期，影响投资、政策制定和技术路线规划。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和团队而言，该研究提示应更积极地评估技术进展速度，避免因保守预期而错失机会。",
+      "howItWorksZh": "",
+      "interpretationZh": "研究显示，专家在AI能力突破和商业收入方面的预测明显偏低，但在自动驾驶等落地应用上预测更为复杂。这提示AI发展速度可能超出常规预期，但不同领域进展并不均衡。",
+      "limitationsZh": "研究仅提及部分指标（IMO金牌、Anthropic收入），未提供完整方法论和样本细节；自动驾驶等领域的混合结果也表明低估并非普遍现象。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "两个指标均显示实际进展为专家预测的五倍或提前五年，但单位不同，仅作并列展示。",
+        "data": [
+          {
+            "label": "IMO金牌预测提前",
+            "value": 5,
+            "display": ""
+          },
+          {
+            "label": "Anthropic收入预测倍数",
+            "value": 5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds/",
+          "publishedAt": "2026-09-24T19:18:33.000Z",
+          "title": "Top AI experts badly underestimated how fast the field is moving, study finds",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/09/ai_forecasting.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T19:18:33.000Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-09-24T19:18:33.000Z",
+            "label": "9/25 03:18",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T20:15:18.994Z",
+            "label": "9/25 04:15",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:12:04.988Z",
+            "label": "9/25 05:12",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:08:50.983Z",
+            "label": "9/25 06:08",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:05:36.977Z",
+            "label": "9/25 07:05",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:02:22.972Z",
+            "label": "9/25 08:02",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:59:08.966Z",
+            "label": "9/25 08:59",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:55:54.960Z",
+            "label": "9/25 09:55",
             "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:52:40.955Z",
+            "label": "9/25 10:52",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:49:26.949Z",
+            "label": "9/25 11:49",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -463,7 +1191,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T19:15:23.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -474,33 +1202,230 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T20:10:47.027Z",
-            "label": "9/25 04:10",
+            "at": "2026-09-24T20:12:27.994Z",
+            "label": "9/25 04:12",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:09:32.988Z",
+            "label": "9/25 05:09",
             "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:06:11.054Z",
-            "label": "9/25 05:06",
+            "at": "2026-09-24T22:06:37.983Z",
+            "label": "9/25 06:06",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:03:42.977Z",
+            "label": "9/25 07:03",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:01:35.082Z",
-            "label": "9/25 06:01",
+            "at": "2026-09-25T00:00:47.972Z",
+            "label": "9/25 08:00",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:57:52.966Z",
+            "label": "9/25 08:57",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:56:59.109Z",
-            "label": "9/25 06:56",
+            "at": "2026-09-25T01:54:57.960Z",
+            "label": "9/25 09:54",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:52:02.955Z",
+            "label": "9/25 10:52",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T03:49:07.949Z",
+            "label": "9/25 11:49",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d3d988f207c8c42a",
+      "normalizedUrl": "https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass",
+      "originalUrl": "https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass/",
+      "titleOriginal": "Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass",
+      "summaryOriginal": "Buy one pass to TechCrunch Disrupt 2026 and get 50% off a second of the same ticket type. Register before event starts on October 13 at 8 a.m. PT.",
+      "originalLanguage": "en",
+      "author": "TechCrunch Events",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-24T19:15:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass/",
+          "publishedAt": "2026-09-24T19:15:00.000Z",
+          "title": "Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 35,
+      "importanceReasonZh": "这是一条面向创业者和科技从业者的活动门票促销信息，实用但影响范围有限。",
+      "importanceReasonEn": "This is a promotional ticket offer for an industry event aimed at founders and tech professionals; practical but limited in scope.",
+      "scoringMode": "ai",
+      "titleZh": "带上你的联合创始人、合作伙伴或同事，第二张TechCrunch Disrupt 2026通行证享五折优惠",
+      "titleEn": "Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass",
+      "summaryZh": "购买一张TechCrunch Disrupt 2026通行证，即可享受同类型第二张票五折优惠。请在10月13日上午8点（太平洋时间）活动开始前注册。",
+      "summaryEn": "Buy one pass to TechCrunch Disrupt 2026 and get 50% off a second of the same ticket type. Register before event starts on October 13 at 8 a.m. PT.",
+      "keywords": [
+        "TechCrunch Disrupt 2026",
+        "门票优惠",
+        "五折",
+        "联合创始人",
+        "注册截止"
+      ],
+      "topics": [
+        "TechCrunch Disrupt",
+        "活动门票",
+        "创业社区"
+      ],
+      "models": [],
+      "detailZh": "TechCrunch发布消息称，购买一张TechCrunch Disrupt 2026通行证后，可为同类型的第二张通行证享受五折优惠。该优惠适用于联合创始人、合作伙伴或同事等同行者。\n\n活动主办方提示，需在活动开始前完成注册，截止时间为10月13日上午8点（太平洋时间）。\n\n目前公开信息仅包含优惠内容、适用票种和注册截止时间，未披露具体票价、活动议程或演讲嘉宾等细节。",
+      "keyPointsZh": [
+        "购买一张TechCrunch Disrupt 2026通行证，第二张同类型票享五折",
+        "优惠面向联合创始人、合作伙伴或同事",
+        "需在10月13日上午8点（太平洋时间）活动开始前注册"
+      ],
+      "impactZh": "该优惠降低了团队共同参加TechCrunch Disrupt 2026的成本，可能吸引更多创业团队结伴参会。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实明确：这是一项买一赠半价的团队参会优惠，并设有注册截止时间。具体票价和活动安排尚未在输入信息中给出，因此无法评估实际节省金额。",
+      "limitationsZh": "输入信息未提供原票价、优惠码、适用票种的具体名称，也未说明活动地点和议程，实际优惠力度无法量化。",
+      "actionStepsZh": [
+        "如有意参会，在10月13日上午8点（太平洋时间）前完成注册以享受第二张票五折优惠",
+        "与联合创始人、合作伙伴或同事确认同行计划后再购票"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass/",
+          "publishedAt": "2026-09-24T19:15:00.000Z",
+          "title": "Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T19:15:00.000Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
+        "current": 44,
+        "peak": 44,
+        "history": [
+          {
+            "at": "2026-09-24T19:15:00.000Z",
+            "label": "9/25 03:15",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T20:12:07.294Z",
+            "label": "9/25 04:12",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:09:14.588Z",
+            "label": "9/25 05:09",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:06:21.883Z",
+            "label": "9/25 06:06",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:03:29.177Z",
+            "label": "9/25 07:03",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:00:36.472Z",
+            "label": "9/25 08:00",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:57:43.766Z",
+            "label": "9/25 08:57",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:54:51.060Z",
+            "label": "9/25 09:54",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:51:58.355Z",
+            "label": "9/25 10:51",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:49:05.649Z",
+            "label": "9/25 11:49",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
+            "value": 44,
             "reports": 1
           }
         ],
@@ -683,7 +1608,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T18:26:12.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 81,
         "peak": 81,
         "history": [
@@ -694,38 +1619,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T19:20:33.856Z",
-            "label": "9/25 03:20",
-            "value": 37,
+            "at": "2026-09-24T19:22:33.904Z",
+            "label": "9/25 03:22",
+            "value": 33,
             "reports": 2
           },
           {
-            "at": "2026-09-24T20:14:55.712Z",
-            "label": "9/25 04:14",
-            "value": 46,
+            "at": "2026-09-24T20:18:55.808Z",
+            "label": "9/25 04:18",
+            "value": 38,
             "reports": 2
           },
           {
-            "at": "2026-09-24T21:09:17.568Z",
-            "label": "9/25 05:09",
-            "value": 54,
+            "at": "2026-09-24T21:15:17.712Z",
+            "label": "9/25 05:15",
+            "value": 42,
             "reports": 2
           },
           {
-            "at": "2026-09-24T22:03:39.424Z",
-            "label": "9/25 06:03",
-            "value": 63,
+            "at": "2026-09-24T22:11:39.616Z",
+            "label": "9/25 06:11",
+            "value": 47,
             "reports": 2
           },
           {
-            "at": "2026-09-24T22:58:01.280Z",
-            "label": "9/25 06:58",
-            "value": 72,
+            "at": "2026-09-24T23:08:01.520Z",
+            "label": "9/25 07:08",
+            "value": 52,
             "reports": 2
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T00:04:23.424Z",
+            "label": "9/25 08:04",
+            "value": 57,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-25T01:00:45.328Z",
+            "label": "9/25 09:00",
+            "value": 62,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-25T01:57:07.232Z",
+            "label": "9/25 09:57",
+            "value": 66,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-25T02:53:29.136Z",
+            "label": "9/25 10:53",
+            "value": 71,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-25T03:49:51.040Z",
+            "label": "9/25 11:49",
+            "value": 76,
+            "reports": 2
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 81,
             "reports": 2
           }
@@ -826,7 +1781,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T18:11:44.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -837,38 +1792,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T19:08:30.522Z",
-            "label": "9/25 03:08",
+            "at": "2026-09-24T19:09:24.813Z",
+            "label": "9/25 03:09",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:07:05.626Z",
+            "label": "9/25 04:07",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:05:17.045Z",
-            "label": "9/25 04:05",
-            "value": 29,
+            "at": "2026-09-24T21:04:46.439Z",
+            "label": "9/25 05:04",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:02:03.568Z",
-            "label": "9/25 05:02",
-            "value": 37,
+            "at": "2026-09-24T22:02:27.252Z",
+            "label": "9/25 06:02",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:58:50.091Z",
-            "label": "9/25 05:58",
-            "value": 44,
+            "at": "2026-09-24T23:00:08.065Z",
+            "label": "9/25 07:00",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:55:36.614Z",
-            "label": "9/25 06:55",
-            "value": 52,
+            "at": "2026-09-24T23:57:48.878Z",
+            "label": "9/25 07:57",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T00:55:29.691Z",
+            "label": "9/25 08:55",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:53:10.504Z",
+            "label": "9/25 09:53",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:50:51.317Z",
+            "label": "9/25 10:50",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:48:32.130Z",
+            "label": "9/25 11:48",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 59,
             "reports": 1
           }
@@ -982,7 +1967,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T18:06:13.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -993,38 +1978,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T19:03:54.689Z",
-            "label": "9/25 03:03",
+            "at": "2026-09-24T19:04:23.904Z",
+            "label": "9/25 03:04",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:02:34.808Z",
+            "label": "9/25 04:02",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:01:36.379Z",
-            "label": "9/25 04:01",
-            "value": 29,
+            "at": "2026-09-24T21:00:45.712Z",
+            "label": "9/25 05:00",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:59:18.068Z",
-            "label": "9/25 04:59",
-            "value": 37,
+            "at": "2026-09-24T21:58:56.616Z",
+            "label": "9/25 05:58",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:56:59.758Z",
-            "label": "9/25 05:56",
-            "value": 44,
+            "at": "2026-09-24T22:57:07.520Z",
+            "label": "9/25 06:57",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:54:41.447Z",
-            "label": "9/25 06:54",
-            "value": 52,
+            "at": "2026-09-24T23:55:18.424Z",
+            "label": "9/25 07:55",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T00:53:29.328Z",
+            "label": "9/25 08:53",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:51:40.232Z",
+            "label": "9/25 09:51",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:49:51.136Z",
+            "label": "9/25 10:49",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:48:02.040Z",
+            "label": "9/25 11:48",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 59,
             "reports": 1
           }
@@ -1161,7 +2176,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T17:45:44.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1172,44 +2187,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T18:38:06.733Z",
-            "label": "9/25 02:38",
-            "value": 21,
+            "at": "2026-09-24T18:45:46.631Z",
+            "label": "9/25 02:45",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:30:29.467Z",
-            "label": "9/25 03:30",
-            "value": 29,
+            "at": "2026-09-24T19:45:49.262Z",
+            "label": "9/25 03:45",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:22:52.201Z",
-            "label": "9/25 04:22",
-            "value": 36,
+            "at": "2026-09-24T20:45:51.893Z",
+            "label": "9/25 04:45",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:15:14.935Z",
-            "label": "9/25 05:15",
-            "value": 43,
+            "at": "2026-09-24T21:45:54.525Z",
+            "label": "9/25 05:45",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:07:37.669Z",
-            "label": "9/25 06:07",
-            "value": 50,
+            "at": "2026-09-24T22:45:57.156Z",
+            "label": "9/25 06:45",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:00:00.403Z",
-            "label": "9/25 07:00",
-            "value": 58,
+            "at": "2026-09-24T23:45:59.787Z",
+            "label": "9/25 07:45",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T00:46:02.418Z",
+            "label": "9/25 08:46",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:46:05.050Z",
+            "label": "9/25 09:46",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:46:07.681Z",
+            "label": "9/25 10:46",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:46:10.312Z",
+            "label": "9/25 11:46",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 65,
             "reports": 1
           }
@@ -1313,7 +2352,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T17:39:24.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -1324,44 +2363,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T18:32:41.019Z",
-            "label": "9/25 02:32",
-            "value": 19,
+            "at": "2026-09-24T18:40:01.176Z",
+            "label": "9/25 02:40",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:25:58.039Z",
-            "label": "9/25 03:25",
+            "at": "2026-09-24T19:40:38.353Z",
+            "label": "9/25 03:40",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:41:15.530Z",
+            "label": "9/25 04:41",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:19:15.058Z",
-            "label": "9/25 04:19",
-            "value": 29,
+            "at": "2026-09-24T21:41:52.706Z",
+            "label": "9/25 05:41",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:12:32.078Z",
-            "label": "9/25 05:12",
-            "value": 35,
+            "at": "2026-09-24T22:42:29.883Z",
+            "label": "9/25 06:42",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:05:49.097Z",
-            "label": "9/25 06:05",
+            "at": "2026-09-24T23:43:07.060Z",
+            "label": "9/25 07:43",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:43:44.237Z",
+            "label": "9/25 08:43",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:44:21.413Z",
+            "label": "9/25 09:44",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:59:06.117Z",
-            "label": "9/25 06:59",
-            "value": 45,
+            "at": "2026-09-25T02:44:58.590Z",
+            "label": "9/25 10:44",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T03:45:35.767Z",
+            "label": "9/25 11:45",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 50,
             "reports": 1
           }
@@ -1484,7 +2547,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T17:19:34.716Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1495,44 +2558,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T18:15:41.633Z",
-            "label": "9/25 02:15",
-            "value": 21,
+            "at": "2026-09-24T18:22:00.009Z",
+            "label": "9/25 02:22",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:11:48.550Z",
-            "label": "9/25 03:11",
-            "value": 29,
+            "at": "2026-09-24T19:24:25.302Z",
+            "label": "9/25 03:24",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:07:55.467Z",
-            "label": "9/25 04:07",
-            "value": 36,
+            "at": "2026-09-24T20:26:50.596Z",
+            "label": "9/25 04:26",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:04:02.385Z",
-            "label": "9/25 05:04",
-            "value": 43,
+            "at": "2026-09-24T21:29:15.889Z",
+            "label": "9/25 05:29",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:00:09.302Z",
-            "label": "9/25 06:00",
-            "value": 50,
+            "at": "2026-09-24T22:31:41.183Z",
+            "label": "9/25 06:31",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:56:16.219Z",
-            "label": "9/25 06:56",
-            "value": 58,
+            "at": "2026-09-24T23:34:06.476Z",
+            "label": "9/25 07:34",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T00:36:31.770Z",
+            "label": "9/25 08:36",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:38:57.063Z",
+            "label": "9/25 09:38",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:41:22.357Z",
+            "label": "9/25 10:41",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:43:47.650Z",
+            "label": "9/25 11:43",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 65,
             "reports": 1
           }
@@ -1674,7 +2761,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T17:01:03.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1685,45 +2772,241 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:59:48.733Z",
-            "label": "9/25 01:59",
-            "value": 22,
+            "at": "2026-09-24T18:05:09.358Z",
+            "label": "9/25 02:05",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:58:34.467Z",
-            "label": "9/25 02:58",
+            "at": "2026-09-24T19:09:15.717Z",
+            "label": "9/25 03:09",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:13:22.075Z",
+            "label": "9/25 04:13",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:57:20.201Z",
-            "label": "9/25 03:57",
-            "value": 37,
+            "at": "2026-09-24T21:17:28.434Z",
+            "label": "9/25 05:17",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:56:05.935Z",
-            "label": "9/25 04:56",
-            "value": 45,
+            "at": "2026-09-24T22:21:34.792Z",
+            "label": "9/25 06:21",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:54:51.669Z",
-            "label": "9/25 05:54",
+            "at": "2026-09-24T23:25:41.151Z",
+            "label": "9/25 07:25",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:29:47.509Z",
+            "label": "9/25 08:29",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:33:53.868Z",
+            "label": "9/25 09:33",
             "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:53:37.403Z",
-            "label": "9/25 06:53",
-            "value": 60,
+            "at": "2026-09-25T02:38:00.226Z",
+            "label": "9/25 10:38",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T03:42:06.585Z",
+            "label": "9/25 11:42",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 68,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "ff3779e3fc84e1f8",
+      "normalizedUrl": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios",
+      "originalUrl": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/",
+      "titleOriginal": "Google Photos &#8216;Clueless&#8217;-inspired virtual closet is now available on Android and iOS",
+      "summaryOriginal": "The AI-powered feature builds a virtual wardrobe from your photos, and is now broadly available after first rolling out to Android users in June.",
+      "originalLanguage": "en",
+      "author": "Sarah Perez",
+      "category": "products",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-24T17:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/",
+          "publishedAt": "2026-09-24T17:00:00.000Z",
+          "title": "Google Photos &#8216;Clueless&#8217;-inspired virtual closet is now available on Android and iOS",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "这是 Google Photos 一项 AI 功能的平台扩展，对普通用户有实际使用价值，但缺乏技术细节和可验证数据。",
+      "importanceReasonEn": "This is a platform expansion of an AI feature in Google Photos with practical value for ordinary users, but it lacks technical details and verifiable data.",
+      "scoringMode": "ai",
+      "titleZh": "Google Photos 灵感来自《独领风骚》的虚拟衣橱现已登陆 Android 和 iOS",
+      "titleEn": "Google Photos 'Clueless'-inspired virtual closet is now available on Android and iOS",
+      "summaryZh": "这项 AI 功能可从你的照片中构建虚拟衣橱，在 6 月首次向 Android 用户推出后，现已广泛可用。",
+      "summaryEn": "The AI-powered feature builds a virtual wardrobe from your photos, and is now broadly available after first rolling out to Android users in June.",
+      "keywords": [
+        "Google Photos",
+        "虚拟衣橱",
+        "Android",
+        "iOS",
+        "AI 功能"
+      ],
+      "topics": [
+        "Google Photos",
+        "虚拟衣橱",
+        "AI 照片功能",
+        "移动应用"
+      ],
+      "models": [],
+      "detailZh": "Google Photos 推出了一项受电影《独领风骚》启发的虚拟衣橱功能，该功能利用 AI 从用户照片中构建虚拟衣橱。据 TechCrunch AI 报道，这项功能在 6 月首次向 Android 用户推出，目前已在 Android 和 iOS 平台广泛可用。报道未提供该功能的具体技术实现、用户数量、使用数据或更多细节。",
+      "keyPointsZh": [
+        "Google Photos 的虚拟衣橱功能现已登陆 Android 和 iOS",
+        "该功能利用 AI 从用户照片中构建虚拟衣橱",
+        "该功能于 6 月首次向 Android 用户推出",
+        "功能灵感来自电影《独领风骚》"
+      ],
+      "impactZh": "该功能将 AI 照片整理能力扩展到更多移动平台，可能提升 Google Photos 的用户粘性和使用频率。",
+      "readerImpactZh": "普通用户可以在 Android 和 iOS 设备上使用该功能，将自己的照片整理成虚拟衣橱，方便查看和搭配衣物。",
+      "userImpactZh": "AI 用户和开发者可以关注 Google Photos 如何将图像识别与个人照片库结合，作为多模态 AI 应用的一个案例。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道仅说明该功能已扩展至 iOS 和 Android，并提及 6 月首次在 Android 推出。关于其具体 AI 模型、识别准确率或隐私处理方式，来源未提供信息。",
+      "limitationsZh": "来源未提供功能的技术细节、用户数据、隐私政策或与竞品的对比，无法验证其实际效果。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/",
+          "publishedAt": "2026-09-24T17:00:00.000Z",
+          "title": "Google Photos &#8216;Clueless&#8217;-inspired virtual closet is now available on Android and iOS",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T17:00:00.000Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-09-24T17:00:00.000Z",
+            "label": "9/25 01:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T18:04:12.085Z",
+            "label": "9/25 02:04",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T19:08:24.171Z",
+            "label": "9/25 03:08",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:12:36.257Z",
+            "label": "9/25 04:12",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:16:48.343Z",
+            "label": "9/25 05:16",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:21:00.429Z",
+            "label": "9/25 06:21",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:25:12.514Z",
+            "label": "9/25 07:25",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:29:24.600Z",
+            "label": "9/25 08:29",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:33:36.686Z",
+            "label": "9/25 09:33",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:37:48.772Z",
+            "label": "9/25 10:37",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:42:00.858Z",
+            "label": "9/25 11:42",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -1868,7 +3151,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:38:37.757Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1879,50 +3162,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:32:50.929Z",
-            "label": "9/25 01:32",
-            "value": 21,
+            "at": "2026-09-24T17:44:46.410Z",
+            "label": "9/25 01:44",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:27:04.102Z",
-            "label": "9/25 02:27",
-            "value": 28,
+            "at": "2026-09-24T18:50:55.063Z",
+            "label": "9/25 02:50",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:21:17.274Z",
-            "label": "9/25 03:21",
+            "at": "2026-09-24T19:57:03.717Z",
+            "label": "9/25 03:57",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:03:12.370Z",
+            "label": "9/25 05:03",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:15:30.447Z",
-            "label": "9/25 04:15",
-            "value": 41,
+            "at": "2026-09-24T22:09:21.023Z",
+            "label": "9/25 06:09",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:09:43.619Z",
-            "label": "9/25 05:09",
+            "at": "2026-09-24T23:15:29.677Z",
+            "label": "9/25 07:15",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:21:38.330Z",
+            "label": "9/25 08:21",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:03:56.792Z",
-            "label": "9/25 06:03",
-            "value": 55,
+            "at": "2026-09-25T01:27:46.983Z",
+            "label": "9/25 09:27",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:58:09.964Z",
-            "label": "9/25 06:58",
-            "value": 61,
+            "at": "2026-09-25T02:33:55.637Z",
+            "label": "9/25 10:33",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T03:40:04.290Z",
+            "label": "9/25 11:40",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 68,
             "reports": 1
           }
@@ -2023,7 +3324,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:20:39.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -2034,50 +3335,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:17:07.017Z",
-            "label": "9/25 01:17",
-            "value": 20,
+            "at": "2026-09-24T17:28:25.722Z",
+            "label": "9/25 01:28",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:13:35.034Z",
-            "label": "9/25 02:13",
-            "value": 25,
+            "at": "2026-09-24T18:36:12.444Z",
+            "label": "9/25 02:36",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:10:03.051Z",
-            "label": "9/25 03:10",
-            "value": 31,
+            "at": "2026-09-24T19:43:59.166Z",
+            "label": "9/25 03:43",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:06:31.068Z",
-            "label": "9/25 04:06",
-            "value": 36,
+            "at": "2026-09-24T20:51:45.888Z",
+            "label": "9/25 04:51",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:02:59.085Z",
-            "label": "9/25 05:02",
+            "at": "2026-09-24T21:59:32.610Z",
+            "label": "9/25 05:59",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T23:07:19.333Z",
+            "label": "9/25 07:07",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:15:06.055Z",
+            "label": "9/25 08:15",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:59:27.102Z",
-            "label": "9/25 05:59",
-            "value": 47,
+            "at": "2026-09-25T01:22:52.777Z",
+            "label": "9/25 09:22",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:55:55.119Z",
-            "label": "9/25 06:55",
-            "value": 53,
+            "at": "2026-09-25T02:30:39.499Z",
+            "label": "9/25 10:30",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T03:38:26.221Z",
+            "label": "9/25 11:38",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 58,
             "reports": 1
           }
@@ -2196,7 +3515,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:04:26.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2207,50 +3526,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:02:55.642Z",
-            "label": "9/25 01:02",
-            "value": 19,
+            "at": "2026-09-24T17:13:41.176Z",
+            "label": "9/25 01:13",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:01:25.284Z",
-            "label": "9/25 02:01",
-            "value": 24,
+            "at": "2026-09-24T18:22:56.353Z",
+            "label": "9/25 02:22",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:59:54.926Z",
-            "label": "9/25 02:59",
-            "value": 30,
+            "at": "2026-09-24T19:32:11.530Z",
+            "label": "9/25 03:32",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:58:24.568Z",
-            "label": "9/25 03:58",
-            "value": 35,
+            "at": "2026-09-24T20:41:26.706Z",
+            "label": "9/25 04:41",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:56:54.210Z",
-            "label": "9/25 04:56",
+            "at": "2026-09-24T21:50:41.883Z",
+            "label": "9/25 05:50",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:59:57.060Z",
+            "label": "9/25 06:59",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:09:12.237Z",
+            "label": "9/25 08:09",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:55:23.852Z",
-            "label": "9/25 05:55",
-            "value": 45,
+            "at": "2026-09-25T01:18:27.413Z",
+            "label": "9/25 09:18",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:53:53.494Z",
-            "label": "9/25 06:53",
-            "value": 50,
+            "at": "2026-09-25T02:27:42.590Z",
+            "label": "9/25 10:27",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T03:36:57.767Z",
+            "label": "9/25 11:36",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 55,
             "reports": 1
           }
@@ -2404,7 +3741,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:03:36.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 95,
         "peak": 95,
         "history": [
@@ -2415,50 +3752,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T17:02:11.892Z",
-            "label": "9/25 01:02",
-            "value": 49,
+            "at": "2026-09-24T17:12:55.722Z",
+            "label": "9/25 01:12",
+            "value": 47,
             "reports": 3
           },
           {
-            "at": "2026-09-24T18:00:47.784Z",
-            "label": "9/25 02:00",
-            "value": 55,
+            "at": "2026-09-24T18:22:15.444Z",
+            "label": "9/25 02:22",
+            "value": 52,
             "reports": 3
           },
           {
-            "at": "2026-09-24T18:59:23.676Z",
-            "label": "9/25 02:59",
-            "value": 62,
+            "at": "2026-09-24T19:31:35.166Z",
+            "label": "9/25 03:31",
+            "value": 56,
             "reports": 3
           },
           {
-            "at": "2026-09-24T19:57:59.568Z",
-            "label": "9/25 03:57",
-            "value": 68,
+            "at": "2026-09-24T20:40:54.888Z",
+            "label": "9/25 04:40",
+            "value": 61,
             "reports": 3
           },
           {
-            "at": "2026-09-24T20:56:35.460Z",
-            "label": "9/25 04:56",
-            "value": 75,
+            "at": "2026-09-24T21:50:14.610Z",
+            "label": "9/25 05:50",
+            "value": 66,
             "reports": 3
           },
           {
-            "at": "2026-09-24T21:55:11.352Z",
-            "label": "9/25 05:55",
-            "value": 82,
+            "at": "2026-09-24T22:59:34.333Z",
+            "label": "9/25 06:59",
+            "value": 71,
             "reports": 3
           },
           {
-            "at": "2026-09-24T22:53:47.244Z",
-            "label": "9/25 06:53",
-            "value": 88,
+            "at": "2026-09-25T00:08:54.055Z",
+            "label": "9/25 08:08",
+            "value": 76,
             "reports": 3
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T01:18:13.777Z",
+            "label": "9/25 09:18",
+            "value": 80,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-25T02:27:33.499Z",
+            "label": "9/25 10:27",
+            "value": 85,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-25T03:36:53.221Z",
+            "label": "9/25 11:36",
+            "value": 90,
+            "reports": 3
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 95,
             "reports": 3
           }
@@ -2592,7 +3947,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-24T16:00:18.000Z",
-        "endedAt": "2026-09-24T23:52:23.137Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2603,51 +3958,243 @@
             "reports": 0
           },
           {
-            "at": "2026-09-24T16:59:18.642Z",
-            "label": "9/25 00:59",
-            "value": 20,
+            "at": "2026-09-24T17:09:55.722Z",
+            "label": "9/25 01:09",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-24T17:58:19.284Z",
-            "label": "9/25 01:58",
-            "value": 27,
+            "at": "2026-09-24T18:19:33.444Z",
+            "label": "9/25 02:19",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-24T18:57:19.926Z",
-            "label": "9/25 02:57",
-            "value": 33,
+            "at": "2026-09-24T19:29:11.166Z",
+            "label": "9/25 03:29",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-24T19:56:20.568Z",
-            "label": "9/25 03:56",
-            "value": 39,
+            "at": "2026-09-24T20:38:48.888Z",
+            "label": "9/25 04:38",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-24T20:55:21.210Z",
-            "label": "9/25 04:55",
+            "at": "2026-09-24T21:48:26.610Z",
+            "label": "9/25 05:48",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:58:04.333Z",
+            "label": "9/25 06:58",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:07:42.055Z",
+            "label": "9/25 08:07",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-09-24T21:54:21.852Z",
-            "label": "9/25 05:54",
-            "value": 52,
+            "at": "2026-09-25T01:17:19.777Z",
+            "label": "9/25 09:17",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-09-24T22:53:22.494Z",
-            "label": "9/25 06:53",
-            "value": 58,
+            "at": "2026-09-25T02:26:57.499Z",
+            "label": "9/25 10:26",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-09-24T23:52:23.137Z",
-            "label": "9/25 07:52",
+            "at": "2026-09-25T03:36:35.221Z",
+            "label": "9/25 11:36",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
             "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c4aac87444043708",
+      "normalizedUrl": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners",
+      "originalUrl": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+      "titleOriginal": "Google tests letting Gemini call businesses for you",
+      "summaryOriginal": "Google says the AI-calling feature will first be available to Pixel 11 owners in the U.S. who pay for a Gemini subscription.",
+      "originalLanguage": "en",
+      "author": "Sarah Perez",
+      "category": "products",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-24T16:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+          "publishedAt": "2026-09-24T16:00:00.000Z",
+          "title": "Google tests letting Gemini call businesses for you",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是谷歌将Gemini从对话助手扩展为可代用户执行现实任务的代理功能，涉及产品形态与商业模式变化，但信息有限、尚未正式发布。",
+      "importanceReasonEn": "This marks Google extending Gemini from a conversational assistant into an agent that can perform real-world tasks for users, touching product form and business model, though details are limited and it is not yet officially launched.",
+      "scoringMode": "ai",
+      "titleZh": "谷歌测试让Gemini代你致电商家",
+      "titleEn": "Google tests letting Gemini call businesses for you",
+      "summaryZh": "谷歌表示，这项AI代打电话功能将首先面向美国境内、付费订阅Gemini的Pixel 11用户开放。",
+      "summaryEn": "Google says the AI-calling feature will first be available to Pixel 11 owners in the U.S. who pay for a Gemini subscription.",
+      "keywords": [
+        "Gemini",
+        "谷歌",
+        "AI代打电话",
+        "Pixel 11",
+        "订阅"
+      ],
+      "topics": [
+        "Gemini",
+        "AI助手",
+        "谷歌",
+        "语音代理"
+      ],
+      "models": [
+        "Gemini"
+      ],
+      "detailZh": "据TechCrunch AI报道，谷歌正在测试一项让Gemini代替用户给商家打电话的功能。谷歌方面表示，该AI代打电话功能将首先面向美国境内、付费订阅Gemini的Pixel 11用户开放。\n\n目前披露的信息仅限于上述范围：功能处于测试阶段，首发地区为美国，首发设备为Pixel 11，且用户需要同时满足付费订阅Gemini这一条件。报道未说明该功能具体能完成哪些类型的通话任务、支持哪些商家或服务类别、是否支持中文或英语以外的语言，也未给出正式上线时间。\n\n从产品定位看，这属于把AI助手从“回答问题”推进到“代为执行任务”的代理型能力，与谷歌此前在Gemini中逐步加入的自动化、跨应用操作方向一致。但截至目前，谷歌尚未公布该功能的完整细节、隐私处理方式或通话录音与数据使用政策。",
+      "keyPointsZh": [
+        "谷歌正在测试让Gemini代替用户给商家打电话的功能。",
+        "该功能将首先面向美国境内的Pixel 11用户开放。",
+        "用户需要付费订阅Gemini才能使用该功能。",
+        "目前处于测试阶段，谷歌未公布正式上线时间和完整功能细节。"
+      ],
+      "impactZh": "若该功能落地，意味着AI助手开始承担真实世界中的沟通任务，可能改变用户与商家预约、咨询、下单等场景的交互方式，也会推动其他厂商跟进类似的语音代理能力。",
+      "readerImpactZh": "对普通用户而言，未来可能无需自己打电话即可完成与商家的沟通，但初期仅限美国Pixel 11且需付费订阅Gemini的用户，大多数人暂时无法使用。",
+      "userImpactZh": "对AI用户和开发者而言，这释放出语音代理与任务自动化成为助手产品竞争方向的信号，值得关注其接口能力、权限边界与隐私处理方式。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：谷歌在测试该功能，首发对象为美国付费订阅Gemini的Pixel 11用户。可以合理推断的是，这属于Gemini向代理型助手演进的一步，但具体如何拨号、如何与商家对话、如何处理通话内容等机制，报道并未说明。",
+      "limitationsZh": "信息来自单一媒体报道，谷歌未公布功能细节、上线时间、支持范围、隐私与数据政策；该功能仍处于测试阶段，实际能力与最终形态可能变化。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+          "publishedAt": "2026-09-24T16:00:00.000Z",
+          "title": "Google tests letting Gemini call businesses for you",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-24T16:00:00.000Z",
+        "endedAt": "2026-09-25T04:46:12.944Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-09-24T16:00:00.000Z",
+            "label": "9/25 00:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-24T17:09:39.358Z",
+            "label": "9/25 01:09",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T18:19:18.717Z",
+            "label": "9/25 02:19",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T19:28:58.075Z",
+            "label": "9/25 03:28",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T20:38:37.434Z",
+            "label": "9/25 04:38",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T21:48:16.792Z",
+            "label": "9/25 05:48",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-24T22:57:56.151Z",
+            "label": "9/25 06:57",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T00:07:35.509Z",
+            "label": "9/25 08:07",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T01:17:14.868Z",
+            "label": "9/25 09:17",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T02:26:54.226Z",
+            "label": "9/25 10:26",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T03:36:33.585Z",
+            "label": "9/25 11:36",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-25T04:46:12.944Z",
+            "label": "9/25 12:46",
+            "value": 59,
             "reports": 1
           }
         ],
