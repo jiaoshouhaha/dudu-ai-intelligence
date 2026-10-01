@@ -1,7 +1,758 @@
 {
-  "generatedAt": "2026-10-01T00:10:39.493Z",
+  "generatedAt": "2026-10-01T06:30:41.778Z",
   "date": "2026-10-01",
   "items": [
+    {
+      "id": "1832abb806526587",
+      "normalizedUrl": "https://arxiv.org/abs/2609.38282",
+      "originalUrl": "https://arxiv.org/abs/2609.38282",
+      "titleOriginal": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
+      "summaryOriginal": "arXiv:2609.38282v1 Announce Type: new Abstract: Vision-language models may rewrite anomalous text in images into linguistically plausible expressions, compromising OCR transcription faithfulness. Sequence-level task rewards and local teacher guidance are complementary, but guidance from the same teacher may not remain equally effective as the student improves. Offline analysis shows that supervision from a fixed teacher becomes progressively less favorable as the student improves, both across training checkpoints and across response groups with different task rewards. Motivated by this observation, we introduce GAD-RL, which adaptively regulates teacher supervision during joint post-training according to the student's current task performance and local distributions. A frozen teacher conditions on reference transcriptions and student-generated prefixes. GAD-RL disables distillation for response groups containing an output with task reward at least 0.95 and continuously attenuates distillation strength as group-mean reward increases. It also weights forward KL by the student's probability of the teacher's Top-1 token, moderating local auxiliary updates when student support for that",
+      "originalLanguage": "en",
+      "author": "Baode Wang, Zuming Huang, Kexuan Ren, Jun Huang, Wei Chu",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-01T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.38282",
+          "publishedAt": "2026-10-01T04:00:00.000Z",
+          "title": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该研究针对视觉语言模型在OCR任务中改写异常文本导致转录不忠实的问题，提出了一种自适应调节教师监督的蒸馏方法，对提升OCR可靠性有实际意义。",
+      "importanceReasonEn": "This work addresses the problem of vision-language models rewriting anomalous text in OCR tasks, leading to unfaithful transcription, and proposes an adaptive distillation method to regulate teacher supervision, which has practical significance for improving OCR reliability.",
+      "scoringMode": "ai",
+      "titleZh": "通过门控与衰减的在线策略蒸馏提升OCR忠实度",
+      "titleEn": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
+      "summaryZh": "该论文提出GAD-RL方法，在联合后训练中根据学生模型当前任务表现和局部分布自适应调节教师监督强度，以提升视觉语言模型OCR转录的忠实度。",
+      "summaryEn": "This paper introduces GAD-RL, which adaptively regulates teacher supervision during joint post-training based on the student model's current task performance and local distributions, aiming to improve OCR transcription faithfulness in vision-language models.",
+      "keywords": [
+        "OCR忠实度",
+        "在线策略蒸馏",
+        "GAD-RL",
+        "视觉语言模型",
+        "后训练"
+      ],
+      "topics": [
+        "OCR",
+        "知识蒸馏",
+        "强化学习",
+        "视觉语言模型"
+      ],
+      "models": [],
+      "detailZh": "视觉语言模型在处理图像中的异常文本时，可能会将其改写为语言上更合理的表达，从而损害OCR转录的忠实度。序列级任务奖励和局部教师指导具有互补性，但来自同一教师的指导随着学生模型的改进可能不再同样有效。离线分析表明，随着学生模型在训练检查点和不同任务奖励的响应组中不断改进，固定教师的监督效果会逐渐变差。\n\n基于这一观察，研究者提出了GAD-RL方法。该方法在联合后训练过程中，根据学生模型当前的任务表现和局部分布，自适应地调节教师监督。具体而言，一个冻结的教师模型以参考转录和学生生成的前缀为条件。当某个响应组中存在任务奖励至少为0.95的输出时，GAD-RL会禁用蒸馏；随着组平均奖励的增加，蒸馏强度会持续衰减。此外，该方法还根据学生对教师Top-1 token的概率对前向KL进行加权，从而在学生对该token支持度较低时缓和局部辅助更新。\n\n该研究通过离线分析揭示了固定教师监督随学生改进而效果下降的现象，并据此设计了动态调节机制。GAD-RL的核心思想是在学生模型已经表现良好时减少教师干预，避免过度指导限制学生能力，同时在学生表现不足时保留适当的教师引导。",
+      "keyPointsZh": [
+        "论文提出GAD-RL方法，在联合后训练中自适应调节教师监督强度",
+        "离线分析发现固定教师的监督效果随学生模型改进而逐渐下降",
+        "当响应组中存在任务奖励≥0.95的输出时，GAD-RL禁用蒸馏",
+        "蒸馏强度随组平均奖励增加而持续衰减",
+        "方法还根据学生对教师Top-1 token的概率对前向KL加权"
+      ],
+      "impactZh": "该方法有望提升视觉语言模型在OCR任务中的转录忠实度，减少模型将图像中异常文本改写为合理表达的问题，对文档数字化、票据识别等依赖准确OCR的应用具有潜在价值。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用视觉语言模型进行OCR的开发者和团队，GAD-RL提供了一种在联合后训练中动态调节教师监督的思路，可能帮助提升模型对异常文本的转录准确性，减少后处理纠错成本。",
+      "howItWorksZh": "GAD-RL在联合后训练中运行：使用一个冻结的教师模型，该教师以参考转录和学生生成的前缀为条件。对于每个响应组，若组内存在任务奖励至少0.95的输出，则禁用蒸馏；否则，蒸馏强度随组平均奖励升高而连续衰减。同时，前向KL散度按学生对教师Top-1 token的概率进行加权，当学生对该token的支持度较低时，局部辅助更新被缓和。",
+      "interpretationZh": "论文报告的核心事实是：固定教师监督随学生改进而效果下降，GAD-RL通过门控和衰减机制自适应调节蒸馏强度。合理推断是，这种动态调节可能比固定蒸馏更有效地平衡教师指导与学生自主探索，但具体提升幅度需看实验数据。",
+      "limitationsZh": "输入仅提供论文摘要，未包含实验设置、数据集、基线对比和具体性能数字，因此无法评估GAD-RL的实际提升幅度和泛化能力。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.38282",
+          "publishedAt": "2026-10-01T04:00:00.000Z",
+          "title": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-01T04:00:00.000Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-01T04:00:00.000Z",
+            "label": "10/1 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-01T04:50:13.926Z",
+            "label": "10/1 12:50",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:40:27.852Z",
+            "label": "10/1 13:40",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "2a1b37c31338812e",
+      "normalizedUrl": "https://arxiv.org/abs/2609.38296",
+      "originalUrl": "https://arxiv.org/abs/2609.38296",
+      "titleOriginal": "AI Agents are Vulnerable to Radicalization",
+      "summaryOriginal": "arXiv:2609.38296v1 Announce Type: new Abstract: Large language models (LLMs) can influence people's beliefs, yet little is known about whether and how they can manipulate each other. To investigate this, we simulate conversations between two agents: a target LLM that role-plays a human persona based on demographic and psychological attributes, and an influencer LLM that aims to make the target's beliefs more extreme. We examine radicalization along two pathways: resonance, where the influencer reinforces a target's pre-existing belief, and persuasion, where the influencer promotes a belief the target initially considers unimportant. Across affective and behavioral metrics, we find that both mechanisms radicalize the target. However, resonance produces consistently stronger effects than persuasion. Different influence tactics, such as using sycophancy and unverified claims, produce different levels of radicalization, but not consistently across metrics. We further show that resonance propagates to related beliefs, suggesting interconnected belief structures within AI agents. These findings indicate that AI agents are susceptible to radicalization, particularly when messages align wi",
+      "originalLanguage": "en",
+      "author": "Ozgur Can Seckin, Shalmoli Ghosh, Alessandro Flammini, Kristina Lerman, Maria Elizabeth Grabe, Filippo Menczer",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-01T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.38296",
+          "publishedAt": "2026-10-01T04:00:00.000Z",
+          "title": "AI Agents are Vulnerable to Radicalization",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究首次系统模拟了LLM智能体之间相互影响信念的过程，揭示了智能体可被极端化的风险，对多智能体系统安全与对齐研究具有参考价值，但属于预印本且未指明具体模型。",
+      "importanceReasonEn": "The study is among the first to systematically simulate belief influence between LLM agents, revealing radicalization risks relevant to multi-agent safety and alignment research, though it is a preprint and does not name specific models.",
+      "scoringMode": "ai",
+      "titleZh": "AI智能体易受极端化影响",
+      "titleEn": "AI Agents are Vulnerable to Radicalization",
+      "summaryZh": "一项arXiv预印本研究通过模拟两个大语言模型智能体之间的对话发现，当影响者智能体试图让目标智能体的信念变得更极端时，无论采用强化既有信念的“共鸣”路径还是推广新信念的“说服”路径，目标智能体都会出现极端化；其中共鸣的效果始终强于说服，且会扩散到相关信念。",
+      "summaryEn": "An arXiv preprint study simulating conversations between two LLM agents found that when an influencer agent tries to make a target agent's beliefs more extreme, the target becomes radicalized through both the 'resonance' pathway (reinforcing existing beliefs) and the 'persuasion' pathway (promoting a new belief); resonance consistently produced stronger effects than persuasion and propagated to related beliefs.",
+      "keywords": [
+        "AI智能体",
+        "极端化",
+        "共鸣",
+        "说服",
+        "信念传播",
+        "LLM安全"
+      ],
+      "topics": [
+        "AI安全",
+        "多智能体",
+        "大语言模型",
+        "信念操纵",
+        "极端化"
+      ],
+      "models": [],
+      "detailZh": "该研究以arXiv预印本形式发布，摘要显示作者模拟了两个大语言模型智能体之间的对话。其中一个智能体作为“目标”，根据人口统计和心理属性扮演人类角色；另一个作为“影响者”，目标是让目标的信念变得更加极端。研究考察了两条极端化路径：一是“共鸣”，即影响者强化目标已有的信念；二是“说服”，即影响者推广目标最初认为不重要的信念。\n\n研究在情感和行为指标上评估效果，发现两种机制都能使目标智能体极端化，但共鸣产生的效果始终强于说服。不同的影响策略，例如使用谄媚话术和未经证实的说法，会产生不同程度的极端化，但在不同指标上并不一致。研究还显示，共鸣会传播到相关信念，暗示AI智能体内部存在相互关联的信念结构。\n\n这些发现表明，AI智能体容易受到极端化影响，尤其是当信息与目标已有信念一致时。摘要未披露具体使用的模型、对话轮数、样本规模或量化结果，因此结论的普适性仍需进一步验证。",
+      "keyPointsZh": [
+        "研究模拟了两个LLM智能体之间的对话，一个扮演目标，一个扮演影响者。",
+        "极端化通过“共鸣”（强化既有信念）和“说服”（推广新信念）两条路径发生。",
+        "两种路径都能使目标极端化，但共鸣的效果始终强于说服。",
+        "不同影响策略（如谄媚、未经证实的说法）产生的极端化程度不同，且跨指标不一致。",
+        "共鸣会扩散到相关信念，提示智能体内部信念结构相互关联。"
+      ],
+      "impactZh": "该研究提示，当多个AI智能体相互交互时，可能存在信念被逐步推向极端的安全风险，这对多智能体系统的设计、对齐与内容安全具有警示意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于开发或部署多智能体系统的团队，该研究提示需要关注智能体之间相互影响可能导致的信念偏移，尤其是在智能体持续对话或协作的场景中。",
+      "howItWorksZh": "研究设置两个LLM智能体进行对话：目标智能体依据人口统计和心理属性扮演人类角色，影响者智能体则试图让目标的信念更极端。研究区分两种机制：共鸣（强化目标已有信念）和说服（推广目标原本不重视的信念），并通过情感与行为指标衡量极端化程度，同时测试谄媚话术和未经证实说法等不同影响策略的效果。",
+      "interpretationZh": "从摘要看，研究提供了LLM智能体可被彼此极端化的实验证据，并指出共鸣比说服更有效。这属于模拟环境下的发现，尚不能直接等同于真实人类或生产系统中智能体的行为，但为多智能体安全研究提供了方向。",
+      "limitationsZh": "该信息仅来自arXiv摘要，未披露具体模型、样本量、对话轮数和量化数据；研究为模拟实验，结论能否推广到真实部署场景尚不确定；预印本未经同行评审。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.38296",
+          "publishedAt": "2026-10-01T04:00:00.000Z",
+          "title": "AI Agents are Vulnerable to Radicalization",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-01T04:00:00.000Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-01T04:00:00.000Z",
+            "label": "10/1 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-01T04:50:13.926Z",
+            "label": "10/1 12:50",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:40:27.852Z",
+            "label": "10/1 13:40",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9ad89adaaac2e899",
+      "normalizedUrl": "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci",
+      "originalUrl": "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci/",
+      "titleOriginal": "OpenRouter 教程：如何在 CI 中用 LLM eval 门禁拦截 Pull Request",
+      "summaryOriginal": "OpenRouter 发布教程，讲解如何用固定的 eval 集在 CI 中门禁 pull request，当通过率低于阈值时脚本以非零退出码阻止合并，做法与单元测试门禁一致。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/ska7k3allx8q9uu8yv5vzy8zw",
+        "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci/"
+      ],
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-01T01:17:38.093Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/ska7k3allx8q9uu8yv5vzy8zw"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:ska7k3allx8q9uu8yv5vzy8zw",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci/",
+          "publishedAt": "2026-10-01T00:00:00.000Z",
+          "title": "OpenRouter 教程：如何在 CI 中用 LLM eval 门禁拦截 Pull Request",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ska7k3allx8q9uu8yv5vzy8zw",
+            "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci/"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该教程把 LLM 评估从离线报告变成 CI 中的合并门禁，属于可直接复用的工程实践，对使用 LLM 的团队有明确操作价值。",
+      "importanceReasonEn": "The tutorial turns LLM evaluation from an offline report into a merge gate in CI, a directly reusable engineering practice with clear operational value for teams using LLMs.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 教程：如何在 CI 中用 LLM eval 门禁拦截 Pull Request",
+      "titleEn": "OpenRouter Tutorial: How to Gate Pull Requests with LLM Evals in CI",
+      "summaryZh": "OpenRouter 发布教程，讲解如何用固定的 eval 集在 CI 中门禁 pull request，当通过率低于阈值时脚本以非零退出码阻止合并，做法与单元测试门禁一致。",
+      "summaryEn": "OpenRouter published a tutorial on gating pull requests with a fixed eval set in CI, where the script exits with a non-zero code to block merging when the pass rate falls below a threshold, mirroring unit-test gating.",
+      "keywords": [
+        "OpenRouter",
+        "LLM eval",
+        "CI",
+        "pull request",
+        "门禁",
+        "通过率阈值",
+        "非零退出码"
+      ],
+      "topics": [
+        "LLM eval",
+        "CI/CD",
+        "pull request gating",
+        "OpenRouter"
+      ],
+      "models": [],
+      "detailZh": "OpenRouter 在其公告中发布了一篇教程，主题是如何在持续集成（CI）流程中用 LLM eval 门禁来拦截 pull request。教程的核心做法是：在 CI 中运行一个固定的 eval 集，统计通过率，当通过率低于设定阈值时，脚本以非零退出码结束，从而阻止该 pull request 被合并。\n\n这种机制与常见的单元测试门禁在形式上一致：CI 任务失败即阻断合并，开发者需要先修复或调整才能继续。教程强调使用“固定的 eval 集”，意味着评估用例在多次运行之间保持一致，便于比较不同提交之间的通过率变化。\n\n从已知信息看，教程描述的是流程与脚本行为，而非某个具体模型或产品的发布。它把 LLM 评估结果转化为一个二元的合并决策信号：通过率达标则放行，不达标则拦截。\n\n由于来源为 OpenRouter 的公告类内容，目前可确认的细节集中在门禁逻辑本身：固定 eval 集、通过率阈值、非零退出码阻断合并。教程未在摘要中给出具体阈值数值、eval 集规模或示例代码。",
+      "keyPointsZh": [
+        "OpenRouter 发布教程，讲解在 CI 中用 LLM eval 门禁拦截 pull request。",
+        "做法是运行固定 eval 集，通过率低于阈值时脚本以非零退出码阻止合并。",
+        "该门禁与单元测试门禁形式一致，失败即阻断合并。",
+        "来源为 OpenRouter 公告，未披露具体阈值、eval 集规模或示例代码。"
+      ],
+      "impactZh": "它把 LLM 评估纳入与单元测试同级的合并门禁，使模型行为变化可以在代码合并前被自动发现，而不是等到上线后。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 LLM 的开发者或团队可以照此在 CI 中加一道 eval 门禁，用固定用例和通过率阈值自动拦截质量回退的 pull request。",
+      "howItWorksZh": "在 CI 中运行一个固定的 eval 集，统计通过率；当通过率低于设定阈值时，脚本以非零退出码结束，CI 任务因此失败，pull request 无法合并。固定 eval 集保证多次运行之间用例一致，便于比较不同提交的通过率。",
+      "interpretationZh": "已报道的事实是：OpenRouter 发布教程，描述用固定 eval 集在 CI 中按通过率阈值门禁 pull request，低于阈值时以非零退出码阻断合并。可合理推断的是，这种做法把 LLM 评估结果转成与单元测试类似的二元合并信号；但具体阈值、eval 集内容和脚本实现并未在来源中给出。",
+      "limitationsZh": "来源为公告摘要，未提供具体阈值数值、eval 集规模、示例代码或实际项目案例；门禁效果取决于 eval 集质量与阈值设定，这些均未在来源中说明。",
+      "actionStepsZh": [
+        "在 CI 中配置一个固定的 LLM eval 集并统计通过率。",
+        "设定通过率阈值，低于阈值时让脚本以非零退出码结束以阻断合并。",
+        "保持 eval 集固定，以便跨提交比较通过率变化。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:ska7k3allx8q9uu8yv5vzy8zw",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci/",
+          "publishedAt": "2026-10-01T00:00:00.000Z",
+          "title": "OpenRouter 教程：如何在 CI 中用 LLM eval 门禁拦截 Pull Request",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ska7k3allx8q9uu8yv5vzy8zw",
+            "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-01T00:00:00.000Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-01T00:00:00.000Z",
+            "label": "10/1 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-01T00:55:48.825Z",
+            "label": "10/1 08:55",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:51:37.650Z",
+            "label": "10/1 09:51",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:47:26.476Z",
+            "label": "10/1 10:47",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:43:15.301Z",
+            "label": "10/1 11:43",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:39:04.127Z",
+            "label": "10/1 12:39",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:34:52.952Z",
+            "label": "10/1 13:34",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e326f358b155bc3e",
+      "normalizedUrl": "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models",
+      "originalUrl": "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models/",
+      "titleOriginal": "OpenRouter 发布 Agent 模型成本与质量权衡选型框架",
+      "summaryOriginal": "OpenRouter 发布一个三步框架，用于为 Agent 任务选出以最低成本达到质量门槛的模型，而不是按排行榜排名选最高分模型。方法是先按任务设定质量门槛，再用 20 到 50 条自己的示例运行廉价、中档和前沿模型并用统一评分标准计算每质量点成本，最后选出以超过运行间分数波动的余量过线的最便宜模型。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/v6j23p9krwwoxqvk05d9n0bfz",
+        "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models/"
+      ],
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-01T01:17:38.079Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/v6j23p9krwwoxqvk05d9n0bfz"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:v6j23p9krwwoxqvk05d9n0bfz",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models/",
+          "publishedAt": "2026-10-01T00:00:00.000Z",
+          "title": "OpenRouter 发布 Agent 模型成本与质量权衡选型框架",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/v6j23p9krwwoxqvk05d9n0bfz",
+            "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models/"
+          ]
+        }
+      ],
+      "importance": 58,
+      "importanceReasonZh": "该框架把 Agent 模型选型从看排行榜最高分转向按任务质量门槛和每质量点成本决策，对控制 Agent 成本有直接可操作价值，但属于方法论建议而非新模型或新能力发布。",
+      "importanceReasonEn": "The framework shifts agent model selection from chasing the top leaderboard score to deciding by task quality threshold and cost per quality point, which is directly actionable for controlling agent costs, though it is methodology advice rather than a new model or capability release.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 发布 Agent 模型成本与质量权衡选型框架",
+      "titleEn": "OpenRouter Releases a Cost-Quality Trade-off Framework for Choosing Agent Models",
+      "summaryZh": "OpenRouter 发布一个三步框架，用于为 Agent 任务选出以最低成本达到质量门槛的模型，而不是按排行榜排名选最高分模型。方法是先按任务设定质量门槛，再用 20 到 50 条自己的示例运行廉价、中档和前沿模型并用统一评分标准计算每质量点成本，最后选出以超过运行间分数波动的余量过线的最便宜模型。",
+      "summaryEn": "OpenRouter published a three-step framework for choosing the model that meets a quality threshold at the lowest cost for an agent task, rather than picking the top-scoring model on a leaderboard. The method is to set a quality threshold per task, run cheap, mid-tier and frontier models on 20 to 50 of your own examples and compute cost per quality point with a consistent rubric, then pick the cheapest model that clears the bar with margin above run-to-run score variance.",
+      "keywords": [
+        "OpenRouter",
+        "Agent 模型选型",
+        "成本与质量权衡",
+        "每质量点成本",
+        "质量门槛",
+        "评分标准"
+      ],
+      "topics": [
+        "agent",
+        "model-selection",
+        "cost-optimization",
+        "evaluation"
+      ],
+      "models": [],
+      "detailZh": "OpenRouter 发布了一个用于 Agent 任务模型选型的三步框架，核心目标不是选出排行榜上分数最高的模型，而是选出能以最低成本达到任务质量门槛的模型。\n\n第一步是按具体任务设定质量门槛，即先明确这个 Agent 任务需要达到什么样的质量水平才算可用，而不是笼统追求最高分。\n\n第二步是用 20 到 50 条自己的示例，分别运行廉价、中档和前沿模型，并用统一的评分标准打分，据此计算每个模型“每质量点成本”。\n\n第三步是选出以超过运行间分数波动的余量过线的最便宜模型，也就是在质量达标的前提下优先考虑成本，并留出分数波动的安全边际。\n\n该框架强调使用自己的示例和统一评分标准，而不是依赖公开排行榜，因为排行榜排名未必反映具体任务的实际质量与成本关系。",
+      "keyPointsZh": [
+        "框架分三步：设定任务质量门槛、用自有示例评测并计算每质量点成本、选出以超过分数波动余量过线的最便宜模型。",
+        "评测使用 20 到 50 条自己的示例，覆盖廉价、中档和前沿模型，并采用统一评分标准。",
+        "选型目标是最低成本达到质量门槛，而不是排行榜最高分。",
+        "选择时要求质量分数以超过运行间波动的余量过线，避免因评测噪声误选。"
+      ],
+      "impactZh": "该框架为 Agent 开发者提供了一种可复用的模型选型方法，把决策依据从公开排行榜转向自身任务的质量门槛与成本，有助于在保证可用质量的同时降低 Agent 运行成本。",
+      "readerImpactZh": "",
+      "userImpactZh": "AI 用户和开发团队可以按此框架用少量自有示例评测候选模型，计算每质量点成本，从而为 Agent 任务选择更便宜且质量达标的模型，并避免因评测波动而误判。",
+      "howItWorksZh": "按框架操作可分三步：1）为具体 Agent 任务设定质量门槛；2）准备 20 到 50 条自己的示例，分别用廉价、中档和前沿模型运行，并用统一评分标准打分，计算每质量点成本；3）选出以超过运行间分数波动的余量过线的最便宜模型。",
+      "interpretationZh": "已报道的事实是 OpenRouter 提出了这一三步选型框架及其评测与选择规则。可合理推断的是，该方法意在用自有数据和成本指标替代对公开排行榜的依赖，但框架本身未给出具体评分标准或成本计算公式。",
+      "limitationsZh": "来源为 OpenRouter 公告，未提供具体评分标准、成本计算细节或示例数据；框架效果取决于自有示例的代表性和评分标准的一致性，运行间分数波动幅度也需自行估计。",
+      "actionStepsZh": [
+        "为你的 Agent 任务明确一个质量门槛，而不是追求最高分。",
+        "准备 20 到 50 条自己的示例，覆盖廉价、中档和前沿模型进行评测。",
+        "用统一评分标准打分并计算每质量点成本。",
+        "选择以超过运行间分数波动的余量过线的最便宜模型。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:v6j23p9krwwoxqvk05d9n0bfz",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models/",
+          "publishedAt": "2026-10-01T00:00:00.000Z",
+          "title": "OpenRouter 发布 Agent 模型成本与质量权衡选型框架",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/v6j23p9krwwoxqvk05d9n0bfz",
+            "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-01T00:00:00.000Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
+        "current": 57,
+        "peak": 57,
+        "history": [
+          {
+            "at": "2026-10-01T00:00:00.000Z",
+            "label": "10/1 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-01T00:55:48.825Z",
+            "label": "10/1 08:55",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:51:37.650Z",
+            "label": "10/1 09:51",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:47:26.476Z",
+            "label": "10/1 10:47",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:43:15.301Z",
+            "label": "10/1 11:43",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:39:04.127Z",
+            "label": "10/1 12:39",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:34:52.952Z",
+            "label": "10/1 13:34",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 57,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "d87635bea6fd240c",
+      "normalizedUrl": "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing",
+      "originalUrl": "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing/",
+      "titleOriginal": "OpenRouter 指南：用置信度阈值实现模型分级升级路由",
+      "summaryOriginal": "OpenRouter 发布教程，讲解如何让廉价模型通过结构化输出返回 0 到 1 的置信度字段，低置信度的请求再升级到更强模型。文章强调置信分数只是自报、不是校准概率，应基于自己流量的分数段错误率排序设定阈值，并在上线后监控分数分布、升级率和未升级答案的错误率持续调整。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/hi9uy4borcat6ams9rk5vkamo",
+        "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing/"
+      ],
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-01T01:17:38.065Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/hi9uy4borcat6ams9rk5vkamo"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:hi9uy4borcat6ams9rk5vkamo",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing/",
+          "publishedAt": "2026-10-01T00:00:00.000Z",
+          "title": "OpenRouter 指南：用置信度阈值实现模型分级升级路由",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/hi9uy4borcat6ams9rk5vkamo",
+            "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing/"
+          ]
+        }
+      ],
+      "importance": 58,
+      "importanceReasonZh": "这是一篇可复用的工程实践指南，直接关系到多模型路由的成本与质量权衡，对使用 API 的团队有实际参考价值，但内容属于方法讲解而非新模型或新能力发布。",
+      "importanceReasonEn": "This is a reusable engineering practice guide directly relevant to the cost-quality tradeoff in multi-model routing, practically useful for teams using APIs, though it is a methodology explainer rather than a new model or capability release.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 指南：用置信度阈值实现模型分级升级路由",
+      "titleEn": "OpenRouter Guide: Tiered Model Escalation Routing with Confidence Thresholds",
+      "summaryZh": "OpenRouter 发布教程，讲解如何让廉价模型通过结构化输出返回 0 到 1 的置信度字段，低置信度的请求再升级到更强模型。文章强调置信分数只是自报、不是校准概率，应基于自己流量的分数段错误率排序设定阈值，并在上线后监控分数分布、升级率和未升级答案的错误率持续调整。",
+      "summaryEn": "OpenRouter published a tutorial on letting a cheap model return a 0-to-1 confidence field via structured output, then escalating low-confidence requests to a stronger model. It stresses that the confidence score is self-reported rather than a calibrated probability, that thresholds should be set by ranking error rates across score buckets on your own traffic, and that after launch you should monitor score distribution, escalation rate and the error rate of non-escalated answers.",
+      "keywords": [
+        "OpenRouter",
+        "confidence threshold",
+        "model escalation",
+        "routing",
+        "structured output",
+        "cost optimization"
+      ],
+      "topics": [
+        "LLM routing",
+        "structured output",
+        "cost optimization",
+        "model escalation",
+        "confidence scoring"
+      ],
+      "models": [],
+      "detailZh": "OpenRouter 在其公告频道发布了一篇教程，主题是如何用置信度阈值实现模型的分级升级路由。核心思路是：先让成本较低的模型处理请求，并要求它通过结构化输出返回一个 0 到 1 之间的置信度字段；当这个分数低于设定阈值时，再把该请求升级交给更强的模型处理，从而在整体上兼顾成本与回答质量。\n\n文章特别强调，这个置信分数是模型自报的，并不等同于经过校准的概率，因此不能直接当作真实正确率来使用。作者建议的做法是：基于自己业务流量的实际数据，按分数段统计错误率并进行排序，再据此确定阈值，而不是照搬一个通用数值。\n\n教程还给出了上线后的持续运营建议：监控置信分数的分布、请求的升级率，以及未被升级的答案的错误率，并据此不断调整阈值。整体上，这是一份面向工程落地的实践指南，而非新模型或新功能的发布。",
+      "keyPointsZh": [
+        "让廉价模型通过结构化输出返回 0 到 1 的置信度字段，低置信度请求升级到更强模型。",
+        "置信分数是模型自报值，不是校准概率，不能直接当作真实正确率。",
+        "阈值应基于自己流量的分数段错误率排序来设定，而非套用通用值。",
+        "上线后需监控分数分布、升级率和未升级答案的错误率并持续调整。"
+      ],
+      "impactZh": "为多模型 API 使用方提供了一套可落地的成本与质量平衡方法：用廉价模型承接大部分请求，只把低置信度请求交给强模型，从而在可控质量下降低推理成本。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用多个模型 API 的开发者或团队可以据此搭建分级路由：先让便宜模型输出置信度，再按阈值升级到强模型，并用自身流量校准阈值、持续监控升级率与未升级答案的错误率。",
+      "howItWorksZh": "流程大致为：1）让廉价模型处理请求，并通过结构化输出返回一个 0 到 1 的置信度字段；2）将该分数与阈值比较；3）分数低于阈值时，把请求升级给更强的模型重新处理；4）基于自己流量的分数段错误率排序来设定阈值；5）上线后监控分数分布、升级率和未升级答案的错误率，持续调整阈值。",
+      "interpretationZh": "已报道的事实是：OpenRouter 发布了这套分级升级路由的教程，并明确置信分数是自报值而非校准概率，阈值应基于自有流量校准。可合理推断的是：这套方法的效果高度依赖具体业务流量和模型表现，需要实际测量才能确定阈值，不能直接照搬。",
+      "limitationsZh": "置信分数是模型自报的，不是校准概率，因此不能直接解释为正确率；教程未给出具体阈值数值或可直接复用的配置；实际效果取决于业务流量与所选模型，需要自行测量和持续调整。",
+      "actionStepsZh": [
+        "让廉价模型通过结构化输出返回 0 到 1 的置信度字段。",
+        "按自己流量的分数段统计错误率并排序，据此设定升级阈值。",
+        "对低于阈值的请求升级到更强模型处理。",
+        "上线后监控分数分布、升级率和未升级答案的错误率，持续调整阈值。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:hi9uy4borcat6ams9rk5vkamo",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing/",
+          "publishedAt": "2026-10-01T00:00:00.000Z",
+          "title": "OpenRouter 指南：用置信度阈值实现模型分级升级路由",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/hi9uy4borcat6ams9rk5vkamo",
+            "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-01T00:00:00.000Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
+        "current": 57,
+        "peak": 57,
+        "history": [
+          {
+            "at": "2026-10-01T00:00:00.000Z",
+            "label": "10/1 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-01T00:55:48.825Z",
+            "label": "10/1 08:55",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:51:37.650Z",
+            "label": "10/1 09:51",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:47:26.476Z",
+            "label": "10/1 10:47",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:43:15.301Z",
+            "label": "10/1 11:43",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:39:04.127Z",
+            "label": "10/1 12:39",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:34:52.952Z",
+            "label": "10/1 13:34",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 57,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "5812e4a50e9b69eb",
       "normalizedUrl": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet",
@@ -37,9 +788,9 @@
           "resourceLinks": []
         }
       ],
-      "importance": 72,
-      "importanceReasonZh": "谷歌发布新一代Gemini模型并定位为编程与网络安全主力，属于头部厂商的重要模型更新，但现有信息仅来自单一报道，缺少技术细节与独立验证。",
-      "importanceReasonEn": "Google releasing a new-generation Gemini model positioned for coding and cybersecurity is a notable update from a leading vendor, but the available information comes from a single report with no technical details or independent verification.",
+      "importance": 70,
+      "importanceReasonZh": "谷歌发布新一代旗舰模型并定位为编程与网络安全主力，属于头部厂商的重要模型更新，可能影响开发者工具选择。",
+      "importanceReasonEn": "Google releasing a new flagship model positioned for coding and cybersecurity is a significant update from a leading vendor that may affect developer tool choices.",
       "scoringMode": "ai",
       "titleZh": "谷歌发布Gemini 4 Argon，称其为迄今最强模型",
       "titleEn": "Google releases Gemini 4 Argon, called its most powerful model yet",
@@ -48,9 +799,9 @@
       "keywords": [
         "谷歌",
         "Gemini 4 Argon",
+        "模型发布",
         "编程",
-        "网络安全",
-        "模型发布"
+        "网络安全"
       ],
       "topics": [
         "Gemini",
@@ -61,19 +812,19 @@
       "models": [
         "Gemini 4 Argon"
       ],
-      "detailZh": "据TechCrunch AI报道，谷歌发布了其最新的Gemini模型，名称为Gemini 4 Argon。报道称谷歌将这一模型宣传为迄今最强大的模型，并把它定位为面向编程和网络安全工作的主力模型。\n\n目前可确认的信息仅限于发布本身以及官方给出的定位描述：该模型被强调用于代码相关任务和安全相关工作。报道没有披露模型的参数规模、上下文长度、定价、基准测试成绩或具体可用渠道等细节。\n\n由于信息来自单一来源且内容较为概括，尚无法判断该模型在编程与网络安全场景中的实际能力，也无法与其他模型进行量化比较。后续需要等待谷歌官方技术文档、基准测试结果或第三方评测来补充验证。",
+      "detailZh": "谷歌发布了其最新的Gemini模型，命名为Gemini 4 Argon。根据现有信息，谷歌将这一模型宣传为迄今最强大的模型，并把它定位为面向编程和网络安全工作的主力模型。\n\n目前公开的信息较为有限，仅包含发布这一事实以及谷歌对其用途的定位，即编程和网络安全。关于模型的具体参数规模、上下文长度、定价、基准测试成绩、可用渠道和发布时间表等细节，现有材料均未提及。\n\n因此，可以确认的是谷歌推出了名为Gemini 4 Argon的新模型，并将其宣传为最强模型，主要面向编程与网络安全场景；但该模型的实际能力、与竞品的对比表现以及具体使用方式，尚缺乏可验证的细节。",
       "keyPointsZh": [
         "谷歌发布了最新Gemini模型，命名为Gemini 4 Argon。",
-        "谷歌将其宣传为迄今最强大的模型。",
-        "该模型被定位为编程和网络安全工作的主力模型。",
-        "报道未披露参数、定价、基准成绩等具体细节。"
+        "谷歌将该模型宣传为迄今最强大的模型。",
+        "该模型被定位为面向编程和网络安全工作的主力模型。",
+        "除发布与定位外，参数、定价、基准等具体信息尚未披露。"
       ],
-      "impactZh": "头部厂商的旗舰模型更新通常会影响开发者在编程辅助和安全工具上的选型，并可能推动竞争对手加快迭代；但本次发布缺少可验证的技术细节，实际影响有待观察。",
+      "impactZh": "头部厂商推出新一代旗舰模型并明确瞄准编程与网络安全场景，可能加剧AI编程助手和安全工具市场的竞争，并影响开发者的模型选型。",
       "readerImpactZh": "",
-      "userImpactZh": "对开发者和安全团队而言，该模型被官方定位为编程与网络安全主力，可能成为相关工具链的候选选项；但由于缺少基准数据和定价信息，目前无法评估其相对现有模型的实际收益。",
+      "userImpactZh": "对开发者和团队而言，谷歌新增了一个面向编程与网络安全场景的旗舰模型选项，但现有信息不足以判断其是否值得从当前使用的模型迁移。",
       "howItWorksZh": "",
-      "interpretationZh": "可以确认的是谷歌发布了一个名为Gemini 4 Argon的新模型，并对外强调其在编程和网络安全方面的定位。至于它是否真的“最强大”、在具体任务上表现如何，目前只有厂商宣传口径，尚无独立数据支撑，应视为待验证的声明。",
-      "limitationsZh": "信息来自单一媒体报道，缺少官方技术文档、参数规模、上下文长度、定价、基准测试成绩和可用渠道等关键细节；模型的实际能力与“最强大”的说法均未得到独立验证。",
+      "interpretationZh": "可以确认的是谷歌发布了Gemini 4 Argon并将其宣传为最强模型，定位编程与网络安全。至于它是否真的最强、实际表现如何，目前只有厂商宣传，缺乏独立验证，应视为待观察的发布信息。",
+      "limitationsZh": "现有信息仅来自发布消息，缺少参数规模、上下文长度、定价、基准测试成绩、可用渠道和具体发布时间等关键细节，也未经过独立验证。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -96,9 +847,9 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T23:43:07.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
-        "current": 65,
-        "peak": 65,
+        "endedAt": "2026-10-01T06:30:41.778Z",
+        "current": 64,
+        "peak": 64,
         "history": [
           {
             "at": "2026-09-30T23:43:07.000Z",
@@ -107,9 +858,45 @@
             "reports": 0
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
-            "value": 65,
+            "at": "2026-10-01T00:41:20.539Z",
+            "label": "10/1 08:41",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:39:34.079Z",
+            "label": "10/1 09:39",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:37:47.619Z",
+            "label": "10/1 10:37",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:36:01.158Z",
+            "label": "10/1 11:36",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:34:14.698Z",
+            "label": "10/1 12:34",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:32:28.238Z",
+            "label": "10/1 13:32",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 64,
             "reports": 1
           }
         ],
@@ -162,12 +949,12 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "这是 Google 七个多月来发布的首个前沿模型，直接关系到前沿 AI 竞争格局和开发者选型，但报道未提供具体测试数据或官方细节，信息有限。",
-      "importanceReasonEn": "This is Google's first frontier model in over seven months, directly relevant to the frontier AI competitive landscape and developer choices, but the report lacks specific benchmark data or official details, limiting its informational value.",
+      "importanceReasonZh": "这是 Google 七个多月来首个前沿模型，直接关系到三大 AI 厂商的竞争格局，且其低单价与高 token 消耗的权衡对企业成本有实际影响。",
+      "importanceReasonEn": "This is Google's first frontier model in over seven months, directly relevant to the competitive landscape among the three major AI vendors, and its low per-token price versus high token consumption has practical cost implications for enterprises.",
       "scoringMode": "ai",
       "titleZh": "Google Gemini 4 Argon 缩小与 OpenAI 和 Anthropic 的差距，但未取得明显领先",
       "titleEn": "Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead",
-      "summaryZh": "Gemini 4 Argon 是 Google 七个多月来的首个前沿模型。在独立测试中它与 GPT-6 Astra 持平，但跟不上 Anthropic 的 Claude Opus 5.5。其每 token 价格较低，但 Argon 完成每个任务消耗的 token 数量是 Astra 的两倍多。部分测试者率先获得访问权限，API 和付费层级随后推出。",
+      "summaryZh": "Gemini 4 Argon 是 Google 七个多月来首个前沿模型。在独立测试中它与 GPT-6 Astra 持平，但跟不上 Anthropic 的 Claude Opus 5.5。其每 token 价格较低，但每个任务消耗的 token 数量是 Astra 的两倍多。部分测试者率先获得访问权限，API 和付费层级随后跟进。",
       "summaryEn": "Gemini 4 Argon is Google's first frontier model in over seven months. It matches GPT-6 Astra in independent testing but can't keep up with Anthropic's Claude Opus 5.5. The per-token price is low, but Argon burns through more than twice as many tokens per task as Astra. Select testers get access first, with the API and paid tiers following later.",
       "keywords": [
         "Gemini 4 Argon",
@@ -192,40 +979,22 @@
         "GPT-6 Astra",
         "Claude Opus 5.5"
       ],
-      "detailZh": "Google 发布了 Gemini 4 Argon，这是该公司七个多月来的首个前沿模型。根据 The Decoder 的报道，该模型在独立测试中与 OpenAI 的 GPT-6 Astra 表现相当，但未能超越 Anthropic 的 Claude Opus 5.5。这意味着 Google 重新回到了前沿模型的竞争行列，但并未取得明显领先。\n\n在定价方面，Argon 的每 token 价格较低，看起来具有成本优势。然而报道指出，Argon 完成每个任务所消耗的 token 数量是 GPT-6 Astra 的两倍多，这可能抵消其单价优势，使实际使用成本上升。\n\n发布节奏上，部分测试者将率先获得访问权限，API 和付费层级随后推出。报道没有披露具体的基准测试分数、token 价格数值或任务类型，也没有 Google 官方声明的细节。\n\n总体来看，这次发布缩小了 Google 与 OpenAI、Anthropic 之间的差距，但尚未改变前沿模型的领先格局。",
+      "detailZh": "Google 发布了 Gemini 4 Argon，这是该公司七个多月来推出的首个前沿模型。根据 The Decoder 的报道，该模型在独立测试中与 OpenAI 的 GPT-6 Astra 表现相当，但未能超越 Anthropic 的 Claude Opus 5.5。这意味着 Google 重新回到了前沿模型的竞争行列，但尚未取得领先地位。\n\n在定价方面，Argon 的每 token 价格较低，看起来具有成本优势。然而报道指出，Argon 完成每个任务所消耗的 token 数量是 GPT-6 Astra 的两倍多，这可能会抵消其单价优势，使实际使用成本并不一定更低。\n\n发布节奏上，Google 先向部分测试者开放访问权限，API 和付费层级将在之后跟进。这种分阶段发布方式与当前前沿模型的常见做法一致。\n\n报道没有提供具体的基准测试分数、token 价格数字或任务消耗量的详细数据，因此上述比较目前只能作为方向性参考。",
       "keyPointsZh": [
-        "Gemini 4 Argon 是 Google 七个多月来的首个前沿模型",
+        "Gemini 4 Argon 是 Google 七个多月来首个前沿模型",
         "独立测试中与 GPT-6 Astra 持平，但落后于 Claude Opus 5.5",
-        "每 token 价格较低，但每任务消耗 token 数是 Astra 的两倍多",
-        "部分测试者先获得访问权限，API 和付费层级随后推出"
+        "每 token 价格较低，但每任务 token 消耗量是 Astra 的两倍多",
+        "先向部分测试者开放，API 和付费层级随后推出"
       ],
-      "impactZh": "这表明前沿 AI 模型竞争仍在持续，Google 重新回到竞争行列但未取得领先。对市场而言，模型选择更多，但领先者格局未变。",
+      "impactZh": "Google 重返前沿模型竞争，但未取得领先，三大厂商的格局暂时维持。低单价与高 token 消耗的组合可能让实际使用成本优势打折扣，影响企业的模型选型决策。",
       "readerImpactZh": "",
-      "userImpactZh": "开发者和团队在选型时需要同时考虑每 token 价格和每任务 token 消耗量，Argon 的低单价可能被高 token 消耗抵消，实际成本未必更低。",
+      "userImpactZh": "开发者和团队在评估模型成本时，不能只看每 token 单价，还需考虑完成同一任务所需的 token 总量；Argon 的实际成本可能高于其标价所暗示的水平。",
       "howItWorksZh": "",
-      "interpretationZh": "报道称 Argon 在独立测试中与 GPT-6 Astra 持平，但落后于 Claude Opus 5.5；其每 token 价格低，但每任务 token 消耗量是 Astra 的两倍多。这些是报道中的事实性描述。可以合理推断，Argon 的实际使用成本可能因 token 消耗高而上升，但报道未给出具体价格和测试数据，无法进一步验证。",
-      "limitationsZh": "报道未提供具体的基准测试分数、测试任务类型、token 价格数值，也没有 Google 官方声明或独立测试的详细方法。Argon 与 Astra、Opus 5.5 的对比结论缺乏可验证的数据支撑。",
+      "interpretationZh": "从报道看，Google 的策略似乎是用较低的每 token 价格吸引用户，但模型效率（每任务 token 消耗）不及竞争对手，这可能意味着其单位任务成本并不占优。不过由于缺乏具体数字，这一判断仍是推测。",
+      "limitationsZh": "报道未提供具体的基准测试分数、每 token 价格数字、每任务 token 消耗量的具体数值，也未说明独立测试的方法和来源。因此模型间的比较只能视为方向性描述，无法量化验证。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
-      "visual": {
-        "type": "comparison",
-        "titleZh": "数据对比",
-        "unit": "",
-        "noteZh": "",
-        "insightZh": "Argon 完成每个任务消耗的 token 数量是 Astra 的两倍多，可能抵消其每 token 价格较低的优势。",
-        "data": [
-          {
-            "label": "Argon 每任务 token 消耗",
-            "value": 2,
-            "display": ""
-          },
-          {
-            "label": "Astra 每任务 token 消耗",
-            "value": 1,
-            "display": ""
-          }
-        ]
-      },
+      "visual": null,
       "processingError": null,
       "reportCount": 1,
       "reportTimeline": [
@@ -250,7 +1019,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T22:06:30.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -261,20 +1030,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-30T22:47:53.164Z",
-            "label": "10/1 06:47",
+            "at": "2026-09-30T23:02:31.308Z",
+            "label": "10/1 07:02",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T23:58:32.617Z",
+            "label": "10/1 07:58",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T00:54:33.926Z",
+            "label": "10/1 08:54",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-09-30T23:29:16.328Z",
-            "label": "10/1 07:29",
+            "at": "2026-10-01T01:50:35.234Z",
+            "label": "10/1 09:50",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:46:36.543Z",
+            "label": "10/1 10:46",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:42:37.852Z",
+            "label": "10/1 11:42",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
+            "at": "2026-10-01T04:38:39.160Z",
+            "label": "10/1 12:38",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:34:40.469Z",
+            "label": "10/1 13:34",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
             "value": 65,
             "reports": 1
           }
@@ -420,7 +1225,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T21:54:19.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
         "current": 35,
         "peak": 35,
         "history": [
@@ -431,20 +1236,56 @@
             "reports": 0
           },
           {
-            "at": "2026-09-30T22:39:45.831Z",
-            "label": "10/1 06:39",
+            "at": "2026-09-30T22:51:41.530Z",
+            "label": "10/1 06:51",
+            "value": 16,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T23:49:04.061Z",
+            "label": "10/1 07:49",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T00:46:26.592Z",
+            "label": "10/1 08:46",
             "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-09-30T23:25:12.662Z",
-            "label": "10/1 07:25",
+            "at": "2026-10-01T01:43:49.123Z",
+            "label": "10/1 09:43",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:41:11.654Z",
+            "label": "10/1 10:41",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:38:34.185Z",
+            "label": "10/1 11:38",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
+            "at": "2026-10-01T04:35:56.716Z",
+            "label": "10/1 12:35",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:33:19.247Z",
+            "label": "10/1 13:33",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
             "value": 35,
             "reports": 1
           }
@@ -553,7 +1394,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T20:01:45.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -564,32 +1405,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-30T20:51:31.898Z",
-            "label": "10/1 04:51",
-            "value": 26,
+            "at": "2026-09-30T20:58:55.616Z",
+            "label": "10/1 04:58",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-30T21:41:18.797Z",
-            "label": "10/1 05:41",
-            "value": 38,
+            "at": "2026-09-30T21:56:06.232Z",
+            "label": "10/1 05:56",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-30T22:31:05.695Z",
-            "label": "10/1 06:31",
-            "value": 50,
+            "at": "2026-09-30T22:53:16.848Z",
+            "label": "10/1 06:53",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-09-30T23:20:52.594Z",
-            "label": "10/1 07:20",
-            "value": 62,
+            "at": "2026-09-30T23:50:27.464Z",
+            "label": "10/1 07:50",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
+            "at": "2026-10-01T00:47:38.080Z",
+            "label": "10/1 08:47",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:44:48.697Z",
+            "label": "10/1 09:44",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:41:59.313Z",
+            "label": "10/1 10:41",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:39:09.929Z",
+            "label": "10/1 11:39",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:36:20.545Z",
+            "label": "10/1 12:36",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:33:31.161Z",
+            "label": "10/1 13:33",
+            "value": 68,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
             "value": 74,
             "reports": 1
           }
@@ -706,7 +1583,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T19:12:30.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -717,33 +1594,241 @@
             "reports": 0
           },
           {
-            "at": "2026-09-30T20:12:07.898Z",
-            "label": "10/1 04:12",
+            "at": "2026-09-30T20:14:09.252Z",
+            "label": "10/1 04:14",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T21:15:48.505Z",
+            "label": "10/1 05:15",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T22:17:27.757Z",
+            "label": "10/1 06:17",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T23:19:07.010Z",
+            "label": "10/1 07:19",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T00:20:46.262Z",
+            "label": "10/1 08:20",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:22:25.515Z",
+            "label": "10/1 09:22",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:24:04.767Z",
+            "label": "10/1 10:24",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:25:44.020Z",
+            "label": "10/1 11:25",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:27:23.272Z",
+            "label": "10/1 12:27",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:29:02.525Z",
+            "label": "10/1 13:29",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "cf62474a33d2d5a6",
+      "normalizedUrl": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents",
+      "originalUrl": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+      "titleOriginal": "OpenAI&#8217;s Jev clone could help the frontier lab stop its swarming agents",
+      "summaryOriginal": "OpenAI's \"Decisions API\" is a Jev clone that confirms the importance of fast, cheap intelligence.",
+      "originalLanguage": "en",
+      "author": "Tim Fernholz",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-30T19:00:57.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+          "publishedAt": "2026-09-30T19:00:57.000Z",
+          "title": "OpenAI&#8217;s Jev clone could help the frontier lab stop its swarming agents",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该报道涉及 OpenAI 的 Decisions API 与 Jev 克隆，并关联蜂群智能体管理，但来源信息有限，缺乏具体技术细节与验证。",
+      "importanceReasonEn": "The report covers OpenAI's Decisions API and a Jev clone in the context of managing swarming agents, but source material is limited and lacks concrete technical details or verification.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI 的 Jev 克隆或可帮助前沿实验室阻止其蜂群智能体",
+      "titleEn": "OpenAI's Jev clone could help the frontier lab stop its swarming agents",
+      "summaryZh": "OpenAI 的“Decisions API”是一个 Jev 克隆，印证了快速、廉价智能的重要性。",
+      "summaryEn": "OpenAI's \"Decisions API\" is a Jev clone that confirms the importance of fast, cheap intelligence.",
+      "keywords": [
+        "OpenAI",
+        "Decisions API",
+        "Jev clone",
+        "swarming agents",
+        "fast cheap intelligence"
+      ],
+      "topics": [
+        "OpenAI",
+        "Decisions API",
+        "Jev clone",
+        "swarming agents",
+        "fast cheap intelligence"
+      ],
+      "models": [],
+      "detailZh": "TechCrunch AI 报道称，OpenAI 的“Decisions API”是一个 Jev 克隆。该报道将这一产品与 OpenAI 阻止其蜂群智能体的需求联系起来，并指出它印证了快速、廉价智能的重要性。\n\n目前可确认的信息仅限于标题与摘要：OpenAI 推出了名为 Decisions API 的产品，被描述为 Jev 的克隆；其潜在用途之一是帮助前沿实验室管理或阻止蜂群智能体；报道的核心观点是快速、廉价的智能具有重要价值。\n\n关于 Decisions API 的具体功能、技术实现、定价、发布时间以及“Jev”所指代的对象，输入材料均未提供。因此无法进一步说明其工作方式或实际影响。",
+      "keyPointsZh": [
+        "OpenAI 的“Decisions API”被描述为 Jev 的克隆。",
+        "该产品可能用于帮助 OpenAI 阻止其蜂群智能体。",
+        "报道认为这印证了快速、廉价智能的重要性。"
+      ],
+      "impactZh": "若该产品确实用于管理蜂群智能体，可能影响前沿实验室对多智能体系统的控制方式，并强化快速、廉价智能在 AI 基础设施中的战略地位。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道将 Decisions API 称为 Jev 克隆，并把它与阻止蜂群智能体联系起来。这属于对产品定位的概括性描述，而非技术细节披露；其实际能力与效果尚无法从现有信息判断。",
+      "limitationsZh": "输入材料仅包含标题与摘要，缺少产品功能、技术架构、定价、发布时间及“Jev”具体指代等关键信息，无法验证报道中的关联与结论。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+          "publishedAt": "2026-09-30T19:00:57.000Z",
+          "title": "OpenAI&#8217;s Jev clone could help the frontier lab stop its swarming agents",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-30T19:00:57.000Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-09-30T19:00:57.000Z",
+            "label": "10/1 03:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-30T20:03:39.252Z",
+            "label": "10/1 04:03",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T21:06:21.505Z",
+            "label": "10/1 05:06",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T22:09:03.757Z",
+            "label": "10/1 06:09",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-30T21:11:45.797Z",
-            "label": "10/1 05:11",
+            "at": "2026-09-30T23:11:46.010Z",
+            "label": "10/1 07:11",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T00:14:28.262Z",
+            "label": "10/1 08:14",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:17:10.515Z",
+            "label": "10/1 09:17",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-30T22:11:23.695Z",
-            "label": "10/1 06:11",
-            "value": 44,
+            "at": "2026-10-01T02:19:52.767Z",
+            "label": "10/1 10:19",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-30T23:11:01.594Z",
-            "label": "10/1 07:11",
-            "value": 55,
+            "at": "2026-10-01T03:22:35.020Z",
+            "label": "10/1 11:22",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
-            "value": 65,
+            "at": "2026-10-01T04:25:17.272Z",
+            "label": "10/1 12:25",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:27:59.525Z",
+            "label": "10/1 13:27",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -816,7 +1901,9 @@
         "OpenAI",
         "FTC investigation"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "约二十余家科技公司签署了一项由白宫推动的超级智能协议，承诺实施独立安全审计、定期会商并制定共同安全标准，覆盖网络安全、生物安全和化学威胁等风险。该协议不具法律约束力，特朗普称其具有道德约束力。\n\n文章提到，OpenAI 近期发生的多起事故源于今年 5 月至 7 月开发中的一个未发布模型。OpenAI 安全委员会的有效性正受到特拉华州和加利福尼亚州总检察长的调查。\n\n此外，美国联邦贸易委员会（FTC）已就 AI 智能体可能对消费者造成的损害发起调查。这些调查与自愿性协议同时出现，显示 AI 安全与监管议题正在多个层面推进。",
       "keyPointsZh": [
         "约二十余家科技公司签署白宫推动的超级智能协议，承诺独立安全审计、定期会商和共同安全标准。",
@@ -856,7 +1943,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T18:47:01.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -867,39 +1954,240 @@
             "reports": 0
           },
           {
-            "at": "2026-09-30T19:40:57.415Z",
-            "label": "10/1 03:40",
-            "value": 22,
+            "at": "2026-09-30T19:50:59.252Z",
+            "label": "10/1 03:50",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-30T20:34:53.831Z",
-            "label": "10/1 04:34",
-            "value": 31,
+            "at": "2026-09-30T20:54:57.505Z",
+            "label": "10/1 04:54",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-30T21:28:50.246Z",
-            "label": "10/1 05:28",
-            "value": 39,
+            "at": "2026-09-30T21:58:55.757Z",
+            "label": "10/1 05:58",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-30T22:22:46.662Z",
-            "label": "10/1 06:22",
-            "value": 48,
+            "at": "2026-09-30T23:02:54.010Z",
+            "label": "10/1 07:02",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-30T23:16:43.077Z",
-            "label": "10/1 07:16",
+            "at": "2026-10-01T00:06:52.262Z",
+            "label": "10/1 08:06",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:10:50.515Z",
+            "label": "10/1 09:10",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:14:48.767Z",
+            "label": "10/1 10:14",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T03:18:47.020Z",
+            "label": "10/1 11:18",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:22:45.272Z",
+            "label": "10/1 12:22",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
+            "at": "2026-10-01T05:26:43.525Z",
+            "label": "10/1 13:26",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
             "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a8d59171d3804911",
+      "normalizedUrl": "https://techcrunch.com/2026/09/30/the-ugly-economics-of-consumer-ai",
+      "originalUrl": "https://techcrunch.com/2026/09/30/the-ugly-economics-of-consumer-ai/",
+      "titleOriginal": "The ugly economics of consumer AI",
+      "summaryOriginal": "There’s a reason frontier labs have gotten gun-shy about consumer AI — and it’s not because the tech isn’t good enough.",
+      "originalLanguage": "en",
+      "author": "Russell Brandom",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-09-30T17:24:45.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opinion",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/30/the-ugly-economics-of-consumer-ai/",
+          "publishedAt": "2026-09-30T17:24:45.000Z",
+          "title": "The ugly economics of consumer AI",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 42,
+      "importanceReasonZh": "该文从商业经济学角度解释前沿实验室为何对消费级AI趋于谨慎，属于行业观点类内容，对理解AI产品商业化有参考价值，但缺乏具体数据与可验证事实。",
+      "importanceReasonEn": "The article explains from a business-economics angle why frontier labs are becoming cautious about consumer AI. It is an industry opinion piece useful for understanding AI product commercialization, but lacks concrete data and verifiable facts.",
+      "scoringMode": "ai",
+      "titleZh": "消费级AI的丑陋经济学",
+      "titleEn": "The ugly economics of consumer AI",
+      "summaryZh": "前沿实验室对消费级AI变得谨慎是有原因的——并不是因为技术不够好。",
+      "summaryEn": "There’s a reason frontier labs have gotten gun-shy about consumer AI — and it’s not because the tech isn’t good enough.",
+      "keywords": [
+        "消费级AI",
+        "经济学",
+        "前沿实验室",
+        "商业模式"
+      ],
+      "topics": [
+        "consumer AI",
+        "AI economics",
+        "frontier labs",
+        "business model"
+      ],
+      "models": [],
+      "detailZh": "TechCrunch AI 发表了一篇题为《消费级AI的丑陋经济学》的文章，核心观点是：前沿实验室对消费级AI产品变得谨慎，原因并非技术能力不足，而是经济层面的问题。\n\n文章摘要指出，这些实验室之所以“gun-shy”（变得畏缩、谨慎），背后有经济上的原因。但输入材料仅包含标题和一句摘要，没有给出具体的成本结构、单位经济模型、用户获取成本、推理成本或任何数字。\n\n因此，目前可以确认的只有文章的主题和立场：消费级AI在商业经济上存在挑战，导致前沿实验室态度转冷。至于具体是哪些成本、哪些公司、哪些产品受到影响，输入中没有提供。\n\n这是一篇观点/分析类文章，而非官方公告或实证研究。读者应将其视为一个讨论框架，而非有数据支撑的结论。",
+      "keyPointsZh": [
+        "TechCrunch AI 发文讨论消费级AI的经济性问题",
+        "文章认为前沿实验室对消费级AI变得谨慎",
+        "作者强调原因不是技术不够好，而是经济因素",
+        "输入材料未提供具体成本数据或公司案例"
+      ],
+      "impactZh": "该文提出了一个行业层面的观察：消费级AI的商业可持续性可能比技术能力更能决定前沿实验室的产品策略。这可能影响外界对AI消费产品未来走向的判断。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "文章传达的核心信息是：消费级AI面临的障碍更多来自经济层面而非技术层面。但输入中没有说明具体的经济机制，因此无法进一步解释“丑陋经济学”具体指什么。可以合理推断，作者可能指向推理成本、用户规模带来的亏损或变现困难等问题，但这些都属于推测，输入并未证实。",
+      "limitationsZh": "输入仅包含标题和一句摘要，没有正文、数据、公司名称或具体案例。因此无法验证文章论据，也无法确认其讨论的是哪些实验室或产品。所有关于成本结构的推断都缺乏来源支持。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/09/30/the-ugly-economics-of-consumer-ai/",
+          "publishedAt": "2026-09-30T17:24:45.000Z",
+          "title": "The ugly economics of consumer AI",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-09-30T17:24:45.000Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
+        "current": 48,
+        "peak": 48,
+        "history": [
+          {
+            "at": "2026-09-30T17:24:45.000Z",
+            "label": "10/1 01:24",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-09-30T18:36:11.979Z",
+            "label": "10/1 02:36",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T19:47:38.959Z",
+            "label": "10/1 03:47",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T20:59:05.939Z",
+            "label": "10/1 04:59",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T22:10:32.919Z",
+            "label": "10/1 06:10",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T23:21:59.899Z",
+            "label": "10/1 07:21",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T00:33:26.878Z",
+            "label": "10/1 08:33",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:44:53.858Z",
+            "label": "10/1 09:44",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:56:20.838Z",
+            "label": "10/1 10:56",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:07:47.818Z",
+            "label": "10/1 12:07",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:19:14.798Z",
+            "label": "10/1 13:19",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
+            "value": 48,
             "reports": 1
           }
         ],
@@ -1032,7 +2320,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T17:22:34.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1043,44 +2331,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-30T18:20:51.927Z",
-            "label": "10/1 02:20",
-            "value": 21,
+            "at": "2026-09-30T18:34:12.888Z",
+            "label": "10/1 02:34",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-30T19:19:09.855Z",
-            "label": "10/1 03:19",
-            "value": 29,
+            "at": "2026-09-30T19:45:51.777Z",
+            "label": "10/1 03:45",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-09-30T20:17:27.782Z",
-            "label": "10/1 04:17",
-            "value": 36,
+            "at": "2026-09-30T20:57:30.666Z",
+            "label": "10/1 04:57",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-09-30T21:15:45.710Z",
-            "label": "10/1 05:15",
-            "value": 43,
+            "at": "2026-09-30T22:09:09.555Z",
+            "label": "10/1 06:09",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-09-30T22:14:03.637Z",
-            "label": "10/1 06:14",
-            "value": 50,
+            "at": "2026-09-30T23:20:48.444Z",
+            "label": "10/1 07:20",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-30T23:12:21.565Z",
-            "label": "10/1 07:12",
-            "value": 58,
+            "at": "2026-10-01T00:32:27.333Z",
+            "label": "10/1 08:32",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
+            "at": "2026-10-01T01:44:06.222Z",
+            "label": "10/1 09:44",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T02:55:45.111Z",
+            "label": "10/1 10:55",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T04:07:24.000Z",
+            "label": "10/1 12:07",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T05:19:02.889Z",
+            "label": "10/1 13:19",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
             "value": 65,
             "reports": 1
           }
@@ -1201,7 +2513,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T16:20:04.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1212,50 +2524,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-30T17:18:53.436Z",
-            "label": "10/1 01:18",
-            "value": 21,
+            "at": "2026-09-30T17:37:23.798Z",
+            "label": "10/1 01:37",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-09-30T18:17:42.873Z",
-            "label": "10/1 02:17",
-            "value": 28,
+            "at": "2026-09-30T18:54:43.596Z",
+            "label": "10/1 02:54",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-09-30T19:16:32.309Z",
-            "label": "10/1 03:16",
+            "at": "2026-09-30T20:12:03.394Z",
+            "label": "10/1 04:12",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T21:29:23.192Z",
+            "label": "10/1 05:29",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-09-30T20:15:21.746Z",
-            "label": "10/1 04:15",
-            "value": 41,
+            "at": "2026-09-30T22:46:42.990Z",
+            "label": "10/1 06:46",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-09-30T21:14:11.183Z",
-            "label": "10/1 05:14",
+            "at": "2026-10-01T00:04:02.788Z",
+            "label": "10/1 08:04",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T01:21:22.586Z",
+            "label": "10/1 09:21",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-09-30T22:13:00.619Z",
-            "label": "10/1 06:13",
-            "value": 55,
+            "at": "2026-10-01T02:38:42.384Z",
+            "label": "10/1 10:38",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-09-30T23:11:50.056Z",
-            "label": "10/1 07:11",
-            "value": 61,
+            "at": "2026-10-01T03:56:02.182Z",
+            "label": "10/1 11:56",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
+            "at": "2026-10-01T05:13:21.980Z",
+            "label": "10/1 13:13",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
             "value": 68,
             "reports": 1
           }
@@ -1354,7 +2684,7 @@
       ],
       "heat": {
         "startedAt": "2026-09-30T16:00:24.000Z",
-        "endedAt": "2026-10-01T00:10:39.493Z",
+        "endedAt": "2026-10-01T06:30:41.778Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1365,56 +2695,68 @@
             "reports": 0
           },
           {
-            "at": "2026-09-30T16:54:52.388Z",
-            "label": "10/1 00:54",
-            "value": 19,
+            "at": "2026-09-30T17:19:31.070Z",
+            "label": "10/1 01:19",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-09-30T17:49:20.776Z",
-            "label": "10/1 01:49",
-            "value": 23,
+            "at": "2026-09-30T18:38:38.141Z",
+            "label": "10/1 02:38",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-09-30T18:43:49.164Z",
-            "label": "10/1 02:43",
-            "value": 28,
+            "at": "2026-09-30T19:57:45.212Z",
+            "label": "10/1 03:57",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-09-30T19:38:17.552Z",
-            "label": "10/1 03:38",
-            "value": 32,
+            "at": "2026-09-30T21:16:52.282Z",
+            "label": "10/1 05:16",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-09-30T20:32:45.940Z",
-            "label": "10/1 04:32",
+            "at": "2026-09-30T22:35:59.353Z",
+            "label": "10/1 06:35",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-09-30T23:55:06.424Z",
+            "label": "10/1 07:55",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-09-30T21:27:14.328Z",
-            "label": "10/1 05:27",
-            "value": 42,
+            "at": "2026-10-01T01:14:13.495Z",
+            "label": "10/1 09:14",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-09-30T22:21:42.716Z",
-            "label": "10/1 06:21",
-            "value": 46,
+            "at": "2026-10-01T02:33:20.565Z",
+            "label": "10/1 10:33",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-09-30T23:16:11.104Z",
-            "label": "10/1 07:16",
-            "value": 51,
+            "at": "2026-10-01T03:52:27.636Z",
+            "label": "10/1 11:52",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-01T00:10:39.493Z",
-            "label": "10/1 08:10",
+            "at": "2026-10-01T05:11:34.707Z",
+            "label": "10/1 13:11",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-01T06:30:41.778Z",
+            "label": "10/1 14:30",
             "value": 55,
             "reports": 1
           }
