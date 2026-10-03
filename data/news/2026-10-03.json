@@ -1,7 +1,189 @@
 {
-  "generatedAt": "2026-10-02T20:40:17.646Z",
+  "generatedAt": "2026-10-03T00:25:27.331Z",
   "date": "2026-10-03",
   "items": [
+    {
+      "id": "185a161a892b07ff",
+      "normalizedUrl": "https://baseten.co/blog/agentic-inference-optimization-faster-than-sota",
+      "originalUrl": "https://www.baseten.co/blog/agentic-inference-optimization-faster-than-sota/",
+      "titleOriginal": "Baseten 工程师实测：LLM 生成的推理引擎比 vLLM 快最多 90%",
+      "summaryOriginal": "Baseten 工程师参考 MetaInfer 论文，让 Claude Code（Fable 5）为 Qwen-3.6-35B-A3B（NVFP4，单张 B200）自动构建推理引擎 VibeQwen，单流解码比 vLLM 0.25.1 快 90%，首 token 从 28ms 降至 12ms，并发 32 时吞吐高 71%。",
+      "originalLanguage": "zh",
+      "author": "Baseten 工程博客（网页）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/uwm1ml1igd8k2u81g14uf8pc3",
+        "https://www.baseten.co/blog/agentic-inference-optimization-faster-than-sota/"
+      ],
+      "publishedAt": "2026-10-02T21:09:34.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-02T21:49:44.069Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/uwm1ml1igd8k2u81g14uf8pc3"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:uwm1ml1igd8k2u81g14uf8pc3",
+          "name": "Baseten 工程博客（网页）",
+          "type": "practitioner",
+          "url": "https://www.baseten.co/blog/agentic-inference-optimization-faster-than-sota/",
+          "publishedAt": "2026-10-02T21:09:34.000Z",
+          "title": "Baseten 工程师实测：LLM 生成的推理引擎比 vLLM 快最多 90%",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/uwm1ml1igd8k2u81g14uf8pc3",
+            "https://www.baseten.co/blog/agentic-inference-optimization-faster-than-sota/"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该实测展示了用 LLM 自动生成专用推理引擎的可行路径，并在单卡 B200 上给出相对 vLLM 的明确性能提升，对推理部署与成本优化有直接参考价值。",
+      "importanceReasonEn": "This test demonstrates a viable path for using LLMs to auto-generate specialized inference engines, with clear performance gains over vLLM on a single B200, offering direct reference value for inference deployment and cost optimization.",
+      "scoringMode": "ai",
+      "titleZh": "Baseten 工程师实测：LLM 生成的推理引擎比 vLLM 快最多 90%",
+      "titleEn": "Baseten Engineers Test: LLM-Generated Inference Engine Up to 90% Faster Than vLLM",
+      "summaryZh": "Baseten 工程师参考 MetaInfer 论文，让 Claude Code（Fable 5）为 Qwen-3.6-35B-A3B（NVFP4，单张 B200）自动构建推理引擎 VibeQwen，单流解码比 vLLM 0.25.1 快 90%，首 token 从 28ms 降至 12ms，并发 32 时吞吐高 71%。",
+      "summaryEn": "Baseten engineers, referencing the MetaInfer paper, had Claude Code (Fable 5) automatically build an inference engine called VibeQwen for Qwen-3.6-35B-A3B (NVFP4, single B200). Single-stream decoding is 90% faster than vLLM 0.25.1, time-to-first-token drops from 28ms to 12ms, and throughput at concurrency 32 is 71% higher.",
+      "keywords": [
+        "VibeQwen",
+        "vLLM",
+        "MetaInfer",
+        "NVFP4",
+        "B200",
+        "推理引擎",
+        "首 token 延迟",
+        "吞吐"
+      ],
+      "topics": [
+        "LLM inference",
+        "inference engine",
+        "code generation",
+        "vLLM",
+        "Baseten"
+      ],
+      "models": [
+        "Qwen-3.6-35B-A3B",
+        "Claude Code (Fable 5)"
+      ],
+      "detailZh": "Baseten 工程师发布了一篇工程博客，记录了他们让 Claude Code（文中称 Fable 5）自动为特定模型构建推理引擎的实验。他们参考了 MetaInfer 论文的思路，目标模型是 Qwen-3.6-35B-A3B，采用 NVFP4 量化，运行在单张 NVIDIA B200 上。生成的推理引擎被命名为 VibeQwen。\n\n根据博客给出的数据，VibeQwen 在单流解码场景下比 vLLM 0.25.1 快 90%；首 token 延迟从 vLLM 的 28ms 降至 12ms；在并发数为 32 时，吞吐量比 vLLM 高 71%。这些数字均来自 Baseten 工程师的实测，属于实践者层面的证据。\n\n该实验的核心思路是：不再依赖通用推理引擎，而是让代码生成模型针对特定模型架构、量化格式和硬件组合，自动生成或优化推理内核与调度逻辑。MetaInfer 论文提供了方法论参考，Claude Code 负责实际代码生成。\n\n目前公开信息仅来自 Baseten 工程博客，缺少完整的基准测试配置、代码开源情况以及与其他推理引擎的横向对比。因此上述提升幅度应理解为特定条件下的实测结果，而非普适结论。",
+      "keyPointsZh": [
+        "Baseten 工程师让 Claude Code（Fable 5）自动生成推理引擎 VibeQwen。",
+        "目标模型为 Qwen-3.6-35B-A3B，NVFP4 量化，单张 B200。",
+        "单流解码比 vLLM 0.25.1 快 90%，首 token 从 28ms 降至 12ms。",
+        "并发 32 时吞吐比 vLLM 高 71%。",
+        "方法参考 MetaInfer 论文，属于实践者层面的实测。"
+      ],
+      "impactZh": "该实验说明，针对特定模型和硬件自动生成专用推理引擎，可能比通用引擎获得显著性能提升。这为推理部署的性能优化和成本控制提供了新思路，也进一步验证了用 LLM 生成系统级代码的可行性。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 开发者和推理部署团队而言，这意味着可以尝试用代码生成模型为自有模型和硬件组合定制推理引擎，从而降低延迟、提升吞吐，减少对通用引擎调优的依赖。",
+      "howItWorksZh": "根据博客描述，流程是：选定目标模型（Qwen-3.6-35B-A3B）、量化格式（NVFP4）和硬件（单张 B200）；参考 MetaInfer 论文的方法论；由 Claude Code（Fable 5）生成针对该组合的推理引擎代码，最终得到 VibeQwen。博客未披露更细的生成步骤、内核实现或调度策略。",
+      "interpretationZh": "可以确认的是：Baseten 工程师确实做了这样一次实验，并报告了相对 vLLM 0.25.1 的性能提升。合理推断是：专用引擎在特定模型与硬件上可能优于通用引擎。但提升幅度是否可复现、是否适用于其他模型或硬件，目前无法从公开信息判断。",
+      "limitationsZh": "信息仅来自 Baseten 工程博客，缺少完整基准配置、测试细节和代码开源情况；未与其他推理引擎横向对比；提升数据基于特定模型、量化和单卡 B200，不能直接外推到其他场景。",
+      "actionStepsZh": [
+        "关注 Baseten 工程博客原文，了解 VibeQwen 的具体实现与测试配置。",
+        "参考 MetaInfer 论文的方法论，评估用代码生成模型定制推理引擎的可行性。",
+        "在自有模型与硬件上做小规模对照测试，再决定是否采用类似方案。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "VibeQwen 单流解码比 vLLM 快 90%，并发 32 时吞吐高 71%，首 token 延迟从 28ms 降至 12ms。",
+        "data": [
+          {
+            "label": "单流解码相对 vLLM 提升",
+            "value": 90,
+            "display": ""
+          },
+          {
+            "label": "并发 32 吞吐相对 vLLM 提升",
+            "value": 71,
+            "display": ""
+          },
+          {
+            "label": "首 token 延迟（vLLM，ms）",
+            "value": 28,
+            "display": ""
+          },
+          {
+            "label": "首 token 延迟（VibeQwen，ms）",
+            "value": 12,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:uwm1ml1igd8k2u81g14uf8pc3",
+          "name": "Baseten 工程博客（网页）",
+          "type": "practitioner",
+          "url": "https://www.baseten.co/blog/agentic-inference-optimization-faster-than-sota/",
+          "publishedAt": "2026-10-02T21:09:34.000Z",
+          "title": "Baseten 工程师实测：LLM 生成的推理引擎比 vLLM 快最多 90%",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/uwm1ml1igd8k2u81g14uf8pc3",
+            "https://www.baseten.co/blog/agentic-inference-optimization-faster-than-sota/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-02T21:09:34.000Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-02T21:09:34.000Z",
+            "label": "10/3 05:09",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-02T21:58:32.332Z",
+            "label": "10/3 05:58",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:47:30.665Z",
+            "label": "10/3 06:47",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:36:28.998Z",
+            "label": "10/3 07:36",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "1f4fa586f4a3b50b",
       "normalizedUrl": "https://primeintellect.ai/blog/prime-inference",
@@ -47,8 +229,8 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "该发布将前沿开源模型的推理服务产品化，提供 serverless 与预留容量两种模式，并以内部每日近一万亿 token 的处理量作为规模佐证，对依赖开源模型的开发者具有直接可用价值。",
-      "importanceReasonEn": "The launch productizes inference serving for frontier open-source models with both serverless and reserved capacity options, backed by an internal scale figure of nearly one trillion tokens per day, offering directly usable value for developers relying on open-source models.",
+      "importanceReasonZh": "该发布将前沿开源模型的推理能力产品化，提供 serverless 与预留容量两种模式，并以内部每天近一万亿 token 的处理量作为规模佐证，对依赖开源模型的开发者具有直接可用价值。",
+      "importanceReasonEn": "The launch productizes inference for frontier open-source models with both serverless and reserved capacity options, backed by nearly one trillion tokens processed daily internally, offering directly usable value for developers relying on open-source models.",
       "scoringMode": "ai",
       "titleZh": "Prime Intellect 发布推理平台 Prime Inference，已上线 GLM-5.3 端点",
       "titleEn": "Prime Intellect Launches Prime Inference Platform with GLM-5.3 Endpoint",
@@ -58,38 +240,36 @@
         "Prime Intellect",
         "Prime Inference",
         "GLM-5.3",
-        "serverless",
+        "serverless endpoint",
         "reserved capacity",
-        "open-source models",
-        "inference"
+        "open-source inference"
       ],
       "topics": [
         "inference platform",
-        "serverless endpoints",
+        "serverless",
         "open-source models",
+        "GLM-5.3",
         "reserved capacity"
       ],
       "models": [
         "GLM-5.3"
       ],
-      "detailZh": "Prime Intellect 发布了名为 Prime Inference 的推理平台。根据官方信息，该平台提供 serverless 端点与预留容量两种使用方式，并跨数据中心服务前沿开源模型。平台已上线 GLM-5.3 端点。官方同时披露，其内部每天通过该平台处理近一万亿 token。\n\n从已披露的信息看，Prime Inference 的定位是面向开源模型的推理服务层：用户既可以选择按需调用的 serverless 端点，也可以选择预留容量以获得更稳定的资源。跨数据中心部署意味着服务不局限于单一机房。\n\n目前公开材料仅覆盖平台名称、两种容量模式、跨数据中心特性、已上线的 GLM-5.3 端点，以及内部每日近一万亿 token 的处理规模，未涉及具体定价、延迟指标、可用区域清单或与同类平台的对比数据。",
+      "detailZh": "Prime Intellect 发布了推理平台 Prime Inference，定位为面向前沿开源模型的推理服务。平台提供两种使用方式：serverless 端点与预留容量，并跨数据中心提供服务。\n\n根据官方信息，平台已上线 GLM-5.3 端点，用户可以直接调用该模型。Prime Intellect 同时披露，其内部每天通过该平台处理近一万亿 token，用以说明平台的承载规模。\n\n目前公开信息集中在平台形态、可用模型端点与内部处理量三个要点，未披露具体定价、延迟指标、可用区域清单或与其它推理服务的对比数据。",
       "keyPointsZh": [
         "Prime Intellect 发布推理平台 Prime Inference。",
         "平台提供 serverless 端点与预留容量两种模式。",
-        "平台跨数据中心服务前沿开源模型。",
         "已上线 GLM-5.3 端点。",
-        "官方称内部每天处理近一万亿 token。"
+        "服务跨数据中心运行，内部每天处理近一万亿 token。"
       ],
-      "impactZh": "该平台把前沿开源模型的推理能力以 serverless 和预留容量两种形态对外提供，降低了开发者直接使用开源模型的门槛，也反映出开源模型推理服务正在成为独立的产品类别。",
+      "impactZh": "该平台把前沿开源模型的推理接入进一步产品化，serverless 与预留容量并存的模式覆盖了从试验到规模化部署的不同需求，可能影响开发者选择开源模型托管与推理服务的决策。",
       "readerImpactZh": "",
-      "userImpactZh": "开发者可以通过 serverless 端点按需调用前沿开源模型，或通过预留容量获得更稳定的推理资源，无需自行部署和运维模型服务。",
-      "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：Prime Intellect 推出了 Prime Inference 平台，提供 serverless 端点与预留容量，跨数据中心运行，已上线 GLM-5.3 端点，内部日处理量接近一万亿 token。可以合理推断的是，该平台面向需要调用开源模型的开发者与企业，但具体性能、价格与可用性细节尚未在现有材料中说明。",
-      "limitationsZh": "现有信息未披露定价、延迟、吞吐、可用区域、SLA 以及与其他推理平台的对比数据；每日近一万亿 token 为内部处理量，并非平台对外服务的公开指标。",
+      "userImpactZh": "开发者可以通过 serverless 端点快速试用 GLM-5.3 等前沿开源模型，也可用预留容量承接稳定负载，减少自建推理基础设施的运维成本。",
+      "howItWorksZh": "平台以 serverless 端点形式对外提供模型调用，用户无需自行管理 GPU 资源；同时提供预留容量模式，用于需要稳定吞吐的场景。服务跨数据中心部署，官方称内部每天处理近一万亿 token。",
+      "interpretationZh": "已确认的事实是：Prime Intellect 发布了 Prime Inference，提供 serverless 与预留容量，已上线 GLM-5.3 端点，内部日处理量接近一万亿 token。至于其性能、价格竞争力与稳定性，目前没有公开数据可供判断。",
+      "limitationsZh": "官方未披露定价、延迟、吞吐上限、可用区域、SLA 以及 GLM-5.3 之外的具体模型清单；近一万亿 token 为内部处理量，不能直接等同于对外服务能力。",
       "actionStepsZh": [
-        "访问 Prime Intellect 官方渠道了解 Prime Inference 的接入方式与可用端点。",
-        "评估 serverless 端点与预留容量两种模式哪种更符合自身调用量与稳定性需求。",
-        "如需使用 GLM-5.3，可确认该端点的调用方式与限制。"
+        "访问 Prime Intellect 平台查看 Prime Inference 的 serverless 端点与预留容量选项。",
+        "试用已上线的 GLM-5.3 端点评估其是否满足自身需求。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -115,7 +295,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-02T20:37:23.599Z",
-        "endedAt": "2026-10-02T20:40:17.646Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -126,8 +306,26 @@
             "reports": 0
           },
           {
-            "at": "2026-10-02T20:40:17.646Z",
-            "label": "10/3 04:40",
+            "at": "2026-10-02T21:34:24.532Z",
+            "label": "10/3 05:34",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:31:25.465Z",
+            "label": "10/3 06:31",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:28:26.398Z",
+            "label": "10/3 07:28",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
             "value": 65,
             "reports": 1
           }
@@ -181,41 +379,41 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "这是AI音乐生成器Suno向语音内容生成领域的扩展，属于产品功能更新，对内容创作者有实际用途，但缺乏技术细节和训练信息。",
-      "importanceReasonEn": "This is an expansion of AI music generator Suno into spoken-word content generation, a product feature update with practical use for creators, but lacking technical and training details.",
+      "importanceReasonZh": "这是AI音乐生成器Suno向语音内容生成领域的扩展，属于产品功能更新，对内容创作者有实际用途，但技术细节披露有限。",
+      "importanceReasonEn": "This is an expansion of AI music generator Suno into spoken audio content, a product feature update with practical use for content creators, though technical details are limited.",
       "scoringMode": "ai",
       "titleZh": "AI音乐生成器Suno现可生成带匹配背景音乐的语音音频",
       "titleEn": "AI music generator Suno can now create spoken audio with matching background music",
-      "summaryZh": "Suno为其AI音乐生成器新增名为“Speech”的功能，可在单条音轨中生成语音文本及与之匹配的背景音乐。该公司表示该功能面向诗歌、冥想和睡前故事等场景。Suno未透露该模型的训练方式。",
+      "summaryZh": "Suno正在为其AI音乐生成器添加一项名为“Speech”的功能，可在单条音轨中生成语音文本及与之匹配的背景音乐。该公司表示，该功能面向诗歌、冥想和睡前故事等场景。Suno未说明该模型的训练方式。",
       "summaryEn": "Suno is adding a feature called \"Speech\" to its AI music generator that creates spoken text with matching background music in a single audio track. The company says it's built for things like poems, meditations, and bedtime stories. Suno hasn't said how the model was trained.",
       "keywords": [
         "Suno",
         "Speech",
-        "AI音乐",
+        "AI音乐生成",
         "语音音频",
         "背景音乐"
       ],
       "topics": [
         "AI音乐生成",
         "语音合成",
-        "生成式音频"
+        "音频生成"
       ],
       "models": [
         "Suno"
       ],
-      "detailZh": "Suno是一家开发AI音乐生成器的公司，其产品可根据提示生成音乐。该公司宣布为其AI音乐生成器新增一项名为“Speech”的功能。该功能可在单条音轨中生成语音文本以及与之匹配的背景音乐。Suno表示，该功能面向诗歌、冥想和睡前故事等使用场景。目前Suno尚未说明该模型是如何训练的。该消息由The Decoder AI报道。",
+      "detailZh": "Suno正在为其AI音乐生成器推出一项名为“Speech”的新功能。该功能可以在单条音轨中生成语音文本，并配上与之匹配的背景音乐。Suno表示，这一功能面向诗歌、冥想和睡前故事等使用场景。\n\n目前已知的信息来自Suno的官方发布。该功能被定位为在音乐生成之外增加语音内容创作能力，用户可以在同一音轨中获得朗读内容与背景音乐的组合。\n\nSuno没有说明该模型是如何训练的，也没有披露语音与音乐如何同步生成的技术细节。因此，关于其底层实现、音质水平、语言支持范围以及可用性等具体信息，目前尚不明确。",
       "keyPointsZh": [
-        "Suno新增名为“Speech”的功能",
-        "该功能可在单条音轨中生成语音文本和匹配的背景音乐",
-        "面向诗歌、冥想和睡前故事等场景",
-        "Suno未透露模型的训练方式"
+        "Suno新增名为“Speech”的功能，可在单条音轨中生成语音文本与匹配背景音乐。",
+        "该功能面向诗歌、冥想和睡前故事等场景。",
+        "Suno未披露该模型的训练方式。",
+        "这是Suno在AI音乐生成之外向语音内容生成的扩展。"
       ],
-      "impactZh": "该功能将Suno的能力从音乐生成扩展到带背景音乐的语音内容生成，可能吸引诗歌、冥想和睡前故事等领域的创作者使用。",
+      "impactZh": "该功能将Suno的能力从音乐生成扩展到语音内容创作，可能吸引诗歌、冥想、睡前故事等音频内容创作者使用，进一步加剧AI音频生成领域的竞争。",
       "readerImpactZh": "",
-      "userImpactZh": "使用Suno的创作者现在可以在同一音轨中生成语音文本和匹配的背景音乐，适用于诗歌、冥想和睡前故事等内容制作。",
+      "userImpactZh": "使用Suno的创作者可以在同一音轨中直接生成朗读内容与背景音乐，减少分别制作语音和配乐的工作流程，适合制作诗歌、冥想和睡前故事类音频。",
       "howItWorksZh": "",
-      "interpretationZh": "根据报道，Suno新增的Speech功能可在单条音轨中同时生成语音文本和匹配的背景音乐，面向诗歌、冥想和睡前故事等场景。Suno未披露该模型的训练方式，因此其技术实现细节尚不明确。",
-      "limitationsZh": "Suno未说明该模型的训练方式，也未提供技术细节、可用范围或发布时间等具体信息。",
+      "interpretationZh": "从已披露信息看，Suno的Speech功能是在其音乐生成能力基础上增加语音朗读与配乐的组合输出。官方将其定位为面向诗歌、冥想和睡前故事等场景的创作工具。由于Suno未说明模型训练方式和语音与音乐的生成机制，目前只能确认功能存在及其目标用途，无法判断其技术实现或实际效果。",
+      "limitationsZh": "Suno未披露该模型的训练方式、语音与音乐同步生成的技术细节、音质水平、支持的语言范围、可用地区及发布时间。以上均为尚未验证的信息。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -243,7 +441,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-02T20:07:36.000Z",
-        "endedAt": "2026-10-02T20:40:17.646Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -254,8 +452,32 @@
             "reports": 0
           },
           {
-            "at": "2026-10-02T20:40:17.646Z",
-            "label": "10/3 04:40",
+            "at": "2026-10-02T20:59:10.266Z",
+            "label": "10/3 04:59",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T21:50:44.532Z",
+            "label": "10/3 05:50",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:42:18.798Z",
+            "label": "10/3 06:42",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:33:53.064Z",
+            "label": "10/3 07:33",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
             "value": 55,
             "reports": 1
           }
@@ -377,7 +599,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-02T19:41:05.000Z",
-        "endedAt": "2026-10-02T20:40:17.646Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -388,8 +610,32 @@
             "reports": 0
           },
           {
-            "at": "2026-10-02T20:40:17.646Z",
-            "label": "10/3 04:40",
+            "at": "2026-10-02T20:37:57.466Z",
+            "label": "10/3 04:37",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T21:34:49.932Z",
+            "label": "10/3 05:34",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:31:42.398Z",
+            "label": "10/3 06:31",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:28:34.864Z",
+            "label": "10/3 07:28",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
             "value": 65,
             "reports": 1
           }
@@ -531,7 +777,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-02T19:33:51.000Z",
-        "endedAt": "2026-10-02T20:40:17.646Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -542,14 +788,32 @@
             "reports": 0
           },
           {
-            "at": "2026-10-02T20:07:04.323Z",
-            "label": "10/3 04:07",
-            "value": 39,
+            "at": "2026-10-02T20:32:10.266Z",
+            "label": "10/3 04:32",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-02T20:40:17.646Z",
-            "label": "10/3 04:40",
+            "at": "2026-10-02T21:30:29.532Z",
+            "label": "10/3 05:30",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:28:48.798Z",
+            "label": "10/3 06:28",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:27:08.064Z",
+            "label": "10/3 07:27",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
             "value": 65,
             "reports": 1
           }
@@ -678,7 +942,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-02T19:15:51.000Z",
-        "endedAt": "2026-10-02T20:40:17.646Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -689,14 +953,38 @@
             "reports": 0
           },
           {
-            "at": "2026-10-02T19:58:04.323Z",
-            "label": "10/3 03:58",
+            "at": "2026-10-02T20:07:27.055Z",
+            "label": "10/3 04:07",
+            "value": 34,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-02T20:59:03.110Z",
+            "label": "10/3 04:59",
+            "value": 39,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-02T21:50:39.165Z",
+            "label": "10/3 05:50",
             "value": 45,
             "reports": 2
           },
           {
-            "at": "2026-10-02T20:40:17.646Z",
-            "label": "10/3 04:40",
+            "at": "2026-10-02T22:42:15.220Z",
+            "label": "10/3 06:42",
+            "value": 50,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-02T23:33:51.275Z",
+            "label": "10/3 07:33",
+            "value": 56,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
             "value": 61,
             "reports": 2
           }
@@ -841,7 +1129,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-02T18:19:51.000Z",
-        "endedAt": "2026-10-02T20:40:17.646Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
         "current": 61,
         "peak": 61,
         "history": [
@@ -852,21 +1140,197 @@
             "reports": 0
           },
           {
-            "at": "2026-10-02T19:06:39.882Z",
-            "label": "10/3 03:06",
-            "value": 30,
+            "at": "2026-10-02T19:12:04.761Z",
+            "label": "10/3 03:12",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-10-02T19:53:28.764Z",
-            "label": "10/3 03:53",
-            "value": 45,
+            "at": "2026-10-02T20:04:18.523Z",
+            "label": "10/3 04:04",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-10-02T20:40:17.646Z",
-            "label": "10/3 04:40",
+            "at": "2026-10-02T20:56:32.284Z",
+            "label": "10/3 04:56",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T21:48:46.046Z",
+            "label": "10/3 05:48",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:40:59.807Z",
+            "label": "10/3 06:40",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:33:13.569Z",
+            "label": "10/3 07:33",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
             "value": 61,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b3857f26daabd24c",
+      "normalizedUrl": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents",
+      "originalUrl": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+      "titleOriginal": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new risks from AI agents",
+      "summaryOriginal": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history riskier.",
+      "originalLanguage": "en",
+      "author": "Sarah Perez",
+      "category": "policy",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-02T18:11:27.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+          "publishedAt": "2026-10-02T18:11:27.000Z",
+          "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new risks from AI agents",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 68,
+      "importanceReasonZh": "苹果针对AI代理调整系统级权限控制，可能影响macOS上AI工具和代理类应用的权限获取方式，对开发者和用户都有实际影响。",
+      "importanceReasonEn": "Apple adjusting system-level permission controls in response to AI agents could affect how AI tools and agent apps obtain permissions on macOS, with practical implications for developers and users.",
+      "scoringMode": "ai",
+      "titleZh": "苹果称因AI代理带来新风险，将收紧macOS“完全磁盘访问”权限控制",
+      "titleEn": "Apple says it's tightening macOS 'Full Disk Access' controls due to new risks from AI agents",
+      "summaryZh": "苹果表示将围绕macOS的“完全磁盘访问”权限增加新的控制措施，并警告能力日益增强的AI代理让对用户文件、信息、邮件和浏览历史的广泛访问变得更具风险。",
+      "summaryEn": "Apple says it will add new controls around macOS's Full Disk Access permission, warning that increasingly capable AI agents make broad access to users' files, messages, mail, and browsing history riskier.",
+      "keywords": [
+        "Apple",
+        "macOS",
+        "Full Disk Access",
+        "AI agents",
+        "privacy"
+      ],
+      "topics": [
+        "macOS",
+        "隐私安全",
+        "AI代理",
+        "权限控制"
+      ],
+      "models": [],
+      "detailZh": "苹果表示，将围绕macOS的“完全磁盘访问”（Full Disk Access）权限增加新的控制措施。该权限目前允许应用广泛访问用户设备上的文件、信息、邮件和浏览历史等数据。\n\n苹果给出的理由是，能力日益增强的AI代理使这种广泛访问变得更具风险。AI代理通常需要读取大量本地数据来执行任务，一旦获得完全磁盘访问权限，就可能触及高度敏感的个人信息。\n\n目前公开信息仅来自苹果的声明，具体新增控制的形式、生效时间、是否影响现有应用以及开发者需要如何适配，均未在现有材料中说明。",
+      "keyPointsZh": [
+        "苹果计划为macOS的“完全磁盘访问”权限增加新的控制措施。",
+        "苹果警告能力增强的AI代理使广泛文件访问风险上升。",
+        "完全磁盘访问可触及文件、信息、邮件和浏览历史等敏感数据。",
+        "具体控制细节、生效时间和适配要求尚未公布。"
+      ],
+      "impactZh": "这一调整可能改变macOS上AI代理和自动化工具获取敏感数据的方式，推动权限管理从“一次性授权”转向更细粒度或更受约束的模式，并可能影响依赖完全磁盘访问的现有应用。",
+      "readerImpactZh": "普通Mac用户未来可能看到更多与AI代理相关的权限提示或限制，敏感数据被应用广泛读取的风险有望降低，但部分依赖完全磁盘访问的AI工具可能功能受限或需要重新授权。",
+      "userImpactZh": "开发者和AI团队在macOS上构建代理类应用时，可能需要重新设计数据访问流程，适配更严格的权限控制，并提前评估完全磁盘访问权限被收紧对功能的影响。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是苹果将增加控制并给出AI代理风险理由；合理推断是苹果可能引入更细粒度或更严格的授权机制，但具体实现方式尚无公开信息，不能确定其技术细节。",
+      "limitationsZh": "现有材料仅为苹果的声明摘要，缺少新增控制的具体内容、生效时间、适用范围、对现有应用的影响以及开发者适配要求，无法验证实际执行力度。",
+      "actionStepsZh": [
+        "关注苹果后续发布的macOS权限变更说明和开发者文档。",
+        "评估现有AI代理或自动化工具对完全磁盘访问权限的依赖程度。",
+        "在测试环境中提前验证权限收紧后应用功能是否受影响。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+          "publishedAt": "2026-10-02T18:11:27.000Z",
+          "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new risks from AI agents",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-02T18:11:27.000Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
+        "current": 63,
+        "peak": 63,
+        "history": [
+          {
+            "at": "2026-10-02T18:11:27.000Z",
+            "label": "10/3 02:11",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-02T19:04:52.761Z",
+            "label": "10/3 03:04",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T19:58:18.523Z",
+            "label": "10/3 03:58",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T20:51:44.284Z",
+            "label": "10/3 04:51",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T21:45:10.046Z",
+            "label": "10/3 05:45",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:38:35.807Z",
+            "label": "10/3 06:38",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:32:01.569Z",
+            "label": "10/3 07:32",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
+            "value": 63,
             "reports": 1
           }
         ],
@@ -984,7 +1448,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-02T16:15:20.428Z",
-        "endedAt": "2026-10-02T20:40:17.646Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -995,32 +1459,56 @@
             "reports": 0
           },
           {
-            "at": "2026-10-02T17:08:19.871Z",
-            "label": "10/3 01:08",
-            "value": 25,
+            "at": "2026-10-02T17:09:47.861Z",
+            "label": "10/3 01:09",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-02T18:01:19.315Z",
-            "label": "10/3 02:01",
-            "value": 36,
+            "at": "2026-10-02T18:04:15.295Z",
+            "label": "10/3 02:04",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-02T18:54:18.758Z",
-            "label": "10/3 02:54",
-            "value": 46,
+            "at": "2026-10-02T18:58:42.729Z",
+            "label": "10/3 02:58",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-02T19:47:18.202Z",
-            "label": "10/3 03:47",
-            "value": 57,
+            "at": "2026-10-02T19:53:10.162Z",
+            "label": "10/3 03:53",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-10-02T20:40:17.646Z",
-            "label": "10/3 04:40",
+            "at": "2026-10-02T20:47:37.596Z",
+            "label": "10/3 04:47",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T21:42:05.030Z",
+            "label": "10/3 05:42",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:36:32.463Z",
+            "label": "10/3 06:36",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:30:59.897Z",
+            "label": "10/3 07:30",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
             "value": 68,
             "reports": 1
           }
@@ -1136,7 +1624,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-02T16:15:00.000Z",
-        "endedAt": "2026-10-02T20:40:17.646Z",
+        "endedAt": "2026-10-03T00:25:27.331Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -1147,32 +1635,56 @@
             "reports": 0
           },
           {
-            "at": "2026-10-02T17:08:03.529Z",
-            "label": "10/3 01:08",
-            "value": 26,
+            "at": "2026-10-02T17:09:29.703Z",
+            "label": "10/3 01:09",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-10-02T18:01:07.058Z",
-            "label": "10/3 02:01",
-            "value": 38,
+            "at": "2026-10-02T18:03:59.406Z",
+            "label": "10/3 02:03",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-10-02T18:54:10.587Z",
-            "label": "10/3 02:54",
-            "value": 50,
+            "at": "2026-10-02T18:58:29.110Z",
+            "label": "10/3 02:58",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-10-02T19:47:14.116Z",
-            "label": "10/3 03:47",
-            "value": 62,
+            "at": "2026-10-02T19:52:58.813Z",
+            "label": "10/3 03:52",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-02T20:40:17.646Z",
-            "label": "10/3 04:40",
+            "at": "2026-10-02T20:47:28.517Z",
+            "label": "10/3 04:47",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T21:41:58.220Z",
+            "label": "10/3 05:41",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T22:36:27.924Z",
+            "label": "10/3 06:36",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-02T23:30:57.627Z",
+            "label": "10/3 07:30",
+            "value": 67,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-03T00:25:27.331Z",
+            "label": "10/3 08:25",
             "value": 74,
             "reports": 1
           }
