@@ -1,7 +1,140 @@
 {
-  "generatedAt": "2026-10-04T21:53:37.982Z",
+  "generatedAt": "2026-10-05T00:46:54.993Z",
   "date": "2026-10-05",
   "items": [
+    {
+      "id": "133a2ab7aae4eb20",
+      "normalizedUrl": "https://promptarmor.com/resources/four-databricks-genie-controls-that-dont-stop-malicious-skills",
+      "originalUrl": "https://www.promptarmor.com/resources/four-databricks-genie-controls-that-dont-stop-malicious-skills",
+      "titleOriginal": "PromptArmor 披露 Databricks Genie 恶意 Skill 可绕过四类控制实施钓鱼与数据外泄",
+      "summaryOriginal": "PromptArmor 披露 Databricks Genie Code 可被恶意 Skill 利用：Skill 代码将数据嵌入聊天渲染的 HTML 显示，渲染时通过用户浏览器发起网络请求外泄数据，并弹出钓鱼界面索取凭据。",
+      "originalLanguage": "zh",
+      "author": "PromptArmor：Threat Intelligence",
+      "category": "research",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/dfcis3hxowljt45i0bvyi3f0n",
+        "https://www.promptarmor.com/resources/four-databricks-genie-controls-that-dont-stop-malicious-skills"
+      ],
+      "publishedAt": "2026-10-05T00:24:02.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-05T00:36:28.048Z",
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/dfcis3hxowljt45i0bvyi3f0n"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:dfcis3hxowljt45i0bvyi3f0n",
+          "name": "PromptArmor：Threat Intelligence",
+          "type": "aggregator",
+          "url": "https://www.promptarmor.com/resources/four-databricks-genie-controls-that-dont-stop-malicious-skills",
+          "publishedAt": "2026-10-05T00:24:02.000Z",
+          "title": "PromptArmor 披露 Databricks Genie 恶意 Skill 可绕过四类控制实施钓鱼与数据外泄",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/dfcis3hxowljt45i0bvyi3f0n",
+            "https://www.promptarmor.com/resources/four-databricks-genie-controls-that-dont-stop-malicious-skills"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该披露揭示了 AI 助手/Agent 平台中 Skill 机制与聊天 HTML 渲染结合带来的新型攻击面，涉及数据外泄与凭据钓鱼，对使用 Databricks Genie 的团队具有直接安全影响。",
+      "importanceReasonEn": "This disclosure reveals a new attack surface arising from the combination of Skill mechanisms and chat HTML rendering in AI assistant/agent platforms, involving data exfiltration and credential phishing, with direct security implications for teams using Databricks Genie.",
+      "scoringMode": "ai",
+      "titleZh": "PromptArmor 披露 Databricks Genie 恶意 Skill 可绕过四类控制实施钓鱼与数据外泄",
+      "titleEn": "PromptArmor Discloses Databricks Genie Malicious Skill Bypassing Four Controls for Phishing and Data Exfiltration",
+      "summaryZh": "PromptArmor 披露 Databricks Genie Code 可被恶意 Skill 利用：Skill 代码将数据嵌入聊天渲染的 HTML 显示，渲染时通过用户浏览器发起网络请求外泄数据，并弹出钓鱼界面索取凭据。",
+      "summaryEn": "PromptArmor discloses that Databricks Genie Code can be exploited via a malicious Skill: the Skill code embeds data into HTML rendered in chat, which on render triggers network requests from the user's browser to exfiltrate data and displays a phishing interface requesting credentials.",
+      "keywords": [
+        "PromptArmor",
+        "Databricks Genie",
+        "恶意Skill",
+        "数据外泄",
+        "钓鱼",
+        "HTML渲染",
+        "控制绕过"
+      ],
+      "topics": [
+        "AI安全",
+        "数据外泄",
+        "钓鱼攻击",
+        "Databricks",
+        "Agent安全"
+      ],
+      "models": [
+        "Databricks Genie"
+      ],
+      "detailZh": "PromptArmor 发布威胁情报，披露 Databricks Genie Code 存在可被恶意 Skill 利用的安全问题。根据披露内容，攻击者可以构造一个恶意 Skill，其代码将敏感数据嵌入到聊天界面所渲染的 HTML 显示中。当该 HTML 在用户聊天窗口中被渲染时，会借助用户自己的浏览器发起网络请求，从而将数据外泄到外部地址。\n\n同一恶意 Skill 还会在聊天中弹出钓鱼界面，向用户索取凭据。由于这些行为发生在聊天渲染环节，披露称其可绕过四类控制措施，但输入材料未具体说明这四类控制分别是什么。\n\n该事件的核心风险在于：Skill 作为可扩展 AI 助手能力的机制，其代码输出若被直接渲染为 HTML，就可能把原本受控的聊天界面变成攻击载荷的执行与展示通道。用户浏览器成为外泄请求的发起方，使得传统基于服务端出站流量的检测可能失效。\n\n目前信息来自 PromptArmor 的威胁情报披露，Databricks 官方尚未在输入材料中给出回应或修复说明，具体受影响的版本、利用前置条件以及四类被绕过的控制细节均未提供。",
+      "keyPointsZh": [
+        "PromptArmor 披露 Databricks Genie Code 可被恶意 Skill 利用。",
+        "恶意 Skill 将数据嵌入聊天渲染的 HTML，渲染时经用户浏览器发起请求外泄数据。",
+        "同一 Skill 会弹出钓鱼界面索取用户凭据。",
+        "披露称该手法可绕过四类控制，但未说明具体是哪四类。"
+      ],
+      "impactZh": "该披露表明，具备 Skill 扩展与 HTML 渲染能力的 AI 助手平台可能成为数据外泄和凭据钓鱼的新通道。由于外泄请求由用户浏览器发起，传统服务端出站检测可能难以覆盖，使用 Databricks Genie 的团队需要重新评估其 Skill 信任边界与渲染安全策略。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Databricks Genie 或类似支持 Skill 扩展的 AI 平台的用户与团队，应警惕来源不明的 Skill，避免在聊天中渲染不可信 HTML，并关注平台方是否发布修复或缓解措施。",
+      "howItWorksZh": "根据披露，攻击链包含两个环节：其一，恶意 Skill 的代码把敏感数据嵌入到聊天界面渲染的 HTML 中，当该 HTML 在用户浏览器中渲染时触发网络请求，将数据发送到外部地址；其二，同一 Skill 在聊天中显示钓鱼界面，诱导用户输入凭据。输入材料未提供更具体的实现细节或复现步骤。",
+      "interpretationZh": "从已披露信息看，这是一类将 AI 平台扩展机制与前端渲染能力结合的攻击思路：Skill 提供代码执行与内容生成能力，聊天界面负责渲染，二者叠加后使浏览器成为外泄与钓鱼的载体。需要区分的是，披露方给出的结论（可绕过四类控制）属于其单方陈述，具体控制项与验证细节尚未公开。",
+      "limitationsZh": "输入材料未说明被绕过的四类控制具体是什么，也未提供受影响版本、利用前置条件、复现步骤或 Databricks 官方回应与修复状态。该披露目前为单一来源，尚未见到独立验证。",
+      "actionStepsZh": [
+        "审查并限制 Databricks Genie 中可安装或调用的 Skill 来源，仅使用可信 Skill。",
+        "关注 Databricks 官方是否发布针对该披露的修复或缓解公告。",
+        "评估聊天界面渲染 HTML 的安全策略，避免不可信内容直接渲染。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:dfcis3hxowljt45i0bvyi3f0n",
+          "name": "PromptArmor：Threat Intelligence",
+          "type": "aggregator",
+          "url": "https://www.promptarmor.com/resources/four-databricks-genie-controls-that-dont-stop-malicious-skills",
+          "publishedAt": "2026-10-05T00:24:02.000Z",
+          "title": "PromptArmor 披露 Databricks Genie 恶意 Skill 可绕过四类控制实施钓鱼与数据外泄",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/dfcis3hxowljt45i0bvyi3f0n",
+            "https://www.promptarmor.com/resources/four-databricks-genie-controls-that-dont-stop-malicious-skills"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-05T00:24:02.000Z",
+        "endedAt": "2026-10-05T00:46:54.993Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-05T00:24:02.000Z",
+            "label": "10/5 08:24",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-05T00:46:54.993Z",
+            "label": "10/5 08:46",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "3b5df735b596a695",
       "normalizedUrl": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions",
@@ -38,8 +171,8 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该事件反映AI生成内容对开源安全协作流程造成的实际运营压力，具有行业影响。",
-      "importanceReasonEn": "The event reflects the operational pressure AI-generated content places on open source security workflows, with industry-wide implications.",
+      "importanceReasonZh": "该事件反映AI生成内容对安全漏洞赏金流程的实际冲击，涉及谷歌这一重要开源参与方，对安全社区和开源维护者有参考价值。",
+      "importanceReasonEn": "The event reflects the real impact of AI-generated content on security bug bounty workflows, involving Google, a major open source participant, and is relevant to the security community and open source maintainers.",
       "scoringMode": "ai",
       "titleZh": "谷歌因AI提交量“大幅上升”冻结其开源漏洞赏金计划",
       "titleEn": "Google froze its open source bug bounty program due to a 'significant rise' in AI submissions",
@@ -56,21 +189,22 @@
         "bug bounty",
         "open source",
         "AI-generated reports",
-        "Google"
+        "Google",
+        "security"
       ],
       "models": [],
-      "detailZh": "根据TechCrunch AI的报道，谷歌因AI提交量出现“大幅上升”而冻结了其开源漏洞赏金计划。报道将这一现象描述为AI垃圾内容似乎正在压垮漏洞赏金计划。目前已知的信息仅限于此：谷歌采取了冻结措施，原因是AI相关提交显著增加。报道没有提供提交量变化的具体数字、冻结的起止时间、涉及的具体开源项目，也没有说明谷歌是否计划恢复该计划或调整规则。",
+      "detailZh": "TechCrunch AI报道称，谷歌冻结了其开源漏洞赏金计划，原因是AI提交量出现“大幅上升”。报道将这一现象描述为AI垃圾内容（AI slop）似乎正在压垮漏洞赏金计划。目前输入仅包含标题和简短摘要，未提供冻结的具体时间、涉及的具体项目、提交量变化数据或谷歌的官方声明细节。",
       "keyPointsZh": [
         "谷歌冻结了其开源漏洞赏金计划。",
         "冻结原因是AI提交量出现“大幅上升”。",
         "报道将这一现象描述为AI垃圾内容压垮漏洞赏金计划。"
       ],
-      "impactZh": "该事件表明AI生成的低质量提交可能对开源安全协作机制造成负担，可能促使其他组织重新评估漏洞赏金流程。",
+      "impactZh": "该事件表明AI生成的低质量提交可能对安全漏洞赏金流程造成负担，影响开源安全生态的运作效率。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道事实是谷歌因AI提交量大幅上升而冻结开源漏洞赏金计划，并将此现象归因于AI垃圾内容。可以合理推断，大量由AI生成的低质量或重复性漏洞报告增加了审核负担，但报道未提供具体数据或谷歌的官方说明来证实这一推断。",
-      "limitationsZh": "报道未提供提交量变化的具体数字、冻结的时间范围、涉及的项目范围，也未包含谷歌的官方声明或恢复计划，因此无法评估影响的规模与持续时间。",
+      "interpretationZh": "根据现有信息，可以确认的是谷歌冻结了开源漏洞赏金计划，并将AI提交量大幅上升作为原因。但具体提交量、影响范围和后续安排尚不明确，需要更多官方信息才能完整评估。",
+      "limitationsZh": "输入仅包含标题和简短摘要，缺少谷歌官方声明、具体数据、受影响项目范围及冻结期限等关键信息，无法验证细节。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -93,7 +227,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-04T20:31:07.000Z",
-        "endedAt": "2026-10-04T21:53:37.982Z",
+        "endedAt": "2026-10-05T00:46:54.993Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -104,14 +238,32 @@
             "reports": 0
           },
           {
-            "at": "2026-10-04T21:12:22.491Z",
-            "label": "10/5 05:12",
-            "value": 35,
+            "at": "2026-10-04T21:22:16.598Z",
+            "label": "10/5 05:22",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-04T21:53:37.982Z",
-            "label": "10/5 05:53",
+            "at": "2026-10-04T22:13:26.197Z",
+            "label": "10/5 06:13",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-04T23:04:35.795Z",
+            "label": "10/5 07:04",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-04T23:55:45.394Z",
+            "label": "10/5 07:55",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T00:46:54.993Z",
+            "label": "10/5 08:46",
             "value": 55,
             "reports": 1
           }
@@ -154,12 +306,12 @@
           "resourceLinks": []
         }
       ],
-      "importance": 35,
-      "importanceReasonZh": "该条目仅为一档播客节目的讨论摘要，缺乏具体政策细节、数据或可验证事实，信息量有限。",
-      "importanceReasonEn": "This item is only a podcast discussion summary with no concrete policy details, data, or verifiable facts, offering limited information.",
+      "importance": 30,
+      "importanceReasonZh": "该条目仅为一档播客节目的讨论摘要，缺乏具体事实、数据或可验证的政策细节，信息量有限。",
+      "importanceReasonEn": "This item is only a summary of a podcast discussion, lacking concrete facts, data, or verifiable policy details, with limited information value.",
       "scoringMode": "ai",
       "titleZh": "“超级智能”与非约束性安全协议能解决AI的形象问题吗？",
-      "titleEn": "Can ‘super intelligence’ and a non-binding safety pact solve AI’s image problem?",
+      "titleEn": "Can 'super intelligence' and a non-binding safety pact solve AI's image problem?",
       "summaryZh": "在Equity节目中，我们讨论了特朗普政府试图重塑AI形象的努力。",
       "summaryEn": "On Equity, we discussed the Trump administration's attempts to rebrand AI.",
       "keywords": [
@@ -172,23 +324,22 @@
       "topics": [
         "AI形象",
         "AI政策",
-        "特朗普政府",
+        "超级智能",
         "AI安全"
       ],
       "models": [],
-      "detailZh": "TechCrunch AI发布了一篇关于Equity节目的内容，主题是特朗普政府试图重塑人工智能的公众形象。标题提出了两个核心元素：一是“超级智能”这一概念，二是“非约束性安全协议”。节目讨论围绕这些元素能否解决AI当前面临的形象问题展开。\n\n目前可获取的信息仅为标题和一句摘要，没有提供协议的具体内容、参与方、签署时间或任何量化指标。因此无法确认该安全协议是否真实存在、由谁提出、覆盖哪些范围。\n\n从标题措辞看，这更像是一期评论或分析类节目，而非政策发布或产品公告。其价值在于呈现一种讨论视角，而非传递可验证的新闻事实。",
+      "detailZh": "TechCrunch AI发布了一篇题为《“超级智能”与非约束性安全协议能解决AI的形象问题吗？》的内容，摘要显示这是Equity节目中的一次讨论。讨论的主题是特朗普政府试图重塑人工智能的公众形象。\n\n根据现有信息，讨论涉及两个概念：一是“超级智能”，二是“非约束性安全协议”。但输入材料没有提供任何关于这些概念的具体内容、提出者、时间表或政策文本。\n\n该内容属于评论/播客性质，而非正式的政策文件或新闻报道。因此，关于特朗普政府具体采取了哪些行动、这些行动是否已经实施、以及“非约束性安全协议”的具体条款，均无法从现有材料中确认。\n\n整体来看，这是一条信息量非常有限的条目，仅能确认存在这样一场讨论，但无法提供更多可验证的事实。",
       "keyPointsZh": [
         "TechCrunch AI的Equity节目讨论了特朗普政府重塑AI形象的努力。",
-        "讨论涉及“超级智能”概念和一项“非约束性安全协议”。",
-        "目前仅有标题和摘要，缺乏协议细节、参与方或数据。",
-        "内容属于评论/讨论性质，而非正式政策或产品发布。"
+        "讨论涉及“超级智能”和“非约束性安全协议”两个概念。",
+        "输入材料未提供具体政策细节、数据或可验证事实。"
       ],
-      "impactZh": "该讨论反映了AI行业与政策制定者之间关于形象与安全叙事的持续博弈，但缺乏具体行动或结果，实际影响尚不明确。",
+      "impactZh": "该讨论反映了围绕AI公共形象和政策沟通的持续争论，但缺乏具体政策行动或数据支撑，实际影响尚不明确。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道事实：TechCrunch AI的Equity节目讨论了特朗普政府试图重塑AI形象，并提及“超级智能”和非约束性安全协议。合理推断：该节目可能探讨了通过强调安全承诺来改善公众对AI的观感，但具体机制和效果无法从现有信息中确认。",
-      "limitationsZh": "仅有标题和一句摘要，没有协议文本、参与方、时间表或任何数据。无法验证“非约束性安全协议”是否真实存在或仅为讨论假设。",
+      "interpretationZh": "从现有材料看，这是一次媒体评论性质的讨论，而非正式政策发布。可以合理推断，讨论的核心是AI行业或政府如何通过话语和协议来改善公众对AI的观感，但具体机制和内容无法确认。",
+      "limitationsZh": "输入材料仅为播客摘要，没有提供政策文本、具体行动、时间表或任何数据。关于“超级智能”和“非约束性安全协议”的具体含义、提出方和适用范围均未说明，无法验证其真实性或实际进展。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -211,9 +362,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-04T20:08:34.000Z",
-        "endedAt": "2026-10-04T21:53:37.982Z",
-        "current": 44,
-        "peak": 44,
+        "endedAt": "2026-10-05T00:46:54.993Z",
+        "current": 42,
+        "peak": 42,
         "history": [
           {
             "at": "2026-10-04T20:08:34.000Z",
@@ -222,15 +373,33 @@
             "reports": 0
           },
           {
-            "at": "2026-10-04T21:01:05.991Z",
-            "label": "10/5 05:01",
-            "value": 29,
+            "at": "2026-10-04T21:04:14.198Z",
+            "label": "10/5 05:04",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-04T21:53:37.982Z",
-            "label": "10/5 05:53",
-            "value": 44,
+            "at": "2026-10-04T21:59:54.397Z",
+            "label": "10/5 05:59",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-04T22:55:34.595Z",
+            "label": "10/5 06:55",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-04T23:51:14.794Z",
+            "label": "10/5 07:51",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T00:46:54.993Z",
+            "label": "10/5 08:46",
+            "value": 42,
             "reports": 1
           }
         ],
@@ -344,7 +513,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-04T17:41:58.000Z",
-        "endedAt": "2026-10-04T21:53:37.982Z",
+        "endedAt": "2026-10-05T00:46:54.993Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -355,32 +524,50 @@
             "reports": 0
           },
           {
-            "at": "2026-10-04T18:32:17.996Z",
-            "label": "10/5 02:32",
-            "value": 22,
+            "at": "2026-10-04T18:35:05.124Z",
+            "label": "10/5 02:35",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-04T19:22:37.992Z",
-            "label": "10/5 03:22",
-            "value": 31,
+            "at": "2026-10-04T19:28:12.248Z",
+            "label": "10/5 03:28",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-04T20:12:57.989Z",
-            "label": "10/5 04:12",
-            "value": 39,
+            "at": "2026-10-04T20:21:19.372Z",
+            "label": "10/5 04:21",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-04T21:03:17.985Z",
-            "label": "10/5 05:03",
-            "value": 47,
+            "at": "2026-10-04T21:14:26.496Z",
+            "label": "10/5 05:14",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-04T21:53:37.982Z",
-            "label": "10/5 05:53",
+            "at": "2026-10-04T22:07:33.620Z",
+            "label": "10/5 06:07",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-04T23:00:40.744Z",
+            "label": "10/5 07:00",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-04T23:53:47.868Z",
+            "label": "10/5 07:53",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T00:46:54.993Z",
+            "label": "10/5 08:46",
             "value": 55,
             "reports": 1
           }
