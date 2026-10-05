@@ -1,7 +1,304 @@
 {
-  "generatedAt": "2026-10-05T00:46:54.993Z",
+  "generatedAt": "2026-10-05T06:53:22.159Z",
   "date": "2026-10-05",
   "items": [
+    {
+      "id": "bc14691a892bd7c7",
+      "normalizedUrl": "https://arxiv.org/abs/2610.02260",
+      "originalUrl": "https://arxiv.org/abs/2610.02260",
+      "titleOriginal": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
+      "summaryOriginal": "arXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many downstream applications require their samples to satisfy prescribed constraints, such as observed measurements and physical laws. However, existing constrained samplers often face a trade-off: \\textit{enforcing constraints can substantially displace samples from the pretrained data distribution}. To address this trade-off, we introduce \\textbf{MintFlow}, a training-free constrained sampling framework that formulates constraint enforcement as a minimal intervention on the pretrained flow trajectory. MintFlow seeks the minimal perturbation of an intermediate flow state such that its subsequent evolution under the pretrained flow field satisfies the target constraint. By minimally perturbing the flow state while keeping the pretrained flow field unchanged, MintFlow enforces the constraint while minimizing unnecessary deviation from the pretrained distribution. An adjoint formulation yields a closed-form expression for this perturbation, eliminating expensive iterative optimization. Furthermore, MintFlow adaptively selects the intervention time to balance the required perturbatio",
+      "originalLanguage": "en",
+      "author": "Yesom Park, Kelvin Kan, Qifan Chen, Thomas Flynn, Hayden Schaeffer. Xihaier Luo",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-05T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.02260",
+          "publishedAt": "2026-10-05T04:00:00.000Z",
+          "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该工作针对流匹配模型约束采样中约束满足与分布保真度之间的权衡提出免训练方案，方法思路清晰，但仅有摘要信息，缺少实验与实现细节。",
+      "importanceReasonEn": "It proposes a training-free approach to the trade-off between constraint satisfaction and distribution fidelity in constrained sampling for flow matching models; the idea is clear but only abstract-level information is available, with no experiments or implementation details.",
+      "scoringMode": "ai",
+      "titleZh": "MintFlow：面向约束流匹配的最小轨迹干预",
+      "titleEn": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
+      "summaryZh": "MintFlow 是一种免训练的约束采样框架，将约束施加表述为对预训练流轨迹的最小干预，通过伴随公式得到闭式扰动解，避免昂贵的迭代优化，并自适应选择干预时间以平衡扰动幅度。",
+      "summaryEn": "MintFlow is a training-free constrained sampling framework that formulates constraint enforcement as a minimal intervention on the pretrained flow trajectory, derives a closed-form perturbation via an adjoint formulation to avoid expensive iterative optimization, and adaptively selects the intervention time to balance perturbation magnitude.",
+      "keywords": [
+        "MintFlow",
+        "flow matching",
+        "constrained sampling",
+        "minimal intervention",
+        "adjoint formulation"
+      ],
+      "topics": [
+        "flow matching",
+        "constrained sampling",
+        "generative models",
+        "training-free methods"
+      ],
+      "models": [
+        "MintFlow"
+      ],
+      "detailZh": "该条目来自 arXiv 的新论文公告，标题为 MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching。摘要指出，流匹配模型在生成建模中表现优异，许多下游应用要求其样本满足预设约束，例如观测测量和物理定律。然而现有约束采样器往往面临一个权衡：强制满足约束可能使样本大幅偏离预训练数据分布。\n\n为缓解这一权衡，作者提出 MintFlow，一个免训练的约束采样框架，将约束施加表述为对预训练流轨迹的最小干预。其核心思路是寻找对中间流状态的最小扰动，使得该状态在预训练流场下后续演化能够满足目标约束。\n\n由于只对流状态做最小扰动而保持预训练流场不变，MintFlow 在满足约束的同时尽量减少对预训练分布的不必要偏离。摘要还提到，通过伴随（adjoint）公式可以得到该扰动的闭式表达式，从而避免昂贵的迭代优化。\n\n此外，MintFlow 会自适应地选择干预时间，以平衡所需的扰动幅度。摘要在此处被截断，未给出实验设置、数据集、评价指标或定量结果。",
+      "keyPointsZh": [
+        "MintFlow 是一个免训练的约束采样框架，用于流匹配模型。",
+        "它把约束施加建模为对预训练流轨迹的最小干预，只扰动中间流状态而保持流场不变。",
+        "通过伴随公式得到扰动的闭式解，避免昂贵的迭代优化。",
+        "方法自适应选择干预时间，以平衡所需扰动幅度。",
+        "摘要未提供实验、数据集或定量结果。"
+      ],
+      "impactZh": "该工作提出了一种在约束采样中兼顾约束满足与分布保真度的免训练思路，若方法有效，可降低为流匹配模型添加约束的工程成本，并减少约束采样导致的分布偏移。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "根据摘要，MintFlow 的工作方式如下：给定预训练的流匹配模型，在采样轨迹的某个中间状态上施加扰动，使该状态在原有预训练流场下继续演化后能够满足目标约束；优化目标是最小化该扰动，从而尽量不偏离预训练分布。作者利用伴随公式推导出该最小扰动的闭式表达式，因此不需要迭代优化。干预发生的时间点由方法自适应选择，以平衡所需扰动的大小。摘要未给出具体算法步骤、超参数或实现细节。",
+      "interpretationZh": "摘要报告的核心事实是：MintFlow 是一个免训练框架，通过最小干预中间流状态并保持预训练流场不变来施加约束，且借助伴随公式获得闭式扰动解并自适应选择干预时间。可以合理推断，其目标是在约束满足与分布保真度之间取得更好平衡，但摘要未提供任何实验证据来支持其实际效果。",
+      "limitationsZh": "仅有摘要信息，缺少实验设置、数据集、基线对比和定量结果；闭式解与自适应干预时间的具体推导和实现细节未给出；方法在真实约束类型（如物理定律）上的有效性尚未验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.02260",
+          "publishedAt": "2026-10-05T04:00:00.000Z",
+          "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-05T04:00:00.000Z",
+        "endedAt": "2026-10-05T06:53:22.159Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-05T04:00:00.000Z",
+            "label": "10/5 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-05T04:57:47.386Z",
+            "label": "10/5 12:57",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T05:55:34.772Z",
+            "label": "10/5 13:55",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T06:53:22.159Z",
+            "label": "10/5 14:53",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "4d611d68a5a28f31",
+      "normalizedUrl": "https://arxiv.org/abs/2610.02267",
+      "originalUrl": "https://arxiv.org/abs/2610.02267",
+      "titleOriginal": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+      "summaryOriginal": "arXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: which model to call, which tool to use, whether retrieved text is relevant, whether an input carries an injection. System-1 decision models answer such questions in a single forward pass with class probabilities, promising large cost and latency savings over LLM calls. We present a paired evaluation of an open-weight (Laya) and a hosted (Jev) System-1 model on 11 agent decision points built from 18 public sources: 7,283 base cases plus 6,640 robustness variants, with byte-identical inputs, paired tests, and cross-hardware and cross-day reproducibility checks. Jev is significantly more accurate on 9 of 11 decision points (+10.8 to +46.0 pp). Neither model beats chance on zero-shot model routing, and they tie on RAG relevance gating. Laya changes 30% of its answers when the option order is reversed and degrades sharply with many or similar candidates (31% at 50 nearest-neighbour tools, vs. 98% for Jev on items with a unique correct tool). We also audit our own pipeline. Three analysis errors and one design confound distorted headline deployment claims: an omitted pre-screen cost",
+      "originalLanguage": "en",
+      "author": "Jiawei Li",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/David-DL-Space/sys1-eval"
+      ],
+      "publishedAt": "2026-10-05T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.02267",
+          "publishedAt": "2026-10-05T04:00:00.000Z",
+          "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/David-DL-Space/sys1-eval"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该研究提供了对智能体框架中轻量级决策模型的大规模配对评估，并罕见地公开审计自身分析错误，对智能体部署的可靠性判断有直接参考价值。",
+      "importanceReasonEn": "This study provides a large-scale paired evaluation of lightweight decision models in agent harnesses and unusually discloses its own analysis errors, offering direct reference value for judging agent deployment reliability.",
+      "scoringMode": "ai",
+      "titleZh": "快速模型，缓慢证据：面向LLM智能体框架的系统1决策模型的配对与自审计评估",
+      "titleEn": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+      "summaryZh": "一篇arXiv论文对开放权重模型Laya与托管模型Jev两种“系统1”决策模型在11个智能体决策点上进行了配对评估，使用7,283个基础案例和6,640个鲁棒性变体，并进行了跨硬件、跨天的可复现性检查。结果显示Jev在11个决策点中的9个上显著更准确，但两个模型在零样本模型路由上都不优于随机，在RAG相关性门控上打平；Laya在选项顺序反转时改变30%的答案，且在候选众多或相似时性能急剧下降。作者还审计了自己的流程，发现三个分析错误和一个设计混杂因素影响了部署结论。",
+      "summaryEn": "An arXiv paper presents a paired evaluation of an open-weight (Laya) and a hosted (Jev) System-1 decision model across 11 agent decision points, using 7,283 base cases plus 6,640 robustness variants with byte-identical inputs, paired tests, and cross-hardware and cross-day reproducibility checks. Jev is significantly more accurate on 9 of 11 decision points, but neither model beats chance on zero-shot model routing and they tie on RAG relevance gating. Laya changes 30% of its answers when option order is reversed and degrades sharply with many or similar candidates. The authors also audit their own pipeline, finding three analysis errors and one design confound that distorted headline deployment claims.",
+      "keywords": [
+        "系统1决策模型",
+        "LLM智能体框架",
+        "配对评估",
+        "鲁棒性",
+        "模型路由",
+        "RAG相关性门控",
+        "自审计"
+      ],
+      "topics": [
+        "LLM智能体",
+        "系统1决策模型",
+        "模型评估",
+        "RAG",
+        "提示注入"
+      ],
+      "models": [
+        "Laya",
+        "Jev"
+      ],
+      "detailZh": "该论文研究的是LLM智能体框架中的“系统1”决策模型：这类模型以单次前向传播输出类别概率，用于回答智能体运行中的小型、类型化问题，例如调用哪个模型、使用哪个工具、检索文本是否相关、输入是否包含注入攻击。相比调用完整LLM，这类模型有望大幅节省成本和延迟。\n\n作者对开放权重模型Laya和托管模型Jev进行了配对评估，覆盖11个智能体决策点，数据来自18个公开来源，包含7,283个基础案例和6,640个鲁棒性变体。评估使用字节完全相同的输入、配对检验，并进行了跨硬件和跨天的可复现性检查。\n\n主要结果：Jev在11个决策点中的9个上显著更准确，提升幅度为+10.8到+46.0个百分点。两个模型在零样本模型路由上都不优于随机猜测，在RAG相关性门控上表现持平。Laya在选项顺序反转时会改变30%的答案，并且在候选数量多或候选相似时性能急剧下降：在50个最近邻工具时准确率为31%，而Jev在存在唯一正确工具的条目上为98%。\n\n作者还审计了自己的评估流程，发现三个分析错误和一个设计混杂因素扭曲了关于部署的主要结论，其中包括遗漏了预筛选成本。",
+      "keyPointsZh": [
+        "评估覆盖11个智能体决策点，包含7,283个基础案例和6,640个鲁棒性变体。",
+        "Jev在11个决策点中的9个上显著优于Laya，提升+10.8到+46.0个百分点。",
+        "两个模型在零样本模型路由上均不优于随机，在RAG相关性门控上打平。",
+        "Laya对选项顺序敏感，反转后30%答案改变；在50个最近邻工具时准确率仅31%。",
+        "作者自审计发现三个分析错误和一个设计混杂因素，影响了部署结论。"
+      ],
+      "impactZh": "该研究提醒智能体开发者：轻量级系统1决策模型并非在所有决策点上都可靠，尤其在模型路由和候选众多或相似的工具选择场景中可能严重失效。同时，作者公开审计自身错误，强调了评估方法严谨性的重要性。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用或开发LLM智能体的团队，该研究意味着不能盲目依赖轻量级决策模型来替代完整LLM调用。在工具选择、模型路由等关键决策点上，需要针对具体场景验证模型准确性，并注意选项顺序和候选数量对结果的影响。",
+      "howItWorksZh": "系统1决策模型接收智能体运行中的小型、类型化问题（如选择模型、选择工具、判断检索相关性、检测注入），通过单次前向传播输出类别概率，从而避免调用完整LLM。评估采用配对设计：对每个决策点，两个模型接收字节完全相同的输入，进行配对统计检验，并在不同硬件和不同日期重复运行以检查可复现性。鲁棒性变体用于测试选项顺序反转、候选数量增加和候选相似度等扰动。",
+      "interpretationZh": "论文报告的事实是：在受控配对评估中，Jev在多数决策点上准确率更高，但两个模型在模型路由上都不优于随机，Laya对选项顺序和候选数量敏感。作者还发现自身分析中的错误和混杂因素，说明此前基于该流程的部署结论需要修正。合理推断是：系统1决策模型在部分简单决策上可能有用，但在复杂或相似候选场景中尚不可靠，且评估本身需要严格审计。",
+      "limitationsZh": "该评估仅覆盖两个系统1模型（Laya和Jev）和11个决策点，结论不能推广到所有轻量级决策模型或所有智能体任务。作者自审计发现的错误和混杂因素意味着部分原始结果可能被扭曲，修正后的结论仍需进一步验证。零样本模型路由和RAG相关性门控的结果可能受具体数据集和提示设计影响。",
+      "actionStepsZh": [
+        "在部署系统1决策模型前，针对自身智能体的具体决策点进行配对评估，不要直接采用通用基准结果。",
+        "对工具选择等候选数量多或相似度高的场景，测试模型在选项顺序反转和候选扰动下的稳定性。",
+        "将模型路由和RAG相关性门控等任务交给完整LLM或增加额外验证，因为轻量模型在这些点上可能不优于随机。",
+        "在评估流程中引入自审计步骤，检查预筛选成本等可能被遗漏的因素。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Jev在多数决策点上准确率更高，而Laya在候选众多时准确率仅31%，远低于Jev在唯一正确工具场景下的98%。",
+        "data": [
+          {
+            "label": "Jev在9/11决策点显著更准",
+            "value": 9,
+            "display": ""
+          },
+          {
+            "label": "Laya选项顺序反转答案改变率",
+            "value": 30,
+            "display": ""
+          },
+          {
+            "label": "Laya在50个最近邻工具时准确率",
+            "value": 31,
+            "display": ""
+          },
+          {
+            "label": "Jev在唯一正确工具条目上准确率",
+            "value": 98,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.02267",
+          "publishedAt": "2026-10-05T04:00:00.000Z",
+          "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/David-DL-Space/sys1-eval"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-05T04:00:00.000Z",
+        "endedAt": "2026-10-05T06:53:22.159Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-05T04:00:00.000Z",
+            "label": "10/5 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-05T04:57:47.386Z",
+            "label": "10/5 12:57",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T05:55:34.772Z",
+            "label": "10/5 13:55",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T06:53:22.159Z",
+            "label": "10/5 14:53",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "133a2ab7aae4eb20",
       "normalizedUrl": "https://promptarmor.com/resources/four-databricks-genie-controls-that-dont-stop-malicious-skills",
@@ -47,13 +344,13 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "该披露揭示了 AI 助手/Agent 平台中 Skill 机制与聊天 HTML 渲染结合带来的新型攻击面，涉及数据外泄与凭据钓鱼，对使用 Databricks Genie 的团队具有直接安全影响。",
-      "importanceReasonEn": "This disclosure reveals a new attack surface arising from the combination of Skill mechanisms and chat HTML rendering in AI assistant/agent platforms, involving data exfiltration and credential phishing, with direct security implications for teams using Databricks Genie.",
+      "importanceReasonZh": "该披露揭示了 AI 助手 Skill 机制中一个可复现的安全弱点：通过聊天内 HTML 渲染触发浏览器请求，可同时实现数据外泄与钓鱼，并绕过四类既有控制，对使用 Databricks Genie 的团队具有直接安全影响。",
+      "importanceReasonEn": "The disclosure reveals a reproducible security weakness in AI assistant Skill mechanisms: HTML rendering inside chat triggers browser requests, enabling both data exfiltration and phishing while bypassing four existing controls, with direct security implications for teams using Databricks Genie.",
       "scoringMode": "ai",
       "titleZh": "PromptArmor 披露 Databricks Genie 恶意 Skill 可绕过四类控制实施钓鱼与数据外泄",
       "titleEn": "PromptArmor Discloses Databricks Genie Malicious Skill Bypassing Four Controls for Phishing and Data Exfiltration",
       "summaryZh": "PromptArmor 披露 Databricks Genie Code 可被恶意 Skill 利用：Skill 代码将数据嵌入聊天渲染的 HTML 显示，渲染时通过用户浏览器发起网络请求外泄数据，并弹出钓鱼界面索取凭据。",
-      "summaryEn": "PromptArmor discloses that Databricks Genie Code can be exploited via a malicious Skill: the Skill code embeds data into HTML rendered in chat, which on render triggers network requests from the user's browser to exfiltrate data and displays a phishing interface requesting credentials.",
+      "summaryEn": "PromptArmor discloses that Databricks Genie Code can be exploited via a malicious Skill: the Skill code embeds data into HTML rendered in chat, which triggers network requests from the user's browser to exfiltrate data and displays a phishing interface requesting credentials.",
       "keywords": [
         "PromptArmor",
         "Databricks Genie",
@@ -68,28 +365,30 @@
         "数据外泄",
         "钓鱼攻击",
         "Databricks",
-        "Agent安全"
+        "Skill机制"
       ],
       "models": [
         "Databricks Genie"
       ],
-      "detailZh": "PromptArmor 发布威胁情报，披露 Databricks Genie Code 存在可被恶意 Skill 利用的安全问题。根据披露内容，攻击者可以构造一个恶意 Skill，其代码将敏感数据嵌入到聊天界面所渲染的 HTML 显示中。当该 HTML 在用户聊天窗口中被渲染时，会借助用户自己的浏览器发起网络请求，从而将数据外泄到外部地址。\n\n同一恶意 Skill 还会在聊天中弹出钓鱼界面，向用户索取凭据。由于这些行为发生在聊天渲染环节，披露称其可绕过四类控制措施，但输入材料未具体说明这四类控制分别是什么。\n\n该事件的核心风险在于：Skill 作为可扩展 AI 助手能力的机制，其代码输出若被直接渲染为 HTML，就可能把原本受控的聊天界面变成攻击载荷的执行与展示通道。用户浏览器成为外泄请求的发起方，使得传统基于服务端出站流量的检测可能失效。\n\n目前信息来自 PromptArmor 的威胁情报披露，Databricks 官方尚未在输入材料中给出回应或修复说明，具体受影响的版本、利用前置条件以及四类被绕过的控制细节均未提供。",
+      "detailZh": "PromptArmor 发布威胁情报，披露 Databricks Genie Code 存在可被恶意 Skill 利用的安全问题。根据披露内容，攻击路径的核心在于 Skill 代码能够将数据嵌入到聊天界面渲染的 HTML 中。当该 HTML 在用户侧被渲染时，会通过用户浏览器发起网络请求，从而将数据外泄到外部。\n\n同一机制还被用于钓鱼：渲染出的界面会弹出索取凭据的钓鱼表单，诱导用户输入账号密码等信息。由于这些行为发生在聊天渲染层，而非传统的数据访问或代码执行路径，披露称其可绕过四类既有控制措施。\n\n目前公开信息来自 PromptArmor 的威胁情报，属于安全研究方的披露，尚未见到 Databricks 官方回应或修复公告。披露未提供完整的攻击链细节、受影响的版本范围或已观测到的实际利用案例。\n\n该事件的意义在于，它把 AI 助手 Skill 的信任边界问题具体化：Skill 不只是调用工具，还可能影响聊天界面的渲染结果，而渲染层与浏览器之间的交互可以成为绕过常规控制的通道。",
       "keyPointsZh": [
         "PromptArmor 披露 Databricks Genie Code 可被恶意 Skill 利用。",
-        "恶意 Skill 将数据嵌入聊天渲染的 HTML，渲染时经用户浏览器发起请求外泄数据。",
-        "同一 Skill 会弹出钓鱼界面索取用户凭据。",
-        "披露称该手法可绕过四类控制，但未说明具体是哪四类。"
+        "Skill 代码将数据嵌入聊天渲染的 HTML，渲染时经用户浏览器发起请求外泄数据。",
+        "同一机制弹出钓鱼界面索取凭据。",
+        "披露称该攻击可绕过四类既有控制。",
+        "目前为安全研究方披露，未见官方回应或修复信息。"
       ],
-      "impactZh": "该披露表明，具备 Skill 扩展与 HTML 渲染能力的 AI 助手平台可能成为数据外泄和凭据钓鱼的新通道。由于外泄请求由用户浏览器发起，传统服务端出站检测可能难以覆盖，使用 Databricks Genie 的团队需要重新评估其 Skill 信任边界与渲染安全策略。",
+      "impactZh": "该披露表明 AI 助手的 Skill 机制可能成为数据外泄与钓鱼的新通道，且能绕过既有控制，这对依赖 Databricks Genie 处理敏感数据的组织构成直接安全风险，也提示同类聊天渲染型 AI 产品需要重新审视渲染层与浏览器交互的信任边界。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 Databricks Genie 或类似支持 Skill 扩展的 AI 平台的用户与团队，应警惕来源不明的 Skill，避免在聊天中渲染不可信 HTML，并关注平台方是否发布修复或缓解措施。",
-      "howItWorksZh": "根据披露，攻击链包含两个环节：其一，恶意 Skill 的代码把敏感数据嵌入到聊天界面渲染的 HTML 中，当该 HTML 在用户浏览器中渲染时触发网络请求，将数据发送到外部地址；其二，同一 Skill 在聊天中显示钓鱼界面，诱导用户输入凭据。输入材料未提供更具体的实现细节或复现步骤。",
-      "interpretationZh": "从已披露信息看，这是一类将 AI 平台扩展机制与前端渲染能力结合的攻击思路：Skill 提供代码执行与内容生成能力，聊天界面负责渲染，二者叠加后使浏览器成为外泄与钓鱼的载体。需要区分的是，披露方给出的结论（可绕过四类控制）属于其单方陈述，具体控制项与验证细节尚未公开。",
-      "limitationsZh": "输入材料未说明被绕过的四类控制具体是什么，也未提供受影响版本、利用前置条件、复现步骤或 Databricks 官方回应与修复状态。该披露目前为单一来源，尚未见到独立验证。",
+      "userImpactZh": "使用 Databricks Genie 或类似 AI 助手 Skill 的团队应审查第三方 Skill 的来源与权限，关注聊天内 HTML 渲染可能触发的浏览器请求，并在官方修复前限制敏感数据在相关会话中的使用。",
+      "howItWorksZh": "根据披露，攻击依赖三个环节：第一，恶意 Skill 的代码将目标数据嵌入到聊天界面所渲染的 HTML 中；第二，该 HTML 在用户浏览器侧渲染时发起网络请求，把嵌入的数据发送到外部地址，完成数据外泄；第三，同一渲染能力被用来显示钓鱼界面，向用户索取凭据。由于这些动作发生在聊天渲染层而非传统数据访问路径，披露称其可绕过四类既有控制。",
+      "interpretationZh": "已报告的事实是：PromptArmor 披露了上述攻击路径，并称其可绕过四类控制。可合理推断的是，该问题的根源在于 Skill 对聊天渲染内容的控制权与浏览器渲染环境之间的信任缺口。但受影响版本、实际利用情况和官方修复状态均未在披露中说明，需等待更多信息。",
+      "limitationsZh": "信息来自 PromptArmor 单方披露，未见 Databricks 官方确认或修复公告；披露未提供受影响版本范围、完整攻击链细节、四类控制的具体名称，也未说明是否已有实际利用案例。",
       "actionStepsZh": [
-        "审查并限制 Databricks Genie 中可安装或调用的 Skill 来源，仅使用可信 Skill。",
-        "关注 Databricks 官方是否发布针对该披露的修复或缓解公告。",
-        "评估聊天界面渲染 HTML 的安全策略，避免不可信内容直接渲染。"
+        "审查并限制 Databricks Genie 中第三方 Skill 的引入与权限。",
+        "关注聊天内 HTML 渲染可能触发的浏览器网络请求，评估是否可禁用或隔离。",
+        "在官方修复或确认前，避免在相关会话中处理敏感数据。",
+        "跟踪 PromptArmor 与 Databricks 的后续更新以获取修复信息。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -115,7 +414,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-05T00:24:02.000Z",
-        "endedAt": "2026-10-05T00:46:54.993Z",
+        "endedAt": "2026-10-05T06:53:22.159Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -126,8 +425,44 @@
             "reports": 0
           },
           {
-            "at": "2026-10-05T00:46:54.993Z",
-            "label": "10/5 08:46",
+            "at": "2026-10-05T01:19:39.165Z",
+            "label": "10/5 09:19",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T02:15:16.331Z",
+            "label": "10/5 10:15",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T03:10:53.496Z",
+            "label": "10/5 11:10",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T04:06:30.662Z",
+            "label": "10/5 12:06",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T05:02:07.827Z",
+            "label": "10/5 13:02",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T05:57:44.993Z",
+            "label": "10/5 13:57",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T06:53:22.159Z",
+            "label": "10/5 14:53",
             "value": 65,
             "reports": 1
           }
@@ -171,40 +506,40 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该事件反映AI生成内容对安全漏洞赏金流程的实际冲击，涉及谷歌这一重要开源参与方，对安全社区和开源维护者有参考价值。",
-      "importanceReasonEn": "The event reflects the real impact of AI-generated content on security bug bounty workflows, involving Google, a major open source participant, and is relevant to the security community and open source maintainers.",
+      "importanceReasonZh": "该事件反映AI生成内容对安全漏洞报告流程的实际冲击，可能影响开源安全生态和赏金计划运作方式。",
+      "importanceReasonEn": "This event reflects the real impact of AI-generated content on security vulnerability reporting workflows, potentially affecting the open source security ecosystem and how bounty programs operate.",
       "scoringMode": "ai",
-      "titleZh": "谷歌因AI提交量“大幅上升”冻结其开源漏洞赏金计划",
+      "titleZh": "谷歌因AI提交量激增冻结开源漏洞赏金计划",
       "titleEn": "Google froze its open source bug bounty program due to a 'significant rise' in AI submissions",
-      "summaryZh": "AI生成的垃圾提交似乎正在压垮漏洞赏金计划。",
+      "summaryZh": "AI生成的漏洞报告似乎正在淹没漏洞赏金计划。",
       "summaryEn": "AI slop seems to be overwhelming bug bounty programs.",
       "keywords": [
         "Google",
         "bug bounty",
         "open source",
         "AI submissions",
-        "AI slop"
+        "vulnerability reports"
       ],
       "topics": [
         "bug bounty",
-        "open source",
+        "open source security",
         "AI-generated reports",
-        "Google",
-        "security"
+        "Google"
       ],
       "models": [],
-      "detailZh": "TechCrunch AI报道称，谷歌冻结了其开源漏洞赏金计划，原因是AI提交量出现“大幅上升”。报道将这一现象描述为AI垃圾内容（AI slop）似乎正在压垮漏洞赏金计划。目前输入仅包含标题和简短摘要，未提供冻结的具体时间、涉及的具体项目、提交量变化数据或谷歌的官方声明细节。",
+      "detailZh": "根据TechCrunch AI的报道，谷歌冻结了其开源漏洞赏金计划，原因是AI提交量出现了“显著上升”。报道将这一现象描述为AI生成的“垃圾内容”（AI slop）似乎正在淹没漏洞赏金计划。\n\n目前已知的信息较为有限：报道没有披露冻结的具体时间、涉及的具体开源项目范围、AI提交量的具体数字或比例，也没有说明谷歌是否给出了恢复计划或替代方案。\n\n从背景看，漏洞赏金计划依赖人工审核提交的漏洞报告，当大量低质量或AI自动生成的报告涌入时，审核成本会显著上升，并可能掩盖真正有价值的漏洞。\n\n该报道的核心事实是：谷歌因AI提交量显著上升而冻结了开源漏洞赏金计划。其余细节尚未在输入材料中提供。",
       "keyPointsZh": [
-        "谷歌冻结了其开源漏洞赏金计划。",
-        "冻结原因是AI提交量出现“大幅上升”。",
-        "报道将这一现象描述为AI垃圾内容压垮漏洞赏金计划。"
+        "谷歌冻结了其开源漏洞赏金计划",
+        "冻结原因是AI提交量出现“显著上升”",
+        "报道将这一现象描述为AI垃圾内容淹没漏洞赏金计划",
+        "输入材料未提供冻结时间、具体项目范围或恢复计划"
       ],
-      "impactZh": "该事件表明AI生成的低质量提交可能对安全漏洞赏金流程造成负担，影响开源安全生态的运作效率。",
+      "impactZh": "该事件表明AI生成内容可能对依赖人工审核的安全漏洞报告流程造成压力，可能促使其他组织重新评估其漏洞赏金计划的提交审核机制。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "根据现有信息，可以确认的是谷歌冻结了开源漏洞赏金计划，并将AI提交量大幅上升作为原因。但具体提交量、影响范围和后续安排尚不明确，需要更多官方信息才能完整评估。",
-      "limitationsZh": "输入仅包含标题和简短摘要，缺少谷歌官方声明、具体数据、受影响项目范围及冻结期限等关键信息，无法验证细节。",
+      "interpretationZh": "报道陈述的事实是谷歌因AI提交量显著上升而冻结开源漏洞赏金计划。可以合理推断，大量AI生成的漏洞报告增加了审核负担，但输入材料未提供具体数据或谷歌的官方说明，因此无法确认冻结的持续时间或后续安排。",
+      "limitationsZh": "输入材料仅为一篇简短报道，未提供冻结的具体时间、涉及项目、AI提交量的具体数字、谷歌的官方声明或恢复计划。所有细节均以报道为准，未经独立核实。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -227,7 +562,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-04T20:31:07.000Z",
-        "endedAt": "2026-10-05T00:46:54.993Z",
+        "endedAt": "2026-10-05T06:53:22.159Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -238,32 +573,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-04T21:22:16.598Z",
-            "label": "10/5 05:22",
+            "at": "2026-10-04T21:27:41.105Z",
+            "label": "10/5 05:27",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-04T22:24:15.210Z",
+            "label": "10/5 06:24",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-04T22:13:26.197Z",
-            "label": "10/5 06:13",
-            "value": 31,
+            "at": "2026-10-04T23:20:49.316Z",
+            "label": "10/5 07:20",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-04T23:04:35.795Z",
-            "label": "10/5 07:04",
-            "value": 39,
+            "at": "2026-10-05T00:17:23.421Z",
+            "label": "10/5 08:17",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-04T23:55:45.394Z",
-            "label": "10/5 07:55",
-            "value": 47,
+            "at": "2026-10-05T01:13:57.526Z",
+            "label": "10/5 09:13",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-05T00:46:54.993Z",
-            "label": "10/5 08:46",
+            "at": "2026-10-05T02:10:31.632Z",
+            "label": "10/5 10:10",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T03:07:05.737Z",
+            "label": "10/5 11:07",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T04:03:39.842Z",
+            "label": "10/5 12:03",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T05:00:13.948Z",
+            "label": "10/5 13:00",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T05:56:48.053Z",
+            "label": "10/5 13:56",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T06:53:22.159Z",
+            "label": "10/5 14:53",
             "value": 55,
             "reports": 1
           }
@@ -362,7 +733,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-04T20:08:34.000Z",
-        "endedAt": "2026-10-05T00:46:54.993Z",
+        "endedAt": "2026-10-05T06:53:22.159Z",
         "current": 42,
         "peak": 42,
         "history": [
@@ -373,32 +744,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-04T21:04:14.198Z",
-            "label": "10/5 05:04",
-            "value": 20,
+            "at": "2026-10-04T21:07:11.105Z",
+            "label": "10/5 05:07",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-10-04T21:59:54.397Z",
-            "label": "10/5 05:59",
-            "value": 25,
+            "at": "2026-10-04T22:05:48.210Z",
+            "label": "10/5 06:05",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-04T22:55:34.595Z",
-            "label": "10/5 06:55",
-            "value": 31,
+            "at": "2026-10-04T23:04:25.316Z",
+            "label": "10/5 07:04",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-04T23:51:14.794Z",
-            "label": "10/5 07:51",
-            "value": 36,
+            "at": "2026-10-05T00:03:02.421Z",
+            "label": "10/5 08:03",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-05T00:46:54.993Z",
-            "label": "10/5 08:46",
+            "at": "2026-10-05T01:01:39.526Z",
+            "label": "10/5 09:01",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T02:00:16.632Z",
+            "label": "10/5 10:00",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T02:58:53.737Z",
+            "label": "10/5 10:58",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T03:57:30.842Z",
+            "label": "10/5 11:57",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T04:56:07.948Z",
+            "label": "10/5 12:56",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T05:54:45.053Z",
+            "label": "10/5 13:54",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T06:53:22.159Z",
+            "label": "10/5 14:53",
             "value": 42,
             "reports": 1
           }
@@ -513,7 +920,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-04T17:41:58.000Z",
-        "endedAt": "2026-10-05T00:46:54.993Z",
+        "endedAt": "2026-10-05T06:53:22.159Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -524,50 +931,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-04T18:35:05.124Z",
-            "label": "10/5 02:35",
-            "value": 19,
+            "at": "2026-10-04T18:53:54.741Z",
+            "label": "10/5 02:53",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-04T19:28:12.248Z",
-            "label": "10/5 03:28",
-            "value": 24,
+            "at": "2026-10-04T20:05:51.483Z",
+            "label": "10/5 04:05",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-04T20:21:19.372Z",
-            "label": "10/5 04:21",
-            "value": 30,
+            "at": "2026-10-04T21:17:48.225Z",
+            "label": "10/5 05:17",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-04T21:14:26.496Z",
-            "label": "10/5 05:14",
-            "value": 35,
+            "at": "2026-10-04T22:29:44.966Z",
+            "label": "10/5 06:29",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-04T22:07:33.620Z",
-            "label": "10/5 06:07",
+            "at": "2026-10-04T23:41:41.708Z",
+            "label": "10/5 07:41",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T00:53:38.450Z",
+            "label": "10/5 08:53",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T02:05:35.192Z",
+            "label": "10/5 10:05",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-04T23:00:40.744Z",
-            "label": "10/5 07:00",
-            "value": 45,
+            "at": "2026-10-05T03:17:31.933Z",
+            "label": "10/5 11:17",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-04T23:53:47.868Z",
-            "label": "10/5 07:53",
-            "value": 50,
+            "at": "2026-10-05T04:29:28.675Z",
+            "label": "10/5 12:29",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-05T00:46:54.993Z",
-            "label": "10/5 08:46",
+            "at": "2026-10-05T05:41:25.417Z",
+            "label": "10/5 13:41",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-05T06:53:22.159Z",
+            "label": "10/5 14:53",
             "value": 55,
             "reports": 1
           }
