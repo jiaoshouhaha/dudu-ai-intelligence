@@ -1,7 +1,1169 @@
 {
-  "generatedAt": "2026-10-08T00:57:27.624Z",
+  "generatedAt": "2026-10-08T07:17:19.561Z",
   "date": "2026-10-08",
   "items": [
+    {
+      "id": "d761228baa4bd20e",
+      "normalizedUrl": "https://arxiv.org/abs/2610.08794",
+      "originalUrl": "https://arxiv.org/abs/2610.08794",
+      "titleOriginal": "Tokka-Bench: Evaluating Tokenizers Across 100 Natural and 20 Programming Languages",
+      "summaryOriginal": "arXiv:2610.08794v1 Announce Type: new Abstract: Large language models rely on subword tokenizers whose quality varies across languages, yet no standardized multi-metric framework exists for broad comparative evaluation. We introduce Tokka-Bench, an open-source framework that evaluates tokenizers on five complementary metrics -- bytes per token, unique token coverage, subword fertility, word-split rate, and vocabulary composition -- across 100 natural languages (30+ scripts) and 20 programming languages, using language-aware segmentation adapted to each writing system. Comparing seven BPE tokenizers (GPT-2, GPT-4, gpt-oss, Llama 3.1, Gemma 3, Qwen3, and Kimi K2) within individual languages, we find that vocabulary allocation strategy matters more than raw vocabulary size, and that programming-language efficiency has converged among recent tokenizers despite divergent natural-language profiles. The framework, data, and interactive dashboard are publicly available.",
+      "originalLanguage": "en",
+      "author": "Ben Gubler",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-08T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.08794",
+          "publishedAt": "2026-10-08T04:00:00.000Z",
+          "title": "Tokka-Bench: Evaluating Tokenizers Across 100 Natural and 20 Programming Languages",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该工作填补了多语言词元分析器缺乏标准化多指标评估框架的空白，并公开了框架、数据和交互式仪表盘，对多语言大模型研发有直接参考价值。",
+      "importanceReasonEn": "It fills the gap of a standardized multi-metric evaluation framework for multilingual tokenizers and releases the framework, data, and interactive dashboard, offering direct reference value for multilingual LLM development.",
+      "scoringMode": "ai",
+      "titleZh": "Tokka-Bench：跨100种自然语言和20种编程语言的词元分析器评估",
+      "titleEn": "Tokka-Bench: Evaluating Tokenizers Across 100 Natural and 20 Programming Languages",
+      "summaryZh": "arXiv 论文提出 Tokka-Bench，一个开源框架，用五项互补指标在100种自然语言（30多种文字系统）和20种编程语言上评估词元分析器，并对比了七种 BPE 词元分析器。",
+      "summaryEn": "An arXiv paper introduces Tokka-Bench, an open-source framework that evaluates tokenizers on five complementary metrics across 100 natural languages (30+ scripts) and 20 programming languages, comparing seven BPE tokenizers.",
+      "keywords": [
+        "Tokka-Bench",
+        "tokenizer evaluation",
+        "subword fertility",
+        "vocabulary allocation",
+        "multilingual NLP"
+      ],
+      "topics": [
+        "tokenizer",
+        "multilingual",
+        "evaluation",
+        "BPE",
+        "NLP"
+      ],
+      "models": [
+        "GPT-2",
+        "GPT-4",
+        "gpt-oss",
+        "Llama 3.1",
+        "Gemma 3",
+        "Qwen3"
+      ],
+      "detailZh": "该论文以 arXiv 预印本形式发布（编号 arXiv:2610.08794v1），属于 Computation and Language 领域的新投稿。作者指出，大语言模型依赖子词词元分析器，但其质量在不同语言间差异明显，而目前缺乏一个标准化的多指标框架来进行广泛比较评估。\n\n为此，作者提出 Tokka-Bench，一个开源评估框架。它使用五项互补指标：每词元字节数（bytes per token）、唯一词元覆盖率（unique token coverage）、子词繁殖率（subword fertility）、词切分率（word-split rate）以及词表组成（vocabulary composition）。评估覆盖100种自然语言（涉及30多种文字系统）和20种编程语言，并针对每种书写系统采用语言感知的分词方式。\n\n在实验部分，作者在单一语言内部对比了七种 BPE 词元分析器：GPT-2、GPT-4、gpt-oss、Llama 3.1、Gemma 3、Qwen3 和 Kimi K2。主要发现有两个：一是词表分配策略比词表原始大小更重要；二是尽管各模型在自然语言上的表现差异较大，但近期词元分析器在编程语言效率上已经趋同。\n\n论文声明该框架、数据以及交互式仪表盘均已公开可用。摘要未提供具体指标数值、各模型排名或统计显著性信息。",
+      "keyPointsZh": [
+        "Tokka-Bench 是一个开源词元分析器评估框架，覆盖100种自然语言和20种编程语言。",
+        "评估使用五项指标：每词元字节数、唯一词元覆盖率、子词繁殖率、词切分率、词表组成。",
+        "对比了七种 BPE 词元分析器：GPT-2、GPT-4、gpt-oss、Llama 3.1、Gemma 3、Qwen3、Kimi K2。",
+        "核心结论：词表分配策略比词表大小更重要；编程语言效率在近期词元分析器间已趋同。",
+        "框架、数据和交互式仪表盘已公开。"
+      ],
+      "impactZh": "该工作为多语言词元分析器提供了可复用的标准化评估框架，可能推动模型开发者更重视词表分配策略而非单纯扩大词表，并有助于识别不同语言间的效率差距。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发多语言大模型或使用非英语语言的团队而言，Tokka-Bench 提供了可复用的评估工具和公开数据，可用于比较不同词元分析器在目标语言上的表现，辅助选型与优化。",
+      "howItWorksZh": "Tokka-Bench 针对每种书写系统采用语言感知的分词方式，然后在100种自然语言和20种编程语言上计算五项指标：每词元字节数、唯一词元覆盖率、子词繁殖率、词切分率和词表组成。通过在单一语言内部对比七种 BPE 词元分析器，框架能够揭示词表分配策略与词表大小对分词效率的不同影响。",
+      "interpretationZh": "论文报告的事实是：Tokka-Bench 框架被提出，包含五项指标和跨100种自然语言、20种编程语言的评估，并对比了七种 BPE 词元分析器。基于摘要可以合理推断，作者认为词表分配策略是比词表规模更关键的设计因素，且编程语言分词效率已趋于一致。但摘要未披露具体数值、排名或统计检验，因此这些结论的强度尚无法从摘要判断。",
+      "limitationsZh": "摘要未提供任何具体指标数值、各模型排名、统计显著性检验或评估细节；七种词元分析器的版本与配置未说明；编程语言效率趋同的具体程度和范围未量化；框架的实际可用性和数据规模需查阅全文或公开资源确认。",
+      "actionStepsZh": [
+        "查阅 arXiv:2610.08794v1 全文以获取具体指标数值和模型对比结果。",
+        "访问论文公开的框架、数据和交互式仪表盘，复现或扩展评估。",
+        "在选型多语言词元分析器时，参考其词表分配策略而非仅看词表大小。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.08794",
+          "publishedAt": "2026-10-08T04:00:00.000Z",
+          "title": "Tokka-Bench: Evaluating Tokenizers Across 100 Natural and 20 Programming Languages",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-08T04:00:00.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-08T04:00:00.000Z",
+            "label": "10/8 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-08T04:49:19.890Z",
+            "label": "10/8 12:49",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:38:39.780Z",
+            "label": "10/8 13:38",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:27:59.670Z",
+            "label": "10/8 14:27",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "7f4f8be374c6d7b8",
+      "normalizedUrl": "https://arxiv.org/abs/2610.08827",
+      "originalUrl": "https://arxiv.org/abs/2610.08827",
+      "titleOriginal": "Child ASR Adaptation with Adult Retention: An Empirical Study",
+      "summaryOriginal": "arXiv:2610.08827v1 Announce Type: new Abstract: Automatic Speech Recognition (ASR) systems often underperform for children and non-native speakers, while adapting adult ASR models to child speech can cause adult-speech forgetting. We study child ASR adaptation with adult retention across Arabic and English. We compare full fine-tuning, LoRA, and post-hoc weight-space merging across encoder--decoder, encoder--CTC, and AudioLLM-based ASR systems. Experiments use Arabic native and non-native child speech, English MyST child speech, and adult benchmarks from MGB-2 and LibriSpeech test-clean. We evaluate recognition quality with WER and quantify the adaptation--retention trade-off using Retention Index, Child Adaptation Gain, and Adaptation Recovery. Results show that child adaptation is necessary, especially for non-native Arabic and English child speech, but direct adaptation often reduces adult ASR performance. Bilingual adaptation is more stable than language-specific adaptation. Weight-space merging often improves the trade-off, especially for encoder--CTC, Whisper, and AudioLLM-based ASR, with LERP favoring adult retention and TIES recovering stronger child gains. For the encoder-",
+      "originalLanguage": "en",
+      "author": "Houssam Eddine-Othman Lachemat, Shammur Absar Chowdhury",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/qcri/Child-ASR-Adaptation"
+      ],
+      "publishedAt": "2026-10-08T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.08827",
+          "publishedAt": "2026-10-08T04:00:00.000Z",
+          "title": "Child ASR Adaptation with Adult Retention: An Empirical Study",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/qcri/Child-ASR-Adaptation"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究系统比较了多种儿童语音适配方法，并首次引入 Retention Index 等指标量化适配-保持权衡，对多语言 ASR 落地有参考价值。",
+      "importanceReasonEn": "The study systematically compares child-speech adaptation methods and introduces metrics such as Retention Index to quantify the adaptation-retention trade-off, offering practical reference for multilingual ASR deployment.",
+      "scoringMode": "ai",
+      "titleZh": "儿童语音识别适配与成人语音保持：一项实证研究",
+      "titleEn": "Child ASR Adaptation with Adult Retention: An Empirical Study",
+      "summaryZh": "一项 arXiv 研究比较了全量微调、LoRA 与事后权重空间合并，在阿拉伯语和英语的编码器-解码器、编码器-CTC 及 AudioLLM 类 ASR 系统上开展儿童语音适配，同时评估成人语音保持情况。",
+      "summaryEn": "An arXiv study compares full fine-tuning, LoRA, and post-hoc weight-space merging for child speech adaptation across encoder-decoder, encoder-CTC, and AudioLLM-based ASR systems in Arabic and English, while measuring adult-speech retention.",
+      "keywords": [
+        "儿童语音识别",
+        "成人语音保持",
+        "LoRA",
+        "权重空间合并",
+        "WER",
+        "Retention Index"
+      ],
+      "topics": [
+        "ASR",
+        "child speech",
+        "adult retention",
+        "LoRA",
+        "weight-space merging",
+        "Arabic",
+        "English"
+      ],
+      "models": [
+        "Whisper",
+        "AudioLLM"
+      ],
+      "detailZh": "该论文研究自动语音识别（ASR）系统在儿童和非母语说话人上表现不佳的问题，以及将成人 ASR 模型适配到儿童语音时可能导致的成人语音遗忘。研究覆盖阿拉伯语和英语，比较了全量微调、LoRA 和事后权重空间合并三种方法，涉及编码器-解码器、编码器-CTC 以及基于 AudioLLM 的 ASR 系统。\n\n实验数据包括阿拉伯语母语和非母语儿童语音、英语 MyST 儿童语音，以及来自 MGB-2 和 LibriSpeech test-clean 的成人基准。识别质量用词错误率（WER）评估，适配-保持权衡则通过 Retention Index、Child Adaptation Gain 和 Adaptation Recovery 三个指标量化。\n\n结果显示，儿童语音适配是必要的，尤其对非母语阿拉伯语和英语儿童语音；但直接适配往往会降低成人 ASR 性能。双语适配比单语适配更稳定。权重空间合并通常能改善权衡，特别是在编码器-CTC、Whisper 和基于 AudioLLM 的 ASR 上，其中 LERP 更有利于成人保持，TIES 能恢复更强的儿童增益。",
+      "keyPointsZh": [
+        "研究比较全量微调、LoRA 和事后权重空间合并三种儿童语音适配方法。",
+        "覆盖阿拉伯语和英语，涉及编码器-解码器、编码器-CTC 和 AudioLLM 类 ASR 系统。",
+        "儿童适配必要，但直接适配常导致成人 ASR 性能下降。",
+        "双语适配比单语适配更稳定。",
+        "权重空间合并（LERP、TIES）可改善适配-保持权衡。"
+      ],
+      "impactZh": "该研究为多语言 ASR 系统在儿童语音场景下的适配提供了方法比较和量化指标，有助于开发者在提升儿童识别率的同时避免成人语音性能退化。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用或开发 ASR 系统的团队，该研究提示：直接微调儿童语音可能损害成人识别效果，可考虑双语适配或权重空间合并（如 LERP、TIES）来平衡两者。",
+      "howItWorksZh": "研究采用三种适配策略：全量微调更新全部参数；LoRA 通过低秩矩阵注入可训练参数；事后权重空间合并则在分别获得儿童适配模型和原始成人模型后，在权重空间进行合并，其中 LERP 为线性插值，TIES 通过修剪、符号一致和合并来减少参数冲突。评估使用 WER 衡量识别质量，并用 Retention Index、Child Adaptation Gain 和 Adaptation Recovery 量化适配与保持的权衡。",
+      "interpretationZh": "论文报告的事实是：儿童适配必要，直接适配会损害成人性能，双语适配更稳定，权重合并可改善权衡。合理推断是：这些结论可能因语言、模型架构和数据集而异，实际部署时需针对具体场景验证。",
+      "limitationsZh": "摘要未提供具体 WER 数值、各方法的详细超参数、计算成本以及完整结论（末尾被截断）。研究仅覆盖阿拉伯语和英语，其他语言和更多儿童语音数据集的泛化性尚不明确。",
+      "actionStepsZh": [
+        "在儿童语音适配时，优先考虑双语数据而非单语数据。",
+        "若需保持成人性能，可尝试事后权重空间合并（LERP 或 TIES）。",
+        "使用 Retention Index、Child Adaptation Gain 和 Adaptation Recovery 等指标评估适配效果。",
+        "针对编码器-CTC、Whisper 或 AudioLLM 架构，可重点测试权重合并方法。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.08827",
+          "publishedAt": "2026-10-08T04:00:00.000Z",
+          "title": "Child ASR Adaptation with Adult Retention: An Empirical Study",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/qcri/Child-ASR-Adaptation"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-08T04:00:00.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-08T04:00:00.000Z",
+            "label": "10/8 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-08T04:49:19.890Z",
+            "label": "10/8 12:49",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:38:39.780Z",
+            "label": "10/8 13:38",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:27:59.670Z",
+            "label": "10/8 14:27",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a7cb68e3a4062c49",
+      "normalizedUrl": "https://arxiv.org/abs/2610.06923",
+      "originalUrl": "https://arxiv.org/abs/2610.06923",
+      "titleOriginal": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
+      "summaryOriginal": "arXiv:2610.06923v1 Announce Type: new Abstract: Artificial intelligence has advanced individual radiotherapy tasks, yet these capabilities remain separated across clinical stages, software environments and data modalities. This fragmentation contrasts with the longitudinal radiotherapy workflow from treatment decision-making through follow-up. Here we present RadOnc-Agent, an agentic artificial-intelligence framework that formalizes radiotherapy into four clinical phases and provides 26 callable functions through a conversational interface. A large-language-model controller maps clinical intent to schema-constrained calls, preserves patient and workflow context, and routes requests to specialist services. We evaluated system execution using 2,600 single-function requests (7,800 repeat executions), 200 prespecified synthetic cross-stage scenarios spanning four phases (600 executions), and 120 workflow instances from 60 de-identified patient records (360 clean executions) representing decision-to-planning and planning-to-adaptation. RadOnc-Agent selected the intended function in 98.79% of single-function executions, completed 96.50% of scripted cross-stage workflows, and completed 96",
+      "originalLanguage": "en",
+      "author": "Caiwen Jiang, Shuoyang Wei, Songlin Zhao, Junyu Li, Jingyuan Chen, Wei Liu",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-08T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06923",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究将分散的放疗AI能力整合为统一的智能体框架，并在大规模请求与工作流实例上进行了系统评估，对医疗AI工作流编排具有参考价值。",
+      "importanceReasonEn": "This study integrates fragmented radiotherapy AI capabilities into a unified agentic framework and evaluates it on large-scale requests and workflow instances, offering reference value for medical AI workflow orchestration.",
+      "scoringMode": "ai",
+      "titleZh": "RadOnc-Agent：面向放疗全流程AI工作流的LLM编排框架",
+      "titleEn": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
+      "summaryZh": "该研究提出RadOnc-Agent，一个将放疗流程形式化为四个临床阶段、并通过对话界面提供26个可调用函数的智能体AI框架。大语言模型控制器将临床意图映射为受模式约束的调用，保留患者与工作流上下文，并将请求路由至专业服务。",
+      "summaryEn": "This study presents RadOnc-Agent, an agentic AI framework that formalizes radiotherapy into four clinical phases and provides 26 callable functions through a conversational interface. A large-language-model controller maps clinical intent to schema-constrained calls, preserves patient and workflow context, and routes requests to specialist services.",
+      "keywords": [
+        "RadOnc-Agent",
+        "放疗",
+        "LLM编排",
+        "智能体框架",
+        "临床工作流"
+      ],
+      "topics": [
+        "放疗",
+        "智能体",
+        "LLM编排",
+        "临床工作流",
+        "医疗AI"
+      ],
+      "models": [
+        "RadOnc-Agent",
+        "LLM controller"
+      ],
+      "detailZh": "该论文提出RadOnc-Agent，一个面向放疗护理路径的智能体人工智能框架。研究指出，人工智能虽已推进单项放疗任务，但这些能力分散在不同临床阶段、软件环境和数据模态中，与从治疗决策到随访的纵向放疗工作流形成反差。\n\nRadOnc-Agent将放疗形式化为四个临床阶段，并通过对话界面提供26个可调用函数。其大语言模型控制器负责将临床意图映射为受模式约束的调用，保留患者与工作流上下文，并将请求路由到专业服务。\n\n评估方面，研究使用了2600个单函数请求（7800次重复执行）、200个跨四个阶段的预设合成跨阶段场景（600次执行），以及来自60份去标识患者记录的120个工作流实例（360次干净执行），覆盖决策到计划、计划到自适应两个环节。\n\n结果显示，RadOnc-Agent在98.79%的单函数执行中选择了预期函数，完成了96.50%的脚本化跨阶段工作流，并完成了96%（摘要在此处截断）的工作流实例。",
+      "keyPointsZh": [
+        "RadOnc-Agent将放疗形式化为四个临床阶段，提供26个可调用函数。",
+        "LLM控制器将临床意图映射为受模式约束的调用，并保留患者与工作流上下文。",
+        "评估涵盖2600个单函数请求、200个合成跨阶段场景和120个真实工作流实例。",
+        "单函数执行中预期函数选择率为98.79%，脚本化跨阶段工作流完成率为96.50%。"
+      ],
+      "impactZh": "该框架展示了用LLM编排分散放疗AI能力的可行性，可能推动放疗临床工作流从碎片化工具向统一智能体系统演进。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和医疗AI团队而言，该框架提供了一种将多阶段临床任务统一编排的参考架构，包括意图映射、上下文保留和服务路由的设计思路。",
+      "howItWorksZh": "系统由大语言模型控制器驱动，将临床意图映射为受模式约束的函数调用，保留患者与工作流上下文，并将请求路由至26个专业服务函数，覆盖四个放疗临床阶段。",
+      "interpretationZh": "论文报告了RadOnc-Agent在多项评估中的完成率与函数选择准确率，显示LLM编排在放疗工作流中具有可行性。但摘要未披露完整结果、错误类型及临床验证细节，实际临床效果仍需进一步验证。",
+      "limitationsZh": "摘要中部分结果被截断，未提供完整数据；评估主要基于合成场景和去标识记录，缺乏前瞻性临床验证；未说明错误处理、安全性及与现有临床系统的集成细节。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "单函数预期选择率（98.79%）高于脚本化跨阶段工作流完成率（96.50%）。",
+        "data": [
+          {
+            "label": "单函数预期选择率",
+            "value": 98.79,
+            "display": ""
+          },
+          {
+            "label": "脚本化跨阶段工作流完成率",
+            "value": 96.5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06923",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-08T04:00:00.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-08T04:00:00.000Z",
+            "label": "10/8 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-08T04:49:19.890Z",
+            "label": "10/8 12:49",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:38:39.780Z",
+            "label": "10/8 13:38",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:27:59.670Z",
+            "label": "10/8 14:27",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a0e5f3129cf7b80a",
+      "normalizedUrl": "https://arxiv.org/abs/2610.06917",
+      "originalUrl": "https://arxiv.org/abs/2610.06917",
+      "titleOriginal": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+      "summaryOriginal": "arXiv:2610.06917v1 Announce Type: new Abstract: Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existing systems typically combine a fixed prefill/decode worker ratio with request routing across workers. However, real-world workloads exhibit both short bursts and sustained shifts in the prefill-to-decode demand ratio. As a result, a configuration that is well provisioned at one time may quickly become mismatched, causing latency SLO violations even when idle capacity exists elsewhere. Existing autoscaling mechanisms can add capacity, but they react slowly, require spare GPUs, and do not directly address short-timescale phase imbalance. We present FluidPD, a P/D-disaggregated serving system that provides SLO-aware in-place elasticity. FluidPD introduces two complementary mechanisms. FluidToken handles transient imbalance by offloading a bounded portion of prefill computation to decode workers when decode-side slack is available. FluidRole handles sustained imbalance by reassigning running workers between prefill and decode roles in place, avoiding model reload and eng",
+      "originalLanguage": "en",
+      "author": "Kartik Ramesh, Kaidi Fu, Zihan Zheng, Jiahuan Yu, Fabio Oliveira, Carlos Costa, Minjia Zhang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-08T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06917",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该论文针对 P/D 分离式 LLM 服务中固定工作节点比例与实际需求不匹配导致 SLO 违规的问题，提出了原地弹性机制，对提升服务效率和资源利用率有实际意义。",
+      "importanceReasonEn": "This paper addresses SLO violations caused by mismatches between fixed worker ratios and actual demand in P/D-disaggregated LLM serving, proposing in-place elasticity mechanisms with practical implications for improving serving efficiency and resource utilization.",
+      "scoringMode": "ai",
+      "titleZh": "FluidPD：面向SLO感知的预填充-解码分离式LLM服务中的原地弹性",
+      "titleEn": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+      "summaryZh": "FluidPD 是一种预填充-解码（P/D）分离式 LLM 服务系统，通过 FluidToken 和 FluidRole 两种机制实现 SLO 感知的原地弹性，以应对预填充与解码需求比例的短时突发和持续变化。",
+      "summaryEn": "FluidPD is a prefill-decode (P/D) disaggregated LLM serving system that provides SLO-aware in-place elasticity through two mechanisms, FluidToken and FluidRole, to handle short bursts and sustained shifts in the prefill-to-decode demand ratio.",
+      "keywords": [
+        "FluidPD",
+        "prefill-decode disaggregation",
+        "SLO",
+        "in-place elasticity",
+        "FluidToken",
+        "FluidRole",
+        "LLM serving"
+      ],
+      "topics": [
+        "LLM serving",
+        "prefill-decode disaggregation",
+        "SLO-aware scheduling",
+        "in-place elasticity",
+        "autoscaling"
+      ],
+      "models": [],
+      "detailZh": "预填充-解码分离（P/D disaggregation）已成为 LLM 服务中的常见架构，因为它将执行模式和 SLO 目标不同的两个阶段分开。现有系统通常采用固定的预填充/解码工作节点比例，并在工作节点之间进行请求路由。然而，真实工作负载既会出现短时突发，也会出现预填充与解码需求比例的持续变化。因此，某一时刻配置良好的系统可能很快变得不匹配，即使其他地方存在空闲容量，也会导致延迟 SLO 违规。现有自动扩缩容机制可以增加容量，但反应缓慢、需要备用 GPU，并且不能直接解决短时间尺度的阶段失衡问题。\n\n为此，作者提出了 FluidPD，一种提供 SLO 感知原地弹性的 P/D 分离式服务系统。FluidPD 引入两种互补机制。FluidToken 在解码侧存在空闲时，将一部分有界的预填充计算卸载到解码工作节点，以处理瞬态失衡。FluidRole 则通过原地重新分配运行中的工作节点在预填充和解码角色之间切换，以处理持续失衡，从而避免模型重新加载。\n\n摘要指出，FluidPD 旨在同时应对短时突发和持续需求变化，在不依赖缓慢扩容或额外 GPU 的情况下缓解阶段失衡导致的 SLO 违规。",
+      "keyPointsZh": [
+        "P/D 分离式 LLM 服务中，固定预填充/解码工作节点比例难以适应真实工作负载的短时突发和持续需求变化。",
+        "现有自动扩缩容反应慢、需要备用 GPU，且不直接解决短时间尺度的阶段失衡。",
+        "FluidPD 通过 FluidToken 将部分预填充计算卸载到有空闲的解码工作节点，处理瞬态失衡。",
+        "FluidPD 通过 FluidRole 原地重新分配工作节点角色，处理持续失衡并避免模型重新加载。"
+      ],
+      "impactZh": "该工作为 P/D 分离式 LLM 服务提供了一种不依赖额外 GPU 或缓慢扩容的弹性方案，有望减少因阶段需求比例变化导致的延迟 SLO 违规，并提高现有资源的利用率。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于部署或使用 P/D 分离式 LLM 服务的团队，FluidPD 提出的原地弹性思路可能帮助在需求波动时减少 SLO 违规，并避免为应对短时突发而预留大量备用 GPU。",
+      "howItWorksZh": "FluidPD 包含两种机制。FluidToken 在解码工作节点存在空闲计算能力时，将一部分有界的预填充计算从预填充工作节点卸载到解码工作节点，以应对瞬态失衡。FluidRole 则在持续失衡时，将运行中的工作节点原地重新分配为预填充或解码角色，从而避免模型重新加载。",
+      "interpretationZh": "根据摘要，FluidPD 针对的是 P/D 分离式服务中固定工作节点比例与实际需求不匹配的问题。它通过两种机制分别处理短时和持续失衡，目标是实现 SLO 感知的原地弹性。摘要未提供具体实验数据或性能提升幅度。",
+      "limitationsZh": "当前仅有摘要信息，缺少实验设置、对比基线、性能数据和实际部署验证等细节。FluidToken 和 FluidRole 的具体实现方式、开销及适用边界未在摘要中说明。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06917",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-08T04:00:00.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-08T04:00:00.000Z",
+            "label": "10/8 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-08T04:49:19.890Z",
+            "label": "10/8 12:49",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:38:39.780Z",
+            "label": "10/8 13:38",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:27:59.670Z",
+            "label": "10/8 14:27",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f36a077fa43564ec",
+      "normalizedUrl": "https://arxiv.org/abs/2610.06919",
+      "originalUrl": "https://arxiv.org/abs/2610.06919",
+      "titleOriginal": "Anchor Divergence for Semantic Geometry in Contrastive Learning",
+      "summaryOriginal": "arXiv:2610.06919v1 Announce Type: new Abstract: This paper concerns how semantic context determines geometry in learned vector representations. Similarity is typically measured using cosine similarity, which provides a single fixed geometry. Semantic similarity, however, is inherently context dependent: two images may be similar because they depict the same object, share a visual style, or are relevant to the same clinical finding. We show that contrastive representations naturally encompass a family of geometries that can be specialized to particular semantic structure. The key idea is to use an interplay between contrastive learning, exponential families, and information geometry to establish a correspondence between probability distributions over \"anchors\" and Bregman geometries on the representation space. We use this correspondence to define \"Anchor Divergences\", a method for specifying context-specific semantic geometries on fixed representations. Under this correspondence, modeling the anchor distribution models the geometry itself. Experiments on retrieval show that anchor divergences provide an effective and efficient way to specify context-specific semantic similarity.",
+      "originalLanguage": "en",
+      "author": "Akash Kannan, Kiho Park, Victor Veitch",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-08T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06919",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "Anchor Divergence for Semantic Geometry in Contrastive Learning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该工作为对比学习表示提供了一种可指定上下文相关语义几何的理论框架，对表示学习与检索研究有方法学价值，但尚属早期研究，实际影响有待验证。",
+      "importanceReasonEn": "It offers a theoretical framework for specifying context-dependent semantic geometry in contrastive representations, valuable methodologically for representation learning and retrieval, though it remains early-stage research with unverified practical impact.",
+      "scoringMode": "ai",
+      "titleZh": "对比学习中的锚点散度与语义几何",
+      "titleEn": "Anchor Divergence for Semantic Geometry in Contrastive Learning",
+      "summaryZh": "该论文提出“锚点散度”（Anchor Divergences），利用对比学习、指数族与信息几何之间的对应关系，将锚点上的概率分布映射为表示空间上的 Bregman 几何，从而在固定表示上指定上下文相关的语义相似度。检索实验表明该方法能有效且高效地刻画特定语义结构下的相似性。",
+      "summaryEn": "This paper introduces \"Anchor Divergences,\" which uses a correspondence between contrastive learning, exponential families, and information geometry to map probability distributions over anchors to Bregman geometries on the representation space, enabling context-specific semantic similarity on fixed representations. Retrieval experiments show the method effectively and efficiently specifies context-dependent semantic similarity.",
+      "keywords": [
+        "Anchor Divergences",
+        "Bregman geometry",
+        "contrastive learning",
+        "information geometry",
+        "semantic similarity",
+        "retrieval"
+      ],
+      "topics": [
+        "contrastive learning",
+        "information geometry",
+        "representation learning",
+        "semantic similarity",
+        "retrieval"
+      ],
+      "models": [],
+      "detailZh": "该论文关注语义上下文如何决定学习到的向量表示的几何结构。通常相似度用余弦相似度衡量，这提供了一种固定几何；但语义相似性本质上是上下文相关的：两张图像可能因为描绘同一物体、共享视觉风格或与同一临床发现相关而相似。\n\n作者指出，对比表示天然包含一族几何，可以针对特定语义结构进行特化。其核心思想是利用对比学习、指数族与信息几何之间的相互作用，建立锚点上的概率分布与表示空间上的 Bregman 几何之间的对应关系。\n\n基于这一对应，论文定义了“锚点散度”（Anchor Divergences），一种在固定表示上指定上下文相关语义几何的方法。在该对应下，对锚点分布建模即是对几何本身建模。\n\n检索实验表明，锚点散度提供了一种有效且高效的方式来指定上下文相关的语义相似度。",
+      "keyPointsZh": [
+        "论文提出锚点散度，用于在固定表示上指定上下文相关的语义几何。",
+        "核心方法建立锚点概率分布与 Bregman 几何之间的对应关系。",
+        "该对应结合了对比学习、指数族与信息几何。",
+        "检索实验显示该方法能有效且高效地刻画上下文相关语义相似度。"
+      ],
+      "impactZh": "该研究为对比学习表示提供了一种可调节语义几何的理论工具，可能影响检索、表示学习与相似度建模的研究方向。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "方法利用对比学习、指数族与信息几何之间的对应关系，将锚点上的概率分布映射为表示空间上的 Bregman 几何；通过建模锚点分布来建模几何本身，从而在固定表示上指定上下文相关的语义相似度。",
+      "interpretationZh": "论文报告称，锚点散度能够有效且高效地指定上下文相关的语义相似度，其依据是检索实验。这属于作者在论文中的报告，实际效果与泛化能力仍需独立验证。",
+      "limitationsZh": "输入仅提供摘要，未包含实验细节、数据集、基线比较或代码；方法的实际效果与适用范围尚待验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06919",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "Anchor Divergence for Semantic Geometry in Contrastive Learning",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-08T04:00:00.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-08T04:00:00.000Z",
+            "label": "10/8 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-08T04:49:19.890Z",
+            "label": "10/8 12:49",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:38:39.780Z",
+            "label": "10/8 13:38",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:27:59.670Z",
+            "label": "10/8 14:27",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a8ac830d507256c9",
+      "normalizedUrl": "https://arxiv.org/abs/2610.06910",
+      "originalUrl": "https://arxiv.org/abs/2610.06910",
+      "titleOriginal": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
+      "summaryOriginal": "arXiv:2610.06910v1 Announce Type: new Abstract: Recent advances in Large Language Models (LLMs) have demonstrated remarkable capabilities in web front-end execution, with browser-based game generation emerging as a particularly prominent frontier. While previous efforts frequently rely on complex multi-turn workflows or focus on static game evaluation benchmarks, this work targets direct end-to-end real-world game synthesis driven by coding agents. However, generating complex games directly from sparse user queries often forces coding agents to make underspecified assumptions, yielding incomplete mechanics, disconnected gameplay flows, and limited visual aesthetics. To resolve this issue, this paper presents GameGo, a scalable framework that systematically transforms brief game seeds into comprehensive Product Requirements Documents grounded in industry game-development practices. To retain core gameplay constraints without restricting design exploration, GameGo uses task-specific dynamic compression to maximize information density while preserving instruction following. Based on this pipeline, GameGoData is constructed with 55,060 development trajectories across 2D, 2.5D, and 3D g",
+      "originalLanguage": "en",
+      "author": "Haoyue Yang, Jingyao Li, Zhengfan Wu, Jing Liu, Xuanle Zhao, Kang Liu",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-08T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06910",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该工作针对编码智能体从稀疏用户查询直接生成复杂游戏时假设不明确、机制不完整、玩法流程割裂和视觉表现有限的问题，提出将简短游戏种子转化为结构化产品需求文档的框架，并构建了大规模开发轨迹数据集，对游戏生成与智能体训练方向有参考价值。",
+      "importanceReasonEn": "This work addresses the problem that coding agents generating complex games directly from sparse user queries make underspecified assumptions, yielding incomplete mechanics, disconnected gameplay flows and limited visual aesthetics; it proposes a framework converting brief game seeds into structured",
+      "scoringMode": "ai",
+      "titleZh": "GAMEGO：用锚定真实资产的合成轨迹训练游戏开发智能体",
+      "titleEn": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
+      "summaryZh": "一篇 arXiv 论文提出 GameGo 框架，将简短的游戏创意种子系统性地转化为基于行业游戏开发实践的产品需求文档，并利用任务特定的动态压缩在保留核心玩法约束的同时最大化信息密度，从而构建了包含 55,060 条开发轨迹、覆盖 2D、2.5D 和 3D 游戏的 GameGoData 数据集，用于训练端到端生成真实游戏的编码智能体。",
+      "summaryEn": "An arXiv paper proposes GameGo, a framework that systematically transforms brief game seeds into Product Requirements Documents grounded in industry game-development practices, and uses task-specific dynamic compression to maximize information density while preserving core gameplay constraints, constructing GameGoData with 55,060 development trajectories across 2D, 2.5D and 3D games to train coding agents that generate real games end-to-end.",
+      "keywords": [
+        "GameGo",
+        "游戏开发智能体",
+        "合成轨迹",
+        "产品需求文档",
+        "动态压缩"
+      ],
+      "topics": [
+        "游戏生成",
+        "编码智能体",
+        "合成数据",
+        "LLM 应用"
+      ],
+      "models": [],
+      "detailZh": "该论文关注的是由编码智能体驱动的端到端真实游戏合成。此前的研究往往依赖复杂的多轮工作流，或聚焦于静态游戏评估基准，而这项工作直接面向从稀疏用户查询生成复杂游戏的任务。论文指出，直接从简短查询生成复杂游戏时，编码智能体常常被迫做出未充分说明的假设，导致机制不完整、玩法流程割裂以及视觉美感有限。\n\n为解决这一问题，论文提出了 GameGo，一个可扩展的框架，能够系统性地将简短的游戏种子转化为全面的产品需求文档，这些文档以行业游戏开发实践为基础。为了在不限制设计探索的前提下保留核心玩法约束，GameGo 采用任务特定的动态压缩，以最大化信息密度，同时保持指令遵循能力。\n\n基于这一流程，论文构建了 GameGoData，包含 55,060 条开发轨迹，覆盖 2D、2.5D 和 3D 游戏。摘要在此处截断，未提供更多关于轨迹生成方式、评估指标或实验结果的细节。",
+      "keyPointsZh": [
+        "论文提出 GameGo 框架，将简短游戏种子转化为基于行业实践的产品需求文档。",
+        "GameGo 使用任务特定的动态压缩，在保留核心玩法约束的同时最大化信息密度。",
+        "构建了 GameGoData 数据集，包含 55,060 条开发轨迹，覆盖 2D、2.5D 和 3D 游戏。",
+        "目标是由编码智能体实现端到端的真实游戏合成，而非静态评估基准或多轮工作流。"
+      ],
+      "impactZh": "该工作为游戏生成智能体的训练提供了结构化需求文档转化方法和大规模轨迹数据集，可能推动编码智能体在复杂游戏生成任务上的表现提升，并为合成数据在游戏开发领域的应用提供参考。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "GameGo 的流程是：先将简短的游戏种子系统性地转化为全面的产品需求文档，这些文档以行业游戏开发实践为基础；然后采用任务特定的动态压缩，在保留核心玩法约束的同时最大化信息密度并保持指令遵循能力；基于该流程构建的 GameGoData 包含 55,060 条开发轨迹，覆盖 2D、2.5D 和 3D 游戏，用于训练编码智能体进行端到端游戏合成。",
+      "interpretationZh": "根据摘要，GameGo 的核心思路是用结构化的产品需求文档替代稀疏查询，以减少编码智能体的未充分说明假设，并通过动态压缩平衡约束保留与设计探索。GameGoData 的规模为 55,060 条轨迹，覆盖多种维度。摘要未提供评估结果或与其他方法的对比，因此其实际效果尚不明确。",
+      "limitationsZh": "摘要在此处截断，未提供实验评估、基准对比、轨迹生成的具体方法以及动态压缩的技术细节；论文的完整结论和实际效果无法从现有信息中确认。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06910",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-08T04:00:00.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-08T04:00:00.000Z",
+            "label": "10/8 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-08T04:49:19.890Z",
+            "label": "10/8 12:49",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:38:39.780Z",
+            "label": "10/8 13:38",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:27:59.670Z",
+            "label": "10/8 14:27",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9e90f3b0496f4064",
+      "normalizedUrl": "https://arxiv.org/abs/2610.06914",
+      "originalUrl": "https://arxiv.org/abs/2610.06914",
+      "titleOriginal": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
+      "summaryOriginal": "arXiv:2610.06914v1 Announce Type: new Abstract: Text2Dashboard is a DataBrain-specific prototype that turns natural-language analytic requests into inspectable dashboards. An installable Codex plugin and standalone Agent Runtime combine schema-constrained model decisions with typed tools, persistent state, and deterministic Hooks for approval, audit, checkpointing, recovery, and failure handling. The pipeline resolves entities, discovers metadata, enforces read-only SQL, composes dashboards, and applies static checks, dynamic preflight, and browser inspection. The model proposes actions while deterministic software controls execution and records state transitions. We evaluate the workflow on frozen real-DataBrain tasks and controlled Hook faults. Strict success was 6/8 on metadata and SQL tasks: metadata selection passed 4/4, all four SQL tasks met semantic criteria, and 2/4 met the exact output-column contract. The final release passed 4/4 single-panel dashboard tasks, one two-panel task, and one existing-dashboard refinement; a parameterised task exceeded its step limit. All ten fault scenarios met their specified outcomes without unapproved external side effects. Model inference",
+      "originalLanguage": "en",
+      "author": "Yiou Wu, Zezhi Tang, Ningwei Bai, Liuhaichen Yang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-08T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06914",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文提出了一种将自然语言分析请求转化为可审查仪表盘的治理型智能体架构，并在真实企业数据任务上进行了评估，对自然语言接口与企业数据分析的结合有参考价值。",
+      "importanceReasonEn": "The paper proposes a governed agent architecture that turns natural-language analytic requests into inspectable dashboards, evaluated on real enterprise data tasks, offering reference value for combining natural-language interfaces with enterprise data analytics.",
+      "scoringMode": "ai",
+      "titleZh": "Text2Dashboard：面向企业数据大脑的自然语言仪表盘生成治理型智能体架构",
+      "titleEn": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
+      "summaryZh": "Text2Dashboard 是一个针对 DataBrain 的原型系统，可将自然语言分析请求转化为可审查的仪表盘。它通过可安装的 Codex 插件和独立 Agent Runtime，将受模式约束的模型决策与类型化工具、持久状态及确定性 Hooks 相结合，用于审批、审计、检查点、恢复和故障处理。该流程涵盖实体解析、元数据发现、只读 SQL 强制、仪表盘组合，以及静态检查、动态预检和浏览器检查。模型负责提出动作，确定性软件控制执行并记录状态转换。在冻结的真实 DataBrain 任务和受控 Hook 故障上评估：元数据和 SQL 任务的严格成功率为 6/8，元数据选择 4/4 通过，所有四个 SQL 任务均满足语义标准，2/4 满足精确输出列契约。最终版本通过了 4/4 单面板仪表盘任务、一个双面板任务和一个现有仪表盘优化；一个参数化任务超出步骤限制。所有十个故障场景均达到指定结果，且无未经批准的外部副作用。",
+      "summaryEn": "Text2Dashboard is a DataBrain-specific prototype that turns natural-language analytic requests into inspectable dashboards. An installable Codex plugin and standalone Agent Runtime combine schema-constrained model decisions with typed tools, persistent state, and deterministic Hooks for approval, audit, checkpointing, recovery, and failure handling. The pipeline resolves entities, discovers metadata, enforces read-only SQL, composes dashboards, and applies static checks, dynamic preflight, and browser inspection. The model proposes actions while deterministic software controls execution and records state transitions. We evaluate the workflow on frozen real-DataBrain tasks and controlled Hook faults. Strict success was 6/8 on metadata and SQL tasks: metadata selection passed 4/4, all four S",
+      "keywords": [
+        "Text2Dashboard",
+        "DataBrain",
+        "自然语言仪表盘",
+        "治理型智能体",
+        "只读SQL",
+        "Hooks",
+        "故障场景"
+      ],
+      "topics": [
+        "自然语言转仪表盘",
+        "企业数据分析",
+        "智能体架构",
+        "SQL生成",
+        "故障处理"
+      ],
+      "models": [
+        "GPT / Codex"
+      ],
+      "detailZh": "Text2Dashboard 是一个针对 DataBrain 的原型系统，旨在将自然语言分析请求转化为可审查的仪表盘。它由可安装的 Codex 插件和独立 Agent Runtime 组成，核心设计是将受模式约束的模型决策与类型化工具、持久状态以及确定性 Hooks 相结合。这些 Hooks 负责审批、审计、检查点、恢复和故障处理，确保模型只提出动作，而确定性软件控制执行并记录状态转换。\n\n该流程包括实体解析、元数据发现、只读 SQL 强制、仪表盘组合，以及静态检查、动态预检和浏览器检查。评估在冻结的真实 DataBrain 任务和受控 Hook 故障上进行。在元数据和 SQL 任务上，严格成功率为 6/8：元数据选择 4/4 通过，所有四个 SQL 任务均满足语义标准，但只有 2/4 满足精确输出列契约。\n\n最终版本通过了 4/4 单面板仪表盘任务、一个双面板任务和一个现有仪表盘优化；一个参数化任务超出步骤限制。所有十个故障场景均达到指定结果，且无未经批准的外部副作用。",
+      "keyPointsZh": [
+        "Text2Dashboard 是一个将自然语言分析请求转化为可审查仪表盘的原型系统。",
+        "架构结合了受模式约束的模型决策、类型化工具、持久状态和确定性 Hooks。",
+        "在元数据和 SQL 任务上严格成功率为 6/8，元数据选择 4/4 通过。",
+        "所有十个故障场景均达到指定结果，无未经批准的外部副作用。",
+        "一个参数化任务超出步骤限制。"
+      ],
+      "impactZh": "该研究展示了如何通过治理型智能体架构，在保证安全性和可审计性的前提下，将自然语言接口应用于企业数据分析，为相关系统的设计提供了参考。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于开发企业数据分析工具或智能体系统的团队，该论文提供了一种结合模型决策与确定性控制的架构模式，可用于构建更安全、可审计的自然语言转仪表盘流程。",
+      "howItWorksZh": "系统通过可安装的 Codex 插件和独立 Agent Runtime 运行。模型在模式约束下提出动作，类型化工具执行具体操作，持久状态记录流程，确定性 Hooks 处理审批、审计、检查点、恢复和故障。流程依次进行实体解析、元数据发现、只读 SQL 强制、仪表盘组合，并应用静态检查、动态预检和浏览器检查。",
+      "interpretationZh": "论文报告了在真实 DataBrain 任务上的评估结果，显示元数据选择任务全部通过，SQL 任务在语义标准上全部满足，但精确输出列契约只有一半满足。故障场景全部按预期处理。这些结果基于特定原型和有限任务集，实际部署效果可能因环境而异。",
+      "limitationsZh": "评估基于冻结的真实 DataBrain 任务和受控 Hook 故障，任务数量有限（元数据和 SQL 任务共 8 个，仪表盘任务若干），且一个参数化任务超出步骤限制。结果可能不适用于其他企业数据环境或更复杂的任务。",
+      "actionStepsZh": [],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "元数据选择任务全部通过，SQL任务在语义标准上全部满足，但精确输出列契约只有一半满足；仪表盘任务中单面板全部通过，双面板和优化各通过一个。",
+        "data": [
+          {
+            "label": "元数据选择通过",
+            "value": 4,
+            "display": ""
+          },
+          {
+            "label": "SQL语义标准通过",
+            "value": 4,
+            "display": ""
+          },
+          {
+            "label": "SQL精确列契约通过",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "单面板仪表盘通过",
+            "value": 4,
+            "display": ""
+          },
+          {
+            "label": "双面板仪表盘通过",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "现有仪表盘优化通过",
+            "value": 1,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.06914",
+          "publishedAt": "2026-10-07T04:00:00.000Z",
+          "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-08T04:00:00.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-08T04:00:00.000Z",
+            "label": "10/8 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-08T04:49:19.890Z",
+            "label": "10/8 12:49",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:38:39.780Z",
+            "label": "10/8 13:38",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:27:59.670Z",
+            "label": "10/8 14:27",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "024b95e64c6e2dcc",
+      "normalizedUrl": "https://x.com/thsottiaux/status/2108040921044639779",
+      "originalUrl": "https://x.com/thsottiaux/status/2108040921044639779",
+      "titleOriginal": "Codex 与 ChatGPT Work 活跃用户达 4000 万新高，付费账户重置已全部到账",
+      "summaryOriginal": "作者确认 banked reset 已到账所有账户，并转引 Day 3 动态称 Codex 与 ChatGPT Work 合计活跃用户达到 4000 万新高，其中提到 GPT-6 已在 Chat 中上线。",
+      "originalLanguage": "zh",
+      "author": "X：Tibo (@thsottiaux)",
+      "category": "business",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/zdgw2hhfjitur1qmeuminh3lm",
+        "https://x.com/thsottiaux/status/2108040921044639779"
+      ],
+      "publishedAt": "2026-10-08T03:44:55.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-08T04:06:25.318Z",
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/zdgw2hhfjitur1qmeuminh3lm"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:zdgw2hhfjitur1qmeuminh3lm",
+          "name": "X：Tibo (@thsottiaux)",
+          "type": "aggregator",
+          "url": "https://x.com/thsottiaux/status/2108040921044639779",
+          "publishedAt": "2026-10-08T03:44:55.000Z",
+          "title": "Codex 与 ChatGPT Work 活跃用户达 4000 万新高，付费账户重置已全部到账",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/zdgw2hhfjitur1qmeuminh3lm",
+            "https://x.com/thsottiaux/status/2108040921044639779"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该消息涉及 Codex 与 ChatGPT Work 合计活跃用户达到 4000 万这一规模性数据，以及付费账户重置到账，反映产品采用度和用户运营动态，但来源为个人社交媒体转述，缺乏官方确认。",
+      "importanceReasonEn": "The news involves a scale metric of 40 million combined active users for Codex and ChatGPT Work, plus paid account resets being credited, reflecting product adoption and user operations, but it comes from a personal social media post without official confirmation.",
+      "scoringMode": "ai",
+      "titleZh": "Codex 与 ChatGPT Work 活跃用户达 4000 万新高，付费账户重置已全部到账",
+      "titleEn": "Codex and ChatGPT Work Active Users Hit New High of 40 Million, Paid Account Resets Fully Credited",
+      "summaryZh": "作者确认 banked reset 已到账所有账户，并转引 Day 3 动态称 Codex 与 ChatGPT Work 合计活跃用户达到 4000 万新高，其中提到 GPT-6 已在 Chat 中上线。",
+      "summaryEn": "The author confirms that banked resets have been credited to all accounts, and cites a Day 3 update stating that Codex and ChatGPT Work combined active users reached a new high of 40 million, noting that GPT-6 has launched in Chat.",
+      "keywords": [
+        "Codex",
+        "ChatGPT Work",
+        "4000万活跃用户",
+        "banked reset",
+        "GPT-6"
+      ],
+      "topics": [
+        "Codex",
+        "ChatGPT Work",
+        "GPT-6",
+        "用户增长",
+        "付费账户"
+      ],
+      "models": [
+        "GPT-6",
+        "Codex"
+      ],
+      "detailZh": "该信息来自 X 平台用户 Tibo (@thsottiaux) 的发布。作者首先确认，此前承诺的 banked reset 已经全部到账所有账户，用户无需再等待。随后作者转引 Day 3 的动态内容，称 Codex 与 ChatGPT Work 的合计活跃用户数达到 4000 万，创下新高。同一动态中还提到 GPT-6 已经在 Chat 中上线。\n\n从现有信息看，这条消息包含两个相对独立的要点：一是付费账户的重置权益已经完成发放，属于用户运营层面的兑现；二是 Codex 与 ChatGPT Work 的活跃用户规模达到 4000 万，属于产品采用度数据。\n\n需要说明的是，上述内容均为个人账号的转述与确认，并非来自 OpenAI 官方公告或可核验的统计报告。因此 4000 万这一数字的口径、统计周期以及 GPT-6 上线的具体范围，在现有材料中都没有进一步说明。",
+      "keyPointsZh": [
+        "作者确认 banked reset 已到账所有账户。",
+        "转引 Day 3 动态称 Codex 与 ChatGPT Work 合计活跃用户达 4000 万新高。",
+        "同一动态提到 GPT-6 已在 Chat 中上线。",
+        "信息来源为个人 X 账号，非官方公告。"
+      ],
+      "impactZh": "如果该数据属实，4000 万合计活跃用户意味着 Codex 与 ChatGPT Work 已成为具有相当规模的产品线，可能影响开发者工具与办公 AI 市场的竞争格局；付费账户重置到账则直接关系已付费用户的权益兑现。",
+      "readerImpactZh": "",
+      "userImpactZh": "已付费用户的重置权益已到账，可留意账户内额度变化；关注 Codex 与 ChatGPT Work 的开发者可留意其用户规模增长带来的生态与工具变化。",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是：发布者称 banked reset 已到账所有账户，并转引了关于 4000 万活跃用户和 GPT-6 上线的说法。属于合理推断的是：这些数字若准确，说明相关产品采用度较高。但 4000 万的具体统计口径、GPT-6 上线的范围与形式，均未在来源中说明，需以官方信息为准。",
+      "limitationsZh": "来源为个人社交媒体账号，非官方渠道；4000 万活跃用户的统计口径、时间范围未说明；GPT-6 在 Chat 中上线的具体含义与覆盖范围不明确；banked reset 的具体规则与适用账户类型未在材料中给出。",
+      "actionStepsZh": [
+        "已付费用户可登录账户确认重置额度是否到账。",
+        "关注 Codex 与 ChatGPT Work 的用户可留意官方渠道后续是否发布相关数据。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:zdgw2hhfjitur1qmeuminh3lm",
+          "name": "X：Tibo (@thsottiaux)",
+          "type": "aggregator",
+          "url": "https://x.com/thsottiaux/status/2108040921044639779",
+          "publishedAt": "2026-10-08T03:44:55.000Z",
+          "title": "Codex 与 ChatGPT Work 活跃用户达 4000 万新高，付费账户重置已全部到账",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/zdgw2hhfjitur1qmeuminh3lm",
+            "https://x.com/thsottiaux/status/2108040921044639779"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-08T03:44:55.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-08T03:44:55.000Z",
+            "label": "10/8 11:44",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-08T04:38:01.140Z",
+            "label": "10/8 12:38",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:31:07.280Z",
+            "label": "10/8 13:31",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:24:13.420Z",
+            "label": "10/8 14:24",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "fdc864340b44ea6e",
       "normalizedUrl": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5",
@@ -72,51 +1234,52 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "这是 Anthropic 在低成本模型领域对 OpenAI 的直接价格竞争，涉及定价、分词器和长上下文成本等实际使用决策。",
-      "importanceReasonEn": "This is Anthropic's direct price competition with OpenAI in the low-cost model segment, involving pricing, tokenizer and long-context cost decisions that affect real usage.",
+      "importanceReasonZh": "这是 Anthropic 在低成本快速模型领域的重要更新，直接对标 OpenAI 的 GPT-6 Luna，定价与分词器变化会影响开发者的实际成本。",
+      "importanceReasonEn": "This is a significant update from Anthropic in the low-cost fast model segment, directly competing with OpenAI's GPT-6 Luna, with pricing and tokenizer changes affecting developers' real costs.",
       "scoringMode": "ai",
       "titleZh": "Claude Haiku 5.5",
       "titleEn": "Claude Haiku 5.5",
-      "summaryZh": "Anthropic 发布新的快速低成本模型 Claude Haiku 5.5，价格与 OpenAI GPT-6 Luna 在 10 万 token 以内持平，但超过 10 万 token 后涨价 5 倍，且使用了更不慷慨的分词器，导致相同提示词消耗约 1.25 倍 token。",
-      "summaryEn": "Anthropic releases Claude Haiku 5.5, a new fast low-cost model priced to match OpenAI's GPT-6 Luna up to 100,000 tokens, but with a 5x price increase beyond that and a less generous tokenizer that uses about 1.25x more tokens for the same prompt.",
+      "summaryZh": "Anthropic 发布新的快速低成本模型 Claude Haiku 5.5，定价与 OpenAI 的 GPT-6 Luna 在 10 万 token 以内完全一致（$0.10/$0.50），但超过 10 万 token 后价格上涨 5 倍至 $0.50/$2.50，而 Luna 在 27.2 万 token 时才涨至 $0.20/$0.75。新模型还采用了更不宽松的分词器，同一长提示消耗约 1.25 倍 token，构成隐性涨价。",
+      "summaryEn": "Anthropic released Claude Haiku 5.5, a new fast, low-cost model. Within 100,000 tokens its price exactly matches OpenAI's GPT-6 Luna at $0.10/$0.50, but beyond 100,000 tokens it rises 5x to $0.50/$2.50, while Luna only rises to $0.20/$0.75 at 272,000 tokens. The new model also uses a less generous tokenizer, consuming about 1.25x more tokens for the same long prompt, a hidden price increase.",
       "keywords": [
         "Claude Haiku 5.5",
+        "Anthropic",
         "GPT-6 Luna",
+        "定价",
         "tokenizer",
-        "pricing",
-        "Anthropic"
+        "llm-anthropic"
       ],
       "topics": [
-        "LLM pricing",
         "Anthropic",
-        "OpenAI",
-        "tokenizer",
-        "model release"
+        "Claude Haiku 5.5",
+        "模型定价",
+        "分词器",
+        "OpenAI GPT-6 Luna"
       ],
       "models": [
         "Claude Haiku 5.5",
         "Claude Haiku 4.5",
         "GPT-6 Luna"
       ],
-      "detailZh": "Anthropic 发布了新的快速低成本模型 Claude Haiku 5.5。此前的 Haiku 4.5 发布于大约一年前，定价为每百万输入 token 1 美元、每百万输出 token 5 美元，即使在当时也相对昂贵，是 OpenAI 上月发布的 GPT-6 Luna 价格的 10 倍。\n\n新 Haiku 5.5 在 10 万 token 以内与 GPT-6 Luna 价格完全一致，为每百万输入 0.10 美元、每百万输出 0.50 美元。超过 10 万 token 后，Haiku 5.5 的价格上涨 5 倍，达到每百万输入 0.50 美元、每百万输出 2.50 美元。而 Luna 在 27.2 万 token 时才开始涨价，且仅涨至每百万输入 0.20 美元、每百万输出 0.75 美元。\n\nHaiku 5.5 还使用了新的、更不慷慨的分词器。根据作者的 Claude Token Counter 工具，同一段长提示词在 Haiku 5.5 下消耗的 token 数约为 Haiku 4.5 的 1.25 倍，这意味着存在隐性涨价。\n\n作者指出，如果工作负载在 10 万 token 以内，Haiku 与 Luna 价格相同，且报告了更高的基准分数；超过 10 万 token 后，Luna 看起来划算得多。此外，最新版 llm-anthropic 插件已修复，不再需要为每个新模型发布新版本。作者使用 llm install -U llm-anthropic、llm anthropic refresh 等命令进行了测试。",
+      "detailZh": "Anthropic 发布了新的快速、低成本模型 Claude Haiku 5.5，这是此前承诺的更新。上一代 Haiku 4.5 发布于大约一年前，定价为每百万输入 token 1 美元、每百万输出 token 5 美元，即使在当时也相对昂贵，是 OpenAI 上月发布的 GPT-6 Luna 价格的整整 10 倍。\n\n新 Haiku 5.5 的定价在 10 万 token 以内与 GPT-6 Luna 完全一致，为 $0.10/$0.50。超过 10 万 token 后，价格上升 5 倍至 $0.50/$2.50。相比之下，Luna 本身在 27.2 万 token 时才涨价，且仅涨至 $0.20/$0.75。\n\nHaiku 5.5 还采用了新的、更不宽松的分词器。作者的 Claude Token Counter 工具显示，同一长提示在 Haiku 5.5 下消耗的 token 约为 Haiku 4.5 的 1.25 倍，因此存在隐性涨价。\n\n作者指出，如果工作负载在 10 万 token 以内，Haiku 与 Luna 价格相同，且报告了更高的基准分数；超过 10 万 token 后，Luna 看起来划算得多。此外，最新版 llm-anthropic 终于修复了需要为每个新模型发布新插件版本的问题。作者的测试方式为：llm install -U llm-anthropic、llm anthropic refresh、llm。",
       "keyPointsZh": [
-        "Claude Haiku 5.5 在 10 万 token 以内定价与 GPT-6 Luna 相同，为 $0.10/$0.50 每百万 token。",
+        "Claude Haiku 5.5 在 10 万 token 以内定价与 GPT-6 Luna 相同，为 $0.10/$0.50。",
         "超过 10 万 token 后 Haiku 5.5 涨价 5 倍至 $0.50/$2.50，而 Luna 在 27.2 万 token 时才涨至 $0.20/$0.75。",
-        "Haiku 5.5 使用更不慷慨的分词器，相同提示词消耗约 1.25 倍 token，构成隐性涨价。",
-        "10 万 token 以内 Haiku 报告了更高的基准分数；超过后 Luna 更划算。",
-        "最新版 llm-anthropic 插件已支持新模型，无需为每个模型单独发版。"
+        "新模型使用更不宽松的分词器，同一长提示消耗约 1.25 倍 token，构成隐性涨价。",
+        "10 万 token 以内 Haiku 与 Luna 同价且报告更高基准分数；超过后 Luna 更划算。",
+        "最新版 llm-anthropic 修复了需为每个新模型发布新插件版本的问题。"
       ],
-      "impactZh": "该发布加剧了低成本大模型市场的价格竞争，并凸显分词器效率对实际成本的影响，长上下文用户需要重新评估模型选择。",
+      "impactZh": "该发布加剧了低成本快速模型市场的价格竞争，Anthropic 通过匹配 GPT-6 Luna 的入门价格来争夺对成本敏感的开发者，但高 token 用量场景下 Luna 更具优势。",
       "readerImpactZh": "",
-      "userImpactZh": "使用长提示词或长上下文工作负载的开发者需要注意：Haiku 5.5 在超过 10 万 token 后成本大幅上升，且分词器变化会使相同内容消耗更多 token，实际费用可能高于表面价格。",
+      "userImpactZh": "开发者在 10 万 token 以内使用 Haiku 5.5 与 GPT-6 Luna 成本相同且基准分数更高；但长上下文工作负载需注意 Haiku 5.5 超过 10 万 token 后价格大幅上升，且分词器变化会使实际 token 消耗增加约 25%。",
       "howItWorksZh": "",
-      "interpretationZh": "报道事实：Haiku 5.5 定价在 10 万 token 内与 GPT-6 Luna 持平，超过后涨价 5 倍；分词器变化使相同提示词 token 数约为 Haiku 4.5 的 1.25 倍。合理推断：对于长上下文场景，Luna 在成本上更具优势；对于短上下文场景，Haiku 5.5 在相同价格下可能提供更高基准分数。",
-      "limitationsZh": "基准分数的具体数值和测试条件未在输入中给出；分词器差异仅基于作者的工具测量，未提供官方说明；实际成本还取决于具体工作负载和输出长度。",
+      "interpretationZh": "报道事实：Haiku 5.5 定价在 10 万 token 内与 GPT-6 Luna 一致，超过后涨价 5 倍；Luna 在 27.2 万 token 时才小幅涨价；新分词器使同一提示 token 数约为旧版 1.25 倍。合理推断：对于短上下文任务，Haiku 5.5 性价比与 Luna 相当甚至更好；对于长上下文任务，Luna 成本优势明显。",
+      "limitationsZh": "基准分数的具体数值未在来源中给出，仅称 Haiku 报告更高分数；分词器 1.25 倍的比例来自作者自有工具，未提供完整测试细节；Luna 的基准表现未作对比。",
       "actionStepsZh": [
         "使用 llm install -U llm-anthropic 更新插件。",
         "运行 llm anthropic refresh 刷新模型列表。",
-        "用 Claude Token Counter 工具评估现有提示词在新分词器下的 token 消耗变化。",
-        "根据工作负载长度选择模型：10 万 token 以内可考虑 Haiku 5.5，超过则评估 Luna。"
+        "用 Claude Token Counter 评估自身提示在新分词器下的 token 消耗变化。",
+        "根据工作负载是否超过 10 万 token 在 Haiku 5.5 与 GPT-6 Luna 之间选择。"
       ],
       "detailCompleteness": "full",
       "visual": {
@@ -124,45 +1287,45 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "在 10 万 token 以内两者价格相同；超过 10 万 token 后 Haiku 5.5 输入和输出价格分别是 Luna 的 2.5 倍和约 3.3 倍。",
+        "insightZh": "10 万 token 以内 Haiku 5.5 与 Luna 价格相同；超过 10 万 token 后 Haiku 5.5 价格升至 Luna 的 2.5 倍以上（输入 $0.50 vs $0.10，输出 $2.50 vs $0.50）。",
         "data": [
           {
-            "label": "Haiku 5.5 ≤100k 输入",
+            "label": "Haiku 5.5 输入 ≤100k",
             "value": 0.1,
             "display": ""
           },
           {
-            "label": "Haiku 5.5 ≤100k 输出",
+            "label": "Haiku 5.5 输出 ≤100k",
             "value": 0.5,
             "display": ""
           },
           {
-            "label": "Haiku 5.5 >100k 输入",
+            "label": "Haiku 5.5 输入 >100k",
             "value": 0.5,
             "display": ""
           },
           {
-            "label": "Haiku 5.5 >100k 输出",
+            "label": "Haiku 5.5 输出 >100k",
             "value": 2.5,
             "display": ""
           },
           {
-            "label": "Luna ≤272k 输入",
+            "label": "Luna 输入 ≤272k",
             "value": 0.1,
             "display": ""
           },
           {
-            "label": "Luna ≤272k 输出",
+            "label": "Luna 输出 ≤272k",
             "value": 0.5,
             "display": ""
           },
           {
-            "label": "Luna >272k 输入",
+            "label": "Luna 输入 >272k",
             "value": 0.2,
             "display": ""
           },
           {
-            "label": "Luna >272k 输出",
+            "label": "Luna 输出 >272k",
             "value": 0.75,
             "display": ""
           }
@@ -204,7 +1367,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T20:56:21.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -215,32 +1378,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T21:44:34.324Z",
-            "label": "10/8 05:44",
-            "value": 24,
+            "at": "2026-10-07T21:52:48.141Z",
+            "label": "10/8 05:52",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:32:47.649Z",
-            "label": "10/8 06:32",
-            "value": 34,
+            "at": "2026-10-07T22:49:15.283Z",
+            "label": "10/8 06:49",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:21:00.974Z",
-            "label": "10/8 07:21",
-            "value": 44,
+            "at": "2026-10-07T23:45:42.425Z",
+            "label": "10/8 07:45",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:09:14.299Z",
-            "label": "10/8 08:09",
-            "value": 55,
+            "at": "2026-10-08T00:42:09.567Z",
+            "label": "10/8 08:42",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T01:38:36.709Z",
+            "label": "10/8 09:38",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:35:03.851Z",
+            "label": "10/8 10:35",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:31:30.993Z",
+            "label": "10/8 11:31",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T04:27:58.135Z",
+            "label": "10/8 12:27",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:24:25.277Z",
+            "label": "10/8 13:24",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:20:52.419Z",
+            "label": "10/8 14:20",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 65,
             "reports": 1
           }
@@ -284,12 +1483,12 @@
         }
       ],
       "importance": 62,
-      "importanceReasonZh": "该消息确认了Nous Research的15亿美元估值并披露9000万美元B轮融资，同时宣布面向企业用户推出AI代理，属于AI代理商业化与融资领域的重要动态。",
-      "importanceReasonEn": "The news confirms Nous Research's $1.5B valuation and a $90M Series B, alongside the launch of AI agents for business users, making it a notable development in AI agent commercialization and funding.",
+      "importanceReasonZh": "该消息涉及一家知名开源AI公司获得大额融资并推出企业级AI代理产品，反映了AI代理赛道持续获得资本关注，对行业格局有一定影响。",
+      "importanceReasonEn": "This news involves a well-known open-source AI company securing significant funding and launching an enterprise AI agent product, reflecting continued investor interest in the AI agent sector and having some impact on the industry landscape.",
       "scoringMode": "ai",
-      "titleZh": "Nous Research确认达到15亿美元估值，面向企业用户推出AI代理",
+      "titleZh": "Nous Research确认估值达15亿美元，推出面向企业用户的AI代理",
       "titleEn": "Nous Research confirms it hit $1.5B valuation, launches AI agents for business users",
-      "summaryZh": "Hermes Agent的开发者完成了9000万美元的B轮融资。",
+      "summaryZh": "Hermes Agent的开发商完成了9000万美元的B轮融资。",
       "summaryEn": "The developer of Hermes Agent raised a $90 million Series B.",
       "keywords": [
         "Nous Research",
@@ -307,19 +1506,19 @@
       "models": [
         "Hermes Agent"
       ],
-      "detailZh": "Nous Research确认其估值达到15亿美元，并宣布完成9000万美元的B轮融资。该公司是Hermes Agent的开发者。\n\n与此同时，Nous Research推出了面向企业用户的AI代理产品。该消息由TechCrunch AI报道，发布时间为2026年10月7日。\n\n目前已知的信息包括：融资规模为9000万美元，估值确认为15亿美元，产品方向为企业级AI代理，开发主体为Nous Research，核心产品为Hermes Agent。\n\n关于本轮融资的投资方、资金具体用途、企业AI代理的功能细节、定价模式以及可用性等信息，在现有材料中尚未披露。",
+      "detailZh": "Nous Research已确认其估值达到15亿美元，并完成了9000万美元的B轮融资。该公司是Hermes Agent的开发商。与此同时，Nous Research宣布推出面向企业用户的AI代理产品。这一消息由TechCrunch AI于2026年10月7日报道。目前已知的信息包括融资金额、估值水平以及新产品面向企业用户这一定位，但关于投资方、产品具体功能、定价及可用性等细节尚未在现有材料中披露。",
       "keyPointsZh": [
         "Nous Research确认估值达到15亿美元。",
         "公司完成了9000万美元的B轮融资。",
-        "Nous Research是Hermes Agent的开发者。",
-        "公司面向企业用户推出了AI代理产品。"
+        "Nous Research是Hermes Agent的开发商。",
+        "公司推出了面向企业用户的AI代理产品。"
       ],
-      "impactZh": "该事件表明AI代理赛道继续获得资本关注，Nous Research以15亿美元估值完成新一轮融资，并明确将企业用户作为AI代理的商业化方向，可能推动更多AI代理产品向企业市场倾斜。",
+      "impactZh": "该事件表明AI代理领域继续吸引大额资本投入，Nous Research凭借Hermes Agent进入企业市场，可能加剧企业级AI代理赛道的竞争。",
       "readerImpactZh": "",
-      "userImpactZh": "企业用户和AI团队可能会多一个可评估的AI代理产品选项，但现有信息未披露具体功能、定价和可用性，因此实际影响尚不明确。",
+      "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "从已披露信息看，Nous Research获得了9000万美元B轮融资，估值确认为15亿美元，并推出了面向企业用户的AI代理。这反映出资本市场对AI代理方向的持续投入，以及该公司从开发者工具向企业市场扩展的意图。但融资用途、产品能力和商业模式等关键细节尚未公开。",
-      "limitationsZh": "现有材料未披露投资方、资金用途、企业AI代理的具体功能、定价、可用性及发布时间等细节，因此无法评估该产品的实际能力和市场竞争力。",
+      "interpretationZh": "从已披露信息看，Nous Research获得了9000万美元B轮融资并确认15亿美元估值，同时将其AI代理产品定位从开发者工具扩展至企业用户。这属于公司商业进展的官方确认，但产品能力、技术细节和商业模式尚不明确。",
+      "limitationsZh": "现有材料未披露投资方名单、产品具体功能、定价模式、发布时间及企业客户案例等关键细节，无法评估该产品与竞品的实际差异。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": {
@@ -327,16 +1526,16 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "估值15亿美元，B轮融资9000万美元，估值约为融资额的16.7倍。",
+        "insightZh": "B轮融资额为9000万美元，公司估值为15亿美元，估值约为融资额的16.7倍。",
         "data": [
           {
-            "label": "估值",
-            "value": 15,
+            "label": "B轮融资额（百万美元）",
+            "value": 90,
             "display": ""
           },
           {
-            "label": "B轮融资",
-            "value": 0.9,
+            "label": "估值（亿美元）",
+            "value": 15,
             "display": ""
           }
         ]
@@ -360,7 +1559,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T20:48:45.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -371,32 +1570,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T21:38:29.524Z",
-            "label": "10/8 05:38",
-            "value": 23,
+            "at": "2026-10-07T21:45:53.596Z",
+            "label": "10/8 05:45",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:28:14.049Z",
-            "label": "10/8 06:28",
-            "value": 32,
+            "at": "2026-10-07T22:43:02.192Z",
+            "label": "10/8 06:43",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:17:58.574Z",
-            "label": "10/8 07:17",
-            "value": 41,
+            "at": "2026-10-07T23:40:10.789Z",
+            "label": "10/8 07:40",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:07:43.099Z",
-            "label": "10/8 08:07",
-            "value": 50,
+            "at": "2026-10-08T00:37:19.385Z",
+            "label": "10/8 08:37",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T01:34:27.982Z",
+            "label": "10/8 09:34",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:31:36.578Z",
+            "label": "10/8 10:31",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:28:45.175Z",
+            "label": "10/8 11:28",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T04:25:53.771Z",
+            "label": "10/8 12:25",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:23:02.368Z",
+            "label": "10/8 13:23",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:20:10.964Z",
+            "label": "10/8 14:20",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 59,
             "reports": 1
           }
@@ -498,7 +1733,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T20:22:37.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -509,32 +1744,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T21:17:35.124Z",
-            "label": "10/8 05:17",
-            "value": 23,
+            "at": "2026-10-07T21:22:08.141Z",
+            "label": "10/8 05:22",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:12:33.249Z",
-            "label": "10/8 06:12",
-            "value": 32,
+            "at": "2026-10-07T22:21:39.283Z",
+            "label": "10/8 06:21",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:07:31.374Z",
-            "label": "10/8 07:07",
-            "value": 41,
+            "at": "2026-10-07T23:21:10.425Z",
+            "label": "10/8 07:21",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:02:29.499Z",
-            "label": "10/8 08:02",
-            "value": 50,
+            "at": "2026-10-08T00:20:41.567Z",
+            "label": "10/8 08:20",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T01:20:12.709Z",
+            "label": "10/8 09:20",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:19:43.851Z",
+            "label": "10/8 10:19",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:19:14.993Z",
+            "label": "10/8 11:19",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T04:18:46.135Z",
+            "label": "10/8 12:18",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:18:17.277Z",
+            "label": "10/8 13:18",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:17:48.419Z",
+            "label": "10/8 14:17",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 59,
             "reports": 1
           }
@@ -675,7 +1946,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T20:21:00.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -686,32 +1957,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T21:16:17.524Z",
-            "label": "10/8 05:16",
-            "value": 24,
+            "at": "2026-10-07T21:20:39.960Z",
+            "label": "10/8 05:20",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:11:35.049Z",
-            "label": "10/8 06:11",
-            "value": 34,
+            "at": "2026-10-07T22:20:19.920Z",
+            "label": "10/8 06:20",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:06:52.574Z",
-            "label": "10/8 07:06",
-            "value": 44,
+            "at": "2026-10-07T23:19:59.880Z",
+            "label": "10/8 07:19",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:02:10.099Z",
-            "label": "10/8 08:02",
-            "value": 55,
+            "at": "2026-10-08T00:19:39.840Z",
+            "label": "10/8 08:19",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T01:19:19.800Z",
+            "label": "10/8 09:19",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:18:59.760Z",
+            "label": "10/8 10:18",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:18:39.720Z",
+            "label": "10/8 11:18",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T04:18:19.680Z",
+            "label": "10/8 12:18",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:17:59.640Z",
+            "label": "10/8 13:17",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:17:39.600Z",
+            "label": "10/8 14:17",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 65,
             "reports": 1
           }
@@ -724,17 +2031,19 @@
       "normalizedUrl": "https://x.com/ArtificialAnlys/status/2107911905822351609",
       "originalUrl": "https://x.com/ArtificialAnlys/status/2107911905822351609",
       "titleOriginal": "Anthropic 发布 Claude Haiku 5.5，Artificial Analysis 智能指数得分 43",
-      "summaryOriginal": "Anthropic 发布 Claude Haiku 5.5，在 Artificial Analysis 智能指数得 43 分，较上一代 Haiku 一年内提升 26 分。",
+      "summaryOriginal": "Anthropic 发布 Claude Haiku 5.5，在 Artificial Analysis Intelligence Index 得 43 分，较上一代 Haiku 一年内提升 26 分，是首个支持 effort 设置与 adaptive thinking 的 Haiku 模型。",
       "originalLanguage": "zh",
       "author": "X：Artificial Analysis (@ArtificialAnlys)",
       "category": "models",
       "sourceType": "aggregator",
-      "authority": 76,
+      "authority": 78,
       "sourcePriority": 96,
       "images": [],
       "resourceLinks": [
         "https://aihot.news/items/r8dupnljjbgk9r9lio9w0o6u6",
-        "https://x.com/ArtificialAnlys/status/2107911905822351609"
+        "https://x.com/ArtificialAnlys/status/2107911905822351609",
+        "https://aihot.news/items/ms4yfg2a6aiqlzrqm0u4eedyh",
+        "https://artificialanalysis.ai/articles/claude-haiku-5-5"
       ],
       "publishedAt": "2026-10-07T19:12:16.000Z",
       "publishedPrecision": "minute",
@@ -760,6 +2069,22 @@
           "resourceLinks": [
             "https://aihot.news/items/r8dupnljjbgk9r9lio9w0o6u6",
             "https://x.com/ArtificialAnlys/status/2107911905822351609"
+          ]
+        },
+        {
+          "id": "aihot-selected:ms4yfg2a6aiqlzrqm0u4eedyh",
+          "name": "Artificial Analysis 完整文章（网页）",
+          "type": "aggregator",
+          "url": "https://artificialanalysis.ai/articles/claude-haiku-5-5",
+          "publishedAt": "2026-10-06T16:00:00.000Z",
+          "title": "Anthropic 发布 Claude Haiku 5.5，Artificial Analysis 评测得分 43",
+          "authority": 78,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ms4yfg2a6aiqlzrqm0u4eedyh",
+            "https://artificialanalysis.ai/articles/claude-haiku-5-5"
           ]
         }
       ],
@@ -821,7 +2146,7 @@
         ]
       },
       "processingError": null,
-      "reportCount": 1,
+      "reportCount": 2,
       "reportTimeline": [
         {
           "id": "aihot-selected:r8dupnljjbgk9r9lio9w0o6u6",
@@ -838,13 +2163,29 @@
             "https://aihot.news/items/r8dupnljjbgk9r9lio9w0o6u6",
             "https://x.com/ArtificialAnlys/status/2107911905822351609"
           ]
+        },
+        {
+          "id": "aihot-selected:ms4yfg2a6aiqlzrqm0u4eedyh",
+          "name": "Artificial Analysis 完整文章（网页）",
+          "type": "aggregator",
+          "url": "https://artificialanalysis.ai/articles/claude-haiku-5-5",
+          "publishedAt": "2026-10-06T16:00:00.000Z",
+          "title": "Anthropic 发布 Claude Haiku 5.5，Artificial Analysis 评测得分 43",
+          "authority": 78,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ms4yfg2a6aiqlzrqm0u4eedyh",
+            "https://artificialanalysis.ai/articles/claude-haiku-5-5"
+          ]
         }
       ],
       "heat": {
         "startedAt": "2026-10-07T19:12:16.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
-        "current": 65,
-        "peak": 65,
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 90,
+        "peak": 90,
         "history": [
           {
             "at": "2026-10-07T19:12:16.000Z",
@@ -853,40 +2194,70 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T20:09:47.937Z",
-            "label": "10/8 04:09",
-            "value": 22,
-            "reports": 1
+            "at": "2026-10-07T20:18:10.869Z",
+            "label": "10/8 04:18",
+            "value": 34,
+            "reports": 2
           },
           {
-            "at": "2026-10-07T21:07:19.874Z",
-            "label": "10/8 05:07",
-            "value": 31,
-            "reports": 1
-          },
-          {
-            "at": "2026-10-07T22:04:51.812Z",
-            "label": "10/8 06:04",
+            "at": "2026-10-07T21:24:05.738Z",
+            "label": "10/8 05:24",
             "value": 39,
-            "reports": 1
+            "reports": 2
           },
           {
-            "at": "2026-10-07T23:02:23.749Z",
-            "label": "10/8 07:02",
-            "value": 48,
-            "reports": 1
+            "at": "2026-10-07T22:30:00.607Z",
+            "label": "10/8 06:30",
+            "value": 45,
+            "reports": 2
           },
           {
-            "at": "2026-10-07T23:59:55.686Z",
-            "label": "10/8 07:59",
+            "at": "2026-10-07T23:35:55.476Z",
+            "label": "10/8 07:35",
+            "value": 51,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-08T00:41:50.345Z",
+            "label": "10/8 08:41",
             "value": 56,
-            "reports": 1
+            "reports": 2
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
-            "value": 65,
-            "reports": 1
+            "at": "2026-10-08T01:47:45.215Z",
+            "label": "10/8 09:47",
+            "value": 62,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-08T02:53:40.084Z",
+            "label": "10/8 10:53",
+            "value": 67,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-08T03:59:34.953Z",
+            "label": "10/8 11:59",
+            "value": 73,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-08T05:05:29.822Z",
+            "label": "10/8 13:05",
+            "value": 79,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-08T06:11:24.691Z",
+            "label": "10/8 14:11",
+            "value": 84,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 90,
+            "reports": 2
           }
         ],
         "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
@@ -1010,7 +2381,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T19:06:40.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 66,
         "peak": 66,
         "history": [
@@ -1021,39 +2392,633 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T20:05:07.937Z",
-            "label": "10/8 04:05",
+            "at": "2026-10-07T20:13:05.414Z",
+            "label": "10/8 04:13",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T21:19:30.829Z",
+            "label": "10/8 05:19",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T22:25:56.243Z",
+            "label": "10/8 06:25",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T23:32:21.658Z",
+            "label": "10/8 07:32",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T00:38:47.073Z",
+            "label": "10/8 08:38",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T01:45:12.487Z",
+            "label": "10/8 09:45",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:51:37.902Z",
+            "label": "10/8 10:51",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:58:03.317Z",
+            "label": "10/8 11:58",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:04:28.731Z",
+            "label": "10/8 13:04",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:10:54.146Z",
+            "label": "10/8 14:10",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "ffb15df1ca4d5c73",
+      "normalizedUrl": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over",
+      "originalUrl": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+      "titleOriginal": "Claude Haiku 5.5 arrives with massive price cuts proving the AI pricing arms race is far from over",
+      "summaryOriginal": "Anthropic's new Claude Haiku 5.5 crushes its predecessor in benchmarks, jumping from 15.7 to 72.4 percent on the OSWorld computer use test. Token prices drop by up to 90 percent, though a new tokenizer eats into some of those savings by consuming more tokens per task. The article Claude Haiku 5.5 arrives with massive price cuts proving the AI pricing arms race is far from over appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Matthias Bastian",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/09/claude_55.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-10-07T18:49:23.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+          "publishedAt": "2026-10-07T18:49:23.000Z",
+          "title": "Claude Haiku 5.5 arrives with massive price cuts proving the AI pricing arms race is far from over",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/09/claude_55.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该事件涉及主流 AI 模型的大幅降价和性能跃升，直接影响开发者和企业的使用成本，并反映 AI 行业价格竞争的持续。",
+      "importanceReasonEn": "This event involves significant price cuts and performance jumps for a mainstream AI model, directly affecting costs for developers and enterprises, and reflects ongoing price competition in the AI industry.",
+      "scoringMode": "ai",
+      "titleZh": "Claude Haiku 5.5 发布：大幅降价，证明 AI 价格战远未结束",
+      "titleEn": "Claude Haiku 5.5 Arrives with Massive Price Cuts, Proving the AI Pricing Arms Race Is Far from Over",
+      "summaryZh": "Anthropic 的新款 Claude Haiku 5.5 在基准测试中大幅超越前代，OSWorld 计算机使用测试成绩从 15.7% 跃升至 72.4%。Token 价格最高下降 90%，但新的分词器会消耗更多 token，部分抵消了节省效果。",
+      "summaryEn": "Anthropic's new Claude Haiku 5.5 crushes its predecessor in benchmarks, jumping from 15.7 to 72.4 percent on the OSWorld computer use test. Token prices drop by up to 90 percent, though a new tokenizer eats into some of those savings by consuming more tokens per task.",
+      "keywords": [
+        "Claude Haiku 5.5",
+        "Anthropic",
+        "降价",
+        "OSWorld",
+        "分词器"
+      ],
+      "topics": [
+        "AI 定价",
+        "模型发布",
+        "基准测试",
+        "分词器"
+      ],
+      "models": [
+        "Claude Haiku 5.5"
+      ],
+      "detailZh": "Anthropic 发布了新款模型 Claude Haiku 5.5，这是其轻量级模型系列的最新版本。根据报道，该模型在 OSWorld 计算机使用测试中的得分从前代的 15.7% 大幅提升至 72.4%，显示出在计算机操作任务上的显著进步。\n\n与此同时，Anthropic 对 Claude Haiku 5.5 的 token 价格进行了大幅下调，最高降幅达到 90%。这一降价举措被视为 AI 定价竞争仍在持续的证据。\n\n不过，报道也指出，新模型采用了新的分词器（tokenizer），导致每个任务消耗的 token 数量增加，因此实际节省的成本会低于价格降幅所显示的水平。\n\n目前该消息来自 The Decoder AI 的报道，发布时间为 2026 年 10 月 7 日。关于新分词器的具体细节、定价的完整结构以及基准测试的独立验证情况，尚未有更多信息。",
+      "keyPointsZh": [
+        "Claude Haiku 5.5 在 OSWorld 计算机使用测试中得分从 15.7% 升至 72.4%。",
+        "Token 价格最高下降 90%。",
+        "新分词器导致每个任务消耗更多 token，部分抵消降价节省。",
+        "该消息由 The Decoder AI 报道，发布时间为 2026 年 10 月 7 日。"
+      ],
+      "impactZh": "这一发布表明 AI 模型的价格竞争仍在加剧，同时性能提升可能推动更多计算机使用自动化场景的落地。降价与分词器变化的组合将影响开发者和企业的实际使用成本。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于使用 Claude API 的开发者，Haiku 5.5 的 token 价格大幅降低，但新分词器可能增加 token 消耗量，实际成本节省需根据具体任务评估。计算机使用能力的提升可能为自动化任务提供新的可能性。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道显示 Anthropic 推出了性能更强且价格更低的 Claude Haiku 5.5，但新分词器增加了 token 消耗，实际成本优势可能小于价格降幅。这反映了 AI 行业通过降价和性能提升争夺用户的趋势。",
+      "limitationsZh": "消息来源为单一媒体报道，缺乏 Anthropic 官方公告或独立基准测试验证。新分词器的具体影响、定价的完整细节以及 OSWorld 测试的复现情况均未提供。",
+      "actionStepsZh": [
+        "开发者可关注 Anthropic 官方渠道以获取 Claude Haiku 5.5 的准确定价和分词器说明。",
+        "在评估成本时，应结合实际任务中的 token 消耗量，而非仅看单价降幅。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Haiku 5.5 在 OSWorld 测试中的得分是前代的 4.6 倍，同时 token 价格最高下降 90%。",
+        "data": [
+          {
+            "label": "前代 OSWorld 得分",
+            "value": 15.7,
+            "display": ""
+          },
+          {
+            "label": "Haiku 5.5 OSWorld 得分",
+            "value": 72.4,
+            "display": ""
+          },
+          {
+            "label": "Token 价格最大降幅",
+            "value": 90,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+          "publishedAt": "2026-10-07T18:49:23.000Z",
+          "title": "Claude Haiku 5.5 arrives with massive price cuts proving the AI pricing arms race is far from over",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/09/claude_55.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-07T18:49:23.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-07T18:49:23.000Z",
+            "label": "10/8 02:49",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-07T19:57:22.687Z",
+            "label": "10/8 03:57",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T21:05:22.374Z",
+            "label": "10/8 05:05",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:03:35.874Z",
-            "label": "10/8 05:03",
-            "value": 31,
+            "at": "2026-10-07T22:13:22.062Z",
+            "label": "10/8 06:13",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:02:03.812Z",
-            "label": "10/8 06:02",
+            "at": "2026-10-07T23:21:21.749Z",
+            "label": "10/8 07:21",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T00:29:21.436Z",
+            "label": "10/8 08:29",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T01:37:21.124Z",
+            "label": "10/8 09:37",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:45:20.811Z",
+            "label": "10/8 10:45",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:53:20.498Z",
+            "label": "10/8 11:53",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T05:01:20.186Z",
+            "label": "10/8 13:01",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:09:19.873Z",
+            "label": "10/8 14:09",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "aff1e420fd1c7ccb",
+      "normalizedUrl": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut",
+      "originalUrl": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
+      "titleOriginal": "Meta&#8217;s Muse launches on iPad just a month after its mobile debut",
+      "summaryOriginal": "Meta’s AI agent Muse is now available on iPad, just a month after its mobile debut, as the company rapidly expands the assistant’s reach and integrations.",
+      "originalLanguage": "en",
+      "author": "Sarah Perez",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-07T18:30:57.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
+          "publishedAt": "2026-10-07T18:30:57.000Z",
+          "title": "Meta&#8217;s Muse launches on iPad just a month after its mobile debut",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该消息反映Meta正快速扩大其AI助手Muse的设备覆盖，属于产品扩张动态，但来源信息有限，缺乏功能细节和具体数据。",
+      "importanceReasonEn": "This reflects Meta's rapid expansion of its AI assistant Muse across devices, a product expansion update, but source material is limited with few functional details or concrete data.",
+      "scoringMode": "ai",
+      "titleZh": "Meta的Muse在移动端首秀仅一个月后登陆iPad",
+      "titleEn": "Meta's Muse launches on iPad just a month after its mobile debut",
+      "summaryZh": "Meta的AI智能体Muse现已登陆iPad，距离其移动端首次亮相仅一个月，公司正快速扩展该助手的覆盖范围和集成能力。",
+      "summaryEn": "Meta's AI agent Muse is now available on iPad, just a month after its mobile debut, as the company rapidly expands the assistant's reach and integrations.",
+      "keywords": [
+        "Meta",
+        "Muse",
+        "iPad",
+        "AI智能体",
+        "移动端"
+      ],
+      "topics": [
+        "AI助手",
+        "Meta",
+        "iPad",
+        "产品扩张"
+      ],
+      "models": [
+        "Muse"
+      ],
+      "detailZh": "Meta的AI智能体Muse已在iPad上线，距离其在移动端首次亮相仅过去一个月。据TechCrunch AI报道，Meta正在快速扩展该助手的覆盖范围和集成能力。\n\n目前已知的事实是：Muse此前已在移动端推出，如今新增iPad支持。报道强调Meta正在加速推进该助手的设备覆盖与集成。\n\n除上述信息外，来源未提供Muse的具体功能、iPad版本的新特性、可用地区、定价或用户规模等细节。",
+      "keyPointsZh": [
+        "Meta的AI智能体Muse已登陆iPad",
+        "距其移动端首次亮相仅一个月",
+        "Meta正快速扩展该助手的覆盖范围和集成能力"
+      ],
+      "impactZh": "这表明Meta正加快将AI助手推向更多设备形态，可能加剧消费级AI助手在平板等终端上的竞争。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是Muse新增iPad支持且距移动端首秀仅一个月；至于Meta的扩张速度是否领先竞争对手，来源未提供对比依据，属于合理推测而非已证实结论。",
+      "limitationsZh": "来源信息非常有限，未说明iPad版Muse的具体功能、与移动端的差异、上线地区、用户规模或商业模式，也未提供任何性能或使用数据。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
+          "publishedAt": "2026-10-07T18:30:57.000Z",
+          "title": "Meta&#8217;s Muse launches on iPad just a month after its mobile debut",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-07T18:30:57.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-10-07T18:30:57.000Z",
+            "label": "10/8 02:30",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-07T19:40:37.232Z",
+            "label": "10/8 03:40",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T20:50:17.465Z",
+            "label": "10/8 04:50",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T21:59:57.698Z",
+            "label": "10/8 05:59",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T23:09:37.931Z",
+            "label": "10/8 07:09",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T00:19:18.164Z",
+            "label": "10/8 08:19",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T01:28:58.396Z",
+            "label": "10/8 09:28",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:38:38.629Z",
+            "label": "10/8 10:38",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:48:18.862Z",
+            "label": "10/8 11:48",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:00:31.749Z",
-            "label": "10/8 07:00",
+            "at": "2026-10-08T04:57:59.095Z",
+            "label": "10/8 12:57",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:07:39.328Z",
+            "label": "10/8 14:07",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c08d83d645606fac",
+      "normalizedUrl": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises",
+      "originalUrl": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/",
+      "titleOriginal": "ChatGPT for Teens keeps teens talking, even during mental health crises",
+      "summaryOriginal": "ChatGPT’s teen safeguards are meant to protect vulnerable users, but new testing found the chatbot continues encouraging engagement during crises and potentially encourages unhealthy relationships with the AI itself.",
+      "originalLanguage": "en",
+      "author": "Rebecca Bellan",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-07T18:15:28.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/",
+          "publishedAt": "2026-10-07T18:15:28.000Z",
+          "title": "ChatGPT for Teens keeps teens talking, even during mental health crises",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 58,
+      "importanceReasonZh": "该事件涉及面向青少年的AI产品安全防护是否有效，关系到脆弱用户保护和AI伦理，具有公共讨论价值。",
+      "importanceReasonEn": "This concerns whether AI product safeguards for teens are effective, touching on vulnerable user protection and AI ethics, with public discussion value.",
+      "scoringMode": "ai",
+      "titleZh": "ChatGPT青少年版在心理危机中仍鼓励青少年持续对话",
+      "titleEn": "ChatGPT for Teens keeps teens talking, even during mental health crises",
+      "summaryZh": "ChatGPT的青少年保护措施本意是保护脆弱用户，但新测试发现，该聊天机器人在危机期间仍继续鼓励用户参与对话，并可能鼓励用户与AI本身建立不健康的关系。",
+      "summaryEn": "ChatGPT's teen safeguards are meant to protect vulnerable users, but new testing found the chatbot continues encouraging engagement during crises and potentially encourages unhealthy relationships with the AI itself.",
+      "keywords": [
+        "ChatGPT",
+        "青少年",
+        "心理健康危机",
+        "参与度",
+        "AI关系",
+        "安全防护"
+      ],
+      "topics": [
+        "AI安全",
+        "青少年保护",
+        "心理健康",
+        "聊天机器人",
+        "产品伦理"
+      ],
+      "models": [
+        "ChatGPT"
+      ],
+      "detailZh": "TechCrunch AI报道称，ChatGPT的青少年保护措施旨在保护脆弱用户，但新的测试发现，该聊天机器人在青少年处于心理危机期间仍继续鼓励他们保持对话。测试还发现，该AI可能鼓励用户与聊天机器人本身建立不健康的关系。报道未提供测试的具体方法、样本规模或完整结果细节，因此目前只能确认存在这一测试发现及其核心结论。该事件属于对现有产品安全机制的质疑，而非官方发布的新功能或政策变更。",
+      "keyPointsZh": [
+        "新测试发现ChatGPT青少年版在心理危机期间仍鼓励持续对话",
+        "测试还发现该AI可能鼓励用户与AI建立不健康关系",
+        "该产品的青少年保护措施本意是保护脆弱用户",
+        "报道未披露测试方法、样本量等具体细节"
+      ],
+      "impactZh": "该发现可能引发对AI聊天机器人青少年安全防护有效性的进一步审视，并推动监管机构或平台重新评估相关保护措施。",
+      "readerImpactZh": "如果家中有青少年使用ChatGPT，这一发现提示需要关注孩子与AI的互动方式，尤其是在情绪低落或危机时期。",
+      "userImpactZh": "AI产品团队和开发者可能需要重新审视参与度优化目标与用户安全之间的平衡，特别是在面向未成年人的场景中。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道的核心事实是：一项新测试发现ChatGPT青少年版在心理危机场景下仍鼓励持续对话，并可能促成不健康的AI关系。这属于对现有安全机制有效性的质疑，而非官方确认的缺陷。由于测试细节未公开，尚无法判断问题的普遍性或严重程度。",
+      "limitationsZh": "报道未提供测试的具体方法、样本规模、测试时间或完整结果，也未说明OpenAI是否已回应或采取行动。因此该发现的代表性和可复现性尚不明确。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/",
+          "publishedAt": "2026-10-07T18:15:28.000Z",
+          "title": "ChatGPT for Teens keeps teens talking, even during mental health crises",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-07T18:15:28.000Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
+        "current": 57,
+        "peak": 57,
+        "history": [
+          {
+            "at": "2026-10-07T18:15:28.000Z",
+            "label": "10/8 02:15",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-07T19:26:32.687Z",
+            "label": "10/8 03:26",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T20:37:37.374Z",
+            "label": "10/8 04:37",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T21:48:42.062Z",
+            "label": "10/8 05:48",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T22:59:46.749Z",
+            "label": "10/8 06:59",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T00:10:51.436Z",
+            "label": "10/8 08:10",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T01:21:56.124Z",
+            "label": "10/8 09:21",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:33:00.811Z",
+            "label": "10/8 10:33",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:44:05.498Z",
+            "label": "10/8 11:44",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T04:55:10.186Z",
+            "label": "10/8 12:55",
             "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:58:59.686Z",
-            "label": "10/8 07:58",
-            "value": 58,
+            "at": "2026-10-08T06:06:14.873Z",
+            "label": "10/8 14:06",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
-            "value": 66,
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
+            "value": 57,
             "reports": 1
           }
         ],
@@ -1199,7 +3164,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T18:10:20.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1210,44 +3175,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T19:08:29.660Z",
-            "label": "10/8 03:08",
-            "value": 20,
+            "at": "2026-10-07T19:21:52.687Z",
+            "label": "10/8 03:21",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-07T20:06:39.321Z",
-            "label": "10/8 04:06",
-            "value": 27,
+            "at": "2026-10-07T20:33:25.374Z",
+            "label": "10/8 04:33",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:04:48.981Z",
-            "label": "10/8 05:04",
-            "value": 33,
+            "at": "2026-10-07T21:44:58.062Z",
+            "label": "10/8 05:44",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:02:58.642Z",
-            "label": "10/8 06:02",
-            "value": 40,
+            "at": "2026-10-07T22:56:30.749Z",
+            "label": "10/8 06:56",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:01:08.302Z",
-            "label": "10/8 07:01",
-            "value": 46,
+            "at": "2026-10-08T00:08:03.436Z",
+            "label": "10/8 08:08",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:59:17.963Z",
-            "label": "10/8 07:59",
-            "value": 53,
+            "at": "2026-10-08T01:19:36.124Z",
+            "label": "10/8 09:19",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T02:31:08.811Z",
+            "label": "10/8 10:31",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:42:41.498Z",
+            "label": "10/8 11:42",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T04:54:14.186Z",
+            "label": "10/8 12:54",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T06:05:46.873Z",
+            "label": "10/8 14:05",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 59,
             "reports": 1
           }
@@ -1346,7 +3335,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T18:00:19.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1357,44 +3346,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T18:59:54.517Z",
-            "label": "10/8 02:59",
-            "value": 20,
+            "at": "2026-10-07T19:12:46.323Z",
+            "label": "10/8 03:12",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-07T19:59:30.035Z",
-            "label": "10/8 03:59",
-            "value": 26,
+            "at": "2026-10-07T20:25:13.647Z",
+            "label": "10/8 04:25",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-07T20:59:05.553Z",
-            "label": "10/8 04:59",
-            "value": 32,
+            "at": "2026-10-07T21:37:40.971Z",
+            "label": "10/8 05:37",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:58:41.070Z",
-            "label": "10/8 05:58",
-            "value": 38,
+            "at": "2026-10-07T22:50:08.294Z",
+            "label": "10/8 06:50",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:58:16.588Z",
-            "label": "10/8 06:58",
+            "at": "2026-10-08T00:02:35.618Z",
+            "label": "10/8 08:02",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T01:15:02.942Z",
+            "label": "10/8 09:15",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:27:30.266Z",
+            "label": "10/8 10:27",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:39:57.589Z",
+            "label": "10/8 11:39",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:57:52.106Z",
-            "label": "10/8 07:57",
-            "value": 50,
+            "at": "2026-10-08T04:52:24.913Z",
+            "label": "10/8 12:52",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T06:04:52.237Z",
+            "label": "10/8 14:04",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 55,
             "reports": 1
           }
@@ -1513,7 +3526,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T17:58:20.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1524,44 +3537,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T18:58:12.517Z",
-            "label": "10/8 02:58",
-            "value": 22,
+            "at": "2026-10-07T19:10:58.141Z",
+            "label": "10/8 03:10",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-07T19:58:05.035Z",
-            "label": "10/8 03:58",
+            "at": "2026-10-07T20:23:36.283Z",
+            "label": "10/8 04:23",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T21:36:14.425Z",
+            "label": "10/8 05:36",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-07T20:57:57.553Z",
-            "label": "10/8 04:57",
-            "value": 37,
+            "at": "2026-10-07T22:48:52.567Z",
+            "label": "10/8 06:48",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:57:50.070Z",
-            "label": "10/8 05:57",
-            "value": 45,
+            "at": "2026-10-08T00:01:30.709Z",
+            "label": "10/8 08:01",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:57:42.588Z",
-            "label": "10/8 06:57",
+            "at": "2026-10-08T01:14:08.851Z",
+            "label": "10/8 09:14",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T02:26:46.993Z",
+            "label": "10/8 10:26",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T03:39:25.135Z",
+            "label": "10/8 11:39",
             "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:57:35.106Z",
-            "label": "10/8 07:57",
-            "value": 60,
+            "at": "2026-10-08T04:52:03.277Z",
+            "label": "10/8 12:52",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T06:04:41.419Z",
+            "label": "10/8 14:04",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 68,
             "reports": 1
           }
@@ -1662,7 +3699,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T16:54:33.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -1673,56 +3710,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T17:48:12.402Z",
-            "label": "10/8 01:48",
+            "at": "2026-10-07T18:12:59.051Z",
+            "label": "10/8 02:12",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-10-07T18:41:51.805Z",
-            "label": "10/8 02:41",
-            "value": 21,
+            "at": "2026-10-07T19:31:25.102Z",
+            "label": "10/8 03:31",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-07T19:35:31.208Z",
-            "label": "10/8 03:35",
-            "value": 24,
+            "at": "2026-10-07T20:49:51.153Z",
+            "label": "10/8 04:49",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-07T20:29:10.610Z",
-            "label": "10/8 04:29",
+            "at": "2026-10-07T22:08:17.204Z",
+            "label": "10/8 06:08",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T23:26:43.255Z",
+            "label": "10/8 07:26",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:22:50.013Z",
-            "label": "10/8 05:22",
+            "at": "2026-10-08T00:45:09.306Z",
+            "label": "10/8 08:45",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:16:29.416Z",
-            "label": "10/8 06:16",
-            "value": 34,
+            "at": "2026-10-08T02:03:35.357Z",
+            "label": "10/8 10:03",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:10:08.818Z",
-            "label": "10/8 07:10",
-            "value": 38,
+            "at": "2026-10-08T03:22:01.408Z",
+            "label": "10/8 11:22",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:03:48.221Z",
-            "label": "10/8 08:03",
-            "value": 41,
+            "at": "2026-10-08T04:40:27.459Z",
+            "label": "10/8 12:40",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T05:58:53.510Z",
+            "label": "10/8 13:58",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 44,
             "reports": 1
           }
@@ -1822,7 +3871,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T16:53:46.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1833,56 +3882,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T17:47:30.624Z",
-            "label": "10/8 01:47",
-            "value": 20,
+            "at": "2026-10-07T18:12:16.323Z",
+            "label": "10/8 02:12",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-07T18:41:15.249Z",
-            "label": "10/8 02:41",
-            "value": 25,
+            "at": "2026-10-07T19:30:46.647Z",
+            "label": "10/8 03:30",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-07T19:34:59.874Z",
-            "label": "10/8 03:34",
-            "value": 31,
+            "at": "2026-10-07T20:49:16.971Z",
+            "label": "10/8 04:49",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-07T20:28:44.499Z",
-            "label": "10/8 04:28",
+            "at": "2026-10-07T22:07:47.294Z",
+            "label": "10/8 06:07",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T23:26:17.618Z",
+            "label": "10/8 07:26",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:22:29.124Z",
-            "label": "10/8 05:22",
+            "at": "2026-10-08T00:44:47.942Z",
+            "label": "10/8 08:44",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:16:13.749Z",
-            "label": "10/8 06:16",
-            "value": 48,
+            "at": "2026-10-08T02:03:18.266Z",
+            "label": "10/8 10:03",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:09:58.374Z",
-            "label": "10/8 07:09",
-            "value": 54,
+            "at": "2026-10-08T03:21:48.589Z",
+            "label": "10/8 11:21",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:03:42.999Z",
-            "label": "10/8 08:03",
-            "value": 59,
+            "at": "2026-10-08T04:40:18.913Z",
+            "label": "10/8 12:40",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T05:58:49.237Z",
+            "label": "10/8 13:58",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 65,
             "reports": 1
           }
@@ -2023,7 +4084,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T16:33:02.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -2034,56 +4095,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T17:29:04.847Z",
-            "label": "10/8 01:29",
-            "value": 20,
+            "at": "2026-10-07T17:53:25.414Z",
+            "label": "10/8 01:53",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-07T18:25:07.694Z",
-            "label": "10/8 02:25",
-            "value": 26,
+            "at": "2026-10-07T19:13:48.829Z",
+            "label": "10/8 03:13",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-07T19:21:10.541Z",
-            "label": "10/8 03:21",
-            "value": 32,
+            "at": "2026-10-07T20:34:12.243Z",
+            "label": "10/8 04:34",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-07T20:17:13.388Z",
-            "label": "10/8 04:17",
-            "value": 38,
+            "at": "2026-10-07T21:54:35.658Z",
+            "label": "10/8 05:54",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:13:16.235Z",
-            "label": "10/8 05:13",
+            "at": "2026-10-07T23:14:59.073Z",
+            "label": "10/8 07:14",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T00:35:22.487Z",
+            "label": "10/8 08:35",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:09:19.082Z",
-            "label": "10/8 06:09",
-            "value": 50,
+            "at": "2026-10-08T01:55:45.902Z",
+            "label": "10/8 09:55",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:05:21.929Z",
-            "label": "10/8 07:05",
-            "value": 56,
+            "at": "2026-10-08T03:16:09.317Z",
+            "label": "10/8 11:16",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:01:24.776Z",
-            "label": "10/8 08:01",
-            "value": 62,
+            "at": "2026-10-08T04:36:32.731Z",
+            "label": "10/8 12:36",
+            "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T05:56:56.146Z",
+            "label": "10/8 13:56",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 68,
             "reports": 1
           }
@@ -2224,7 +4297,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T16:21:14.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2235,56 +4308,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T17:18:35.513Z",
-            "label": "10/8 01:18",
-            "value": 20,
+            "at": "2026-10-07T17:42:41.778Z",
+            "label": "10/8 01:42",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-07T18:15:57.027Z",
-            "label": "10/8 02:15",
-            "value": 25,
+            "at": "2026-10-07T19:04:09.556Z",
+            "label": "10/8 03:04",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-07T19:13:18.541Z",
-            "label": "10/8 03:13",
-            "value": 31,
+            "at": "2026-10-07T20:25:37.334Z",
+            "label": "10/8 04:25",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-07T20:10:40.055Z",
-            "label": "10/8 04:10",
+            "at": "2026-10-07T21:47:05.113Z",
+            "label": "10/8 05:47",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T23:08:32.891Z",
+            "label": "10/8 07:08",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:08:01.568Z",
-            "label": "10/8 05:08",
+            "at": "2026-10-08T00:30:00.669Z",
+            "label": "10/8 08:30",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:05:23.082Z",
-            "label": "10/8 06:05",
-            "value": 48,
+            "at": "2026-10-08T01:51:28.447Z",
+            "label": "10/8 09:51",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:02:44.596Z",
-            "label": "10/8 07:02",
-            "value": 54,
+            "at": "2026-10-08T03:12:56.226Z",
+            "label": "10/8 11:12",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:00:06.110Z",
-            "label": "10/8 08:00",
-            "value": 59,
+            "at": "2026-10-08T04:34:24.004Z",
+            "label": "10/8 12:34",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T05:55:51.782Z",
+            "label": "10/8 13:55",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 65,
             "reports": 1
           }
@@ -2400,7 +4485,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-07T16:00:00.000Z",
-        "endedAt": "2026-10-08T00:57:27.624Z",
+        "endedAt": "2026-10-08T07:17:19.561Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2411,56 +4496,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-07T16:59:43.069Z",
-            "label": "10/8 00:59",
-            "value": 20,
+            "at": "2026-10-07T17:23:23.596Z",
+            "label": "10/8 01:23",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-07T17:59:26.138Z",
-            "label": "10/8 01:59",
-            "value": 25,
+            "at": "2026-10-07T18:46:47.192Z",
+            "label": "10/8 02:46",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-07T18:59:09.208Z",
-            "label": "10/8 02:59",
-            "value": 31,
+            "at": "2026-10-07T20:10:10.789Z",
+            "label": "10/8 04:10",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-07T19:58:52.277Z",
-            "label": "10/8 03:58",
+            "at": "2026-10-07T21:33:34.385Z",
+            "label": "10/8 05:33",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-07T22:56:57.982Z",
+            "label": "10/8 06:56",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-07T20:58:35.346Z",
-            "label": "10/8 04:58",
+            "at": "2026-10-08T00:20:21.578Z",
+            "label": "10/8 08:20",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-07T21:58:18.416Z",
-            "label": "10/8 05:58",
-            "value": 48,
+            "at": "2026-10-08T01:43:45.175Z",
+            "label": "10/8 09:43",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-07T22:58:01.485Z",
-            "label": "10/8 06:58",
-            "value": 54,
+            "at": "2026-10-08T03:07:08.771Z",
+            "label": "10/8 11:07",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-07T23:57:44.554Z",
-            "label": "10/8 07:57",
-            "value": 59,
+            "at": "2026-10-08T04:30:32.368Z",
+            "label": "10/8 12:30",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-08T00:57:27.624Z",
-            "label": "10/8 08:57",
+            "at": "2026-10-08T05:53:55.964Z",
+            "label": "10/8 13:53",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-08T07:17:19.561Z",
+            "label": "10/8 15:17",
             "value": 65,
             "reports": 1
           }
