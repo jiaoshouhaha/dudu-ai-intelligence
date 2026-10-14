@@ -1,7 +1,625 @@
 {
-  "generatedAt": "2026-10-13T21:58:41.765Z",
+  "generatedAt": "2026-10-14T01:09:20.945Z",
   "date": "2026-10-14",
   "items": [
+    {
+      "id": "7e289d45dfc4cd8f",
+      "normalizedUrl": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic",
+      "originalUrl": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+      "titleOriginal": "Redesigning source control at Anthropic",
+      "summaryOriginal": "Redesigning source control at Anthropic Interesting piece from Anthropic describing why and how they built their own custom alternative to Git, based on the dramatic increase in rate of changes to their code after the past six months. In May 2026, Anthropic averaged around 2,500 code changes merged per day; as of September, we merged over 30,000 per day. They included a chart showing those changes. I had Claude modify their chart ( code here ) to add markers for the public releases of each of their models in 2026: This shows public release dates, not the date when models became available for Anthropic's internal use. My guess is that the introduction of Fable/Mythos class models is a key factor in the increased coding velocity. \"Antique\" is their new code review system. The source control system is called Scion, and sounds to me like a reinvention of centralized source control along the lines of Subversion. They had some pretty extreme requirements: The history of our main branch alone is almost 100 GB, and a compressed working copy is over 25 GB. We perform on the order of 25 million code checkouts per day for CI, before counting developer environments, agent sandboxes, and resear",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/anthropic-merges-per-day.webp"
+      ],
+      "resourceLinks": [
+        "https://www.anthropic.com/engineering/redesigning-source-control",
+        "https://claude.ai/share/aefcdd4a-9364-40c1-927a-29bf445894fc",
+        "https://gist.github.com/simonw/4a16dff066fd9763faf8642f797905be",
+        "https://news.ycombinator.com/item?id=50073633#50079495",
+        "https://news.ycombinator.com/item?id=50073633",
+        "https://simonwillison.net/tags/git",
+        "https://simonwillison.net/tags/migrations",
+        "https://simonwillison.net/tags/version-control",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/anthropic"
+      ],
+      "publishedAt": "2026-10-13T23:00:06.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+          "publishedAt": "2026-10-13T23:00:06.000Z",
+          "title": "Redesigning source control at Anthropic",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/anthropic-merges-per-day.webp"
+          ],
+          "resourceLinks": [
+            "https://www.anthropic.com/engineering/redesigning-source-control",
+            "https://claude.ai/share/aefcdd4a-9364-40c1-927a-29bf445894fc",
+            "https://gist.github.com/simonw/4a16dff066fd9763faf8642f797905be",
+            "https://news.ycombinator.com/item?id=50073633#50079495",
+            "https://news.ycombinator.com/item?id=50073633",
+            "https://simonwillison.net/tags/git",
+            "https://simonwillison.net/tags/migrations",
+            "https://simonwillison.net/tags/version-control",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/anthropic"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是头部 AI 公司因 AI 辅助编程导致代码变更量暴增后，对核心开发基础设施进行大规模自研重构的罕见公开案例，对理解 AI 时代工程工具演进有参考价值。",
+      "importanceReasonEn": "This is a rare public case of a leading AI company rebuilding core development infrastructure after AI-assisted coding caused a surge in code changes, offering reference value for understanding engineering tool evolution in the AI era.",
+      "scoringMode": "ai",
+      "titleZh": "Anthropic 重新设计源代码控制系统",
+      "titleEn": "Redesigning source control at Anthropic",
+      "summaryZh": "Anthropic 因代码变更量激增，自研了替代 Git 的源代码控制系统 Scion 和代码审查系统 Antique。2026 年 5 月日均合并约 2,500 次代码变更，到 9 月已超过 30,000 次。主分支历史近 100 GB，压缩工作副本超 25 GB，每天执行约 2,500 万次代码检出。",
+      "summaryEn": "Anthropic built its own source control system Scion and code review system Antique as an alternative to Git, driven by a surge in code changes. In May 2026 it averaged around 2,500 merged changes per day; by September it exceeded 30,000 per day. The main branch history is almost 100 GB, a compressed working copy is over 25 GB, and it performs on the order of 25 million code checkouts per day.",
+      "keywords": [
+        "Anthropic",
+        "Scion",
+        "Antique",
+        "Git",
+        "source control",
+        "code review",
+        "CI",
+        "code checkouts"
+      ],
+      "topics": [
+        "source control",
+        "developer tooling",
+        "AI coding",
+        "Anthropic",
+        "engineering infrastructure"
+      ],
+      "models": [],
+      "detailZh": "Anthropic 公开介绍了其重新设计源代码控制系统的原因和过程。文章指出，过去六个月其代码变更速度大幅上升：2026 年 5 月，Anthropic 平均每天合并约 2,500 次代码变更；到 9 月，每天合并超过 30,000 次。文章包含一张展示这些变化的图表。\n\nSimon Willison 在引用该文章时，用 Claude 修改了 Anthropic 的图表，加入了 2026 年各模型公开发布时间的标记。他说明这些是公开发布日期，并非模型在 Anthropic 内部可用的日期，并推测 Fable/Mythos 级别模型的引入是编码速度提升的关键因素。\n\nAnthropic 的新代码审查系统名为 Antique。新的源代码控制系统名为 Scion，Simon Willison 认为它听起来像是沿 Subversion 路线对集中式源代码控制的一次重新发明。\n\nAnthropic 提出了一些相当极端的规模要求：仅主分支的历史就接近 100 GB，压缩后的工作副本超过 25 GB。每天为 CI 执行约 2,500 万次代码检出，这还不包括开发者环境、代理沙箱和研究用途。",
+      "keyPointsZh": [
+        "Anthropic 自研了源代码控制系统 Scion 和代码审查系统 Antique，作为 Git 的替代方案。",
+        "2026 年 5 月日均合并约 2,500 次代码变更，9 月超过 30,000 次。",
+        "主分支历史近 100 GB，压缩工作副本超 25 GB。",
+        "每天约 2,500 万次代码检出用于 CI，不含开发者环境、代理沙箱和研究用途。",
+        "Simon Willison 推测 Fable/Mythos 级别模型是编码速度提升的关键因素。"
+      ],
+      "impactZh": "该案例表明，AI 辅助编程带来的代码变更量增长可能超出传统 Git 等工具的承载能力，迫使企业重新设计源代码控制和代码审查基础设施。这为其他面临类似规模压力的工程团队提供了参考方向。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和工程团队而言，这意味着当 AI 代理大量生成代码时，传统 Git 工作流和 CI 检出模式可能成为瓶颈；集中式源代码控制、大规模检出优化和自动化代码审查可能成为需要重新评估的基础设施方向。",
+      "howItWorksZh": "",
+      "interpretationZh": "从已披露信息看，Anthropic 的代码变更量在数月内增长了一个数量级，同时其仓库规模和每日检出次数都远超常规开发场景。Scion 被描述为类似 Subversion 的集中式源代码控制系统，Antique 则是新的代码审查系统。这些系统是 Anthropic 为应对自身规模而自研的，并非通用产品。Simon Willison 将模型发布与编码速度提升联系起来，属于合理推测，而非 Anthropic 官方结论。",
+      "limitationsZh": "目前信息来自 Simon Willison 对 Anthropic 文章的转述，缺少 Anthropic 原文的完整技术细节。Scion 和 Antique 的具体架构、性能数据、迁移过程和实际效果尚未公开。模型发布与编码速度提升之间的因果关系是推测，未经证实。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "2026年9月日均合并代码变更量约为5月的12倍；主分支历史接近100 GB，压缩工作副本超过25 GB，每日CI代码检出约2,500万次。",
+        "data": [
+          {
+            "label": "2026年5月日均合并代码变更",
+            "value": 2500,
+            "display": ""
+          },
+          {
+            "label": "2026年9月日均合并代码变更",
+            "value": 30000,
+            "display": ""
+          },
+          {
+            "label": "主分支历史大小（GB）",
+            "value": 100,
+            "display": ""
+          },
+          {
+            "label": "压缩工作副本大小（GB）",
+            "value": 25,
+            "display": ""
+          },
+          {
+            "label": "每日CI代码检出次数（百万）",
+            "value": 25,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+          "publishedAt": "2026-10-13T23:00:06.000Z",
+          "title": "Redesigning source control at Anthropic",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/anthropic-merges-per-day.webp"
+          ],
+          "resourceLinks": [
+            "https://www.anthropic.com/engineering/redesigning-source-control",
+            "https://claude.ai/share/aefcdd4a-9364-40c1-927a-29bf445894fc",
+            "https://gist.github.com/simonw/4a16dff066fd9763faf8642f797905be",
+            "https://news.ycombinator.com/item?id=50073633#50079495",
+            "https://news.ycombinator.com/item?id=50073633",
+            "https://simonwillison.net/tags/git",
+            "https://simonwillison.net/tags/migrations",
+            "https://simonwillison.net/tags/version-control",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/anthropic"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-13T23:00:06.000Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-13T23:00:06.000Z",
+            "label": "10/14 07:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-13T23:43:10.981Z",
+            "label": "10/14 07:43",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:26:15.963Z",
+            "label": "10/14 08:26",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "6451d923eed6bbe6",
+      "normalizedUrl": "https://simonwillison.net/2026/Oct/13/llm-gemini",
+      "originalUrl": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+      "titleOriginal": "llm-gemini 0.35",
+      "summaryOriginal": "Release: llm-gemini 0.35 I added support to llm-gemini for the new Gemini 4 Argon model, made available today via the Gemini API and for customers of their $100/month subscription plan. Here are the low, medium and high pelicans . As expected, they are all excellent: Gemini has a track record of producing great SVGs, and are the only lab where I know their staff have invested in SVG specifically (and who have boasted about their pelicans before.) Here's the \"high\" illustration, which cost me 17.166 cents: The pricing is interesting. At launch, Argon is $2/million input and $10/million output - the same price as GPT-6 Sol, half the price of Claude Opus 5.5 and 1/5th the price of Claude Fable 5.1 and GPT-6 Astra. But on December 1st Argon is set to double in price - so it will be the same price as Opus 5.5. Prices like this aren't really comparable these days since what really matters is how many tokens a model takes to achieve a goal within an agentic harness. One useful clue for that comes from Artificial Analysis, who publish the total cost to run their benchmark using each model. Argon is looking very good there - costing $2,407 to run the benchmark, putting it close to GLM-5.3 a",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/gemini-4-argon-high.webp",
+        "https://static.simonwillison.net/static/2026/gemini-4-argon-artificial-analysis.webp"
+      ],
+      "resourceLinks": [
+        "https://github.com/simonw/llm-gemini/releases/tag/0.35",
+        "https://github.com/simonw/llm-gemini",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fd741e4420dea14c460f0108ac22dbc26",
+        "https://twitter.com/sunjiao123sun_/status/2024555516551372920",
+        "https://simonwillison.net/2026/Feb/19/gemini-31-pro/#jeff-dean",
+        "https://artificialanalysis.ai/#total-cost-tabs",
+        "https://chatgpt.com/share/6acebe13-5378-83e8-bf2f-9f4d05b206f4",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F9589ff9e0c977bbf3b012b7a11f5bd71",
+        "https://tools.simonwillison.net/blender-viewer?url=https%3A%2F%2Fstatic.simonwillison.net%2Fstatic%2Fcors-allow%2F2026%2Fgemini-4-astra-egg.blend",
+        "https://twitter.com/fofrai/status/2110043023954284889",
+        "https://simonwillison.net/tags/google"
+      ],
+      "publishedAt": "2026-10-13T22:28:54.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+          "publishedAt": "2026-10-13T22:28:54.000Z",
+          "title": "llm-gemini 0.35",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/gemini-4-argon-high.webp",
+            "https://static.simonwillison.net/static/2026/gemini-4-argon-artificial-analysis.webp"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-gemini/releases/tag/0.35",
+            "https://github.com/simonw/llm-gemini",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fd741e4420dea14c460f0108ac22dbc26",
+            "https://twitter.com/sunjiao123sun_/status/2024555516551372920",
+            "https://simonwillison.net/2026/Feb/19/gemini-31-pro/#jeff-dean",
+            "https://artificialanalysis.ai/#total-cost-tabs",
+            "https://chatgpt.com/share/6acebe13-5378-83e8-bf2f-9f4d05b206f4",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F9589ff9e0c977bbf3b012b7a11f5bd71",
+            "https://tools.simonwillison.net/blender-viewer?url=https%3A%2F%2Fstatic.simonwillison.net%2Fstatic%2Fcors-allow%2F2026%2Fgemini-4-astra-egg.blend",
+            "https://twitter.com/fofrai/status/2110043023954284889",
+            "https://simonwillison.net/tags/google"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该发布为开发者提供了在 llm 工具中使用 Gemini 4 Argon 的途径，并给出了具体的定价与基准成本对比，对模型选型和成本评估有实际参考价值。",
+      "importanceReasonEn": "The release gives developers a way to use Gemini 4 Argon in the llm tool and provides concrete pricing and benchmark cost comparisons, useful for model selection and cost evaluation.",
+      "scoringMode": "ai",
+      "titleZh": "llm-gemini 0.35 发布",
+      "titleEn": "llm-gemini 0.35",
+      "summaryZh": "Simon Willison 发布 llm-gemini 0.35，新增对 Gemini 4 Argon 模型的支持。该模型通过 Gemini API 提供，并面向每月 100 美元订阅计划的用户开放。作者用低、中、高三档提示生成了鹈鹕 SVG 插图，认为效果都很出色，并指出 Gemini 在 SVG 生成方面有良好记录。定价方面，Argon 上线时为每百万输入 token 2 美元、每百万输出 token 10 美元，与 GPT-6 Sol 相同，是 Claude Opus 5.5 的一半，是 Claude Fable 5.1 和 GPT-6 Astra 的五分之一；但 12 月 1 日起价格将翻倍，届时与 Opus 5.5 相同。作者引用 Artificial Analysis 的基准总成本数据，Argon 为 2407 美元，接近 GLM-5.3。",
+      "summaryEn": "Simon Willison released llm-gemini 0.35, adding support for the new Gemini 4 Argon model, available via the Gemini API and to customers on the $100/month subscription plan. He generated low, medium and high pelican SVG illustrations, calling them all excellent, and noted Gemini's strong track record with SVGs. On pricing, Argon launched at $2 per million input tokens and $10 per million output tokens, the same as GPT-6 Sol, half the price of Claude Opus 5.5, and one-fifth the price of Claude Fable 5.1 and GPT-6 Astra. However, on December 1st Argon's price is set to double, matching Opus 5.5. He cites Artificial Analysis benchmark total cost data showing Argon at $2,407, close to GLM-5.3.",
+      "keywords": [
+        "llm-gemini 0.35",
+        "Gemini 4 Argon",
+        "SVG 生成",
+        "模型定价",
+        "Artificial Analysis",
+        "基准成本"
+      ],
+      "topics": [
+        "Gemini 4 Argon",
+        "llm-gemini",
+        "SVG 生成",
+        "模型定价",
+        "基准成本"
+      ],
+      "models": [
+        "Gemini 4 Argon",
+        "GPT-6 Sol",
+        "Claude Opus 5.5",
+        "Claude Fable 5.1",
+        "GPT-6 Astra",
+        "GLM-5.3"
+      ],
+      "detailZh": "Simon Willison 发布了 llm-gemini 0.35，为 llm-gemini 插件新增对 Gemini 4 Argon 模型的支持。该模型于发布当天通过 Gemini API 提供，同时也面向每月 100 美元订阅计划的客户开放。\n\n作者使用低、中、高三档提示词生成了鹈鹕 SVG 插图，并称三档效果都很出色。他指出 Gemini 在生成 SVG 方面有良好记录，是唯一一家他了解到有员工专门投入 SVG 研究并曾展示过鹈鹕作品的实验室。其中“高”档插图花费了 17.166 美分。\n\n定价方面，Argon 上线时为每百万输入 token 2 美元、每百万输出 token 10 美元，与 GPT-6 Sol 相同，是 Claude Opus 5.5 的一半，是 Claude Fable 5.1 和 GPT-6 Astra 的五分之一。但 12 月 1 日起 Argon 价格将翻倍，届时与 Opus 5.5 相同。作者认为当前价格并不完全可比，因为真正重要的是模型在智能体框架内完成目标所需的 token 数量。\n\n作者引用 Artificial Analysis 发布的各模型基准测试总成本数据，Argon 运行基准测试的成本为 2407 美元，接近 GLM-5.3。",
+      "keyPointsZh": [
+        "llm-gemini 0.35 新增对 Gemini 4 Argon 的支持。",
+        "Argon 通过 Gemini API 提供，并面向每月 100 美元订阅计划用户。",
+        "Argon 上线定价为每百万输入 token 2 美元、输出 token 10 美元，12 月 1 日起翻倍。",
+        "Artificial Analysis 基准总成本显示 Argon 为 2407 美元，接近 GLM-5.3。",
+        "作者用低、中、高三档提示生成鹈鹕 SVG，认为效果都很出色。"
+      ],
+      "impactZh": "该发布让使用 llm 工具的开发者可以立即接入 Gemini 4 Argon，并提供了明确的定价与基准成本信息，有助于在多个模型之间进行成本与能力权衡。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 llm 或 llm-gemini 的开发者可以升级到 0.35 版本以调用 Gemini 4 Argon；在 12 月 1 日涨价前，该模型在输入输出价格上具有相对优势，适合对成本敏感的批量任务。",
+      "howItWorksZh": "llm-gemini 是 Simon Willison 开发的 llm 命令行工具的 Gemini 插件。0.35 版本在插件中注册了 Gemini 4 Argon 模型，使其可通过 Gemini API 调用。用户升级插件后即可在 llm 命令中选择该模型。",
+      "interpretationZh": "已报告的事实：llm-gemini 0.35 支持 Gemini 4 Argon；该模型当天通过 API 和 100 美元订阅计划提供；定价为输入 2 美元/百万 token、输出 10 美元/百万 token，12 月 1 日翻倍；基准总成本 2407 美元。合理推断：作者认为 Argon 在 SVG 生成和基准成本方面表现良好，但价格比较需结合智能体框架下的实际 token 消耗。",
+      "limitationsZh": "来源为个人博客，未提供完整的基准测试方法或与其他模型的详细对比数据；SVG 生成效果为主观评价；基准总成本数据来自第三方 Artificial Analysis，具体测试条件未在输入中说明。",
+      "actionStepsZh": [
+        "升级 llm-gemini 到 0.35 以使用 Gemini 4 Argon。",
+        "在 12 月 1 日涨价前评估是否将 Argon 用于成本敏感任务。",
+        "参考 Artificial Analysis 的基准总成本数据比较模型的实际使用成本。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Argon 上线时输入输出价格与 GPT-6 Sol 相同，是 Claude Opus 5.5 的一半，是 Claude Fable 5.1 和 GPT-6 Astra 的五分之一；但 12 月 1 日起 Argon 价格翻倍，将与 Opus 5.5 持平。",
+        "data": [
+          {
+            "label": "Argon 输入",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "Argon 输出",
+            "value": 10,
+            "display": ""
+          },
+          {
+            "label": "GPT-6 Sol 输入",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "GPT-6 Sol 输出",
+            "value": 10,
+            "display": ""
+          },
+          {
+            "label": "Claude Opus 5.5 输入",
+            "value": 4,
+            "display": ""
+          },
+          {
+            "label": "Claude Opus 5.5 输出",
+            "value": 20,
+            "display": ""
+          },
+          {
+            "label": "Claude Fable 5.1 输入",
+            "value": 10,
+            "display": ""
+          },
+          {
+            "label": "Claude Fable 5.1 输出",
+            "value": 50,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+          "publishedAt": "2026-10-13T22:28:54.000Z",
+          "title": "llm-gemini 0.35",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/gemini-4-argon-high.webp",
+            "https://static.simonwillison.net/static/2026/gemini-4-argon-artificial-analysis.webp"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-gemini/releases/tag/0.35",
+            "https://github.com/simonw/llm-gemini",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fd741e4420dea14c460f0108ac22dbc26",
+            "https://twitter.com/sunjiao123sun_/status/2024555516551372920",
+            "https://simonwillison.net/2026/Feb/19/gemini-31-pro/#jeff-dean",
+            "https://artificialanalysis.ai/#total-cost-tabs",
+            "https://chatgpt.com/share/6acebe13-5378-83e8-bf2f-9f4d05b206f4",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F9589ff9e0c977bbf3b012b7a11f5bd71",
+            "https://tools.simonwillison.net/blender-viewer?url=https%3A%2F%2Fstatic.simonwillison.net%2Fstatic%2Fcors-allow%2F2026%2Fgemini-4-astra-egg.blend",
+            "https://twitter.com/fofrai/status/2110043023954284889",
+            "https://simonwillison.net/tags/google"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-13T22:28:54.000Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-13T22:28:54.000Z",
+            "label": "10/14 06:28",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-13T23:22:22.981Z",
+            "label": "10/14 07:22",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:15:51.963Z",
+            "label": "10/14 08:15",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "7d361849127305db",
+      "normalizedUrl": "https://latent.space/p/dyna",
+      "originalUrl": "https://www.latent.space/p/dyna",
+      "titleOriginal": "Dyna-2: General Purpose Physical Agents with Hour-Long Autonomy — Jason Ma, Dyna Robotics",
+      "summaryOriginal": "Our first robotics pod with Dyna&#8217;s Chief Scientist on their big bet on World Action Models & the Next Frontier of Physical AI",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "agent",
+      "sourceType": "community",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://pbs.substack.com/profile_images/2105395053413953536/_Zyb62fY_normal.jpg\",\"date\":\"2026-09-29T16:24:15.000Z\",\"photos\":[{\"img_url\":\"https://substackcdn.com/image/fetch/$s_!y0mm!,w_1028,c_limit,f_auto,q_auto:best,fl_progressive:steep/l_play_button_usfui2,w_88,e_colorize:0/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2104968085212160001.jpg\",\"link_url\":\"https://t.co/kDt8UtS7EQ\"}],\"quoted_tweet\":{},\"reply_count\":122,\"retweet_count\":386,\"like_count\":4723,\"impression_count\":3123511,\"expanded_url\":null,\"video_url\":\"https://video.twimg.com/amplify_video/2104968085212160001/vid/avc1/1280x720/O9TF1q5PteMXGB3K.mp4\",\"video_preview_media_key\":\"13_2104968085212160001\",\"belowTheFold\":false}"
+      ],
+      "resourceLinks": [
+        "https://www.youtube.com/watch?v=akEqiXFo3GM",
+        "https://ai.engineer/code/2026",
+        "https://youtu.be/BHiYomkfoGQ?si=9w38VD0Qs699D-rH&t=4631",
+        "https://x.com/DynaRobotics/status/2086857729105354778",
+        "https://x.com/DynaRobotics/status/2104970523726033387&quot;,&quot;full_text&quot;:&quot;We",
+        "https://pbs.substack.com/profile_images/2105395053413953536/_Zyb62fY_normal.jpg&quot;,&quot;date&quot;:&quot;2026-09-29T16:24:15.000Z&quot;,&quot;photos&quot;:[{&quot;img_url&quot;:&quot;https://substackcdn.com/image/fetch/$s_!y0mm!,w_1028,c_limit,f_auto,q_auto:best,fl_progressive:steep/l_play_button_usfui2,w_88,e_colorize:0/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2104968085212160001.jpg&quot;,&quot;link_url&quot;:&quot;https://t.co/kDt8UtS7EQ&quot;}],&quot;quoted_tweet&quot;:{},&quot;reply_count&quot;:122,&quot;retweet_count&quot;:386,&quot;like_count&quot;:4723,&quot;impression_count&quot;:3123511,&quot;expanded_url&quot;:null,&quot;video_url&quot;:&quot;https://video.twimg.com/amplify_video/2104968085212160001/vid/avc1/1280x720/O9TF1q5PteMXGB3K.mp4&quot;,&quot;video_preview_media_key&quot;:&quot;13_2104968085212160001&quot;,&quot;belowTheFold&quot;:false}",
+        "https://www.youtube.com/watch?v=Sjfz1TqxzEs",
+        "https://x.com/DynaRobotics/status/2093039146357178475",
+        "https://www.dyna.co/",
+        "https://jasonma2016.github.io/",
+        "https://www.youtube-nocookie.com/embed/BHiYomkfoGQ?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+        "https://www.linkedin.com/in/jason-ma-742224a2/"
+      ],
+      "publishedAt": "2026-10-13T22:25:55.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/dyna",
+          "publishedAt": "2026-10-13T22:25:55.000Z",
+          "title": "Dyna-2: General Purpose Physical Agents with Hour-Long Autonomy — Jason Ma, Dyna Robotics",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://pbs.substack.com/profile_images/2105395053413953536/_Zyb62fY_normal.jpg\",\"date\":\"2026-09-29T16:24:15.000Z\",\"photos\":[{\"img_url\":\"https://substackcdn.com/image/fetch/$s_!y0mm!,w_1028,c_limit,f_auto,q_auto:best,fl_progressive:steep/l_play_button_usfui2,w_88,e_colorize:0/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2104968085212160001.jpg\",\"link_url\":\"https://t.co/kDt8UtS7EQ\"}],\"quoted_tweet\":{},\"reply_count\":122,\"retweet_count\":386,\"like_count\":4723,\"impression_count\":3123511,\"expanded_url\":null,\"video_url\":\"https://video.twimg.com/amplify_video/2104968085212160001/vid/avc1/1280x720/O9TF1q5PteMXGB3K.mp4\",\"video_preview_media_key\":\"13_2104968085212160001\",\"belowTheFold\":false}"
+          ],
+          "resourceLinks": [
+            "https://www.youtube.com/watch?v=akEqiXFo3GM",
+            "https://ai.engineer/code/2026",
+            "https://youtu.be/BHiYomkfoGQ?si=9w38VD0Qs699D-rH&t=4631",
+            "https://x.com/DynaRobotics/status/2086857729105354778",
+            "https://x.com/DynaRobotics/status/2104970523726033387&quot;,&quot;full_text&quot;:&quot;We",
+            "https://pbs.substack.com/profile_images/2105395053413953536/_Zyb62fY_normal.jpg&quot;,&quot;date&quot;:&quot;2026-09-29T16:24:15.000Z&quot;,&quot;photos&quot;:[{&quot;img_url&quot;:&quot;https://substackcdn.com/image/fetch/$s_!y0mm!,w_1028,c_limit,f_auto,q_auto:best,fl_progressive:steep/l_play_button_usfui2,w_88,e_colorize:0/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2104968085212160001.jpg&quot;,&quot;link_url&quot;:&quot;https://t.co/kDt8UtS7EQ&quot;}],&quot;quoted_tweet&quot;:{},&quot;reply_count&quot;:122,&quot;retweet_count&quot;:386,&quot;like_count&quot;:4723,&quot;impression_count&quot;:3123511,&quot;expanded_url&quot;:null,&quot;video_url&quot;:&quot;https://video.twimg.com/amplify_video/2104968085212160001/vid/avc1/1280x720/O9TF1q5PteMXGB3K.mp4&quot;,&quot;video_preview_media_key&quot;:&quot;13_2104968085212160001&quot;,&quot;belowTheFold&quot;:false}",
+            "https://www.youtube.com/watch?v=Sjfz1TqxzEs",
+            "https://x.com/DynaRobotics/status/2093039146357178475",
+            "https://www.dyna.co/",
+            "https://jasonma2016.github.io/",
+            "https://www.youtube-nocookie.com/embed/BHiYomkfoGQ?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+            "https://www.linkedin.com/in/jason-ma-742224a2/"
+          ]
+        }
+      ],
+      "importance": 75,
+      "importanceReasonZh": "Dyna-2声称实现小时级自主能力，并押注世界动作模型，这可能推动通用物理智能体的发展，对机器人学和物理AI领域具有潜在影响。",
+      "importanceReasonEn": "Dyna-2 claims hour-long autonomy and a bet on World Action Models, which could advance general-purpose physical agents and potentially impact robotics and Physical AI.",
+      "scoringMode": "ai",
+      "titleZh": "Dyna-2：具备小时级自主能力的通用物理智能体——对话Dyna Robotics首席科学家Jason Ma",
+      "titleEn": "Dyna-2: General Purpose Physical Agents with Hour-Long Autonomy — Jason Ma, Dyna Robotics",
+      "summaryZh": "在Latent Space的首期机器人播客中，Dyna Robotics首席科学家Jason Ma介绍了Dyna-2——一个具备小时级自主能力的通用物理智能体，并讨论了公司在世界动作模型（World Action Models）上的重大押注以及物理AI的下一个前沿。",
+      "summaryEn": "In Latent Space's first robotics podcast, Dyna Robotics Chief Scientist Jason Ma introduces Dyna-2, a general-purpose physical agent with hour-long autonomy, and discusses the company's big bet on World Action Models and the next frontier of Physical AI.",
+      "keywords": [
+        "Dyna-2",
+        "Dyna Robotics",
+        "Jason Ma",
+        "World Action Models",
+        "Physical AI",
+        "hour-long autonomy",
+        "robotics"
+      ],
+      "topics": [
+        "robotics",
+        "physical-agents",
+        "world-action-models",
+        "autonomy"
+      ],
+      "models": [
+        "Dyna-2"
+      ],
+      "detailZh": "在Latent Space的首期机器人播客中，Dyna Robotics首席科学家Jason Ma介绍了Dyna-2，这是一个通用物理智能体，据称具备小时级的自主能力。Jason Ma讨论了Dyna Robotics在“世界动作模型”（World Action Models）上的重大押注，并将其描述为物理AI的下一个前沿。\n\nDyna-2被定位为通用物理智能体，意味着它旨在处理多种物理任务，而不仅限于特定场景。小时级自主能力表明该智能体可以在没有人类干预的情况下持续运行较长时间，这是迈向实用机器人系统的重要一步。\n\n世界动作模型是Dyna Robotics的核心技术方向，它可能结合了世界模型（对环境动态的预测）和动作模型（生成控制指令），使机器人能够理解和预测物理世界并采取行动。\n\n目前关于Dyna-2的具体技术细节、性能指标或应用场景尚未在摘要中详细说明，但该播客提供了对Dyna Robotics战略方向的深入了解。",
+      "keyPointsZh": [
+        "Dyna Robotics首席科学家Jason Ma在Latent Space播客中介绍了Dyna-2。",
+        "Dyna-2被描述为具备小时级自主能力的通用物理智能体。",
+        "Dyna Robotics正在大力押注世界动作模型（World Action Models）。",
+        "世界动作模型被视为物理AI的下一个前沿。"
+      ],
+      "impactZh": "Dyna-2的推出和世界动作模型的押注可能推动通用机器人技术的发展，使机器人能够在更长时间内自主执行多种任务，从而在制造、物流、服务等领域带来潜在应用。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于AI开发者和机器人团队，Dyna-2和世界动作模型的概念可能提供新的技术方向，即结合世界模型与动作生成来实现长时间自主的物理智能体，值得关注其后续技术细节和开源情况。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据播客介绍，Dyna-2是一个通用物理智能体，具备小时级自主能力，其核心技术是世界动作模型。这暗示Dyna Robotics试图通过结合环境预测和动作生成来提升机器人的自主性和通用性。但具体实现方式、技术架构和性能数据尚未披露。",
+      "limitationsZh": "目前仅有播客摘要，缺乏Dyna-2的具体技术细节、性能基准、实际演示或第三方验证。小时级自主能力和通用性等声明尚未得到独立证实。",
+      "actionStepsZh": [
+        "收听Latent Space播客中Jason Ma的完整访谈以获取更多细节。",
+        "关注Dyna Robotics的官方发布以了解Dyna-2的技术论文或演示。",
+        "研究世界动作模型（World Action Models）的相关文献以理解其原理。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/dyna",
+          "publishedAt": "2026-10-13T22:25:55.000Z",
+          "title": "Dyna-2: General Purpose Physical Agents with Hour-Long Autonomy — Jason Ma, Dyna Robotics",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://pbs.substack.com/profile_images/2105395053413953536/_Zyb62fY_normal.jpg\",\"date\":\"2026-09-29T16:24:15.000Z\",\"photos\":[{\"img_url\":\"https://substackcdn.com/image/fetch/$s_!y0mm!,w_1028,c_limit,f_auto,q_auto:best,fl_progressive:steep/l_play_button_usfui2,w_88,e_colorize:0/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2104968085212160001.jpg\",\"link_url\":\"https://t.co/kDt8UtS7EQ\"}],\"quoted_tweet\":{},\"reply_count\":122,\"retweet_count\":386,\"like_count\":4723,\"impression_count\":3123511,\"expanded_url\":null,\"video_url\":\"https://video.twimg.com/amplify_video/2104968085212160001/vid/avc1/1280x720/O9TF1q5PteMXGB3K.mp4\",\"video_preview_media_key\":\"13_2104968085212160001\",\"belowTheFold\":false}"
+          ],
+          "resourceLinks": [
+            "https://www.youtube.com/watch?v=akEqiXFo3GM",
+            "https://ai.engineer/code/2026",
+            "https://youtu.be/BHiYomkfoGQ?si=9w38VD0Qs699D-rH&t=4631",
+            "https://x.com/DynaRobotics/status/2086857729105354778",
+            "https://x.com/DynaRobotics/status/2104970523726033387&quot;,&quot;full_text&quot;:&quot;We",
+            "https://pbs.substack.com/profile_images/2105395053413953536/_Zyb62fY_normal.jpg&quot;,&quot;date&quot;:&quot;2026-09-29T16:24:15.000Z&quot;,&quot;photos&quot;:[{&quot;img_url&quot;:&quot;https://substackcdn.com/image/fetch/$s_!y0mm!,w_1028,c_limit,f_auto,q_auto:best,fl_progressive:steep/l_play_button_usfui2,w_88,e_colorize:0/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2104968085212160001.jpg&quot;,&quot;link_url&quot;:&quot;https://t.co/kDt8UtS7EQ&quot;}],&quot;quoted_tweet&quot;:{},&quot;reply_count&quot;:122,&quot;retweet_count&quot;:386,&quot;like_count&quot;:4723,&quot;impression_count&quot;:3123511,&quot;expanded_url&quot;:null,&quot;video_url&quot;:&quot;https://video.twimg.com/amplify_video/2104968085212160001/vid/avc1/1280x720/O9TF1q5PteMXGB3K.mp4&quot;,&quot;video_preview_media_key&quot;:&quot;13_2104968085212160001&quot;,&quot;belowTheFold&quot;:false}",
+            "https://www.youtube.com/watch?v=Sjfz1TqxzEs",
+            "https://x.com/DynaRobotics/status/2093039146357178475",
+            "https://www.dyna.co/",
+            "https://jasonma2016.github.io/",
+            "https://www.youtube-nocookie.com/embed/BHiYomkfoGQ?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+            "https://www.linkedin.com/in/jason-ma-742224a2/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-13T22:25:55.000Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
+        "current": 66,
+        "peak": 66,
+        "history": [
+          {
+            "at": "2026-10-13T22:25:55.000Z",
+            "label": "10/14 06:25",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-13T23:20:23.648Z",
+            "label": "10/14 07:20",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:14:52.296Z",
+            "label": "10/14 08:14",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
+            "value": 66,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "968ee282ad74f5ae",
       "normalizedUrl": "https://x.com/OpenAINewsroom/status/2110095403198849132",
@@ -47,40 +665,41 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "这是 OpenAI 官方披露的一起内部安全事件，涉及员工安放隐蔽录音装置、FBI 介入逮捕，以及用自家模型协助调查，具有较高的行业关注度。",
-      "importanceReasonEn": "This is an internal security incident officially disclosed by OpenAI, involving an employee planting a covert recording device, FBI involvement and arrest, and the use of its own models to assist the investigation, drawing significant industry attention.",
+      "importanceReasonZh": "该事件涉及头部 AI 公司的内部安全与商业机密保护，且 OpenAI 主动将其作为 AI 协助安全响应的案例，具有行业示范意义。",
+      "importanceReasonEn": "The incident involves internal security and trade-secret protection at a leading AI company, and OpenAI is actively presenting it as a case of AI-assisted security response, giving it industry significance.",
       "scoringMode": "ai",
       "titleZh": "OpenAI 办公室发现窃密录音装置，涉事员工被捕",
-      "titleEn": "OpenAI Office Finds Covert Recording Device, Employee Arrested",
+      "titleEn": "OpenAI Office Found Covert Recording Device, Employee Arrested",
       "summaryZh": "OpenAI 宣布在办公室内发现一个隐蔽的录音装置，利用自家模型分析该设备及其来源，确认是一名员工几天前安放。OpenAI 已将此事移交 FBI，FBI 已迅速逮捕相关人员，调查仍在进行中。OpenAI 表示目前没有迹象显示该员工不当访问或外泄模型权重、源代码或客户数据，该员工已被解雇，并将此案视为 AI 协助应对复杂安全威胁的实例。",
-      "summaryEn": "OpenAI announced that a covert recording device was found in its office. Using its own models to analyze the device and its origins, it determined that an employee had planted it a few days earlier. OpenAI handed the matter to the FBI, which quickly arrested the individual, and the investigation is ongoing. OpenAI said there is currently no indication that the employee improperly accessed or leaked model weights, source code, or customer data; the employee has been fired, and OpenAI framed the case as an example of AI helping address complex security threats.",
+      "summaryEn": "OpenAI announced that a covert recording device was found in its office. Using its own models to analyze the device and its origins, it determined that an employee had planted it several days earlier. OpenAI handed the matter to the FBI, which quickly arrested the individual, and the investigation is ongoing. OpenAI said there is currently no indication that the employee improperly accessed or leaked model weights, source code, or customer data; the employee has been fired, and OpenAI framed the case as an example of AI assisting in responding to complex security threats.",
       "keywords": [
         "OpenAI",
         "录音装置",
-        "FBI",
         "员工被捕",
+        "FBI",
         "安全威胁"
       ],
       "topics": [
         "AI安全",
         "企业安全",
-        "OpenAI"
+        "OpenAI",
+        "执法调查"
       ],
       "models": [],
-      "detailZh": "OpenAI 通过其官方新闻账号宣布，在公司办公室内发现了一个隐蔽的录音装置。OpenAI 使用自家模型对该设备及其来源进行了分析，确认该装置是一名员工在几天前安放的。\n\nOpenAI 随后将此事移交美国联邦调查局（FBI），FBI 已迅速逮捕了相关人员，目前调查仍在进行中。\n\nOpenAI 表示，目前没有迹象显示该员工不当访问或外泄了模型权重、源代码或客户数据。该员工已被解雇。\n\nOpenAI 将此案描述为 AI 协助应对复杂安全威胁的一个实例。",
+      "detailZh": "OpenAI 通过其官方新闻账号宣布，在公司办公室内发现了一个隐蔽的录音装置。OpenAI 使用自家模型对该设备及其来源进行了分析，确认该装置是由一名员工在几天前安放的。\n\nOpenAI 随后将此事移交美国联邦调查局（FBI），FBI 已迅速逮捕了相关人员。目前调查仍在进行中。\n\nOpenAI 表示，目前没有迹象显示该员工不当访问或外泄了模型权重、源代码或客户数据。该员工已被解雇。\n\nOpenAI 将这一事件描述为 AI 协助应对复杂安全威胁的一个实例，强调其模型在识别和分析该装置过程中发挥了作用。",
       "keyPointsZh": [
         "OpenAI 办公室内发现隐蔽录音装置",
-        "OpenAI 用自家模型分析设备并确认是员工几天前安放",
-        "OpenAI 移交 FBI，FBI 已迅速逮捕相关人员",
+        "OpenAI 用自家模型分析设备并确认安放者为一名员工",
+        "案件已移交 FBI，相关人员被迅速逮捕",
         "OpenAI 称无迹象显示模型权重、源代码或客户数据被不当访问或外泄",
         "涉事员工已被解雇，调查仍在进行中"
       ],
-      "impactZh": "该事件凸显 AI 公司面临的内部安全风险，也展示了 AI 工具在安全调查中的实际应用，可能促使行业加强内部监控与威胁响应流程。",
+      "impactZh": "该事件凸显头部 AI 公司面临的内部安全风险，也展示了 AI 模型被用于实体安全调查的潜在用途，可能促使行业加强办公环境与敏感资产的防护。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：OpenAI 在办公室发现隐蔽录音装置，用自家模型分析后认定由一名员工几天前安放，随后移交 FBI，FBI 已逮捕相关人员，员工被解雇，调查仍在进行。OpenAI 称目前没有迹象显示模型权重、源代码或客户数据被不当访问或外泄。至于该员工的具体动机、装置的具体功能以及调查的最终结论，目前尚无公开信息。",
-      "limitationsZh": "OpenAI 未披露涉事员工身份、装置的具体类型与功能、安放动机，也未说明调查的最终结果；关于数据未被外泄的说法目前仅为 OpenAI 的单方面表述，尚待调查证实。",
+      "interpretationZh": "已确认的事实是：OpenAI 在办公室发现隐蔽录音装置，用自家模型分析后认定一名员工数天前安放，随后移交 FBI，该员工被逮捕并解雇，调查仍在进行。OpenAI 称暂无证据表明模型权重、源代码或客户数据被不当访问或外泄。至于该装置的具体用途、动机及是否造成实际损害，目前尚无公开信息。",
+      "limitationsZh": "OpenAI 未披露装置的具体类型、安放位置、员工身份及动机，也未说明模型分析的具体方式。关于是否造成实际损害，仅以“目前没有迹象”表述，调查结论仍待 FBI 公布。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -106,7 +725,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T19:48:42.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -117,20 +736,38 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T20:32:01.921Z",
-            "label": "10/14 04:32",
+            "at": "2026-10-13T20:42:08.490Z",
+            "label": "10/14 04:42",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T21:35:34.981Z",
+            "label": "10/14 05:35",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:15:21.843Z",
-            "label": "10/14 05:15",
+            "at": "2026-10-13T22:29:01.472Z",
+            "label": "10/14 06:29",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T23:22:27.963Z",
+            "label": "10/14 07:22",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-14T00:15:54.454Z",
+            "label": "10/14 08:15",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 65,
             "reports": 1
           }
@@ -182,9 +819,9 @@
           ]
         }
       ],
-      "importance": 72,
-      "importanceReasonZh": "该消息把 NVIDIA 的 RTX 视频增强能力直接接入 ComfyUI 工作流，让本地视频处理从独立工具变成可编排节点，对视频创作者和 ComfyUI 用户有直接价值。",
-      "importanceReasonEn": "It brings NVIDIA's RTX video enhancement capabilities directly into ComfyUI workflows, turning local video processing from standalone tools into composable nodes, with direct value for video creators and ComfyUI users.",
+      "importance": 68,
+      "importanceReasonZh": "这是 NVIDIA RTX 视频特效能力首次以官方自定义节点形式进入 ComfyUI 生态，把原本独立的视频增强功能整合进主流生成式 AI 工作流，对视频创作者和 ComfyUI 用户有直接可用价值。",
+      "importanceReasonEn": "This is the first time NVIDIA's RTX video effects capabilities enter the ComfyUI ecosystem as official custom nodes, integrating standalone video enhancement features into a mainstream generative AI workflow with direct practical value for video creators and ComfyUI users.",
       "scoringMode": "ai",
       "titleZh": "ComfyUI 上线 NVIDIA VFX 节点，支持视频超分、补帧与 SDR 转 HDR",
       "titleEn": "ComfyUI Adds NVIDIA VFX Nodes for Video Super-Resolution, Frame Interpolation, and SDR-to-HDR",
@@ -210,23 +847,23 @@
         "NVIDIA RTX Video Frame Interpolation",
         "NVIDIA RTX Video HDR"
       ],
-      "detailZh": "ComfyUI 官方博客发布消息，NVIDIA 的 RTX 视频特效模型以自定义节点形式登陆 ComfyUI。这些节点覆盖视频超分辨率、视频补帧以及 SDR 转 HDR 三类能力，模型随节点一起分发，并在本地 RTX GPU 上运行。\n\n此前这些 RTX 视频增强功能通常出现在播放器、浏览器或独立工具中，用户需要离开创作流程单独处理视频。现在它们被封装为 ComfyUI 节点，意味着可以在同一个节点图里与其它生成或处理步骤串联。\n\n来源信息较为简短，没有给出具体节点名称、支持的 GPU 代际、显存要求、速度数据或与现有 ComfyUI 视频节点的兼容细节。因此目前可以确认的是功能类别、分发方式和运行位置，其余参数尚待官方文档或实测补充。",
+      "detailZh": "ComfyUI 官方博客发布消息，NVIDIA 的 RTX 视频特效模型以自定义节点形式上线 ComfyUI。这些节点覆盖视频超分辨率、视频补帧以及 SDR 转 HDR 三类视频增强能力。\n\n根据介绍，相关模型随节点一起分发，不需要用户单独下载模型文件，并且全部在本地 RTX GPU 上运行。这意味着处理过程不依赖云端服务，视频素材留在本地设备上。\n\n此次上线的形式是 ComfyUI 自定义节点，属于 ComfyUI 生态中扩展功能的常规方式。用户可以在既有的 ComfyUI 工作流中调用这些视频增强能力，而不必切换到独立的 NVIDIA 工具或应用。\n\n目前公开信息集中在功能范围、分发方式和运行环境上，尚未披露具体节点名称、支持的 GPU 型号范围、性能数据或版本兼容性细节。",
       "keyPointsZh": [
-        "NVIDIA RTX 视频特效模型以自定义节点形式登陆 ComfyUI。",
-        "节点覆盖视频超分、补帧和 SDR 转 HDR 三类能力。",
-        "模型随节点分发，无需单独下载。",
-        "处理在本地 RTX GPU 上运行。"
+        "NVIDIA RTX 视频特效模型以 ComfyUI 自定义节点形式发布",
+        "节点覆盖视频超分、视频补帧和 SDR 转 HDR 三类能力",
+        "模型随节点分发，用户无需单独下载模型",
+        "全部处理在本地 RTX GPU 上运行，不依赖云端"
       ],
-      "impactZh": "视频增强能力被纳入 ComfyUI 节点体系后，本地视频处理可以与生成、修复等步骤在同一工作流中编排，减少在多个工具之间切换的成本，也让 RTX GPU 的视频加速能力更容易被创作流程复用。",
+      "impactZh": "视频增强能力被直接嵌入 ComfyUI 工作流，创作者可以在同一套节点图里完成生成与后期增强，减少工具切换；本地 RTX GPU 运行也意味着素材不必上传云端，对隐私敏感或大文件场景更友好。",
       "readerImpactZh": "",
-      "userImpactZh": "ComfyUI 用户可以在现有节点图中直接加入 RTX 视频超分、补帧和 SDR 转 HDR 步骤，把原本需要独立工具完成的视频增强纳入同一套本地工作流。",
-      "howItWorksZh": "这些能力以 ComfyUI 自定义节点形式提供，模型文件随节点分发，推理在本地 RTX GPU 上执行。节点分别对应视频超分辨率、视频补帧和 SDR 转 HDR 三类处理，可接入 ComfyUI 的节点图与其他步骤串联。来源未披露具体的模型结构、显存占用或速度参数。",
-      "interpretationZh": "可以确认的是：NVIDIA 的视频增强模型已作为 ComfyUI 自定义节点发布，覆盖超分、补帧和 SDR 转 HDR，模型随节点分发并在本地 RTX GPU 运行。至于具体支持哪些显卡、性能如何、与现有视频节点如何配合，来源没有说明，属于尚未验证的部分。",
-      "limitationsZh": "来源为简短博客公告，未提供节点名称、支持的 GPU 型号与代际、显存要求、处理速度、输入输出格式限制，也未说明与 ComfyUI 现有视频节点的兼容性或是否需要特定驱动版本。",
+      "userImpactZh": "ComfyUI 用户可以在现有工作流中直接加入 NVIDIA 视频超分、补帧和 SDR 转 HDR 节点，无需单独部署模型或切换工具；前提是本地配备 RTX GPU。",
+      "howItWorksZh": "这些能力以 ComfyUI 自定义节点形式提供，模型文件随节点包一并分发，运行时调用本地 RTX GPU 完成视频超分辨率、帧率插值和 SDR 到 HDR 的转换。具体节点参数、输入输出格式和调用方式在现有信息中未说明。",
+      "interpretationZh": "可以确认的是：NVIDIA 的视频特效模型已作为 ComfyUI 自定义节点发布，覆盖超分、补帧和 SDR 转 HDR，模型随节点分发并在本地 RTX GPU 运行。至于实际画质、速度、支持哪些显卡以及是否收费，目前没有公开细节，属于尚未验证的部分。",
+      "limitationsZh": "来源为 Comfy Blog 的简短发布信息，未提供具体节点名称、支持的 GPU 型号、性能数据、画质对比、版本要求或授权方式；实际可用性和效果仍需以官方文档和用户实测为准。",
       "actionStepsZh": [
-        "在 ComfyUI 中查找并安装 NVIDIA VFX 相关自定义节点。",
-        "确认本机为 RTX GPU 并更新到合适的驱动版本。",
-        "先用一段短视频测试超分、补帧和 SDR 转 HDR 节点的效果与耗时。"
+        "在 ComfyUI 中查找并安装 NVIDIA 提供的视频特效自定义节点",
+        "确认本机配备 RTX GPU 并更新到兼容的驱动与 ComfyUI 版本",
+        "先用短视频素材测试超分、补帧和 SDR 转 HDR 节点的效果与耗时"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -252,9 +889,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T19:41:39.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
-        "current": 65,
-        "peak": 65,
+        "endedAt": "2026-10-14T01:09:20.945Z",
+        "current": 63,
+        "peak": 63,
         "history": [
           {
             "at": "2026-10-13T19:41:39.000Z",
@@ -263,21 +900,39 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T20:27:19.921Z",
-            "label": "10/14 04:27",
-            "value": 31,
+            "at": "2026-10-13T20:36:15.990Z",
+            "label": "10/14 04:36",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:13:00.843Z",
-            "label": "10/14 05:13",
-            "value": 48,
+            "at": "2026-10-13T21:30:52.981Z",
+            "label": "10/14 05:30",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
-            "value": 65,
+            "at": "2026-10-13T22:25:29.972Z",
+            "label": "10/14 06:25",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T23:20:06.963Z",
+            "label": "10/14 07:20",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:14:43.954Z",
+            "label": "10/14 08:14",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
+            "value": 63,
             "reports": 1
           }
         ],
@@ -395,7 +1050,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T18:50:44.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -406,26 +1061,44 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T19:37:43.441Z",
-            "label": "10/14 03:37",
-            "value": 29,
+            "at": "2026-10-13T19:44:49.277Z",
+            "label": "10/14 03:44",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:24:42.882Z",
-            "label": "10/14 04:24",
-            "value": 44,
+            "at": "2026-10-13T20:38:54.555Z",
+            "label": "10/14 04:38",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:11:42.323Z",
-            "label": "10/14 05:11",
-            "value": 59,
+            "at": "2026-10-13T21:32:59.833Z",
+            "label": "10/14 05:32",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-13T22:27:05.111Z",
+            "label": "10/14 06:27",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T23:21:10.389Z",
+            "label": "10/14 07:21",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:15:15.667Z",
+            "label": "10/14 08:15",
+            "value": 65,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 74,
             "reports": 1
           }
@@ -525,7 +1198,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T18:05:24.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -536,26 +1209,50 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T19:03:43.441Z",
-            "label": "10/14 03:03",
+            "at": "2026-10-13T18:58:23.618Z",
+            "label": "10/14 02:58",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T19:51:23.236Z",
+            "label": "10/14 03:51",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:02:02.882Z",
-            "label": "10/14 04:02",
+            "at": "2026-10-13T20:44:22.854Z",
+            "label": "10/14 04:44",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T21:37:22.472Z",
+            "label": "10/14 05:37",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:00:22.323Z",
-            "label": "10/14 05:00",
+            "at": "2026-10-13T22:30:22.090Z",
+            "label": "10/14 06:30",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T23:23:21.708Z",
+            "label": "10/14 07:23",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-14T00:16:21.326Z",
+            "label": "10/14 08:16",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 50,
             "reports": 1
           }
@@ -681,7 +1378,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T18:00:49.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -692,26 +1389,50 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T19:00:17.191Z",
-            "label": "10/14 03:00",
+            "at": "2026-10-13T18:54:22.993Z",
+            "label": "10/14 02:54",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T19:47:56.986Z",
+            "label": "10/14 03:47",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-13T19:59:45.382Z",
-            "label": "10/14 03:59",
+            "at": "2026-10-13T20:41:30.979Z",
+            "label": "10/14 04:41",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T21:35:04.972Z",
+            "label": "10/14 05:35",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:59:13.573Z",
-            "label": "10/14 04:59",
+            "at": "2026-10-13T22:28:38.965Z",
+            "label": "10/14 06:28",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T23:22:12.958Z",
+            "label": "10/14 07:22",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-14T00:15:46.951Z",
+            "label": "10/14 08:15",
+            "value": 61,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 68,
             "reports": 1
           }
@@ -862,7 +1583,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T17:56:33.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -873,33 +1594,205 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T18:44:58.753Z",
-            "label": "10/14 02:44",
+            "at": "2026-10-13T18:50:38.993Z",
+            "label": "10/14 02:50",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T19:44:44.986Z",
+            "label": "10/14 03:44",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T20:38:50.979Z",
+            "label": "10/14 04:38",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T21:32:56.972Z",
+            "label": "10/14 05:32",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T22:27:02.965Z",
+            "label": "10/14 06:27",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T23:21:08.958Z",
+            "label": "10/14 07:21",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:15:14.951Z",
+            "label": "10/14 08:15",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
+            "value": 64,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "4e9e4f1d9cd106f6",
+      "normalizedUrl": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache",
+      "originalUrl": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/",
+      "titleOriginal": "Pluto Security raises $42M as AI gives enterprise security teams a new headache",
+      "summaryOriginal": "The problem with giving everyone in a company access to AI tools is that people will use them in unexpected ways. And that fact is steadily seeding fears that companies now have new, gaping security holes in their systems or, at least, will soon.",
+      "originalLanguage": "en",
+      "author": "Ram Iyer",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-13T17:18:25.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/",
+          "publishedAt": "2026-10-13T17:18:25.000Z",
+          "title": "Pluto Security raises $42M as AI gives enterprise security teams a new headache",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该事件反映了企业AI普及带来的新型安全风险，以及资本市场对这一问题的关注，对关注企业AI落地的读者有参考价值。",
+      "importanceReasonEn": "This event reflects new security risks from enterprise AI adoption and investor attention to the problem, offering reference value for readers tracking enterprise AI deployment.",
+      "scoringMode": "ai",
+      "titleZh": "Pluto Security融资4200万美元，AI给企业安全团队带来新难题",
+      "titleEn": "Pluto Security raises $42M as AI gives enterprise security teams a new headache",
+      "summaryZh": "让公司里每个人都能使用AI工具的问题在于，人们会以意想不到的方式使用它们。这一事实正不断引发担忧：企业系统如今存在新的巨大安全漏洞，或者至少很快就会出现。",
+      "summaryEn": "The problem with giving everyone in a company access to AI tools is that people will use them in unexpected ways. And that fact is steadily seeding fears that companies now have new, gaping security holes in their systems or, at least, will soon.",
+      "keywords": [
+        "Pluto Security",
+        "融资",
+        "企业安全",
+        "AI工具",
+        "安全漏洞"
+      ],
+      "topics": [
+        "AI安全",
+        "企业安全",
+        "融资",
+        "AI工具使用"
+      ],
+      "models": [],
+      "detailZh": "Pluto Security宣布完成4200万美元融资。根据TechCrunch AI的报道，这笔融资的背景是企业内部AI工具使用带来的安全挑战。报道指出，让公司里每个人都能使用AI工具的问题在于，人们会以意想不到的方式使用它们。这一事实正不断引发担忧：企业系统如今存在新的巨大安全漏洞，或者至少很快就会出现。\n\n目前已知的信息集中在融资金额和问题背景上。报道没有披露投资方、估值、具体产品细节或客户案例。核心逻辑是：AI工具在企业内部的广泛可及性，正在制造传统安全团队难以预判和管控的风险面。\n\n这一事件的意义在于，它把企业AI普及的副作用——安全盲区——推到了资本市场的视野中。对于正在或计划向全员开放AI工具的企业来说，这是一个值得关注的信号。",
+      "keyPointsZh": [
+        "Pluto Security完成4200万美元融资。",
+        "融资背景是企业内部AI工具使用带来的安全挑战。",
+        "报道指出员工会以意想不到的方式使用AI工具。",
+        "企业系统被认为存在新的安全漏洞或即将出现。"
+      ],
+      "impactZh": "该融资表明资本市场开始关注企业AI普及带来的安全风险，可能推动更多安全产品针对AI使用场景进行布局。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于在企业中推广或使用AI工具的开发者和团队而言，这一事件提示需要关注员工使用AI工具可能带来的非预期安全风险，并提前评估管控措施。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道明确的事实是Pluto Security获得4200万美元融资，以及企业AI工具使用带来安全担忧这一背景。至于这些安全漏洞的具体形态、严重程度以及Pluto Security的产品如何解决问题，报道并未提供细节，属于尚未披露的信息。",
+      "limitationsZh": "报道未披露投资方、估值、Pluto Security的具体产品或技术方案，也未提供任何客户案例或漏洞实例。关于企业安全漏洞的说法目前停留在担忧层面，缺乏具体证据。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/",
+          "publishedAt": "2026-10-13T17:18:25.000Z",
+          "title": "Pluto Security raises $42M as AI gives enterprise security teams a new headache",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-13T17:18:25.000Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-13T17:18:25.000Z",
+            "label": "10/14 01:18",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-13T18:17:16.993Z",
+            "label": "10/14 02:17",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T19:16:08.986Z",
+            "label": "10/14 03:16",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-13T19:33:24.506Z",
-            "label": "10/14 03:33",
-            "value": 34,
+            "at": "2026-10-13T20:15:00.979Z",
+            "label": "10/14 04:15",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:21:50.259Z",
-            "label": "10/14 04:21",
-            "value": 44,
+            "at": "2026-10-13T21:13:52.972Z",
+            "label": "10/14 05:13",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:10:16.012Z",
-            "label": "10/14 05:10",
-            "value": 54,
+            "at": "2026-10-13T22:12:44.965Z",
+            "label": "10/14 06:12",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
-            "value": 64,
+            "at": "2026-10-13T23:11:36.958Z",
+            "label": "10/14 07:11",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:10:28.951Z",
+            "label": "10/14 08:10",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -1046,7 +1939,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T16:26:15.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1057,38 +1950,56 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T17:21:39.460Z",
-            "label": "10/14 01:21",
-            "value": 23,
+            "at": "2026-10-13T17:24:22.327Z",
+            "label": "10/14 01:24",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-13T18:17:03.921Z",
-            "label": "10/14 02:17",
+            "at": "2026-10-13T18:22:29.654Z",
+            "label": "10/14 02:22",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T19:20:36.981Z",
+            "label": "10/14 03:20",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-13T19:12:28.382Z",
-            "label": "10/14 03:12",
-            "value": 41,
+            "at": "2026-10-13T20:18:44.308Z",
+            "label": "10/14 04:18",
+            "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:07:52.843Z",
-            "label": "10/14 04:07",
+            "at": "2026-10-13T21:16:51.636Z",
+            "label": "10/14 05:16",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T22:14:58.963Z",
+            "label": "10/14 06:14",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:03:17.304Z",
-            "label": "10/14 05:03",
-            "value": 59,
+            "at": "2026-10-13T23:13:06.290Z",
+            "label": "10/14 07:13",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-14T00:11:13.617Z",
+            "label": "10/14 08:11",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 68,
             "reports": 1
           }
@@ -1205,7 +2116,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T16:05:51.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1216,38 +2127,62 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T17:04:39.460Z",
-            "label": "10/14 01:04",
-            "value": 22,
+            "at": "2026-10-13T17:00:11.994Z",
+            "label": "10/14 01:00",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-13T18:03:27.921Z",
-            "label": "10/14 02:03",
-            "value": 31,
+            "at": "2026-10-13T17:54:32.989Z",
+            "label": "10/14 01:54",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-13T19:02:16.382Z",
-            "label": "10/14 03:02",
+            "at": "2026-10-13T18:48:53.983Z",
+            "label": "10/14 02:48",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T19:43:14.978Z",
+            "label": "10/14 03:43",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T20:37:35.972Z",
+            "label": "10/14 04:37",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:01:04.843Z",
-            "label": "10/14 04:01",
-            "value": 48,
+            "at": "2026-10-13T21:31:56.967Z",
+            "label": "10/14 05:31",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:59:53.304Z",
-            "label": "10/14 04:59",
-            "value": 56,
+            "at": "2026-10-13T22:26:17.961Z",
+            "label": "10/14 06:26",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-13T23:20:38.956Z",
+            "label": "10/14 07:20",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:14:59.950Z",
+            "label": "10/14 08:14",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 65,
             "reports": 1
           }
@@ -1352,7 +2287,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T16:01:58.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -1363,38 +2298,62 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T17:01:25.294Z",
-            "label": "10/14 01:01",
-            "value": 24,
+            "at": "2026-10-13T16:56:42.294Z",
+            "label": "10/14 00:56",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-13T18:00:52.588Z",
-            "label": "10/14 02:00",
-            "value": 34,
+            "at": "2026-10-13T17:51:26.589Z",
+            "label": "10/14 01:51",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-13T19:00:19.882Z",
-            "label": "10/14 03:00",
+            "at": "2026-10-13T18:46:10.883Z",
+            "label": "10/14 02:46",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T19:40:55.178Z",
+            "label": "10/14 03:40",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T20:35:39.472Z",
+            "label": "10/14 04:35",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-13T19:59:47.176Z",
-            "label": "10/14 03:59",
-            "value": 54,
+            "at": "2026-10-13T21:30:23.767Z",
+            "label": "10/14 05:30",
+            "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:59:14.470Z",
-            "label": "10/14 04:59",
-            "value": 64,
+            "at": "2026-10-13T22:25:08.061Z",
+            "label": "10/14 06:25",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-13T23:19:52.356Z",
+            "label": "10/14 07:19",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:14:36.650Z",
+            "label": "10/14 08:14",
+            "value": 68,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 74,
             "reports": 1
           }
@@ -1527,7 +2486,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T16:01:52.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 92,
         "peak": 92,
         "history": [
@@ -1538,38 +2497,62 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T17:01:20.294Z",
-            "label": "10/14 01:01",
-            "value": 39,
+            "at": "2026-10-13T16:56:36.894Z",
+            "label": "10/14 00:56",
+            "value": 34,
             "reports": 2
           },
           {
-            "at": "2026-10-13T18:00:48.588Z",
-            "label": "10/14 02:00",
-            "value": 49,
+            "at": "2026-10-13T17:51:21.789Z",
+            "label": "10/14 01:51",
+            "value": 41,
             "reports": 2
           },
           {
-            "at": "2026-10-13T19:00:16.882Z",
-            "label": "10/14 03:00",
+            "at": "2026-10-13T18:46:06.683Z",
+            "label": "10/14 02:46",
+            "value": 47,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-13T19:40:51.578Z",
+            "label": "10/14 03:40",
+            "value": 53,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-13T20:35:36.472Z",
+            "label": "10/14 04:35",
             "value": 60,
             "reports": 2
           },
           {
-            "at": "2026-10-13T19:59:45.176Z",
-            "label": "10/14 03:59",
-            "value": 70,
+            "at": "2026-10-13T21:30:21.367Z",
+            "label": "10/14 05:30",
+            "value": 66,
             "reports": 2
           },
           {
-            "at": "2026-10-13T20:59:13.470Z",
-            "label": "10/14 04:59",
-            "value": 81,
+            "at": "2026-10-13T22:25:06.261Z",
+            "label": "10/14 06:25",
+            "value": 73,
             "reports": 2
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-13T23:19:51.156Z",
+            "label": "10/14 07:19",
+            "value": 79,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-14T00:14:36.050Z",
+            "label": "10/14 08:14",
+            "value": 85,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 92,
             "reports": 2
           }
@@ -1689,7 +2672,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-13T16:00:00.000Z",
-        "endedAt": "2026-10-13T21:58:41.765Z",
+        "endedAt": "2026-10-14T01:09:20.945Z",
         "current": 70,
         "peak": 70,
         "history": [
@@ -1700,38 +2683,62 @@
             "reports": 0
           },
           {
-            "at": "2026-10-13T16:59:46.960Z",
-            "label": "10/14 00:59",
-            "value": 23,
+            "at": "2026-10-13T16:54:56.094Z",
+            "label": "10/14 00:54",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-13T17:59:33.921Z",
-            "label": "10/14 01:59",
-            "value": 33,
+            "at": "2026-10-13T17:49:52.189Z",
+            "label": "10/14 01:49",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-13T18:59:20.882Z",
-            "label": "10/14 02:59",
+            "at": "2026-10-13T18:44:48.283Z",
+            "label": "10/14 02:44",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T19:39:44.378Z",
+            "label": "10/14 03:39",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-13T20:34:40.472Z",
+            "label": "10/14 04:34",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-13T19:59:07.843Z",
-            "label": "10/14 03:59",
-            "value": 52,
+            "at": "2026-10-13T21:29:36.567Z",
+            "label": "10/14 05:29",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-13T20:58:54.804Z",
-            "label": "10/14 04:58",
-            "value": 61,
+            "at": "2026-10-13T22:24:32.661Z",
+            "label": "10/14 06:24",
+            "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-10-13T21:58:41.765Z",
-            "label": "10/14 05:58",
+            "at": "2026-10-13T23:19:28.756Z",
+            "label": "10/14 07:19",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T00:14:24.850Z",
+            "label": "10/14 08:14",
+            "value": 65,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-14T01:09:20.945Z",
+            "label": "10/14 09:09",
             "value": 70,
             "reports": 1
           }
