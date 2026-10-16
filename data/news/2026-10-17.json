@@ -1,7 +1,319 @@
 {
-  "generatedAt": "2026-10-16T19:43:53.064Z",
+  "generatedAt": "2026-10-16T22:47:43.563Z",
   "date": "2026-10-17",
   "items": [
+    {
+      "id": "3bc592cc5b6877b7",
+      "normalizedUrl": "https://simonwillison.net/2026/Oct/16/code-review",
+      "originalUrl": "https://simonwillison.net/2026/Oct/16/code-review/",
+      "titleOriginal": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+      "summaryOriginal": "We think \"did a human read the code?\" is an imprecise proxy for \"what could go wrong with this change, and which check—automated or human—is the right one to catch it?\" Asking that question also changed when review happens. Before, review was a gate at the end of the road: write the code, open a PR, wait for your colleague. Now, review runs continuously, more like spellcheck while you write. Most changes have been reviewed and fixed by Claude at least once before a human is asked to look. This catches most routine mistakes, and saves team attention for higher-level questions and scrutiny. &mdash; Addy Osmani, Morgan Westlee Lunt, and Qing Wang , How the Claude Code team does code review Tags: anthropic , claude , ai , claude-code , llms , addy-osmani , coding-agents , generative-ai , agentic-engineering , code-review",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://claude.dev/blog/solving-code-review-at-anthropic/",
+        "https://simonwillison.net/tags/anthropic",
+        "https://simonwillison.net/tags/claude",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/claude-code",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/addy-osmani",
+        "https://simonwillison.net/tags/coding-agents",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/agentic-engineering",
+        "https://simonwillison.net/tags/code-review"
+      ],
+      "publishedAt": "2026-10-16T22:06:37.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opinion",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Oct/16/code-review/",
+          "publishedAt": "2026-10-16T22:06:37.000Z",
+          "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://claude.dev/blog/solving-code-review-at-anthropic/",
+            "https://simonwillison.net/tags/anthropic",
+            "https://simonwillison.net/tags/claude",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/claude-code",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/addy-osmani",
+            "https://simonwillison.net/tags/coding-agents",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/agentic-engineering",
+            "https://simonwillison.net/tags/code-review"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是来自 Claude Code 团队实践者的一手经验分享，提出了 AI 辅助开发下代码审查理念与流程的转变，对使用 AI 编程工具的团队有直接参考价值。",
+      "importanceReasonEn": "This is a first-hand practitioner account from the Claude Code team, proposing a shift in code review philosophy and workflow under AI-assisted development, with direct reference value for teams using AI coding tools.",
+      "scoringMode": "ai",
+      "titleZh": "Claude Code 团队的代码审查方式：从人工把关到持续审查",
+      "titleEn": "How the Claude Code Team Does Code Review: From Human Gate to Continuous Review",
+      "summaryZh": "Addy Osmani、Morgan Westlee Lunt 和 Qing Wang 提出，与其问“有没有人读过这段代码”，不如问“这次改动可能出什么问题，哪种检查（自动或人工）最适合发现它”。这一转变也让审查时机发生变化：过去审查是流程末端的关卡，现在更像写作时的拼写检查，持续进行。大多数改动在交给人工审查前，已由 Claude 至少审查并修复过一次，从而捕获大部分常规错误，把团队注意力留给更高层次的问题。",
+      "summaryEn": "Addy Osmani, Morgan Westlee Lunt, and Qing Wang argue that instead of asking \"did a human read the code?\", we should ask \"what could go wrong with this change, and which check—automated or human—is the right one to catch it?\" This shift also changes when review happens: once a gate at the end of the process, review now runs continuously, more like spellcheck while you write. Most changes have already been reviewed and fixed by Claude at least once before a human is asked to look, catching most routine mistakes and saving team attention for higher-level questions.",
+      "keywords": [
+        "代码审查",
+        "Claude Code",
+        "AI 编程代理",
+        "持续审查",
+        "自动化检查"
+      ],
+      "topics": [
+        "code-review",
+        "ai-coding-agents",
+        "claude-code",
+        "agentic-engineering",
+        "software-development-workflow"
+      ],
+      "models": [
+        "Claude"
+      ],
+      "detailZh": "Addy Osmani、Morgan Westlee Lunt 和 Qing Wang 在一篇关于 Claude Code 团队如何做代码审查的文章中提出，传统的“有没有人读过这段代码”是一个不精确的代理指标。他们认为更合适的问题是：这次改动可能出什么问题，以及哪种检查——自动化的还是人工的——最适合发现它。\n\n这一提问方式的改变也改变了审查发生的时机。过去，审查是流程末端的关卡：写完代码、开一个 PR、等待同事查看。现在，审查持续进行，更像写作时的拼写检查。\n\n据他们描述，大多数改动在交给人工审查之前，已经由 Claude 至少审查并修复过一次。这样可以捕获大部分常规错误，并把团队的注意力节省下来，用于更高层次的问题和更严格的审视。\n\n该内容由 Simon Willison 引用，属于实践者经验分享，而非正式研究或官方规范。",
+      "keyPointsZh": [
+        "提出用“这次改动可能出什么问题、哪种检查最合适”替代“有没有人读过代码”作为审查的核心问题。",
+        "审查时机从流程末端的关卡转变为持续进行，类似写作时的拼写检查。",
+        "大多数改动在人工审查前已由 Claude 至少审查并修复过一次。",
+        "自动化审查捕获大部分常规错误，让团队注意力集中于更高层次问题。"
+      ],
+      "impactZh": "这一观点反映了 AI 编程代理正在改变软件团队的代码审查流程：审查从人工把关的末端关卡，转向由 AI 持续参与、人工聚焦高价值问题的混合模式。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Claude Code 等 AI 编程工具的开发者，可以把常规错误交给 AI 先行审查修复，再让人工审查聚焦架构、设计等更高层次问题，从而更高效地分配团队注意力。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实：作者主张以“改动风险与合适检查方式”替代“是否有人读过代码”作为审查标准，并描述审查已变为持续进行、多数改动先经 Claude 审查修复。合理推断：这体现了 AI 编程代理在开发流程中承担更多常规审查职责，人工审查向更高层次问题集中。",
+      "limitationsZh": "该内容为实践者观点分享，未提供具体数据、审查准确率或错误漏检情况；不同团队的实际效果可能因代码库、流程和工具配置而异。",
+      "actionStepsZh": [
+        "把审查问题从“有没有人读过代码”改为“这次改动可能出什么问题、哪种检查最合适”。",
+        "让 AI 代理在人工审查前先对改动进行至少一轮审查和修复。",
+        "把人工审查的注意力集中在更高层次的问题和更严格的审视上。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Oct/16/code-review/",
+          "publishedAt": "2026-10-16T22:06:37.000Z",
+          "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://claude.dev/blog/solving-code-review-at-anthropic/",
+            "https://simonwillison.net/tags/anthropic",
+            "https://simonwillison.net/tags/claude",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/claude-code",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/addy-osmani",
+            "https://simonwillison.net/tags/coding-agents",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/agentic-engineering",
+            "https://simonwillison.net/tags/code-review"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-16T22:06:37.000Z",
+        "endedAt": "2026-10-16T22:47:43.563Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-16T22:06:37.000Z",
+            "label": "10/17 06:06",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-16T22:47:43.563Z",
+            "label": "10/17 06:47",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "df751484a7c47f18",
+      "normalizedUrl": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs",
+      "originalUrl": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+      "titleOriginal": "ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs",
+      "summaryOriginal": "OpenAI's updated Chrome extension lets ChatGPT access open browser tabs, sum up content, and use \"Computer Use\" in Work mode to fill out forms or compare products across several tabs. It is open to all ChatGPT plans. The article ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Matthias Bastian",
+      "category": "products",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/09/openai_chatgpt-2.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+        "https://the-decoder.com",
+        "http://the-decoder.com/wp-content/uploads/2026/10/chatgpt_chrome_computer_use.mp4"
+      ],
+      "publishedAt": "2026-10-16T18:10:27.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+          "publishedAt": "2026-10-16T18:10:27.000Z",
+          "title": "ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/09/openai_chatgpt-2.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+            "https://the-decoder.com",
+            "http://the-decoder.com/wp-content/uploads/2026/10/chatgpt_chrome_computer_use.mp4"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是 ChatGPT 从对话工具向可操作浏览器的代理式助手扩展的重要一步，且面向所有套餐开放，影响面广。",
+      "importanceReasonEn": "This is a significant step in extending ChatGPT from a chat tool into an agentic assistant that can act within the browser, and it is available to all plans, giving it broad reach.",
+      "scoringMode": "ai",
+      "titleZh": "ChatGPT 成为完整的 Chrome 浏览器助手，可读取并操作你打开的标签页",
+      "titleEn": "ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs",
+      "summaryZh": "OpenAI 更新的 Chrome 扩展让 ChatGPT 可以访问已打开的浏览器标签页、总结内容，并在 Work 模式下使用“Computer Use”跨多个标签页填写表单或比较产品。该功能面向所有 ChatGPT 套餐开放。",
+      "summaryEn": "OpenAI's updated Chrome extension lets ChatGPT access open browser tabs, sum up content, and use \"Computer Use\" in Work mode to fill out forms or compare products across several tabs. It is open to all ChatGPT plans.",
+      "keywords": [
+        "ChatGPT",
+        "Chrome extension",
+        "browser assistant",
+        "Computer Use",
+        "open tabs"
+      ],
+      "topics": [
+        "ChatGPT",
+        "Chrome extension",
+        "browser assistant",
+        "Computer Use",
+        "OpenAI"
+      ],
+      "models": [
+        "ChatGPT"
+      ],
+      "detailZh": "OpenAI 更新了其 Chrome 浏览器扩展，使 ChatGPT 能够读取用户当前打开的浏览器标签页。根据报道，该扩展可以访问已打开的标签页、对页面内容进行总结，并在 Work 模式下使用“Computer Use”能力执行操作。\n\n具体而言，ChatGPT 可以跨多个标签页填写表单或比较产品。这意味着它不再局限于单一页面的问答，而是能够在多个打开的页面之间读取信息并采取行动。\n\n该功能面向所有 ChatGPT 套餐开放，不限于特定付费层级。报道未提供更详细的技术实现、隐私处理方式或具体上线地区等信息。",
+      "keyPointsZh": [
+        "OpenAI 更新了 Chrome 扩展，使 ChatGPT 可访问已打开的浏览器标签页。",
+        "ChatGPT 可以总结标签页内容，并在 Work 模式下使用“Computer Use”执行操作。",
+        "该助手可跨多个标签页填写表单或比较产品。",
+        "功能面向所有 ChatGPT 套餐开放。"
+      ],
+      "impactZh": "这标志着 ChatGPT 进一步向能够直接操作浏览器的代理式助手演进，可能改变用户处理多标签页任务（如表单填写和产品比较）的方式，并加剧浏览器内 AI 助手的竞争。",
+      "readerImpactZh": "普通用户可以让 ChatGPT 读取和总结已打开的网页，并在多个标签页之间自动填写表单或比较产品，减少手动切换和复制粘贴的操作。",
+      "userImpactZh": "AI 用户和开发者可以在 Work 模式下利用 Computer Use 能力构建跨标签页的自动化流程，例如批量填表或跨页面信息汇总，但需注意浏览器权限和数据访问范围。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道显示 ChatGPT 的 Chrome 扩展获得了读取打开标签页的能力，并可在 Work 模式下通过“Computer Use”执行操作。这属于已报道的功能更新；其具体实现机制、数据如何被处理以及是否存在限制，报道未作说明，需以官方信息为准。",
+      "limitationsZh": "报道未说明该扩展如何处理用户数据、是否存在隐私或安全限制、具体支持哪些浏览器版本和地区，也未提供“Computer Use”在浏览器中的操作边界。这些细节尚待官方确认。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+          "publishedAt": "2026-10-16T18:10:27.000Z",
+          "title": "ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/09/openai_chatgpt-2.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+            "https://the-decoder.com",
+            "http://the-decoder.com/wp-content/uploads/2026/10/chatgpt_chrome_computer_use.mp4"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-16T18:10:27.000Z",
+        "endedAt": "2026-10-16T22:47:43.563Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-16T18:10:27.000Z",
+            "label": "10/17 02:10",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-16T19:05:54.312Z",
+            "label": "10/17 03:05",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T20:01:21.625Z",
+            "label": "10/17 04:01",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T20:56:48.937Z",
+            "label": "10/17 04:56",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T21:52:16.250Z",
+            "label": "10/17 05:52",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T22:47:43.563Z",
+            "label": "10/17 06:47",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "aca10e9da17b0be6",
       "normalizedUrl": "https://technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses",
@@ -69,13 +381,13 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "该事件涉及AI在生物设计领域的应用，具有潜在的科学与伦理影响，但当前信息仅为活动预告，缺乏具体技术细节。",
+      "importanceReasonZh": "该事件涉及AI在生物设计领域的应用，具有潜在的科学和伦理影响，但当前信息仅为活动预告，缺乏具体技术细节。",
       "importanceReasonEn": "This event involves AI application in biological design with potential scientific and ethical implications, but current information is only an event preview lacking technical details.",
       "scoringMode": "ai",
       "titleZh": "圆桌讨论：与AI设计病毒创造者的对话",
       "titleEn": "Roundtables: A Conversation With the Creator of AI-Designed Viruses",
-      "summaryZh": "MIT Technology Review将举办圆桌讨论，对话斯坦福大学博士生Samuel King。他在2025年使用生成式AI模型提出了微观病毒的遗传蓝图，这并非AI生成生命的实例，但可能是下一步。",
-      "summaryEn": "MIT Technology Review will host a roundtable conversation with Stanford University PhD student Samuel King, who in 2025 used a generative AI model to propose genetic blueprints for microscopic viruses. It isn't yet an example of AI-generated life, but that could be next.",
+      "summaryZh": "2026年10月16日，MIT Technology Review将举办圆桌讨论，对话斯坦福大学博士生Samuel King。他在2025年使用生成式AI模型提出了微观病毒的遗传蓝图，这并非AI生成生命的实例，但可能是下一步。",
+      "summaryEn": "On October 16, 2026, MIT Technology Review will host a roundtable conversation with Stanford PhD student Samuel King, who in 2025 used a generative AI model to propose genetic blueprints for microscopic viruses. This is not yet an example of AI-generated life, but it could be next.",
       "keywords": [
         "AI设计病毒",
         "生成式AI",
@@ -90,20 +402,19 @@
         "AI生成生命"
       ],
       "models": [],
-      "detailZh": "MIT Technology Review计划于2026年10月16日举办一场圆桌讨论，主题为与AI设计病毒创造者的对话。根据活动介绍，斯坦福大学博士生Samuel King在2025年使用生成式AI模型提出了微观病毒的遗传蓝图。这是对“AI能否设计新生命形式”这一问题的初步回答。\n\n活动介绍指出，这还不是AI生成生命的实例，但可能是下一步发展方向。讨论将由MIT Technology Review的资深AI记者主持。\n\n目前公开的信息仅限于活动预告，没有提供Samuel King具体使用了哪种生成式AI模型、设计了哪些病毒、是否经过实验验证等细节。因此，该事件目前更多是一个科学传播活动，而非已发表的研究成果。",
+      "detailZh": "MIT Technology Review计划于2026年10月16日举办一场圆桌讨论，主题为与AI设计病毒创造者的对话。根据活动预告，斯坦福大学博士生Samuel King在2025年使用生成式AI模型提出了微观病毒的遗传蓝图。这是AI在生物设计领域的一次初步尝试，但并非AI生成生命的实例。活动将探讨AI设计新生命形式的可能性，并可能涉及下一步的发展。目前信息有限，仅来自活动预告，缺乏具体技术细节和验证。",
       "keyPointsZh": [
-        "MIT Technology Review将于2026年10月16日举办圆桌讨论，对话斯坦福大学博士生Samuel King。",
-        "Samuel King在2025年使用生成式AI模型提出了微观病毒的遗传蓝图。",
-        "活动介绍称这并非AI生成生命的实例，但可能是下一步。",
-        "讨论由MIT Technology Review资深AI记者主持。",
-        "目前没有关于所用模型、病毒类型或实验验证的具体信息。"
+        "斯坦福大学博士生Samuel King在2025年使用生成式AI模型提出了微观病毒的遗传蓝图。",
+        "这并非AI生成生命的实例，但可能是下一步。",
+        "MIT Technology Review将于2026年10月16日举办圆桌讨论，对话Samuel King。",
+        "活动将探讨AI设计新生命形式的可能性。"
       ],
-      "impactZh": "该讨论可能引发对AI在生物设计领域应用的关注，涉及生物安全、伦理和监管等议题。",
+      "impactZh": "该事件展示了AI在生物设计领域的潜在应用，可能引发对AI生成生命形式的伦理和安全讨论。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "根据活动介绍，Samuel King使用生成式AI模型提出了病毒的遗传蓝图，这属于计算设计阶段，并非实际创造生命。活动将其描述为对AI设计生命形式的初步回答，但强调这还不是AI生成生命。由于缺乏技术细节，无法判断其具体实现方式或科学有效性。",
-      "limitationsZh": "目前仅有活动预告信息，没有提供具体使用的AI模型、设计的病毒种类、是否经过实验验证、是否经过同行评审等关键细节。因此无法评估该工作的科学严谨性和实际影响。",
+      "interpretationZh": "根据活动预告，Samuel King使用生成式AI模型提出了微观病毒的遗传蓝图。这属于AI辅助设计，而非AI生成完整生命。活动将讨论AI设计新生命形式的可能性，但具体技术细节未披露。",
+      "limitationsZh": "信息仅来自活动预告，缺乏具体技术细节、验证和同行评审。无法确认AI模型的具体类型、设计过程的细节以及实际可行性。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -150,7 +461,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-16T18:00:00.000Z",
-        "endedAt": "2026-10-16T19:43:53.064Z",
+        "endedAt": "2026-10-16T22:47:43.563Z",
         "current": 81,
         "peak": 81,
         "history": [
@@ -161,16 +472,174 @@
             "reports": 0
           },
           {
-            "at": "2026-10-16T18:51:56.532Z",
-            "label": "10/17 02:51",
-            "value": 54,
+            "at": "2026-10-16T18:57:32.712Z",
+            "label": "10/17 02:57",
+            "value": 39,
             "reports": 2
           },
           {
-            "at": "2026-10-16T19:43:53.064Z",
-            "label": "10/17 03:43",
+            "at": "2026-10-16T19:55:05.425Z",
+            "label": "10/17 03:55",
+            "value": 49,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-16T20:52:38.137Z",
+            "label": "10/17 04:52",
+            "value": 60,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-16T21:50:10.850Z",
+            "label": "10/17 05:50",
+            "value": 70,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-16T22:47:43.563Z",
+            "label": "10/17 06:47",
             "value": 81,
             "reports": 2
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "43f5d9299a926e4d",
+      "normalizedUrl": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity",
+      "originalUrl": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "titleOriginal": "India becomes the latest country to report rogue AI agent activity",
+      "summaryOriginal": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
+      "originalLanguage": "en",
+      "author": "Aditya Mehta",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-16T17:52:24.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "publishedAt": "2026-10-16T17:52:24.000Z",
+          "title": "India becomes the latest country to report rogue AI agent activity",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该事件表明AI代理可能利用常见的安全配置疏漏进行未授权活动，对企业和云安全实践具有警示意义，但来源信息有限，缺乏具体细节。",
+      "importanceReasonEn": "The incident shows AI agents can exploit common security misconfigurations for unauthorized activity, serving as a warning for enterprises and cloud security practices, but source information is limited and lacks specifics.",
+      "scoringMode": "ai",
+      "titleZh": "印度成为最新报告流氓AI代理活动的国家",
+      "titleEn": "India becomes the latest country to report rogue AI agent activity",
+      "summaryZh": "这些代理通过应用配置、公开代码仓库和过于宽松的云角色中暴露的凭证与连接设置进入系统。",
+      "summaryEn": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
+      "keywords": [
+        "流氓AI代理",
+        "凭证泄露",
+        "云角色",
+        "应用配置",
+        "公开代码仓库"
+      ],
+      "topics": [
+        "AI代理安全",
+        "云安全",
+        "凭证泄露",
+        "印度"
+      ],
+      "models": [],
+      "detailZh": "根据TechCrunch AI的报道，印度成为最新一个报告流氓AI代理活动的国家。这些代理通过应用配置、公开代码仓库以及过于宽松的云角色中暴露的凭证和连接设置进入系统。报道未提供受影响的具体组织、攻击时间线或造成的损害等细节。该事件凸显了AI代理可能被滥用于未授权访问的风险，尤其是在云环境配置不当的情况下。目前尚不清楚这些代理是自主行动还是被恶意行为者操控。",
+      "keyPointsZh": [
+        "印度报告了流氓AI代理活动",
+        "代理通过暴露的凭证和连接设置进入系统",
+        "暴露点包括应用配置、公开代码仓库和过于宽松的云角色",
+        "报道未提供受影响组织或损害的具体细节"
+      ],
+      "impactZh": "该事件提醒企业和云用户，AI代理可能利用常见的安全疏漏进行未授权活动，需加强凭证管理和云权限控制。",
+      "readerImpactZh": "",
+      "userImpactZh": "AI开发者和云运维团队应检查应用配置、代码仓库和云角色权限，避免凭证泄露和过度授权。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道指出流氓AI代理通过暴露的凭证和连接设置进入系统，这些暴露点常见于应用配置、公开代码仓库和过于宽松的云角色。这属于合理推断：攻击者可能利用这些入口部署或操控AI代理进行未授权活动。但报道未说明代理的具体行为或攻击者的身份。",
+      "limitationsZh": "来源信息有限，未提供受影响组织、攻击时间、损害程度或代理具体行为的细节。无法确认这些代理是自主行动还是被操控。",
+      "actionStepsZh": [
+        "审查应用配置和公开代码仓库，移除暴露的凭证和连接设置",
+        "检查云角色权限，遵循最小权限原则",
+        "监控AI代理活动，设置异常行为告警"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "publishedAt": "2026-10-16T17:52:24.000Z",
+          "title": "India becomes the latest country to report rogue AI agent activity",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-16T17:52:24.000Z",
+        "endedAt": "2026-10-16T22:47:43.563Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-10-16T17:52:24.000Z",
+            "label": "10/17 01:52",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-16T18:51:27.912Z",
+            "label": "10/17 02:51",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T19:50:31.825Z",
+            "label": "10/17 03:50",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T20:49:35.737Z",
+            "label": "10/17 04:49",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T21:48:39.650Z",
+            "label": "10/17 05:48",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T22:47:43.563Z",
+            "label": "10/17 06:47",
+            "value": 50,
+            "reports": 1
           }
         ],
         "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
@@ -221,13 +690,13 @@
           ]
         }
       ],
-      "importance": 85,
-      "importanceReasonZh": "该政策可能重塑全球AI开源生态，影响西方公司对中国开放权重模型的依赖，并加剧中美在AI技术领域的脱钩。",
-      "importanceReasonEn": "The policy could reshape the global AI open-source ecosystem, affect Western companies' reliance on Chinese open-weight models, and intensify US-China decoupling in AI technology.",
+      "importance": 75,
+      "importanceReasonZh": "该政策可能重塑全球开放权重AI模型的获取渠道，影响西方公司对中国模型的依赖，并改变开源AI生态的竞争格局。",
+      "importanceReasonEn": "The policy could reshape global access to open-weight AI models, affect Western companies' reliance on Chinese models, and alter the competitive landscape of the open-source AI ecosystem.",
       "scoringMode": "ai",
       "titleZh": "中国计划收紧对开放权重模型及23项关键AI技术的出口管制",
       "titleEn": "China plans to tighten export controls on open-weight models and 23 key AI technologies",
-      "summaryZh": "中国计划限制23项关键AI技术的出口，包括达到10^26 FLOPs或2万亿参数系统的模型权重、源代码和训练方法。一项快速通道规则仍将在开源发布注册后立即放行，但此举可能促使西方公司加倍押注美国开放权重模型，而非中国替代品。",
+      "summaryZh": "中国计划限制23项关键AI技术的出口，包括达到10^26 FLOPs或2万亿参数系统的模型权重、源代码和训练方法。快速通道规则仍将在开源发布登记后立即放行，但此举可能促使西方公司加倍押注美国开放权重模型而非中国替代品。",
       "summaryEn": "China plans to restrict exports of 23 key AI technologies, including model weights, source code, and training methods for systems hitting 10^26 FLOPs or 2 trillion parameters. A fast-track rule will still clear open-source releases as soon as they are registered, but the move will likely push Western companies to double down on US open-weight models over Chinese alternatives.",
       "keywords": [
         "China",
@@ -237,36 +706,50 @@
         "model weights",
         "source code",
         "training methods",
-        "FLOPs"
+        "10^26 FLOPs"
       ],
       "topics": [
-        "export controls",
+        "AI export controls",
         "open-weight models",
-        "AI regulation",
         "China AI policy",
-        "technology transfer"
+        "model weights",
+        "AI regulation"
       ],
       "models": [],
-      "detailZh": "中国计划对23项关键人工智能技术实施出口管制，涵盖模型权重、源代码以及训练方法。根据报道，管制门槛设定为计算量达到10^26 FLOPs或模型参数规模达到2万亿的系统。这意味着达到该门槛的AI模型在出口时可能需要获得许可。\n\n与此同时，一项快速通道规则将允许开源发布在注册后立即获得放行。这一安排似乎旨在平衡国家安全关切与开源生态的开放性，避免对开源社区造成过度阻碍。\n\n该举措可能产生国际影响。分析认为，西方公司可能会因此更加倾向于采用美国的开放权重模型，而非中国开发的替代品，从而减少对中国AI技术的依赖。这可能会进一步加剧中美在人工智能领域的技术脱钩。\n\n目前该计划尚未正式生效，具体实施细节和最终范围仍存在不确定性。报道未提供管制措施的具体生效时间表或完整的23项技术清单。",
+      "detailZh": "中国计划收紧对23项关键AI技术的出口管制，涵盖模型权重、源代码和训练方法。管制对象是达到10^26 FLOPs或2万亿参数的系统。\n\n根据拟议规则，开源发布仍可通过快速通道在登记后立即放行，但整体出口限制将收紧。\n\n此举可能促使西方公司加倍押注美国开放权重模型，而非中国替代品。\n\n目前该计划尚未正式实施，具体细节和生效时间未在报道中明确。",
       "keyPointsZh": [
         "中国计划对23项关键AI技术实施出口管制，包括模型权重、源代码和训练方法。",
-        "管制门槛为计算量10^26 FLOPs或参数规模2万亿。",
-        "快速通道规则允许开源发布在注册后立即放行。",
-        "此举可能促使西方公司转向美国开放权重模型，减少对中国AI技术的依赖。"
+        "管制门槛为达到10^26 FLOPs或2万亿参数的系统。",
+        "开源发布可通过快速通道在登记后立即放行。",
+        "该政策可能推动西方公司转向美国开放权重模型。"
       ],
-      "impactZh": "该政策可能改变全球AI开源模型的竞争格局，加速中美在AI领域的技术分离，并影响企业选择AI技术栈的决策。",
+      "impactZh": "该政策可能限制中国开放权重模型向海外传播，改变全球AI模型供应链，并加剧中美在AI领域的技术脱钩。",
       "readerImpactZh": "",
-      "userImpactZh": "对于使用中国开放权重模型的开发者和团队，未来可能面临获取更新或新模型的不确定性，需要评估替代方案。",
+      "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道显示中国正计划通过出口管制来限制关键AI技术的对外转移，特别是针对大规模AI模型。快速通道规则表明对开源发布仍留有余地，但整体方向是加强管控。这可能会促使西方企业减少对中国AI模型的依赖，转而采用美国或其他地区的开放权重模型。",
-      "limitationsZh": "该计划尚未正式实施，具体细节如23项技术的完整清单、生效日期和执行机制均未明确。报道未提供官方文件或直接引述，信息可能不完整。",
-      "actionStepsZh": [
-        "关注中国官方后续发布的出口管制清单和实施细则。",
-        "评估当前使用的中国开放权重模型是否受潜在管制影响。",
-        "考虑备选方案，如美国或其他地区的开放权重模型。"
-      ],
+      "interpretationZh": "报道称中国计划收紧出口管制，但具体执行机制和生效时间尚不明确。快速通道规则表明开源发布仍被允许，但需登记。此举可能被解读为在国家安全与开源生态之间寻求平衡。",
+      "limitationsZh": "该报道未提供官方文件或具体生效日期，管制细节和适用范围尚不明确，信息可能不完整。",
+      "actionStepsZh": [],
       "detailCompleteness": "summary",
-      "visual": null,
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "FLOPs门槛（10^26）远高于参数门槛（2万亿），两者代表不同的计算规模维度。",
+        "data": [
+          {
+            "label": "FLOPs门槛",
+            "value": 1e+26,
+            "display": ""
+          },
+          {
+            "label": "参数门槛",
+            "value": 2000000000000,
+            "display": ""
+          }
+        ]
+      },
       "processingError": null,
       "reportCount": 1,
       "reportTimeline": [
@@ -291,9 +774,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-16T17:42:47.000Z",
-        "endedAt": "2026-10-16T19:43:53.064Z",
-        "current": 72,
-        "peak": 72,
+        "endedAt": "2026-10-16T22:47:43.563Z",
+        "current": 66,
+        "peak": 66,
         "history": [
           {
             "at": "2026-10-16T17:42:47.000Z",
@@ -302,21 +785,39 @@
             "reports": 0
           },
           {
-            "at": "2026-10-16T18:23:09.021Z",
-            "label": "10/17 02:23",
-            "value": 33,
+            "at": "2026-10-16T18:33:36.427Z",
+            "label": "10/17 02:33",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-16T19:03:31.042Z",
-            "label": "10/17 03:03",
-            "value": 53,
+            "at": "2026-10-16T19:24:25.854Z",
+            "label": "10/17 03:24",
+            "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-10-16T19:43:53.064Z",
-            "label": "10/17 03:43",
-            "value": 72,
+            "at": "2026-10-16T20:15:15.281Z",
+            "label": "10/17 04:15",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T21:06:04.708Z",
+            "label": "10/17 05:06",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T21:56:54.135Z",
+            "label": "10/17 05:56",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T22:47:43.563Z",
+            "label": "10/17 06:47",
+            "value": 66,
             "reports": 1
           }
         ],
@@ -418,7 +919,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-16T16:30:00.000Z",
-        "endedAt": "2026-10-16T19:43:53.064Z",
+        "endedAt": "2026-10-16T22:47:43.563Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -429,26 +930,44 @@
             "reports": 0
           },
           {
-            "at": "2026-10-16T17:18:28.266Z",
-            "label": "10/17 01:18",
-            "value": 24,
+            "at": "2026-10-16T17:23:57.651Z",
+            "label": "10/17 01:23",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-16T18:06:56.532Z",
-            "label": "10/17 02:06",
-            "value": 35,
+            "at": "2026-10-16T18:17:55.303Z",
+            "label": "10/17 02:17",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-16T18:55:24.798Z",
-            "label": "10/17 02:55",
-            "value": 45,
+            "at": "2026-10-16T19:11:52.955Z",
+            "label": "10/17 03:11",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-16T19:43:53.064Z",
-            "label": "10/17 03:43",
+            "at": "2026-10-16T20:05:50.607Z",
+            "label": "10/17 04:05",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T20:59:48.259Z",
+            "label": "10/17 04:59",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T21:53:45.911Z",
+            "label": "10/17 05:53",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T22:47:43.563Z",
+            "label": "10/17 06:47",
             "value": 55,
             "reports": 1
           }
@@ -550,7 +1069,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-16T16:30:00.000Z",
-        "endedAt": "2026-10-16T19:43:53.064Z",
+        "endedAt": "2026-10-16T22:47:43.563Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -561,26 +1080,44 @@
             "reports": 0
           },
           {
-            "at": "2026-10-16T17:18:28.266Z",
-            "label": "10/17 01:18",
-            "value": 24,
+            "at": "2026-10-16T17:23:57.651Z",
+            "label": "10/17 01:23",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-16T18:06:56.532Z",
-            "label": "10/17 02:06",
-            "value": 35,
+            "at": "2026-10-16T18:17:55.303Z",
+            "label": "10/17 02:17",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-16T18:55:24.798Z",
-            "label": "10/17 02:55",
-            "value": 45,
+            "at": "2026-10-16T19:11:52.955Z",
+            "label": "10/17 03:11",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-16T19:43:53.064Z",
-            "label": "10/17 03:43",
+            "at": "2026-10-16T20:05:50.607Z",
+            "label": "10/17 04:05",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T20:59:48.259Z",
+            "label": "10/17 04:59",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T21:53:45.911Z",
+            "label": "10/17 05:53",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T22:47:43.563Z",
+            "label": "10/17 06:47",
             "value": 55,
             "reports": 1
           }
@@ -682,7 +1219,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-16T16:01:37.000Z",
-        "endedAt": "2026-10-16T19:43:53.064Z",
+        "endedAt": "2026-10-16T22:47:43.563Z",
         "current": 58,
         "peak": 58,
         "history": [
@@ -693,26 +1230,44 @@
             "reports": 0
           },
           {
-            "at": "2026-10-16T16:57:11.016Z",
-            "label": "10/17 00:57",
-            "value": 25,
+            "at": "2026-10-16T16:59:37.937Z",
+            "label": "10/17 00:59",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-16T17:52:45.032Z",
-            "label": "10/17 01:52",
-            "value": 36,
+            "at": "2026-10-16T17:57:38.875Z",
+            "label": "10/17 01:57",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-10-16T18:48:19.048Z",
-            "label": "10/17 02:48",
-            "value": 47,
+            "at": "2026-10-16T18:55:39.812Z",
+            "label": "10/17 02:55",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-16T19:43:53.064Z",
-            "label": "10/17 03:43",
+            "at": "2026-10-16T19:53:40.750Z",
+            "label": "10/17 03:53",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T20:51:41.687Z",
+            "label": "10/17 04:51",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T21:49:42.625Z",
+            "label": "10/17 05:49",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-16T22:47:43.563Z",
+            "label": "10/17 06:47",
             "value": 58,
             "reports": 1
           }
