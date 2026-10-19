@@ -1,7 +1,260 @@
 {
-  "generatedAt": "2026-10-19T00:27:34.359Z",
+  "generatedAt": "2026-10-19T05:13:56.339Z",
   "date": "2026-10-19",
   "items": [
+    {
+      "id": "da92b80397690dde",
+      "normalizedUrl": "https://arxiv.org/abs/2610.22373",
+      "originalUrl": "https://arxiv.org/abs/2610.22373",
+      "titleOriginal": "Structured Authority Injection: Persistent Human Control for LLM Agents via Typed MCP Overrides",
+      "summaryOriginal": "arXiv:2610.22373v1 Announce Type: new Abstract: LLM-based agents are increasingly used as autonomous orchestrators in distributed and multi-agent systems, yet a control gap remains: no protocol-level mechanism allows human operators to inject binding directives that persist across planning cycles. Free-text overrides suffer from ambiguous interpretation due to lack of schema validation and from authority erosion as operator instructions lose influence within accumulating context. We propose Structured Authority Injection (SAI), a protocol that addresses these issues by routing operator corrections through typed, schema-validated Model Context Protocol (MCP) tool calls and maintaining a ranked authority context prepended to each LLM prompt. SAI defines three override classes (Constraint, Priority, and Strategy) with distinct persistence semantics and an explicit precedence order enforced via a directed authority channel inaccessible to the planning process. The method requires no model fine-tuning or access to model weights and applies to instruction-tuned LLMs supporting MCP tool use. Evaluation across nine LLMs and eight scenarios targeting agent failure modes shows reduced ambigu",
+      "originalLanguage": "en",
+      "author": "Ryan Tran, YueMing Zhang, Lingfeng Tao, Nan Yang, Shengjie Xu, Yu Yin, Shuai Xu, Wenlu Zhang, Hailu Xu",
+      "category": "agent",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-19T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.22373",
+          "publishedAt": "2026-10-19T04:00:00.000Z",
+          "title": "Structured Authority Injection: Persistent Human Control for LLM Agents via Typed MCP Overrides",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 58,
+      "importanceReasonZh": "该论文针对多智能体系统中人类控制指令易被稀释的实际问题，提出无需微调的协议层方案，思路有实用价值；但目前仅有摘要，缺少完整实验数据与复现细节。",
+      "importanceReasonEn": "The paper targets a real problem—human control directives being diluted in agent systems—with a no-fine-tuning protocol-level approach; however, only the abstract is available, lacking full experimental data and reproduction details.",
+      "scoringMode": "ai",
+      "titleZh": "结构化权威注入：通过类型化 MCP 覆盖实现对大模型智能体的持久人类控制",
+      "titleEn": "Structured Authority Injection: Persistent Human Control for LLM Agents via Typed MCP Overrides",
+      "summaryZh": "一篇 arXiv 论文提出结构化权威注入（SAI）协议：将人类操作者的纠正指令通过类型化、经模式校验的 MCP 工具调用传入，并在每次提示前附加一个排序后的权威上下文，以解决自由文本覆盖指令含义模糊、随上下文累积而权威性衰减的问题。",
+      "summaryEn": "An arXiv paper proposes Structured Authority Injection (SAI), a protocol that routes human operator corrections through typed, schema-validated MCP tool calls and prepends a ranked authority context to each prompt, addressing ambiguous interpretation and authority erosion of free-text overrides.",
+      "keywords": [
+        "Structured Authority Injection",
+        "MCP",
+        "typed overrides",
+        "authority context",
+        "agent control"
+      ],
+      "topics": [
+        "LLM agents",
+        "MCP",
+        "human control",
+        "agent safety",
+        "protocol design"
+      ],
+      "models": [],
+      "detailZh": "该论文（arXiv:2610.22373v1）关注基于大模型的智能体在分布式与多智能体系统中充当自主编排者时存在的控制缺口：目前没有协议层机制能让人类操作者注入跨规划周期持续生效的约束性指令。作者指出，自由文本形式的覆盖指令存在两个问题：一是缺乏模式校验导致解释歧义，二是随着上下文不断累积，操作者指令的影响力会被稀释，即“权威侵蚀”。\n\n为此，作者提出结构化权威注入（SAI）协议。其核心做法是把操作者的纠正指令通过类型化、经模式校验的模型上下文协议（MCP）工具调用传入，并在每次送入大模型提示前附加一个经过排序的权威上下文。SAI 定义了约束（Constraint）、优先级（Priority）和策略（Strategy）三类覆盖，各自具有不同的持久化语义，并通过一条规划过程无法访问的有向权威通道强制执行明确的优先顺序。\n\n该方法不需要模型微调，也不需要访问模型权重，适用于支持 MCP 工具调用的指令微调大模型。摘要称，在覆盖九个大模型、八个针对智能体失败模式的场景的评估中，该方法降低了歧义（摘要在此处截断）。\n\n由于目前仅有摘要，具体的评估指标、基线对比、消融实验和实现细节均未公开，结论的可靠性有待全文验证。",
+      "keyPointsZh": [
+        "提出 SAI 协议，通过类型化、模式校验的 MCP 工具调用注入人类纠正指令",
+        "定义约束、优先级、策略三类覆盖，具有不同持久化语义和明确优先顺序",
+        "权威上下文在每次提示前附加，并通过规划过程不可访问的通道强制执行",
+        "无需微调或访问模型权重，适用于支持 MCP 工具调用的指令微调模型",
+        "摘要称在九个模型、八个失败模式场景上评估，但结果数据被截断"
+      ],
+      "impactZh": "若方法有效，可为多智能体系统提供一种协议层的人类控制手段，缓解长上下文中操作者指令被稀释的问题，对智能体安全与可控性研究有参考意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 MCP 构建智能体工作流的开发者而言，该思路提示可将人类纠正指令从自由文本改为结构化、带优先级的工具调用，以提升指令的稳定性和可审计性；但需等待全文与开源实现后再评估落地。",
+      "howItWorksZh": "按摘要描述，流程大致为：操作者发出纠正指令；系统将其转换为类型化（约束/优先级/策略）、经模式校验的 MCP 工具调用；这些覆盖被写入一条规划过程无法访问的有向权威通道；每次调用大模型前，系统按优先级排序生成权威上下文并附加到提示前部，从而在多个规划周期中持续生效。",
+      "interpretationZh": "已报告的事实是：论文提出了 SAI 协议及其三类覆盖与优先顺序设计，并声称在九个模型、八个场景上进行了评估。合理推断是：该方法试图用结构化协议替代自由文本覆盖，以提升指令的确定性与持久性。但摘要中评估结果被截断，实际效果尚无法判断。",
+      "limitationsZh": "目前仅有摘要，评估指标、基线、消融实验和具体数值均未公开；摘要中结果描述被截断，无法确认“降低歧义”的幅度；未说明对不支持 MCP 的模型或非指令微调模型的适用性；也未讨论权威通道本身被误用或冲突覆盖时的处理方式。",
+      "actionStepsZh": [
+        "关注该论文全文发布，核实九模型八场景的评估细节与基线设置",
+        "在自建 MCP 智能体工作流中，可试验将关键纠正指令改为带模式校验的结构化工具调用",
+        "为覆盖指令设计明确的优先级与持久化规则，避免与规划上下文冲突"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.22373",
+          "publishedAt": "2026-10-19T04:00:00.000Z",
+          "title": "Structured Authority Injection: Persistent Human Control for LLM Agents via Typed MCP Overrides",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-19T04:00:00.000Z",
+        "endedAt": "2026-10-19T05:13:56.339Z",
+        "current": 57,
+        "peak": 57,
+        "history": [
+          {
+            "at": "2026-10-19T04:00:00.000Z",
+            "label": "10/19 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-19T04:36:58.169Z",
+            "label": "10/19 12:36",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T05:13:56.339Z",
+            "label": "10/19 13:13",
+            "value": 57,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "0b0024271a7c2b59",
+      "normalizedUrl": "https://arxiv.org/abs/2610.22400",
+      "originalUrl": "https://arxiv.org/abs/2610.22400",
+      "titleOriginal": "Rethinking User Encoders: Routing Diffusion States for Scenario-Adaptive User Representation",
+      "summaryOriginal": "arXiv:2610.22400v1 Announce Type: new Abstract: Existing large language model (LLM)-based user encoders serialize heterogeneous behavioral logs and compress them into static representations through autoregressive (AR) prediction. However, their unidirectional constraint limits bidirectional information flow, hindering cross-modal interactions and the joint preservation of multi-source signals. Consequently, the learned static representations struggle to accommodate the distinct evidence requirements of diverse downstream scenarios. We address these limitations by unlocking the iterative denoising process of diffusion language models (dLLMs) as a multi-granularity reconstruction space. Based on this insight, we propose FINDERS (FactorIzatioN of Diffusion statEs for Routing across Scenarios), a router-equipped dLLM framework comprising four operations: denoise, factorize, route, and compress. Learnable meta-slots organize complementary denoising states into transferable cross-modal semantics and modality-specific behavioral factors. To provide grounded supervision, we construct BehaviorQA, a large-scale corpus containing explicit behavioral rationales. Guided by scenario queries, a l",
+      "originalLanguage": "en",
+      "author": "Junru Zhang, Jinyong Wen, Bin Dou, Wuliang Huang, Baokun Wang, Yu Cheng, Weiqiang Wang, Cheng Peng",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-19T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.22400",
+          "publishedAt": "2026-10-19T04:00:00.000Z",
+          "title": "Rethinking User Encoders: Routing Diffusion States for Scenario-Adaptive User Representation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该工作针对LLM用户编码器的单向约束与静态表征局限提出新架构，属于用户建模方向的方法创新，但仅有摘要信息，缺乏实验数据与落地验证。",
+      "importanceReasonEn": "The work proposes a new architecture addressing the unidirectional constraint and static representation limits of LLM-based user encoders, a methodological advance in user modeling, but only abstract-level information is available without experimental data or deployment validation.",
+      "scoringMode": "ai",
+      "titleZh": "重新思考用户编码器：为场景自适应用户表征路由扩散状态",
+      "titleEn": "Rethinking User Encoders: Routing Diffusion States for Scenario-Adaptive User Representation",
+      "summaryZh": "该论文提出 FINDERS 框架，利用扩散语言模型（dLLM）的迭代去噪过程作为多粒度重建空间，通过去噪、因子化、路由、压缩四个操作，将互补的去噪状态组织为可迁移的跨模态语义与模态特定行为因子，并构建含显式行为理由的 BehaviorQA 语料提供监督，以适配不同下游场景的证据需求。",
+      "summaryEn": "The paper proposes FINDERS, a router-equipped diffusion language model framework that treats the iterative denoising process as a multi-granularity reconstruction space. Through four operations—denoise, factorize, route, and compress—it organizes complementary denoising states into transferable cross-modal semantics and modality-specific behavioral factors, supervised by the BehaviorQA corpus of explicit behavioral rationales, to adapt to the evidence needs of diverse downstream scenarios.",
+      "keywords": [
+        "用户编码器",
+        "扩散语言模型",
+        "去噪状态",
+        "场景路由",
+        "BehaviorQA",
+        "跨模态"
+      ],
+      "topics": [
+        "用户表征学习",
+        "扩散语言模型",
+        "场景自适应路由",
+        "跨模态行为建模",
+        "LLM用户编码器"
+      ],
+      "models": [
+        "FINDERS",
+        "dLLM",
+        "LLM-based user encoders"
+      ],
+      "detailZh": "现有基于大语言模型的用户编码器通常将异构行为日志序列化，并通过自回归预测压缩为静态表征。论文指出，这种单向约束限制了双向信息流动，阻碍跨模态交互与多源信号的联合保留，导致学到的静态表征难以满足不同下游场景各自的证据需求。\n\n作者提出将扩散语言模型的迭代去噪过程解锁为多粒度重建空间，并据此设计 FINDERS 框架。该框架配备路由器，包含去噪、因子化、路由、压缩四个操作。可学习的元槽（meta-slots）将互补的去噪状态组织为可迁移的跨模态语义和模态特定的行为因子。\n\n为提供有依据的监督，作者构建了 BehaviorQA 大规模语料，其中包含显式的行为理由。在场景查询引导下，路由器据以选择适配的表征。摘要在此处截断，路由机制的具体细节与实验结果未在可见文本中给出。",
+      "keyPointsZh": [
+        "指出现有LLM用户编码器的单向自回归约束限制双向信息流与跨模态交互",
+        "提出FINDERS框架，包含去噪、因子化、路由、压缩四个操作",
+        "用可学习元槽组织去噪状态为跨模态语义与模态特定行为因子",
+        "构建含显式行为理由的BehaviorQA大规模语料用于监督",
+        "以场景查询引导路由，适配不同下游场景的证据需求"
+      ],
+      "impactZh": "若方法有效，可改善用户表征在多场景下的复用性与跨模态信号保留，为推荐、用户画像等下游任务提供更灵活的表征基础；但目前仅为方法提案，实际收益尚未经公开实验验证。",
+      "readerImpactZh": "",
+      "userImpactZh": "对从事用户建模、推荐系统或LLM应用开发的团队，该思路提示可将扩散模型的中间去噪状态作为多粒度表征来源，并用路由机制按场景选择表征，而非依赖单一静态向量。",
+      "howItWorksZh": "框架流程为：先对序列化的异构行为日志执行扩散去噪，得到多粒度的中间状态；再用可学习元槽对这些状态做因子化，分离出可迁移的跨模态语义与模态特定行为因子；随后由场景查询驱动的路由器选择适配因子；最后压缩为下游可用的用户表征。训练监督来自含显式行为理由的BehaviorQA语料。",
+      "interpretationZh": "论文的核心主张是：静态单向压缩的表征不足以服务多样化场景，而扩散模型的去噪轨迹天然提供多粒度信息，可被分解并按场景路由。这属于合理的方法论推断，但摘要未给出量化结果，效果仍需实验确认。",
+      "limitationsZh": "目前仅有摘要，路由器的具体实现、BehaviorQA的规模与构建方式、基线对比和评测指标均未披露；方法相对复杂，去噪与路由带来的计算开销未知；实际场景收益缺乏证据。",
+      "actionStepsZh": [
+        "关注该论文后续完整版本以获取实验数据与实现细节",
+        "评估在自有用户行为数据上引入多粒度中间表征的可行性",
+        "留意BehaviorQA语料的公开情况以便复用监督信号"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.22400",
+          "publishedAt": "2026-10-19T04:00:00.000Z",
+          "title": "Rethinking User Encoders: Routing Diffusion States for Scenario-Adaptive User Representation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-19T04:00:00.000Z",
+        "endedAt": "2026-10-19T05:13:56.339Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-19T04:00:00.000Z",
+            "label": "10/19 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-19T04:36:58.169Z",
+            "label": "10/19 12:36",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T05:13:56.339Z",
+            "label": "10/19 13:13",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "768169fbc5579b7b",
       "normalizedUrl": "https://simonwillison.net/2026/Oct/18/llm-tools-datasette",
@@ -49,44 +302,41 @@
           ]
         }
       ],
-      "importance": 35,
-      "importanceReasonZh": "这是一次小型插件修复发布，主要价值在于提醒开发者：间接依赖在底层库切换时容易断裂。",
-      "importanceReasonEn": "This is a small plugin fix release; its main value is reminding developers that implicit dependencies can break when an underlying library changes.",
+      "importance": 22,
+      "importanceReasonZh": "这是一次小型插件补丁发布，只影响使用 llm-tools-datasette 的用户，但清楚展示了依赖变更如何破坏插件生态。",
+      "importanceReasonEn": "This is a small plugin patch release affecting only llm-tools-datasette users, but it illustrates how dependency changes can break plugin ecosystems.",
       "scoringMode": "ai",
-      "titleZh": "llm-tools-datasette 0.1.1 发布：修复 httpx 依赖问题",
-      "titleEn": "llm-tools-datasette 0.1.1 Released: Fixing the httpx Dependency Issue",
-      "summaryZh": "Simon Willison 发布 llm-tools-datasette 0.1.1，修复了 LLM 0.33 切换到 httpx2 后导致该插件失效的问题。原因是该插件使用了 httpx 却没有直接声明依赖。",
-      "summaryEn": "Simon Willison released llm-tools-datasette 0.1.1, fixing breakage caused when LLM 0.33 switched to httpx2. The plugin used httpx without declaring it as a direct dependency.",
+      "titleZh": "llm-tools-datasette 0.1.1 修复 httpx 依赖问题",
+      "titleEn": "llm-tools-datasette 0.1.1 fixes httpx dependency issue",
+      "summaryZh": "Simon Willison 发布 llm-tools-datasette 0.1.1，修复了 LLM 0.33 切换到 httpx2 后导致该插件失效的问题。",
+      "summaryEn": "Simon Willison released llm-tools-datasette 0.1.1, fixing breakage caused when LLM 0.33 switched to httpx2.",
       "keywords": [
         "llm-tools-datasette",
         "httpx2",
         "LLM 0.33",
-        "插件依赖",
-        "Simon Willison"
+        "plugin fix"
       ],
       "topics": [
-        "LLM 插件",
-        "Datasette",
-        "依赖管理",
-        "httpx"
+        "datasette",
+        "llm",
+        "plugin"
       ],
       "models": [],
-      "detailZh": "Simon Willison 发布了 llm-tools-datasette 0.1.1 版本。该版本修复了一个兼容性问题：在 LLM 0.33 版本中，底层 HTTP 库从 httpx 切换到了 httpx2，导致部分插件失效。\n\nllm-tools-datasette 是受影响插件之一。它使用了 httpx，但没有在自己的依赖中直接声明 httpx，而是依赖 LLM 间接提供。当 LLM 改用 httpx2 后，该插件便无法正常工作。\n\n0.1.1 版本修复了这一问题。发布说明中，作者也坦言自己当初忘记这一改动会破坏那些未直接依赖 httpx 的插件。",
+      "detailZh": "Simon Willison 发布了 llm-tools-datasette 0.1.1。该版本修复了一个兼容性问题：在 LLM 0.33 版本中，LLM 改用 httpx2，而作者当时没有意识到，这会让那些使用 httpx 却没有直接声明依赖的插件失效。llm-tools-datasette 正是受影响的插件之一，现在已修复。该发布被标记为 datasette 和 llm 相关。",
       "keyPointsZh": [
         "llm-tools-datasette 发布 0.1.1 版本",
-        "LLM 0.33 将底层库从 httpx 切换到 httpx2",
-        "该插件使用了 httpx 但未直接声明依赖，因此失效",
-        "0.1.1 修复了该兼容性问题"
+        "LLM 0.33 切换到 httpx2，导致部分插件失效",
+        "llm-tools-datasette 因未直接依赖 httpx 而受影响，现已修复"
       ],
-      "impactZh": "该修复让使用 llm-tools-datasette 的用户在升级到 LLM 0.33 后可以继续正常使用插件。事件也暴露了 Python 生态中间接依赖带来的脆弱性。",
+      "impactZh": "该补丁恢复了 llm-tools-datasette 在 LLM 0.33 及之后版本中的可用性，并提醒插件作者应显式声明依赖。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 LLM 插件或开发插件的开发者应显式声明所依赖的库，避免底层库切换时插件悄然失效。",
+      "userImpactZh": "使用 llm-tools-datasette 的 LLM 用户升级到 0.1.1 后，可避免因 LLM 0.33 的 httpx2 变更导致的插件失效。",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：LLM 0.33 切换到了 httpx2，llm-tools-datasette 因未直接依赖 httpx 而失效，0.1.1 版本修复了该问题。合理推断是：修复方式应为显式声明或调整对 httpx 的使用，但发布说明未给出具体代码改动。",
-      "limitationsZh": "发布说明非常简短，未披露具体代码改动、受影响范围或是否还有其他插件存在同类问题。",
+      "interpretationZh": "已报告的事实是：LLM 0.33 改用 httpx2，llm-tools-datasette 因未直接依赖 httpx 而失效，0.1.1 修复了该问题。合理推断是修复方式涉及显式声明或调整 httpx 相关依赖，但来源未说明具体改动。",
+      "limitationsZh": "来源仅为简短发布说明，未提供具体代码改动、受影响版本范围或测试细节。",
       "actionStepsZh": [
-        "升级 llm-tools-datasette 到 0.1.1 以兼容 LLM 0.33",
-        "检查自研 LLM 插件是否隐式依赖 httpx，并显式声明依赖"
+        "将 llm-tools-datasette 升级到 0.1.1",
+        "检查其他 LLM 插件是否显式声明了 httpx 依赖"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -115,9 +365,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-18T23:43:09.000Z",
-        "endedAt": "2026-10-19T00:27:34.359Z",
-        "current": 44,
-        "peak": 44,
+        "endedAt": "2026-10-19T05:13:56.339Z",
+        "current": 37,
+        "peak": 37,
         "history": [
           {
             "at": "2026-10-18T23:43:09.000Z",
@@ -126,9 +376,39 @@
             "reports": 0
           },
           {
-            "at": "2026-10-19T00:27:34.359Z",
-            "label": "10/19 08:27",
-            "value": 44,
+            "at": "2026-10-19T00:38:16.889Z",
+            "label": "10/19 08:38",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T01:33:24.779Z",
+            "label": "10/19 09:33",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T02:28:32.669Z",
+            "label": "10/19 10:28",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T03:23:40.559Z",
+            "label": "10/19 11:23",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T04:18:48.449Z",
+            "label": "10/19 12:18",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T05:13:56.339Z",
+            "label": "10/19 13:13",
+            "value": 37,
             "reports": 1
           }
         ],
@@ -178,14 +458,14 @@
           ]
         }
       ],
-      "importance": 35,
-      "importanceReasonZh": "这是一次小型开源工具更新，对使用 LLM CLI 进行调试和测试的开发者有实际帮助，但影响范围有限。",
-      "importanceReasonEn": "This is a small open-source tool update that is practically useful for developers debugging and testing with the LLM CLI, but its scope is limited.",
+      "importance": 28,
+      "importanceReasonZh": "这是一次小型开源调试工具的版本更新，对使用 LLM 命令行工具做测试的开发者有一定实用价值，但影响范围有限。",
+      "importanceReasonEn": "This is a minor release of a small open-source debugging tool. It has some practical value for developers testing LLM command-line workflows, but its impact is limited.",
       "scoringMode": "ai",
-      "titleZh": "llm-echo 0.5 发布：更精确地模拟 token 用量",
-      "titleEn": "llm-echo 0.5 Released with More Accurate Simulated Token Usage",
-      "summaryZh": "Simon Willison 发布 llm-echo 0.5 调试插件，该插件提供一个不调用任何 LLM 的“模型”，只回显输入的提示词；新版本更新了模拟 token 用量计数，将工具调用、系统提示词和推理 token 纳入计算。",
-      "summaryEn": "Simon Willison released llm-echo 0.5, a debug plugin that provides a \"model\" which does not involve any LLM and simply echoes back the prompts fed to it. The new version updates simulated token usage counts to account for tool calls, system prompts, and reasoning tokens.",
+      "titleZh": "llm-echo 0.5 发布：调试插件更新模拟 token 用量统计",
+      "titleEn": "llm-echo 0.5 Released: Debug Plugin Updates Simulated Token Usage Counting",
+      "summaryZh": "Simon Willison 发布 llm-echo 0.5，这是一个不调用任何 LLM、只回显输入提示的调试插件。新版本改进了模拟 token 用量统计，将工具调用、系统提示和推理 token 纳入计算。",
+      "summaryEn": "Simon Willison released llm-echo 0.5, a debug plugin that involves no LLM at all and simply echoes back the prompts fed to it. The new version improves simulated token usage counting to account for tool calls, system prompts and reasoning tokens.",
       "keywords": [
         "llm-echo",
         "LLM",
@@ -194,27 +474,28 @@
         "Simon Willison"
       ],
       "topics": [
-        "LLM 调试工具",
-        "token 用量模拟",
-        "LLM CLI 插件"
+        "LLM debugging",
+        "token usage",
+        "developer tooling"
       ],
       "models": [],
-      "detailZh": "Simon Willison 发布了 llm-echo 0.5，这是 LLM 命令行工具的一个调试插件。该插件提供一个名为 echo 的“模型”，它完全不涉及任何 LLM，只是把收到的提示词原样回显出来，因此适合在不消耗真实模型调用的情况下测试流程。\n\n作者表示，他正在准备一次新的 LLM 发布，测试相关 PR 时促使他重新审视这个调试插件。新版本的主要变化是更新了模拟的 token 用量计数，现在会把工具调用、系统提示词和推理 token 都纳入计算。\n\n示例用法为 uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage。输出中先出现一句模拟的思考文本，随后是包含 prompt、system、attachments、stream、previous 等字段的 JSON 回显，最后显示 token 用量：2 个输入 token、24 个输出 token。",
+      "detailZh": "Simon Willison 发布了 llm-echo 0.5，这是 llm 命令行工具的一个调试插件。该插件提供一个名为 echo 的“模型”，它完全不涉及任何 LLM，只是把收到的提示原样回显出来，因此适合在不消耗真实模型调用的情况下测试 llm 工具链的行为。\n\n作者表示，他正在筹备一次新的 LLM 发布，在测试相关 PR 时重新审视了这个调试插件，并由此推出了 0.5 版本。\n\n新版本的主要变化是更新了模拟的 token 用量计数，使其将工具调用、系统提示和推理 token 一并纳入统计。示例用法为 uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage，输出会先显示一段思考文本，再回显包含 prompt、system、attachments、stream、previous 等字段的 JSON，最后给出 token 用量：2 个输入 token、24 个输出 token。",
       "keyPointsZh": [
-        "llm-echo 0.5 是一个不调用真实 LLM、只回显提示词的调试插件。",
-        "新版本更新了模拟 token 用量计数，纳入工具调用、系统提示词和推理 token。",
-        "示例命令使用 uvx --with llm-echo 运行，并显示 2 个输入、24 个输出 token。",
-        "该版本是在作者准备新 LLM 发布、测试 PR 的过程中完成的。"
+        "llm-echo 是一个不调用 LLM、只回显提示的调试插件",
+        "0.5 版本更新了模拟 token 用量统计",
+        "新统计纳入工具调用、系统提示和推理 token",
+        "示例命令通过 uvx 临时安装并运行 echo 模型"
       ],
-      "impactZh": "该更新让开发者在不消耗真实模型调用的情况下，更真实地测试 LLM CLI 的 token 统计与推理相关流程。",
+      "impactZh": "该更新让开发者在测试 llm 工具链时能获得更贴近真实场景的 token 用量模拟，有助于验证与用量统计相关的功能，而无需消耗真实模型调用。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 LLM CLI 的开发者可以用 echo 模型离线验证提示词结构、工具调用和 token 用量显示，而无需调用付费模型。",
-      "howItWorksZh": "通过 uvx --with llm-echo 安装插件后，用 llm -m echo 指定 echo 模型并传入提示词；插件会把提示词、系统提示词、附件、流式标志和先前消息以 JSON 形式回显，并根据输入内容、工具调用、系统提示词和推理 token 计算模拟的 token 用量。",
-      "interpretationZh": "据作者描述，该插件用于调试和测试 LLM CLI 流程；其 token 计数是模拟值，并非真实模型的分词结果。",
-      "limitationsZh": "来源仅为发布说明，未提供具体实现细节或 token 计算方式的完整说明；模拟 token 数不代表真实模型的用量。",
+      "userImpactZh": "使用 llm 命令行工具或开发相关插件的开发者，可以用 echo 模型在不调用真实 LLM 的情况下测试提示结构、思考输出和 token 用量统计逻辑。",
+      "howItWorksZh": "通过 uvx --with llm-echo 临时安装插件后，用 llm -m echo 指定 echo 模型并传入提示；插件不调用任何 LLM，而是直接回显收到的提示内容，并按新逻辑模拟计算输入与输出 token 数，包括工具调用、系统提示和推理 token。",
+      "interpretationZh": "据作者描述，这是一次围绕调试插件的小幅功能更新，核心是让模拟 token 统计更完整。示例输出显示 echo 模型会返回思考文本、提示 JSON 和 token 用量，但输入中未说明具体统计算法。",
+      "limitationsZh": "输入仅提供作者博客式的简短发布说明和一条示例输出，未说明 token 统计的具体计算方式、兼容性变化或完整更新日志。",
       "actionStepsZh": [
-        "使用 uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage 快速试用。",
-        "在测试提示词结构或工具调用流程时，用 echo 模型替代真实模型以避免调用开销。"
+        "用 uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage 快速试用 echo 模型",
+        "在测试 llm 工具链时用 echo 模型替代真实 LLM，避免消耗真实调用",
+        "利用 --usage 输出检查提示与思考内容对应的模拟 token 统计"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -241,9 +522,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-18T23:16:16.000Z",
-        "endedAt": "2026-10-19T00:27:34.359Z",
-        "current": 44,
-        "peak": 44,
+        "endedAt": "2026-10-19T05:13:56.339Z",
+        "current": 41,
+        "peak": 41,
         "history": [
           {
             "at": "2026-10-18T23:16:16.000Z",
@@ -252,15 +533,39 @@
             "reports": 0
           },
           {
-            "at": "2026-10-18T23:51:55.179Z",
-            "label": "10/19 07:51",
-            "value": 29,
+            "at": "2026-10-19T00:15:52.723Z",
+            "label": "10/19 08:15",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-19T00:27:34.359Z",
-            "label": "10/19 08:27",
-            "value": 44,
+            "at": "2026-10-19T01:15:29.446Z",
+            "label": "10/19 09:15",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T02:15:06.169Z",
+            "label": "10/19 10:15",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T03:14:42.892Z",
+            "label": "10/19 11:14",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T04:14:19.615Z",
+            "label": "10/19 12:14",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T05:13:56.339Z",
+            "label": "10/19 13:13",
+            "value": 41,
             "reports": 1
           }
         ],
@@ -321,7 +626,9 @@
         "公共利益基金",
         "Anthropic"
       ],
-      "models": [],
+      "models": [
+        "Claude"
+      ],
       "detailZh": "据TechCrunch AI报道，Anthropic表示将把公司5%的股份投入一个“公共利益基金”。报道给出的核心信息只有这一句承诺本身，即承诺主体为Anthropic，承诺内容为5%的股份，去向是一个名为公共利益基金的载体。\n\n目前公开信息中没有说明该基金的具体规模、由谁管理、资金或股份收益将用于哪些具体用途，也没有给出落实的时间表或法律安排。因此这一消息目前只能确认“公司作出了这一承诺”，而无法确认其执行细节与实际影响。\n\n从背景看，Anthropic是一家以AI安全为公开主张的AI公司，此类将股份与公共利益挂钩的安排，通常被理解为把公司长期价值的一部分与更广泛的社会目标绑定。但这一理解属于对动机的合理推测，报道本身并未给出Anthropic的完整解释。\n\n由于信息量有限，该事件更适合作为一条公司治理动向来看待，其实际意义取决于后续披露的基金结构、治理机制与资金流向。",
       "keyPointsZh": [
         "Anthropic表示将把5%的公司股份投入一个公共利益基金。",
@@ -357,7 +664,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-18T20:37:40.000Z",
-        "endedAt": "2026-10-19T00:27:34.359Z",
+        "endedAt": "2026-10-19T05:13:56.339Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -368,26 +675,56 @@
             "reports": 0
           },
           {
-            "at": "2026-10-18T21:35:08.589Z",
+            "at": "2026-10-18T21:35:01.815Z",
             "label": "10/19 05:35",
-            "value": 24,
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-18T22:32:37.179Z",
+            "at": "2026-10-18T22:32:23.630Z",
             "label": "10/19 06:32",
-            "value": 35,
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-18T23:30:05.769Z",
-            "label": "10/19 07:30",
-            "value": 45,
+            "at": "2026-10-18T23:29:45.446Z",
+            "label": "10/19 07:29",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-19T00:27:34.359Z",
+            "at": "2026-10-19T00:27:07.261Z",
             "label": "10/19 08:27",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T01:24:29.077Z",
+            "label": "10/19 09:24",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T02:21:50.892Z",
+            "label": "10/19 10:21",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T03:19:12.708Z",
+            "label": "10/19 11:19",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T04:16:34.523Z",
+            "label": "10/19 12:16",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T05:13:56.339Z",
+            "label": "10/19 13:13",
             "value": 55,
             "reports": 1
           }
@@ -527,7 +864,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-18T18:56:03.000Z",
-        "endedAt": "2026-10-19T00:27:34.359Z",
+        "endedAt": "2026-10-19T05:13:56.339Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -538,38 +875,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-18T19:51:18.226Z",
-            "label": "10/19 03:51",
-            "value": 22,
+            "at": "2026-10-18T19:52:13.303Z",
+            "label": "10/19 03:52",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-18T20:46:33.453Z",
-            "label": "10/19 04:46",
-            "value": 31,
+            "at": "2026-10-18T20:48:23.607Z",
+            "label": "10/19 04:48",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-18T21:41:48.679Z",
-            "label": "10/19 05:41",
-            "value": 39,
+            "at": "2026-10-18T21:44:33.910Z",
+            "label": "10/19 05:44",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-18T22:37:03.906Z",
-            "label": "10/19 06:37",
-            "value": 48,
+            "at": "2026-10-18T22:40:44.214Z",
+            "label": "10/19 06:40",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-18T23:32:19.132Z",
-            "label": "10/19 07:32",
+            "at": "2026-10-18T23:36:54.517Z",
+            "label": "10/19 07:36",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T00:33:04.821Z",
+            "label": "10/19 08:33",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T01:29:15.124Z",
+            "label": "10/19 09:29",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T02:25:25.428Z",
+            "label": "10/19 10:25",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T03:21:35.731Z",
+            "label": "10/19 11:21",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-19T00:27:34.359Z",
-            "label": "10/19 08:27",
+            "at": "2026-10-19T04:17:46.035Z",
+            "label": "10/19 12:17",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T05:13:56.339Z",
+            "label": "10/19 13:13",
             "value": 65,
             "reports": 1
           }
@@ -670,7 +1037,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-18T16:30:00.000Z",
-        "endedAt": "2026-10-19T00:27:34.359Z",
+        "endedAt": "2026-10-19T05:13:56.339Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -681,50 +1048,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-18T17:29:41.794Z",
-            "label": "10/19 01:29",
-            "value": 20,
+            "at": "2026-10-18T17:39:26.939Z",
+            "label": "10/19 01:39",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-18T18:29:23.589Z",
-            "label": "10/19 02:29",
-            "value": 25,
+            "at": "2026-10-18T18:48:53.879Z",
+            "label": "10/19 02:48",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-18T19:29:05.384Z",
-            "label": "10/19 03:29",
-            "value": 31,
+            "at": "2026-10-18T19:58:20.819Z",
+            "label": "10/19 03:58",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-18T20:28:47.179Z",
-            "label": "10/19 04:28",
-            "value": 37,
+            "at": "2026-10-18T21:07:47.759Z",
+            "label": "10/19 05:07",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-18T21:28:28.974Z",
-            "label": "10/19 05:28",
-            "value": 42,
+            "at": "2026-10-18T22:17:14.699Z",
+            "label": "10/19 06:17",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-18T22:28:10.769Z",
-            "label": "10/19 06:28",
-            "value": 48,
+            "at": "2026-10-18T23:26:41.639Z",
+            "label": "10/19 07:26",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-18T23:27:52.564Z",
-            "label": "10/19 07:27",
-            "value": 54,
+            "at": "2026-10-19T00:36:08.579Z",
+            "label": "10/19 08:36",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-10-19T00:27:34.359Z",
-            "label": "10/19 08:27",
+            "at": "2026-10-19T01:45:35.519Z",
+            "label": "10/19 09:45",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T02:55:02.459Z",
+            "label": "10/19 10:55",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T04:04:29.399Z",
+            "label": "10/19 12:04",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-19T05:13:56.339Z",
+            "label": "10/19 13:13",
             "value": 59,
             "reports": 1
           }
