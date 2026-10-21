@@ -1,7 +1,716 @@
 {
-  "generatedAt": "2026-10-20T23:49:11.949Z",
+  "generatedAt": "2026-10-21T04:32:23.667Z",
   "date": "2026-10-21",
   "items": [
+    {
+      "id": "321cffa584ccddca",
+      "normalizedUrl": "https://arxiv.org/abs/2610.26887",
+      "originalUrl": "https://arxiv.org/abs/2610.26887",
+      "titleOriginal": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
+      "summaryOriginal": "arXiv:2610.26887v1 Announce Type: new Abstract: Large language model (LLM) agents are evolving from conversational assistants into Cowork Agents capable of autonomous planning, tool use, and complex task execution. Financial analysis requires these agents to integrate cross-document evidence and perform multistep numerical reasoning, but expert task authoring is costly, while direct LLM synthesis struggles to produce challenging tasks with reliable answers. We introduce Navalia, a framework for Cowork Agents that combines verifiable task synthesis with long-horizon post-training. Using corporate financial reports as its data source, Navalia semantically selects supporting evidence from complete fact sets and constructs executable computation chains to generate analytical tasks with traceable evidence and actual data dependencies between steps. We further use independent LLM review and programmatic checks to verify evidence consistency and answer correctness. The verified tasks are then used for trajectory collection, cold-start supervised fine-tuning (SFT), and reinforcement learning (RL) to improve long-horizon task execution. Navalia, initialized from Qwen3.6-35B-A3B, achieves co",
+      "originalLanguage": "en",
+      "author": "Hengqi Liu, Ziyuan Liu, Yang Qin, Wanting Zhou, Zichuan Wang, Jiachen Liang, Xu Chu, Shaowei Chen, Zhaokai Luo, Mu Chuan",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-21T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.26887",
+          "publishedAt": "2026-10-21T04:00:00.000Z",
+          "title": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文针对智能体训练数据稀缺这一关键瓶颈，提出可验证的任务合成与长程后训练流程，并以金融分析这一高价值场景为验证对象，对智能体研究与工程实践均有参考价值；但摘要信息有限，缺少完整实验数据与开源细节。",
+      "importanceReasonEn": "The paper targets the key bottleneck of scarce agent training data with a verifiable task-synthesis and long-horizon post-training pipeline, validated on the high-value financial analysis domain, offering reference value for both agent research and engineering; however, the abstract is limited and l",
+      "scoringMode": "ai",
+      "titleZh": "Navalia：通过可验证任务合成与长程后训练推进协作智能体",
+      "titleEn": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
+      "summaryZh": "arXiv 论文提出 Navalia 框架，面向金融分析场景的协作智能体（Cowork Agents），将可验证的任务合成与长程后训练相结合：以企业财务报告为数据源，从完整事实集中语义选取支撑证据并构建可执行计算链，生成带可追溯证据与步骤间真实数据依赖的分析任务，再通过独立 LLM 审核与程序化检查验证证据一致性与答案正确性，最后用验证过的任务进行轨迹收集、冷启动监督微调（SFT）与强化学习（RL），以提升长程任务执行能力。",
+      "summaryEn": "An arXiv paper introduces Navalia, a framework for Cowork Agents in financial analysis that combines verifiable task synthesis with long-horizon post-training: using corporate financial reports as the data source, it semantically selects supporting evidence from complete fact sets and builds executable computation chains to generate analytical tasks with traceable evidence and real data dependencies between steps, then verifies evidence consistency and answer correctness via independent LLM review and programmatic checks, and finally uses the verified tasks for trajectory collection, cold-start supervised fine-tuning (SFT) and reinforcement learning (RL) to improve long-horizon task execution.",
+      "keywords": [
+        "Navalia",
+        "Cowork Agents",
+        "verifiable task synthesis",
+        "long-horizon post-training",
+        "financial reports",
+        "SFT",
+        "RL"
+      ],
+      "topics": [
+        "LLM agents",
+        "task synthesis",
+        "long-horizon post-training",
+        "financial analysis",
+        "reinforcement learning"
+      ],
+      "models": [
+        "Qwen3.6-35B-A3B"
+      ],
+      "detailZh": "该论文来自 arXiv（编号 2610.26887v1），属于新发布类型。作者指出，大语言模型智能体正从对话助手演化为能够自主规划、调用工具并执行复杂任务的协作智能体（Cowork Agents）。在金融分析场景中，这类智能体需要整合跨文档证据并进行多步数值推理，但由专家人工编写任务成本高昂，而直接让 LLM 合成任务又难以产出足够困难且答案可靠的任务。\n\n为此，论文提出 Navalia 框架，将可验证的任务合成与长程后训练结合起来。其数据源为企业财务报告：Navalia 从完整事实集中语义化地选取支撑证据，并构建可执行的计算链，从而生成分析任务；这些任务带有可追溯的证据，且各步骤之间存在真实的数据依赖关系。\n\n在任务验证环节，框架使用独立的 LLM 审核与程序化检查，分别核验证据一致性与答案正确性。通过验证的任务随后被用于轨迹收集、冷启动监督微调（SFT）以及强化学习（RL），以提升智能体的长程任务执行能力。\n\n论文提到，Navalia 以 Qwen3.6-35B-A3B 为初始化模型，但摘要在此处截断，未给出具体性能数字、对比基线或消融结果。因此目前只能确认其方法框架与训练流程，尚无法评估其实际效果。",
+      "keyPointsZh": [
+        "提出 Navalia 框架，将可验证任务合成与长程后训练结合，面向金融分析场景的协作智能体。",
+        "以企业财务报告为数据源，从完整事实集中语义选取证据并构建可执行计算链，生成带可追溯证据和步骤间真实数据依赖的任务。",
+        "使用独立 LLM 审核与程序化检查验证证据一致性和答案正确性。",
+        "验证后的任务用于轨迹收集、冷启动 SFT 与强化学习，以提升长程任务执行能力。",
+        "模型以 Qwen3.6-35B-A3B 初始化，但摘要未给出具体性能结果。"
+      ],
+      "impactZh": "智能体训练长期受限于高质量、可验证的长程任务数据稀缺。Navalia 的思路是把任务合成与答案验证绑定，并用真实数据依赖保证多步推理的严谨性，这为金融等强证据、强数值推理领域的智能体训练提供了可复用的数据生产范式，也呼应了当前以强化学习提升智能体长程能力的研究方向。",
+      "readerImpactZh": "",
+      "userImpactZh": "对构建金融分析类智能体的团队而言，该工作提示了一条可行路径：用结构化事实与计算链自动生成可验证的多步任务，再以 SFT 加 RL 训练长程执行能力，从而降低对专家标注的依赖；但论文尚未公开完整实验与代码，暂不宜直接照搬。",
+      "howItWorksZh": "根据摘要，流程可概括为：1）以企业财务报告为数据源，整理完整事实集；2）语义选取支撑证据，并构建可执行的计算链，使任务各步骤之间存在真实数据依赖；3）生成带可追溯证据的分析任务；4）用独立 LLM 审核与程序化检查验证证据一致性与答案正确性；5）对验证通过的任务进行轨迹收集；6）以 Qwen3.6-35B-A3B 为基座进行冷启动 SFT，再以强化学习进行长程后训练。",
+      "interpretationZh": "已报告的事实是：论文提出了上述框架与训练流程，并以 Qwen3.6-35B-A3B 初始化。可合理推断的是：该方法旨在缓解专家标注成本高与 LLM 直接合成任务答案不可靠这两个问题。但摘要未披露性能提升幅度、对比基线、任务规模与验证通过率，因此其有效性仍待完整论文与复现验证。",
+      "limitationsZh": "输入仅为论文摘要，且在描述模型结果处截断，缺少具体指标、基线对比、消融实验、数据规模与开源情况；任务合成与验证依赖 LLM 审核，其可靠性未在摘要中量化；方法目前仅在企业财务报告这一领域验证，泛化性未知。",
+      "actionStepsZh": [
+        "阅读 arXiv 原文获取完整实验结果与训练细节。",
+        "关注作者是否开源任务合成与验证流程代码及数据。",
+        "评估将“事实集—计算链—程序化校验”思路迁移到自身业务数据上的可行性。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.26887",
+          "publishedAt": "2026-10-21T04:00:00.000Z",
+          "title": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-21T04:00:00.000Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-21T04:00:00.000Z",
+            "label": "10/21 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "93731f42a7ad5e98",
+      "normalizedUrl": "https://arxiv.org/abs/2610.26899",
+      "originalUrl": "https://arxiv.org/abs/2610.26899",
+      "titleOriginal": "Large language model and reinforcement learning based autonomous construction and progress updates",
+      "summaryOriginal": "arXiv:2610.26899v1 Announce Type: new Abstract: Due to the rapid growth of the global population, traditional construction methods are gradually unable to meet the current housing demand. The advancement of machine learning algorithms has encouraged researchers to explore their applications in the construction industry, leading to more intelligent and efficient building processes. In particular, the rise of large language models in recent years has provided more possibilities for the transformation from traditional construction to smart construction. In this study, a large language model and reinforcement learning based autonomous construction method is proposed. An enhanced soft actor-critic reinforcement learning algorithm is developed to plan actions for a mobile crane according to construction tasks. Robot kinematics and control algorithms are used to ensure that the actions generated by the reinforcement learning algorithm can be executed by the crane. In addition, a customized embedding model is developed to extract information from the construction environment according to user interests. Then, a large language model, ChatGPT 5, is used to update construction progress, provi",
+      "originalLanguage": "en",
+      "author": "Yifei Xiao, Huasheng Lin, T. Y. Yang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-21T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.26899",
+          "publishedAt": "2026-10-21T04:00:00.000Z",
+          "title": "Large language model and reinforcement learning based autonomous construction and progress updates",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该研究将大语言模型与强化学习结合用于施工机器人动作规划与进度更新，属于智能建造方向的探索性工作，但仅有摘要信息，缺乏实验数据与验证细节。",
+      "importanceReasonEn": "The study combines large language models with reinforcement learning for construction robot action planning and progress updates, an exploratory work in smart construction, but only abstract-level information is available without experimental data or validation details.",
+      "scoringMode": "ai",
+      "titleZh": "基于大语言模型与强化学习的自主施工与进度更新",
+      "titleEn": "Large Language Model and Reinforcement Learning Based Autonomous Construction and Progress Updates",
+      "summaryZh": "该研究提出一种基于大语言模型与强化学习的自主施工方法：用改进的软演员-评论家强化学习算法为移动起重机规划施工动作，结合机器人运动学与控制算法保证动作可执行；同时开发定制嵌入模型按用户兴趣提取施工环境信息，并利用大语言模型ChatGPT 5更新施工进度。",
+      "summaryEn": "This study proposes an autonomous construction method based on large language models and reinforcement learning: an enhanced soft actor-critic reinforcement learning algorithm plans actions for a mobile crane according to construction tasks, robot kinematics and control algorithms ensure the generated actions can be executed by the crane; a customized embedding model extracts construction environment information according to user interests, and the large language model ChatGPT 5 is used to update construction progress.",
+      "keywords": [
+        "自主施工",
+        "移动起重机",
+        "软演员-评论家",
+        "嵌入模型",
+        "进度更新"
+      ],
+      "topics": [
+        "强化学习",
+        "大语言模型",
+        "智能建造",
+        "机器人控制",
+        "施工自动化"
+      ],
+      "models": [
+        "ChatGPT 5",
+        "Soft Actor-Critic"
+      ],
+      "detailZh": "该论文发表于arXiv（编号2610.26899v1），属于新增公告类论文。作者指出，全球人口快速增长使传统施工方式逐渐难以满足住房需求，机器学习算法的发展推动研究者探索其在建筑行业的应用，而近年来大语言模型的兴起为传统施工向智能施工转型提供了更多可能。\n\n在此背景下，研究提出一种基于大语言模型与强化学习的自主施工方法。方法核心包括三部分：一是开发改进的软演员-评论家（soft actor-critic）强化学习算法，根据施工任务为移动起重机规划动作；二是使用机器人运动学与控制算法，确保强化学习生成的动作能够被起重机实际执行；三是开发定制嵌入模型，按用户兴趣从施工环境中提取信息。\n\n随后，研究使用大语言模型ChatGPT 5更新施工进度。摘要在此处截断，未说明进度更新的具体形式、评估指标或实验设置。\n\n目前可确认的信息仅限于方法框架层面，论文未在摘要中给出实验平台、数据集、对比基线或量化结果，因此该方法的实际效果与可复现性尚无法判断。",
+      "keyPointsZh": [
+        "提出改进的软演员-评论家强化学习算法，为移动起重机规划施工动作。",
+        "结合机器人运动学与控制算法，保证强化学习输出动作可由起重机执行。",
+        "开发定制嵌入模型，按用户兴趣提取施工环境信息。",
+        "使用ChatGPT 5大语言模型更新施工进度。",
+        "论文仅有摘要信息，未披露实验数据与评估结果。"
+      ],
+      "impactZh": "该工作展示了将大语言模型与强化学习结合用于施工机器人规划与进度管理的思路，为智能建造研究提供了一个方法框架参考，但尚缺乏实证支撑，短期内难以直接指导工程实践。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "根据摘要，方法流程为：强化学习算法（改进的软演员-评论家）接收施工任务并生成移动起重机的动作规划；机器人运动学与控制算法对生成动作进行可行性约束，使其可被起重机执行；定制嵌入模型按用户兴趣从施工环境中提取信息；最后由ChatGPT 5基于这些信息更新施工进度。摘要未提供更具体的网络结构、奖励设计或部署细节。",
+      "interpretationZh": "可确认的事实是：论文提出了一个由强化学习动作规划、运动学控制约束、定制嵌入信息提取和大语言模型进度更新组成的方法框架。合理推断是：该方法试图让大语言模型承担施工环境理解与进度汇报的高层任务，强化学习负责底层动作生成。但摘要未给出任何实验结果，方法有效性仍待验证。",
+      "limitationsZh": "仅有摘要，缺少实验平台、数据集、对比基线和量化结果；ChatGPT 5在方法中的具体调用方式与进度更新形式不明；强化学习训练成本、安全性与实际工地适用性均未讨论；论文未经同行评审。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.26899",
+          "publishedAt": "2026-10-21T04:00:00.000Z",
+          "title": "Large language model and reinforcement learning based autonomous construction and progress updates",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-21T04:00:00.000Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-21T04:00:00.000Z",
+            "label": "10/21 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "78cebe09803b5741",
+      "normalizedUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026",
+      "originalUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+      "titleOriginal": "Southeast Asia’s digital economy to hit $368 billion",
+      "summaryOriginal": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "business",
+      "sourceType": "official",
+      "authority": 98,
+      "sourcePriority": 98,
+      "images": [
+        "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/e-Conomy_SEA_hero.max-600x600.format-webp.webp"
+      ],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-21T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "google-ai",
+          "name": "Google AI",
+          "type": "official",
+          "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+          "publishedAt": "2026-10-21T04:00:00.000Z",
+          "title": "Southeast Asia’s digital economy to hit $368 billion",
+          "authority": 98,
+          "sourcePriority": 98,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/e-Conomy_SEA_hero.max-600x600.format-webp.webp"
+          ],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该消息给出了东南亚数字经济的规模预测，并明确将增长归因于AI的广泛采用，对关注区域市场和AI商业化的人具有参考价值，但来源为单一转述，缺乏细分数据支撑。",
+      "importanceReasonEn": "The item offers a size forecast for Southeast Asia's digital economy and attributes growth to widespread AI adoption, useful for those tracking the regional market and AI commercialization, though it is a single relayed claim without breakdown data.",
+      "scoringMode": "ai",
+      "titleZh": "东南亚数字经济规模将达3680亿美元",
+      "titleEn": "Southeast Asia's digital economy to hit $368 billion",
+      "summaryZh": "人工智能的广泛采用正推动东南亚数字经济在2026年达到3680亿美元，并有望在2035年突破1万亿美元。",
+      "summaryEn": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+      "keywords": [
+        "Southeast Asia",
+        "digital economy",
+        "AI adoption",
+        "$368 billion",
+        "$1 trillion"
+      ],
+      "topics": [
+        "digital economy",
+        "Southeast Asia",
+        "AI adoption",
+        "market forecast"
+      ],
+      "models": [],
+      "detailZh": "该消息称，东南亚数字经济规模预计在2026年达到3680亿美元，并在2035年增长至1万亿美元。消息将这一增长主要归因于人工智能的广泛采用。\n\n目前可确认的信息仅限于上述规模预测与增长归因，来源为Google AI的转述，未提供分国家、分行业或分技术类别的具体数据，也未说明统计口径与测算方法。\n\n从时间线看，2026年的3680亿美元属于近期预测值，2035年的1万亿美元属于更长期展望，两者之间隐含约十年的持续增长假设。\n\n由于缺乏原始报告细节，无法核实该预测的基准年份、覆盖范围以及AI贡献的具体占比，相关数字应视为方向性参考而非精确结论。",
+      "keyPointsZh": [
+        "东南亚数字经济预计2026年达到3680亿美元",
+        "预计2035年增长至1万亿美元",
+        "增长被主要归因于人工智能的广泛采用",
+        "消息未提供分国家或分行业的具体数据"
+      ],
+      "impactZh": "若预测成立，东南亚将成为AI商业化的重要增量市场，可能影响云服务、电商、金融科技和本地AI应用的投入节奏，并为区域政策制定者提供数字化投资的参考坐标。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和团队而言，该预测提示东南亚可能是AI产品出海与本地化部署的潜在增长区域，但消息未给出具体行业或场景数据，暂不足以支撑明确的资源投入决策。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：消息给出了2026年3680亿美元和2035年1万亿美元两个规模预测，并将增长归因于AI采用。合理推断是：这意味着该区域数字支出将在十年内保持较高增速。但预测的测算方法、覆盖范围和AI的具体贡献比例均未披露，因此不宜将数字视为精确结论。",
+      "limitationsZh": "消息来源为单一转述，未提供原始报告名称、统计口径、分国家或分行业数据，也未说明AI贡献的具体测算方式；2035年的长期预测不确定性较高，相关数字尚未获得独立核实。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "按消息给出的预测，东南亚数字经济规模将从2026年的3680亿美元增长至2035年的1万亿美元，后者约为前者的2.7倍。",
+        "data": [
+          {
+            "label": "2026年预测",
+            "value": 368,
+            "display": ""
+          },
+          {
+            "label": "2035年预测",
+            "value": 1000,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "google-ai",
+          "name": "Google AI",
+          "type": "official",
+          "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+          "publishedAt": "2026-10-21T04:00:00.000Z",
+          "title": "Southeast Asia’s digital economy to hit $368 billion",
+          "authority": 98,
+          "sourcePriority": 98,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/e-Conomy_SEA_hero.max-600x600.format-webp.webp"
+          ],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-21T04:00:00.000Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-21T04:00:00.000Z",
+            "label": "10/21 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "3e7599c6661c19f5",
+      "normalizedUrl": "https://vllm.ai/blog/2026-10-21-humming",
+      "originalUrl": "https://vllm.ai/blog/2026-10-21-humming",
+      "titleOriginal": "蚂蚁集团与 vLLM 社区开源量化推理内核库 Humming",
+      "summaryOriginal": "蚂蚁集团与 vLLM 社区开源通用高性能量化推理内核库 Humming，仓库为 github.com/vllm-project/humming。",
+      "originalLanguage": "zh",
+      "author": "vLLM 官方博客（RSS）",
+      "category": "opensource",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/afv7us0zbvzo789rghqkfhq5q",
+        "https://vllm.ai/blog/2026-10-21-humming"
+      ],
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-21T03:13:30.567Z",
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/afv7us0zbvzo789rghqkfhq5q"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:afv7us0zbvzo789rghqkfhq5q",
+          "name": "vLLM 官方博客（RSS）",
+          "type": "aggregator",
+          "url": "https://vllm.ai/blog/2026-10-21-humming",
+          "publishedAt": "2026-10-21T00:00:00.000Z",
+          "title": "蚂蚁集团与 vLLM 社区开源量化推理内核库 Humming",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/afv7us0zbvzo789rghqkfhq5q",
+            "https://vllm.ai/blog/2026-10-21-humming"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该库由蚂蚁集团与 vLLM 社区联合开源并进入 vLLM 官方组织仓库，属于推理基础设施层面的开源贡献，对使用 vLLM 部署量化模型的开发者有直接价值。",
+      "importanceReasonEn": "The library is co-open-sourced by Ant Group and the vLLM community and hosted in the official vLLM organization, making it an infrastructure-level open-source contribution with direct value for developers deploying quantized models on vLLM.",
+      "scoringMode": "ai",
+      "titleZh": "蚂蚁集团与 vLLM 社区开源量化推理内核库 Humming",
+      "titleEn": "Ant Group and vLLM Community Open-Source Quantized Inference Kernel Library Humming",
+      "summaryZh": "蚂蚁集团与 vLLM 社区开源通用高性能量化推理内核库 Humming，代码托管于 github.com/vllm-project/humming。",
+      "summaryEn": "Ant Group and the vLLM community have open-sourced Humming, a general-purpose high-performance quantized inference kernel library, hosted at github.com/vllm-project/humming.",
+      "keywords": [
+        "Humming",
+        "vLLM",
+        "量化推理",
+        "推理内核",
+        "蚂蚁集团"
+      ],
+      "topics": [
+        "量化推理",
+        "推理内核",
+        "vLLM",
+        "开源项目"
+      ],
+      "models": [],
+      "detailZh": "vLLM 官方博客发布消息称，蚂蚁集团与 vLLM 社区共同开源了一个名为 Humming 的通用高性能量化推理内核库，项目仓库地址为 github.com/vllm-project/humming。从仓库归属看，该项目被放置在 vLLM 官方 GitHub 组织下，而非个人或单一公司账号，说明其与 vLLM 生态存在官方层面的关联。\n\n根据现有信息，Humming 的定位是“通用”且“高性能”的量化推理内核库，即面向量化模型推理场景提供底层计算内核。量化推理通常用于降低模型显存占用与计算开销，而内核库则是支撑这类推理在 GPU 等硬件上高效执行的基础组件。\n\n目前公开材料仅包含项目名称、开源主体、仓库地址与基本定位，尚未披露支持的具体量化格式、适配硬件、性能数据、与 vLLM 主干的集成方式以及版本发布计划。因此该消息的核心事实是“开源动作本身”，而非具体技术指标。\n\n从时间线看，该消息由 vLLM 官方博客于 2026 年 10 月 21 日发布，属于项目首次公开亮相阶段，后续细节有待仓库文档与社区讨论补充。",
+      "keyPointsZh": [
+        "蚂蚁集团与 vLLM 社区联合开源量化推理内核库 Humming",
+        "项目仓库位于 vLLM 官方 GitHub 组织下：github.com/vllm-project/humming",
+        "项目定位为通用、高性能的量化推理内核库",
+        "消息由 vLLM 官方博客发布，未披露具体性能数据与支持范围"
+      ],
+      "impactZh": "量化推理是降低大模型部署成本的关键手段，而内核质量直接决定量化模型的实际吞吐与延迟。Humming 进入 vLLM 官方组织，意味着 vLLM 生态在量化内核层面多了一个由大厂与社区共同维护的开源选项，可能影响开发者选择量化方案与推理栈的方式。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 vLLM 部署量化模型的开发者与团队可以关注该仓库，评估其内核是否适配自身使用的量化格式与硬件，并在后续版本中考虑纳入推理栈；当前阶段尚不足以直接替换现有方案。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：项目存在、由蚂蚁集团与 vLLM 社区共同开源、仓库位于 vLLM 官方组织下、定位为量化推理内核库。合理推断是：该项目大概率服务于 vLLM 的量化推理路径，目标是提升量化模型在推理时的内核性能。但具体支持哪些量化算法、面向哪些 GPU 架构、性能提升幅度如何，均未在现有材料中说明，不宜据此判断其成熟度。",
+      "limitationsZh": "现有信息仅为一条官方博客通告，缺少技术文档、基准测试、支持的量化格式与硬件列表、许可证信息及与 vLLM 主干的集成状态，项目实际可用性与性能表现均未经验证。",
+      "actionStepsZh": [
+        "访问 github.com/vllm-project/humming 查看 README、许可证与已支持的量化格式",
+        "关注 vLLM 官方博客与仓库 release，等待性能基准与集成说明",
+        "在测试环境中评估其与当前量化推理方案的兼容性，暂不用于生产环境"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:afv7us0zbvzo789rghqkfhq5q",
+          "name": "vLLM 官方博客（RSS）",
+          "type": "aggregator",
+          "url": "https://vllm.ai/blog/2026-10-21-humming",
+          "publishedAt": "2026-10-21T00:00:00.000Z",
+          "title": "蚂蚁集团与 vLLM 社区开源量化推理内核库 Humming",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/afv7us0zbvzo789rghqkfhq5q",
+            "https://vllm.ai/blog/2026-10-21-humming"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-21T00:00:00.000Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-21T00:00:00.000Z",
+            "label": "10/21 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-21T00:54:28.733Z",
+            "label": "10/21 08:54",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:48:57.466Z",
+            "label": "10/21 09:48",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:43:26.200Z",
+            "label": "10/21 10:43",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:37:54.933Z",
+            "label": "10/21 11:37",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "28dc766197a74380",
+      "normalizedUrl": "https://simonwillison.net/2026/Oct/20/emudhra-certificates",
+      "originalUrl": "https://simonwillison.net/2026/Oct/20/emudhra-certificates/",
+      "titleOriginal": "eMudhra Intermediate CA Compromise",
+      "summaryOriginal": "eMudhra Intermediate CA Compromise This is very, very bad news: The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores. Any software that bundles a list of trusted certificates needs to be updated. This site is tracking software updates via this GitHub repository - Linux distros need to update their ca-certificates packages. In Python world uv 0.13.4 and pip 26.2.2 and certifi 2026.10.19 have been released with upgraded certificate lists. Tags: encryption , https , pip , python , security , uv",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "policy",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://emudhra.we-have-a-problem.com",
+        "https://github.com/galadran/we-have-a-problem.com",
+        "https://github.com/astral-sh/uv/releases/tag/0.13.4",
+        "https://github.com/pypa/pip/releases/tag/26.2.2",
+        "https://github.com/certifi/python-certifi/releases/tag/2026.10.19",
+        "https://simonwillison.net/tags/encryption",
+        "https://simonwillison.net/tags/https",
+        "https://simonwillison.net/tags/pip",
+        "https://simonwillison.net/tags/python",
+        "https://simonwillison.net/tags/security",
+        "https://simonwillison.net/tags/uv"
+      ],
+      "publishedAt": "2026-10-20T23:50:25.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Oct/20/emudhra-certificates/",
+          "publishedAt": "2026-10-20T23:50:25.000Z",
+          "title": "eMudhra Intermediate CA Compromise",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://emudhra.we-have-a-problem.com",
+            "https://github.com/galadran/we-have-a-problem.com",
+            "https://github.com/astral-sh/uv/releases/tag/0.13.4",
+            "https://github.com/pypa/pip/releases/tag/26.2.2",
+            "https://github.com/certifi/python-certifi/releases/tag/2026.10.19",
+            "https://simonwillison.net/tags/encryption",
+            "https://simonwillison.net/tags/https",
+            "https://simonwillison.net/tags/pip",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/security",
+            "https://simonwillison.net/tags/uv"
+          ]
+        }
+      ],
+      "importance": 82,
+      "importanceReasonZh": "中间 CA 私钥泄露直接影响 HTTPS 信任链，波及主流根证书计划和大量下游软件，需要广泛更新证书列表，属于高影响安全事件。",
+      "importanceReasonEn": "Compromised intermediate CA private keys directly affect the HTTPS trust chain, impact major root programs and many downstream software packages, and require widespread certificate list updates, making this a high-impact security event.",
+      "scoringMode": "ai",
+      "titleZh": "eMudhra 中间 CA 私钥泄露事件",
+      "titleEn": "eMudhra Intermediate CA Compromise",
+      "summaryZh": "eMudhra 的八个中间 CA 证书私钥被泄露，这些证书可链至 Mozilla、微软、苹果和 Chrome 根证书计划及众多下游信任库所信任的根证书。任何内置受信任证书列表的软件都需要更新；Linux 发行版需更新 ca-certificates 包，Python 生态中 uv 0.13.4、pip 26.2.2 和 certifi 2026.10.19 已发布包含更新证书列表的版本。",
+      "summaryEn": "The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores. Any software that bundles a list of trusted certificates needs to be updated; Linux distributions need to update their ca-certificates packages, and in the Python ecosystem uv 0.13.4, pip 26.2.2 and certifi 2026.10.19 have been released with upgraded certificate lists.",
+      "keywords": [
+        "eMudhra",
+        "中间 CA",
+        "私钥泄露",
+        "ca-certificates",
+        "certifi",
+        "pip",
+        "uv",
+        "根证书计划"
+      ],
+      "topics": [
+        "TLS 证书信任",
+        "CA 安全",
+        "软件供应链",
+        "Python 生态"
+      ],
+      "models": [],
+      "detailZh": "据 Simon Willison 报道，eMudhra 的八个中间 CA 证书私钥已被泄露。这些中间证书可链至 Mozilla、微软、苹果和 Chrome 根证书计划所信任的根证书，也被许多下游信任库所信任。这意味着攻击者可能利用这些私钥签发看似可信的证书，从而威胁 HTTPS 连接的安全性。\n\n由于信任链被破坏，任何内置受信任证书列表的软件都需要更新。该站点通过一个 GitHub 仓库跟踪软件更新情况。Linux 发行版需要更新其 ca-certificates 包。\n\n在 Python 生态中，uv 0.13.4、pip 26.2.2 和 certifi 2026.10.19 已发布，包含升级后的证书列表。用户应尽快升级这些工具和库，以移除对受影响中间证书的信任。",
+      "keyPointsZh": [
+        "eMudhra 八个中间 CA 证书的私钥被泄露。",
+        "这些中间证书链至 Mozilla、微软、苹果和 Chrome 根证书计划信任的根证书。",
+        "任何内置受信任证书列表的软件都需要更新。",
+        "Linux 发行版需更新 ca-certificates 包。",
+        "uv 0.13.4、pip 26.2.2 和 certifi 2026.10.19 已发布包含更新证书列表的版本。"
+      ],
+      "impactZh": "该事件破坏了 HTTPS 信任链的一环，攻击者可能利用泄露的私钥签发被信任的证书，影响依赖这些根证书的广泛软件和用户，需要整个生态协同更新证书列表。",
+      "readerImpactZh": "普通用户应确保操作系统和浏览器保持更新，以获取最新的证书吊销信息；在受影响证书被移除前，访问使用相关证书的网站可能存在被中间人攻击的风险。",
+      "userImpactZh": "Python 开发者应升级到 uv 0.13.4、pip 26.2.2 和 certifi 2026.10.19 或更高版本；Linux 运维人员应更新 ca-certificates 包；所有维护内置证书列表的软件团队应检查并更新其信任库。",
+      "howItWorksZh": "中间 CA 证书由根 CA 签发，用于签发终端实体证书。若中间 CA 私钥泄露，攻击者可签发任意域名的证书，而这些证书会被信任该中间 CA 的客户端接受。移除信任的方式是从证书列表中删除受影响的中间证书，或通过吊销机制使其失效，因此各软件需发布更新后的证书列表。",
+      "interpretationZh": "已报道的事实是八个 eMudhra 中间 CA 私钥泄露，且相关软件已发布更新版本。合理推断是，在更新普及之前，仍使用旧证书列表的客户端可能信任攻击者利用泄露私钥签发的证书。",
+      "limitationsZh": "来源未说明泄露的具体时间、方式及受影响证书的具体标识；也未提供各根证书计划采取的具体吊销措施细节。",
+      "actionStepsZh": [
+        "将 Python 环境的 uv 升级至 0.13.4 或更高版本。",
+        "将 pip 升级至 26.2.2 或更高版本。",
+        "将 certifi 升级至 2026.10.19 或更高版本。",
+        "在 Linux 系统上更新 ca-certificates 包。",
+        "关注 GitHub 仓库以跟踪其他软件的更新情况。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Oct/20/emudhra-certificates/",
+          "publishedAt": "2026-10-20T23:50:25.000Z",
+          "title": "eMudhra Intermediate CA Compromise",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://emudhra.we-have-a-problem.com",
+            "https://github.com/galadran/we-have-a-problem.com",
+            "https://github.com/astral-sh/uv/releases/tag/0.13.4",
+            "https://github.com/pypa/pip/releases/tag/26.2.2",
+            "https://github.com/certifi/python-certifi/releases/tag/2026.10.19",
+            "https://simonwillison.net/tags/encryption",
+            "https://simonwillison.net/tags/https",
+            "https://simonwillison.net/tags/pip",
+            "https://simonwillison.net/tags/python",
+            "https://simonwillison.net/tags/security",
+            "https://simonwillison.net/tags/uv"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-20T23:50:25.000Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 70,
+        "peak": 70,
+        "history": [
+          {
+            "at": "2026-10-20T23:50:25.000Z",
+            "label": "10/21 07:50",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-21T00:46:48.733Z",
+            "label": "10/21 08:46",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:43:12.466Z",
+            "label": "10/21 09:43",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:39:36.200Z",
+            "label": "10/21 10:39",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:35:59.933Z",
+            "label": "10/21 11:35",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 70,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "e7b8ac319d53b4c9",
       "normalizedUrl": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed",
@@ -37,46 +746,44 @@
           "resourceLinks": []
         }
       ],
-      "importance": 55,
-      "importanceReasonZh": "该消息涉及 Anthropic 推动的一项 AI 安全立法提案，其核心争议在于安全门槛与发布审批机制之间的张力，对 AI 治理方向有参考意义，但来源为单一媒体报道，细节有限。",
-      "importanceReasonEn": "The item concerns an AI safety bill pushed by Anthropic, with a core tension between a safety threshold and a release-approval mechanism; it is relevant to AI governance direction, but comes from a single media report with limited detail.",
+      "importance": 62,
+      "importanceReasonZh": "该消息涉及头部 AI 公司主动推动安全立法，且法案设计在监管权限与司法审查之间形成张力，可能影响未来模型发布流程，值得关注。",
+      "importanceReasonEn": "A leading AI company is actively pushing safety legislation whose design creates tension between regulatory authority and judicial review, potentially shaping future model release processes.",
       "scoringMode": "ai",
-      "titleZh": "Anthropic 推动 AI 安全法案：若模型可能导致 50 人以上死亡即可被拦截",
+      "titleZh": "Anthropic 推动 AI 安全法案：若模型可能致 50 人以上死亡可被拦截",
       "titleEn": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
-      "summaryZh": "这项拟议政策看似为防范失控的 AI 提供保护，但实际上禁止联邦机构在未经法官许可的情况下阻止模型发布。",
+      "summaryZh": "该拟议政策看似为失控的 AI 提供防护，但实际上禁止联邦机构在未经法官许可的情况下阻止模型发布。",
       "summaryEn": "The proposed policy seems to offer protections against AI run amok but actually forbids federal agencies from blocking a model's release without the permission of a judge.",
       "keywords": [
         "Anthropic",
-        "AI safety bill",
-        "model release",
-        "judge approval",
-        "federal agencies",
-        "50 deaths threshold"
+        "AI 安全法案",
+        "模型发布",
+        "联邦机构",
+        "法官许可",
+        "50 人死亡门槛"
       ],
       "topics": [
-        "AI safety",
-        "AI regulation",
+        "AI 安全立法",
         "Anthropic",
-        "federal policy",
-        "model release"
+        "模型发布监管",
+        "司法审查"
       ],
       "models": [],
-      "detailZh": "据 TechCrunch AI 报道，Anthropic 正在推动一项 AI 安全法案。该提案设定了一个门槛：如果某个模型可能导致 50 人以上死亡，就可以对其实施拦截。\n\n报道同时指出，这项政策表面上看起来是在防范失控的 AI、提供安全保护，但实际内容包含一项限制：联邦机构若想阻止某个模型发布，必须获得法官许可。\n\n目前公开信息仅来自这一篇报道，法案的具体名称、完整条文、提出主体以及当前立法进度均未在输入中说明。因此，关于“50 人以上死亡”这一门槛如何认定、由谁认定，以及法官许可程序如何运作，都缺乏可核实细节。\n\n可以确认的事实是：Anthropic 参与了该提案的推动，提案同时包含安全拦截门槛和发布审批的程序性限制，两者之间存在明显张力。",
+      "detailZh": "据 TechCrunch AI 报道，Anthropic 正在推动一项 AI 安全法案。该法案提出一个门槛：如果某个模型可能导致 50 人以上死亡，就可以对其发布进行拦截。\n\n报道同时指出，这项拟议政策表面上看起来是在为失控的 AI 提供防护，但实际内容包含一项限制：联邦机构不得在未经法官许可的情况下阻止模型发布。也就是说，拦截模型需要经过司法程序。\n\n目前公开信息有限，法案的具体条文、适用范围、由哪个机构执行、50 人门槛如何认定，以及 Anthropic 在推动过程中的具体角色，均未在源材料中详细说明。",
       "keyPointsZh": [
         "Anthropic 正在推动一项 AI 安全法案。",
-        "提案设定门槛：模型若可能导致 50 人以上死亡即可被拦截。",
-        "提案同时规定，联邦机构阻止模型发布需获得法官许可。",
-        "报道认为该政策表面提供安全保护，实际限制了监管机构的拦截权限。",
-        "法案名称、完整条文与立法进度在来源中未披露。"
+        "法案设定门槛：模型若可能致 50 人以上死亡可被拦截。",
+        "法案同时规定联邦机构须获法官许可才能阻止模型发布。",
+        "报道认为该法案表面提供安全防护，实际限制了监管机构的直接拦截权。"
       ],
-      "impactZh": "该提案反映出 AI 安全立法中“安全门槛”与“发布审批程序”之间的博弈。若按报道所述设计，安全拦截条款可能被程序性要求削弱，影响监管机构对高风险模型的实际约束力，也为 AI 公司参与规则制定提供了观察样本。",
+      "impactZh": "该法案若推进，将重新划分 AI 模型发布环节中监管机构与司法机关的权限，可能影响未来高风险模型的上市节奏与合规路径。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "从报道看，提案包含两层机制：一是以“可能导致 50 人以上死亡”为条件触发模型拦截；二是要求联邦机构在阻止模型发布前取得法官许可。前者是实体安全标准，后者是程序性门槛。两者结合可能使拦截在实际操作中更难启动，但具体认定标准和司法审查方式在来源中并未说明，属于需要进一步核实的部分。",
-      "limitationsZh": "信息仅来自单一媒体报道，法案名称、完整文本、提出者、适用模型范围、门槛认定方式及立法进度均未披露；“50 人以上死亡”是预测性标准还是事后认定标准也不清楚。报道对提案“实际效果”的判断属于媒体解读，需以法案原文核实。",
+      "interpretationZh": "从报道看，法案同时包含“安全拦截”和“司法前置许可”两个要素：前者设定了 50 人以上死亡风险的触发门槛，后者要求联邦机构在阻止模型发布前取得法官许可。可以合理推断，这会提高监管拦截的程序门槛，但具体认定标准和执行机制尚不明确。",
+      "limitationsZh": "源材料仅为简要报道，未提供法案全文、提案主体、立法进度、50 人门槛的计算方式及“法官许可”的具体程序，相关细节均待核实。",
       "actionStepsZh": [],
-      "detailCompleteness": "limited",
+      "detailCompleteness": "summary",
       "visual": null,
       "processingError": null,
       "reportCount": 1,
@@ -97,9 +804,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T23:01:23.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
-        "current": 55,
-        "peak": 55,
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 59,
+        "peak": 59,
         "history": [
           {
             "at": "2026-10-20T23:01:23.000Z",
@@ -108,9 +815,39 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
-            "value": 55,
+            "at": "2026-10-20T23:56:33.111Z",
+            "label": "10/21 07:56",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T00:51:43.222Z",
+            "label": "10/21 08:51",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:46:53.333Z",
+            "label": "10/21 09:46",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:42:03.444Z",
+            "label": "10/21 10:42",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:37:13.555Z",
+            "label": "10/21 11:37",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -155,46 +892,45 @@
           "resourceLinks": []
         }
       ],
-      "importance": 78,
-      "importanceReasonZh": "这是 SpaceX 首次在监管文件中明确披露 AI 业务已占收入过半，且整体业绩由亏转盈，反映 AI 算力与产品线正成为其核心收入来源，对行业格局和投资者判断有参考价值。",
-      "importanceReasonEn": "This is the first time SpaceX has explicitly disclosed in a regulatory filing that AI accounts for more than half of revenue, with overall results swinging from loss to profit, showing AI compute and product lines are becoming its core revenue source and offering a reference point for industry lands",
+      "importance": 72,
+      "importanceReasonZh": "该消息显示 AI 业务已成为 SpaceX 收入的主要来源，并扭转了公司整体盈亏，反映 AI 算力与产品业务在大型科技公司中的商业化权重上升。",
+      "importanceReasonEn": "The news shows AI business has become the main revenue source for SpaceX and reversed the company's overall profit/loss, reflecting the rising commercial weight of AI compute and product businesses within large tech companies.",
       "scoringMode": "ai",
       "titleZh": "SpaceX 财报显示 AI 业务超预期，占收入 52%",
       "titleEn": "SpaceX Earnings Show AI Business Beats Expectations, Accounting for 52% of Revenue",
       "summaryZh": "SpaceX 发布第三季度监管文件，披露营收 146 亿美元、净利润 44 亿美元，扭转去年同期 10 亿美元亏损。其更名的“Super Intelligence”业务线（含 Cursor、Grok 和 neocloud 算力业务）表现好于投资者预期，AI 目前占公司收入 52%，算力规模达 1.7 GW。",
-      "summaryEn": "SpaceX released its third-quarter regulatory filing, disclosing $14.6 billion in revenue and $4.4 billion in net profit, reversing a $1 billion loss in the same period last year. Its renamed \"Super Intelligence\" business line (including Cursor, Grok and the neocloud compute business) performed better than investor expectations; AI now accounts for 52% of company revenue, with compute capacity reaching 1.7 GW.",
+      "summaryEn": "SpaceX released its third-quarter regulatory filing, disclosing revenue of $14.6 billion and net profit of $4.4 billion, reversing a $1 billion loss in the same period last year. Its renamed \"Super Intelligence\" business line (including Cursor, Grok and the neocloud compute business) performed better than investor expectations; AI now accounts for 52% of company revenue, with compute scale reaching 1.7 GW.",
       "keywords": [
         "SpaceX",
         "Super Intelligence",
         "Cursor",
         "Grok",
         "neocloud",
-        "1.7 GW",
-        "revenue"
+        "revenue",
+        "compute"
       ],
       "topics": [
         "AI business",
         "SpaceX",
-        "earnings",
-        "compute",
-        "Grok"
+        "revenue",
+        "compute infrastructure"
       ],
       "models": [
         "Grok"
       ],
-      "detailZh": "SpaceX 发布了第三季度监管文件，披露该季度营收为 146 亿美元，净利润为 44 亿美元。相比之下，去年同期公司亏损 10 亿美元，本季度实现了由亏转盈。\n\n文件显示，公司已将相关业务线更名为“Super Intelligence”，该业务线包含 Cursor、Grok 以及 neocloud 算力业务。这条业务线的表现好于投资者预期。\n\nAI 业务目前占公司收入的 52%，算力规模达到 1.7 GW。报道未披露各细分业务的具体收入拆分、利润率或算力扩张的时间表。",
+      "detailZh": "SpaceX 发布了第三季度监管文件，披露公司营收为 146 亿美元，净利润为 44 亿美元。相比之下，去年同期公司亏损 10 亿美元，本季度实现了扭亏为盈。\n\n文件中，SpaceX 将其 AI 相关业务线更名为“Super Intelligence”，该业务线包含 Cursor、Grok 以及 neocloud 算力业务。据披露，该业务线表现好于投资者预期。\n\n目前 AI 业务占 SpaceX 公司收入的 52%，算力规模达到 1.7 GW。上述数据来自 SpaceX 第三季度监管文件，由 TechCrunch AI 报道。",
       "keyPointsZh": [
-        "SpaceX 第三季度营收 146 亿美元，净利润 44 亿美元。",
-        "去年同期亏损 10 亿美元，本季度实现扭亏。",
-        "“Super Intelligence”业务线包含 Cursor、Grok 和 neocloud 算力业务，表现好于投资者预期。",
-        "AI 占公司收入 52%，算力规模达 1.7 GW。"
+        "SpaceX 第三季度营收 146 亿美元，净利润 44 亿美元，扭转去年同期 10 亿美元亏损。",
+        "AI 业务线更名为“Super Intelligence”，包含 Cursor、Grok 和 neocloud 算力业务。",
+        "AI 业务表现好于投资者预期，目前占公司收入 52%。",
+        "算力规模达到 1.7 GW。"
       ],
-      "impactZh": "AI 业务收入占比过半且带动整体扭亏，说明算力与 AI 产品线已成为 SpaceX 的主要收入引擎，可能影响市场对其估值逻辑和后续算力投入的判断。",
+      "impactZh": "该财报表明 AI 业务已成为 SpaceX 收入的主要组成部分，并直接推动公司整体扭亏为盈，说明 AI 产品与算力业务的商业化规模在大型公司中已具备显著财务影响力。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "已披露的事实是营收、净利润、AI 收入占比和算力规模等数字，以及业务线更名和包含 Cursor、Grok、neocloud 的构成。至于 AI 业务具体如何贡献利润、各产品收入占比多少，报道未提供，属于尚未披露的信息。",
-      "limitationsZh": "报道未披露 AI 业务各细分板块的收入拆分、毛利率、算力扩张计划及“好于预期”的具体对比基准，52% 与 1.7 GW 的口径定义也未说明。",
+      "interpretationZh": "报道事实：SpaceX 第三季度营收 146 亿美元、净利润 44 亿美元，AI 业务占收入 52%，算力规模 1.7 GW，AI 业务线包含 Cursor、Grok 和 neocloud 算力业务。合理推断：AI 业务的高占比与超预期表现是公司整体扭亏的重要支撑，但报道未披露各子业务的具体收入拆分。",
+      "limitationsZh": "报道未披露“Super Intelligence”业务线中各子业务（Cursor、Grok、neocloud）的具体收入与利润贡献，也未说明 1.7 GW 算力的统计口径与时间点；AI 业务占收入 52% 的具体计算方式未在输入中说明。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": {
@@ -202,25 +938,25 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "净利润 44 亿美元对比去年同期亏损 10 亿美元，显示业绩由亏转盈；AI 收入占比 52%，算力规模 1.7 GW。",
+        "insightZh": "本季度净利润 44 亿美元，相比去年同期 10 亿美元亏损实现扭亏；AI 业务占收入 52%，算力规模 1.7 GW。",
         "data": [
           {
-            "label": "本季度净利润（亿美元）",
+            "label": "本季度净利润",
             "value": 44,
             "display": ""
           },
           {
-            "label": "去年同期亏损（亿美元）",
+            "label": "去年同期亏损",
             "value": -10,
             "display": ""
           },
           {
-            "label": "AI 收入占比（%）",
+            "label": "AI 收入占比",
             "value": 52,
             "display": ""
           },
           {
-            "label": "算力规模（GW）",
+            "label": "算力规模 (GW)",
             "value": 1.7,
             "display": ""
           }
@@ -245,9 +981,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T20:40:41.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
-        "current": 68,
-        "peak": 68,
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 65,
+        "peak": 65,
         "history": [
           {
             "at": "2026-10-20T20:40:41.000Z",
@@ -256,27 +992,51 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T21:27:48.737Z",
-            "label": "10/21 05:27",
-            "value": 28,
+            "at": "2026-10-20T21:39:38.833Z",
+            "label": "10/21 05:39",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:14:56.474Z",
-            "label": "10/21 06:14",
-            "value": 41,
+            "at": "2026-10-20T22:38:36.666Z",
+            "label": "10/21 06:38",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:02:04.211Z",
-            "label": "10/21 07:02",
-            "value": 55,
+            "at": "2026-10-20T23:37:34.500Z",
+            "label": "10/21 07:37",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
-            "value": 68,
+            "at": "2026-10-21T00:36:32.333Z",
+            "label": "10/21 08:36",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:35:30.166Z",
+            "label": "10/21 09:35",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:34:28.000Z",
+            "label": "10/21 10:34",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:33:25.833Z",
+            "label": "10/21 11:33",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -378,7 +1138,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T20:35:10.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -389,26 +1149,50 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T21:23:40.487Z",
-            "label": "10/21 05:23",
+            "at": "2026-10-20T21:34:49.208Z",
+            "label": "10/21 05:34",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T22:34:28.416Z",
+            "label": "10/21 06:34",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:12:10.974Z",
-            "label": "10/21 06:12",
+            "at": "2026-10-20T23:34:07.625Z",
+            "label": "10/21 07:34",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T00:33:46.833Z",
+            "label": "10/21 08:33",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:00:41.461Z",
-            "label": "10/21 07:00",
+            "at": "2026-10-21T01:33:26.041Z",
+            "label": "10/21 09:33",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:33:05.250Z",
+            "label": "10/21 10:33",
             "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T03:32:44.458Z",
+            "label": "10/21 11:32",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 55,
             "reports": 1
           }
@@ -583,7 +1367,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T19:34:19.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -594,32 +1378,56 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T20:25:17.589Z",
-            "label": "10/21 04:25",
-            "value": 22,
+            "at": "2026-10-20T20:34:06.185Z",
+            "label": "10/21 04:34",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:16:16.179Z",
-            "label": "10/21 05:16",
-            "value": 31,
+            "at": "2026-10-20T21:33:53.370Z",
+            "label": "10/21 05:33",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:07:14.769Z",
-            "label": "10/21 06:07",
-            "value": 39,
+            "at": "2026-10-20T22:33:40.555Z",
+            "label": "10/21 06:33",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:58:13.359Z",
-            "label": "10/21 06:58",
-            "value": 47,
+            "at": "2026-10-20T23:33:27.740Z",
+            "label": "10/21 07:33",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T00:33:14.926Z",
+            "label": "10/21 08:33",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:33:02.111Z",
+            "label": "10/21 09:33",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:32:49.296Z",
+            "label": "10/21 10:32",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:32:36.481Z",
+            "label": "10/21 11:32",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 55,
             "reports": 1
           }
@@ -758,7 +1566,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T19:03:15.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -769,32 +1577,62 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T20:00:26.389Z",
+            "at": "2026-10-20T20:00:09.866Z",
             "label": "10/21 04:00",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T20:57:04.733Z",
+            "label": "10/21 04:57",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:57:37.779Z",
-            "label": "10/21 04:57",
+            "at": "2026-10-20T21:53:59.600Z",
+            "label": "10/21 05:53",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T22:50:54.466Z",
+            "label": "10/21 06:50",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:54:49.169Z",
-            "label": "10/21 05:54",
+            "at": "2026-10-20T23:47:49.333Z",
+            "label": "10/21 07:47",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T00:44:44.200Z",
+            "label": "10/21 08:44",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:52:00.559Z",
-            "label": "10/21 06:52",
+            "at": "2026-10-21T01:41:39.066Z",
+            "label": "10/21 09:41",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:38:33.933Z",
+            "label": "10/21 10:38",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T03:35:28.800Z",
+            "label": "10/21 11:35",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 65,
             "reports": 1
           }
@@ -919,7 +1757,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T18:56:15.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -930,32 +1768,62 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T19:54:50.389Z",
-            "label": "10/21 03:54",
+            "at": "2026-10-20T19:53:51.866Z",
+            "label": "10/21 03:53",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T20:51:28.733Z",
+            "label": "10/21 04:51",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:53:25.779Z",
-            "label": "10/21 04:53",
+            "at": "2026-10-20T21:49:05.600Z",
+            "label": "10/21 05:49",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T22:46:42.466Z",
+            "label": "10/21 06:46",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:52:01.169Z",
-            "label": "10/21 05:52",
+            "at": "2026-10-20T23:44:19.333Z",
+            "label": "10/21 07:44",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T00:41:56.200Z",
+            "label": "10/21 08:41",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:50:36.559Z",
-            "label": "10/21 06:50",
+            "at": "2026-10-21T01:39:33.066Z",
+            "label": "10/21 09:39",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:37:09.933Z",
+            "label": "10/21 10:37",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T03:34:46.800Z",
+            "label": "10/21 11:34",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 65,
             "reports": 1
           }
@@ -1061,7 +1929,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T18:17:47.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1072,38 +1940,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T19:13:01.158Z",
+            "at": "2026-10-20T19:13:39.424Z",
             "label": "10/21 03:13",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T20:09:31.848Z",
+            "label": "10/21 04:09",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:08:15.316Z",
-            "label": "10/21 04:08",
-            "value": 29,
+            "at": "2026-10-20T21:05:24.272Z",
+            "label": "10/21 05:05",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:03:29.474Z",
-            "label": "10/21 05:03",
-            "value": 37,
+            "at": "2026-10-20T22:01:16.697Z",
+            "label": "10/21 06:01",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:58:43.632Z",
-            "label": "10/21 05:58",
-            "value": 44,
+            "at": "2026-10-20T22:57:09.121Z",
+            "label": "10/21 06:57",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:53:57.790Z",
-            "label": "10/21 06:53",
-            "value": 52,
+            "at": "2026-10-20T23:53:01.545Z",
+            "label": "10/21 07:53",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T00:48:53.969Z",
+            "label": "10/21 08:48",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:44:46.394Z",
+            "label": "10/21 09:44",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:40:38.818Z",
+            "label": "10/21 10:40",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:36:31.242Z",
+            "label": "10/21 11:36",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 59,
             "reports": 1
           }
@@ -1229,7 +2127,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T17:17:55.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1240,44 +2138,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T18:13:48.849Z",
-            "label": "10/21 02:13",
-            "value": 21,
+            "at": "2026-10-20T18:19:13.969Z",
+            "label": "10/21 02:19",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-20T19:09:42.699Z",
-            "label": "10/21 03:09",
-            "value": 29,
+            "at": "2026-10-20T19:20:32.939Z",
+            "label": "10/21 03:20",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:05:36.549Z",
-            "label": "10/21 04:05",
-            "value": 36,
+            "at": "2026-10-20T20:21:51.909Z",
+            "label": "10/21 04:21",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:01:30.399Z",
-            "label": "10/21 05:01",
-            "value": 43,
+            "at": "2026-10-20T21:23:10.878Z",
+            "label": "10/21 05:23",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:57:24.249Z",
-            "label": "10/21 05:57",
-            "value": 50,
+            "at": "2026-10-20T22:24:29.848Z",
+            "label": "10/21 06:24",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:53:18.099Z",
-            "label": "10/21 06:53",
-            "value": 58,
+            "at": "2026-10-20T23:25:48.818Z",
+            "label": "10/21 07:25",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T00:27:07.788Z",
+            "label": "10/21 08:27",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:28:26.757Z",
+            "label": "10/21 09:28",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:29:45.727Z",
+            "label": "10/21 10:29",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:31:04.697Z",
+            "label": "10/21 11:31",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 65,
             "reports": 1
           }
@@ -1396,7 +2318,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T17:12:48.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1407,44 +2329,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T18:09:25.707Z",
-            "label": "10/21 02:09",
-            "value": 20,
+            "at": "2026-10-20T18:14:34.878Z",
+            "label": "10/21 02:14",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-20T19:06:03.414Z",
-            "label": "10/21 03:06",
-            "value": 27,
+            "at": "2026-10-20T19:16:21.757Z",
+            "label": "10/21 03:16",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:02:41.121Z",
-            "label": "10/21 04:02",
-            "value": 33,
+            "at": "2026-10-20T20:18:08.636Z",
+            "label": "10/21 04:18",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:59:18.828Z",
-            "label": "10/21 04:59",
-            "value": 40,
+            "at": "2026-10-20T21:19:55.515Z",
+            "label": "10/21 05:19",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:55:56.535Z",
-            "label": "10/21 05:55",
-            "value": 46,
+            "at": "2026-10-20T22:21:42.394Z",
+            "label": "10/21 06:21",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:52:34.242Z",
-            "label": "10/21 06:52",
-            "value": 53,
+            "at": "2026-10-20T23:23:29.272Z",
+            "label": "10/21 07:23",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T00:25:16.151Z",
+            "label": "10/21 08:25",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:27:03.030Z",
+            "label": "10/21 09:27",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:28:49.909Z",
+            "label": "10/21 10:28",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:30:36.788Z",
+            "label": "10/21 11:30",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 59,
             "reports": 1
           }
@@ -1563,7 +2509,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T17:00:59.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1574,44 +2520,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T17:59:17.992Z",
-            "label": "10/21 01:59",
-            "value": 20,
+            "at": "2026-10-20T18:03:50.333Z",
+            "label": "10/21 02:03",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-20T18:57:36.985Z",
-            "label": "10/21 02:57",
-            "value": 27,
+            "at": "2026-10-20T19:06:41.666Z",
+            "label": "10/21 03:06",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-20T19:55:55.978Z",
-            "label": "10/21 03:55",
-            "value": 33,
+            "at": "2026-10-20T20:09:33.000Z",
+            "label": "10/21 04:09",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:54:14.970Z",
-            "label": "10/21 04:54",
-            "value": 40,
+            "at": "2026-10-20T21:12:24.333Z",
+            "label": "10/21 05:12",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:52:33.963Z",
-            "label": "10/21 05:52",
-            "value": 46,
+            "at": "2026-10-20T22:15:15.666Z",
+            "label": "10/21 06:15",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:50:52.956Z",
-            "label": "10/21 06:50",
-            "value": 53,
+            "at": "2026-10-20T23:18:07.000Z",
+            "label": "10/21 07:18",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T00:20:58.333Z",
+            "label": "10/21 08:20",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:23:49.666Z",
+            "label": "10/21 09:23",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:26:41.000Z",
+            "label": "10/21 10:26",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:29:32.333Z",
+            "label": "10/21 11:29",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 59,
             "reports": 1
           }
@@ -1759,7 +2729,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T16:40:29.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1770,50 +2740,256 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T17:34:04.368Z",
-            "label": "10/21 01:34",
-            "value": 20,
+            "at": "2026-10-20T17:45:12.151Z",
+            "label": "10/21 01:45",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-20T18:27:39.737Z",
-            "label": "10/21 02:27",
-            "value": 27,
+            "at": "2026-10-20T18:49:55.303Z",
+            "label": "10/21 02:49",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-20T19:21:15.105Z",
-            "label": "10/21 03:21",
-            "value": 33,
+            "at": "2026-10-20T19:54:38.454Z",
+            "label": "10/21 03:54",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:14:50.474Z",
-            "label": "10/21 04:14",
-            "value": 39,
+            "at": "2026-10-20T20:59:21.606Z",
+            "label": "10/21 04:59",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:08:25.843Z",
-            "label": "10/21 05:08",
+            "at": "2026-10-20T22:04:04.757Z",
+            "label": "10/21 06:04",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T23:08:47.909Z",
+            "label": "10/21 07:08",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T00:13:31.060Z",
+            "label": "10/21 08:13",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:02:01.211Z",
-            "label": "10/21 06:02",
-            "value": 52,
+            "at": "2026-10-21T01:18:14.212Z",
+            "label": "10/21 09:18",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:55:36.580Z",
-            "label": "10/21 06:55",
-            "value": 58,
+            "at": "2026-10-21T02:22:57.363Z",
+            "label": "10/21 10:22",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T03:27:40.515Z",
+            "label": "10/21 11:27",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "7ce78b5002043310",
+      "normalizedUrl": "https://x.com/AravSrinivas/status/2112583333825950207",
+      "originalUrl": "https://x.com/AravSrinivas/status/2112583333825950207",
+      "titleOriginal": "Perplexity Computer 现可在 Mac 上完全本地运行，无需云端推理",
+      "summaryOriginal": "Perplexity CEO Aravind Srinivas 宣布，Perplexity Computer 现可在 Mac 上完全本地运行，无需云端推理，也不用 WiFi。模型和智能体都在本机运行，可操作 Mac 原生应用和本地文件，敏感数据不必发送到云端，现已在 Perplexity Mac 应用中可用。",
+      "originalLanguage": "zh",
+      "author": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/zs3zvf51jl6pa35kn4npmoy7j",
+        "https://x.com/AravSrinivas/status/2112583333825950207"
+      ],
+      "publishedAt": "2026-10-20T16:34:51.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-20T16:55:18.765Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/zs3zvf51jl6pa35kn4npmoy7j"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:zs3zvf51jl6pa35kn4npmoy7j",
+          "name": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+          "type": "aggregator",
+          "url": "https://x.com/AravSrinivas/status/2112583333825950207",
+          "publishedAt": "2026-10-20T16:34:51.000Z",
+          "title": "Perplexity Computer 现可在 Mac 上完全本地运行，无需云端推理",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/zs3zvf51jl6pa35kn4npmoy7j",
+            "https://x.com/AravSrinivas/status/2112583333825950207"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是 Perplexity 官方 CEO 亲自宣布的产品能力更新，标志着其智能体产品从云端推理扩展到完全本地运行，对隐私敏感用户和本地 AI 部署方向有实际意义。",
+      "importanceReasonEn": "This is a product capability update announced directly by Perplexity's CEO, marking an expansion of its agent product from cloud inference to fully local operation, with practical significance for privacy-sensitive users and the local AI deployment trend.",
+      "scoringMode": "ai",
+      "titleZh": "Perplexity Computer 现可在 Mac 上完全本地运行，无需云端推理",
+      "titleEn": "Perplexity Computer Now Runs Fully Locally on Mac Without Cloud Inference",
+      "summaryZh": "Perplexity CEO Aravind Srinivas 宣布，Perplexity Computer 现可在 Mac 上完全本地运行，无需云端推理，也不用 WiFi。模型和智能体都在本机运行，可操作 Mac 原生应用和本地文件，敏感数据不必发送到云端，现已在 Perplexity Mac 应用中可用。",
+      "summaryEn": "Perplexity CEO Aravind Srinivas announced that Perplexity Computer can now run entirely locally on a Mac, with no cloud inference and no WiFi required. Both the model and the agent run on-device, can operate native Mac apps and local files, and sensitive data need not be sent to the cloud. It is now available in the Perplexity Mac app.",
+      "keywords": [
+        "Perplexity Computer",
+        "本地运行",
+        "Mac",
+        "智能体",
+        "隐私"
+      ],
+      "topics": [
+        "本地AI推理",
+        "Mac应用",
+        "AI智能体",
+        "隐私计算"
+      ],
+      "models": [],
+      "detailZh": "Perplexity CEO Aravind Srinivas 在 X 上宣布，Perplexity Computer 现在可以在 Mac 上完全本地运行。按照他的说法，这一模式不需要云端推理，也不需要 WiFi 连接，模型和智能体都在本机执行。\n\n该能力的关键在于智能体可以操作 Mac 原生应用和本地文件。由于处理过程不离开设备，敏感数据不必发送到云端，这对处理私密文档或内部资料的用户具有直接价值。\n\nSrinivas 表示，该功能现已在 Perplexity Mac 应用中可用。目前公开信息仅来自这一条发布，未披露具体使用的本地模型、硬件要求、性能表现或支持的应用范围。",
+      "keyPointsZh": [
+        "Perplexity Computer 可在 Mac 上完全本地运行，无需云端推理和 WiFi",
+        "模型与智能体均在本机运行，可操作 Mac 原生应用和本地文件",
+        "敏感数据无需上传云端",
+        "功能已在 Perplexity Mac 应用中上线"
+      ],
+      "impactZh": "该更新把 Perplexity 的智能体能力从依赖云端扩展到端侧本地执行，顺应了 AI 产品向本地化、隐私优先方向发展的趋势，也为本地智能体操作桌面应用提供了新的产品样本。",
+      "readerImpactZh": "",
+      "userImpactZh": "对注重隐私的用户和团队而言，可在不联网、不上传数据的情况下让智能体处理本地文件和 Mac 应用，适合处理敏感资料；但具体硬件门槛和性能尚未公布，实际体验有待验证。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：Perplexity 官方 CEO 宣布该功能上线，并强调本地运行、无需 WiFi、可操作本地应用与文件。至于所用模型规模、Mac 硬件要求、运行速度和离线能力边界，目前均无公开细节，属于尚未披露的信息。",
+      "limitationsZh": "信息仅来自 CEO 的一条社交媒体发布，未提供技术细节、硬件要求、性能数据或独立评测；本地模型的具体规格和支持范围不明，实际可用性仍需验证。",
+      "actionStepsZh": [
+        "在 Perplexity Mac 应用中查看是否已提供本地运行选项",
+        "处理敏感文件时可优先尝试本地模式，避免数据上传",
+        "关注官方后续公布的硬件要求和性能说明"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:zs3zvf51jl6pa35kn4npmoy7j",
+          "name": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+          "type": "aggregator",
+          "url": "https://x.com/AravSrinivas/status/2112583333825950207",
+          "publishedAt": "2026-10-20T16:34:51.000Z",
+          "title": "Perplexity Computer 现可在 Mac 上完全本地运行，无需云端推理",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/zs3zvf51jl6pa35kn4npmoy7j",
+            "https://x.com/AravSrinivas/status/2112583333825950207"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-20T16:34:51.000Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-20T16:34:51.000Z",
+            "label": "10/21 00:34",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-20T17:40:04.878Z",
+            "label": "10/21 01:40",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T18:45:18.757Z",
+            "label": "10/21 02:45",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T19:50:32.636Z",
+            "label": "10/21 03:50",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T20:55:46.515Z",
+            "label": "10/21 04:55",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T22:01:00.394Z",
+            "label": "10/21 06:01",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T23:06:14.272Z",
+            "label": "10/21 07:06",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T00:11:28.151Z",
+            "label": "10/21 08:11",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:16:42.030Z",
+            "label": "10/21 09:16",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:21:55.909Z",
+            "label": "10/21 10:21",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:27:09.788Z",
+            "label": "10/21 11:27",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 65,
             "reports": 1
           }
@@ -1917,7 +3093,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T16:09:19.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1928,51 +3104,276 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T17:06:48.118Z",
-            "label": "10/21 01:06",
-            "value": 19,
+            "at": "2026-10-20T17:16:52.151Z",
+            "label": "10/21 01:16",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-20T18:04:17.237Z",
-            "label": "10/21 02:04",
-            "value": 24,
+            "at": "2026-10-20T18:24:25.303Z",
+            "label": "10/21 02:24",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-20T19:01:46.355Z",
-            "label": "10/21 03:01",
-            "value": 30,
+            "at": "2026-10-20T19:31:58.454Z",
+            "label": "10/21 03:31",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-20T19:59:15.474Z",
-            "label": "10/21 03:59",
-            "value": 35,
+            "at": "2026-10-20T20:39:31.606Z",
+            "label": "10/21 04:39",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:56:44.593Z",
-            "label": "10/21 04:56",
+            "at": "2026-10-20T21:47:04.757Z",
+            "label": "10/21 05:47",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T22:54:37.909Z",
+            "label": "10/21 06:54",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T00:02:11.060Z",
+            "label": "10/21 08:02",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:54:13.711Z",
-            "label": "10/21 05:54",
-            "value": 45,
+            "at": "2026-10-21T01:09:44.212Z",
+            "label": "10/21 09:09",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:51:42.830Z",
-            "label": "10/21 06:51",
-            "value": 50,
+            "at": "2026-10-21T02:17:17.363Z",
+            "label": "10/21 10:17",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T03:24:50.515Z",
+            "label": "10/21 11:24",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c59142aad3a717b8",
+      "normalizedUrl": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity",
+      "originalUrl": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+      "titleOriginal": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+      "summaryOriginal": "Three Java Champions share how they use GitHub Copilot to solve problems, accelerate development, and keep humans responsible for the results. The post How 3 Java Champions are using GitHub Copilot for increased productivity appeared first on The GitHub Blog .",
+      "originalLanguage": "en",
+      "author": "Julien Dubois",
+      "category": "agent",
+      "sourceType": "official",
+      "authority": 94,
+      "sourcePriority": 94,
+      "images": [],
+      "resourceLinks": [
+        "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "https://github.blog",
+        "http://www.w3.org/TR/REC-html40/loose.dtd",
+        "https://github.com/vladmihalcea",
+        "https://github.com/patbaumgartner",
+        "https://github.com/FDelporte",
+        "https://www.pi4j.com/",
+        "https://github.com/Pi4J/pi4j/issues/622",
+        "https://github.com/Pi4J/pi4j/pull/623",
+        "https://github.com/features/copilot"
+      ],
+      "publishedAt": "2026-10-20T16:05:03.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "github-ai-blog",
+          "name": "GitHub AI & ML",
+          "type": "official",
+          "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+          "publishedAt": "2026-10-20T16:05:03.000Z",
+          "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+          "authority": 94,
+          "sourcePriority": 94,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+            "https://github.blog",
+            "http://www.w3.org/TR/REC-html40/loose.dtd",
+            "https://github.com/vladmihalcea",
+            "https://github.com/patbaumgartner",
+            "https://github.com/FDelporte",
+            "https://www.pi4j.com/",
+            "https://github.com/Pi4J/pi4j/issues/622",
+            "https://github.com/Pi4J/pi4j/pull/623",
+            "https://github.com/features/copilot"
+          ]
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "这是来自GitHub官方博客的开发者实践经验分享，展示了真实用户如何将Copilot融入Java开发流程，对评估AI编程助手实际价值有参考意义，但缺乏量化数据。",
+      "importanceReasonEn": "This is a practitioner experience report from the official GitHub blog showing how real users integrate Copilot into Java workflows; it is useful for assessing practical value but lacks quantitative data.",
+      "scoringMode": "ai",
+      "titleZh": "三位Java Champion如何借助GitHub Copilot提升生产力",
+      "titleEn": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+      "summaryZh": "三位Java Champion分享了他们如何使用GitHub Copilot解决问题、加速开发，并让人类对结果负责。",
+      "summaryEn": "Three Java Champions share how they use GitHub Copilot to solve problems, accelerate development, and keep humans responsible for the results.",
+      "keywords": [
+        "GitHub Copilot",
+        "Java Champion",
+        "生产力",
+        "代码生成",
+        "人工审核"
+      ],
+      "topics": [
+        "GitHub Copilot",
+        "Java",
+        "开发者生产力",
+        "AI编程助手"
+      ],
+      "models": [
+        "GitHub Copilot"
+      ],
+      "detailZh": "GitHub官方博客发布文章，介绍三位Java Champion使用GitHub Copilot的实践经验。文章的核心主题是：这些资深Java开发者如何利用Copilot解决问题、加快开发速度，同时强调人类仍需对最终结果负责。\n\nJava Champion是Java社区中具有较高认可度的技术专家称号，因此他们的使用经验对Java开发者群体具有一定参考价值。文章属于经验分享性质，聚焦于工作流层面的应用，而非产品功能发布或基准测试。\n\n目前可获取的信息仅为文章摘要，未披露三位开发者各自的具体使用场景、代码示例、效率提升数据或配置细节。因此无法判断其使用方式是否具有普遍可复制性。\n\n从定位上看，这更接近厂商博客中的用户案例内容，主要作用是展示Copilot在专业开发者日常工作中的实际应用方式，而非提供严谨的效能评估。",
+      "keyPointsZh": [
+        "三位Java Champion分享了使用GitHub Copilot的实践经验",
+        "重点在于用Copilot解决问题和加速开发",
+        "强调人类开发者仍需对AI生成的结果负责",
+        "内容来自GitHub官方博客，属于经验分享而非量化评测"
+      ],
+      "impactZh": "该文章体现了AI编程助手在成熟开发者群体中的实际采用方式，尤其是“AI辅助、人类负责”的协作模式，对理解Copilot在专业Java开发流程中的定位有一定参考价值。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用Copilot的Java开发者而言，文章提示应将Copilot定位为加速问题解决的辅助工具，同时保留人工审查环节，但摘要未提供可直接复用的具体配置或工作流细节。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：三位Java Champion在博客中分享了使用Copilot的经验，并强调人类对结果负责。合理推断是：这类内容主要用于展示Copilot在真实开发场景中的应用方式，而非证明其带来可量化的效率提升。",
+      "limitationsZh": "仅有文章摘要，缺少具体使用场景、代码示例、效率数据和配置细节；属于厂商博客的案例分享，可能存在选择性呈现；无法据此评估Copilot的实际生产力提升幅度。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "github-ai-blog",
+          "name": "GitHub AI & ML",
+          "type": "official",
+          "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+          "publishedAt": "2026-10-20T16:05:03.000Z",
+          "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+          "authority": 94,
+          "sourcePriority": 94,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+            "https://github.blog",
+            "http://www.w3.org/TR/REC-html40/loose.dtd",
+            "https://github.com/vladmihalcea",
+            "https://github.com/patbaumgartner",
+            "https://github.com/FDelporte",
+            "https://www.pi4j.com/",
+            "https://github.com/Pi4J/pi4j/issues/622",
+            "https://github.com/Pi4J/pi4j/pull/623",
+            "https://github.com/features/copilot"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-20T16:05:03.000Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-10-20T16:05:03.000Z",
+            "label": "10/21 00:05",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-20T17:12:59.424Z",
+            "label": "10/21 01:12",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T18:20:55.848Z",
+            "label": "10/21 02:20",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T19:28:52.272Z",
+            "label": "10/21 03:28",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T20:36:48.697Z",
+            "label": "10/21 04:36",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T21:44:45.121Z",
+            "label": "10/21 05:44",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T22:52:41.545Z",
+            "label": "10/21 06:52",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T00:00:37.969Z",
+            "label": "10/21 08:00",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T01:08:34.394Z",
+            "label": "10/21 09:08",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T02:16:30.818Z",
+            "label": "10/21 10:16",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T03:24:27.242Z",
+            "label": "10/21 11:24",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -2092,7 +3493,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T16:00:30.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2103,50 +3504,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T16:59:05.243Z",
-            "label": "10/21 00:59",
-            "value": 20,
+            "at": "2026-10-20T17:08:51.242Z",
+            "label": "10/21 01:08",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-20T17:57:40.487Z",
-            "label": "10/21 01:57",
-            "value": 27,
+            "at": "2026-10-20T18:17:12.484Z",
+            "label": "10/21 02:17",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-20T18:56:15.730Z",
-            "label": "10/21 02:56",
-            "value": 33,
+            "at": "2026-10-20T19:25:33.727Z",
+            "label": "10/21 03:25",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-20T19:54:50.974Z",
-            "label": "10/21 03:54",
-            "value": 39,
+            "at": "2026-10-20T20:33:54.969Z",
+            "label": "10/21 04:33",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:53:26.218Z",
-            "label": "10/21 04:53",
+            "at": "2026-10-20T21:42:16.212Z",
+            "label": "10/21 05:42",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T22:50:37.454Z",
+            "label": "10/21 06:50",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T23:58:58.697Z",
+            "label": "10/21 07:58",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:52:01.461Z",
-            "label": "10/21 05:52",
-            "value": 52,
+            "at": "2026-10-21T01:07:19.939Z",
+            "label": "10/21 09:07",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:50:36.705Z",
-            "label": "10/21 06:50",
-            "value": 58,
+            "at": "2026-10-21T02:15:41.182Z",
+            "label": "10/21 10:15",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T03:24:02.424Z",
+            "label": "10/21 11:24",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 65,
             "reports": 1
           }
@@ -2246,7 +3665,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-20T16:00:00.000Z",
-        "endedAt": "2026-10-20T23:49:11.949Z",
+        "endedAt": "2026-10-21T04:32:23.667Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2257,50 +3676,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-20T16:58:38.993Z",
-            "label": "10/21 00:58",
-            "value": 19,
+            "at": "2026-10-20T17:08:23.969Z",
+            "label": "10/21 01:08",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-20T17:57:17.987Z",
-            "label": "10/21 01:57",
-            "value": 24,
+            "at": "2026-10-20T18:16:47.939Z",
+            "label": "10/21 02:16",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-20T18:55:56.980Z",
-            "label": "10/21 02:55",
-            "value": 30,
+            "at": "2026-10-20T19:25:11.909Z",
+            "label": "10/21 03:25",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-20T19:54:35.974Z",
-            "label": "10/21 03:54",
-            "value": 35,
+            "at": "2026-10-20T20:33:35.878Z",
+            "label": "10/21 04:33",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-20T20:53:14.968Z",
-            "label": "10/21 04:53",
+            "at": "2026-10-20T21:41:59.848Z",
+            "label": "10/21 05:41",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T22:50:23.818Z",
+            "label": "10/21 06:50",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-20T23:58:47.788Z",
+            "label": "10/21 07:58",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-20T21:51:53.961Z",
-            "label": "10/21 05:51",
-            "value": 45,
+            "at": "2026-10-21T01:07:11.757Z",
+            "label": "10/21 09:07",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-20T22:50:32.955Z",
-            "label": "10/21 06:50",
-            "value": 50,
+            "at": "2026-10-21T02:15:35.727Z",
+            "label": "10/21 10:15",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-20T23:49:11.949Z",
-            "label": "10/21 07:49",
+            "at": "2026-10-21T03:23:59.697Z",
+            "label": "10/21 11:23",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-21T04:32:23.667Z",
+            "label": "10/21 12:32",
             "value": 55,
             "reports": 1
           }
