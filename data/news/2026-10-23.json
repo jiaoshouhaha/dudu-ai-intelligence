@@ -1,7 +1,738 @@
 {
-  "generatedAt": "2026-10-23T00:09:31.787Z",
+  "generatedAt": "2026-10-23T05:18:30.452Z",
   "date": "2026-10-23",
   "items": [
+    {
+      "id": "c35b3ef79c92279b",
+      "normalizedUrl": "https://arxiv.org/abs/2610.28686",
+      "originalUrl": "https://arxiv.org/abs/2610.28686",
+      "titleOriginal": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
+      "summaryOriginal": "arXiv:2610.28686v1 Announce Type: new Abstract: Query clarification is essential for retrieval-augmented generation (RAG) systems that face ambiguous user queries. We consider multi-turn grounded conversational scenarios where a user query is either ill-formed or ambiguous in the context of the prior dialog or, more interestingly, it may be well-formed but when posed against retrieved documents there are multiple relevant interpretations. The task is to recognize both such cases and then generate an appropriate clarification request to the user. We present ClariEdge, a new dataset of approximately 3,900 examples that include such ambiguous queries along with negative examples that do not require clarification. We also show that a lightweight fine-tuned LoRA achieves 96.6% classification accuracy and outperforms prompted baselines of many larger models on both classification and quality of clarification generation. Our study shows that hard negatives are an essential ingredient to separate out queries that are truly ambiguous from queries that may look ambiguous but are not (i.e., can be resolved from the context). The same LoRA achieves high performance in both pre-retrieval and po",
+      "originalLanguage": "en",
+      "author": "Lihong He, Lucian Popa, Marina Danilevsky",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://huggingface.co/datasets/ibm-research/ClariEdge"
+      ],
+      "publishedAt": "2026-10-23T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.28686",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "title": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://huggingface.co/datasets/ibm-research/ClariEdge"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究针对 RAG 系统中常见的模糊查询问题，提供了新数据集和轻量微调方案，并证明小模型可在特定任务上超越大模型提示基线，对实际 RAG 系统设计有参考价值。",
+      "importanceReasonEn": "The work addresses a common ambiguity problem in RAG systems with a new dataset and a lightweight fine-tuning approach, showing a small model can outperform prompted larger models on this task, which is useful for practical RAG design.",
+      "scoringMode": "ai",
+      "titleZh": "小模型更会提问：为检索增强生成微调查询澄清能力",
+      "titleEn": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
+      "summaryZh": "该论文提出 ClariEdge 数据集（约 3,900 个样本），用于识别多轮对话中需要澄清的模糊查询，并生成澄清请求；研究表明，轻量级 LoRA 微调模型在分类准确率上达到 96.6%，并在分类与澄清生成质量上优于多个更大模型的提示基线，同时强调难负例对区分真正模糊与表面模糊查询的关键作用。",
+      "summaryEn": "The paper introduces ClariEdge, a dataset of about 3,900 examples for detecting ambiguous queries in multi-turn grounded conversations and generating clarification requests. A lightweight fine-tuned LoRA reaches 96.6% classification accuracy and outperforms prompted baselines of many larger models on both classification and clarification generation quality, with hard negatives shown to be essential for separating truly ambiguous queries from ones resolvable from context.",
+      "keywords": [
+        "query clarification",
+        "RAG",
+        "ClariEdge",
+        "LoRA",
+        "hard negatives",
+        "ambiguous queries"
+      ],
+      "topics": [
+        "RAG",
+        "query clarification",
+        "LoRA fine-tuning",
+        "multi-turn dialogue",
+        "dataset"
+      ],
+      "models": [
+        "LoRA"
+      ],
+      "detailZh": "该论文关注检索增强生成（RAG）系统中的查询澄清问题。在多轮有依据的对话场景中，用户查询可能表述不清、在上下文中有歧义，或者本身表述完整但与检索到的文档对照时存在多种合理解释。任务要求同时识别这两类情况，并向用户生成恰当的澄清请求。\n\n作者构建了 ClariEdge 数据集，包含约 3,900 个示例，既有需要澄清的模糊查询，也有不需要澄清的负例。研究显示，一个轻量级、经 LoRA 微调的模型在分类任务上达到 96.6% 的准确率，并在分类和澄清生成质量两方面均优于多个更大模型的提示基线。\n\n论文还指出，难负例是区分真正模糊查询与“看似模糊但可由上下文解决”的查询的关键要素。摘要提到该 LoRA 在检索前和检索后两种设置下均表现良好，但摘要在此处截断，具体细节未完整给出。",
+      "keyPointsZh": [
+        "提出 ClariEdge 数据集，约 3,900 个示例，包含需澄清查询与不需澄清的负例。",
+        "轻量级 LoRA 微调模型分类准确率达 96.6%。",
+        "该小模型在分类和澄清生成质量上优于多个更大模型的提示基线。",
+        "难负例对区分真正模糊与可由上下文解决的查询至关重要。",
+        "摘要提到该模型在检索前和检索后设置下均表现良好，但细节被截断。"
+      ],
+      "impactZh": "该工作表明，针对查询澄清这一特定任务，轻量微调模型可以比通用大模型的提示方式更有效，为 RAG 系统降低模糊查询带来的检索误差提供了可参考的路径，并强调了高质量难负例在数据构建中的价值。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于构建 RAG 应用的开发者，这意味着可以用较小的微调模型专门处理查询澄清环节，而不必依赖大模型提示，从而可能降低推理成本并提升澄清判断的准确性；同时应重视难负例的构造。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据摘要，事实是：作者构建了 ClariEdge 数据集，并用 LoRA 微调了一个轻量模型，报告了 96.6% 的分类准确率，且在与更大模型提示基线的比较中占优。合理推断是：该方案适合作为 RAG 流程中的前置或后置澄清模块。但摘要未给出基线模型的具体名单、澄清生成质量的评估指标，以及检索前/后设置的完整结果。",
+      "limitationsZh": "摘要信息有限：未说明数据集的具体来源与语言分布，未列出对比的大模型清单，未给出澄清生成质量的量化指标，检索前和检索后设置的完整结果在摘要中被截断，96.6% 准确率的具体测试条件也未详述。",
+      "actionStepsZh": [
+        "在 RAG 系统中评估是否需要增加查询澄清环节，尤其是多轮对话场景。",
+        "构建训练数据时纳入难负例，以区分真正模糊与可由上下文解决的查询。",
+        "考虑用 LoRA 微调轻量模型处理澄清分类，替代大模型提示方案以控制成本。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.28686",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "title": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://huggingface.co/datasets/ibm-research/ClariEdge"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-23T04:00:00.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-23T04:00:00.000Z",
+            "label": "10/23 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-23T04:39:15.226Z",
+            "label": "10/23 12:39",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f5ebfafb83c6121b",
+      "normalizedUrl": "https://arxiv.org/abs/2610.28698",
+      "originalUrl": "https://arxiv.org/abs/2610.28698",
+      "titleOriginal": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
+      "summaryOriginal": "arXiv:2610.28698v1 Announce Type: new Abstract: Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours, and five mixtures ranging from Minecraft-only data to diverse multi-world corpora. We assess performance and generalization using three-level validation losses and gameplay benchmarks from in-corpus worlds to unseen worlds. Our results show: (1) more data improves in-corpus performance, diversity improves transfer to related worlds with limited gains in distant worlds, and model size improves data efficiency but generalizes worse to distant worlds under single-world training; (2) we observe an early interface phase with broad cross-world benefits and a later world phase with gains narrowed t",
+      "originalLanguage": "en",
+      "author": "Kuan Zhang, Yukun Chen, Zhihao Yang, Yue Su, Xiangnan Wu, Zirong Chen, Run Luo, Jinkun Hou, Tao Tan, Yinhe Zheng, Yiming Li",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-23T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.28698",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究系统性地量化了数据量、数据多样性与模型规模对虚拟世界具身智能体训练与泛化的影响，并揭示了“早期接口阶段”与“后期世界阶段”的两阶段现象，对具身智能的数据与模型扩展策略具有参考价值。",
+      "importanceReasonEn": "The study systematically quantifies how data volume, data diversity and model size affect training and generalization of embodied agents in virtual worlds, and identifies an early interface phase and a later world phase, offering reference value for data and scaling strategies in embodied AI.",
+      "scoringMode": "ai",
+      "titleZh": "游戏中的扩展规律：面向多样化虚拟世界中具身智能体的持续预训练",
+      "titleEn": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
+      "summaryZh": "一项受控研究考察了持续预训练（CPT）在数据量、数据多样性和模型规模三个维度上对虚拟世界具身智能体的影响，覆盖 120 组训练配置、0.8B 至 27B 的四种模型规模、50 至 1600 小时的六档数据预算，以及从仅 Minecraft 数据到多世界混合语料的五种数据配比。",
+      "summaryEn": "A controlled study examines how continued pre-training (CPT) along three axes—data volume, data diversity and model size—affects embodied agents in virtual worlds, spanning 120 training configurations, four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours, and five data mixtures ranging from Minecraft-only to multi-world corpora.",
+      "keywords": [
+        "持续预训练",
+        "具身智能体",
+        "虚拟世界",
+        "数据多样性",
+        "模型规模",
+        "泛化"
+      ],
+      "topics": [
+        "具身智能",
+        "持续预训练",
+        "虚拟世界",
+        "数据扩展",
+        "模型规模",
+        "泛化"
+      ],
+      "models": [],
+      "detailZh": "该论文来自 arXiv（编号 2610.28698v1），属于新公告类型。研究关注的问题是：在物理环境中，扩展数据、多样性和模型容量已能改善具身学习，且这些经验共享相同的物理规律；但这些收益是否能延伸到视觉风格、动力学、控制方式和目标各不相同的虚拟世界，尚不清楚。\n\n作者通过受控的持续预训练（CPT）研究来回答这一问题，沿三个轴展开：数据量、数据多样性和模型规模。实验共包含 120 组训练配置，覆盖四种模型规模（0.8B 到 27B）、六档数据预算（50 到 1600 小时），以及五种数据混合方案（从仅 Minecraft 数据到多样化的多世界语料）。\n\n评估方面，研究使用三级验证损失以及游戏玩法基准，覆盖语料内世界与未见世界，以同时衡量性能与泛化能力。\n\n主要发现包括三点：第一，更多数据能提升语料内表现；多样性有助于迁移到相关世界，但对差异较大的世界收益有限；模型规模能提升数据效率，但在单一世界训练下对远距离世界的泛化反而更差。第二，研究观察到早期存在一个“接口阶段”，具有广泛的跨世界收益；后期进入“世界阶段”，收益范围收窄。摘要在此处被截断，后续结论未在输入中给出。",
+      "keyPointsZh": [
+        "研究覆盖 120 组训练配置，模型规模从 0.8B 到 27B，数据预算从 50 到 1600 小时，数据混合方案共五种。",
+        "更多数据提升语料内表现；数据多样性改善向相关世界的迁移，但对差异较大的世界收益有限。",
+        "模型规模提升数据效率，但在单一世界训练下对远距离世界的泛化更差。",
+        "研究观察到早期“接口阶段”带来广泛跨世界收益，后期“世界阶段”收益收窄。",
+        "评估结合三级验证损失与游戏玩法基准，覆盖语料内与未见世界。"
+      ],
+      "impactZh": "该研究为虚拟世界具身智能体的数据与模型扩展策略提供了系统性证据，说明单纯增加数据量或模型规模并不必然带来跨世界泛化，数据多样性与训练阶段的设计同样关键。这可能影响后续具身智能预训练的数据配比与课程设计思路。",
+      "readerImpactZh": "",
+      "userImpactZh": "对从事具身智能或游戏智能体研发的团队而言，该研究提示：在单一世界数据上扩大模型规模可能损害对差异较大世界的泛化，需在数据多样性与模型规模之间权衡，并关注训练早期与后期阶段的不同收益特征。",
+      "howItWorksZh": "研究采用持续预训练（CPT）方法：在已有模型基础上，用虚拟世界中的交互数据继续训练具身智能体。实验沿三个维度做受控变化——数据量（50 至 1600 小时，共六档）、数据多样性（五种混合方案，从仅 Minecraft 到多世界语料）和模型规模（0.8B 至 27B，共四种）。评估使用三级验证损失与游戏玩法基准，分别在语料内世界和未见世界上测量性能与泛化。",
+      "interpretationZh": "已报告的事实是：研究进行了 120 组受控配置，并得出数据量、多样性与模型规模各自的作用，以及早期接口阶段与后期世界阶段的两阶段现象。合理推断是：这些结果意味着虚拟世界的异质性会限制从单一世界扩展中获得的泛化收益，因此数据混合与训练阶段安排可能是关键变量。摘要未给出具体数值结果与完整结论。",
+      "limitationsZh": "输入仅为论文摘要，且摘要末尾被截断，后期“世界阶段”的完整结论、具体数值、基准名称与统计细节均未提供。研究结论基于特定虚拟世界与模型规模范围，能否推广到其他环境尚不明确。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "实验规模跨度明显：模型规模从 0.8B 到 27B，数据预算从 50 到 1600 小时，共 120 组配置与 5 种数据混合方案。",
+        "data": [
+          {
+            "label": "模型规模下限",
+            "value": 0.8,
+            "display": ""
+          },
+          {
+            "label": "模型规模上限",
+            "value": 27,
+            "display": ""
+          },
+          {
+            "label": "数据预算下限（小时）",
+            "value": 50,
+            "display": ""
+          },
+          {
+            "label": "数据预算上限（小时）",
+            "value": 1600,
+            "display": ""
+          },
+          {
+            "label": "训练配置数",
+            "value": 120,
+            "display": ""
+          },
+          {
+            "label": "数据混合方案数",
+            "value": 5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.28698",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-23T04:00:00.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-23T04:00:00.000Z",
+            "label": "10/23 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-23T04:39:15.226Z",
+            "label": "10/23 12:39",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "ad858d5150de79be",
+      "normalizedUrl": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia",
+      "originalUrl": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+      "titleOriginal": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony.ai and Nvidia",
+      "summaryOriginal": "inDrive plans to begin testing Pony.ai's robotaxis in Kazakhstan's capital in the first half of 2027.",
+      "originalLanguage": "en",
+      "author": "Jagmeet Singh",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-23T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "title": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony.ai and Nvidia",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "这是网约车平台在中亚推进自动驾驶出租车测试的早期计划，涉及小马智行和英伟达，但信息来自单一报道，细节有限。",
+      "importanceReasonEn": "This is an early-stage plan by a ride-hailing platform to test robotaxis in Central Asia involving Pony.ai and Nvidia, but the information comes from a single report with limited detail.",
+      "scoringMode": "ai",
+      "titleZh": "inDrive 计划携手小马智行和英伟达，2027 年在中亚测试 Robotaxi",
+      "titleEn": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony.ai and Nvidia",
+      "summaryZh": "inDrive 计划于 2027 年上半年在哈萨克斯坦首都开始测试小马智行的 Robotaxi。",
+      "summaryEn": "inDrive plans to begin testing Pony.ai's robotaxis in Kazakhstan's capital in the first half of 2027.",
+      "keywords": [
+        "inDrive",
+        "Pony.ai",
+        "Nvidia",
+        "robotaxi",
+        "Kazakhstan",
+        "Central Asia"
+      ],
+      "topics": [
+        "robotaxi",
+        "autonomous driving",
+        "Central Asia",
+        "inDrive",
+        "Pony.ai",
+        "Nvidia"
+      ],
+      "models": [
+        "Pony.ai robotaxi",
+        "Nvidia"
+      ],
+      "detailZh": "据 TechCrunch AI 报道，网约车平台 inDrive 计划在哈萨克斯坦首都测试小马智行的自动驾驶出租车（Robotaxi），时间目标为 2027 年上半年。报道将 inDrive 描述为 Uber 的竞争对手，并提到该计划涉及小马智行和英伟达。\n\n目前公开信息仅包含上述要点：测试地点为哈萨克斯坦首都，启动时间目标为 2027 年上半年，合作方包括小马智行与英伟达。报道未披露测试车队规模、具体测试路线、监管审批安排、英伟达在合作中的具体角色，以及商业化时间表。\n\n从已知事实看，这是一项尚处于计划阶段的测试安排，而非已经落地的运营服务。2027 年上半年的时间目标意味着距离实际测试仍有较长周期，期间可能受到当地法规、车辆准入和技术验证等因素影响。\n\n由于来源为单一媒体报道，且缺少官方公告或监管文件佐证，该计划的确定性和执行细节仍不明确。",
+      "keyPointsZh": [
+        "inDrive 计划在哈萨克斯坦首都测试小马智行的 Robotaxi。",
+        "测试启动时间目标为 2027 年上半年。",
+        "报道提到合作涉及小马智行和英伟达。",
+        "报道未披露车队规模、路线和监管审批等细节。"
+      ],
+      "impactZh": "若计划推进，这将是 Robotaxi 测试向中亚市场扩展的一个案例，也显示网约车平台在自动驾驶领域的跨区域合作尝试。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实是 inDrive 计划于 2027 年上半年在哈萨克斯坦首都测试小马智行 Robotaxi，并涉及英伟达。合理推断是这仍属于早期规划阶段，实际测试能否按期启动取决于监管审批和技术准备，目前没有更多公开信息可以验证。",
+      "limitationsZh": "信息来自单一媒体报道，缺少 inDrive、小马智行或英伟达的官方确认；测试规模、路线、监管安排、英伟达的具体角色和商业模式均未披露。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "title": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony.ai and Nvidia",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-23T04:00:00.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-23T04:00:00.000Z",
+            "label": "10/23 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-23T04:39:15.226Z",
+            "label": "10/23 12:39",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "30ea04c0585a3da5",
+      "normalizedUrl": "https://x.com/MiniMax_AI/status/2113436864904610008",
+      "originalUrl": "https://x.com/MiniMax_AI/status/2113436864904610008",
+      "titleOriginal": "MiniMax 开放 M3.1 Flash 权重：428B 总参数、每 token 激活 23B",
+      "summaryOriginal": "MiniMax 宣布 M3.1 Flash 权重公开，总参数 428B、每 token 激活 23B，提供 Hugging Face 和 ModelScope 下载。",
+      "originalLanguage": "zh",
+      "author": "X：MiniMax (@MiniMax_AI)",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/h0u2sgf6ve6eeu0hmswp2a314",
+        "https://x.com/MiniMax_AI/status/2113436864904610008"
+      ],
+      "publishedAt": "2026-10-23T01:06:29.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-23T01:34:25.269Z",
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/h0u2sgf6ve6eeu0hmswp2a314"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:h0u2sgf6ve6eeu0hmswp2a314",
+          "name": "X：MiniMax (@MiniMax_AI)",
+          "type": "aggregator",
+          "url": "https://x.com/MiniMax_AI/status/2113436864904610008",
+          "publishedAt": "2026-10-23T01:06:29.000Z",
+          "title": "MiniMax 开放 M3.1 Flash 权重：428B 总参数、每 token 激活 23B",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/h0u2sgf6ve6eeu0hmswp2a314",
+            "https://x.com/MiniMax_AI/status/2113436864904610008"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "头部厂商公开大参数稀疏模型的权重，对开源社区和自部署团队有直接价值，但来源信息较简短，缺少评测与许可细节。",
+      "importanceReasonEn": "A major vendor releasing weights for a large sparse model is directly valuable to the open-source community and self-hosting teams, though the source is brief and lacks benchmark and license details.",
+      "scoringMode": "ai",
+      "titleZh": "MiniMax 开放 M3.1 Flash 权重：428B 总参数、每 token 激活 23B",
+      "titleEn": "MiniMax Releases M3.1 Flash Weights: 428B Total Parameters, 23B Activated per Token",
+      "summaryZh": "MiniMax 宣布公开 M3.1 Flash 模型权重，总参数 428B、每 token 激活 23B，并提供 Hugging Face 和 ModelScope 下载渠道。",
+      "summaryEn": "MiniMax announced the public release of the M3.1 Flash model weights, with 428B total parameters and 23B activated per token, available for download on Hugging Face and ModelScope.",
+      "keywords": [
+        "MiniMax",
+        "M3.1 Flash",
+        "开源权重",
+        "428B",
+        "23B激活",
+        "Hugging Face",
+        "ModelScope"
+      ],
+      "topics": [
+        "大模型",
+        "开源权重",
+        "MoE",
+        "模型发布"
+      ],
+      "models": [
+        "MiniMax M3.1 Flash"
+      ],
+      "detailZh": "MiniMax 通过官方 X 账号宣布开放 M3.1 Flash 的模型权重。根据公布的信息，该模型总参数为 428B，每个 token 激活 23B 参数，属于稀疏激活（MoE 类）架构。官方同时给出了 Hugging Face 和 ModelScope 两个下载渠道，说明权重已实际对外发布，而非仅作预告。\n\n从参数结构看，428B 总参数与 23B 单 token 激活量之间存在明显差距，这意味着推理时只调用部分参数，在保持较大模型容量的同时控制单次计算量。这是当前大模型常见的稀疏化设计思路，但来源未披露专家数量、路由方式等具体架构细节。\n\n目前公开信息仅覆盖参数规模与下载渠道，尚未包含基准测试成绩、上下文长度、训练数据说明、许可证条款以及硬件部署要求。这些内容通常会在模型卡或技术报告中给出，需要以 Hugging Face 或 ModelScope 页面为准。\n\n事件本身的意义在于：又一家头部厂商将大参数模型权重对外开放，使研究者和企业可以在本地或私有环境中部署和微调，而不必仅依赖 API。",
+      "keyPointsZh": [
+        "MiniMax 官方宣布开放 M3.1 Flash 权重。",
+        "模型总参数 428B，每 token 激活 23B。",
+        "权重可在 Hugging Face 和 ModelScope 下载。",
+        "来源未披露评测成绩、许可证和部署要求。"
+      ],
+      "impactZh": "大参数稀疏模型权重公开，降低了研究和自部署门槛，也让开源模型生态多了一个数百 B 级别的可选基座，可能推动围绕该模型的微调与工具链适配。",
+      "readerImpactZh": "",
+      "userImpactZh": "对需要私有化部署或微调的团队而言，可直接从 Hugging Face 和 ModelScope 获取权重；但 428B 总参数意味着显存与硬件门槛较高，实际部署前需先确认模型卡中的精度、并行和硬件要求。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：MiniMax 官方发布了 M3.1 Flash 权重，参数为 428B 总参数、23B 激活参数，并提供两个下载平台。可合理推断其采用稀疏激活架构以控制推理成本，但具体架构、性能和许可条件在现有来源中均未说明，需查阅模型卡核实。",
+      "limitationsZh": "来源仅为一条官方社交媒体发布，缺少基准评测、上下文长度、许可证、量化与部署要求等信息；428B 总参数的实际硬件门槛也未说明，权重可用性需以 Hugging Face 和 ModelScope 页面为准。",
+      "actionStepsZh": [
+        "前往 Hugging Face 或 ModelScope 查看 M3.1 Flash 模型卡，确认许可证与使用限制。",
+        "核对模型卡中的精度格式、并行方式和显存需求，评估本地部署可行性。",
+        "关注官方后续是否发布技术报告或基准测试结果。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "总参数 428B 约为每 token 激活参数 23B 的 18.6 倍，体现稀疏激活设计。",
+        "data": [
+          {
+            "label": "总参数",
+            "value": 428,
+            "display": ""
+          },
+          {
+            "label": "每 token 激活参数",
+            "value": 23,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:h0u2sgf6ve6eeu0hmswp2a314",
+          "name": "X：MiniMax (@MiniMax_AI)",
+          "type": "aggregator",
+          "url": "https://x.com/MiniMax_AI/status/2113436864904610008",
+          "publishedAt": "2026-10-23T01:06:29.000Z",
+          "title": "MiniMax 开放 M3.1 Flash 权重：428B 总参数、每 token 激活 23B",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/h0u2sgf6ve6eeu0hmswp2a314",
+            "https://x.com/MiniMax_AI/status/2113436864904610008"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-23T01:06:29.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-23T01:06:29.000Z",
+            "label": "10/23 09:06",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-23T01:56:53.290Z",
+            "label": "10/23 09:56",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:47:17.580Z",
+            "label": "10/23 10:47",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:37:41.871Z",
+            "label": "10/23 11:37",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:28:06.161Z",
+            "label": "10/23 12:28",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a6d2b02a9412fc66",
+      "normalizedUrl": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing",
+      "originalUrl": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
+      "titleOriginal": "Left alone with nothing to do, AI agents started playing",
+      "summaryOriginal": "MIT researchers marooned 13 AIs on a virtual island, and they responded by inventing games, mourning a lost ring and, eventually, getting better at their jobs.",
+      "originalLanguage": "en",
+      "author": "Aditya Mehta",
+      "category": "research",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-23T00:45:37.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
+          "publishedAt": "2026-10-23T00:45:37.000Z",
+          "title": "Left alone with nothing to do, AI agents started playing",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该报道描述了一个有趣的智能体行为实验，但来源信息有限，缺少方法细节和可复现数据，因此重要性中等。",
+      "importanceReasonEn": "The report describes an intriguing agent-behavior experiment, but source material is limited and lacks methodological detail or reproducible data, so importance is moderate.",
+      "scoringMode": "ai",
+      "titleZh": "无事可做时，AI智能体开始自己玩游戏",
+      "titleEn": "Left alone with nothing to do, AI agents started playing",
+      "summaryZh": "MIT研究人员把13个AI智能体放到一座虚拟孤岛上，它们随后发明了游戏、为丢失的戒指哀悼，并最终在工作中表现更好。",
+      "summaryEn": "MIT researchers marooned 13 AI agents on a virtual island, and they responded by inventing games, mourning a lost ring and, eventually, getting better at their jobs.",
+      "keywords": [
+        "AI agents",
+        "virtual island",
+        "MIT",
+        "emergent play",
+        "idle behavior"
+      ],
+      "topics": [
+        "AI agents",
+        "agent behavior",
+        "MIT research",
+        "idle time",
+        "emergent behavior"
+      ],
+      "models": [],
+      "detailZh": "据TechCrunch AI报道，MIT研究人员将13个AI智能体放置在一座虚拟孤岛上，让它们处于无事可做的状态。报道称，这些智能体随后开始自行发明游戏，并对一枚丢失的戒指表现出类似哀悼的行为。报道还提到，这些智能体最终在工作中表现得更好。\n\n目前可获得的信息仅来自这一简短摘要，没有披露实验的具体设置、智能体所使用的模型、任务评估方式，也没有说明“表现更好”是在什么任务上、以何种指标衡量的。因此，关于该实验的完整过程和结论仍需以原始研究为准。\n\n从已知事实看，事件顺序大致为：研究人员让13个AI智能体处于空闲状态；智能体自发产生了游戏等行为；随后出现了与丢失物品相关的情感化反应描述；最终报道称其在工作中有所提升。这些描述属于报道方的叙述，尚未经过独立核实。",
+      "keyPointsZh": [
+        "MIT研究人员将13个AI智能体放在虚拟孤岛上，使其处于无事可做的状态。",
+        "报道称这些智能体自行发明了游戏，并对丢失的戒指表现出类似哀悼的反应。",
+        "报道还称智能体最终在工作中表现更好，但未说明具体任务和衡量指标。",
+        "目前没有公开实验设置、所用模型或可复现数据。"
+      ],
+      "impactZh": "如果该现象得到进一步验证，它可能说明智能体在空闲状态下会自发产生行为，并可能影响其后续任务表现，这对智能体设计和评估有参考意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对AI开发者和团队而言，这一报道提示智能体的空闲状态可能产生非预期行为，在部署长时间运行的智能体时值得关注和评估。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道呈现的是一个实验性观察：智能体在缺乏明确任务时出现了自发行为。需要区分的是，“发明游戏”“哀悼戒指”属于报道方的描述，可能带有拟人化色彩；而“工作中表现更好”是结论性说法，目前缺少评估细节支撑。",
+      "limitationsZh": "来源仅为简短报道，未提供实验设计、所用模型、评估指标和统计数据；智能体行为被用“哀悼”等拟人化词汇描述，实际机制不明；“表现更好”缺乏可验证的对照信息。",
+      "actionStepsZh": [
+        "关注MIT相关研究的原始论文或正式发布，以获取实验设置和评估细节。",
+        "在部署长时间运行的AI智能体时，留意空闲状态下可能出现的自发行为。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
+          "publishedAt": "2026-10-23T00:45:37.000Z",
+          "title": "Left alone with nothing to do, AI agents started playing",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-23T00:45:37.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-10-23T00:45:37.000Z",
+            "label": "10/23 08:45",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-23T01:40:11.690Z",
+            "label": "10/23 09:40",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:34:46.380Z",
+            "label": "10/23 10:34",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:29:21.071Z",
+            "label": "10/23 11:29",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:23:55.761Z",
+            "label": "10/23 12:23",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "51888f116f5b0837",
       "normalizedUrl": "https://huggingface.co/blog/microsoft/thinkingbox-training",
@@ -19,7 +750,7 @@
       "publishedAt": "2026-10-22T22:24:34.000Z",
       "publishedPrecision": "minute",
       "discoveredAt": null,
-      "contentType": "opensource",
+      "contentType": "practical",
       "evidenceLevel": "unverified",
       "attribution": null,
       "sources": [
@@ -37,46 +768,42 @@
           "resourceLinks": []
         }
       ],
-      "importance": 55,
-      "importanceReasonZh": "该发布把数据库评分直接用作强化学习奖励，属于智能体后训练中较实用的奖励工程思路，且以开源形式发布，便于复现和借鉴。",
-      "importanceReasonEn": "The release uses database grading directly as RL rewards, a practical reward-engineering approach for agent post-training, and is open-sourced for reproduction and reuse.",
+      "importance": 45,
+      "importanceReasonZh": "该内容涉及将数据库评分转化为强化学习奖励的智能体后训练思路，对关注 RL 训练流程的开发者有一定参考价值，但来源信息有限，缺少可验证细节。",
+      "importanceReasonEn": "The item covers an agent post-training idea that turns database grading into RL rewards, which is useful for developers working on RL pipelines, but the source material is limited and lacks verifiable details.",
       "scoringMode": "ai",
       "titleZh": "将数据库评分转化为强化学习奖励：用 ThinkingBox 对智能体进行后训练",
       "titleEn": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
-      "summaryZh": "ThinkingBox 提出一种将数据库评分结果转化为强化学习奖励信号的方法，用于对智能体进行后训练，相关项目在 Hugging Face 上发布。",
-      "summaryEn": "ThinkingBox introduces a method that converts database grading results into reinforcement learning reward signals for post-training agents; the project was released on Hugging Face.",
+      "summaryZh": "ThinkingBox 提出一种方法，把数据库评分结果转化为强化学习奖励，用于对智能体进行后训练。",
+      "summaryEn": "ThinkingBox proposes a method that converts database grading results into reinforcement learning rewards for post-training agents.",
       "keywords": [
         "ThinkingBox",
+        "强化学习奖励",
         "数据库评分",
-        "RL 奖励",
         "智能体后训练",
-        "Hugging Face"
+        "RL"
       ],
       "topics": [
         "强化学习",
         "智能体后训练",
-        "数据库",
+        "数据库评分",
         "奖励设计"
       ],
       "models": [],
-      "detailZh": "ThinkingBox 在 Hugging Face 上发布了一个围绕智能体后训练的开源项目，核心思路是把数据库评分的结果转化为强化学习奖励信号。也就是说，智能体执行任务后，系统通过数据库层面的检查或评分来判断结果是否正确，并将该评分作为 RL 训练的奖励，而不是依赖人工标注或额外的奖励模型。\n\n该项目的定位是后训练（post-training）流程：在已有基础模型之上，用强化学习进一步优化智能体在数据库相关任务上的表现。数据库评分天然具有可验证、可自动化的特点，因此适合作为密集或稀疏的奖励来源。\n\n目前公开信息主要来自项目发布本身，具体支持的数据库类型、评分规则、训练配置和实验数据尚未在输入中给出。因此可以确认的是方法方向与发布渠道，但效果规模、对比基线和可复现细节仍需查看项目页面进一步核实。",
+      "detailZh": "该条目来自 Hugging Face，标题为“将数据库评分转化为强化学习奖励：用 ThinkingBox 对智能体进行后训练”。从标题可知，ThinkingBox 的核心思路是把数据库评分的结果作为强化学习奖励信号，用于智能体的后训练阶段。\n\n目前提供的摘要为空，正文内容未给出，因此无法确认具体使用的数据库类型、评分规则、奖励函数设计、训练数据规模或评测结果。可以确定的信息仅限于方法方向：以数据库层面的评分替代或补充人工标注奖励，驱动智能体在训练中优化行为。\n\n由于缺少实现细节与实验数据，本条目的信息完整度有限，仅能作为方法线索参考，不宜据此判断其效果或可复现性。",
       "keyPointsZh": [
-        "ThinkingBox 在 Hugging Face 发布，聚焦智能体后训练。",
-        "方法核心是把数据库评分转化为强化学习奖励。",
-        "奖励来自数据库层面的自动检查，而非人工标注。",
-        "具体训练配置与实验效果在现有信息中未披露。"
+        "ThinkingBox 将数据库评分结果转化为强化学习奖励",
+        "该方法用于智能体的后训练阶段",
+        "来源为 Hugging Face，摘要与正文细节未提供",
+        "具体评分规则、奖励函数与评测结果尚不可知"
       ],
-      "impactZh": "把可自动验证的数据库评分用作 RL 奖励，为智能体训练提供了一条低成本、可扩展的监督信号来源，对做工具调用和数据库操作类智能体的团队有参考价值。",
+      "impactZh": "该思路若可行，可降低智能体强化学习训练中对人工奖励标注的依赖，为以数据库为环境的训练任务提供自动化奖励来源。",
       "readerImpactZh": "",
-      "userImpactZh": "对开发者和团队而言，这一思路可用于构建数据库操作类智能体的自动训练回路：用执行结果的可验证评分替代部分人工反馈，降低奖励标注成本，但需要自行验证评分规则是否足够稳健、是否会被智能体钻空子。",
+      "userImpactZh": "对从事智能体强化学习训练的开发者而言，这一方向提示可以把数据库校验结果直接接入奖励函数，但当前缺少可复现的配置与代码细节，暂不宜直接采用。",
       "howItWorksZh": "",
-      "interpretationZh": "已报告的事实是：项目在 Hugging Face 发布，主题为将数据库评分转为 RL 奖励以后训练智能体。合理推断是：该流程依赖可自动执行的数据库检查来生成奖励，从而减少人工标注；但具体实现与效果属于未验证部分。",
-      "limitationsZh": "输入仅包含标题、来源与发布时间，缺少项目文档、代码细节、实验数据和对比结果；无法确认支持的数据库范围、奖励设计细节及实际训练收益。",
-      "actionStepsZh": [
-        "访问 Hugging Face 上的 ThinkingBox 项目页面，查看代码与说明。",
-        "确认其数据库评分规则是否可迁移到自己的任务场景。",
-        "在小规模任务上复现奖励流程，评估奖励是否可被投机利用。"
-      ],
+      "interpretationZh": "从标题可合理推断，ThinkingBox 试图用数据库评分作为奖励信号来后训练智能体；但评分如何计算、奖励如何映射、训练与评测如何进行，均未在现有材料中说明，属于未经验证的方法线索。",
+      "limitationsZh": "摘要为空，正文、代码、实验数据与评测结果均未提供；无法确认方法有效性、可复现性及适用场景，证据等级仅为未验证。",
+      "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
@@ -98,9 +825,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T22:24:34.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
-        "current": 55,
-        "peak": 55,
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 50,
+        "peak": 50,
         "history": [
           {
             "at": "2026-10-22T22:24:34.000Z",
@@ -109,15 +836,45 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T23:17:02.893Z",
-            "label": "10/23 07:17",
+            "at": "2026-10-22T23:23:42.064Z",
+            "label": "10/23 07:23",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:22:50.129Z",
+            "label": "10/23 08:22",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:21:58.193Z",
+            "label": "10/23 09:21",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:21:06.258Z",
+            "label": "10/23 10:21",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
-            "value": 55,
+            "at": "2026-10-23T03:20:14.322Z",
+            "label": "10/23 11:20",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:19:22.387Z",
+            "label": "10/23 12:19",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -159,14 +916,14 @@
           "resourceLinks": []
         }
       ],
-      "importance": 82,
-      "importanceReasonZh": "若该轮融资按报道估值落地，OpenAI将成为史上估值最高的私营公司，并推进IPO，这对AI行业资本格局和竞争态势有重要影响。",
-      "importanceReasonEn": "If the reported round closes at that valuation, OpenAI would become the most highly valued private company ever and move toward an IPO, with significant implications for AI industry capital and competition.",
+      "importance": 88,
+      "importanceReasonZh": "若融资与估值属实，这将是AI行业乃至全球私募市场史上规模最大的融资事件之一，并可能刷新私营公司估值纪录，对AI产业资本格局和OpenAI上市路径都有标志性意义。",
+      "importanceReasonEn": "If the raise and valuation are accurate, this would be one of the largest private financings in AI and global private-market history, potentially setting a record for the most valuable private company and carrying symbolic weight for AI capital flows and OpenAI's path to public markets.",
       "scoringMode": "ai",
-      "titleZh": "OpenAI据悉正洽谈300亿美元新融资，估值达1.25万亿美元，为IPO铺路",
-      "titleEn": "OpenAI Reportedly in Talks for New $30B Raise at $1.25T Valuation Ahead of IPO",
-      "summaryZh": "据报道，OpenAI正在洽谈一轮规模约300亿美元的新融资，估值约1.25万亿美元，并为此后的IPO做准备。若按此估值完成，OpenAI将成为史上估值最高的私营公司。",
-      "summaryEn": "OpenAI is reportedly in talks for a new funding round of about $30 billion at a valuation of roughly $1.25 trillion, ahead of a planned IPO. If completed at that valuation, it would make OpenAI the most highly valued private company ever.",
+      "titleZh": "OpenAI据悉洽谈以1.25万亿美元估值融资300亿美元，为IPO铺路",
+      "titleEn": "OpenAI Reportedly in Talks for $30B Raise at $1.25T Valuation Ahead of IPO",
+      "summaryZh": "据报道，OpenAI正在洽谈新一轮约300亿美元融资，估值约1.25万亿美元，并为此后IPO做准备。若以此估值完成，OpenAI将成为史上估值最高的私营公司。",
+      "summaryEn": "OpenAI is reportedly in talks for a new round of about $30 billion at a valuation of roughly $1.25 trillion, ahead of a planned IPO. If completed at that valuation, it would become the most highly valued private company ever.",
       "keywords": [
         "OpenAI",
         "300亿美元融资",
@@ -177,24 +934,24 @@
       "topics": [
         "OpenAI",
         "融资",
-        "估值",
         "IPO",
+        "估值",
         "AI公司"
       ],
       "models": [],
-      "detailZh": "据TechCrunch AI报道，OpenAI正在洽谈一轮规模约300亿美元的新融资，估值约为1.25万亿美元。报道称，这轮融资是在OpenAI筹备IPO的背景下进行的。\n\n报道指出，如果OpenAI以超过1万亿美元的估值完成这轮融资，将打破纪录，成为有史以来估值最高的私营公司。\n\n目前公开信息仅涉及融资规模、估值水平和IPO筹备这一背景，报道未披露具体投资方、融资条款、时间表或IPO的具体安排。相关细节仍属未经证实的报道，最终是否按此规模和估值完成尚不确定。",
+      "detailZh": "据TechCrunch AI报道，OpenAI正在洽谈新一轮融资，规模约为300亿美元，对应估值约1.25万亿美元。报道称，此轮融资是在OpenAI筹备IPO的背景下进行的。\n\n报道指出，如果OpenAI以超过1万亿美元的估值完成这轮融资，将打破纪录，成为有史以来估值最高的私营公司。\n\n目前公开信息仅涉及融资规模、估值水平和IPO筹备这一背景，报道未披露具体投资方、融资条款、时间表或IPO的具体安排。上述数字与计划均来自报道，尚待相关方确认。",
       "keyPointsZh": [
         "OpenAI正在洽谈约300亿美元的新一轮融资。",
-        "该轮融资对应估值约为1.25万亿美元。",
+        "该轮融资对应估值约1.25万亿美元。",
         "融资发生在OpenAI筹备IPO的背景下。",
-        "若按此估值完成，OpenAI将成为史上估值最高的私营公司。"
+        "若以超1万亿美元估值完成，OpenAI将成为史上估值最高的私营公司。"
       ],
-      "impactZh": "若融资落地，将进一步巩固OpenAI在AI领域的资本优势，并可能抬高整个AI行业的估值预期与融资竞争门槛；同时其IPO进程也将成为AI公司资本市场化的标志性事件。",
+      "impactZh": "这一融资若落地，将进一步巩固OpenAI在AI产业中的资本优势，并可能影响整个AI行业的融资估值基准与竞争格局；同时，其IPO筹备也意味着头部AI公司正加速走向公开资本市场。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道事实：OpenAI正在洽谈约300亿美元融资、估值约1.25万亿美元，并处于IPO筹备阶段。合理推断：如此规模的融资和估值反映出资本市场对头部AI公司的强烈预期，但具体投资方、条款和能否最终达成均未披露，需以官方信息为准。",
-      "limitationsZh": "信息来自媒体报道，OpenAI未公开确认；投资方、融资条款、时间表和IPO具体安排均未披露；融资规模和估值可能变化或交易告吹。",
+      "interpretationZh": "报道呈现的核心事实是：融资规模约300亿美元、估值约1.25万亿美元、背景是筹备IPO，以及若达成将创下私营公司估值纪录。这些均属媒体报道，投资方、条款与时间表尚未公开，因此估值能否最终落地仍存在不确定性。",
+      "limitationsZh": "信息来自单一媒体报道，OpenAI及投资方均未公开确认；具体投资方、融资条款、交割时间、IPO时间表与承销安排均未披露；估值与融资规模可能随谈判变化。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": {
@@ -202,7 +959,7 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "本轮融资规模约300亿美元，对应估值约1.25万亿美元，估值约为融资额的40倍以上。",
+        "insightZh": "本轮融资规模约300亿美元，对应估值约1.25万亿美元，融资额约为估值的2.4%。",
         "data": [
           {
             "label": "融资规模（亿美元）",
@@ -235,9 +992,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T22:08:24.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
-        "current": 70,
-        "peak": 70,
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 74,
+        "peak": 74,
         "history": [
           {
             "at": "2026-10-22T22:08:24.000Z",
@@ -246,21 +1003,51 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T22:48:46.595Z",
-            "label": "10/23 06:48",
-            "value": 33,
+            "at": "2026-10-22T23:02:09.806Z",
+            "label": "10/23 07:02",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:29:09.191Z",
-            "label": "10/23 07:29",
-            "value": 52,
+            "at": "2026-10-22T23:55:55.613Z",
+            "label": "10/23 07:55",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
-            "value": 70,
+            "at": "2026-10-23T00:49:41.419Z",
+            "label": "10/23 08:49",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:43:27.226Z",
+            "label": "10/23 09:43",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:37:13.032Z",
+            "label": "10/23 10:37",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:30:58.839Z",
+            "label": "10/23 11:30",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:24:44.645Z",
+            "label": "10/23 12:24",
+            "value": 66,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 74,
             "reports": 1
           }
         ],
@@ -374,7 +1161,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T21:17:29.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -385,20 +1172,56 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T22:14:49.929Z",
-            "label": "10/23 06:14",
+            "at": "2026-10-22T22:10:55.828Z",
+            "label": "10/23 06:10",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T23:04:22.656Z",
+            "label": "10/23 07:04",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T23:57:49.484Z",
+            "label": "10/23 07:57",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:12:10.858Z",
-            "label": "10/23 07:12",
+            "at": "2026-10-23T00:51:16.312Z",
+            "label": "10/23 08:51",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:44:43.140Z",
+            "label": "10/23 09:44",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:38:09.968Z",
+            "label": "10/23 10:38",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T03:31:36.796Z",
+            "label": "10/23 11:31",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:25:03.624Z",
+            "label": "10/23 12:25",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 55,
             "reports": 1
           }
@@ -515,7 +1338,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T20:24:13.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 57,
         "peak": 57,
         "history": [
@@ -526,27 +1349,441 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T21:20:32.696Z",
-            "label": "10/23 05:20",
-            "value": 25,
+            "at": "2026-10-22T21:23:34.939Z",
+            "label": "10/23 05:23",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:16:52.393Z",
-            "label": "10/23 06:16",
-            "value": 36,
+            "at": "2026-10-22T22:22:56.878Z",
+            "label": "10/23 06:22",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:13:12.090Z",
-            "label": "10/23 07:13",
+            "at": "2026-10-22T23:22:18.817Z",
+            "label": "10/23 07:22",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:21:40.756Z",
+            "label": "10/23 08:21",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:21:02.695Z",
+            "label": "10/23 09:21",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:20:24.634Z",
+            "label": "10/23 10:20",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:19:46.573Z",
+            "label": "10/23 11:19",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:19:08.512Z",
+            "label": "10/23 12:19",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 57,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9acf98f858954c36",
+      "normalizedUrl": "https://x.com/claudeai/status/2113360845409583307",
+      "originalUrl": "https://x.com/claudeai/status/2113360845409583307",
+      "titleOriginal": "Claude 网页、桌面和移动端将默认启用 auto mode",
+      "summaryOriginal": "Claude 官方宣布，下周起 Pro、Max 和 Team 套餐在 Claude 网页、桌面和移动端应用中的会话将默认以 auto mode 运行。auto mode 不再逐步请求用户批准，而是由自动检查拦截高风险操作，用户可随时切回手动模式。其引用的 Claude Code 更新提到 auto mode 用独立分类器审查 shell 命令，测试中拦截了 89% 的危险命令，手动批准为 14%。",
+      "originalLanguage": "zh",
+      "author": "X：Claude (@claudeai)",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/ybo2q5ug2e71tfuab9m1t128o",
+        "https://x.com/claudeai/status/2113360845409583307"
+      ],
+      "publishedAt": "2026-10-22T20:04:24.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-22T20:24:22.221Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/ybo2q5ug2e71tfuab9m1t128o"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:ybo2q5ug2e71tfuab9m1t128o",
+          "name": "X：Claude (@claudeai)",
+          "type": "aggregator",
+          "url": "https://x.com/claudeai/status/2113360845409583307",
+          "publishedAt": "2026-10-22T20:04:24.000Z",
+          "title": "Claude 网页、桌面和移动端将默认启用 auto mode",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ybo2q5ug2e71tfuab9m1t128o",
+            "https://x.com/claudeai/status/2113360845409583307"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是 Claude 官方对默认交互与权限模式的调整，直接影响 Pro、Max 和 Team 用户的日常使用方式，并涉及 agent 安全机制。",
+      "importanceReasonEn": "This is an official change to Claude's default interaction and permission model, directly affecting daily use for Pro, Max and Team users and involving agent safety mechanisms.",
+      "scoringMode": "ai",
+      "titleZh": "Claude 网页、桌面和移动端将默认启用 auto mode",
+      "titleEn": "Claude web, desktop and mobile to enable auto mode by default",
+      "summaryZh": "Claude 官方宣布，下周起 Pro、Max 和 Team 套餐在 Claude 网页、桌面和移动端应用中的会话将默认以 auto mode 运行。auto mode 不再逐步请求用户批准，而是由自动检查拦截高风险操作，用户可随时切回手动模式。其引用的 Claude Code 更新提到 auto mode 用独立分类器审查 shell 命令，测试中拦截了 89% 的危险命令，手动批准为 14%。",
+      "summaryEn": "Claude officially announced that starting next week, sessions for Pro, Max and Team plans on Claude web, desktop and mobile apps will run in auto mode by default. Auto mode no longer asks for step-by-step user approval; instead, automated checks block high-risk actions, and users can switch back to manual mode at any time. The cited Claude Code update says auto mode uses a separate classifier to review shell commands, blocking 89% of dangerous commands in testing versus 14% for manual approval.",
+      "keywords": [
+        "Claude",
+        "auto mode",
+        "默认启用",
+        "高风险操作拦截",
+        "Claude Code",
+        "分类器"
+      ],
+      "topics": [
+        "Claude",
+        "auto mode",
+        "AI agent safety",
+        "permission model",
+        "Claude Code"
+      ],
+      "models": [
+        "Claude"
+      ],
+      "detailZh": "Claude 官方账号宣布，从下周起，Pro、Max 和 Team 套餐在 Claude 网页、桌面和移动端应用中的会话将默认以 auto mode 运行。这意味着用户不再需要逐步批准 Claude 的每一步操作，而是由自动检查机制拦截高风险操作。用户仍可随时切回手动模式。\n\n官方说明中引用了 Claude Code 的相关更新：auto mode 使用一个独立分类器审查 shell 命令，在测试中拦截了 89% 的危险命令，而手动批准方式仅拦截 14%。\n\n目前公开信息集中在默认启用范围、自动检查的拦截思路以及上述对比数据，尚未披露分类器的具体实现、误拦截率或不同套餐间的差异细节。",
+      "keyPointsZh": [
+        "下周起 Pro、Max 和 Team 套餐在 Claude 网页、桌面和移动端默认启用 auto mode",
+        "auto mode 不再逐步请求用户批准，改由自动检查拦截高风险操作",
+        "用户可随时切回手动模式",
+        "引用的 Claude Code 更新称独立分类器审查 shell 命令，测试中拦截 89% 危险命令，手动批准为 14%"
+      ],
+      "impactZh": "这改变了 Claude 的默认权限交互方式，把安全把关从用户逐步确认转向自动分类器拦截，可能影响用户对 agent 操作的信任与使用习惯。",
+      "readerImpactZh": "",
+      "userImpactZh": "Pro、Max 和 Team 用户下周起在网页、桌面和移动端会默认进入 auto mode，需要了解自动拦截机制，并在需要更严格控制时手动切回手动模式。",
+      "howItWorksZh": "根据官方引用的 Claude Code 更新，auto mode 使用一个独立分类器审查 shell 命令，由自动检查拦截高风险操作，而不是逐步请求用户批准；用户可随时切回手动模式。",
+      "interpretationZh": "已报道的事实是默认启用范围、可切回手动模式以及 89% 对 14% 的拦截对比。合理推断是 Claude 正把 agent 安全从人工逐步确认转向自动分类器把关，但分类器的具体机制和误判情况尚未公开。",
+      "limitationsZh": "官方未披露分类器的实现细节、误拦截率、不同套餐或平台间的差异，89% 与 14% 的测试条件也未说明，相关效果仍需实际使用验证。",
+      "actionStepsZh": [
+        "了解下周起 Pro、Max 和 Team 套餐默认启用 auto mode 的变化",
+        "在需要更严格控制时手动切回手动模式",
+        "关注自动检查拦截高风险操作的实际表现"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "官方引用的测试中，auto mode 自动检查拦截危险命令的比例为 89%，明显高于手动批准的 14%。",
+        "data": [
+          {
+            "label": "auto mode 自动检查拦截危险命令",
+            "value": 89,
+            "display": ""
+          },
+          {
+            "label": "手动批准拦截危险命令",
+            "value": 14,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:ybo2q5ug2e71tfuab9m1t128o",
+          "name": "X：Claude (@claudeai)",
+          "type": "aggregator",
+          "url": "https://x.com/claudeai/status/2113360845409583307",
+          "publishedAt": "2026-10-22T20:04:24.000Z",
+          "title": "Claude 网页、桌面和移动端将默认启用 auto mode",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ybo2q5ug2e71tfuab9m1t128o",
+            "https://x.com/claudeai/status/2113360845409583307"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-22T20:04:24.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-22T20:04:24.000Z",
+            "label": "10/23 04:04",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-22T20:59:48.645Z",
+            "label": "10/23 04:59",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T21:55:13.290Z",
+            "label": "10/23 05:55",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T22:50:37.935Z",
+            "label": "10/23 06:50",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T23:46:02.580Z",
+            "label": "10/23 07:46",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:41:27.226Z",
+            "label": "10/23 08:41",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:36:51.871Z",
+            "label": "10/23 09:36",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:32:16.516Z",
+            "label": "10/23 10:32",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
-            "value": 57,
+            "at": "2026-10-23T03:27:41.161Z",
+            "label": "10/23 11:27",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:23:05.806Z",
+            "label": "10/23 12:23",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "6da689edd9f3885a",
+      "normalizedUrl": "https://theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
+      "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
+      "titleOriginal": "The Verge 分析 SpaceX 与特斯拉成立特别委员会讨论合并背后的财务逻辑",
+      "summaryOriginal": "The Verge 作者 Elizabeth Lopatto 分析 SpaceX 和 Tesla 各自成立特别委员会讨论合并一事。",
+      "originalLanguage": "zh",
+      "author": "The Verge：AI（RSS）",
+      "category": "business",
+      "sourceType": "aggregator",
+      "authority": 79,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/w7axcg0e1y7uoyro92cmanong",
+        "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari"
+      ],
+      "publishedAt": "2026-10-22T19:45:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-22T21:11:19.229Z",
+      "contentType": "opinion",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/w7axcg0e1y7uoyro92cmanong"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:w7axcg0e1y7uoyro92cmanong",
+          "name": "The Verge：AI（RSS）",
+          "type": "aggregator",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
+          "publishedAt": "2026-10-22T19:45:00.000Z",
+          "title": "The Verge 分析 SpaceX 与特斯拉成立特别委员会讨论合并背后的财务逻辑",
+          "authority": 79,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/w7axcg0e1y7uoyro92cmanong",
+            "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该文涉及两家高关注度公司可能合并的公司治理与财务安排，但来源为评论分析，缺乏一手披露细节。",
+      "importanceReasonEn": "The piece concerns the governance and financial arrangements around a possible merger of two high-profile companies, but it is commentary and analysis without first-hand disclosure details.",
+      "scoringMode": "ai",
+      "titleZh": "The Verge 分析 SpaceX 与特斯拉成立特别委员会讨论合并背后的财务逻辑",
+      "titleEn": "The Verge Analyzes the Financial Logic Behind SpaceX and Tesla Forming Special Committees to Discuss a Merger",
+      "summaryZh": "The Verge 作者 Elizabeth Lopatto 撰文分析 SpaceX 与特斯拉各自成立特别委员会、讨论两家公司合并一事，聚焦其背后的财务动机。",
+      "summaryEn": "The Verge author Elizabeth Lopatto analyzes SpaceX and Tesla each forming special committees to discuss a merger between the two companies, focusing on the financial motives behind the move.",
+      "keywords": [
+        "SpaceX",
+        "Tesla",
+        "special committee",
+        "merger",
+        "Elizabeth Lopatto",
+        "The Verge"
+      ],
+      "topics": [
+        "SpaceX",
+        "Tesla",
+        "merger",
+        "corporate governance",
+        "financial analysis"
+      ],
+      "models": [],
+      "detailZh": "The Verge 刊发 Elizabeth Lopatto 的分析文章，讨论 SpaceX 与特斯拉分别成立特别委员会、就两家公司合并事宜展开讨论这一情况。文章的关注点不在技术或产品，而在这一安排背后的财务逻辑。\n\n从已提供的信息看，可确认的事实仅限于：两家公司各自设立了特别委员会，并围绕合并进行讨论；相关分析由 The Verge 发表，作者为 Elizabeth Lopatto。文章的具体论证、引用的数据与消息来源，在现有材料中未予披露。\n\n特别委员会通常是公司董事会为处理存在利益冲突的重大交易而设立的独立机构，用于评估条款、隔离关联方影响。SpaceX 与特斯拉在股权与管理者层面存在交集，因此此类程序性安排具有治理意义。但本次讨论是否已进入实质阶段、由谁主导、涉及何种换股或估值方案，现有信息均未说明。\n\n由于来源为评论分析而非公司公告，本文所述财务逻辑应视为作者观点，而非已确认的交易事实。",
+      "keyPointsZh": [
+        "SpaceX 与特斯拉各自成立特别委员会，讨论两家公司合并事宜。",
+        "The Verge 作者 Elizabeth Lopatto 撰文分析该安排背后的财务逻辑。",
+        "文章属于评论分析，未提供公司公告或交易条款细节。",
+        "特别委员会通常用于处理存在利益冲突的重大交易评估。"
+      ],
+      "impactZh": "若合并讨论推进，将牵动两家高估值公司的股权结构与治理安排，并可能影响市场对关联交易的审视方式；目前尚处讨论阶段，实际影响有待披露。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的是两家公司设立了特别委员会并讨论合并；至于合并的财务动机、估值方式与推进程度，均属文章分析或推断，尚无一手披露佐证。",
+      "limitationsZh": "来源为评论文章，缺少公司公告、交易条款、委员会成员与时间表等一手信息；合并是否推进、以何种形式推进均未确认。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:w7axcg0e1y7uoyro92cmanong",
+          "name": "The Verge：AI（RSS）",
+          "type": "aggregator",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
+          "publishedAt": "2026-10-22T19:45:00.000Z",
+          "title": "The Verge 分析 SpaceX 与特斯拉成立特别委员会讨论合并背后的财务逻辑",
+          "authority": 79,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/w7axcg0e1y7uoyro92cmanong",
+            "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-22T19:45:00.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-22T19:45:00.000Z",
+            "label": "10/23 03:45",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-22T20:42:21.045Z",
+            "label": "10/23 04:42",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T21:39:42.090Z",
+            "label": "10/23 05:39",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T22:37:03.135Z",
+            "label": "10/23 06:37",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T23:34:24.180Z",
+            "label": "10/23 07:34",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:31:45.226Z",
+            "label": "10/23 08:31",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:29:06.271Z",
+            "label": "10/23 09:29",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:26:27.316Z",
+            "label": "10/23 10:26",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:23:48.361Z",
+            "label": "10/23 11:23",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:21:09.406Z",
+            "label": "10/23 12:21",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -685,7 +1922,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T19:42:26.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 35,
         "peak": 35,
         "history": [
@@ -696,32 +1933,62 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T20:35:51.157Z",
-            "label": "10/23 04:35",
+            "at": "2026-10-22T20:40:02.445Z",
+            "label": "10/23 04:40",
+            "value": 16,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T21:37:38.890Z",
+            "label": "10/23 05:37",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:29:16.314Z",
-            "label": "10/23 05:29",
+            "at": "2026-10-22T22:35:15.335Z",
+            "label": "10/23 06:35",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T23:32:51.780Z",
+            "label": "10/23 07:32",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:22:41.472Z",
-            "label": "10/23 06:22",
+            "at": "2026-10-23T00:30:28.226Z",
+            "label": "10/23 08:30",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:28:04.671Z",
+            "label": "10/23 09:28",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:16:06.629Z",
-            "label": "10/23 07:16",
+            "at": "2026-10-23T02:25:41.116Z",
+            "label": "10/23 10:25",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:23:17.561Z",
+            "label": "10/23 11:23",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T04:20:54.006Z",
+            "label": "10/23 12:20",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 35,
             "reports": 1
           }
@@ -821,7 +2088,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T19:07:09.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -832,38 +2099,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T19:57:32.797Z",
-            "label": "10/23 03:57",
-            "value": 21,
+            "at": "2026-10-22T20:02:43.677Z",
+            "label": "10/23 04:02",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:47:56.595Z",
-            "label": "10/23 04:47",
-            "value": 28,
+            "at": "2026-10-22T20:58:18.354Z",
+            "label": "10/23 04:58",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:38:20.393Z",
-            "label": "10/23 05:38",
-            "value": 35,
+            "at": "2026-10-22T21:53:53.032Z",
+            "label": "10/23 05:53",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:28:44.191Z",
-            "label": "10/23 06:28",
-            "value": 42,
+            "at": "2026-10-22T22:49:27.709Z",
+            "label": "10/23 06:49",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:19:07.989Z",
-            "label": "10/23 07:19",
-            "value": 49,
+            "at": "2026-10-22T23:45:02.387Z",
+            "label": "10/23 07:45",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T00:40:37.064Z",
+            "label": "10/23 08:40",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:36:11.742Z",
+            "label": "10/23 09:36",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:31:46.419Z",
+            "label": "10/23 10:31",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:27:21.097Z",
+            "label": "10/23 11:27",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:22:55.774Z",
+            "label": "10/23 12:22",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 55,
             "reports": 1
           }
@@ -964,7 +2261,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T19:00:00.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -975,38 +2272,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T19:51:35.297Z",
-            "label": "10/23 03:51",
-            "value": 21,
+            "at": "2026-10-22T19:56:13.677Z",
+            "label": "10/23 03:56",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:43:10.595Z",
-            "label": "10/23 04:43",
-            "value": 28,
+            "at": "2026-10-22T20:52:27.354Z",
+            "label": "10/23 04:52",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:34:45.893Z",
-            "label": "10/23 05:34",
-            "value": 35,
+            "at": "2026-10-22T21:48:41.032Z",
+            "label": "10/23 05:48",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:26:21.191Z",
-            "label": "10/23 06:26",
-            "value": 42,
+            "at": "2026-10-22T22:44:54.709Z",
+            "label": "10/23 06:44",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:17:56.489Z",
-            "label": "10/23 07:17",
-            "value": 49,
+            "at": "2026-10-22T23:41:08.387Z",
+            "label": "10/23 07:41",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T00:37:22.064Z",
+            "label": "10/23 08:37",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:33:35.742Z",
+            "label": "10/23 09:33",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:29:49.419Z",
+            "label": "10/23 10:29",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:26:03.097Z",
+            "label": "10/23 11:26",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:22:16.774Z",
+            "label": "10/23 12:22",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 55,
             "reports": 1
           }
@@ -1108,7 +2435,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T19:00:00.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1119,38 +2446,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T19:51:35.297Z",
-            "label": "10/23 03:51",
-            "value": 21,
+            "at": "2026-10-22T19:56:13.677Z",
+            "label": "10/23 03:56",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:43:10.595Z",
-            "label": "10/23 04:43",
-            "value": 28,
+            "at": "2026-10-22T20:52:27.354Z",
+            "label": "10/23 04:52",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:34:45.893Z",
-            "label": "10/23 05:34",
-            "value": 35,
+            "at": "2026-10-22T21:48:41.032Z",
+            "label": "10/23 05:48",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:26:21.191Z",
-            "label": "10/23 06:26",
-            "value": 42,
+            "at": "2026-10-22T22:44:54.709Z",
+            "label": "10/23 06:44",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:17:56.489Z",
-            "label": "10/23 07:17",
-            "value": 49,
+            "at": "2026-10-22T23:41:08.387Z",
+            "label": "10/23 07:41",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T00:37:22.064Z",
+            "label": "10/23 08:37",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:33:35.742Z",
+            "label": "10/23 09:33",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:29:49.419Z",
+            "label": "10/23 10:29",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:26:03.097Z",
+            "label": "10/23 11:26",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:22:16.774Z",
+            "label": "10/23 12:22",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 55,
             "reports": 1
           }
@@ -1279,7 +2636,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T19:00:00.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1290,38 +2647,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T19:51:35.297Z",
-            "label": "10/23 03:51",
-            "value": 22,
+            "at": "2026-10-22T19:56:13.677Z",
+            "label": "10/23 03:56",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:43:10.595Z",
-            "label": "10/23 04:43",
-            "value": 31,
+            "at": "2026-10-22T20:52:27.354Z",
+            "label": "10/23 04:52",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:34:45.893Z",
-            "label": "10/23 05:34",
-            "value": 39,
+            "at": "2026-10-22T21:48:41.032Z",
+            "label": "10/23 05:48",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:26:21.191Z",
-            "label": "10/23 06:26",
-            "value": 48,
+            "at": "2026-10-22T22:44:54.709Z",
+            "label": "10/23 06:44",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:17:56.489Z",
-            "label": "10/23 07:17",
+            "at": "2026-10-22T23:41:08.387Z",
+            "label": "10/23 07:41",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:37:22.064Z",
+            "label": "10/23 08:37",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:33:35.742Z",
+            "label": "10/23 09:33",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:29:49.419Z",
+            "label": "10/23 10:29",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:26:03.097Z",
+            "label": "10/23 11:26",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T04:22:16.774Z",
+            "label": "10/23 12:22",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 65,
             "reports": 1
           }
@@ -1445,7 +2832,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T18:48:04.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -1456,38 +2843,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T19:41:38.631Z",
-            "label": "10/23 03:41",
-            "value": 20,
+            "at": "2026-10-22T19:45:22.768Z",
+            "label": "10/23 03:45",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:35:13.262Z",
-            "label": "10/23 04:35",
-            "value": 26,
+            "at": "2026-10-22T20:42:41.536Z",
+            "label": "10/23 04:42",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:28:47.893Z",
-            "label": "10/23 05:28",
-            "value": 32,
+            "at": "2026-10-22T21:40:00.305Z",
+            "label": "10/23 05:40",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:22:22.524Z",
-            "label": "10/23 06:22",
-            "value": 38,
+            "at": "2026-10-22T22:37:19.073Z",
+            "label": "10/23 06:37",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:15:57.155Z",
-            "label": "10/23 07:15",
-            "value": 44,
+            "at": "2026-10-22T23:34:37.841Z",
+            "label": "10/23 07:34",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T00:31:56.610Z",
+            "label": "10/23 08:31",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:29:15.378Z",
+            "label": "10/23 09:29",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:26:34.146Z",
+            "label": "10/23 10:26",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:23:52.915Z",
+            "label": "10/23 11:23",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:21:11.683Z",
+            "label": "10/23 12:21",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 50,
             "reports": 1
           }
@@ -1590,7 +3007,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T18:43:53.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1601,38 +3018,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T19:38:09.464Z",
-            "label": "10/23 03:38",
-            "value": 22,
+            "at": "2026-10-22T19:41:34.586Z",
+            "label": "10/23 03:41",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:32:25.929Z",
-            "label": "10/23 04:32",
-            "value": 31,
+            "at": "2026-10-22T20:39:16.173Z",
+            "label": "10/23 04:39",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:26:42.393Z",
-            "label": "10/23 05:26",
-            "value": 39,
+            "at": "2026-10-22T21:36:57.759Z",
+            "label": "10/23 05:36",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:20:58.858Z",
-            "label": "10/23 06:20",
-            "value": 48,
+            "at": "2026-10-22T22:34:39.346Z",
+            "label": "10/23 06:34",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:15:15.322Z",
-            "label": "10/23 07:15",
+            "at": "2026-10-22T23:32:20.932Z",
+            "label": "10/23 07:32",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:30:02.519Z",
+            "label": "10/23 08:30",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:27:44.105Z",
+            "label": "10/23 09:27",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:25:25.692Z",
+            "label": "10/23 10:25",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:23:07.278Z",
+            "label": "10/23 11:23",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T04:20:48.865Z",
+            "label": "10/23 12:20",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 65,
             "reports": 1
           }
@@ -1750,7 +3197,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T18:26:02.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1761,38 +3208,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T19:23:16.964Z",
-            "label": "10/23 03:23",
+            "at": "2026-10-22T19:25:20.950Z",
+            "label": "10/23 03:25",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T20:24:39.900Z",
+            "label": "10/23 04:24",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:20:31.929Z",
-            "label": "10/23 04:20",
-            "value": 29,
+            "at": "2026-10-22T21:23:58.850Z",
+            "label": "10/23 05:23",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:17:46.893Z",
-            "label": "10/23 05:17",
-            "value": 37,
+            "at": "2026-10-22T22:23:17.800Z",
+            "label": "10/23 06:23",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:15:01.858Z",
-            "label": "10/23 06:15",
-            "value": 44,
+            "at": "2026-10-22T23:22:36.750Z",
+            "label": "10/23 07:22",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:12:16.822Z",
-            "label": "10/23 07:12",
-            "value": 52,
+            "at": "2026-10-23T00:21:55.701Z",
+            "label": "10/23 08:21",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T01:21:14.651Z",
+            "label": "10/23 09:21",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:20:33.601Z",
+            "label": "10/23 10:20",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:19:52.551Z",
+            "label": "10/23 11:19",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:19:11.501Z",
+            "label": "10/23 12:19",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 59,
             "reports": 1
           }
@@ -1943,7 +3420,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T18:09:56.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1954,38 +3431,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T19:09:51.964Z",
-            "label": "10/23 03:09",
-            "value": 22,
+            "at": "2026-10-22T19:10:42.768Z",
+            "label": "10/23 03:10",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:09:47.929Z",
-            "label": "10/23 04:09",
-            "value": 31,
+            "at": "2026-10-22T20:11:29.536Z",
+            "label": "10/23 04:11",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:09:43.893Z",
-            "label": "10/23 05:09",
-            "value": 39,
+            "at": "2026-10-22T21:12:16.305Z",
+            "label": "10/23 05:12",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:09:39.858Z",
-            "label": "10/23 06:09",
-            "value": 48,
+            "at": "2026-10-22T22:13:03.073Z",
+            "label": "10/23 06:13",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:09:35.822Z",
-            "label": "10/23 07:09",
+            "at": "2026-10-22T23:13:49.841Z",
+            "label": "10/23 07:13",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:14:36.610Z",
+            "label": "10/23 08:14",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:15:23.378Z",
+            "label": "10/23 09:15",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:16:10.146Z",
+            "label": "10/23 10:16",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:16:56.915Z",
+            "label": "10/23 11:16",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T04:17:43.683Z",
+            "label": "10/23 12:17",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 65,
             "reports": 1
           }
@@ -2103,7 +3610,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T18:01:00.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2114,44 +3621,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T18:53:38.826Z",
-            "label": "10/23 02:53",
-            "value": 21,
+            "at": "2026-10-22T19:02:35.495Z",
+            "label": "10/23 03:02",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-22T19:46:17.653Z",
-            "label": "10/23 03:46",
-            "value": 29,
+            "at": "2026-10-22T20:04:10.991Z",
+            "label": "10/23 04:04",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:38:56.480Z",
-            "label": "10/23 04:38",
-            "value": 36,
+            "at": "2026-10-22T21:05:46.486Z",
+            "label": "10/23 05:05",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:31:35.306Z",
-            "label": "10/23 05:31",
-            "value": 43,
+            "at": "2026-10-22T22:07:21.982Z",
+            "label": "10/23 06:07",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:24:14.133Z",
-            "label": "10/23 06:24",
-            "value": 50,
+            "at": "2026-10-22T23:08:57.478Z",
+            "label": "10/23 07:08",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:16:52.960Z",
-            "label": "10/23 07:16",
-            "value": 58,
+            "at": "2026-10-23T00:10:32.973Z",
+            "label": "10/23 08:10",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T01:12:08.469Z",
+            "label": "10/23 09:12",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:13:43.965Z",
+            "label": "10/23 10:13",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:15:19.460Z",
+            "label": "10/23 11:15",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:16:54.956Z",
+            "label": "10/23 12:16",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 65,
             "reports": 1
           }
@@ -2274,7 +3805,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T17:50:09.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2285,44 +3816,498 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T18:44:20.826Z",
-            "label": "10/23 02:44",
-            "value": 21,
+            "at": "2026-10-22T18:52:43.677Z",
+            "label": "10/23 02:52",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-22T19:38:32.653Z",
-            "label": "10/23 03:38",
+            "at": "2026-10-22T19:55:18.354Z",
+            "label": "10/23 03:55",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T20:57:53.032Z",
+            "label": "10/23 04:57",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T22:00:27.709Z",
+            "label": "10/23 06:00",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T23:03:02.387Z",
+            "label": "10/23 07:03",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:05:37.064Z",
+            "label": "10/23 08:05",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:08:11.742Z",
+            "label": "10/23 09:08",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:10:46.419Z",
+            "label": "10/23 10:10",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T03:13:21.097Z",
+            "label": "10/23 11:13",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:15:55.774Z",
+            "label": "10/23 12:15",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "8347efbf60cad1ff",
+      "normalizedUrl": "https://latent.space/p/modal-d",
+      "originalUrl": "https://www.latent.space/p/modal-d",
+      "titleOriginal": "Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal CEO",
+      "summaryOriginal": "Elastic GPUs, sandbox growth, and the economics of the agent cloud",
+      "originalLanguage": "en",
+      "author": "Basil Chatha",
+      "category": "agent",
+      "sourceType": "community",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [],
+      "resourceLinks": [
+        "https://x.com/realbasilchatha?lang=en",
+        "https://www.youtube.com/watch?v=MwNvowwcZOo",
+        "https://www.forwardeployed.com/about",
+        "https://www.latent.space/p/modal",
+        "https://www.youtube.com/watch?v=UwxxlTNPjWo&feature=youtu.be",
+        "https://modal.com/blog/1-billion-annualized-run-rate-series-d",
+        "https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d",
+        "https://youtu.be/IiZ9yd2Do8I",
+        "https://www.youtube-nocookie.com/embed/IiZ9yd2Do8I?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+        "https://www.latent.space/p/sfcompute2",
+        "https://youtu.be/IiZ9yd2Do8I?t=1185",
+        "https://www.latent.space/p/modal2026"
+      ],
+      "publishedAt": "2026-10-22T17:40:57.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/modal-d",
+          "publishedAt": "2026-10-22T17:40:57.000Z",
+          "title": "Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal CEO",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://x.com/realbasilchatha?lang=en",
+            "https://www.youtube.com/watch?v=MwNvowwcZOo",
+            "https://www.forwardeployed.com/about",
+            "https://www.latent.space/p/modal",
+            "https://www.youtube.com/watch?v=UwxxlTNPjWo&feature=youtu.be",
+            "https://modal.com/blog/1-billion-annualized-run-rate-series-d",
+            "https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d",
+            "https://youtu.be/IiZ9yd2Do8I",
+            "https://www.youtube-nocookie.com/embed/IiZ9yd2Do8I?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+            "https://www.latent.space/p/sfcompute2",
+            "https://youtu.be/IiZ9yd2Do8I?t=1185",
+            "https://www.latent.space/p/modal2026"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该访谈涉及智能体云与弹性GPU的产业趋势，但输入仅提供标题和摘要，缺少具体数据与可验证细节，因此重要性中等。",
+      "importanceReasonEn": "The interview touches on industry trends in agent clouds and elastic GPUs, but the input only provides a title and summary without concrete data or verifiable details, so importance is moderate.",
+      "scoringMode": "ai",
+      "titleZh": "为什么AI算力以矩形形态出现——Modal CEO Erik Bernhardsson访谈",
+      "titleEn": "Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal CEO",
+      "summaryZh": "Latent Space播客访谈Modal CEO Erik Bernhardsson，讨论弹性GPU、沙箱增长以及智能体云的经济学。",
+      "summaryEn": "Latent Space podcast interview with Modal CEO Erik Bernhardsson on elastic GPUs, sandbox growth, and the economics of the agent cloud.",
+      "keywords": [
+        "Modal",
+        "Erik Bernhardsson",
+        "弹性GPU",
+        "沙箱",
+        "智能体云",
+        "算力经济学"
+      ],
+      "topics": [
+        "弹性GPU",
+        "智能体云",
+        "沙箱",
+        "AI算力经济学",
+        "Modal"
+      ],
+      "models": [],
+      "detailZh": "Latent Space播客发布了一期访谈，嘉宾为Modal CEO Erik Bernhardsson。Modal是一家提供弹性GPU与云沙箱基础设施的公司，其业务与AI智能体运行环境密切相关。\n\n根据提供的摘要，访谈围绕三个主题展开：弹性GPU、沙箱增长，以及智能体云的经济学。标题“为什么AI算力以矩形形态出现”暗示讨论涉及算力资源的物理形态或调度方式，但输入未给出具体解释。\n\n目前可获得的信息仅限于标题与摘要，没有披露访谈中的具体数据、产品发布、价格或技术细节。因此无法确认访谈中是否包含新的产品公告或可复现的技术方案。\n\n该内容属于行业访谈类材料，适合关注AI基础设施、智能体运行环境和GPU云经济的读者参考，但需要以完整节目内容为准。",
+      "keyPointsZh": [
+        "访谈嘉宾为Modal CEO Erik Bernhardsson",
+        "主题包括弹性GPU、沙箱增长和智能体云经济学",
+        "标题暗示讨论AI算力的形态与调度问题",
+        "输入未提供具体数据或产品公告"
+      ],
+      "impactZh": "该访谈反映了智能体云与弹性GPU基础设施正在成为AI产业的重要方向，Modal作为该领域的参与者，其观点有助于理解算力供给模式的变化。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和团队而言，该访谈可能提供关于弹性GPU和沙箱运行环境的行业视角，但输入未包含可直接采用的技术方案或配置细节。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：Latent Space发布了与Modal CEO的访谈，主题涵盖弹性GPU、沙箱增长和智能体云经济学。合理推断是：访谈可能讨论Modal如何为AI智能体提供按需GPU与沙箱环境，但具体机制和结论无法从现有输入中确认。",
+      "limitationsZh": "输入仅包含标题和摘要，缺少访谈中的具体数据、产品细节、价格信息和可验证的技术描述。标题中“矩形”的具体含义未在输入中解释，相关结论需以完整节目内容为准。",
+      "actionStepsZh": [
+        "收听Latent Space该期完整访谈以获取具体细节",
+        "关注Modal在弹性GPU与沙箱基础设施方面的公开资料"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/modal-d",
+          "publishedAt": "2026-10-22T17:40:57.000Z",
+          "title": "Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal CEO",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://x.com/realbasilchatha?lang=en",
+            "https://www.youtube.com/watch?v=MwNvowwcZOo",
+            "https://www.forwardeployed.com/about",
+            "https://www.latent.space/p/modal",
+            "https://www.youtube.com/watch?v=UwxxlTNPjWo&feature=youtu.be",
+            "https://modal.com/blog/1-billion-annualized-run-rate-series-d",
+            "https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d",
+            "https://youtu.be/IiZ9yd2Do8I",
+            "https://www.youtube-nocookie.com/embed/IiZ9yd2Do8I?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+            "https://www.latent.space/p/sfcompute2",
+            "https://youtu.be/IiZ9yd2Do8I?t=1185",
+            "https://www.latent.space/p/modal2026"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-22T17:40:57.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-22T17:40:57.000Z",
+            "label": "10/23 01:40",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-22T18:44:21.859Z",
+            "label": "10/23 02:44",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T19:47:46.718Z",
+            "label": "10/23 03:47",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T20:51:11.577Z",
+            "label": "10/23 04:51",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T21:54:36.437Z",
+            "label": "10/23 05:54",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:32:44.480Z",
-            "label": "10/23 04:32",
-            "value": 36,
+            "at": "2026-10-22T22:58:01.296Z",
+            "label": "10/23 06:58",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:26:56.306Z",
-            "label": "10/23 05:26",
-            "value": 43,
+            "at": "2026-10-23T00:01:26.155Z",
+            "label": "10/23 08:01",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:21:08.133Z",
-            "label": "10/23 06:21",
-            "value": 50,
+            "at": "2026-10-23T01:04:51.014Z",
+            "label": "10/23 09:04",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:15:19.960Z",
-            "label": "10/23 07:15",
-            "value": 58,
+            "at": "2026-10-23T02:08:15.874Z",
+            "label": "10/23 10:08",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T03:11:40.733Z",
+            "label": "10/23 11:11",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:15:05.592Z",
+            "label": "10/23 12:15",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "6005d465d01eaff7",
+      "normalizedUrl": "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds",
+      "originalUrl": "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/",
+      "titleOriginal": "Only 13 percent of companies see real returns from AI, Gartner survey finds",
+      "summaryOriginal": "Only 13 percent of companies are getting real business value from their AI investments, according to a Gartner survey of 2,002 CIOs. At the same time, 51 percent expect AI to actually increase their operating costs. Yet 75 percent of CEOs plan to keep raising their technology budgets. So far, strategic conviction is beating measurable results. The article Only 13 percent of companies see real returns from AI, Gartner survey finds appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Manuel Uth",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/10/ai_value.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-10-22T16:18:02.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/",
+          "publishedAt": "2026-10-22T16:18:02.000Z",
+          "title": "Only 13 percent of companies see real returns from AI, Gartner survey finds",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/10/ai_value.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该调查用明确数据揭示了企业AI投入与回报之间的显著落差，对判断企业AI落地阶段具有参考价值。",
+      "importanceReasonEn": "The survey uses clear figures to reveal a significant gap between enterprise AI spending and returns, offering a useful reference for judging the stage of enterprise AI adoption.",
+      "scoringMode": "ai",
+      "titleZh": "Gartner调查：仅13%的企业从AI中获得真实回报",
+      "titleEn": "Only 13 percent of companies see real returns from AI, Gartner survey finds",
+      "summaryZh": "Gartner对2002名CIO的调查显示，仅13%的企业从AI投资中获得真实业务价值；同时51%的受访者预计AI反而会推高运营成本。尽管如此，75%的CEO仍计划继续增加技术预算。目前，战略信念仍领先于可衡量的成果。",
+      "summaryEn": "A Gartner survey of 2,002 CIOs found that only 13 percent of companies are getting real business value from their AI investments, while 51 percent expect AI to actually increase operating costs. Nevertheless, 75 percent of CEOs plan to keep raising technology budgets. So far, strategic conviction is outpacing measurable results.",
+      "keywords": [
+        "Gartner",
+        "CIO调查",
+        "AI回报",
+        "运营成本",
+        "技术预算"
+      ],
+      "topics": [
+        "AI投资回报",
+        "企业AI采用",
+        "IT预算",
+        "运营成本"
+      ],
+      "models": [],
+      "detailZh": "Gartner对2002名CIO进行了一项调查，结果显示只有13%的企业从AI投资中获得了真实的业务价值。这一比例意味着绝大多数企业的AI项目尚未转化为可衡量的回报。\n\n调查同时发现，51%的受访者预计AI实际上会增加企业的运营成本，而不是降低成本。这与许多企业宣传AI降本增效的叙事形成反差。\n\n尽管回报数据不理想，企业高层的投入意愿并未减弱。调查显示，75%的CEO计划继续提高技术预算，说明战略层面的信念仍强于当前可测量的成果。\n\n上述数据来自The Decoder对Gartner调查的报道，报道未披露调查的具体行业分布、企业规模构成或AI价值的具体衡量口径。",
+      "keyPointsZh": [
+        "Gartner调查了2002名CIO。",
+        "仅13%的企业从AI投资中获得真实业务价值。",
+        "51%的受访者预计AI会增加运营成本。",
+        "75%的CEO计划继续提高技术预算。"
+      ],
+      "impactZh": "该调查表明，企业AI投入与可衡量回报之间存在明显落差，同时成本压力被普遍预期上升。这可能促使企业在扩大AI预算时更关注落地效果和成本控制，而非单纯追逐技术热度。",
+      "readerImpactZh": "",
+      "userImpactZh": "对于企业AI团队而言，这一数据意味着预算审批可能更强调可量化的业务指标，项目需要更早证明成本与收益的平衡，而非仅展示技术能力。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道呈现的事实是：调查样本为2002名CIO，13%的企业获得真实AI价值，51%预计AI推高运营成本，75%的CEO计划增加技术预算。可以合理推断，当前企业AI投入更多由战略预期驱动，而非已被验证的回报；但调查未说明“真实业务价值”的具体定义，也未给出行业或规模细分，因此不能据此判断哪些类型的AI项目更容易成功。",
+      "limitationsZh": "报道未披露调查的行业分布、企业规模、地区构成，也未说明“真实业务价值”的衡量标准。此外，调查反映的是CIO的主观判断，而非经审计的财务数据。",
+      "actionStepsZh": [
+        "在申请AI预算时，提前定义可量化的业务价值指标。",
+        "将运营成本变化纳入AI项目评估，而不只关注效率提升。",
+        "关注Gartner后续是否发布该调查的完整方法论和细分数据。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "仅13%的企业获得真实AI价值，而51%预计成本上升，但75%的CEO仍计划增加预算，显示投入意愿明显领先于可衡量回报。",
+        "data": [
+          {
+            "label": "获得真实AI业务价值的企业",
+            "value": 13,
+            "display": ""
+          },
+          {
+            "label": "预计AI推高运营成本的企业",
+            "value": 51,
+            "display": ""
+          },
+          {
+            "label": "计划继续增加技术预算的CEO",
+            "value": 75,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/",
+          "publishedAt": "2026-10-22T16:18:02.000Z",
+          "title": "Only 13 percent of companies see real returns from AI, Gartner survey finds",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/10/ai_value.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-22T16:18:02.000Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-22T16:18:02.000Z",
+            "label": "10/23 00:18",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-22T17:28:59.132Z",
+            "label": "10/23 01:28",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T18:39:56.264Z",
+            "label": "10/23 02:39",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T19:50:53.396Z",
+            "label": "10/23 03:50",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T21:01:50.528Z",
+            "label": "10/23 05:01",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T22:12:47.660Z",
+            "label": "10/23 06:12",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T23:23:44.792Z",
+            "label": "10/23 07:23",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:34:41.924Z",
+            "label": "10/23 08:34",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T01:45:39.056Z",
+            "label": "10/23 09:45",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T02:56:36.188Z",
+            "label": "10/23 10:56",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T04:07:33.320Z",
+            "label": "10/23 12:07",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 65,
             "reports": 1
           }
@@ -2426,7 +4411,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-22T16:11:31.000Z",
-        "endedAt": "2026-10-23T00:09:31.787Z",
+        "endedAt": "2026-10-23T05:18:30.452Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2437,50 +4422,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-22T17:11:16.098Z",
-            "label": "10/23 01:11",
-            "value": 19,
+            "at": "2026-10-22T17:23:03.677Z",
+            "label": "10/23 01:23",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-22T18:11:01.196Z",
-            "label": "10/23 02:11",
-            "value": 24,
+            "at": "2026-10-22T18:34:36.354Z",
+            "label": "10/23 02:34",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-22T19:10:46.295Z",
-            "label": "10/23 03:10",
-            "value": 30,
+            "at": "2026-10-22T19:46:09.032Z",
+            "label": "10/23 03:46",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-22T20:10:31.393Z",
-            "label": "10/23 04:10",
-            "value": 35,
+            "at": "2026-10-22T20:57:41.709Z",
+            "label": "10/23 04:57",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-22T21:10:16.491Z",
-            "label": "10/23 05:10",
+            "at": "2026-10-22T22:09:14.387Z",
+            "label": "10/23 06:09",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-22T23:20:47.064Z",
+            "label": "10/23 07:20",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T00:32:19.742Z",
+            "label": "10/23 08:32",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-22T22:10:01.590Z",
-            "label": "10/23 06:10",
-            "value": 45,
+            "at": "2026-10-23T01:43:52.419Z",
+            "label": "10/23 09:43",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-22T23:09:46.688Z",
-            "label": "10/23 07:09",
-            "value": 50,
+            "at": "2026-10-23T02:55:25.097Z",
+            "label": "10/23 10:55",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-23T00:09:31.787Z",
-            "label": "10/23 08:09",
+            "at": "2026-10-23T04:06:57.774Z",
+            "label": "10/23 12:06",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-23T05:18:30.452Z",
+            "label": "10/23 13:18",
             "value": 55,
             "reports": 1
           }
