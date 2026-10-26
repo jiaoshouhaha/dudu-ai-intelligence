@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T15:09:24.885Z",
+  "generatedAt": "2026-10-26T20:45:51.644Z",
   "date": "2026-10-26",
   "items": [
     {
@@ -46,14 +46,14 @@
           ]
         }
       ],
-      "importance": 72,
+      "importance": 62,
       "importanceReasonZh": "该发布让一个较大规模的开源模型能以 2-bit 量化在 150GB 内存的本地环境运行，并给出可量化的精度保留数据，对关注本地部署和低成本推理的用户有直接参考价值。",
-      "importanceReasonEn": "The release lets a relatively large open model run locally on 150GB of RAM via 2-bit quantization, with quantified accuracy-retention figures, offering direct reference value for users interested in local deployment and low-cost inference.",
+      "importanceReasonEn": "This release lets a relatively large open-source model run locally on 150GB of RAM via 2-bit quantization, with quantified accuracy-retention figures, offering direct reference value for users interested in local deployment and low-cost inference.",
       "scoringMode": "ai",
       "titleZh": "Unsloth 发布 MiniMax-M3.1-Flash 量化 GGUF，2-bit 版可在 150GB 内存本地运行",
       "titleEn": "Unsloth Releases Quantized GGUF for MiniMax-M3.1-Flash, 2-bit Version Runs Locally on 150GB RAM",
       "summaryZh": "Unsloth 发布 MiniMax-M3.1-Flash 的量化 GGUF，2-bit 版在缩小 45% 体积的同时保留 91.5% top 1 精度，可在 150GB 内存上本地运行，1-bit 版约 89.9%，4-bit UD-Q4_K_XL 达 98.0%。作者称其为同尺寸最强开源模型之一，并给出 Hugging Face 权重链接与本地运行指南。",
-      "summaryEn": "Unsloth released quantized GGUF versions of MiniMax-M3.1-Flash: the 2-bit build cuts size by 45% while retaining 91.5% top-1 accuracy and runs locally on 150GB of RAM; the 1-bit version reaches about 89.9% and the 4-bit UD-Q4_K_XL reaches 98.0%. The author calls it one of the strongest open models at its size and provides Hugging Face weight links and a local running guide.",
+      "summaryEn": "Unsloth released quantized GGUF versions of MiniMax-M3.1-Flash. The 2-bit version cuts size by 45% while retaining 91.5% top-1 accuracy and can run locally on 150GB of RAM; the 1-bit version reaches about 89.9%, and the 4-bit UD-Q4_K_XL reaches 98.0%. The author calls it one of the strongest open-source models at its size and provides Hugging Face weight links and a local running guide.",
       "keywords": [
         "Unsloth",
         "MiniMax-M3.1-Flash",
@@ -66,29 +66,29 @@
         "quantization",
         "GGUF",
         "local inference",
-        "open models",
+        "open-source models",
         "Unsloth"
       ],
       "models": [
         "MiniMax-M3.1-Flash"
       ],
-      "detailZh": "Unsloth 通过其 X 账号发布消息，称已为 MiniMax-M3.1-Flash 提供量化 GGUF 版本，并附上 Hugging Face 权重链接和本地运行指南。发布内容的核心是不同量化档位在体积与精度之间的取舍数据。\n\n根据发布信息，2-bit 版本将模型体积缩小约 45%，同时保留 91.5% 的 top 1 精度，并可在 150GB 内存的机器上本地运行。1-bit 版本的精度约为 89.9%，4-bit 的 UD-Q4_K_XL 版本则达到 98.0%。\n\nUnsloth 在发布中将 MiniMax-M3.1-Flash 称为同尺寸最强的开源模型之一。除精度数字外，发布还给出了权重下载地址和本地运行说明，方便用户自行部署。\n\n目前公开信息主要来自 Unsloth 的这条发布，未包含完整的评测方法、测试集构成或与其他量化方案的横向对比，因此上述精度数字应视为发布方给出的结果。",
+      "detailZh": "Unsloth 通过其 X 账号发布了 MiniMax-M3.1-Flash 的量化 GGUF 版本，并提供了 Hugging Face 权重链接和本地运行指南。发布内容的核心是不同量化位宽下的体积与精度权衡：2-bit 版本体积缩小 45%，同时保留 91.5% 的 top 1 精度，可在 150GB 内存上本地运行；1-bit 版本精度约为 89.9%；4-bit 的 UD-Q4_K_XL 版本精度达到 98.0%。\n\nUnsloth 在发布中将该模型称为同尺寸最强的开源模型之一。GGUF 是面向本地推理的模型格式，配合 llama.cpp 等运行时可在消费级或工作站硬件上加载；量化则通过降低权重精度来压缩体积和内存占用，代价是精度损失。此次发布给出的数据正是这一权衡的具体体现：位宽越低，体积和内存需求越小，精度保留比例也越低。\n\n目前公开信息主要来自 Unsloth 的这条发布，包含量化版本、精度数字、内存门槛以及权重与运行指南的获取方式，但没有披露基准测试的具体构成、评测方法或硬件细节。因此这些精度数字应理解为发布方给出的相对保留比例，而非与其他模型的横向对比结果。",
       "keyPointsZh": [
         "Unsloth 发布 MiniMax-M3.1-Flash 的量化 GGUF，并提供 Hugging Face 权重链接与本地运行指南。",
-        "2-bit 版体积缩小约 45%，保留 91.5% top 1 精度，可在 150GB 内存上本地运行。",
+        "2-bit 版体积缩小 45%，保留 91.5% top 1 精度，可在 150GB 内存上本地运行。",
         "1-bit 版精度约 89.9%，4-bit UD-Q4_K_XL 版达到 98.0%。",
         "Unsloth 称该模型为同尺寸最强开源模型之一。"
       ],
-      "impactZh": "该发布降低了在本地运行较大规模开源模型的内存门槛，使 2-bit 量化在可接受的精度损失下具备实际可用性，也为需要在本地或私有环境部署模型的用户提供了新的选择。",
+      "impactZh": "该发布降低了在本地运行较大规模开源模型的内存门槛，使 150GB 内存级别的工作站可以尝试 2-bit 量化版本，同时用 4-bit 版本在精度接近原模型的情况下做对比，为本地部署提供了明确的体积与精度取舍参考。",
       "readerImpactZh": "",
-      "userImpactZh": "对本地部署用户而言，2-bit 版可在 150GB 内存的机器上运行，适合内存受限但希望本地使用该模型的场景；追求更高精度的用户可选择 4-bit UD-Q4_K_XL，但需要更多内存。",
-      "howItWorksZh": "Unsloth 将 MiniMax-M3.1-Flash 转换为 GGUF 格式，并提供不同位宽的量化版本：1-bit、2-bit 和 4-bit（UD-Q4_K_XL）。位宽越低，模型体积越小、内存占用越低，但精度损失越大。用户可根据自身内存容量和精度需求选择对应版本，按发布提供的 Hugging Face 链接下载权重，并参照本地运行指南部署。",
-      "interpretationZh": "已报道的事实是：Unsloth 发布了 MiniMax-M3.1-Flash 的量化 GGUF，并给出各量化档位的体积缩减与 top 1 精度保留数据。可合理推断的是：2-bit 版在 150GB 内存上可运行，意味着内存有限的用户也能本地使用该模型；但精度数字来自发布方，尚缺独立验证。",
-      "limitationsZh": "公开信息仅来自 Unsloth 的发布，未说明精度评测所用的测试集、评测方法和对比基线；1-bit、2-bit、4-bit 的精度数字未经第三方复现；“同尺寸最强开源模型之一”属于发布方的主观评价，缺少横向对比依据。",
+      "userImpactZh": "对本地部署用户和开发者而言，可根据内存预算在 1-bit、2-bit 与 4-bit UD-Q4_K_XL 之间选择：内存紧张时用 2-bit 在 150GB 内存上运行，追求精度时选 4-bit 版本；GGUF 格式可配合常见本地推理工具加载。",
+      "howItWorksZh": "发布方通过量化把模型权重压缩为 GGUF 格式：位宽越低，权重占用的存储和内存越少，但精度保留比例也越低。2-bit 版本体积缩小 45%、保留 91.5% top 1 精度，可在 150GB 内存上运行；1-bit 版约 89.9%；4-bit UD-Q4_K_XL 达 98.0%。用户可从 Hugging Face 获取对应权重，并按发布方提供的本地运行指南加载。",
+      "interpretationZh": "已报道的事实是：Unsloth 发布了这些量化版本，并给出上述体积、精度和内存数字。合理推断是：这些版本面向希望在本地运行该模型的用户，位宽选择本质上是内存与精度之间的权衡。发布方“同尺寸最强开源模型之一”的说法属于其自身评价，未经独立验证。",
+      "limitationsZh": "精度数字来自发布方，未说明基准测试构成、评测方法和硬件环境，不能直接与其他模型横向比较；150GB 内存门槛对普通消费级设备仍然很高；1-bit 和 2-bit 版本的实际生成质量与稳定性未在发布中详细说明。",
       "actionStepsZh": [
-        "访问发布中提供的 Hugging Face 链接，查看各量化版本的权重文件与说明。",
-        "根据自身内存容量选择版本：150GB 内存可选 2-bit，追求更高精度可选 4-bit UD-Q4_K_XL。",
-        "参照发布中的本地运行指南完成部署，并在自己的任务上验证精度是否满足需求。"
+        "从发布中提供的 Hugging Face 链接获取对应量化版本的 GGUF 权重。",
+        "根据可用内存选择位宽：内存约 150GB 可选 2-bit，追求精度可选 4-bit UD-Q4_K_XL。",
+        "按发布方提供的本地运行指南加载模型，并在自己的任务上对比不同位宽的输出质量。"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -96,20 +96,20 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "4-bit UD-Q4_K_XL 的 top 1 精度为 98.0%，明显高于 2-bit 的 91.5% 和 1-bit 的 89.9%；2-bit 相比 1-bit 仅提升约 1.6 个百分点，但体积缩小幅度为 45%。",
+        "insightZh": "位宽从 1-bit 提升到 4-bit 时，精度保留从约 89.9% 升至 98.0%，而 2-bit 版本以缩小 45% 的体积保留了 91.5%。",
         "data": [
           {
-            "label": "1-bit",
+            "label": "1-bit 精度保留",
             "value": 89.9,
             "display": ""
           },
           {
-            "label": "2-bit",
+            "label": "2-bit 精度保留",
             "value": 91.5,
             "display": ""
           },
           {
-            "label": "4-bit UD-Q4_K_XL",
+            "label": "4-bit UD-Q4_K_XL 精度保留",
             "value": 98,
             "display": ""
           }
@@ -137,9 +137,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T14:45:21.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
-        "current": 65,
-        "peak": 65,
+        "endedAt": "2026-10-26T20:45:51.644Z",
+        "current": 59,
+        "peak": 59,
         "history": [
           {
             "at": "2026-10-26T14:45:21.000Z",
@@ -148,9 +148,45 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
-            "value": 65,
+            "at": "2026-10-26T15:36:51.092Z",
+            "label": "10/26 23:36",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T16:28:21.184Z",
+            "label": "10/27 00:28",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:19:51.276Z",
+            "label": "10/27 01:19",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T18:11:21.368Z",
+            "label": "10/27 02:11",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:02:51.460Z",
+            "label": "10/27 03:02",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:54:21.552Z",
+            "label": "10/27 03:54",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -202,43 +238,43 @@
           ]
         }
       ],
-      "importance": 70,
-      "importanceReasonZh": "Meta作为大型科技公司，计划通过最高950亿美元的股票发行来为AI基础设施融资，反映出AI算力投入的资本规模正在显著上升。",
-      "importanceReasonEn": "As a major technology company, Meta's plan to raise up to $95 billion through stock sales to fund AI infrastructure reflects the growing capital scale of AI compute investment.",
+      "importance": 72,
+      "importanceReasonZh": "Meta拟通过最高950亿美元股票发行融资用于AI基建，属于大型科技公司以股权融资支持AI资本开支的重要动向，涉及金额巨大，对AI基础设施投资格局有潜在影响。",
+      "importanceReasonEn": "Meta's plan to raise up to $95 billion through stock sales for AI infrastructure is a major move by a large tech company to fund AI capex via equity, with a large sum and potential impact on the AI infrastructure investment landscape.",
       "scoringMode": "ai",
       "titleZh": "Meta计划通过最高950亿美元股票发行融资，以支持其AI基础设施建设",
       "titleEn": "Meta plans up to $95 billion in stock sales to fund its AI buildout",
-      "summaryZh": "Meta计划发行新股，为人工智能基础设施扩建筹集资金。",
-      "summaryEn": "Meta plans to sell new stock to raise money for its AI infrastructure buildout.",
+      "summaryZh": "Meta计划发行新股，为AI基础设施扩建筹集资金，股票发行规模最高可达950亿美元。",
+      "summaryEn": "Meta plans to sell new stock to raise money for its AI infrastructure buildout, with stock sales of up to $95 billion.",
       "keywords": [
         "Meta",
         "stock sale",
-        "AI buildout",
+        "AI infrastructure",
         "funding",
-        "infrastructure"
+        "$95 billion"
       ],
       "topics": [
         "AI infrastructure",
-        "stock issuance",
+        "capital raising",
         "Meta",
-        "capital raising"
+        "stock issuance"
       ],
       "models": [],
-      "detailZh": "据The Decoder AI报道，Meta计划通过出售新股筹集资金，用于其人工智能基础设施的扩建。报道称，此次股票发行规模最高可达950亿美元。\n\n目前可确认的信息较为有限：报道仅说明Meta计划发行新股以支持AI基础设施建设，并给出了最高950亿美元的融资规模上限。报道未披露具体的发行时间表、承销安排、资金的具体投向细节，也未说明该计划是否已获监管批准或董事会最终确认。\n\n从背景看，大型科技公司正持续加大对AI数据中心、算力芯片和相关基础设施的投入，融资方式包括自有现金流、债务以及股票发行等。Meta此次选择股票发行，属于其AI资本开支融资安排的一部分。\n\n由于原始报道内容简短，关于发行结构、定价、稀释影响以及资金分配比例等关键细节尚不明确，需等待Meta官方公告或后续披露加以核实。",
+      "detailZh": "据 The Decoder AI 报道，Meta 计划通过出售新股来筹集资金，用于其人工智能基础设施的建设。报道称，此次股票发行规模最高可达 950 亿美元。\n\n目前可确认的信息较为有限：报道只说明了融资方式（发行新股）和资金用途（AI 基础设施扩建），以及最高融资规模（950 亿美元）。关于发行时间表、承销安排、具体资金分配、对现有股东稀释程度等细节，来源材料均未提及。\n\n从背景看，大型科技公司为 AI 数据中心、算力集群和相关基础设施投入巨额资本开支，Meta 是主要参与者之一。此次选择股权融资而非债务融资，是报道中呈现的核心事实。\n\n由于来源为单一媒体报道且细节有限，上述内容应视为初步信息，后续可能有更完整的官方披露。",
       "keyPointsZh": [
-        "Meta计划出售新股，为AI基础设施扩建筹集资金",
+        "Meta计划出售新股为AI基础设施扩建融资",
         "报道称股票发行规模最高可达950亿美元",
-        "报道未披露发行时间表、承销安排和资金具体投向",
-        "该计划是否已获最终批准尚不明确"
+        "资金来源用途为AI基础设施建设",
+        "发行时间表、承销安排等细节尚未披露"
       ],
-      "impactZh": "若该融资计划落实，将是科技公司为AI基础设施进行的规模较大的股权融资之一，可能进一步推高行业AI资本开支预期，并影响市场对大型科技公司融资方式的判断。",
+      "impactZh": "若属实，这将是大型科技公司以大规模股权融资支持AI资本开支的显著案例，可能影响市场对AI基础设施投资规模和融资方式的预期。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "报道事实：Meta计划通过股票发行融资，规模上限为950亿美元，用于AI基础设施建设。合理推断：这反映AI基础设施投入对资本的需求上升，股票发行可能带来股权稀释，但具体影响取决于发行定价与规模，目前尚无细节。",
-      "limitationsZh": "原始报道内容简短，未提供发行时间表、承销商、定价方式、资金具体分配、监管审批状态及官方确认信息；950亿美元为报道所述上限，实际规模可能不同。",
+      "interpretationZh": "报道呈现的事实是：Meta计划通过发行新股融资，最高规模950亿美元，用于AI基础设施。可合理推断的是，这反映了AI基建资本开支对资金的巨大需求；但发行结构、时间和对股东的具体影响均未在来源中说明，不宜过度解读。",
+      "limitationsZh": "来源为单一媒体报道，细节有限；发行时间表、承销安排、资金具体分配、股东稀释影响等均未披露；950亿美元为“最高”规模，实际发行规模可能不同；尚无Meta官方文件佐证。",
       "actionStepsZh": [],
-      "detailCompleteness": "limited",
+      "detailCompleteness": "summary",
       "visual": null,
       "processingError": null,
       "reportCount": 1,
@@ -264,9 +300,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T14:21:23.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
-        "current": 64,
-        "peak": 64,
+        "endedAt": "2026-10-26T20:45:51.644Z",
+        "current": 65,
+        "peak": 65,
         "history": [
           {
             "at": "2026-10-26T14:21:23.000Z",
@@ -275,9 +311,45 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
-            "value": 64,
+            "at": "2026-10-26T15:16:18.520Z",
+            "label": "10/26 23:16",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T16:11:14.041Z",
+            "label": "10/27 00:11",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:06:09.561Z",
+            "label": "10/27 01:06",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T18:01:05.082Z",
+            "label": "10/27 02:01",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T18:56:00.602Z",
+            "label": "10/27 02:56",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:50:56.123Z",
+            "label": "10/27 03:50",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -352,7 +424,9 @@
         "Hugging Face",
         "网络安全"
       ],
-      "models": [],
+      "models": [
+        "Claude"
+      ],
       "detailZh": "Hugging Face CEO Clément Delangue 在 X 上转引《华盛顿邮报》独家报道，并发表评论称，认为把 AI 集中在封闭大门后就是安全的想法需要更新认知。这一表态针对的是报道中描述的一起安全事件。\n\n据转述，一组前 DOGE 网络研究人员在不到 12 小时内使用 AI 智能体渗透进 Anthropic 的系统，进入的范围包括讨论该公司最敏感模型的 Slack 频道。报道未在转述中说明具体攻击手法、涉及的具体模型或数据，也未说明 Anthropic 是否已确认或回应。\n\n时间线上，此事发生在 Anthropic 吹哨人 Joseph Coxon 指控该公司在“私人公司的 Slack”上进行“傲慢的赌博”数周之后。转述将这两件事并置，但未说明二者之间是否存在直接因果或关联。\n\nDelangue 的评论将事件引向一个更广泛的行业争论：AI 能力集中在少数封闭系统内部，是否本身就构成安全风险。作为开源 AI 平台 Hugging Face 的负责人，他的表态带有明显的立场色彩。\n\n目前可核实的信息主要来自《华盛顿邮报》报道的转述和 Delangue 的公开评论，Anthropic 方面的说法、事件的技术细节与影响范围均未在输入中呈现。",
       "keyPointsZh": [
         "Hugging Face CEO Clément Delangue 转引《华盛顿邮报》独家报道并发表评论。",
@@ -396,7 +470,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T13:39:40.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -407,14 +481,50 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T14:24:32.442Z",
-            "label": "10/26 22:24",
+            "at": "2026-10-26T14:32:56.455Z",
+            "label": "10/26 22:32",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T15:26:12.911Z",
+            "label": "10/26 23:26",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T16:19:29.366Z",
+            "label": "10/27 00:19",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:12:45.822Z",
+            "label": "10/27 01:12",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T18:06:02.277Z",
+            "label": "10/27 02:06",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T18:59:18.733Z",
+            "label": "10/27 02:59",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:52:35.188Z",
+            "label": "10/27 03:52",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 59,
             "reports": 1
           }
@@ -556,7 +666,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T12:31:52.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -567,20 +677,56 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T13:24:22.961Z",
-            "label": "10/26 21:24",
+            "at": "2026-10-26T13:26:45.293Z",
+            "label": "10/26 21:26",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T14:21:38.587Z",
+            "label": "10/26 22:21",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T15:16:31.881Z",
+            "label": "10/26 23:16",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:16:53.923Z",
-            "label": "10/26 22:16",
+            "at": "2026-10-26T16:11:25.175Z",
+            "label": "10/27 00:11",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:06:18.468Z",
+            "label": "10/27 01:06",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T18:01:11.762Z",
+            "label": "10/27 02:01",
             "value": 38,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T18:56:05.056Z",
+            "label": "10/27 02:56",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:50:58.350Z",
+            "label": "10/27 03:50",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 50,
             "reports": 1
           }
@@ -655,7 +801,9 @@
         "AI industry",
         "Bloomberg"
       ],
-      "models": [],
+      "models": [
+        "Claude"
+      ],
       "detailZh": "据 Bloomberg 报道并经 X 平台账号 Testing Catalog 转述，Anthropic 计划在周一上午9点（美东时间）公开提交 S-1 IPO 申请文件。S-1 是美国公司申请在美上市的正式注册文件，公开提交意味着公司的上市意向和部分财务信息将进入公众视野。\n\n报道指出，此次 IPO 的规模可能创下纪录。公司预计最快在11月9日当周开始正式路演，即向机构投资者推介股票、确定发行价区间的阶段。报道还称，Anthropic 期望其 IPO 规模达到或超过 SpaceX。\n\n消息来源同时猜测，Anthropic 可能会在提交文件的同时伴随一次大模型发布，但这一说法属于推测，未获证实。\n\n目前可确认的信息仅限于报道所述的提交时间、路演时间窗口和规模预期，S-1 文件的具体财务数据、发行股数和估值尚未披露。",
       "keyPointsZh": [
         "Anthropic 计划周一美东时间上午9点公开提交 S-1 IPO 申请文件",
@@ -694,7 +842,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T12:31:31.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -705,20 +853,56 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T13:24:08.961Z",
-            "label": "10/26 21:24",
+            "at": "2026-10-26T13:26:26.627Z",
+            "label": "10/26 21:26",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T14:21:22.254Z",
+            "label": "10/26 22:21",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T15:16:17.881Z",
+            "label": "10/26 23:16",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:16:46.923Z",
-            "label": "10/26 22:16",
+            "at": "2026-10-26T16:11:13.508Z",
+            "label": "10/27 00:11",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:06:09.135Z",
+            "label": "10/27 01:06",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T18:01:04.762Z",
+            "label": "10/27 02:01",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T18:56:00.389Z",
+            "label": "10/27 02:56",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:50:56.016Z",
+            "label": "10/27 03:50",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 65,
             "reports": 1
           }
@@ -833,7 +1017,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T09:49:33.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -844,38 +1028,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T10:42:51.647Z",
-            "label": "10/26 18:42",
-            "value": 21,
+            "at": "2026-10-26T10:49:12.876Z",
+            "label": "10/26 18:49",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:36:10.295Z",
-            "label": "10/26 19:36",
-            "value": 28,
+            "at": "2026-10-26T11:48:52.753Z",
+            "label": "10/26 19:48",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:29:28.942Z",
-            "label": "10/26 20:29",
-            "value": 35,
+            "at": "2026-10-26T12:48:32.630Z",
+            "label": "10/26 20:48",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:22:47.590Z",
-            "label": "10/26 21:22",
-            "value": 42,
+            "at": "2026-10-26T13:48:12.506Z",
+            "label": "10/26 21:48",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:16:06.237Z",
-            "label": "10/26 22:16",
-            "value": 49,
+            "at": "2026-10-26T14:47:52.383Z",
+            "label": "10/26 22:47",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T15:47:32.260Z",
+            "label": "10/26 23:47",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T16:47:12.137Z",
+            "label": "10/27 00:47",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:46:52.013Z",
+            "label": "10/27 01:46",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T18:46:31.890Z",
+            "label": "10/27 02:46",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:46:11.767Z",
+            "label": "10/27 03:46",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 55,
             "reports": 1
           }
@@ -993,7 +1207,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T09:18:15.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1004,38 +1218,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T10:16:46.647Z",
-            "label": "10/26 18:16",
+            "at": "2026-10-26T10:20:45.604Z",
+            "label": "10/26 18:20",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T11:23:16.208Z",
+            "label": "10/26 19:23",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:15:18.295Z",
-            "label": "10/26 19:15",
-            "value": 29,
+            "at": "2026-10-26T12:25:46.812Z",
+            "label": "10/26 20:25",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:13:49.942Z",
-            "label": "10/26 20:13",
-            "value": 37,
+            "at": "2026-10-26T13:28:17.416Z",
+            "label": "10/26 21:28",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:12:21.590Z",
-            "label": "10/26 21:12",
-            "value": 44,
+            "at": "2026-10-26T14:30:48.020Z",
+            "label": "10/26 22:30",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:10:53.237Z",
-            "label": "10/26 22:10",
-            "value": 52,
+            "at": "2026-10-26T15:33:18.624Z",
+            "label": "10/26 23:33",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T16:35:49.228Z",
+            "label": "10/27 00:35",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:38:19.832Z",
+            "label": "10/27 01:38",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T18:40:50.436Z",
+            "label": "10/27 02:40",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:43:21.040Z",
+            "label": "10/27 03:43",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 59,
             "reports": 1
           }
@@ -1159,7 +1403,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T07:00:00.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1170,56 +1414,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T07:54:22.765Z",
-            "label": "10/26 15:54",
-            "value": 19,
+            "at": "2026-10-26T08:15:04.694Z",
+            "label": "10/26 16:15",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-26T08:48:45.530Z",
-            "label": "10/26 16:48",
-            "value": 23,
+            "at": "2026-10-26T09:30:09.389Z",
+            "label": "10/26 17:30",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-26T09:43:08.295Z",
-            "label": "10/26 17:43",
-            "value": 28,
+            "at": "2026-10-26T10:45:14.084Z",
+            "label": "10/26 18:45",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-26T10:37:31.060Z",
-            "label": "10/26 18:37",
-            "value": 32,
+            "at": "2026-10-26T12:00:18.779Z",
+            "label": "10/26 20:00",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:31:53.825Z",
-            "label": "10/26 19:31",
+            "at": "2026-10-26T13:15:23.474Z",
+            "label": "10/26 21:15",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T14:30:28.169Z",
+            "label": "10/26 22:30",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:26:16.590Z",
-            "label": "10/26 20:26",
-            "value": 42,
+            "at": "2026-10-26T15:45:32.864Z",
+            "label": "10/26 23:45",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:20:39.355Z",
-            "label": "10/26 21:20",
-            "value": 46,
+            "at": "2026-10-26T17:00:37.559Z",
+            "label": "10/27 01:00",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:15:02.120Z",
-            "label": "10/26 22:15",
-            "value": 51,
+            "at": "2026-10-26T18:15:42.254Z",
+            "label": "10/27 02:15",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T19:30:46.949Z",
+            "label": "10/27 03:30",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 55,
             "reports": 1
           }
@@ -1343,7 +1599,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T04:48:25.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1354,68 +1610,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T05:44:52.262Z",
-            "label": "10/26 13:44",
+            "at": "2026-10-26T06:15:27.422Z",
+            "label": "10/26 14:15",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-26T06:41:19.524Z",
-            "label": "10/26 14:41",
+            "at": "2026-10-26T07:42:29.844Z",
+            "label": "10/26 15:42",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-26T07:37:46.786Z",
-            "label": "10/26 15:37",
+            "at": "2026-10-26T09:09:32.266Z",
+            "label": "10/26 17:09",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-26T08:34:14.049Z",
-            "label": "10/26 16:34",
+            "at": "2026-10-26T10:36:34.688Z",
+            "label": "10/26 18:36",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-26T09:30:41.311Z",
-            "label": "10/26 17:30",
+            "at": "2026-10-26T12:03:37.110Z",
+            "label": "10/26 20:03",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-26T10:27:08.573Z",
-            "label": "10/26 18:27",
+            "at": "2026-10-26T13:30:39.533Z",
+            "label": "10/26 21:30",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:23:35.835Z",
-            "label": "10/26 19:23",
+            "at": "2026-10-26T14:57:41.955Z",
+            "label": "10/26 22:57",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:20:03.098Z",
-            "label": "10/26 20:20",
+            "at": "2026-10-26T16:24:44.377Z",
+            "label": "10/27 00:24",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:16:30.360Z",
-            "label": "10/26 21:16",
+            "at": "2026-10-26T17:51:46.799Z",
+            "label": "10/27 01:51",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:12:57.622Z",
-            "label": "10/26 22:12",
+            "at": "2026-10-26T19:18:49.221Z",
+            "label": "10/27 03:18",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 55,
             "reports": 1
           }
@@ -1569,7 +1825,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T04:25:11.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1580,69 +1836,466 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T05:23:44.989Z",
-            "label": "10/26 13:23",
+            "at": "2026-10-26T05:54:20.149Z",
+            "label": "10/26 13:54",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-26T06:22:18.979Z",
-            "label": "10/26 14:22",
+            "at": "2026-10-26T07:23:29.298Z",
+            "label": "10/26 15:23",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-26T07:20:52.968Z",
-            "label": "10/26 15:20",
+            "at": "2026-10-26T08:52:38.448Z",
+            "label": "10/26 16:52",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-26T08:19:26.958Z",
-            "label": "10/26 16:19",
+            "at": "2026-10-26T10:21:47.597Z",
+            "label": "10/26 18:21",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-26T09:18:00.947Z",
-            "label": "10/26 17:18",
+            "at": "2026-10-26T11:50:56.747Z",
+            "label": "10/26 19:50",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T10:16:34.937Z",
-            "label": "10/26 18:16",
+            "at": "2026-10-26T13:20:05.896Z",
+            "label": "10/26 21:20",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:15:08.926Z",
-            "label": "10/26 19:15",
+            "at": "2026-10-26T14:49:15.046Z",
+            "label": "10/26 22:49",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:13:42.916Z",
-            "label": "10/26 20:13",
+            "at": "2026-10-26T16:18:24.195Z",
+            "label": "10/27 00:18",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:12:16.905Z",
-            "label": "10/26 21:12",
+            "at": "2026-10-26T17:47:33.345Z",
+            "label": "10/27 01:47",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:10:50.895Z",
-            "label": "10/26 22:10",
+            "at": "2026-10-26T19:16:42.494Z",
+            "label": "10/27 03:16",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e8d538cc87f83269",
+      "normalizedUrl": "https://arxiv.org/abs/2610.31679",
+      "originalUrl": "https://arxiv.org/abs/2610.31679",
+      "titleOriginal": "MisconceptDialogue: Evaluation Criteria Shape Measured Success in LLM Math Tutoring",
+      "summaryOriginal": "arXiv:2610.31679v1 Announce Type: new Abstract: Large language models are increasingly used as math tutors, raising two questions: can a single LLM detect a student's error, diagnose the underlying misconception, and remediate it through multi-turn dialogue - and can we trust the numbers that report how well it does? We address both with MISCONCEPTDIALOGUE, a fully automated framework that runs the full pipeline on five open-weight LLM tutors (7B-14B) interacting with LLM-simulated students over 5,000+ dialogues - a deliberately simulated protocol (paired conditions, a wrong-diagnosis control unsafe with real learners, scale) whose results do not establish real-student learning. On measurement, our headline finding is uncomfortable for the field: benchmark-style exact-match scoring common in standard math NLP - a lower-bound stress test - reports 42.1% measured Remediation Success Rate on identical dialogues where a human-calibrated LLM-as-judge reports 81.3%, a 39.2 percentage-point spread larger than the combined effects of tutor model, teaching strategy, and supplied diagnostic information. This is not a single-judge artifact: four independent LLM judges and 200 human annotation",
+      "originalLanguage": "en",
+      "author": "Woojin Lee, Yoonkyu Woo, Jinah Kim, Hyeok-Min Gwon, Jin-Xia Huang",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.31679",
+          "publishedAt": "2026-10-26T04:00:00.000Z",
+          "title": "MisconceptDialogue: Evaluation Criteria Shape Measured Success in LLM Math Tutoring",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究直接指出数学辅导类 LLM 评测中评分口径可能比模型本身影响更大，对依赖基准分数的研究与产品评估有警示意义。",
+      "importanceReasonEn": "The study shows that scoring methodology can matter more than the model itself in math-tutoring LLM evaluation, a warning for research and product assessment that relies on benchmark scores.",
+      "scoringMode": "ai",
+      "titleZh": "MisconceptDialogue：评估标准如何塑造大模型数学辅导的实测成功率",
+      "titleEn": "MisconceptDialogue: Evaluation Criteria Shape Measured Success in LLM Math Tutoring",
+      "summaryZh": "arXiv 论文提出 MISCONCEPTDIALOGUE 全自动框架，让五个 7B–14B 开源权重模型扮演数学辅导老师，与 LLM 模拟学生进行 5000 多轮对话，检验单一模型能否发现错误、诊断误解并加以纠正。核心发现是测量方式影响巨大：在完全相同的对话上，基准式精确匹配评分给出 42.1% 的补救成功率，而经人工校准的 LLM 评判给出 81.3%，相差 39.2 个百分点，超过辅导模型、教学策略和诊断信息三者效应之和。",
+      "summaryEn": "The arXiv paper introduces MISCONCEPTDIALOGUE, a fully automated framework in which five open-weight 7B–14B LLM tutors interact with LLM-simulated students over 5,000+ dialogues to test whether a single model can detect errors, diagnose misconceptions and remediate them. Its headline finding concerns measurement: on identical dialogues, benchmark-style exact-match scoring reports 42.1% remediation success while a human-calibrated LLM judge reports 81.3%, a 39.2 percentage-point gap larger than the combined effects of tutor model, teaching strategy and supplied diagnostic information.",
+      "keywords": [
+        "MisconceptDialogue",
+        "补救成功率",
+        "精确匹配评分",
+        "LLM评判",
+        "数学辅导",
+        "误解诊断"
+      ],
+      "topics": [
+        "LLM数学辅导",
+        "评估方法",
+        "LLM-as-judge",
+        "误解诊断",
+        "多轮对话"
+      ],
+      "models": [
+        "7B-14B open-weight LLMs"
+      ],
+      "detailZh": "该论文来自 arXiv 计算与语言板块，提出名为 MISCONCEPTDIALOGUE 的全自动评测框架。框架让五个参数规模在 7B 到 14B 之间的开源权重 LLM 扮演数学辅导老师，与由 LLM 模拟的学生进行多轮对话，总对话量超过 5000 轮。研究要回答两个问题：单一 LLM 能否在对话中检测学生的错误、诊断其背后的误解并通过多轮互动加以纠正；以及报告出来的成功率数字是否可信。\n\n在测量层面，论文给出了一个对领域而言不太舒服的结论。在完全相同的对话上，标准数学 NLP 中常见的基准式精确匹配评分——作者称其为一种下界压力测试——测得的补救成功率为 42.1%；而经人工校准的 LLM 作为评判者给出的成功率为 81.3%。两者相差 39.2 个百分点，这一差距大于辅导模型、教学策略和所提供诊断信息三者效应之和。\n\n作者强调这不是单一评判者造成的假象：四个独立的 LLM 评判者以及 200 条人工标注都参与了验证（摘要在此处截断，具体人工标注结果未在可见文本中给出）。\n\n需要特别注意的是，该实验采用刻意模拟的协议，包含配对条件和一种在真实学习者身上不安全、因而只能模拟的错误诊断对照，并借此获得规模。作者明确表示，其结果不能证明真实学生的学习效果。",
+      "keyPointsZh": [
+        "框架让五个 7B–14B 开源权重 LLM 辅导老师与 LLM 模拟学生进行 5000 多轮对话。",
+        "相同对话上，精确匹配评分测得 42.1% 补救成功率，人工校准的 LLM 评判测得 81.3%。",
+        "39.2 个百分点的差距大于辅导模型、教学策略与诊断信息三者效应之和。",
+        "四个独立 LLM 评判者与 200 条人工标注用于排除单一评判者偏差。",
+        "实验为模拟协议，作者明确表示结果不能证明真实学生的学习效果。"
+      ],
+      "impactZh": "该结果提示，数学辅导 LLM 的评测分数高度依赖评分口径，基准式精确匹配可能系统性低估模型表现。若这一差距成立，以往基于精确匹配的辅导能力结论和模型排名都需要重新审视，评估设计本身应成为研究对象。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 LLM 做数学辅导或构建教育类 AI 产品的团队而言，选择何种评分方式会显著改变对模型能力的判断；仅看精确匹配分数可能低估模型，而只看 LLM 评判又可能高估，需要交叉验证。",
+      "howItWorksZh": "框架流程为：LLM 模拟学生产生含误解的解题对话，7B–14B 辅导模型在多轮对话中检测错误、诊断误解并给出补救；同一批对话分别用基准式精确匹配评分和经人工校准的 LLM-as-judge 评分，并设置配对条件与错误诊断对照以比较模型、策略和诊断信息的影响。",
+      "interpretationZh": "论文报告的事实是：在模拟对话上，两种评分口径给出差异极大的成功率，且该差异大于所考察的教学变量效应。合理推断是：评测指标的选择会实质影响对辅导能力的结论。但作者已声明模拟协议不能外推到真实学生，因此不能据此断言真实辅导效果。",
+      "limitationsZh": "实验完全基于 LLM 模拟学生，作者明确表示结果不证明真实学生学习效果；错误诊断对照在真实学习者身上不安全，只能模拟；摘要中人工标注的具体结果未完整给出；论文为 arXiv 预印本，尚未经同行评审。",
+      "actionStepsZh": [
+        "在评估数学辅导 LLM 时同时报告精确匹配与 LLM 评判两类指标，并说明差异。",
+        "对 LLM-as-judge 结果进行人工抽样校准，避免单一评判者偏差。",
+        "在引用辅导成功率时注明是否为模拟学生实验，避免外推到真实教学。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "同一批对话上，两种评分口径的补救成功率相差 39.2 个百分点。",
+        "data": [
+          {
+            "label": "精确匹配评分",
+            "value": 42.1,
+            "display": ""
+          },
+          {
+            "label": "人工校准LLM评判",
+            "value": 81.3,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.31679",
+          "publishedAt": "2026-10-26T04:00:00.000Z",
+          "title": "MisconceptDialogue: Evaluation Criteria Shape Measured Success in LLM Math Tutoring",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-26T04:00:00.000Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-26T04:00:00.000Z",
+            "label": "10/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-26T05:31:26.513Z",
+            "label": "10/26 13:31",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T07:02:53.026Z",
+            "label": "10/26 15:02",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T08:34:19.539Z",
+            "label": "10/26 16:34",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T10:05:46.052Z",
+            "label": "10/26 18:05",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T11:37:12.565Z",
+            "label": "10/26 19:37",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T13:08:39.078Z",
+            "label": "10/26 21:08",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T14:40:05.591Z",
+            "label": "10/26 22:40",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T16:11:32.104Z",
+            "label": "10/27 00:11",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:42:58.617Z",
+            "label": "10/27 01:42",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:14:25.130Z",
+            "label": "10/27 03:14",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "ea6625878e572d72",
+      "normalizedUrl": "https://arxiv.org/abs/2610.31683",
+      "originalUrl": "https://arxiv.org/abs/2610.31683",
+      "titleOriginal": "The Schema Coherence Inventory: Measuring Whether an Assigned Belief Organizes a Language Model's Cognition",
+      "summaryOriginal": "arXiv:2610.31683v1 Announce Type: new Abstract: Persona-conditioned language models are used as simulated patients and affective agents, but there is no validated way to ask whether a belief assigned to such a model organizes its behaviour or whether the model has merely adopted a mood. We present the Schema Coherence Inventory (SCI): 96 forced-choice items at eight levels of Beck's cognitive model, each offering six replies keyed to three negative self-schemas and their positive counterparts, scored by length-normalized log-likelihood so that nothing is generated or parsed. Affect alone can move a model onto a default belief, so the discriminant criterion is target specificity: a condition built for one belief must select that belief more often than conditions built for the other beliefs of its pole. Six validation studies over 107 conditions on five backbones (1.7B-14B parameters) support this reading. Nine clinically trained raters recover the keyed belief at 79.5% (chance 16.7%). Belief adapters are target-specific on every backbone (+17.7 points; 30/30 belief cells positive), and a condition's SCI profile identifies its own free generations in 24/30 cases against 5 expected by",
+      "originalLanguage": "en",
+      "author": "Yuqi Wu, Deyang Li, Katharine Hibbard, Ron Oswald, David Sinclair, Adegboyega Sapara, Kalutota Kuruwe Arachchige Sajana Indula Samarasinghe, Abhinav Pillai, Reham Shalaby, Riffat Alam, Xin-Min Li, Yanbo Zhang, Jie Chen",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-26T04:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.31683",
+          "publishedAt": "2026-10-26T04:00:00.000Z",
+          "title": "The Schema Coherence Inventory: Measuring Whether an Assigned Belief Organizes a Language Model's Cognition",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 52,
+      "importanceReasonZh": "该研究提出了一个可复用的评估工具，用于区分模型是真正采纳了被赋予的信念，还是只表现出情绪倾向，这对人格化语言模型的可信度评估有实际意义；但目前仅为预印本，尚未经同行评审。",
+      "importanceReasonEn": "The work offers a reusable evaluation instrument for distinguishing whether a model genuinely adopts an assigned belief or merely exhibits an affective tone, which matters for trusting persona-conditioned models; however, it is only a preprint and not yet peer reviewed.",
+      "scoringMode": "ai",
+      "titleZh": "图式一致性量表：衡量被赋予的信念是否组织语言模型的认知",
+      "titleEn": "The Schema Coherence Inventory: Measuring Whether an Assigned Belief Organizes a Language Model's Cognition",
+      "summaryZh": "一篇 arXiv 预印本提出图式一致性量表（SCI），用 96 道强制选择题在贝克认知模型的八个层级上测量：被赋予某个信念的语言模型，其行为是被该信念组织，还是仅仅染上了一种情绪。",
+      "summaryEn": "An arXiv preprint introduces the Schema Coherence Inventory (SCI), a 96-item forced-choice instrument at eight levels of Beck's cognitive model, to test whether a belief assigned to a language model organizes its behavior or whether the model has merely adopted a mood.",
+      "keywords": [
+        "Schema Coherence Inventory",
+        "SCI",
+        "Beck cognitive model",
+        "persona conditioning",
+        "belief adapters",
+        "target specificity",
+        "log-likelihood scoring"
+      ],
+      "topics": [
+        "persona-conditioned language models",
+        "belief representation",
+        "model evaluation",
+        "cognitive modeling",
+        "LLM psychology"
+      ],
+      "models": [],
+      "detailZh": "该论文以 arXiv 预印本形式发布（编号 2610.31683v1），属于计算与语言方向的新投稿。作者关注的问题是：人格化语言模型常被用作模拟患者或情感代理，但此前没有经过验证的方法来判断，赋予模型的某个信念是否真正组织了它的行为，还是模型只是进入了一种情绪状态。\n\n为此，作者提出图式一致性量表（SCI）。它包含 96 道强制选择题，分布在贝克认知模型的八个层级上；每道题提供六个回答选项，分别对应三种负面自我图式及其正面对应物。评分方式是对每个选项计算长度归一化的对数似然，因此整个过程不生成文本、也不做解析。\n\n作者指出，单纯的情绪影响也可能把模型推向某个默认信念，因此判别标准是“目标特异性”：为某一信念构建的条件，必须比为其同一极的其他信念构建的条件更频繁地选中该信念。\n\n论文报告了六项验证研究，覆盖五个骨干模型（1.7B 至 14B 参数）上的 107 个条件。九名受过临床训练的评分者以 79.5% 的比例还原出预设信念（随机水平为 16.7%）。信念适配器在每个骨干模型上都表现出目标特异性（提升 17.7 个百分点，30/30 个信念单元为正），并且一个条件的 SCI 剖面能在 24/30 个案例中识别出其自身的自由生成内容，而随机预期约为 5 个。",
+      "keyPointsZh": [
+        "提出图式一致性量表（SCI），共 96 道强制选择题，覆盖贝克认知模型的八个层级。",
+        "每道题有六个选项，对应三种负面自我图式及其正面对应物，用长度归一化对数似然评分，不生成也不解析文本。",
+        "核心判别标准是目标特异性：为某信念构建的条件应比同极其他信念的条件更常选中该信念。",
+        "六项验证研究覆盖五个骨干模型（1.7B–14B）上的 107 个条件；九名临床训练评分者还原预设信念的准确率为 79.5%，随机水平为 16.7%。",
+        "信念适配器在所有骨干模型上均表现出目标特异性，提升 17.7 个百分点，30/30 个信念单元为正。"
+      ],
+      "impactZh": "如果该方法得到进一步验证，它可以为评估人格化语言模型提供一个可量化的工具，帮助区分模型是真正采纳了被赋予的信念，还是只表现出情绪倾向，从而影响模拟患者、情感代理等应用的可信度判断。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用人格化或角色设定提示的开发者而言，该研究提示：模型表现出某种语气并不等于它采纳了相应信念，评估时应检查目标特异性，而不只看表面风格。",
+      "howItWorksZh": "SCI 采用强制选择形式：每道题给出六个候选回答，分别对应三种负面自我图式及其正面对应物。评分时对每个候选回答计算长度归一化的对数似然，取最高者作为模型的选择，因此不需要模型生成文本，也不需要额外解析。判别时比较不同条件之间的选择分布，检验为某一信念构建的条件是否比同极其他信念的条件更常选中该信念。",
+      "interpretationZh": "论文报告的事实是：SCI 在五个骨干模型、107 个条件上完成了六项验证研究，临床训练评分者还原预设信念的准确率为 79.5%，信念适配器表现出目标特异性。合理的推断是：该方法提供了一种不依赖生成文本的信念测量思路。但论文为预印本，尚未经同行评审，其结论的稳健性仍需独立复现。",
+      "limitationsZh": "该论文为 arXiv 预印本，尚未经同行评审。验证范围限于 1.7B 至 14B 参数的五个骨干模型，更大模型或其他架构上的表现未知。SCI 基于贝克认知模型和特定自我图式设计，能否推广到其他类型的信念尚不明确。评分依赖对数似然，对不开放 logits 的模型可能不适用。",
+      "actionStepsZh": [
+        "在评估人格化模型时，区分“情绪倾向”与“信念采纳”，检查目标特异性而非仅看表面风格。",
+        "如需复现，可参考 SCI 的强制选择加长度归一化对数似然评分思路，避免依赖生成文本解析。",
+        "关注该预印本的后续同行评审版本及独立复现结果。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "九名临床训练评分者还原预设信念的准确率为 79.5%，远高于 16.7% 的随机水平。",
+        "data": [
+          {
+            "label": "临床训练评分者还原预设信念",
+            "value": 79.5,
+            "display": ""
+          },
+          {
+            "label": "随机水平",
+            "value": 16.7,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.31683",
+          "publishedAt": "2026-10-26T04:00:00.000Z",
+          "title": "The Schema Coherence Inventory: Measuring Whether an Assigned Belief Organizes a Language Model's Cognition",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-26T04:00:00.000Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
+        "current": 54,
+        "peak": 54,
+        "history": [
+          {
+            "at": "2026-10-26T04:00:00.000Z",
+            "label": "10/26 12:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-26T05:31:26.513Z",
+            "label": "10/26 13:31",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T07:02:53.026Z",
+            "label": "10/26 15:02",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T08:34:19.539Z",
+            "label": "10/26 16:34",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T10:05:46.052Z",
+            "label": "10/26 18:05",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T11:37:12.565Z",
+            "label": "10/26 19:37",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T13:08:39.078Z",
+            "label": "10/26 21:08",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T14:40:05.591Z",
+            "label": "10/26 22:40",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T16:11:32.104Z",
+            "label": "10/27 00:11",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T17:42:58.617Z",
+            "label": "10/27 01:42",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T19:14:25.130Z",
+            "label": "10/27 03:14",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
+            "value": 54,
             "reports": 1
           }
         ],
@@ -1788,7 +2441,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T04:00:00.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1799,68 +2452,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T05:00:51.353Z",
-            "label": "10/26 13:00",
+            "at": "2026-10-26T05:31:26.513Z",
+            "label": "10/26 13:31",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-26T06:01:42.706Z",
-            "label": "10/26 14:01",
+            "at": "2026-10-26T07:02:53.026Z",
+            "label": "10/26 15:02",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-26T07:02:34.059Z",
-            "label": "10/26 15:02",
+            "at": "2026-10-26T08:34:19.539Z",
+            "label": "10/26 16:34",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-26T08:03:25.412Z",
-            "label": "10/26 16:03",
+            "at": "2026-10-26T10:05:46.052Z",
+            "label": "10/26 18:05",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-26T09:04:16.765Z",
-            "label": "10/26 17:04",
+            "at": "2026-10-26T11:37:12.565Z",
+            "label": "10/26 19:37",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T10:05:08.119Z",
-            "label": "10/26 18:05",
+            "at": "2026-10-26T13:08:39.078Z",
+            "label": "10/26 21:08",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:05:59.472Z",
-            "label": "10/26 19:05",
+            "at": "2026-10-26T14:40:05.591Z",
+            "label": "10/26 22:40",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:06:50.825Z",
-            "label": "10/26 20:06",
+            "at": "2026-10-26T16:11:32.104Z",
+            "label": "10/27 00:11",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:07:42.178Z",
-            "label": "10/26 21:07",
+            "at": "2026-10-26T17:42:58.617Z",
+            "label": "10/27 01:42",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:08:33.531Z",
-            "label": "10/26 22:08",
+            "at": "2026-10-26T19:14:25.130Z",
+            "label": "10/27 03:14",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 65,
             "reports": 1
           }
@@ -1990,7 +2643,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T04:00:00.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -2001,68 +2654,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T05:00:51.353Z",
-            "label": "10/26 13:00",
+            "at": "2026-10-26T05:31:26.513Z",
+            "label": "10/26 13:31",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-26T06:01:42.706Z",
-            "label": "10/26 14:01",
+            "at": "2026-10-26T07:02:53.026Z",
+            "label": "10/26 15:02",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-26T07:02:34.059Z",
-            "label": "10/26 15:02",
+            "at": "2026-10-26T08:34:19.539Z",
+            "label": "10/26 16:34",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-10-26T08:03:25.412Z",
-            "label": "10/26 16:03",
+            "at": "2026-10-26T10:05:46.052Z",
+            "label": "10/26 18:05",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-26T09:04:16.765Z",
-            "label": "10/26 17:04",
+            "at": "2026-10-26T11:37:12.565Z",
+            "label": "10/26 19:37",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-26T10:05:08.119Z",
-            "label": "10/26 18:05",
+            "at": "2026-10-26T13:08:39.078Z",
+            "label": "10/26 21:08",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:05:59.472Z",
-            "label": "10/26 19:05",
+            "at": "2026-10-26T14:40:05.591Z",
+            "label": "10/26 22:40",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:06:50.825Z",
-            "label": "10/26 20:06",
+            "at": "2026-10-26T16:11:32.104Z",
+            "label": "10/27 00:11",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:07:42.178Z",
-            "label": "10/26 21:07",
+            "at": "2026-10-26T17:42:58.617Z",
+            "label": "10/27 01:42",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:08:33.531Z",
-            "label": "10/26 22:08",
+            "at": "2026-10-26T19:14:25.130Z",
+            "label": "10/27 03:14",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 59,
             "reports": 1
           }
@@ -2165,7 +2818,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T04:00:00.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2176,68 +2829,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T05:00:51.353Z",
-            "label": "10/26 13:00",
+            "at": "2026-10-26T05:31:26.513Z",
+            "label": "10/26 13:31",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-26T06:01:42.706Z",
-            "label": "10/26 14:01",
+            "at": "2026-10-26T07:02:53.026Z",
+            "label": "10/26 15:02",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-26T07:02:34.059Z",
-            "label": "10/26 15:02",
+            "at": "2026-10-26T08:34:19.539Z",
+            "label": "10/26 16:34",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-26T08:03:25.412Z",
-            "label": "10/26 16:03",
+            "at": "2026-10-26T10:05:46.052Z",
+            "label": "10/26 18:05",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-26T09:04:16.765Z",
-            "label": "10/26 17:04",
+            "at": "2026-10-26T11:37:12.565Z",
+            "label": "10/26 19:37",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-26T10:05:08.119Z",
-            "label": "10/26 18:05",
+            "at": "2026-10-26T13:08:39.078Z",
+            "label": "10/26 21:08",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:05:59.472Z",
-            "label": "10/26 19:05",
+            "at": "2026-10-26T14:40:05.591Z",
+            "label": "10/26 22:40",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:06:50.825Z",
-            "label": "10/26 20:06",
+            "at": "2026-10-26T16:11:32.104Z",
+            "label": "10/27 00:11",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:07:42.178Z",
-            "label": "10/26 21:07",
+            "at": "2026-10-26T17:42:58.617Z",
+            "label": "10/27 01:42",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:08:33.531Z",
-            "label": "10/26 22:08",
+            "at": "2026-10-26T19:14:25.130Z",
+            "label": "10/27 03:14",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 55,
             "reports": 1
           }
@@ -2345,7 +2998,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-26T04:00:00.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2356,70 +3009,306 @@
             "reports": 0
           },
           {
-            "at": "2026-10-26T05:00:51.353Z",
-            "label": "10/26 13:00",
+            "at": "2026-10-26T05:31:26.513Z",
+            "label": "10/26 13:31",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-26T06:01:42.706Z",
-            "label": "10/26 14:01",
+            "at": "2026-10-26T07:02:53.026Z",
+            "label": "10/26 15:02",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-26T07:02:34.059Z",
-            "label": "10/26 15:02",
+            "at": "2026-10-26T08:34:19.539Z",
+            "label": "10/26 16:34",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-26T08:03:25.412Z",
-            "label": "10/26 16:03",
+            "at": "2026-10-26T10:05:46.052Z",
+            "label": "10/26 18:05",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-26T09:04:16.765Z",
-            "label": "10/26 17:04",
+            "at": "2026-10-26T11:37:12.565Z",
+            "label": "10/26 19:37",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T10:05:08.119Z",
-            "label": "10/26 18:05",
+            "at": "2026-10-26T13:08:39.078Z",
+            "label": "10/26 21:08",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:05:59.472Z",
-            "label": "10/26 19:05",
+            "at": "2026-10-26T14:40:05.591Z",
+            "label": "10/26 22:40",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-26T12:06:50.825Z",
-            "label": "10/26 20:06",
+            "at": "2026-10-26T16:11:32.104Z",
+            "label": "10/27 00:11",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:07:42.178Z",
-            "label": "10/26 21:07",
+            "at": "2026-10-26T17:42:58.617Z",
+            "label": "10/27 01:42",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-26T14:08:33.531Z",
-            "label": "10/26 22:08",
+            "at": "2026-10-26T19:14:25.130Z",
+            "label": "10/27 03:14",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 65,
             "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "35e334c198740f74",
+      "normalizedUrl": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "originalUrl": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "titleOriginal": "Introducing GPT-6.1 Terra",
+      "summaryOriginal": "OpenAI 发布 GPT-6.1 Terra，定位快速高效的计算机使用与视觉推理模型，标准 API 定价比 GPT-5.6 Terra 和 GPT-6.1 Sol 低 50%，为每百万输入 token $1、缓存输入 $0.05、输出 $5。",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "models",
+      "sourceType": "official",
+      "authority": 100,
+      "sourcePriority": 100,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/zogr3l33craxfj4s296npqpqc",
+        "https://openai.com/index/introducing-gpt-6-1-terra/"
+      ],
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+          "publishedAt": "2026-10-26T00:00:00.000Z",
+          "title": "Introducing GPT-6.1 Terra",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        },
+        {
+          "id": "aihot-selected:zogr3l33craxfj4s296npqpqc",
+          "name": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+          "type": "aggregator",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+          "publishedAt": "2026-10-26T00:00:00.000Z",
+          "title": "OpenAI 发布 GPT-6.1 Terra，主打高效计算机操作与更低成本",
+          "authority": 86,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/zogr3l33craxfj4s296npqpqc",
+            "https://openai.com/index/introducing-gpt-6-1-terra/"
+          ]
+        }
+      ],
+      "importance": 78,
+      "importanceReasonZh": "这是 OpenAI 的官方模型发布，明确了新模型的定位与具体 API 价格，并给出与既有模型的直接价格对比，对开发者的模型选型和成本规划有直接影响。",
+      "importanceReasonEn": "This is an official OpenAI model release that specifies the new model's positioning and concrete API prices, with a direct price comparison against existing models, directly affecting developers' model selection and cost planning.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI 发布 GPT-6.1 Terra",
+      "titleEn": "Introducing GPT-6.1 Terra",
+      "summaryZh": "OpenAI 发布 GPT-6.1 Terra，定位为快速高效的计算机使用与视觉推理模型，标准 API 定价比 GPT-5.6 Terra 和 GPT-6.1 Sol 低 50%，为每百万输入 token 1 美元、缓存输入 0.05 美元、输出 5 美元。",
+      "summaryEn": "OpenAI released GPT-6.1 Terra, positioned as a fast and efficient model for computer use and visual reasoning, with standard API pricing 50% lower than GPT-5.6 Terra and GPT-6.1 Sol: $1 per million input tokens, $0.05 for cached input, and $5 for output.",
+      "keywords": [
+        "GPT-6.1 Terra",
+        "OpenAI",
+        "API 定价",
+        "计算机使用",
+        "视觉推理"
+      ],
+      "topics": [
+        "computer use",
+        "visual reasoning",
+        "API pricing",
+        "model release"
+      ],
+      "models": [
+        "GPT-6.1 Terra",
+        "GPT-5.6 Terra",
+        "GPT-6.1 Sol"
+      ],
+      "detailZh": "OpenAI 发布新模型 GPT-6.1 Terra，官方将其定位为快速、高效的计算机使用与视觉推理模型。该定位意味着模型面向需要操作计算机界面和理解视觉信息的任务场景。\n\n定价方面，GPT-6.1 Terra 的标准 API 价格比 GPT-5.6 Terra 和 GPT-6.1 Sol 低 50%。具体为每百万输入 token 1 美元，缓存输入每百万 token 0.05 美元，输出每百万 token 5 美元。\n\n目前公开信息仅包含定位与价格，未披露模型规模、基准测试成绩、上下文长度、可用渠道或上线时间等细节。",
+      "keyPointsZh": [
+        "OpenAI 发布 GPT-6.1 Terra，定位为快速高效的计算机使用与视觉推理模型。",
+        "标准 API 定价比 GPT-5.6 Terra 和 GPT-6.1 Sol 低 50%。",
+        "价格为每百万输入 token 1 美元、缓存输入 0.05 美元、输出 5 美元。"
+      ],
+      "impactZh": "新模型以低于前代和同级模型一半的价格提供计算机使用与视觉推理能力，可能降低相关应用的调用成本，并影响开发者在同类模型间的选择。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 API 的开发者调用 GPT-6.1 Terra 的成本约为 GPT-5.6 Terra 和 GPT-6.1 Sol 的一半，缓存输入价格更低，适合高频、成本敏感的计算机使用与视觉推理任务。",
+      "howItWorksZh": "",
+      "interpretationZh": "据官方信息，GPT-6.1 Terra 主打速度、效率以及计算机使用和视觉推理能力，并通过降价 50% 形成价格优势。除定位和定价外，模型能力细节尚未公开，实际表现需以后续基准和实测为准。",
+      "limitationsZh": "公开信息仅涵盖模型定位与 API 价格，未提供基准测试成绩、上下文长度、模型规模、可用平台和发布时间，实际性能与稳定性尚无法验证。",
+      "actionStepsZh": [
+        "对照现有 GPT-5.6 Terra 或 GPT-6.1 Sol 的调用量，按新价格估算成本节省。",
+        "在计算机使用或视觉推理类任务上小规模试用 GPT-6.1 Terra，再决定是否迁移。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "输出价格为每百万 token 5 美元，是标准输入价格 1 美元的 5 倍；缓存输入仅 0.05 美元，为三者中最低。",
+        "data": [
+          {
+            "label": "GPT-6.1 Terra 输入（每百万 token）",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "GPT-6.1 Terra 缓存输入（每百万 token）",
+            "value": 0.05,
+            "display": ""
+          },
+          {
+            "label": "GPT-6.1 Terra 输出（每百万 token）",
+            "value": 5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 2,
+      "reportTimeline": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+          "publishedAt": "2026-10-26T00:00:00.000Z",
+          "title": "Introducing GPT-6.1 Terra",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        },
+        {
+          "id": "aihot-selected:zogr3l33craxfj4s296npqpqc",
+          "name": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+          "type": "aggregator",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+          "publishedAt": "2026-10-26T00:00:00.000Z",
+          "title": "OpenAI 发布 GPT-6.1 Terra，主打高效计算机操作与更低成本",
+          "authority": 86,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/zogr3l33craxfj4s296npqpqc",
+            "https://openai.com/index/introducing-gpt-6-1-terra/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-26T00:00:00.000Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
+        "current": 93,
+        "peak": 93,
+        "history": [
+          {
+            "at": "2026-10-26T00:00:00.000Z",
+            "label": "10/26 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-26T01:53:15.604Z",
+            "label": "10/26 09:53",
+            "value": 34,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T03:46:31.208Z",
+            "label": "10/26 11:46",
+            "value": 40,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T05:39:46.812Z",
+            "label": "10/26 13:39",
+            "value": 46,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T07:33:02.416Z",
+            "label": "10/26 15:33",
+            "value": 52,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T09:26:18.020Z",
+            "label": "10/26 17:26",
+            "value": 58,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T11:19:33.624Z",
+            "label": "10/26 19:19",
+            "value": 64,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T13:12:49.228Z",
+            "label": "10/26 21:12",
+            "value": 70,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T15:06:04.832Z",
+            "label": "10/26 23:06",
+            "value": 75,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T16:59:20.436Z",
+            "label": "10/27 00:59",
+            "value": 81,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T18:52:36.040Z",
+            "label": "10/27 02:52",
+            "value": 87,
+            "reports": 2
+          },
+          {
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
+            "value": 93,
+            "reports": 2
           }
         ],
         "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
@@ -2516,7 +3405,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-25T21:31:16.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -2527,68 +3416,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-25T23:07:27.716Z",
-            "label": "10/26 07:07",
+            "at": "2026-10-25T23:38:02.876Z",
+            "label": "10/26 07:38",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-10-26T00:43:39.433Z",
-            "label": "10/26 08:43",
+            "at": "2026-10-26T01:44:49.753Z",
+            "label": "10/26 09:44",
             "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-10-26T02:19:51.150Z",
-            "label": "10/26 10:19",
+            "at": "2026-10-26T03:51:36.630Z",
+            "label": "10/26 11:51",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-10-26T03:56:02.867Z",
-            "label": "10/26 11:56",
+            "at": "2026-10-26T05:58:23.506Z",
+            "label": "10/26 13:58",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-10-26T05:32:14.584Z",
-            "label": "10/26 13:32",
+            "at": "2026-10-26T08:05:10.383Z",
+            "label": "10/26 16:05",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-10-26T07:08:26.300Z",
-            "label": "10/26 15:08",
+            "at": "2026-10-26T10:11:57.260Z",
+            "label": "10/26 18:11",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-10-26T08:44:38.017Z",
-            "label": "10/26 16:44",
+            "at": "2026-10-26T12:18:44.137Z",
+            "label": "10/26 20:18",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T10:20:49.734Z",
-            "label": "10/26 18:20",
+            "at": "2026-10-26T14:25:31.013Z",
+            "label": "10/26 22:25",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:57:01.451Z",
-            "label": "10/26 19:57",
+            "at": "2026-10-26T16:32:17.890Z",
+            "label": "10/27 00:32",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:33:13.168Z",
-            "label": "10/26 21:33",
+            "at": "2026-10-26T18:39:04.767Z",
+            "label": "10/27 02:39",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 50,
             "reports": 1
           }
@@ -2687,7 +3576,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-25T16:57:32.000Z",
-        "endedAt": "2026-10-26T15:09:24.885Z",
+        "endedAt": "2026-10-26T20:45:51.644Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2698,68 +3587,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-25T18:58:36.807Z",
-            "label": "10/26 02:58",
+            "at": "2026-10-25T19:29:11.967Z",
+            "label": "10/26 03:29",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-25T20:59:41.615Z",
-            "label": "10/26 04:59",
+            "at": "2026-10-25T22:00:51.935Z",
+            "label": "10/26 06:00",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-25T23:00:46.423Z",
-            "label": "10/26 07:00",
+            "at": "2026-10-26T00:32:31.902Z",
+            "label": "10/26 08:32",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-10-26T01:01:51.230Z",
-            "label": "10/26 09:01",
+            "at": "2026-10-26T03:04:11.870Z",
+            "label": "10/26 11:04",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-26T03:02:56.038Z",
-            "label": "10/26 11:02",
+            "at": "2026-10-26T05:35:51.838Z",
+            "label": "10/26 13:35",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-10-26T05:04:00.846Z",
-            "label": "10/26 13:04",
+            "at": "2026-10-26T08:07:31.805Z",
+            "label": "10/26 16:07",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-26T07:05:05.654Z",
-            "label": "10/26 15:05",
+            "at": "2026-10-26T10:39:11.773Z",
+            "label": "10/26 18:39",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-10-26T09:06:10.461Z",
-            "label": "10/26 17:06",
+            "at": "2026-10-26T13:10:51.741Z",
+            "label": "10/26 21:10",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-10-26T11:07:15.269Z",
-            "label": "10/26 19:07",
+            "at": "2026-10-26T15:42:31.708Z",
+            "label": "10/26 23:42",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-10-26T13:08:20.077Z",
-            "label": "10/26 21:08",
+            "at": "2026-10-26T18:14:11.676Z",
+            "label": "10/27 02:14",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-10-26T15:09:24.885Z",
-            "label": "10/26 23:09",
+            "at": "2026-10-26T20:45:51.644Z",
+            "label": "10/27 04:45",
             "value": 55,
             "reports": 1
           }
