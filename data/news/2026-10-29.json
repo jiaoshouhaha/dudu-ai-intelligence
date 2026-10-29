@@ -1,7 +1,150 @@
 {
-  "generatedAt": "2026-10-28T23:30:48.956Z",
+  "generatedAt": "2026-10-29T02:48:59.087Z",
   "date": "2026-10-29",
   "items": [
+    {
+      "id": "ddcb26dae27c7d1b",
+      "normalizedUrl": "https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm",
+      "originalUrl": "https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm/",
+      "titleOriginal": "OpenRouter 教程：用 LLM 从 PDF 中抽取表格",
+      "summaryOriginal": "OpenRouter 发布教程，讲解如何把 PDF 以文件形式连同严格 JSON schema 发给能读文件的模型，让表格以带类型的行返回，括号亏损、千分位和脚注标记等清理都写进字段描述。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/l928e49lwysm0ymgmhyjrkc3z",
+        "https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm/"
+      ],
+      "publishedAt": "2026-10-29T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-29T00:33:30.586Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/l928e49lwysm0ymgmhyjrkc3z"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:l928e49lwysm0ymgmhyjrkc3z",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm/",
+          "publishedAt": "2026-10-29T00:00:00.000Z",
+          "title": "OpenRouter 教程：用 LLM 从 PDF 中抽取表格",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/l928e49lwysm0ymgmhyjrkc3z",
+            "https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm/"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "这是一篇面向实践的操作教程，给出了用文件输入加严格 JSON schema 抽取 PDF 表格的可复用方法，对需要把文档转成结构化数据的开发者有直接参考价值，但不涉及新模型或新能力发布。",
+      "importanceReasonEn": "This is a practical how-to that offers a reusable method for extracting PDF tables using file input plus a strict JSON schema, directly useful to developers converting documents into structured data, though it does not announce a new model or capability.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 教程：用 LLM 从 PDF 中抽取表格",
+      "titleEn": "OpenRouter Tutorial: Extracting Tables from PDFs with LLMs",
+      "summaryZh": "OpenRouter 发布教程，讲解如何把 PDF 以文件形式连同严格 JSON schema 发给能读文件的模型，让表格以带类型的行返回，括号亏损、千分位和脚注标记等清理都写进字段描述。",
+      "summaryEn": "OpenRouter published a tutorial explaining how to send a PDF as a file together with a strict JSON schema to a file-capable model, so tables come back as typed rows, with cleanup rules for parenthesized losses, thousands separators and footnote markers written into field descriptions.",
+      "keywords": [
+        "OpenRouter",
+        "PDF",
+        "表格抽取",
+        "JSON schema",
+        "结构化输出",
+        "文件输入"
+      ],
+      "topics": [
+        "PDF表格抽取",
+        "结构化输出",
+        "JSON schema",
+        "文档理解",
+        "LLM工作流"
+      ],
+      "models": [],
+      "detailZh": "OpenRouter 在其公告频道发布了一篇教程，主题是如何用大语言模型从 PDF 中抽取表格。教程的核心做法是把 PDF 作为文件直接传给支持文件输入的模型，而不是先自行解析文本再拼接提示词，同时在请求中附带一个严格的 JSON schema，要求模型按该结构返回结果。\n\n教程强调输出应当是“带类型的行”，也就是每一行表格数据都按 schema 中定义的字段和类型返回，而不是一段自由文本。为了让抽取结果干净可用，教程把若干清理规则写进了字段描述里，例如括号表示亏损、千分位分隔符需要去除、脚注标记需要剔除等。\n\n从公开信息看，教程只描述了这一套方法思路，没有给出具体模型名称、价格、准确率或基准测试数据。因此其价值主要在于工作流设计：用文件输入保留版面信息，用 schema 约束输出结构，用字段描述承载清洗规则。\n\n该方法适合需要把财报、报表等 PDF 表格批量转成结构化数据的场景，但实际效果取决于所选模型的文件理解能力和 schema 的严谨程度，教程本身未提供可验证的效果数据。",
+      "keyPointsZh": [
+        "教程建议把 PDF 以文件形式直接传给支持文件输入的模型，而非先自行解析文本。",
+        "请求中附带严格 JSON schema，要求表格以带类型的行返回。",
+        "括号亏损、千分位、脚注标记等清理规则写入字段描述中。",
+        "教程未披露具体模型、价格或准确率数据。"
+      ],
+      "impactZh": "这类方法把文档抽取从“自由文本生成”转向“受约束的结构化输出”，降低了后处理成本，也说明文件输入加 schema 约束正在成为处理 PDF 表格的常见工程模式。",
+      "readerImpactZh": "",
+      "userImpactZh": "对需要批量处理 PDF 报表的开发者来说，可以直接复用“文件输入 + 严格 JSON schema + 字段描述写清洗规则”的组合，减少自行解析版面和编写后处理脚本的工作量；但需自行验证所选模型在目标文档上的抽取准确率。",
+      "howItWorksZh": "流程大致为：1）选择支持文件输入的模型；2）在请求中把 PDF 作为文件传入，保留原始版面信息；3）附带严格 JSON schema，定义表格行的字段名与类型；4）在字段描述中写明清洗规则，如括号数字视为负数、去除千分位逗号、剔除脚注标记；5）模型按 schema 返回结构化行数据，可直接入库或校验。",
+      "interpretationZh": "据教程描述，关键设计是把版面理解交给模型、把输出结构交给 schema、把清洗规则交给字段描述。这是合理的工作流推断，但教程未给出模型选择建议或效果数据，实际准确率仍需自行测试。",
+      "limitationsZh": "教程未说明适用模型范围、PDF 复杂度上限、抽取准确率或成本；字段描述中的清洗规则能否被模型稳定执行也未经验证。",
+      "actionStepsZh": [
+        "选用支持文件输入的模型，把 PDF 作为文件而非纯文本传入。",
+        "定义严格 JSON schema，明确表格行的字段与类型。",
+        "在字段描述中写入括号亏损、千分位、脚注标记等清洗规则。",
+        "用少量真实 PDF 抽样核对抽取结果后再批量处理。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:l928e49lwysm0ymgmhyjrkc3z",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm/",
+          "publishedAt": "2026-10-29T00:00:00.000Z",
+          "title": "OpenRouter 教程：用 LLM 从 PDF 中抽取表格",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/l928e49lwysm0ymgmhyjrkc3z",
+            "https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-29T00:00:00.000Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-29T00:00:00.000Z",
+            "label": "10/29 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-29T00:56:19.695Z",
+            "label": "10/29 08:56",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:52:39.391Z",
+            "label": "10/29 09:52",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "bfb31ceb6c55c182",
       "normalizedUrl": "https://simonwillison.net/2026/Oct/28/ted-sanders",
@@ -55,26 +198,26 @@
           ]
         }
       ],
-      "importance": 55,
-      "importanceReasonZh": "这是一段来自 OpenAI 内部人士对模型命名规则和规模规律的直接解释，有助于理解模型版本号含义与选型逻辑，但并非产品发布或技术突破。",
-      "importanceReasonEn": "This is a direct explanation from an OpenAI insider about model naming conventions and scaling patterns, useful for understanding version numbers and model selection, but it is not a product launch or technical breakthrough.",
+      "importance": 45,
+      "importanceReasonZh": "这是一段关于模型规模与性能关系以及命名惯例的从业者解释，有助于理解模型选择与版本含义，但不涉及新模型发布或技术突破。",
+      "importanceReasonEn": "This is a practitioner explanation of how model size relates to performance and how naming conventions work; it aids model selection and version interpretation but reports no new release or technical breakthrough.",
       "scoringMode": "ai",
-      "titleZh": "Ted Sanders 谈 OpenAI 模型命名与规模规律",
-      "titleEn": "Ted Sanders on OpenAI Model Naming and Scaling Patterns",
-      "summaryZh": "Ted Sanders 解释了 OpenAI 模型命名逻辑：版本号同时表示发布顺序、与其他版本的关系以及改进幅度；模型性能虽是多维的，但很大程度可由模型规模这一变量解释，规模越大通常越可靠、每 token 成本越高、对冷门事实的召回越好。",
-      "summaryEn": "Ted Sanders explains OpenAI's model naming logic: version numbers simultaneously signal release order, relationship to other releases, and magnitude of improvement. While LLM performance is multidimensional, much of it is explained by a single variable—model size—where bigger models tend to be more reliable, cost more per token, and recall esoteric facts better.",
+      "titleZh": "Ted Sanders 谈大语言模型性能与命名逻辑",
+      "titleEn": "Ted Sanders on LLM Performance and Naming Logic",
+      "summaryZh": "Ted Sanders 解释了大语言模型性能的多维性：模型规模是解释性能差异的主要变量，规模越大通常越可靠、每 token 成本越高、对冷门事实的记忆越好；他还说明了 OpenAI 模型命名中版本号同时体现发布顺序、与其他版本的关系以及改进幅度。",
+      "summaryEn": "Ted Sanders explains that LLM performance is multidimensional, with model size explaining much of the variation: larger models tend to be more reliable, cost more per token, and recall esoteric facts better. He also describes how OpenAI's version numbers encode release order, relationship to other releases, and magnitude of improvement.",
       "keywords": [
-        "OpenAI",
-        "model naming",
         "model size",
-        "version number",
-        "Ted Sanders"
+        "token cost",
+        "version numbering",
+        "LLM performance",
+        "OpenAI"
       ],
       "topics": [
-        "LLM",
-        "OpenAI",
+        "LLM performance",
+        "model scaling",
         "model naming",
-        "scaling"
+        "OpenAI"
       ],
       "models": [
         "Luna",
@@ -82,26 +225,54 @@
         "Sol",
         "Astra"
       ],
-      "detailZh": "Simon Willison 引用了 Ted Sanders 的一段话，解释 OpenAI 的模型命名方式。Sanders 首先指出，大语言模型的性能是多维的，并不存在固定排序能保证在数学上最好的模型同时也在讲笑话上最好。尽管如此，性能差异的很大一部分可以由单一变量解释：模型规模。\n\n他给出的规律是：更大的模型通常（a）性能更好、更可靠，（b）每 token 成本更高，（c）对冷门事实的召回更好。他同时提到 OpenAI 的模型存在排序：Luna < Terra < Sol < Astra。\n\n关于版本号，Sanders 表示如今版本号同时表示几件事：发布顺序、与其他版本的关系，以及改进幅度。例如 6.1 表示它晚于 5.6 发布，可能在训练数据或性格上与其它 6.1 模型有相似之处（这也是它不叫 5.7 的原因），并且提升幅度不足以支撑 7 所伴随的标题和期待。\n\n这段内容属于对命名规则和规模规律的经验性说明，没有给出具体基准分数或价格数据。",
+      "detailZh": "Simon Willison 引用了 Ted Sanders 的一段说明，讨论大语言模型性能的评估方式。Sanders 指出，LLM 性能是多维的，并不存在固定排序保证数学最好的模型也最擅长讲笑话。尽管如此，性能差异的很大一部分可以由单一变量解释：模型规模。\n\n他给出的规律是：更大的模型通常（a）性能更好、更可靠，（b）每 token 成本更高，（c）对冷门事实的记忆更好。他还提到其模型按 Luna < Terra < Sol < Astra 的顺序排列。\n\n关于版本号，Sanders 表示如今版本号同时表示三件事：发布顺序、与其他版本的关系、以及改进幅度。例如 6.1 表示它晚于 5.6 发布，可能在训练数据或性格上与其它 6.1 模型相似（因此不叫 5.7），并且提升幅度不足以配得上 7 所伴随的期待。",
       "keyPointsZh": [
-        "模型性能是多维的，不存在固定的全能排序。",
-        "性能差异很大程度由模型规模解释：更大模型更可靠、每 token 更贵、冷门事实召回更好。",
-        "OpenAI 模型排序为 Luna < Terra < Sol < Astra。",
-        "版本号同时表示发布顺序、与其他版本的关系和改进幅度。",
-        "6.1 这类编号意味着晚于 5.6 发布、与其它 6.1 模型有相似性，且提升不足以称为 7。"
+        "LLM 性能是多维的，不存在单一固定排序。",
+        "模型规模是解释性能差异的主要变量。",
+        "更大的模型通常更可靠、每 token 成本更高、冷门事实记忆更好。",
+        "模型按 Luna < Terra < Sol < Astra 排序。",
+        "版本号同时体现发布顺序、版本关系和改进幅度。"
       ],
-      "impactZh": "为外界理解 OpenAI 模型版本号提供了官方口径，也提示模型选型需要在可靠性、成本与知识召回之间权衡，而非只看单一排名。",
+      "impactZh": "这段说明帮助读者理解模型规模与成本、可靠性之间的权衡，以及版本号背后的含义，从而更理性地选择模型和解读发布信息。",
       "readerImpactZh": "",
-      "userImpactZh": "开发者和团队可据此理解版本号含义：小版本号提升通常不是代际跃迁，选型时应结合规模带来的成本与可靠性差异，而非仅凭版本号判断能力。",
+      "userImpactZh": "AI 用户和团队可据此理解：更大模型通常更可靠但更贵，版本号升高不一定代表巨大跃升，选型时应结合任务需求与成本权衡。",
       "howItWorksZh": "",
-      "interpretationZh": "已报道的事实是 Sanders 对命名规则和规模规律的解释；可合理推断的是，版本号可作为判断改进幅度的粗略信号，但具体能力仍需以实际评测为准。",
-      "limitationsZh": "这是经验性描述，未提供具体基准分数、价格或各模型参数；Luna、Terra、Sol、Astra 的具体能力差异未量化。",
+      "interpretationZh": "已报告的事实是：Sanders 认为模型规模解释了大部分性能差异，并给出了规模与可靠性、成本、冷门事实记忆之间的经验关系，以及版本号的三重含义。合理推断是：这些规律是经验性概括，并非严格保证，具体表现仍取决于任务。",
+      "limitationsZh": "该内容为从业者的经验性表述，未提供具体基准数据或量化证据；模型排序和版本号规则仅适用于其所述体系，不能直接推广到其他厂商。",
       "actionStepsZh": [
-        "看到 6.x 这类版本号时，将其理解为渐进改进而非代际跃迁。",
-        "选型时同时考虑模型规模带来的可靠性、每 token 成本和冷门事实召回差异。"
+        "选择模型时同时考虑规模带来的可靠性提升与每 token 成本。",
+        "解读版本号时区分发布顺序、版本关系与改进幅度，不把版本号升高等同于重大跃升。"
       ],
       "detailCompleteness": "summary",
-      "visual": null,
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "按 Sanders 所述，模型规模与能力排序为 Luna < Terra < Sol < Astra，规模越大通常越可靠但每 token 成本越高。",
+        "data": [
+          {
+            "label": "Luna",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "Terra",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "Sol",
+            "value": 3,
+            "display": ""
+          },
+          {
+            "label": "Astra",
+            "value": 4,
+            "display": ""
+          }
+        ]
+      },
       "processingError": null,
       "reportCount": 1,
       "reportTimeline": [
@@ -130,9 +301,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T23:23:21.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
-        "current": 55,
-        "peak": 55,
+        "endedAt": "2026-10-29T02:48:59.087Z",
+        "current": 50,
+        "peak": 50,
         "history": [
           {
             "at": "2026-10-28T23:23:21.000Z",
@@ -141,9 +312,27 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
-            "value": 55,
+            "at": "2026-10-29T00:14:45.521Z",
+            "label": "10/29 08:14",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:06:10.043Z",
+            "label": "10/29 09:06",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:57:34.565Z",
+            "label": "10/29 09:57",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -194,23 +383,20 @@
           ]
         }
       ],
-      "importance": 78,
-      "importanceReasonZh": "这是 AI 模型被用于真实软件漏洞发现并形成可运行攻击链的官方报告，涉及主流浏览器与操作系统，对 AI 安全研究能力边界具有标志意义。",
-      "importanceReasonEn": "This is an official report on an AI model being used to find real software vulnerabilities and build working attack chains across mainstream browsers and operating systems, marking a notable signal for the capability boundaries of AI security research.",
+      "importance": 72,
+      "importanceReasonZh": "这是 AI 模型被用于真实软件漏洞发现并串联可运行攻击链的官方报告，涉及主流浏览器与操作系统，对 AI 安全研究能力边界有直接参考价值。",
+      "importanceReasonEn": "This is an official report on an AI model being used to find real software vulnerabilities and chain working attack paths across major browsers and operating systems, offering direct reference value for the capability boundaries of AI security research.",
       "scoringMode": "ai",
       "titleZh": "Anthropic 报告：Claude 研究模型在 Chrome、Safari、Android、Windows、Linux 发现漏洞并串联 5 条攻击链",
       "titleEn": "Anthropic Report: Claude Research Model Finds Vulnerabilities in Chrome, Safari, Android, Windows and Linux, Chaining 5 Attack Paths",
       "summaryZh": "Anthropic 于 10 月 27 日发布研究报告，称一个未公开的内部 Claude 研究模型在 Chrome、Safari、Android、Windows 和 Linux 中发现漏洞，串联出 5 条可实际运行的攻击链，相关漏洞已按协调披露流程报告并修复。",
-      "summaryEn": "Anthropic published a research report on October 27 stating that an undisclosed internal Claude research model discovered vulnerabilities in Chrome, Safari, Android, Windows and Linux and chained them into 5 working attack paths; the vulnerabilities were reported and fixed through coordinated disclosure.",
+      "summaryEn": "Anthropic published a research report on October 27 stating that an undisclosed internal Claude research model discovered vulnerabilities in Chrome, Safari, Android, Windows and Linux, chaining five working attack paths; the vulnerabilities were reported and fixed through coordinated disclosure.",
       "keywords": [
         "Anthropic",
         "Claude",
         "漏洞发现",
         "攻击链",
-        "Chrome",
-        "Safari",
-        "Android",
-        "Windows"
+        "协调披露"
       ],
       "topics": [
         "AI安全研究",
@@ -222,41 +408,27 @@
       "models": [
         "Claude"
       ],
-      "detailZh": "Anthropic 于 10 月 27 日发布一份研究报告，称其内部一个未公开的 Claude 研究模型在多个主流软件平台中发现了漏洞。报告涉及的平台包括 Chrome、Safari、Android、Windows 和 Linux，覆盖浏览器与操作系统两类关键基础设施。\n\n据报告，该模型不仅识别出单个漏洞，还将它们串联成 5 条可实际运行的攻击链，即利用多个漏洞组合形成完整的攻击路径。\n\nAnthropic 表示，相关漏洞已按照协调披露流程向厂商报告，并已完成修复。报告未公开该研究模型的具体版本与细节。\n\n目前公开信息主要来自 Anthropic 的报告本身，漏洞的具体数量、严重等级、各平台分布以及修复时间线等细节尚未在现有材料中披露。",
+      "detailZh": "Anthropic 于 10 月 27 日发布研究报告，称其内部一个未公开的 Claude 研究模型在多个主流软件平台中发现了漏洞。报告涉及的平台包括 Chrome、Safari、Android、Windows 和 Linux，覆盖浏览器与操作系统两类关键基础设施。\n\n据报告，该模型不仅识别出单个漏洞，还将漏洞串联成 5 条可实际运行的攻击链。这意味着模型的工作不止于单点缺陷定位，还涉及对多个缺陷组合利用路径的推演。\n\nAnthropic 表示，相关漏洞已按照协调披露流程报告给对应厂商，并已完成修复。报告未公开该研究模型的具体版本或技术细节，也未披露漏洞数量、严重等级和厂商名称等细粒度信息。\n\n从公开信息看，这是一次以 AI 模型为漏洞研究主体的实践，其成果通过传统安全披露渠道落地，而非直接公开利用细节。",
       "keyPointsZh": [
-        "Anthropic 于 10 月 27 日发布研究报告，称内部未公开的 Claude 研究模型发现多处漏洞。",
-        "涉及平台包括 Chrome、Safari、Android、Windows 和 Linux。",
-        "模型将漏洞串联成 5 条可实际运行的攻击链。",
-        "相关漏洞已按协调披露流程报告并修复。",
-        "研究模型的具体版本与漏洞细节未公开。"
+        "Anthropic 于 10 月 27 日发布该研究报告",
+        "涉事模型为未公开的内部 Claude 研究模型",
+        "漏洞覆盖 Chrome、Safari、Android、Windows 和 Linux",
+        "模型串联出 5 条可实际运行的攻击链",
+        "相关漏洞已按协调披露流程报告并修复"
       ],
-      "impactZh": "该报告显示 AI 模型已能参与真实软件漏洞发现并构建多步攻击链，可能推动安全研究流程与漏洞披露方式的变化，也引发对 AI 被用于攻防两端的讨论。",
+      "impactZh": "该报告显示 AI 模型已能参与真实漏洞发现并推演多漏洞组合利用路径，可能推动安全研究流程与漏洞披露方式的变化，也引发对 AI 被用于攻防两端的讨论。",
       "readerImpactZh": "",
-      "userImpactZh": "对安全研究人员和开发团队而言，这意味着 AI 辅助漏洞挖掘与攻击链分析可能成为现实工作流的一部分，需关注模型输出在安全审计中的可靠性与责任边界。",
+      "userImpactZh": "对安全研究人员和开发团队而言，这表明可将 AI 模型纳入漏洞挖掘与攻击链分析流程，但需配合协调披露与修复验证机制，避免利用细节外泄。",
       "howItWorksZh": "",
-      "interpretationZh": "已报告的事实是：Anthropic 称其内部 Claude 研究模型在五个平台发现漏洞并串联出 5 条可运行攻击链，漏洞已协调披露并修复。可合理推断的是，该模型具备跨平台代码与逻辑分析能力；但模型版本、漏洞数量与严重程度、攻击链具体构成等均未公开，无法独立验证。",
-      "limitationsZh": "现有材料仅来自 Anthropic 报告，未披露研究模型版本、漏洞数量与等级、各平台分布、攻击链细节及修复时间线，也缺少第三方验证。",
-      "actionStepsZh": [],
+      "interpretationZh": "已报告的事实是：Anthropic 内部一个未公开的 Claude 研究模型在五个平台发现漏洞，并串联出 5 条可运行攻击链，漏洞经协调披露后修复。可合理推断的是，该模型具备跨平台代码与逻辑分析能力，并能进行多步利用路径推演；但模型版本、漏洞数量与严重程度等细节均未公开，无法进一步评估其能力上限。",
+      "limitationsZh": "报告未公开研究模型的具体版本与技术细节，也未披露漏洞数量、严重等级、受影响厂商及攻击链的具体构成；5 条攻击链的可运行性仅有 Anthropic 单方表述，缺乏第三方复现验证。",
+      "actionStepsZh": [
+        "关注 Anthropic 后续是否发布该研究模型的更多技术细节",
+        "安全团队可评估将 AI 模型引入漏洞挖掘流程的可行性",
+        "厂商应保持协调披露渠道畅通，及时处理 AI 辅助发现的漏洞"
+      ],
       "detailCompleteness": "summary",
-      "visual": {
-        "type": "bar",
-        "titleZh": "数据对比",
-        "unit": "",
-        "noteZh": "",
-        "insightZh": "报告涉及的平台数量与串联出的攻击链数量均为 5。",
-        "data": [
-          {
-            "label": "涉及平台数",
-            "value": 5,
-            "display": ""
-          },
-          {
-            "label": "攻击链数",
-            "value": 5,
-            "display": ""
-          }
-        ]
-      },
+      "visual": null,
       "processingError": null,
       "reportCount": 1,
       "reportTimeline": [
@@ -279,9 +451,9 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T22:35:25.040Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
-        "current": 68,
-        "peak": 68,
+        "endedAt": "2026-10-29T02:48:59.087Z",
+        "current": 65,
+        "peak": 65,
         "history": [
           {
             "at": "2026-10-28T22:35:25.040Z",
@@ -290,9 +462,33 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
-            "value": 68,
+            "at": "2026-10-28T23:26:07.849Z",
+            "label": "10/29 07:26",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:16:50.658Z",
+            "label": "10/29 08:16",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:07:33.468Z",
+            "label": "10/29 09:07",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:58:16.277Z",
+            "label": "10/29 09:58",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -437,7 +633,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T20:05:31.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -448,26 +644,44 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T20:56:50.489Z",
-            "label": "10/29 04:56",
-            "value": 28,
+            "at": "2026-10-28T21:03:09.298Z",
+            "label": "10/29 05:03",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:48:09.978Z",
-            "label": "10/29 05:48",
-            "value": 41,
+            "at": "2026-10-28T22:00:47.596Z",
+            "label": "10/29 06:00",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:39:29.467Z",
-            "label": "10/29 06:39",
-            "value": 55,
+            "at": "2026-10-28T22:58:25.894Z",
+            "label": "10/29 06:58",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
+            "at": "2026-10-28T23:56:04.192Z",
+            "label": "10/29 07:56",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:53:42.490Z",
+            "label": "10/29 08:53",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:51:20.788Z",
+            "label": "10/29 09:51",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
             "value": 68,
             "reports": 1
           }
@@ -531,7 +745,9 @@
         "Anthropic",
         "IPO"
       ],
-      "models": [],
+      "models": [
+        "Claude"
+      ],
       "detailZh": "据TechCrunch AI报道，Anthropic推出了新工具，用于向企业客户展示其AI支出的实际去向和产出。报道称，这家前沿实验室此举是在计划进行IPO之前，提高其模型上资金使用情况的透明度。\n\n目前可获得的信息较为有限：报道没有说明工具的具体名称、功能界面、计费维度或覆盖范围，也没有给出价格、客户数量或支出规模等可核实的数字。已知的核心事实是，工具面向企业客户，目标是让AI花费与所获得的价值之间的对应关系更清晰。\n\n从背景看，企业在大规模部署大模型后，普遍面临成本归因困难的问题：token消耗、不同模型和不同团队的使用难以拆分，预算审批缺乏依据。Anthropic在IPO前强调支出透明度，可能意在增强企业客户的采购信心。\n\n由于来源仅为单篇报道，工具的实际能力、上线时间和适用条件均未得到确认，后续需要官方文档或更多报道来补充。",
       "keyPointsZh": [
         "Anthropic推出面向企业客户的AI支出可视化工具",
@@ -571,7 +787,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T19:19:58.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -582,32 +798,50 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T20:10:08.191Z",
-            "label": "10/29 04:10",
-            "value": 21,
+            "at": "2026-10-28T20:16:05.635Z",
+            "label": "10/29 04:16",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:00:18.382Z",
-            "label": "10/29 05:00",
-            "value": 28,
+            "at": "2026-10-28T21:12:13.271Z",
+            "label": "10/29 05:12",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:50:28.573Z",
-            "label": "10/29 05:50",
+            "at": "2026-10-28T22:08:20.907Z",
+            "label": "10/29 06:08",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T23:04:28.543Z",
+            "label": "10/29 07:04",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:00:36.179Z",
+            "label": "10/29 08:00",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:40:38.764Z",
-            "label": "10/29 06:40",
-            "value": 43,
+            "at": "2026-10-29T00:56:43.815Z",
+            "label": "10/29 08:56",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
+            "at": "2026-10-29T01:52:51.451Z",
+            "label": "10/29 09:52",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
             "value": 50,
             "reports": 1
           }
@@ -730,7 +964,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T19:17:58.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -741,32 +975,50 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T20:08:32.191Z",
-            "label": "10/29 04:08",
-            "value": 25,
+            "at": "2026-10-28T20:14:20.635Z",
+            "label": "10/29 04:14",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-10-28T20:59:06.382Z",
-            "label": "10/29 04:59",
-            "value": 36,
+            "at": "2026-10-28T21:10:43.271Z",
+            "label": "10/29 05:10",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:49:40.573Z",
-            "label": "10/29 05:49",
-            "value": 46,
+            "at": "2026-10-28T22:07:05.907Z",
+            "label": "10/29 06:07",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:40:14.764Z",
-            "label": "10/29 06:40",
-            "value": 57,
+            "at": "2026-10-28T23:03:28.543Z",
+            "label": "10/29 07:03",
+            "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
+            "at": "2026-10-28T23:59:51.179Z",
+            "label": "10/29 07:59",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:56:13.815Z",
+            "label": "10/29 08:56",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:52:36.451Z",
+            "label": "10/29 09:52",
+            "value": 61,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
             "value": 68,
             "reports": 1
           }
@@ -884,7 +1136,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T17:01:48.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -895,44 +1147,62 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T17:57:22.422Z",
-            "label": "10/29 01:57",
-            "value": 21,
+            "at": "2026-10-28T18:00:31.108Z",
+            "label": "10/29 02:00",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-28T18:52:56.844Z",
-            "label": "10/29 02:52",
+            "at": "2026-10-28T18:59:14.217Z",
+            "label": "10/29 02:59",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T19:57:57.326Z",
+            "label": "10/29 03:57",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-10-28T19:48:31.266Z",
-            "label": "10/29 03:48",
-            "value": 36,
+            "at": "2026-10-28T20:56:40.434Z",
+            "label": "10/29 04:56",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-10-28T20:44:05.689Z",
-            "label": "10/29 04:44",
-            "value": 43,
+            "at": "2026-10-28T21:55:23.543Z",
+            "label": "10/29 05:55",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:39:40.111Z",
-            "label": "10/29 05:39",
+            "at": "2026-10-28T22:54:06.652Z",
+            "label": "10/29 06:54",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T23:52:49.760Z",
+            "label": "10/29 07:52",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:35:14.533Z",
-            "label": "10/29 06:35",
-            "value": 58,
+            "at": "2026-10-29T00:51:32.869Z",
+            "label": "10/29 08:51",
+            "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
+            "at": "2026-10-29T01:50:15.978Z",
+            "label": "10/29 09:50",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
             "value": 65,
             "reports": 1
           }
@@ -1069,7 +1339,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T17:00:58.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -1080,45 +1350,441 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T17:56:39.565Z",
-            "label": "10/29 01:56",
-            "value": 23,
+            "at": "2026-10-28T17:59:46.108Z",
+            "label": "10/29 01:59",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-10-28T18:52:21.130Z",
-            "label": "10/29 02:52",
+            "at": "2026-10-28T18:58:34.217Z",
+            "label": "10/29 02:58",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T19:57:22.326Z",
+            "label": "10/29 03:57",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T20:56:10.434Z",
+            "label": "10/29 04:56",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T21:54:58.543Z",
+            "label": "10/29 05:54",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T22:53:46.652Z",
+            "label": "10/29 06:53",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T23:52:34.760Z",
+            "label": "10/29 07:52",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:51:22.869Z",
+            "label": "10/29 08:51",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:50:10.978Z",
+            "label": "10/29 09:50",
+            "value": 68,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
+            "value": 74,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "090274bcc4740a70",
+      "normalizedUrl": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps",
+      "originalUrl": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
+      "titleOriginal": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+      "summaryOriginal": "A new developer platform will let businesses bring their services to Google's AI experiences, potentially changing how consumers discover and use apps.",
+      "originalLanguage": "en",
+      "author": "Sarah Perez",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-10-28T17:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
+          "publishedAt": "2026-10-28T17:00:00.000Z",
+          "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该消息涉及Google将Gemini与搜索向第三方应用开放，可能影响应用分发与AI智能体生态，但来源信息有限，缺少具体细节。",
+      "importanceReasonEn": "The news concerns Google opening Gemini and Search to third-party apps, which could affect app distribution and the AI agent ecosystem, but source details are limited.",
+      "scoringMode": "ai",
+      "titleZh": "AI智能体重塑网络之际，Google向更多应用开放Gemini与搜索",
+      "titleEn": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+      "summaryZh": "一个新的开发者平台将允许企业把自身服务接入Google的AI体验，这可能改变消费者发现和使用应用的方式。",
+      "summaryEn": "A new developer platform will let businesses bring their services to Google's AI experiences, potentially changing how consumers discover and use apps.",
+      "keywords": [
+        "Google",
+        "Gemini",
+        "Search",
+        "developer platform",
+        "AI agents",
+        "app integration"
+      ],
+      "topics": [
+        "AI agents",
+        "Google Gemini",
+        "Google Search",
+        "developer platform",
+        "app discovery"
+      ],
+      "models": [
+        "Gemini"
+      ],
+      "detailZh": "据TechCrunch AI报道，Google计划推出一个新的开发者平台，允许企业将自身服务接入Google的AI体验，包括Gemini和搜索。报道称，这一举措发生在AI智能体正在重塑网络使用方式的背景下，可能改变消费者发现和使用应用的方式。\n\n目前已知的信息主要来自该报道的概述：Google将向更多应用开放Gemini与搜索，企业可通过新平台把服务带入Google的AI产品中。报道没有披露平台的具体名称、上线时间、接入方式、定价或首批合作方等细节。\n\n从背景看，AI智能体正逐步代替用户直接操作网页和应用，搜索与助手类产品成为服务入口。Google此举被视为在这一趋势下扩展其AI生态、吸引第三方服务接入的动作。\n\n由于来源材料较为简略，关于该平台的技术实现、开放范围和对开发者的具体要求仍不明确，后续需要官方信息或更详细报道加以确认。",
+      "keyPointsZh": [
+        "Google计划推出新的开发者平台，让企业把服务接入Gemini和搜索等AI体验。",
+        "报道将此举置于AI智能体重塑网络使用方式的背景下。",
+        "该平台可能改变消费者发现和使用应用的方式。",
+        "报道未披露平台名称、上线时间、接入方式或定价等具体细节。"
+      ],
+      "impactZh": "若该平台落地，Google的AI产品可能成为第三方服务的新分发入口，影响应用发现渠道和AI智能体生态的竞争格局。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实是Google将推出开发者平台并向更多应用开放Gemini与搜索；至于平台如何运作、开放程度多大，目前只能视为合理推测，尚无官方细节支撑。",
+      "limitationsZh": "来源仅为TechCrunch AI的简要报道，缺少平台名称、时间表、技术接入方式、定价和合作方等信息，相关影响判断存在不确定性。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
+          "publishedAt": "2026-10-28T17:00:00.000Z",
+          "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-28T17:00:00.000Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-10-28T17:00:00.000Z",
+            "label": "10/29 01:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-28T17:58:53.908Z",
+            "label": "10/29 01:58",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T18:57:47.817Z",
+            "label": "10/29 02:57",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T19:56:41.726Z",
+            "label": "10/29 03:56",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T20:55:35.634Z",
+            "label": "10/29 04:55",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-10-28T19:48:02.695Z",
-            "label": "10/29 03:48",
-            "value": 40,
+            "at": "2026-10-28T21:54:29.543Z",
+            "label": "10/29 05:54",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-10-28T20:43:44.260Z",
-            "label": "10/29 04:43",
-            "value": 48,
+            "at": "2026-10-28T22:53:23.452Z",
+            "label": "10/29 06:53",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:39:25.825Z",
-            "label": "10/29 05:39",
-            "value": 57,
+            "at": "2026-10-28T23:52:17.360Z",
+            "label": "10/29 07:52",
+            "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:35:07.390Z",
-            "label": "10/29 06:35",
+            "at": "2026-10-29T00:51:11.269Z",
+            "label": "10/29 08:51",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:50:05.178Z",
+            "label": "10/29 09:50",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b9545b95e7aefbea",
+      "normalizedUrl": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis",
+      "originalUrl": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
+      "titleOriginal": "Google opens Android development to third-party AI agents and unveils new Gemini APIs",
+      "summaryOriginal": "Google is opening up Android Studio to third-party AI agents. Through a new \"Bring Your Own Agent\" feature, the IDE now supports more than 40 coding agents, including Anthropic's Claude Agent and OpenAI's Codex. Google says new terminal tools also help agents finish UI tasks 77 percent faster while using up to three times fewer tokens. Android development is becoming agent-centric too. The article Google opens Android development to third-party AI agents and unveils new Gemini APIs appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Maximilian Schreiner",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/05/Android-Robot-Logo-Background-Nano-Banana-Pro.jpg"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-10-28T16:59:59.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
+          "publishedAt": "2026-10-28T16:59:59.000Z",
+          "title": "Google opens Android development to third-party AI agents and unveils new Gemini APIs",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/05/Android-Robot-Logo-Background-Nano-Banana-Pro.jpg"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "谷歌向第三方AI智能体开放Android Studio，并公布可量化的效率提升，这会影响Android开发者选择工具的方式，也反映IDE正转向以智能体为中心。",
+      "importanceReasonEn": "Google opening Android Studio to third-party AI agents, with quantified efficiency gains, affects how Android developers choose tooling and signals a shift toward agent-centric IDEs.",
+      "scoringMode": "ai",
+      "titleZh": "谷歌向第三方AI智能体开放Android开发，并发布新的Gemini API",
+      "titleEn": "Google opens Android development to third-party AI agents and unveils new Gemini APIs",
+      "summaryZh": "谷歌通过新的“自带智能体”（Bring Your Own Agent）功能向第三方AI智能体开放Android Studio，该IDE现已支持包括Anthropic的Claude Agent和OpenAI的Codex在内的40多个编码智能体。谷歌表示，新的终端工具还能帮助智能体将UI任务完成速度提升77%，同时token消耗最多减少至三分之一。Android开发也正转向以智能体为中心。",
+      "summaryEn": "Google is opening up Android Studio to third-party AI agents. Through a new \"Bring Your Own Agent\" feature, the IDE now supports more than 40 coding agents, including Anthropic's Claude Agent and OpenAI's Codex. Google says new terminal tools also help agents finish UI tasks 77 percent faster while using up to three times fewer tokens. Android development is becoming agent-centric too.",
+      "keywords": [
+        "Android Studio",
+        "Bring Your Own Agent",
+        "第三方AI智能体",
+        "Gemini API",
+        "编码智能体",
+        "token效率"
+      ],
+      "topics": [
+        "Android开发",
+        "AI编码智能体",
+        "Gemini API",
+        "开发者工具"
+      ],
+      "models": [
+        "Gemini",
+        "Claude Agent",
+        "OpenAI Codex"
+      ],
+      "detailZh": "谷歌宣布向第三方AI智能体开放Android开发环境。Android Studio新增“自带智能体”（Bring Your Own Agent）功能，使该IDE能够接入外部编码智能体，而不再局限于谷歌自家的助手。据The Decoder报道，目前支持的智能体超过40个，其中包括Anthropic的Claude Agent和OpenAI的Codex。\n\n除开放智能体接入外，谷歌还发布了新的Gemini API，但现有材料未说明这些API的具体名称、能力或定价。\n\n谷歌同时公布了新的终端工具的效率数据：这些工具可帮助智能体将UI任务的完成速度提升77%，同时token消耗最多减少至原来的三分之一。报道未披露测试方法、基准任务或对比条件。\n\n综合来看，Android开发正转向以智能体为中心的工作流，开发者可以在同一IDE内选用不同厂商的智能体。",
+      "keyPointsZh": [
+        "Android Studio通过“Bring Your Own Agent”功能支持第三方AI智能体。",
+        "目前支持的编码智能体超过40个，包括Anthropic的Claude Agent和OpenAI的Codex。",
+        "谷歌发布了新的Gemini API，但具体细节未披露。",
+        "谷歌称新的终端工具使智能体完成UI任务的速度提升77%，token消耗最多减少至三分之一。"
+      ],
+      "impactZh": "这打破了单一厂商助手对Android IDE的垄断，使开发者可以按需选择智能体，并可能推动其他IDE跟进开放智能体接入。",
+      "readerImpactZh": "",
+      "userImpactZh": "Android开发者可以在Android Studio中直接接入Claude Agent、Codex等第三方智能体，并按任务选择工具；团队在评估编码智能体时，需要把token效率与任务完成速度纳入比较。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：Android Studio新增“自带智能体”功能，支持40多个第三方编码智能体，并发布了新的Gemini API；谷歌还给出了终端工具的效率数字。可以合理推断，谷歌希望把Android Studio定位为智能体中立的开发平台，但效率数字的测试条件尚未公开，需谨慎看待。",
+      "limitationsZh": "材料未说明新Gemini API的具体内容、支持智能体的完整名单、77%提速和token节省的测试方法与基准任务，也未说明该功能的上线时间和适用范围。",
+      "actionStepsZh": [
+        "关注Android Studio“Bring Your Own Agent”功能的正式上线说明。",
+        "在采用第三方智能体前，用团队自身任务验证其速度与token消耗。",
+        "查阅谷歌官方文档，了解新Gemini API的能力与限制。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "谷歌称新终端工具使UI任务完成速度提升77%，同时token消耗最多降至原来的三分之一（约33%）。",
+        "data": [
+          {
+            "label": "UI任务完成速度提升",
+            "value": 77,
+            "display": ""
+          },
+          {
+            "label": "token消耗（相对基准）",
+            "value": 33,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
+          "publishedAt": "2026-10-28T16:59:59.000Z",
+          "title": "Google opens Android development to third-party AI agents and unveils new Gemini APIs",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/05/Android-Robot-Logo-Background-Nano-Banana-Pro.jpg"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-28T16:59:59.000Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-28T16:59:59.000Z",
+            "label": "10/29 00:59",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-28T17:58:53.008Z",
+            "label": "10/29 01:58",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T18:57:47.017Z",
+            "label": "10/29 02:57",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T19:56:41.026Z",
+            "label": "10/29 03:56",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T20:55:35.034Z",
+            "label": "10/29 04:55",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T21:54:29.043Z",
+            "label": "10/29 05:54",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T22:53:23.052Z",
+            "label": "10/29 06:53",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T23:52:17.060Z",
+            "label": "10/29 07:52",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:51:11.069Z",
+            "label": "10/29 08:51",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:50:05.078Z",
+            "label": "10/29 09:50",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
             "value": 65,
-            "reports": 1
-          },
-          {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
-            "value": 74,
             "reports": 1
           }
         ],
@@ -1283,7 +1949,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T16:45:23.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1294,45 +1960,280 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T17:43:18.136Z",
-            "label": "10/29 01:43",
-            "value": 21,
+            "at": "2026-10-28T17:40:15.371Z",
+            "label": "10/29 01:40",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-28T18:41:13.273Z",
-            "label": "10/29 02:41",
-            "value": 29,
+            "at": "2026-10-28T18:35:07.743Z",
+            "label": "10/29 02:35",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-28T19:39:08.409Z",
-            "label": "10/29 03:39",
-            "value": 36,
+            "at": "2026-10-28T19:30:00.114Z",
+            "label": "10/29 03:30",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-28T20:37:03.546Z",
-            "label": "10/29 04:37",
+            "at": "2026-10-28T20:24:52.486Z",
+            "label": "10/29 04:24",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T21:19:44.857Z",
+            "label": "10/29 05:19",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T22:14:37.229Z",
+            "label": "10/29 06:14",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T23:09:29.600Z",
+            "label": "10/29 07:09",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:04:21.972Z",
+            "label": "10/29 08:04",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:59:14.343Z",
+            "label": "10/29 08:59",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:54:06.715Z",
+            "label": "10/29 09:54",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "2b49348ed8ba5067",
+      "normalizedUrl": "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform",
+      "originalUrl": "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
+      "titleOriginal": "OpenAI teases Dots for Europe, but its Berlin DevDay was really about building a platform",
+      "summaryOriginal": "At DevDay Exchange in Berlin, OpenAI mostly repeated what it had already announced, but it did share a few new details. The AI assistant Dots should roll out more widely in Europe \"in a few weeks,\" and weekly Codex users in Germany have grown twentyfold since January. A clear subtext ran through the sessions and the repeated nods to ChatGPT's 1.2 billion weekly users: OpenAI wants developers to build their businesses directly on its infrastructure. The article OpenAI teases Dots for Europe, but its Berlin DevDay was really about building a platform appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Maximilian Schreiner",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/10/OpenAI-DevDay-Exchange-2026.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-10-28T16:25:02.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
+          "publishedAt": "2026-10-28T16:25:02.000Z",
+          "title": "OpenAI teases Dots for Europe, but its Berlin DevDay was really about building a platform",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/10/OpenAI-DevDay-Exchange-2026.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该消息透露了 OpenAI 在欧洲的开发者生态进展和产品落地时间表，对关注平台战略的开发者有参考价值，但整体以重复既有信息为主，新细节有限。",
+      "importanceReasonEn": "The item reveals OpenAI's developer-ecosystem progress and product timeline in Europe, useful for developers tracking platform strategy, but it largely repeats existing information with limited new detail.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI 预告 Dots 将登陆欧洲，但柏林 DevDay 的真正重点是构建平台",
+      "titleEn": "OpenAI teases Dots for Europe, but its Berlin DevDay was really about building a platform",
+      "summaryZh": "在柏林举行的 DevDay Exchange 上，OpenAI 主要重复了此前已公布的内容，但也透露了一些新细节：AI 助手 Dots 预计将在“几周内”在欧洲更广泛地推出；自今年 1 月以来，德国每周使用 Codex 的用户增长了二十倍。贯穿各场演讲以及多次提及 ChatGPT 每周 12 亿用户的一个明确潜台词是：OpenAI 希望开发者直接在其基础设施上构建业务。",
+      "summaryEn": "At DevDay Exchange in Berlin, OpenAI mostly repeated what it had already announced, but it did share a few new details. The AI assistant Dots should roll out more widely in Europe \"in a few weeks,\" and weekly Codex users in Germany have grown twentyfold since January. A clear subtext ran through the sessions and the repeated nods to ChatGPT's 1.2 billion weekly users: OpenAI wants developers to build their businesses directly on its infrastructure.",
+      "keywords": [
+        "OpenAI",
+        "DevDay Exchange",
+        "Berlin",
+        "Dots",
+        "Codex",
+        "ChatGPT",
+        "developer platform"
+      ],
+      "topics": [
+        "OpenAI",
+        "developer platform",
+        "Dots",
+        "Codex",
+        "Europe"
+      ],
+      "models": [],
+      "detailZh": "OpenAI 在柏林举办了 DevDay Exchange 活动。根据 The Decoder 的报道，这场活动的大部分内容是对 OpenAI 此前已公布信息的重复，但活动中仍透露了少量新细节。\n\n其一，AI 助手 Dots 预计将在“几周内”在欧洲更广泛地推出。其二，自今年 1 月以来，德国每周使用 Codex 的用户数量增长了二十倍。\n\n报道指出，贯穿各场演讲、并多次提及 ChatGPT 每周 12 亿用户的一个明确潜台词是：OpenAI 希望开发者直接在其基础设施之上构建业务。这表明此次活动的核心并非发布大量新产品，而是强化平台定位、吸引开发者留在 OpenAI 的生态内。\n\n该报道由 The Decoder 首发。",
+      "keyPointsZh": [
+        "OpenAI 在柏林举办 DevDay Exchange 活动。",
+        "AI 助手 Dots 预计将在“几周内”在欧洲更广泛推出。",
+        "自今年 1 月以来，德国每周 Codex 用户增长了二十倍。",
+        "活动多次提及 ChatGPT 每周 12 亿用户，核心信息是鼓励开发者基于 OpenAI 基础设施构建业务。"
+      ],
+      "impactZh": "该活动显示 OpenAI 正把欧洲开发者生态作为重点，通过产品落地和平台叙事吸引开发者留在其基础设施上，这可能影响欧洲开发者的技术选型和平台依赖。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 OpenAI 工具的开发者而言，Dots 在欧洲的扩展意味着更广的可用范围，Codex 用户增长也反映出编码类工具的使用正在扩大；但报道未给出具体功能或定价细节。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实层面：柏林 DevDay Exchange 重复了既有发布，仅透露 Dots 欧洲扩展时间与德国 Codex 用户增长数据。合理推断：OpenAI 借活动强化“平台”定位，意在把开发者锁定在其基础设施上。",
+      "limitationsZh": "报道未说明 Dots 的具体功能、定价或确切上线日期，也未给出 Codex 用户增长的绝对数字或统计口径，二十倍增长仅为相对表述。",
+      "actionStepsZh": [
+        "关注 OpenAI 关于 Dots 在欧洲上线的后续官方公告。",
+        "评估团队对 OpenAI 基础设施的依赖程度，并留意平台锁定风险。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "以 1 月为基准 1，德国每周 Codex 用户增长至 20 倍。",
+        "data": [
+          {
+            "label": "德国每周 Codex 用户（1 月）",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "德国每周 Codex 用户（当前）",
+            "value": 20,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
+          "publishedAt": "2026-10-28T16:25:02.000Z",
+          "title": "OpenAI teases Dots for Europe, but its Berlin DevDay was really about building a platform",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/10/OpenAI-DevDay-Exchange-2026.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-28T16:25:02.000Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-10-28T16:25:02.000Z",
+            "label": "10/29 00:25",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-28T17:21:45.371Z",
+            "label": "10/29 01:21",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T18:18:28.743Z",
+            "label": "10/29 02:18",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T19:15:12.114Z",
+            "label": "10/29 03:15",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T20:11:55.486Z",
+            "label": "10/29 04:11",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T21:08:38.857Z",
+            "label": "10/29 05:08",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T22:05:22.229Z",
+            "label": "10/29 06:05",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T23:02:05.600Z",
+            "label": "10/29 07:02",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:34:58.682Z",
-            "label": "10/29 05:34",
-            "value": 50,
+            "at": "2026-10-28T23:58:48.972Z",
+            "label": "10/29 07:58",
+            "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:32:53.819Z",
-            "label": "10/29 06:32",
-            "value": 58,
+            "at": "2026-10-29T00:55:32.343Z",
+            "label": "10/29 08:55",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
-            "value": 65,
+            "at": "2026-10-29T01:52:15.715Z",
+            "label": "10/29 09:52",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -1446,7 +2347,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T16:09:28.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1457,50 +2358,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T17:04:38.119Z",
-            "label": "10/29 01:04",
-            "value": 20,
+            "at": "2026-10-28T17:07:36.280Z",
+            "label": "10/29 01:07",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-28T17:59:48.239Z",
-            "label": "10/29 01:59",
-            "value": 27,
+            "at": "2026-10-28T18:05:44.561Z",
+            "label": "10/29 02:05",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-28T18:54:58.358Z",
-            "label": "10/29 02:54",
-            "value": 33,
+            "at": "2026-10-28T19:03:52.841Z",
+            "label": "10/29 03:03",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-28T19:50:08.478Z",
-            "label": "10/29 03:50",
-            "value": 39,
+            "at": "2026-10-28T20:02:01.122Z",
+            "label": "10/29 04:02",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-28T20:45:18.597Z",
-            "label": "10/29 04:45",
+            "at": "2026-10-28T21:00:09.403Z",
+            "label": "10/29 05:00",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T21:58:17.683Z",
+            "label": "10/29 05:58",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T22:56:25.964Z",
+            "label": "10/29 06:56",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:40:28.717Z",
-            "label": "10/29 05:40",
-            "value": 52,
+            "at": "2026-10-28T23:54:34.245Z",
+            "label": "10/29 07:54",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:35:38.836Z",
-            "label": "10/29 06:35",
-            "value": 58,
+            "at": "2026-10-29T00:52:42.525Z",
+            "label": "10/29 08:52",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
+            "at": "2026-10-29T01:50:50.806Z",
+            "label": "10/29 09:50",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
             "value": 65,
             "reports": 1
           }
@@ -1635,7 +2554,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T16:07:40.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1646,50 +2565,68 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T17:03:03.619Z",
-            "label": "10/29 01:03",
-            "value": 20,
+            "at": "2026-10-28T17:05:58.098Z",
+            "label": "10/29 01:05",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-28T17:58:27.239Z",
-            "label": "10/29 01:58",
-            "value": 27,
+            "at": "2026-10-28T18:04:16.197Z",
+            "label": "10/29 02:04",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-28T18:53:50.858Z",
-            "label": "10/29 02:53",
-            "value": 33,
+            "at": "2026-10-28T19:02:34.296Z",
+            "label": "10/29 03:02",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-28T19:49:14.478Z",
-            "label": "10/29 03:49",
-            "value": 39,
+            "at": "2026-10-28T20:00:52.395Z",
+            "label": "10/29 04:00",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-28T20:44:38.097Z",
-            "label": "10/29 04:44",
+            "at": "2026-10-28T20:59:10.494Z",
+            "label": "10/29 04:59",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T21:57:28.592Z",
+            "label": "10/29 05:57",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T22:55:46.691Z",
+            "label": "10/29 06:55",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:40:01.717Z",
-            "label": "10/29 05:40",
-            "value": 52,
+            "at": "2026-10-28T23:54:04.790Z",
+            "label": "10/29 07:54",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:35:25.336Z",
-            "label": "10/29 06:35",
-            "value": 58,
+            "at": "2026-10-29T00:52:22.889Z",
+            "label": "10/29 08:52",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
+            "at": "2026-10-29T01:50:40.988Z",
+            "label": "10/29 09:50",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
             "value": 65,
             "reports": 1
           }
@@ -1826,7 +2763,7 @@
       ],
       "heat": {
         "startedAt": "2026-10-28T16:00:31.000Z",
-        "endedAt": "2026-10-28T23:30:48.956Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1837,50 +2774,261 @@
             "reports": 0
           },
           {
-            "at": "2026-10-28T16:56:48.244Z",
-            "label": "10/29 00:56",
-            "value": 20,
+            "at": "2026-10-28T16:59:28.098Z",
+            "label": "10/29 00:59",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-10-28T17:53:05.489Z",
-            "label": "10/29 01:53",
-            "value": 27,
+            "at": "2026-10-28T17:58:25.197Z",
+            "label": "10/29 01:58",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-10-28T18:49:22.733Z",
-            "label": "10/29 02:49",
-            "value": 33,
+            "at": "2026-10-28T18:57:22.296Z",
+            "label": "10/29 02:57",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-10-28T19:45:39.978Z",
-            "label": "10/29 03:45",
-            "value": 39,
+            "at": "2026-10-28T19:56:19.395Z",
+            "label": "10/29 03:56",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-10-28T20:41:57.222Z",
-            "label": "10/29 04:41",
+            "at": "2026-10-28T20:55:16.494Z",
+            "label": "10/29 04:55",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T21:54:13.592Z",
+            "label": "10/29 05:54",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T22:53:10.691Z",
+            "label": "10/29 06:53",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-10-28T21:38:14.467Z",
-            "label": "10/29 05:38",
-            "value": 52,
+            "at": "2026-10-28T23:52:07.790Z",
+            "label": "10/29 07:52",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-10-28T22:34:31.711Z",
-            "label": "10/29 06:34",
-            "value": 58,
+            "at": "2026-10-29T00:51:04.889Z",
+            "label": "10/29 08:51",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-10-28T23:30:48.956Z",
-            "label": "10/29 07:30",
+            "at": "2026-10-29T01:50:01.988Z",
+            "label": "10/29 09:50",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "4aecdbeb1e498aae",
+      "normalizedUrl": "https://openmoss.ai/blog/cn/moss-image",
+      "originalUrl": "https://openmoss.ai/blog/cn/moss-image/",
+      "titleOriginal": "OpenMOSS 发布开源图像生成模型 MOSS-Image，主打长文本渲染与可编辑布局",
+      "summaryOriginal": "OpenMOSS 发布开放权重图像生成模型 MOSS-Image，采用 5B 参数单流 DiT 从零预训练，支持最长 4K token 提示词、中英文长文本渲染和可编辑的 JSON Layout。",
+      "originalLanguage": "zh",
+      "author": "OpenMOSS / 复旦NLP / 上海创智 / MOSI（网页）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/wykbrcxndw1zv255b9y2usj7v",
+        "https://openmoss.ai/blog/cn/moss-image/"
+      ],
+      "publishedAt": "2026-10-28T16:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-10-29T02:05:30.449Z",
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/wykbrcxndw1zv255b9y2usj7v"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:wykbrcxndw1zv255b9y2usj7v",
+          "name": "OpenMOSS / 复旦NLP / 上海创智 / MOSI（网页）",
+          "type": "aggregator",
+          "url": "https://openmoss.ai/blog/cn/moss-image/",
+          "publishedAt": "2026-10-28T16:00:00.000Z",
+          "title": "OpenMOSS 发布开源图像生成模型 MOSS-Image，主打长文本渲染与可编辑布局",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/wykbrcxndw1zv255b9y2usj7v",
+            "https://openmoss.ai/blog/cn/moss-image/"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该模型以开放权重形式发布，并在长提示词、长文本渲染和可编辑布局三个方向同时给出能力，对开源图像生成生态和设计类应用有直接参考价值。",
+      "importanceReasonEn": "The model is released with open weights and combines long-prompt handling, long-text rendering and editable layout control, making it directly relevant to the open-source image generation ecosystem and design-oriented applications.",
+      "scoringMode": "ai",
+      "titleZh": "OpenMOSS 发布开源图像生成模型 MOSS-Image，主打长文本渲染与可编辑布局",
+      "titleEn": "OpenMOSS Releases Open-Source Image Generation Model MOSS-Image, Focused on Long-Text Rendering and Editable Layout",
+      "summaryZh": "OpenMOSS 发布开放权重图像生成模型 MOSS-Image，采用 5B 参数单流 DiT 从零预训练，支持最长 4K token 提示词、中英文长文本渲染和可编辑的 JSON Layout。",
+      "summaryEn": "OpenMOSS has released MOSS-Image, an open-weight image generation model built on a 5B-parameter single-stream DiT pretrained from scratch, supporting prompts up to 4K tokens, long Chinese and English text rendering, and editable JSON Layout.",
+      "keywords": [
+        "MOSS-Image",
+        "OpenMOSS",
+        "单流 DiT",
+        "4K token",
+        "JSON Layout",
+        "长文本渲染"
+      ],
+      "topics": [
+        "图像生成",
+        "开源模型",
+        "长文本渲染",
+        "布局控制",
+        "DiT"
+      ],
+      "models": [
+        "MOSS-Image"
+      ],
+      "detailZh": "OpenMOSS 发布了图像生成模型 MOSS-Image，并公开了模型权重。根据发布信息，该模型采用 5B 参数的单流 DiT（Diffusion Transformer）架构，从零开始预训练，而非在已有模型上做微调。\n\n在输入侧，MOSS-Image 支持最长 4K token 的提示词，这一长度明显超过常见图像生成模型对提示词长度的限制，为复杂场景描述和长文本内容提供了空间。\n\n在文本渲染方面，模型主打中英文长文本生成能力，即能够在图像中较完整地呈现较长的中文或英文文字内容，这是许多图像生成模型的薄弱环节。\n\n在布局控制方面，MOSS-Image 支持可编辑的 JSON Layout，用户可以通过结构化布局描述来控制画面元素的排布，并在生成后继续编辑布局信息。\n\n发布方为 OpenMOSS，来源标注涉及复旦 NLP、上海创智与 MOSI。目前公开信息集中在模型架构、参数规模与能力方向，尚未披露详细的评测分数、训练数据构成和许可证条款。",
+      "keyPointsZh": [
+        "MOSS-Image 为开放权重图像生成模型，由 OpenMOSS 发布。",
+        "采用 5B 参数单流 DiT 架构，从零预训练。",
+        "支持最长 4K token 提示词输入。",
+        "支持中英文长文本渲染与可编辑 JSON Layout。"
+      ],
+      "impactZh": "开源图像生成领域此前较少有模型同时强调超长提示词、长文本渲染和结构化布局编辑，MOSS-Image 的发布为这三类需求提供了一个可自行部署和研究的开放权重选项，也可能推动布局可控生成成为开源模型的常见能力。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和设计团队而言，开放权重意味着可以本地部署或二次开发；JSON Layout 的结构化控制方式便于把图像生成接入排版、海报、UI 素材等需要精确布局的工作流，而 4K token 提示词支持则降低了复杂需求被截断的风险。",
+      "howItWorksZh": "根据发布信息，MOSS-Image 使用单流 DiT 架构，参数量为 5B，并从零预训练。模型接受最长 4K token 的提示词，用于描述生成内容；同时接受 JSON 格式的布局描述，以结构化方式指定画面元素的排布，该布局信息在生成后仍可编辑。文本渲染方面，模型针对中文和英文长文本做了支持。",
+      "interpretationZh": "已披露的事实是：模型开放权重、5B 参数、单流 DiT、从零预训练、支持 4K token 提示词、长文本渲染和 JSON Layout。可以合理推断，这些能力面向的是需要复杂描述和精确排版的生成场景，例如海报与信息图。但发布信息未给出与同类模型的对比评测，实际效果仍需独立验证。",
+      "limitationsZh": "目前缺少公开的定量评测结果，长文本渲染的准确率、布局编辑的稳定性以及 4K token 提示词的实际利用率均未披露；训练数据来源、许可证条款和推理硬件要求也不明确，模型的实际可用性有待社区测试。",
+      "actionStepsZh": [
+        "获取 MOSS-Image 的开放权重并确认许可证条款。",
+        "用中英文长文本提示词测试文字渲染的完整度与准确性。",
+        "尝试用 JSON Layout 描述布局并验证生成后可编辑性。",
+        "在本地或自有环境中评估 5B 模型的推理资源需求。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:wykbrcxndw1zv255b9y2usj7v",
+          "name": "OpenMOSS / 复旦NLP / 上海创智 / MOSI（网页）",
+          "type": "aggregator",
+          "url": "https://openmoss.ai/blog/cn/moss-image/",
+          "publishedAt": "2026-10-28T16:00:00.000Z",
+          "title": "OpenMOSS 发布开源图像生成模型 MOSS-Image，主打长文本渲染与可编辑布局",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/wykbrcxndw1zv255b9y2usj7v",
+            "https://openmoss.ai/blog/cn/moss-image/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-10-28T16:00:00.000Z",
+        "endedAt": "2026-10-29T02:48:59.087Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-10-28T16:00:00.000Z",
+            "label": "10/29 00:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-10-28T16:58:59.917Z",
+            "label": "10/29 00:58",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T17:57:59.834Z",
+            "label": "10/29 01:57",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T18:56:59.751Z",
+            "label": "10/29 02:56",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T19:55:59.668Z",
+            "label": "10/29 03:55",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T20:54:59.585Z",
+            "label": "10/29 04:54",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T21:53:59.502Z",
+            "label": "10/29 05:53",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T22:52:59.419Z",
+            "label": "10/29 06:52",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-28T23:51:59.336Z",
+            "label": "10/29 07:51",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T00:50:59.253Z",
+            "label": "10/29 08:50",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T01:49:59.170Z",
+            "label": "10/29 09:49",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-10-29T02:48:59.087Z",
+            "label": "10/29 10:48",
             "value": 65,
             "reports": 1
           }
