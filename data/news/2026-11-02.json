@@ -1,7 +1,302 @@
 {
-  "generatedAt": "2026-11-02T01:47:52.104Z",
+  "generatedAt": "2026-11-02T09:21:35.263Z",
   "date": "2026-11-02",
   "items": [
+    {
+      "id": "9a52c521cb89aca7",
+      "normalizedUrl": "https://arxiv.org/abs/2610.40726",
+      "originalUrl": "https://arxiv.org/abs/2610.40726",
+      "titleOriginal": "Li$^{2}$SAO: Lifting Light Singl-Rollout Asynchronous RL Optimization via Group-Relative Actor-Critic Bootstrapping",
+      "summaryOriginal": "arXiv:2610.40726v1 Announce Type: new Abstract: Asynchronous reinforcement learning (RL) is becoming a mainstream paradigm for post-training large language models (LLMs), as it improves training efficiency by updating the model as rollouts arrive. Recent work argues that group-wise sampling in GRPO does not naturally fit asynchronous RL training because rollout lengths follow a long-tailed distribution, and proposes Single-rollout Asynchronous Optimization (SAO) to improve stability and off-policy behavior, especially on agentic tasks. However, SAO relies on a closed-source value model obtained from scaling value pretraining. In this paper, we analyze GRPO and LiSAO, our lightweight reproduction of SAO without the pretrained value model, on single-turn reasoning and multi-turn agentic tasks. We find that GRPO outperforms LiSAO on reasoning tasks, while the reverse holds on agentic tasks. Since the value model of LiSAO is not yet well trained , LiSAO lags behind GRPO substantially in early training steps. To address this issue, we propose Li$^{2}$SAO, which Lifts Light Single-rollout Asynchronous Optimization with group-relative actor-critic bootstrapping: while the critic is cold,",
+      "originalLanguage": "en",
+      "author": "Zichen Bai, Yanli Wang, Yang Liu, Junhao Shi, Xueqin Liu, Jinguo Sun, Muye Li, Shaoqiang Zheng, Xuefei Diao, Zhuwei Zeng, Nan Duan, Peng Cao",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/jd-cc-coder/Li2SAO"
+      ],
+      "publishedAt": "2026-11-02T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.40726",
+          "publishedAt": "2026-11-02T05:00:00.000Z",
+          "title": "Li$^{2}$SAO: Lifting Light Singl-Rollout Asynchronous RL Optimization via Group-Relative Actor-Critic Bootstrapping",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/jd-cc-coder/Li2SAO"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该工作针对异步强化学习后训练中 GRPO 与 SAO 的适用性差异给出实证对比，并提出缓解价值模型冷启动问题的改进方法，对 LLM 后训练工程有参考价值。",
+      "importanceReasonEn": "The work provides an empirical comparison of GRPO and SAO applicability in asynchronous RL post-training and proposes a method to mitigate value-model cold-start issues, offering reference value for LLM post-training engineering.",
+      "scoringMode": "ai",
+      "titleZh": "Li²SAO：通过组相对演员-评论家自举提升轻量单轨迹异步强化学习优化",
+      "titleEn": "Li²SAO: Lifting Light Single-Rollout Asynchronous RL Optimization via Group-Relative Actor-Critic Bootstrapping",
+      "summaryZh": "该论文研究大语言模型异步强化学习后训练中的采样与优化问题。作者复现了不依赖预训练价值模型的轻量版 SAO（LiSAO），并在单轮推理与多轮智能体任务上对比 GRPO 与 LiSAO，发现 GRPO 在推理任务上更优，而 LiSAO 在智能体任务上更优；由于 LiSAO 的价值模型训练不足，其早期训练明显落后于 GRPO。为此作者提出 Li²SAO，在评论家尚未训练充分时引入组相对演员-评论家自举机制来改进轻量单轨迹异步优化。",
+      "summaryEn": "This paper studies sampling and optimization in asynchronous reinforcement learning post-training for large language models. The authors reproduce a lightweight SAO variant (LiSAO) that does not rely on a pretrained value model, and compare GRPO with LiSAO on single-turn reasoning and multi-turn agentic tasks. They find GRPO performs better on reasoning tasks while LiSAO performs better on agentic tasks; because LiSAO's value model is not well trained, LiSAO lags substantially behind GRPO in early training. The authors therefore propose Li²SAO, which introduces group-relative actor-critic bootstrapping to lift lightweight single-rollout asynchronous optimization while the critic is cold.",
+      "keywords": [
+        "异步RL",
+        "单轨迹优化",
+        "演员-评论家",
+        "组相对自举",
+        "智能体训练"
+      ],
+      "topics": [
+        "异步强化学习",
+        "大语言模型后训练",
+        "GRPO",
+        "SAO",
+        "智能体任务"
+      ],
+      "models": [
+        "GRPO",
+        "SAO",
+        "LiSAO",
+        "Li²SAO"
+      ],
+      "detailZh": "该论文关注大语言模型异步强化学习后训练。异步 RL 在轨迹陆续到达时即更新模型，从而提升训练效率，正成为主流范式之一。近期研究认为，GRPO 中的组采样并不天然适配异步 RL 训练，因为轨迹长度呈长尾分布，并提出单轨迹异步优化（SAO）以提升稳定性与离策略行为，尤其在智能体任务上。\n\n但 SAO 依赖一个通过扩展价值预训练得到的闭源价值模型。本文作者构建了 LiSAO，即不依赖预训练价值模型的轻量 SAO 复现，并在单轮推理任务与多轮智能体任务上对 GRPO 与 LiSAO 进行对比分析。\n\n实验发现，GRPO 在推理任务上优于 LiSAO，而在智能体任务上结论相反。作者指出，由于 LiSAO 的价值模型尚未训练充分，LiSAO 在训练早期明显落后于 GRPO。\n\n为解决该问题，作者提出 Li²SAO，通过组相对演员-评论家自举来提升轻量单轨迹异步优化，即在评论家处于冷启动阶段时引入组相对信号进行自举。摘要在此处截断，具体自举机制与完整实验结果未在给定材料中给出。",
+      "keyPointsZh": [
+        "异步 RL 通过轨迹到达即更新模型来提升 LLM 后训练效率。",
+        "作者复现了不依赖预训练价值模型的轻量 SAO，称为 LiSAO。",
+        "对比显示 GRPO 在推理任务上更优，LiSAO 在智能体任务上更优。",
+        "LiSAO 因价值模型训练不足，在训练早期明显落后于 GRPO。",
+        "Li²SAO 提出组相对演员-评论家自举以缓解评论家冷启动问题。"
+      ],
+      "impactZh": "该研究为异步强化学习后训练中采样策略与价值模型设计提供了实证依据，指出不同任务类型下 GRPO 与单轨迹方法的优劣差异，并尝试降低对大规模预训练价值模型的依赖。",
+      "readerImpactZh": "",
+      "userImpactZh": "对从事 LLM 后训练与强化学习工程的团队而言，该工作提示在智能体任务上单轨迹异步优化可能更合适，同时需关注价值模型冷启动对早期训练稳定性的影响。",
+      "howItWorksZh": "",
+      "interpretationZh": "据摘要所述，GRPO 与 LiSAO 在不同任务类型上各有优势，LiSAO 的短板主要来自价值模型训练不足导致的早期落后。Li²SAO 的改进思路是在评论家尚未训练好时借助组相对信息进行自举。以上为作者报告的事实；具体算法细节与量化收益因摘要截断而无法确认。",
+      "limitationsZh": "给定材料仅为论文摘要且末尾截断，Li²SAO 的具体自举机制、实验设置、基线配置与量化结果均未提供，结论需以全文为准。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.40726",
+          "publishedAt": "2026-11-02T05:00:00.000Z",
+          "title": "Li$^{2}$SAO: Lifting Light Singl-Rollout Asynchronous RL Optimization via Group-Relative Actor-Critic Bootstrapping",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/jd-cc-coder/Li2SAO"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-02T05:00:00.000Z",
+        "endedAt": "2026-11-02T09:21:35.263Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-02T05:00:00.000Z",
+            "label": "11/2 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-02T05:52:19.052Z",
+            "label": "11/2 13:52",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T06:44:38.105Z",
+            "label": "11/2 14:44",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T07:36:57.157Z",
+            "label": "11/2 15:36",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T08:29:16.210Z",
+            "label": "11/2 16:29",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T09:21:35.263Z",
+            "label": "11/2 17:21",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "0bdbf715831b417c",
+      "normalizedUrl": "https://arxiv.org/abs/2610.40847",
+      "originalUrl": "https://arxiv.org/abs/2610.40847",
+      "titleOriginal": "The Generative Gap Between Speculative Drafter and Continuous Diffusion Language Model",
+      "summaryOriginal": "arXiv:2610.40847v1 Announce Type: new Abstract: Continuous diffusion language models (CDLMs) and speculative drafters offer efficient language generation but are typically evaluated differently: CDLMs generate independently through iterative refinement, whereas drafters propose text for target-model verification and correction. We compare their architectures without verification, using LangFlow for CDLMs and adapting DSpark's Markov and recurrent-head architectures for standalone generation. All models are trained from scratch for unconditional, single-block OpenWebText generation at lengths 16, 128, and 1024, without target features or verification, using common preprocessing, backbone dimensions, and training-update budgets. We evaluate generation perplexity (GenPPL) with an external language model and distributional similarity to reference text with MAUVE. With default denoising steps equal to sequence length, LangFlow outperforms both DSpark variants on both metrics at lengths 128 and 1024, while DSpark-RNN leads at 16. A conditional KL analysis characterizes dependencies excluded by the Markov head's previous-token conditioning. Recurrent memory removes this restriction and im",
+      "originalLanguage": "en",
+      "author": "Yujian Chen, Hao Jiang, Guang Cheng, Weijian Luo, Tianyang Hu",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-02T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.40847",
+          "publishedAt": "2026-11-02T05:00:00.000Z",
+          "title": "The Generative Gap Between Speculative Drafter and Continuous Diffusion Language Model",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该研究把通常用于不同目的的扩散模型与投机起草器放在同一无验证条件下比较，为理解两类高效生成架构的能力边界提供了受控实验证据，但属于学术对比研究，短期实用转化有限。",
+      "importanceReasonEn": "The study places diffusion models and speculative drafters, usually evaluated for different purposes, under the same verification-free setting, offering controlled evidence on the capability boundaries of two efficient-generation architectures; it is academic comparison work with limited near-term p",
+      "scoringMode": "ai",
+      "titleZh": "投机起草器与连续扩散语言模型之间的生成差距",
+      "titleEn": "The Generative Gap Between Speculative Drafter and Continuous Diffusion Language Model",
+      "summaryZh": "一篇 arXiv 论文在无验证条件下对比连续扩散语言模型（CDLM）与投机起草器的独立生成能力：用 LangFlow 代表 CDLM，并将 DSpark 的马尔可夫头与循环头架构改造为独立生成器，在 OpenWebText 上从零训练，序列长度为 16、128、1024，以外部语言模型困惑度和 MAUVE 评估。",
+      "summaryEn": "An arXiv paper compares continuous diffusion language models (CDLMs) and speculative drafters as standalone generators without verification: LangFlow represents CDLMs, while DSpark's Markov and recurrent-head architectures are adapted for standalone generation, all trained from scratch on OpenWebText at lengths 16, 128 and 1024 and evaluated with external-LM perplexity and MAUVE.",
+      "keywords": [
+        "连续扩散语言模型",
+        "投机起草器",
+        "LangFlow",
+        "DSpark",
+        "MAUVE",
+        "生成困惑度"
+      ],
+      "topics": [
+        "连续扩散语言模型",
+        "投机解码",
+        "语言生成评估",
+        "模型架构对比"
+      ],
+      "models": [
+        "LangFlow",
+        "DSpark",
+        "DSpark-RNN"
+      ],
+      "detailZh": "该论文关注连续扩散语言模型（CDLM）与投机起草器这两类高效文本生成架构。二者通常在不同框架下被评估：CDLM 通过迭代细化独立生成文本，而投机起草器是为目标模型提出候选文本、再由目标模型验证和纠正。作者希望剥离验证环节，直接比较两者作为独立生成器的表现。\n\n实验设置上，CDLM 一侧使用 LangFlow，起草器一侧则改造 DSpark 的马尔可夫头和循环头架构，使其能够独立生成。所有模型均从零训练，任务为无条件的单块 OpenWebText 生成，序列长度分别为 16、128 和 1024，并使用共同的数据预处理、骨干维度和训练更新预算，不使用目标模型特征或验证。\n\n评估采用两项指标：由外部语言模型计算的生成困惑度（GenPPL），以及与参考文本的分布相似度 MAUVE。在默认去噪步数等于序列长度的设置下，LangFlow 在长度 128 和 1024 时两项指标均优于两种 DSpark 变体，而 DSpark-RNN 在长度 16 时领先。\n\n论文还通过条件 KL 分析刻画了马尔可夫头仅依赖前一 token 所排除的依赖关系，并指出循环记忆可以移除这一限制。摘要在此处截断，后续结论未在可见文本中给出。",
+      "keyPointsZh": [
+        "论文在无验证条件下对比 LangFlow（CDLM）与改造后的 DSpark 马尔可夫头和循环头架构。",
+        "所有模型从零训练，在 OpenWebText 上做无条件单块生成，长度 16、128、1024，共享预处理、骨干维度和训练预算。",
+        "默认去噪步数等于序列长度时，LangFlow 在长度 128 和 1024 的 GenPPL 与 MAUVE 上均优于两种 DSpark 变体。",
+        "DSpark-RNN 在长度 16 时表现最好。",
+        "条件 KL 分析显示马尔可夫头的前一 token 条件排除了部分依赖，循环记忆可移除该限制。"
+      ],
+      "impactZh": "该研究提供了受控对比证据，说明在无验证的独立生成场景下，扩散式迭代细化在中长序列上可能优于受限于局部条件的起草器架构，有助于厘清两类高效生成方法的适用边界。",
+      "readerImpactZh": "",
+      "userImpactZh": "对研究者和模型开发者而言，该结果提示在评估投机起草器时应区分其作为独立生成器与作为候选生成器的能力，序列长度和条件结构（马尔可夫 vs 循环记忆）会显著影响相对表现。",
+      "howItWorksZh": "实验将 LangFlow 作为连续扩散语言模型代表，通过迭代去噪细化生成文本；将 DSpark 的马尔可夫头与循环头改造为不依赖目标模型验证的独立生成器。所有模型在相同预处理、骨干维度和训练更新预算下从零训练，生成固定长度（16、128、1024）的无条件文本。评估时用外部语言模型计算生成困惑度 GenPPL，并用 MAUVE 衡量生成分布与参考文本的相似度；默认去噪步数设为等于序列长度。",
+      "interpretationZh": "据论文摘要，在无验证的独立生成设定下，LangFlow 在中长序列的两项指标上领先，而 DSpark-RNN 在极短序列上领先；这属于受控实验中的观察结果。可合理推断，马尔可夫头仅依赖前一 token 的条件结构在较长序列上构成限制，但该推断需以论文完整实验为准。",
+      "limitationsZh": "摘要文本在讨论循环记忆处截断，完整结论、具体数值和统计显著性未给出；实验仅覆盖无条件单块 OpenWebText 生成和三种序列长度，未涉及条件生成、目标模型验证或更大规模模型，结论外推需谨慎。",
+      "actionStepsZh": [
+        "在比较扩散模型与投机起草器时，区分独立生成与带验证生成两种评估设定。",
+        "复现或参考其实验控制项：共享预处理、骨干维度和训练更新预算。",
+        "关注序列长度对两类架构相对表现的影响，尤其是短序列与中长序列的差异。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-cl",
+          "name": "arXiv Computation and Language",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2610.40847",
+          "publishedAt": "2026-11-02T05:00:00.000Z",
+          "title": "The Generative Gap Between Speculative Drafter and Continuous Diffusion Language Model",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-02T05:00:00.000Z",
+        "endedAt": "2026-11-02T09:21:35.263Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-02T05:00:00.000Z",
+            "label": "11/2 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-02T05:52:19.052Z",
+            "label": "11/2 13:52",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T06:44:38.105Z",
+            "label": "11/2 14:44",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T07:36:57.157Z",
+            "label": "11/2 15:36",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T08:29:16.210Z",
+            "label": "11/2 16:29",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T09:21:35.263Z",
+            "label": "11/2 17:21",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "02e2283de4456d96",
       "normalizedUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647688060&idx=1&sn=e00d7e57b6f0e3670f0e267e677047df",
@@ -22,7 +317,7 @@
       "publishedAt": "2026-11-02T00:19:00.000Z",
       "publishedPrecision": "minute",
       "discoveredAt": "2026-11-02T00:21:28.806Z",
-      "contentType": "practical",
+      "contentType": "industry",
       "evidenceLevel": "practitioner",
       "attribution": {
         "name": "AIHOT",
@@ -46,14 +341,14 @@
           ]
         }
       ],
-      "importance": 62,
-      "importanceReasonZh": "这是一份来自一线实践者的完整Agent自动化系统架构分享，展示了事件驱动、分层执行与关键决策人工介入的可行组合，对想搭建个人或小团队自动化工作流的读者有直接参考价值。",
-      "importanceReasonEn": "This is a complete Agent automation system architecture shared by a hands-on practitioner, showing a feasible combination of event-driven design, layered execution, and human intervention at key decisions. It offers direct reference value for readers who want to build automation workflows for indivi",
+      "importance": 55,
+      "importanceReasonZh": "这是一份来自一线实践者的Agent自动化系统架构分享，展示了事件驱动、分层调度和关键决策人工介入的完整思路，对想搭建个人或小团队Agent工作流的读者有参考价值，但属于个人经验而非可复现的标准化方案。",
+      "importanceReasonEn": "This is a first-hand practitioner's architecture write-up of an Agent automation system, showing a complete approach of event-driven triggering, layered scheduling, and human intervention at key decisions. It is useful reference for readers building personal or small-team Agent workflows, but it is ",
       "scoringMode": "ai",
       "titleZh": "数字生命卡兹克分享折腾一年的Agent自动化系统架构",
       "titleEn": "Kazik Shares a Year of Building an Agent Automation System Architecture",
       "summaryZh": "自媒体作者卡兹克分享自己搭建近一年的Agent自动化系统，核心是把任务起点从人身上移开，由事件触发Agent工作。系统分为自动化中台、Agent执行、CI中台和飞书决策四层：中台用rules.json统一管理事件触发和Agent调度，本地MacMini跑Agent任务，自建CI中台完成审查、检查、合并、发布、核实五步，只在删数据、花钱、改方向等关键决策时通过飞书卡片找作者拍板。",
-      "summaryEn": "Self-media author Kazik shares an Agent automation system he has built over nearly a year. The core idea is to move the starting point of tasks away from the person, letting events trigger Agent work. The system has four layers: an automation middle platform, Agent execution, a CI middle platform, and Feishu-based decision-making. The middle platform uses rules.json to centrally manage event triggers and Agent scheduling; a local MacMini runs Agent tasks; a self-built CI middle platform completes five steps—review, check, merge, publish, and verify; and the author is only asked to make key decisions—such as deleting data, spending money, or changing direction—through Feishu cards.",
+      "summaryEn": "Self-media author Kazik shares an Agent automation system he has built over nearly a year. The core idea is to move the starting point of tasks away from the human, letting events trigger Agent work. The system has four layers: an automation middle platform, Agent execution, a CI middle platform, and Feishu-based decision-making. The middle platform uses rules.json to centrally manage event triggers and Agent scheduling; a local MacMini runs Agent tasks; a self-built CI middle platform performs five steps—review, check, merge, publish, and verify; and the author is only asked to make key decisions—such as deleting data, spending money, or changing direction—via Feishu cards.",
       "keywords": [
         "Agent自动化",
         "rules.json",
@@ -69,25 +364,25 @@
         "人机协作决策"
       ],
       "models": [],
-      "detailZh": "自媒体作者卡兹克在公众号文章中分享了自己搭建近一年的Agent自动化系统。他提出的核心思路是把任务起点从人身上移开：不再由人主动发起任务，而是由事件触发Agent开始工作。\n\n系统被划分为四层。第一层是自动化中台，用rules.json统一管理事件触发规则和Agent调度。第二层是Agent执行层，Agent任务运行在本地MacMini上。第三层是自建CI中台，负责完成审查、检查、合并、发布、核实五个步骤。第四层是飞书决策层，只在删数据、花钱、改方向等关键决策时，通过飞书卡片请作者本人拍板。\n\n文章强调，这套系统的设计目标不是让Agent完全替代人，而是把人的介入点收敛到少数真正需要判断的决策上，其余流程由事件驱动自动流转。作者以自身近一年的折腾经验为基础，给出了这套分层架构的完整描述。",
+      "detailZh": "自媒体作者卡兹克在公众号文章中分享了自己搭建近一年的Agent自动化系统架构。这套系统的核心设计理念是把任务的起点从人身上移开：不再由人主动发起任务，而是由事件触发Agent开始工作。\n\n系统整体分为四层。第一层是自动化中台，用rules.json统一管理事件触发规则和Agent调度逻辑。第二层是Agent执行层，Agent任务运行在本地MacMini上。第三层是自建CI中台，负责完成审查、检查、合并、发布、核实五个步骤。第四层是飞书决策层，只在删数据、花钱、改方向等关键决策节点上，通过飞书卡片的形式请作者本人拍板。\n\n文章强调，这套架构让作者从日常任务的发起和执行中抽身，只在真正需要人判断的环节介入。作者用“折腾一年”来描述搭建和迭代这套系统的过程，说明其并非一次性完成，而是长期打磨的结果。\n\n需要说明的是，原文属于个人实践经验分享，未提供rules.json的具体结构、CI中台的技术选型、Agent的具体实现方式或运行效果数据，因此本文只能呈现其架构思路，无法还原完整实现细节。",
       "keyPointsZh": [
-        "核心设计是把任务起点从人身上移开，改由事件触发Agent工作。",
-        "系统分为自动化中台、Agent执行、CI中台和飞书决策四层。",
+        "系统核心是把任务起点从人身上移开，改由事件触发Agent工作。",
+        "架构分为自动化中台、Agent执行、CI中台和飞书决策四层。",
         "自动化中台用rules.json统一管理事件触发和Agent调度。",
-        "Agent任务运行在本地MacMini上，CI中台自建并包含审查、检查、合并、发布、核实五步。",
-        "只在删数据、花钱、改方向等关键决策时通过飞书卡片找作者拍板。"
+        "Agent任务运行在本地MacMini上，CI中台完成审查、检查、合并、发布、核实五步。",
+        "只在删数据、花钱、改方向等关键决策时通过飞书卡片请作者拍板。"
       ],
-      "impactZh": "该分享提供了一套可借鉴的分层Agent自动化架构，说明事件驱动加关键决策人工介入可以成为个人或小团队运行自动化工作流的现实方案，对Agent落地实践具有参考意义。",
+      "impactZh": "这类实践展示了Agent从“对话工具”走向“事件驱动的自动化执行系统”的一种路径，尤其是把人工介入收敛到少数关键决策点的思路，对个人开发者和自动化爱好者有启发意义。",
       "readerImpactZh": "",
-      "userImpactZh": "对AI用户和开发者而言，这套架构展示了如何用rules.json集中管理触发规则、用本地设备承载Agent执行、用自建CI流水线保证产出质量，并把人工审批限制在少数高风险决策上，可作为搭建个人自动化系统的结构参考。",
-      "howItWorksZh": "按文章描述，系统运行流程为：事件先进入自动化中台，由rules.json中定义的规则判断是否触发以及调度哪个Agent；被调度的Agent任务在本地MacMini上执行；执行结果进入自建CI中台，依次经过审查、检查、合并、发布、核实五个步骤；当流程遇到删数据、花钱、改方向等关键决策时，系统通过飞书卡片通知作者，由作者拍板后再继续。",
-      "interpretationZh": "文章呈现的是一套实践者自述的系统架构，属于经验分享而非正式技术文档。可以确认的是作者描述了四层结构和各层职责；至于系统实际运行效果、稳定性与自动化覆盖率，文章未给出量化数据，需读者自行判断。",
-      "limitationsZh": "文章为个人经验分享，未提供系统运行数据、失败案例或具体配置细节；rules.json的具体结构、CI中台五步的实现方式以及飞书卡片的触发条件均未展开，复现时需自行设计。",
+      "userImpactZh": "对AI用户和开发者而言，这套架构提供了一个可借鉴的分层思路：用规则文件统一管理触发与调度、把执行放在本地机器、用CI流程做质量把关、把人工审批限制在少数高风险决策上。但原文未给出具体配置和代码，直接照搬需要自行设计实现。",
+      "howItWorksZh": "按原文描述，系统运行流程大致为：事件先进入自动化中台，由rules.json中定义的规则判断是否触发以及调度哪个Agent；被调度的Agent在本地MacMini上执行任务；任务产出进入自建CI中台，依次经过审查、检查、合并、发布、核实五个步骤；当遇到删数据、花钱、改方向等关键决策时，系统通过飞书卡片通知作者，由作者拍板后再继续。原文未披露rules.json的具体字段、CI中台的技术实现和Agent的调度细节。",
+      "interpretationZh": "从原文可确认的事实是：作者搭建了一套四层结构的Agent自动化系统，并以事件触发替代人工发起任务，人工只保留关键决策权。可以合理推断的是，这种设计意在降低日常任务的启动成本、把人的注意力集中到高风险判断上。但系统的实际运行效果、稳定性、出错率和维护成本，原文均未提供数据，无法评估。",
+      "limitationsZh": "原文为个人经验分享，未提供rules.json的具体结构、CI中台的技术选型、Agent的实现方式、运行效果数据或失败案例，因此无法判断该架构的通用性和可复现性。",
       "actionStepsZh": [
-        "用rules.json集中定义事件触发规则与Agent调度关系，便于统一维护。",
-        "将Agent执行放在本地设备（如MacMini）上运行，降低对外部服务的依赖。",
-        "为Agent产出建立审查、检查、合并、发布、核实五步CI流程，保证质量。",
-        "把删数据、花钱、改方向等高风险操作设为必须人工确认的决策点。"
+        "梳理自己日常任务中哪些可以由事件触发，作为自动化的起点。",
+        "尝试用一份集中式规则文件管理触发条件和任务调度，便于统一维护。",
+        "在自动化流程中设置审查、检查、合并、发布、核实等质量关卡。",
+        "把删数据、花钱、改方向等高风险操作设为必须人工确认的节点。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -113,9 +408,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-02T00:19:00.000Z",
-        "endedAt": "2026-11-02T01:47:52.104Z",
-        "current": 59,
-        "peak": 59,
+        "endedAt": "2026-11-02T09:21:35.263Z",
+        "current": 55,
+        "peak": 55,
         "history": [
           {
             "at": "2026-11-02T00:19:00.000Z",
@@ -124,15 +419,63 @@
             "reports": 0
           },
           {
-            "at": "2026-11-02T01:03:26.052Z",
-            "label": "11/2 09:03",
-            "value": 37,
+            "at": "2026-11-02T01:13:15.526Z",
+            "label": "11/2 09:13",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-02T01:47:52.104Z",
-            "label": "11/2 09:47",
-            "value": 59,
+            "at": "2026-11-02T02:07:31.052Z",
+            "label": "11/2 10:07",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T03:01:46.578Z",
+            "label": "11/2 11:01",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T03:56:02.105Z",
+            "label": "11/2 11:56",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T04:50:17.631Z",
+            "label": "11/2 12:50",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T05:44:33.157Z",
+            "label": "11/2 13:44",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T06:38:48.684Z",
+            "label": "11/2 14:38",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T07:33:04.210Z",
+            "label": "11/2 15:33",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T08:27:19.736Z",
+            "label": "11/2 16:27",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T09:21:35.263Z",
+            "label": "11/2 17:21",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -182,14 +525,14 @@
           ]
         }
       ],
-      "importance": 42,
-      "importanceReasonZh": "这是一条来自知名开发者 Simon Willison 的实用经验，针对 Python 3.15 升级后 uv 依赖锁定导致的构建失败，给出了简单可复现的解决办法，对使用 uv 的 Python 开发者有直接帮助。",
-      "importanceReasonEn": "This is a practical tip from well-known developer Simon Willison addressing build failures caused by uv dependency locking after upgrading to Python 3.15, offering a simple, reproducible fix that directly helps Python developers using uv.",
+      "importance": 38,
+      "importanceReasonZh": "这是一条来自知名开发者 Simon Willison 的实用经验，针对 Python 3.15 升级后 uv 锁文件导致的构建失败，给出了简单可复现的解决办法，对使用 uv 的 Python 开发者有直接帮助。",
+      "importanceReasonEn": "This is a practical tip from well-known developer Simon Willison about uv lock files causing build failures after upgrading to Python 3.15, offering a simple reproducible fix that directly helps Python developers using uv.",
       "scoringMode": "ai",
       "titleZh": "拿不准时，就删掉 uv.lock 文件",
       "titleEn": "If in doubt, delete the uv.lock file",
-      "summaryZh": "作者在切换到 Python 3.15 后偶尔遇到令人困惑的 Python 依赖错误，他总结出的经验法则是：拿不准时，就删掉 uv.lock 文件。他的大多数项目是库，本身不包含 uv.lock，因为库依赖为使用它的其他项目锁定版本是不礼貌的。运行 uv run pytest 等命令往往会留下 uv.lock 文件，这些文件被列在 .gitignore 中，因此不会被提交到仓库。但有时这个 uv.lock 会锁定某个尚未提供 Python 3.15 wheel 的依赖版本。作者举了当天的一个例子：构建 watchfiles==1.1.1 失败，原因是配置的 Python 解释器版本（3.15）高于 PyO3 支持的最高版本（3.14）。删掉该文件并重新运行 uv run pytest 通常就能解决问题。",
-      "summaryEn": "After switching to Python 3.15, the author occasionally hits confusing Python dependency errors, and the rule he has had to remember is: if in doubt, delete the uv.lock file. Most of his projects are libraries that don't include a uv.lock file, since it's rude for a library dependency to lock versions for anything else that uses it. Running uv run pytest etc. tends to leave uv.lock files lying around, which are listed in .gitignore and so do not get committed to his repositories. But sometimes that uv.lock pins a version of a dependency that doesn't yet have a Python 3.15 wheel. An example from earlier that day: building watchfiles==1.1.1 failed because the configured Python interpreter version (3.15) is newer than PyO3's maximum supported version (3.14). Deleting that file and running uv ",
+      "summaryZh": "自从切换到 Python 3.15 后，我偶尔会遇到令人困惑的 Python 依赖错误，而我不得不记住的一条规则是：拿不准时，就删掉 uv.lock 文件。我的大多数项目都是库，通常不包含 uv.lock 文件，因为库依赖为使用它的其他项目锁定版本是不礼貌的。运行 uv run pytest 等命令往往会留下 uv.lock 文件，这些文件被列在 .gitignore 中，因此不会被提交到我的仓库。但……有时那个 uv.lock 会锁定某个依赖的版本，而该版本还没有 Python 3.15 的 wheel。今天早些时候的一个例子是：error: Failed to build `watchfiles==1.1.1` cause: Call to `maturin.build_wheel` failed error: the configured Python interpreter version (3.15) is newer than PyO3's maximum supported version (3.14)。删掉那个文件并再次运行 uv run pytest 通常就能解决问题。",
+      "summaryEn": "I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: If in doubt, delete the uv.lock file. Most of my projects are libraries which don't include a uv.lock file, since it's rude for a library dependency to lock versions for anything else that uses it. Running uv run pytest etc tends to leave uv.lock files lying around, which are listed in .gitignore and so do not get committed to my repositories. But... sometimes that uv.lock pins a version of a dependency that doesn't yet have a Python 3.15 wheel. An example from earlier today: error: Failed to build `watchfiles==1.1.1` cause: Call to `maturin.build_wheel` failed error: the configured Python interpreter version (3.15) is newer than PyO3's maximum supp",
       "keywords": [
         "uv.lock",
         "uv",
@@ -206,24 +549,23 @@
         "Python 3.15"
       ],
       "models": [],
-      "detailZh": "Simon Willison 在切换到 Python 3.15 后，偶尔会遇到令人困惑的 Python 依赖错误。他总结出的经验法则是：拿不准时，就删掉 uv.lock 文件。\n\n他解释说，自己的大多数项目是库，本身不包含 uv.lock 文件，因为库依赖为使用它的其他项目锁定版本是不礼貌的。不过，运行 uv run pytest 等命令往往会留下 uv.lock 文件，这些文件被列在 .gitignore 中，因此不会被提交到仓库。\n\n问题在于，有时这个 uv.lock 会锁定某个尚未提供 Python 3.15 wheel 的依赖版本。他举了当天的一个例子：构建 watchfiles==1.1.1 失败，报错显示配置的 Python 解释器版本（3.15）高于 PyO3 支持的最高版本（3.14）。\n\n解决办法是删掉该文件并重新运行 uv run pytest，通常就能解决问题。",
+      "detailZh": "Simon Willison 在切换到 Python 3.15 后，偶尔会遇到令人困惑的 Python 依赖错误。他总结出一条需要记住的规则：拿不准时，就删掉 uv.lock 文件。\n\n他解释说，自己的大多数项目都是库，通常不包含 uv.lock 文件，因为库依赖为使用它的其他项目锁定版本是不礼貌的。但运行 uv run pytest 等命令往往会留下 uv.lock 文件，这些文件被列在 .gitignore 中，因此不会被提交到仓库。\n\n问题在于，有时这个 uv.lock 会锁定某个依赖的版本，而该版本还没有 Python 3.15 的 wheel。他给出了当天早些时候的一个具体例子：构建 watchfiles==1.1.1 失败，maturin.build_wheel 调用失败，原因是配置的 Python 解释器版本（3.15）高于 PyO3 支持的最高版本（3.14）。\n\n他的解决办法是删除该文件并再次运行 uv run pytest，这通常就能解决问题。",
       "keyPointsZh": [
-        "作者切换到 Python 3.15 后偶尔遇到依赖错误，经验法则是拿不准时删掉 uv.lock。",
-        "库项目通常不包含 uv.lock，但运行 uv run pytest 会留下该文件，且被 .gitignore 忽略。",
-        "uv.lock 可能锁定尚未提供 Python 3.15 wheel 的依赖版本。",
-        "示例：watchfiles==1.1.1 构建失败，因为 Python 3.15 高于 PyO3 支持的最高版本 3.14。",
-        "删除 uv.lock 并重新运行 uv run pytest 通常能解决问题。"
+        "切换到 Python 3.15 后，uv.lock 可能锁定尚无 3.15 wheel 的依赖版本，导致构建失败",
+        "示例错误：watchfiles==1.1.1 构建失败，因为 Python 3.15 高于 PyO3 支持的最高版本 3.14",
+        "作者的项目多为库，uv.lock 被列入 .gitignore 不提交，但本地运行会残留",
+        "删除 uv.lock 后重新运行 uv run pytest 通常可解决问题"
       ],
-      "impactZh": "这条经验揭示了 Python 版本升级与依赖锁定之间的常见冲突：锁文件可能固定住尚未适配新解释器版本的依赖，导致构建失败。它提醒开发者锁文件并非总是有益，在库项目和快速迭代场景中需要谨慎处理。",
+      "impactZh": "这条经验揭示了 Python 版本升级与依赖锁定之间的常见冲突：锁文件可能固定住尚未适配新解释器版本的依赖，从而引发难以理解的构建错误。对使用 uv 的开发者而言，这是一个简单有效的排障思路。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 uv 管理 Python 项目的开发者在升级到 Python 3.15 后，若遇到依赖构建失败，可先尝试删除 uv.lock 再重新运行命令，这通常能绕过锁定的旧版本依赖问题。",
-      "howItWorksZh": "uv 会在运行命令时生成 uv.lock 文件，记录依赖的精确版本。当解释器升级到 Python 3.15 后，锁文件中固定的某些依赖版本可能尚无对应的 3.15 wheel，需要从源码构建；而构建工具链（如 PyO3）可能尚不支持 3.15，从而报错。删除 uv.lock 后，uv 会重新解析依赖并选择可用的版本，通常能避开该问题。",
-      "interpretationZh": "已报道的事实是：作者在 Python 3.15 下遇到 watchfiles 构建失败，报错指向 PyO3 最高支持 3.14，删除 uv.lock 后问题解决。合理推断是：锁文件固定了旧依赖版本，而该版本尚未适配新解释器，重新解析依赖可绕过。",
-      "limitationsZh": "这是作者的个人经验，并非通用规则；删除 uv.lock 会丢失可复现的锁定状态，在需要严格版本一致性的项目中可能带来风险。文中未说明该问题是否在所有依赖和平台上普遍存在。",
+      "userImpactZh": "使用 uv 管理 Python 项目的开发者在升级到 Python 3.15 后，若遇到依赖构建失败，可先尝试删除本地残留的 uv.lock 再重新运行，以排除锁文件固定旧版本依赖导致的问题。",
+      "howItWorksZh": "uv 运行命令时会生成 uv.lock 文件，记录依赖的精确版本。若该文件锁定的依赖版本没有对应新 Python 版本的预编译 wheel，uv 会尝试从源码构建；而构建工具链（如 PyO3）可能尚不支持新的解释器版本，导致构建失败。删除 uv.lock 后重新运行，uv 会重新解析依赖并选择可用的版本。",
+      "interpretationZh": "据作者描述，问题源于本地残留的 uv.lock 锁定了不兼容 Python 3.15 的依赖版本；删除锁文件让 uv 重新解析依赖即可绕过。这是作者的个人经验总结，并非官方文档结论。",
+      "limitationsZh": "这是作者的个人经验，并非系统性验证；删除 uv.lock 会丢失原有的版本锁定，可能引入其他版本变化。该问题与具体依赖和工具链版本相关，不一定适用于所有项目。",
       "actionStepsZh": [
-        "遇到 uv 依赖构建失败时，先尝试删除 uv.lock 并重新运行命令。",
-        "在库项目中避免提交 uv.lock，可将其加入 .gitignore。",
-        "升级 Python 版本后，留意锁文件中可能尚未适配新版本的依赖。"
+        "遇到 uv 依赖构建失败时，先检查是否存在本地残留的 uv.lock 文件",
+        "尝试删除 uv.lock 并重新运行 uv run pytest 等命令",
+        "将 uv.lock 加入 .gitignore，避免库项目提交锁文件"
       ],
       "detailCompleteness": "full",
       "visual": {
@@ -268,9 +610,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-01T23:24:22.000Z",
-        "endedAt": "2026-11-02T01:47:52.104Z",
-        "current": 48,
-        "peak": 48,
+        "endedAt": "2026-11-02T09:21:35.263Z",
+        "current": 46,
+        "peak": 46,
         "history": [
           {
             "at": "2026-11-01T23:24:22.000Z",
@@ -279,21 +621,63 @@
             "reports": 0
           },
           {
-            "at": "2026-11-02T00:12:12.034Z",
-            "label": "11/2 08:12",
-            "value": 25,
+            "at": "2026-11-02T00:24:05.326Z",
+            "label": "11/2 08:24",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-11-02T01:00:02.069Z",
-            "label": "11/2 09:00",
-            "value": 37,
+            "at": "2026-11-02T01:23:48.652Z",
+            "label": "11/2 09:23",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-11-02T01:47:52.104Z",
-            "label": "11/2 09:47",
-            "value": 48,
+            "at": "2026-11-02T02:23:31.978Z",
+            "label": "11/2 10:23",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T03:23:15.305Z",
+            "label": "11/2 11:23",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T04:22:58.631Z",
+            "label": "11/2 12:22",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T05:22:41.957Z",
+            "label": "11/2 13:22",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T06:22:25.284Z",
+            "label": "11/2 14:22",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T07:22:08.610Z",
+            "label": "11/2 15:22",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T08:21:51.936Z",
+            "label": "11/2 16:21",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T09:21:35.263Z",
+            "label": "11/2 17:21",
+            "value": 46,
             "reports": 1
           }
         ],
@@ -356,7 +740,9 @@
         "public perception",
         "OpenAI"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "TechCrunch报道称，OpenAI可能将其数据中心重新命名为“AI算力园区”（AI compute campuses）。报道的核心背景是，数据中心在公众中相当不受欢迎，因此提出“换个叫法会怎样”的问题。\n\n目前公开信息仅停留在这一命名设想层面，报道没有说明更名是否已经确定、涉及哪些具体设施、何时实施，也没有给出OpenAI的官方回应。\n\n从已知事实看，数据中心因电力消耗、水资源使用和社区影响等问题面临越来越多的抵触情绪，这构成了此类品牌调整讨论的背景。除此之外，报道未提供更多可核实的信息。",
       "keyPointsZh": [
         "TechCrunch报道OpenAI可能将数据中心改称“AI算力园区”",
@@ -392,7 +778,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-01T21:55:23.000Z",
-        "endedAt": "2026-11-02T01:47:52.104Z",
+        "endedAt": "2026-11-02T09:21:35.263Z",
         "current": 44,
         "peak": 44,
         "history": [
@@ -403,26 +789,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-01T22:53:30.276Z",
-            "label": "11/2 06:53",
+            "at": "2026-11-01T22:57:45.933Z",
+            "label": "11/2 06:57",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T00:00:08.866Z",
+            "label": "11/2 08:00",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T01:02:31.799Z",
+            "label": "11/2 09:02",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-01T23:51:37.552Z",
-            "label": "11/2 07:51",
-            "value": 29,
+            "at": "2026-11-02T02:04:54.732Z",
+            "label": "11/2 10:04",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-02T00:49:44.828Z",
-            "label": "11/2 08:49",
-            "value": 37,
+            "at": "2026-11-02T03:07:17.665Z",
+            "label": "11/2 11:07",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-02T01:47:52.104Z",
-            "label": "11/2 09:47",
+            "at": "2026-11-02T04:09:40.598Z",
+            "label": "11/2 12:09",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T05:12:03.531Z",
+            "label": "11/2 13:12",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T06:14:26.464Z",
+            "label": "11/2 14:14",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T07:16:49.397Z",
+            "label": "11/2 15:16",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T08:19:12.330Z",
+            "label": "11/2 16:19",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T09:21:35.263Z",
+            "label": "11/2 17:21",
             "value": 44,
             "reports": 1
           }
@@ -520,7 +948,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-01T20:57:58.000Z",
-        "endedAt": "2026-11-02T01:47:52.104Z",
+        "endedAt": "2026-11-02T09:21:35.263Z",
         "current": 41,
         "peak": 41,
         "history": [
@@ -531,32 +959,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-01T21:55:56.820Z",
-            "label": "11/2 05:55",
+            "at": "2026-11-01T22:05:34.114Z",
+            "label": "11/2 06:05",
+            "value": 16,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-01T23:13:10.229Z",
+            "label": "11/2 07:13",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-01T22:53:55.641Z",
-            "label": "11/2 06:53",
-            "value": 25,
+            "at": "2026-11-02T00:20:46.344Z",
+            "label": "11/2 08:20",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-11-01T23:51:54.462Z",
-            "label": "11/2 07:51",
-            "value": 30,
+            "at": "2026-11-02T01:28:22.459Z",
+            "label": "11/2 09:28",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-11-02T00:49:53.283Z",
-            "label": "11/2 08:49",
-            "value": 35,
+            "at": "2026-11-02T02:35:58.574Z",
+            "label": "11/2 10:35",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-02T01:47:52.104Z",
-            "label": "11/2 09:47",
+            "at": "2026-11-02T03:43:34.688Z",
+            "label": "11/2 11:43",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T04:51:10.803Z",
+            "label": "11/2 12:51",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T05:58:46.918Z",
+            "label": "11/2 13:58",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T07:06:23.033Z",
+            "label": "11/2 15:06",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T08:13:59.148Z",
+            "label": "11/2 16:13",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T09:21:35.263Z",
+            "label": "11/2 17:21",
             "value": 41,
             "reports": 1
           }
@@ -678,7 +1142,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-01T16:49:04.000Z",
-        "endedAt": "2026-11-02T01:47:52.104Z",
+        "endedAt": "2026-11-02T09:21:35.263Z",
         "current": 46,
         "peak": 46,
         "history": [
@@ -689,56 +1153,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-01T17:48:56.011Z",
-            "label": "11/2 01:48",
-            "value": 18,
+            "at": "2026-11-01T18:19:17.751Z",
+            "label": "11/2 02:19",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-11-01T18:48:48.023Z",
-            "label": "11/2 02:48",
-            "value": 21,
+            "at": "2026-11-01T19:49:31.502Z",
+            "label": "11/2 03:49",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-11-01T19:48:40.034Z",
-            "label": "11/2 03:48",
-            "value": 25,
+            "at": "2026-11-01T21:19:45.253Z",
+            "label": "11/2 05:19",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-01T20:48:32.046Z",
-            "label": "11/2 04:48",
-            "value": 28,
+            "at": "2026-11-01T22:49:59.004Z",
+            "label": "11/2 06:49",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-01T21:48:24.057Z",
-            "label": "11/2 05:48",
+            "at": "2026-11-02T00:20:12.755Z",
+            "label": "11/2 08:20",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T01:50:26.507Z",
+            "label": "11/2 09:50",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-01T22:48:16.069Z",
-            "label": "11/2 06:48",
-            "value": 35,
+            "at": "2026-11-02T03:20:40.258Z",
+            "label": "11/2 11:20",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-11-01T23:48:08.080Z",
-            "label": "11/2 07:48",
-            "value": 39,
+            "at": "2026-11-02T04:50:54.009Z",
+            "label": "11/2 12:50",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-02T00:48:00.092Z",
-            "label": "11/2 08:48",
+            "at": "2026-11-02T06:21:07.760Z",
+            "label": "11/2 14:21",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-02T07:51:21.511Z",
+            "label": "11/2 15:51",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-11-02T01:47:52.104Z",
-            "label": "11/2 09:47",
+            "at": "2026-11-02T09:21:35.263Z",
+            "label": "11/2 17:21",
             "value": 46,
             "reports": 1
           }
