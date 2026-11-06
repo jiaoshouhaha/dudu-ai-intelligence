@@ -1,7 +1,298 @@
 {
-  "generatedAt": "2026-11-06T02:18:14.675Z",
+  "generatedAt": "2026-11-06T09:49:00.073Z",
   "date": "2026-11-06",
   "items": [
+    {
+      "id": "ca3a1f59a13e89ef",
+      "normalizedUrl": "https://arxiv.org/abs/2611.06972",
+      "originalUrl": "https://arxiv.org/abs/2611.06972",
+      "titleOriginal": "KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks",
+      "summaryOriginal": "arXiv:2611.06972v1 Announce Type: new Abstract: Liability adjudication tasks (e.g., legal charge determination) require analyzing event descriptions against domain-specific skills to determine whether a party should bear liability. While Large Language Models (LLMs) have shown promise in this area by leveraging executable skills for interpretable reasoning, existing approaches face three critical limitations: skill libraries become stale as real-world scenarios dynamically evolve, skill descriptions often suffer from a semantic execution gap where LLMs deviate from intended expert logic, and growing skill collections exceed context budgets causing critical skill omission. To address these challenges, we propose Knowledge-Data Dual-Driven Automated Skill Optimization (KDASO), which continuously evolves a skill library through neighborhood-conditioned induction from recent adjudication data, execution-aligned refinement based on LLM trajectory analysis, and context-budgeted routing for scalable skill selection. Experiments across ride-hailing adjudication, legal liability determination, and logical reasoning judgment demonstrate that KDASO significantly outperforms current general-pu",
+      "originalLanguage": "en",
+      "author": "Zi-Jian Cheng, Weiming Wu, Jie Meng, Zhen Peng, Shan Huang, Qun Li, Guobing Wu, Lan-Zhe Guo",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-06T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.06972",
+          "publishedAt": "2026-11-06T05:00:00.000Z",
+          "title": "KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该论文针对 LLM 在责任裁定任务中技能库过时、执行偏差和上下文超限三个实际问题提出系统化方法，并在多个场景做了实验，对法律与裁定类 AI 应用有参考价值，但尚属预印本，细节与复现性有待验证。",
+      "importanceReasonEn": "The paper targets three practical problems in LLM-based liability adjudication—stale skill libraries, execution misalignment, and context overflow—and evaluates the method across several scenarios, offering reference value for legal and adjudication AI applications, though it remains a preprint with",
+      "scoringMode": "ai",
+      "titleZh": "KDASO：知识-数据双驱动的责任裁定任务自动化技能优化",
+      "titleEn": "KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks",
+      "summaryZh": "一篇 arXiv 论文提出 KDASO 方法，通过从近期裁定数据中进行邻域条件归纳、基于大模型轨迹分析进行执行对齐精炼，以及上下文预算感知的技能路由，持续演化用于责任裁定任务（如法律罪名认定）的技能库，以应对技能库过时、语义执行差距和上下文超限三大问题。",
+      "summaryEn": "An arXiv paper proposes KDASO, a method that continuously evolves a skill library for liability adjudication tasks (such as legal charge determination) through neighborhood-conditioned induction from recent adjudication data, execution-aligned refinement based on LLM trajectory analysis, and context-budgeted skill routing, addressing stale skill libraries, semantic execution gaps, and context overflow.",
+      "keywords": [
+        "KDASO",
+        "技能优化",
+        "责任裁定",
+        "技能库演化",
+        "上下文预算路由"
+      ],
+      "topics": [
+        "LLM",
+        "责任裁定",
+        "技能库优化",
+        "法律推理",
+        "上下文管理"
+      ],
+      "models": [
+        "Large Language Models (LLMs)"
+      ],
+      "detailZh": "该论文以 arXiv 预印本形式发布，聚焦责任裁定类任务，例如法律罪名认定。这类任务要求模型将事件描述与领域特定技能进行比对，判断某一方是否应承担责任。作者指出，大语言模型借助可执行技能进行可解释推理已显示出潜力，但现有方法存在三个关键局限：一是随着现实场景动态演化，技能库会逐渐过时；二是技能描述存在语义执行差距，模型执行时可能偏离专家预期的逻辑；三是技能集合不断增长会超出上下文预算，导致关键技能被遗漏。\n\n针对上述问题，作者提出知识-数据双驱动的自动化技能优化方法 KDASO。该方法包含三个组成部分：从近期裁定数据中进行邻域条件归纳，以持续演化技能库；基于大模型轨迹分析进行执行对齐精炼，缩小技能描述与实际执行之间的差距；以及上下文预算感知的路由机制，用于在有限上下文内可扩展地选择技能。\n\n论文摘要称，在网约车裁定、法律责任认定和逻辑推理判断等实验中，KDASO 显著优于当前的通用方法。不过摘要未给出具体指标、数据集规模或对比基线细节，相关结论仍需结合全文与后续复现加以验证。",
+      "keyPointsZh": [
+        "论文指出 LLM 技能方法在责任裁定中存在技能库过时、语义执行差距和上下文超限三大局限。",
+        "KDASO 由邻域条件技能归纳、执行对齐精炼和上下文预算路由三部分组成。",
+        "实验覆盖网约车裁定、法律责任认定和逻辑推理判断三类任务。",
+        "摘要称 KDASO 显著优于现有通用方法，但未披露具体数值指标。"
+      ],
+      "impactZh": "该工作把技能库维护、执行一致性和上下文管理作为责任裁定 AI 的系统性问题统一处理，为法律、平台治理等需要可解释裁定的场景提供了可参考的技术路线。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 LLM 构建裁定或审核类应用的开发者而言，KDASO 提示应把技能库视为需要持续更新和校准的动态资产，并在技能选择阶段显式考虑上下文预算，而非一次性写入全部技能。",
+      "howItWorksZh": "根据摘要，KDASO 包含三个环节：第一，从近期裁定数据出发，在邻域条件下归纳新技能，使技能库随场景演化而更新；第二，分析大模型执行技能时的轨迹，据此对技能描述进行执行对齐的精炼，减少模型偏离专家逻辑的情况；第三，在上下文预算约束下对技能进行路由选择，避免技能集合膨胀导致关键技能被遗漏。",
+      "interpretationZh": "摘要报告的是方法设计与实验结论，属于作者自述；其中“显著优于”为定性表述，缺少具体数值。可合理推断该方法适用于技能数量多、场景变化快的裁定类任务，但其在真实法律场景中的效果与合规性尚待独立验证。",
+      "limitationsZh": "目前仅有摘要信息，缺少数据集规模、评价指标、基线设置和消融实验等细节；论文为 arXiv 预印本，尚未确认经过同行评审；法律裁定类应用还涉及责任认定准确性与合规风险，摘要未讨论。",
+      "actionStepsZh": [
+        "阅读全文以核实实验设置、指标与对比基线。",
+        "关注技能库更新频率与上下文路由策略在自有裁定场景中的可迁移性。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.06972",
+          "publishedAt": "2026-11-06T05:00:00.000Z",
+          "title": "KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-06T05:00:00.000Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-06T05:00:00.000Z",
+            "label": "11/6 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-06T05:57:48.014Z",
+            "label": "11/6 13:57",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T06:55:36.029Z",
+            "label": "11/6 14:55",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T07:53:24.043Z",
+            "label": "11/6 15:53",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:51:12.058Z",
+            "label": "11/6 16:51",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "2173f7bc6c09b49c",
+      "normalizedUrl": "https://arxiv.org/abs/2611.06977",
+      "originalUrl": "https://arxiv.org/abs/2611.06977",
+      "titleOriginal": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
+      "summaryOriginal": "arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same output regardless of the other requests in the batch. Existing solutions pay for this in different ways: batch-invariant kernels constrain every operator, and isolating prefill with fixed-shape decode ({our CoRun-style baseline}) gives up shared prefill compute and pads decode. We present BlockLock, which keeps shared batched prefill and pins only the numerical path of the protected request: it fixes the geometry that the request sees, with {two modes: BlockLock-Rows uses fixed-width rows and retains batched decode of all requests; BlockLock-Pack uses terminal-anchored packing with an isolated dummy segment, then extracts the protected request's KV state for target-only decode. Under a stated per-deployment contract, both modes preserve the target's output bitwise when its companions change.} Across five {dense} models (Qwen3-8B/14B, Llama-3.1-8B-Instruct, and Gemma-3-4B/12B-IT) and three single-GPU deployments (NVIDIA A6000, A100, and H100), we evaluate our approach on both tinyBenchmarks and BFCL{; we also include initial tensor-parallel experiments on two NVIDIA A",
+      "originalLanguage": "en",
+      "author": "Xiuyuan Qi, Pedro Reviriego, Javier Conde, Shanshan Liu",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-06T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.06977",
+          "publishedAt": "2026-11-06T05:00:00.000Z",
+          "title": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文针对LLM服务中一个实际且常被忽视的问题——批处理组成变化导致输出不可复现，并提出保留共享预填充计算的折中方案，对推理系统设计有参考价值；但目前仅有摘要，缺少完整实验数据与性能开销细节。",
+      "importanceReasonEn": "The paper addresses a practical and often overlooked problem in LLM serving—outputs changing with batch composition—and proposes a compromise that retains shared prefill compute, which is useful for inference system design; however, only the abstract is available, lacking full experimental data and ",
+      "scoringMode": "ai",
+      "titleZh": "BlockLock：以固定批处理几何实现可复现的LLM推理",
+      "titleEn": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
+      "summaryZh": "arXiv:2611.06977v1 新论文摘要：可复现的LLM推理要求同一请求无论与哪些其他请求同批处理，都产生相同输出。现有方案各有代价：批处理不变内核约束每个算子；用固定形状解码隔离预填充（CoRun式基线）则放弃共享预填充计算并对解码做填充。我们提出BlockLock，保留共享的批处理预填充，只固定受保护请求的数值路径：它固定该请求所见的几何形状，提供两种模式——BlockLock-Rows使用固定宽度行并保留所有请求的批处理解码；BlockLock-Pack使用终端锚定的打包与隔离的哑段，然后提取受保护请求的KV状态用于仅目标解码。在声明的每部署契约下，两种模式都能在伴随请求变化时逐位保持目标输出。我们在五个稠密模型（Qwen3-8B/14B、Llama-3.1-8B-Instruct、Gemma-3-4B/12B-IT）和三种单GPU部署（NVIDIA A6000、A100、H100）上，于tinyBenchmarks和BFCL上评估该方法；还包括在两块NVIDIA A上的初步张量并行实验。",
+      "summaryEn": "arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same output regardless of the other requests in the batch. Existing solutions pay for this in different ways: batch-invariant kernels constrain every operator, and isolating prefill with fixed-shape decode (a CoRun-style baseline) gives up shared prefill compute and pads decode. We present BlockLock, which keeps shared batched prefill and pins only the numerical path of the protected request: it fixes the geometry that the request sees, with two modes: BlockLock-Rows uses fixed-width rows and retains batched decode of all requests; BlockLock-Pack uses terminal-anchored packing with an isolated dummy segment, then extracts the protected request's KV state for target-only decode. U",
+      "keywords": [
+        "BlockLock",
+        "可复现推理",
+        "批处理几何",
+        "批处理不变内核",
+        "KV状态",
+        "预填充",
+        "解码"
+      ],
+      "topics": [
+        "LLM推理",
+        "可复现性",
+        "批处理",
+        "推理系统"
+      ],
+      "models": [
+        "Qwen3-8B",
+        "Qwen3-14B",
+        "Llama-3.1-8B-Instruct",
+        "Gemma-3-4B-IT",
+        "Gemma-3-12B-IT"
+      ],
+      "detailZh": "该论文（arXiv:2611.06977v1）关注LLM推理的可复现性问题：同一请求在与不同请求组成批次时，输出可能发生变化。作者指出，现有解决思路各有代价：批处理不变内核（batch-invariant kernels）通过约束每个算子来保证一致性；而用固定形状解码隔离预填充的CoRun式基线，则放弃了共享预填充计算，并对解码进行填充。\n\nBlockLock的核心思路是保留共享的批处理预填充，只固定受保护请求所见的数值路径，即固定其“几何形状”。论文给出两种模式：BlockLock-Rows使用固定宽度行，并保留所有请求的批处理解码；BlockLock-Pack使用终端锚定的打包方式，加入隔离的哑段，然后提取受保护请求的KV状态，仅对该目标进行解码。\n\n作者声称，在声明的每部署契约下，两种模式都能在伴随请求变化时逐位保持目标请求的输出不变。评估覆盖五个稠密模型（Qwen3-8B/14B、Llama-3.1-8B-Instruct、Gemma-3-4B/12B-IT）和三种单GPU部署（NVIDIA A6000、A100、H100），使用tinyBenchmarks和BFCL两个基准，并包含在两块NVIDIA A GPU上的初步张量并行实验。\n\n目前公开信息仅为论文摘要，尚未披露具体的性能开销、吞吐损失、契约的具体条件以及逐位一致性的完整验证细节。",
+      "keyPointsZh": [
+        "BlockLock旨在让同一LLM请求的输出不受同批其他请求影响，实现逐位可复现。",
+        "方法保留共享批处理预填充，只固定受保护请求的数值路径，提供Rows和Pack两种模式。",
+        "评估覆盖5个稠密模型（Qwen3、Llama-3.1、Gemma-3系列）和A6000、A100、H100三种单GPU部署。",
+        "使用tinyBenchmarks和BFCL基准，并包含初步的张量并行实验。",
+        "逐位一致性依赖论文声明的“每部署契约”，具体条件尚未在摘要中展开。"
+      ],
+      "impactZh": "批处理组成影响输出是LLM服务中影响审计、缓存复用和结果一致性的现实问题。BlockLock提出在保留共享预填充计算的前提下实现目标请求的可复现输出，若其开销可控，可为需要确定性输出的推理服务提供新的工程折中方案。",
+      "readerImpactZh": "",
+      "userImpactZh": "对需要确定性输出的AI应用开发者（如缓存、审计、回归测试场景）而言，该方法提示可以在不完全放弃批处理性能的情况下固定特定请求的输出；但当前仅有摘要，尚不能据此评估实际吞吐与延迟代价。",
+      "howItWorksZh": "根据摘要，BlockLock不约束所有算子，而是固定受保护请求所见的批处理几何形状。BlockLock-Rows：为请求分配固定宽度行，所有请求仍可一起进行批处理解码。BlockLock-Pack：采用终端锚定的打包方式，插入隔离的哑段，随后提取受保护请求的KV状态，仅对该目标执行解码。两种模式在论文声明的每部署契约下，声称可在同批其他请求变化时逐位保持目标输出。",
+      "interpretationZh": "论文报告的核心主张是：通过固定受保护请求的数值路径而非约束全部算子，可以在保留共享预填充的同时实现逐位可复现输出。这属于作者自述的方法与结果；由于目前只有摘要，性能开销、契约条件与独立复现情况均未公开，应视为待验证的研究主张。",
+      "limitationsZh": "当前仅有论文摘要，缺少完整实验数据、吞吐与延迟开销、契约的具体定义，以及逐位一致性在更大规模或张量并行下的验证细节；结果尚未经独立复现。",
+      "actionStepsZh": [
+        "关注该论文全文发布，重点查看逐位一致性的验证方法与性能开销数据。",
+        "若团队有确定性输出需求，可对比批处理不变内核、CoRun式隔离与BlockLock三种方案的取舍。",
+        "在采用前，先在自身部署环境验证论文所述“每部署契约”是否成立。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.06977",
+          "publishedAt": "2026-11-06T05:00:00.000Z",
+          "title": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-06T05:00:00.000Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-06T05:00:00.000Z",
+            "label": "11/6 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-06T05:57:48.014Z",
+            "label": "11/6 13:57",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T06:55:36.029Z",
+            "label": "11/6 14:55",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T07:53:24.043Z",
+            "label": "11/6 15:53",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:51:12.058Z",
+            "label": "11/6 16:51",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "1121cf54e69f72cb",
       "normalizedUrl": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027",
@@ -38,8 +329,8 @@
         }
       ],
       "importance": 55,
-      "importanceReasonZh": "Airbnb是大型旅行平台，其AI代理计划反映了旅行预订领域向代理式AI发展的趋势，但发布时间较远且细节有限。",
-      "importanceReasonEn": "Airbnb is a major travel platform, and its AI agent plan signals the shift toward agentic AI in travel booking, though the launch is distant and details are limited.",
+      "importanceReasonZh": "Airbnb是大型旅行平台，其AI代理计划涉及行程规划与预订管理，可能影响旅行者使用平台的方式，但目前仅有公司表态，缺少产品细节。",
+      "importanceReasonEn": "Airbnb is a major travel platform, and its AI agent plan covers trip planning and booking management, which could affect how travelers use the platform; however, only a company statement is available with few product details.",
       "scoringMode": "ai",
       "titleZh": "Airbnb宣布将于2027年上半年推出AI旅行代理",
       "titleEn": "Airbnb says it's launching an AI travel agent in the first half of 2027",
@@ -50,29 +341,32 @@
         "AI travel agent",
         "trip planning",
         "booking management",
-        "2027"
+        "travel"
       ],
       "topics": [
-        "AI agents",
-        "travel",
+        "AI travel agent",
         "Airbnb",
-        "booking"
+        "travel planning",
+        "booking management"
       ],
       "models": [],
-      "detailZh": "Airbnb宣布计划在2027年上半年推出一款AI旅行代理。根据目前披露的信息，该代理将面向旅行者提供行程规划、选项比较、预订管理以及住宿期间的协助等功能。\n\n这一消息由TechCrunch AI报道，属于Airbnb对产品路线图的公开表态。报道没有说明该代理将使用何种底层模型、以何种产品形态呈现（例如独立应用还是嵌入现有Airbnb应用），也没有给出具体定价或分阶段上线安排。\n\n从时间上看，2027年上半年距离消息发布仍有一段时间，这意味着产品细节、功能范围和技术方案都可能在此后发生变化。目前可确认的核心事实是：Airbnb确认了该产品的存在、大致上线窗口，以及它覆盖旅行全流程的定位。\n\n由于缺乏技术实现和商业模式方面的具体信息，现阶段难以评估该代理与现有旅行规划工具或通用AI助手的差异。后续需要关注Airbnb是否公布模型合作方、数据使用方式以及预订环节的权限边界。",
+      "detailZh": "Airbnb宣布计划在2027年上半年推出一款AI旅行代理。根据TechCrunch AI的报道，该代理将用于帮助旅行者规划行程、比较不同选项、管理预订，并在整个住宿期间提供协助。\n\n目前公开的信息主要来自Airbnb方面的表态，报道没有披露该代理的具体名称、底层模型、上线地区、定价方式或与现有Airbnb应用的整合形式。\n\n从功能描述看，这一代理覆盖旅行前、预订中和入住期间三个阶段，属于面向消费者的端到端旅行助手，而非仅用于客服问答的工具。\n\n发布时间定在2027年上半年，距离报道时间仍有一段时间，因此产品形态和功能范围仍可能变化。现阶段可确认的事实是Airbnb公开了该计划及其大致功能方向。",
       "keyPointsZh": [
         "Airbnb计划在2027年上半年推出AI旅行代理。",
-        "该代理覆盖行程规划、选项比较、预订管理和住宿期间协助。",
-        "消息由TechCrunch AI报道，属于公司公开的产品路线图表态。",
-        "报道未披露底层模型、产品形态和定价等细节。"
+        "该代理的功能包括规划行程、比较选项、管理预订和住宿期间协助。",
+        "报道未披露模型、定价、上线地区等产品细节。",
+        "发布时间距报道仍较远，产品形态可能变化。"
       ],
-      "impactZh": "大型旅行平台将AI代理引入预订全流程，可能改变用户搜索和比较住宿的方式，也会影响平台与OTA、通用AI助手之间的竞争格局。",
-      "readerImpactZh": "普通旅行者未来可能通过对话方式完成行程规划和预订管理，但该功能最早要到2027年上半年才可能上线，目前尚无法实际使用。",
-      "userImpactZh": "",
+      "impactZh": "大型旅行平台将AI代理引入行程规划和预订管理，表明消费级旅行服务正从搜索列表转向对话式助手，可能改变用户与旅行平台的交互方式。",
+      "readerImpactZh": "若该代理按计划上线，旅行者未来可能通过对话完成行程规划、选项比较和预订管理，而不必在多个页面间手动搜索和操作。",
+      "userImpactZh": "对开发者和旅行行业团队而言，这释放出旅行平台将AI代理嵌入预订全流程的信号，可能带动围绕行程规划、比价和住宿服务的代理类产品竞争。",
       "howItWorksZh": "",
-      "interpretationZh": "已报道的事实是Airbnb确认了产品存在、上线窗口和功能方向；至于它如何规划行程、如何接入预订系统、由哪家模型驱动，均属于尚未披露的信息，不应据此推断其技术能力。",
-      "limitationsZh": "报道未提供底层模型、产品形态、定价、分阶段上线计划或数据使用方式；2027年上半年的上线时间也可能调整，功能范围存在变化可能。",
-      "actionStepsZh": [],
+      "interpretationZh": "已报道的事实是Airbnb公开了2027年上半年推出AI旅行代理的计划，并描述了规划、比较、预订管理和住宿协助等功能方向。至于该代理采用何种技术、如何接入Airbnb的库存与预订系统、是否收费，均属于尚未披露的内容，不宜据此推断具体能力。",
+      "limitationsZh": "信息来自Airbnb的单方面表态，缺少产品演示、技术细节、定价和上线地区说明；发布时间在2027年上半年，计划可能推迟或调整；功能描述较为概括，实际能力尚未验证。",
+      "actionStepsZh": [
+        "关注Airbnb后续是否公布该代理的演示、定价和上线地区。",
+        "旅行者可继续使用现有预订方式，暂无需为该代理做提前准备。"
+      ],
       "detailCompleteness": "summary",
       "visual": null,
       "processingError": null,
@@ -94,7 +388,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T22:40:55.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -105,26 +399,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T23:35:14.918Z",
-            "label": "11/6 07:35",
-            "value": 24,
+            "at": "2026-11-05T23:41:39.097Z",
+            "label": "11/6 07:41",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:29:34.837Z",
-            "label": "11/6 08:29",
-            "value": 35,
+            "at": "2026-11-06T00:42:23.195Z",
+            "label": "11/6 08:42",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:23:54.756Z",
-            "label": "11/6 09:23",
-            "value": 45,
+            "at": "2026-11-06T01:43:07.292Z",
+            "label": "11/6 09:43",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T02:43:51.390Z",
+            "label": "11/6 10:43",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T03:44:35.487Z",
+            "label": "11/6 11:44",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T04:45:19.585Z",
+            "label": "11/6 12:45",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T05:46:03.682Z",
+            "label": "11/6 13:46",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T06:46:47.780Z",
+            "label": "11/6 14:46",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T07:47:31.877Z",
+            "label": "11/6 15:47",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:48:15.975Z",
+            "label": "11/6 16:48",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 55,
             "reports": 1
           }
@@ -154,7 +490,7 @@
       "publishedAt": "2026-11-05T20:36:25.000Z",
       "publishedPrecision": "minute",
       "discoveredAt": null,
-      "contentType": "official",
+      "contentType": "industry",
       "evidenceLevel": "unverified",
       "attribution": null,
       "sources": [
@@ -178,48 +514,48 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "该消息涉及一款专门面向网络安全攻防的 AI 模型，并给出了具体的漏洞发现与漏洞利用数量，对安全行业和 AI 应用边界都有直接影响。",
-      "importanceReasonEn": "The news concerns an AI model purpose-built for cybersecurity offense and defense, with specific vulnerability and exploit counts, directly relevant to the security industry and the boundaries of AI applications.",
+      "importanceReasonZh": "该消息涉及一个专门面向攻防安全的 AI 模型，并给出具体漏洞与利用数量，若属实将直接影响安全研究、软件维护和 AI 滥用风险治理。",
+      "importanceReasonEn": "The report concerns an AI model purpose-built for offensive and defensive security, with specific vulnerability and exploit counts; if accurate, it directly affects security research, software maintenance and AI misuse governance.",
       "scoringMode": "ai",
       "titleZh": "OpenAI 的 GPT-6 Cyber 既能入侵系统，也能提出修复方案",
       "titleEn": "OpenAI's GPT-6 Cyber can both break into systems and propose how to fix them",
-      "summaryZh": "OpenAI 推出 GPT-6 Cyber，这是一款用于发现软件安全漏洞、开发漏洞利用程序并提出补丁建议的 AI 模型。据 OpenAI 称，它已在 Firefox 中发现 81 个此前未知的漏洞，并在 Linux 内核中开发出 948 个可用的漏洞利用程序，明显多于其前代模型。",
-      "summaryEn": "OpenAI is introducing GPT-6 Cyber, an AI model built to find security vulnerabilities in software, develop exploits, and suggest patches. According to OpenAI, it has already found 81 previously unknown vulnerabilities in Firefox and developed 948 working exploits in the Linux kernel, significantly more than its predecessor.",
+      "summaryZh": "据 The Decoder 报道，OpenAI 推出名为 GPT-6 Cyber 的 AI 模型，专门用于发现软件安全漏洞、开发漏洞利用程序并提出补丁建议。OpenAI 称，该模型已在 Firefox 中发现 81 个此前未知的漏洞，并在 Linux 内核中开发出 948 个可用的漏洞利用程序，数量显著超过其前代模型。",
+      "summaryEn": "According to The Decoder, OpenAI has introduced an AI model called GPT-6 Cyber, built to find security vulnerabilities in software, develop exploits and suggest patches. OpenAI says it has already found 81 previously unknown vulnerabilities in Firefox and developed 948 working exploits in the Linux kernel, significantly more than its predecessor.",
       "keywords": [
         "GPT-6 Cyber",
         "OpenAI",
-        "漏洞发现",
-        "漏洞利用",
         "Firefox",
         "Linux内核",
+        "漏洞利用",
         "补丁"
       ],
       "topics": [
         "AI安全",
         "漏洞挖掘",
         "漏洞利用",
-        "软件补丁",
+        "软件供应链安全",
         "OpenAI"
       ],
       "models": [
         "GPT-6 Cyber"
       ],
-      "detailZh": "据 The Decoder AI 报道，OpenAI 推出了名为 GPT-6 Cyber 的 AI 模型，定位是网络安全场景。该模型被描述为能够发现软件中的安全漏洞、开发可用的漏洞利用程序，并针对发现的问题提出修复补丁建议。\n\n报道援引 OpenAI 的说法称，GPT-6 Cyber 已在 Firefox 浏览器中发现 81 个此前未知的漏洞，并在 Linux 内核中开发出 948 个可用的漏洞利用程序。报道还表示，这一数量明显多于其前代模型。\n\n目前公开信息主要来自 OpenAI 自身的表述，报道未提供漏洞的具体类型、严重程度、披露与修复状态，也未说明测试环境和评估方法。因此这些数字应视为厂商声明，尚待独立验证。",
+      "detailZh": "据 The Decoder 报道，OpenAI 推出了名为 GPT-6 Cyber 的 AI 模型，定位是面向软件安全的专用模型。该模型被描述为能够发现软件中的安全漏洞、开发可用的漏洞利用程序，并针对发现的问题提出修复补丁建议，即同时覆盖攻击与防御两个方向。\n\n报道援引 OpenAI 的说法称，GPT-6 Cyber 已在 Firefox 浏览器中发现 81 个此前未知的漏洞，并在 Linux 内核中开发出 948 个可用的漏洞利用程序。报道还称，这一数量显著超过其前代模型，但未给出前代模型的具体数字。\n\n目前公开信息主要来自 OpenAI 方面的表述，报道未说明这些漏洞和利用程序是否经过独立验证、是否已通知相关开源项目、是否已提交修复，也未披露模型的访问方式、定价或安全限制措施。\n\n从背景看，AI 被用于漏洞挖掘并非全新方向，但一个模型同时具备发现漏洞、生成利用代码和提出补丁的能力，意味着攻防两端的门槛都可能被改变，因此该消息在安全社区具有较高关注度。",
       "keyPointsZh": [
-        "OpenAI 推出面向网络安全的 AI 模型 GPT-6 Cyber。",
-        "该模型可发现漏洞、开发漏洞利用程序并提出补丁建议。",
-        "OpenAI 称其在 Firefox 中发现 81 个此前未知漏洞。",
-        "OpenAI 称其在 Linux 内核中开发出 948 个可用漏洞利用程序，多于前代模型。"
+        "OpenAI 推出面向安全的 AI 模型 GPT-6 Cyber，可发现漏洞、开发漏洞利用并提出补丁建议。",
+        "OpenAI 称该模型在 Firefox 中发现 81 个此前未知的漏洞。",
+        "OpenAI 称该模型在 Linux 内核中开发出 948 个可用的漏洞利用程序，数量显著超过前代模型。",
+        "相关数字均来自 OpenAI 方面，报道未提及独立验证或漏洞披露进展。"
       ],
-      "impactZh": "若相关能力属实，漏洞挖掘与利用开发的门槛将显著降低，软件厂商和安全团队需要更快地发现和修复问题，同时这类模型也可能被滥用于攻击，推动攻防节奏加快。",
+      "impactZh": "若该模型能力如描述所言，漏洞发现与利用开发的速度可能大幅提升，开源项目和软件厂商面临的修复压力将增大，同时也会引发对攻击性 AI 能力扩散和滥用风险的讨论。",
       "readerImpactZh": "",
-      "userImpactZh": "对安全研究人员和开发团队而言，这类模型可能成为漏洞排查和补丁验证的辅助工具，但也意味着需要建立相应的使用规范和审核流程，避免生成或传播可被滥用的攻击代码。",
+      "userImpactZh": "对安全研究人员和开发团队而言，这类模型可能改变漏洞挖掘与修复流程，但报道未披露访问方式、使用限制和定价，实际可用性尚不明确。",
       "howItWorksZh": "",
-      "interpretationZh": "报道呈现的是 OpenAI 的官方说法：模型具备漏洞发现、利用开发和补丁建议三类能力，并给出了 Firefox 与 Linux 内核上的具体数量。这些数字目前仅为厂商声明，缺少独立复现和方法说明，实际能力边界仍需观察。",
-      "limitationsZh": "所有漏洞与漏洞利用数量均来自 OpenAI 自述，报道未说明测试方法、漏洞严重程度、是否已披露或修复，也未提供第三方验证，因此不能据此判断模型的真实能力或风险水平。",
+      "interpretationZh": "报道陈述的事实是：OpenAI 发布了 GPT-6 Cyber，并宣称其在 Firefox 和 Linux 内核中取得上述漏洞与利用数量。可合理推断的是，该模型被设计为同时服务攻击性测试和防御性修复；但报道未提供技术细节，无法判断其发现漏洞的真实性、严重程度以及利用程序的实际可用性。",
+      "limitationsZh": "所有数字均来自 OpenAI 单方面说法，报道未提供独立验证、漏洞编号、严重等级或修复状态；也未说明模型如何访问、是否有使用限制、是否已向 Firefox 和 Linux 项目披露漏洞。前代模型的具体对比数据同样缺失。",
       "actionStepsZh": [
-        "关注 OpenAI 后续发布的技术说明与漏洞披露细节。",
-        "安全团队评估此类模型在自有代码审计中的可用性与合规边界。"
+        "关注 OpenAI 官方后续发布的技术说明与漏洞披露细节。",
+        "Firefox 与 Linux 内核维护方若收到相关报告，应核实并评估修复优先级。",
+        "安全团队可跟踪此类攻防一体模型对漏洞管理流程的影响。"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -227,7 +563,7 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "OpenAI 声称在 Firefox 中发现 81 个此前未知漏洞，并在 Linux 内核中开发出 948 个可用漏洞利用程序，后者数量明显更高。",
+        "insightZh": "OpenAI 宣称在 Linux 内核中开发的可用利用程序数量（948）远高于在 Firefox 中新发现的漏洞数量（81），但两者统计对象不同，不宜直接等同比较。",
         "data": [
           {
             "label": "Firefox 新发现漏洞",
@@ -235,7 +571,7 @@
             "display": ""
           },
           {
-            "label": "Linux 内核可用漏洞利用",
+            "label": "Linux 内核可用利用程序",
             "value": 948,
             "display": ""
           }
@@ -265,7 +601,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T20:36:25.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -276,38 +612,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T21:33:23.279Z",
-            "label": "11/6 05:33",
-            "value": 22,
+            "at": "2026-11-05T21:48:28.188Z",
+            "label": "11/6 05:48",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:30:21.558Z",
-            "label": "11/6 06:30",
-            "value": 31,
+            "at": "2026-11-05T23:00:31.376Z",
+            "label": "11/6 07:00",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:27:19.837Z",
-            "label": "11/6 07:27",
-            "value": 39,
+            "at": "2026-11-06T00:12:34.565Z",
+            "label": "11/6 08:12",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:24:18.116Z",
-            "label": "11/6 08:24",
-            "value": 48,
+            "at": "2026-11-06T01:24:37.753Z",
+            "label": "11/6 09:24",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:21:16.395Z",
-            "label": "11/6 09:21",
+            "at": "2026-11-06T02:36:40.942Z",
+            "label": "11/6 10:36",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T03:48:44.130Z",
+            "label": "11/6 11:48",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T05:00:47.319Z",
+            "label": "11/6 13:00",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T06:12:50.507Z",
+            "label": "11/6 14:12",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T07:24:53.696Z",
+            "label": "11/6 15:24",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T08:36:56.884Z",
+            "label": "11/6 16:36",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 65,
             "reports": 1
           }
@@ -427,7 +793,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T20:21:15.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -438,39 +804,243 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T21:20:44.945Z",
-            "label": "11/6 05:20",
+            "at": "2026-11-05T21:34:40.915Z",
+            "label": "11/6 05:34",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T22:48:06.831Z",
+            "label": "11/6 06:48",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:20:14.891Z",
-            "label": "11/6 06:20",
-            "value": 29,
+            "at": "2026-11-06T00:01:32.747Z",
+            "label": "11/6 08:01",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:19:44.837Z",
-            "label": "11/6 07:19",
-            "value": 37,
+            "at": "2026-11-06T01:14:58.662Z",
+            "label": "11/6 09:14",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:19:14.783Z",
-            "label": "11/6 08:19",
-            "value": 44,
+            "at": "2026-11-06T02:28:24.578Z",
+            "label": "11/6 10:28",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:18:44.729Z",
-            "label": "11/6 09:18",
-            "value": 52,
+            "at": "2026-11-06T03:41:50.494Z",
+            "label": "11/6 11:41",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T04:55:16.410Z",
+            "label": "11/6 12:55",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T06:08:42.325Z",
+            "label": "11/6 14:08",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T07:22:08.241Z",
+            "label": "11/6 15:22",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:35:34.157Z",
+            "label": "11/6 16:35",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "bbd492caba72ca54",
+      "normalizedUrl": "https://openai.com/index/cultfit-builds-with-codex",
+      "originalUrl": "https://openai.com/index/cultfit-builds-with-codex",
+      "titleOriginal": "Cult.fit builds operational muscle with Codex",
+      "summaryOriginal": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "models",
+      "sourceType": "official",
+      "authority": 100,
+      "sourcePriority": 100,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-05T20:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/cultfit-builds-with-codex",
+          "publishedAt": "2026-11-05T20:00:00.000Z",
+          "title": "Cult.fit builds operational muscle with Codex",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 42,
+      "importanceReasonZh": "这是一则简短的企业应用案例，说明 Codex 被用于跨职能团队构建工具，但来源信息有限，缺少具体数据、实施细节和可验证结果。",
+      "importanceReasonEn": "This is a brief enterprise case study showing Codex used by cross-functional teams to build tools, but source material is limited with no concrete metrics, implementation details or verifiable results.",
+      "scoringMode": "ai",
+      "titleZh": "Cult.fit 借助 Codex 打造运营能力",
+      "titleEn": "Cult.fit builds operational muscle with Codex",
+      "summaryZh": "Cult.fit 正在使用 Codex 帮助各职能团队构建工具、加快工作节奏，并改变工作方式。",
+      "summaryEn": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+      "keywords": [
+        "Cult.fit",
+        "Codex",
+        "OpenAI",
+        "跨职能工具",
+        "工作方式"
+      ],
+      "topics": [
+        "Codex",
+        "企业应用",
+        "AI 编程工具",
+        "运营效率"
+      ],
+      "models": [
+        "Codex"
+      ],
+      "detailZh": "OpenAI 发布了一则简短案例，介绍健身与健康平台 Cult.fit 正在使用 Codex。根据现有信息，Cult.fit 将 Codex 用于帮助不同职能的团队构建工具、加快工作节奏，并改变工作的完成方式。\n\n该案例的核心信息是 Codex 在企业内部的应用范围不限于工程团队，而是扩展到跨职能场景，让更多团队能够自行构建所需工具。\n\n目前公开内容非常有限，没有披露具体使用团队、构建了哪些工具、采用规模、效率提升幅度或任何量化结果，也没有说明 Codex 的接入方式和治理措施。\n\n因此，这更像是一则方向性案例，表明企业正在把 AI 编程助手用于运营类工具建设，但实际效果仍需更多细节和独立验证。",
+      "keyPointsZh": [
+        "Cult.fit 正在使用 Codex 支持各职能团队构建工具。",
+        "案例强调加快工作节奏和改变工作方式。",
+        "应用范围覆盖跨职能团队，而非仅限工程团队。",
+        "公开信息未提供具体工具、规模或量化成效。"
+      ],
+      "impactZh": "该案例反映出 AI 编程工具正从工程团队扩展到企业跨职能场景，可能推动更多非技术团队自行构建内部工具，但当前信息不足以判断其实际影响规模。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 AI 编程工具的开发者和团队而言，该案例提示 Codex 可用于跨职能内部工具建设；但由于缺少具体配置和结果数据，暂无法据此形成可复用的实践方案。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是 Cult.fit 使用 Codex 帮助跨职能团队构建工具并加快工作节奏。合理推断是 Codex 被用于内部工具开发场景，但具体使用方式、规模和效果均未披露，不能据此推断效率提升幅度。",
+      "limitationsZh": "来源为 OpenAI 发布的简短案例，缺少具体团队、工具类型、使用规模、量化收益和治理细节，也未提供独立验证，实际效果尚不明确。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/cultfit-builds-with-codex",
+          "publishedAt": "2026-11-05T20:00:00.000Z",
+          "title": "Cult.fit builds operational muscle with Codex",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-05T20:00:00.000Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
+        "current": 48,
+        "peak": 48,
+        "history": [
+          {
+            "at": "2026-11-05T20:00:00.000Z",
+            "label": "11/6 04:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-05T21:15:21.824Z",
+            "label": "11/6 05:15",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T22:30:43.649Z",
+            "label": "11/6 06:30",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T23:46:05.474Z",
+            "label": "11/6 07:46",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T01:01:27.299Z",
+            "label": "11/6 09:01",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T02:16:49.124Z",
+            "label": "11/6 10:16",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T03:32:10.948Z",
+            "label": "11/6 11:32",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T04:47:32.773Z",
+            "label": "11/6 12:47",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T06:02:54.598Z",
+            "label": "11/6 14:02",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T07:18:16.423Z",
+            "label": "11/6 15:18",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:33:38.248Z",
+            "label": "11/6 16:33",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
+            "value": 48,
             "reports": 1
           }
         ],
@@ -572,7 +1142,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T19:48:28.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -583,44 +1153,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T20:44:08.953Z",
-            "label": "11/6 04:44",
-            "value": 20,
+            "at": "2026-11-05T21:04:52.733Z",
+            "label": "11/6 05:04",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:39:49.907Z",
-            "label": "11/6 05:39",
-            "value": 26,
+            "at": "2026-11-05T22:21:17.467Z",
+            "label": "11/6 06:21",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:35:30.860Z",
-            "label": "11/6 06:35",
-            "value": 32,
+            "at": "2026-11-05T23:37:42.201Z",
+            "label": "11/6 07:37",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:31:11.814Z",
-            "label": "11/6 07:31",
-            "value": 38,
+            "at": "2026-11-06T00:54:06.935Z",
+            "label": "11/6 08:54",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:26:52.767Z",
-            "label": "11/6 08:26",
+            "at": "2026-11-06T02:10:31.669Z",
+            "label": "11/6 10:10",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T03:26:56.403Z",
+            "label": "11/6 11:26",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T04:43:21.137Z",
+            "label": "11/6 12:43",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T05:59:45.871Z",
+            "label": "11/6 13:59",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:22:33.721Z",
-            "label": "11/6 09:22",
-            "value": 50,
+            "at": "2026-11-06T07:16:10.605Z",
+            "label": "11/6 15:16",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T08:32:35.339Z",
+            "label": "11/6 16:32",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 55,
             "reports": 1
           }
@@ -725,7 +1319,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T19:35:16.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -736,44 +1330,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T20:32:50.096Z",
-            "label": "11/6 04:32",
-            "value": 20,
+            "at": "2026-11-05T20:52:52.733Z",
+            "label": "11/6 04:52",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:30:24.192Z",
-            "label": "11/6 05:30",
-            "value": 27,
+            "at": "2026-11-05T22:10:29.467Z",
+            "label": "11/6 06:10",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:27:58.289Z",
-            "label": "11/6 06:27",
-            "value": 33,
+            "at": "2026-11-05T23:28:06.201Z",
+            "label": "11/6 07:28",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:25:32.385Z",
-            "label": "11/6 07:25",
-            "value": 40,
+            "at": "2026-11-06T00:45:42.935Z",
+            "label": "11/6 08:45",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:23:06.482Z",
-            "label": "11/6 08:23",
-            "value": 46,
+            "at": "2026-11-06T02:03:19.669Z",
+            "label": "11/6 10:03",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:20:40.578Z",
-            "label": "11/6 09:20",
-            "value": 53,
+            "at": "2026-11-06T03:20:56.403Z",
+            "label": "11/6 11:20",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T04:38:33.137Z",
+            "label": "11/6 12:38",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T05:56:09.871Z",
+            "label": "11/6 13:56",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T07:13:46.605Z",
+            "label": "11/6 15:13",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:31:23.339Z",
+            "label": "11/6 16:31",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 59,
             "reports": 1
           }
@@ -875,7 +1493,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T19:06:12.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -886,50 +1504,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T20:00:12.334Z",
-            "label": "11/6 04:00",
-            "value": 19,
+            "at": "2026-11-05T20:26:27.279Z",
+            "label": "11/6 04:26",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-05T20:54:12.668Z",
-            "label": "11/6 04:54",
-            "value": 24,
+            "at": "2026-11-05T21:46:42.558Z",
+            "label": "11/6 05:46",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:48:13.003Z",
-            "label": "11/6 05:48",
-            "value": 30,
+            "at": "2026-11-05T23:06:57.838Z",
+            "label": "11/6 07:06",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:42:13.337Z",
-            "label": "11/6 06:42",
-            "value": 35,
+            "at": "2026-11-06T00:27:13.117Z",
+            "label": "11/6 08:27",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:36:13.671Z",
-            "label": "11/6 07:36",
+            "at": "2026-11-06T01:47:28.396Z",
+            "label": "11/6 09:47",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T03:07:43.676Z",
+            "label": "11/6 11:07",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T04:27:58.955Z",
+            "label": "11/6 12:27",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:30:14.006Z",
-            "label": "11/6 08:30",
-            "value": 45,
+            "at": "2026-11-06T05:48:14.234Z",
+            "label": "11/6 13:48",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:24:14.340Z",
-            "label": "11/6 09:24",
-            "value": 50,
+            "at": "2026-11-06T07:08:29.514Z",
+            "label": "11/6 15:08",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T08:28:44.793Z",
+            "label": "11/6 16:28",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 55,
             "reports": 1
           }
@@ -1079,7 +1715,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T19:05:31.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1090,51 +1726,247 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T19:59:36.459Z",
-            "label": "11/6 03:59",
-            "value": 20,
+            "at": "2026-11-05T20:25:50.006Z",
+            "label": "11/6 04:25",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-05T20:53:41.918Z",
-            "label": "11/6 04:53",
-            "value": 27,
+            "at": "2026-11-05T21:46:09.013Z",
+            "label": "11/6 05:46",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:47:47.378Z",
-            "label": "11/6 05:47",
-            "value": 33,
+            "at": "2026-11-05T23:06:28.019Z",
+            "label": "11/6 07:06",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:41:52.837Z",
-            "label": "11/6 06:41",
-            "value": 39,
+            "at": "2026-11-06T00:26:47.026Z",
+            "label": "11/6 08:26",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:35:58.296Z",
-            "label": "11/6 07:35",
+            "at": "2026-11-06T01:47:06.033Z",
+            "label": "11/6 09:47",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T03:07:25.039Z",
+            "label": "11/6 11:07",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T04:27:44.046Z",
+            "label": "11/6 12:27",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:30:03.756Z",
-            "label": "11/6 08:30",
-            "value": 52,
+            "at": "2026-11-06T05:48:03.053Z",
+            "label": "11/6 13:48",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:24:09.215Z",
-            "label": "11/6 09:24",
-            "value": 58,
+            "at": "2026-11-06T07:08:22.059Z",
+            "label": "11/6 15:08",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T08:28:41.066Z",
+            "label": "11/6 16:28",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b9ca9ce17c9cbad1",
+      "normalizedUrl": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool",
+      "originalUrl": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
+      "titleOriginal": "Claude can now analyze your spending with its new Personal Finance tool",
+      "summaryOriginal": "With Personal Finance in Claude, users can connect their bank and card accounts through Plaid and ask questions about their finances.",
+      "originalLanguage": "en",
+      "author": "Aisha Malik",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-05T18:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
+          "publishedAt": "2026-11-05T18:00:00.000Z",
+          "title": "Claude can now analyze your spending with its new Personal Finance tool",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该功能把通用 AI 助手接入真实银行与信用卡数据，使 Claude 能直接回答个人消费与财务问题，是 AI 助手向个人财务场景延伸的典型产品动作。",
+      "importanceReasonEn": "The feature connects a general-purpose AI assistant to real bank and card data, letting Claude answer personal spending and finance questions directly, a notable product move extending AI assistants into personal finance.",
+      "scoringMode": "ai",
+      "titleZh": "Claude 推出个人财务工具，可分析用户消费",
+      "titleEn": "Claude Can Now Analyze Your Spending With Its New Personal Finance Tool",
+      "summaryZh": "Claude 新增个人财务功能，用户可通过 Plaid 连接银行和信用卡账户，并就个人财务状况向 Claude 提问。",
+      "summaryEn": "With Personal Finance in Claude, users can connect their bank and card accounts through Plaid and ask questions about their finances.",
+      "keywords": [
+        "Claude",
+        "Personal Finance",
+        "Plaid",
+        "bank account",
+        "spending analysis"
+      ],
+      "topics": [
+        "personal finance",
+        "AI assistant",
+        "Plaid integration",
+        "consumer AI"
+      ],
+      "models": [
+        "Claude"
+      ],
+      "detailZh": "TechCrunch AI 报道，Claude 推出了名为 Personal Finance 的新工具。用户可以通过 Plaid 将银行账户和信用卡账户连接到 Claude，然后围绕自己的财务状况向 Claude 提问。\n\nPlaid 是常见的金融数据连接服务，用于在用户授权下把银行与卡片账户信息提供给第三方应用。报道显示，Claude 的个人财务功能正是借助这一通道获取账户数据，而不是让用户手动录入。\n\n目前公开信息集中在功能本身：连接账户、提问、获得与个人财务相关的回答。报道没有披露支持哪些国家或地区、具体可查询的指标范围、数据保留方式、订阅要求或定价等细节。\n\n从产品定位看，这是通用 AI 助手向个人财务场景的延伸，把对话式问答与真实账户数据结合，属于面向消费者的功能发布，而非模型能力或研究层面的更新。",
+      "keyPointsZh": [
+        "Claude 新增 Personal Finance 工具，可分析用户的个人财务情况。",
+        "用户通过 Plaid 连接银行账户和信用卡账户。",
+        "连接后用户可就自身财务状况向 Claude 提问。",
+        "公开报道未披露地区支持、数据保留和定价等细节。"
+      ],
+      "impactZh": "该功能让 AI 助手从泛化问答进入个人财务这一高敏感、高实用场景，可能推动更多助手类产品接入真实账户数据，同时也把金融数据隐私与授权问题推到台前。",
+      "readerImpactZh": "使用该功能的用户可以让 Claude 基于自己的银行和信用卡数据回答消费与财务问题，但需要先通过 Plaid 授权连接账户，涉及个人金融数据的共享。",
+      "userImpactZh": "对 AI 用户和开发者而言，这展示了通过 Plaid 等数据聚合服务把助手接入真实账户数据的路径；团队在构建类似功能时需重点考虑授权流程、数据保留与合规边界。",
+      "howItWorksZh": "根据报道，流程为：用户在 Claude 中启用 Personal Finance，通过 Plaid 授权连接银行账户与信用卡账户，Plaid 提供账户数据通道，随后用户以对话方式向 Claude 提出财务相关问题并获得回答。报道未说明具体的数据同步频率、存储方式或分析范围。",
+      "interpretationZh": "已报道的事实是：Claude 上线 Personal Finance 工具，借助 Plaid 连接银行与卡片账户，并支持用户就财务状况提问。合理推断是，这属于面向消费者的产品集成，而非模型能力升级；其实际可用范围、数据安全设计和收费方式仍需以官方说明为准。",
+      "limitationsZh": "来源为单一媒体报道，未提供官方公告细节；支持地区、可连接的金融机构范围、数据保留与删除机制、是否收费、回答准确性边界均未披露，实际体验与合规安排尚不可知。",
+      "actionStepsZh": [
+        "关注 Anthropic 官方公告，确认 Personal Finance 的支持地区与账户类型。",
+        "使用前查看 Plaid 授权页面，了解共享了哪些账户数据及撤销方式。",
+        "避免在对话中提交超出必要范围的敏感财务信息。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
+          "publishedAt": "2026-11-05T18:00:00.000Z",
+          "title": "Claude can now analyze your spending with its new Personal Finance tool",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-05T18:00:00.000Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-05T18:00:00.000Z",
+            "label": "11/6 02:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-05T19:26:16.370Z",
+            "label": "11/6 03:26",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T20:52:32.740Z",
+            "label": "11/6 04:52",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T22:18:49.110Z",
+            "label": "11/6 06:18",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T23:45:05.481Z",
+            "label": "11/6 07:45",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T01:11:21.851Z",
+            "label": "11/6 09:11",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T02:37:38.221Z",
+            "label": "11/6 10:37",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T04:03:54.591Z",
+            "label": "11/6 12:03",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T05:30:10.962Z",
+            "label": "11/6 13:30",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T06:56:27.332Z",
+            "label": "11/6 14:56",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:22:43.702Z",
+            "label": "11/6 16:22",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -1256,7 +2088,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T17:56:41.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1267,56 +2099,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T18:52:24.741Z",
-            "label": "11/6 02:52",
-            "value": 20,
+            "at": "2026-11-05T19:23:15.461Z",
+            "label": "11/6 03:23",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-05T19:48:08.483Z",
-            "label": "11/6 03:48",
-            "value": 25,
+            "at": "2026-11-05T20:49:49.922Z",
+            "label": "11/6 04:49",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-05T20:43:52.225Z",
-            "label": "11/6 04:43",
-            "value": 31,
+            "at": "2026-11-05T22:16:24.383Z",
+            "label": "11/6 06:16",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:39:35.966Z",
-            "label": "11/6 05:39",
+            "at": "2026-11-05T23:42:58.844Z",
+            "label": "11/6 07:42",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T01:09:33.305Z",
+            "label": "11/6 09:09",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:35:19.708Z",
-            "label": "11/6 06:35",
+            "at": "2026-11-06T02:36:07.767Z",
+            "label": "11/6 10:36",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:31:03.450Z",
-            "label": "11/6 07:31",
-            "value": 48,
+            "at": "2026-11-06T04:02:42.228Z",
+            "label": "11/6 12:02",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:26:47.191Z",
-            "label": "11/6 08:26",
-            "value": 54,
+            "at": "2026-11-06T05:29:16.689Z",
+            "label": "11/6 13:29",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:22:30.933Z",
-            "label": "11/6 09:22",
-            "value": 59,
+            "at": "2026-11-06T06:55:51.150Z",
+            "label": "11/6 14:55",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T08:22:25.611Z",
+            "label": "11/6 16:22",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 65,
             "reports": 1
           }
@@ -1476,7 +2320,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T17:34:03.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 70,
         "peak": 70,
         "history": [
@@ -1487,58 +2331,244 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T18:32:17.630Z",
-            "label": "11/6 02:32",
-            "value": 33,
+            "at": "2026-11-05T19:02:40.915Z",
+            "label": "11/6 03:02",
+            "value": 32,
             "reports": 2
           },
           {
-            "at": "2026-11-05T19:30:32.261Z",
-            "label": "11/6 03:30",
-            "value": 37,
+            "at": "2026-11-05T20:31:18.831Z",
+            "label": "11/6 04:31",
+            "value": 36,
             "reports": 2
           },
           {
-            "at": "2026-11-05T20:28:46.891Z",
-            "label": "11/6 04:28",
-            "value": 42,
+            "at": "2026-11-05T21:59:56.747Z",
+            "label": "11/6 05:59",
+            "value": 39,
             "reports": 2
           },
           {
-            "at": "2026-11-05T21:27:01.522Z",
-            "label": "11/6 05:27",
+            "at": "2026-11-05T23:28:34.662Z",
+            "label": "11/6 07:28",
+            "value": 43,
+            "reports": 2
+          },
+          {
+            "at": "2026-11-06T00:57:12.578Z",
+            "label": "11/6 08:57",
             "value": 47,
             "reports": 2
           },
           {
-            "at": "2026-11-05T22:25:16.152Z",
-            "label": "11/6 06:25",
+            "at": "2026-11-06T02:25:50.494Z",
+            "label": "11/6 10:25",
             "value": 51,
             "reports": 2
           },
           {
-            "at": "2026-11-05T23:23:30.783Z",
-            "label": "11/6 07:23",
-            "value": 56,
+            "at": "2026-11-06T03:54:28.410Z",
+            "label": "11/6 11:54",
+            "value": 55,
             "reports": 2
           },
           {
-            "at": "2026-11-06T00:21:45.413Z",
-            "label": "11/6 08:21",
-            "value": 60,
+            "at": "2026-11-06T05:23:06.325Z",
+            "label": "11/6 13:23",
+            "value": 58,
             "reports": 2
           },
           {
-            "at": "2026-11-06T01:20:00.044Z",
-            "label": "11/6 09:20",
-            "value": 65,
+            "at": "2026-11-06T06:51:44.241Z",
+            "label": "11/6 14:51",
+            "value": 62,
             "reports": 2
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T08:20:22.157Z",
+            "label": "11/6 16:20",
+            "value": 66,
+            "reports": 2
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 70,
             "reports": 2
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "616c68177b707eae",
+      "normalizedUrl": "https://openai.com/index/australian-universities-ai-native-graduates",
+      "originalUrl": "https://openai.com/index/australian-universities-ai-native-graduates",
+      "titleOriginal": "Australian universities are creating AI-native graduates",
+      "summaryOriginal": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "models",
+      "sourceType": "official",
+      "authority": 100,
+      "sourcePriority": 100,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-05T17:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/australian-universities-ai-native-graduates",
+          "publishedAt": "2026-11-05T17:00:00.000Z",
+          "title": "Australian universities are creating AI-native graduates",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该消息显示高校正把通用AI工具系统性纳入教学，可能影响未来毕业生的技能结构与就业准备。",
+      "importanceReasonEn": "The news shows universities systematically integrating general-purpose AI tools into teaching, which may shape future graduates' skills and job readiness.",
+      "scoringMode": "ai",
+      "titleZh": "澳大利亚高校正在培养AI原生毕业生",
+      "titleEn": "Australian universities are creating AI-native graduates",
+      "summaryZh": "澳大利亚多所高校正在扩大ChatGPT的使用范围，并将AI融入教学与学习，以帮助学生为AI赋能的工作环境做好准备。",
+      "summaryEn": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
+      "keywords": [
+        "Australian universities",
+        "ChatGPT",
+        "AI-native graduates",
+        "teaching and learning",
+        "workforce"
+      ],
+      "topics": [
+        "AI education",
+        "ChatGPT",
+        "workforce readiness",
+        "higher education"
+      ],
+      "models": [
+        "ChatGPT"
+      ],
+      "detailZh": "据OpenAI发布的信息，澳大利亚多所高校正在扩大学生和教职员工对ChatGPT的访问权限，并把AI工具引入课程与教学环节。相关举措的目标是让学生在学习阶段就熟悉AI工具的使用方式，从而为进入AI赋能的工作环境做好准备。\n\n这一动向的背景是生成式AI在职场中的快速普及，教育机构面临如何让学生具备相应能力的压力。澳大利亚高校选择以扩大工具访问和融入教学的方式回应这一需求，而非单纯限制使用。\n\n目前公开信息主要来自OpenAI方面的概述，涉及高校扩大访问和教学整合的方向，但未披露具体院校名单、覆盖学生规模、课程设计细节或评估结果。因此，这些举措的实际效果仍有待观察。",
+      "keyPointsZh": [
+        "澳大利亚多所高校正在扩大ChatGPT的访问范围",
+        "AI工具被引入教学与学习环节",
+        "目标是培养适应AI赋能职场的毕业生",
+        "公开信息未披露具体院校、规模与评估结果"
+      ],
+      "impactZh": "高校系统性引入AI工具，可能改变学生的学习方式和技能培养重点，并影响未来劳动力对AI工具的熟悉程度。",
+      "readerImpactZh": "",
+      "userImpactZh": "对教育机构和AI使用者而言，这意味着AI工具正从个人辅助工具转变为教学基础设施的一部分，学校需要配套的使用规范与课程设计。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是澳大利亚高校扩大ChatGPT访问并将其融入教学。合理推断是，这类举措旨在提升学生的AI素养和就业准备，但具体实施方式和成效尚无公开细节支撑。",
+      "limitationsZh": "信息主要来自OpenAI的单方面概述，缺少具体院校名单、参与学生规模、课程设计、评估数据及独立验证，实际教学效果尚不明确。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/australian-universities-ai-native-graduates",
+          "publishedAt": "2026-11-05T17:00:00.000Z",
+          "title": "Australian universities are creating AI-native graduates",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-05T17:00:00.000Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-05T17:00:00.000Z",
+            "label": "11/6 01:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-05T18:31:43.643Z",
+            "label": "11/6 02:31",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T20:03:27.286Z",
+            "label": "11/6 04:03",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T21:35:10.929Z",
+            "label": "11/6 05:35",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-05T23:06:54.572Z",
+            "label": "11/6 07:06",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T00:38:38.215Z",
+            "label": "11/6 08:38",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T02:10:21.858Z",
+            "label": "11/6 10:10",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T03:42:05.501Z",
+            "label": "11/6 11:42",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T05:13:49.144Z",
+            "label": "11/6 13:13",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T06:45:32.787Z",
+            "label": "11/6 14:45",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:17:16.430Z",
+            "label": "11/6 16:17",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
+            "value": 59,
+            "reports": 1
           }
         ],
         "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
@@ -1678,7 +2708,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T17:00:00.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1689,62 +2719,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T17:55:49.467Z",
-            "label": "11/6 01:55",
+            "at": "2026-11-05T18:31:43.643Z",
+            "label": "11/6 02:31",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-05T18:51:38.935Z",
-            "label": "11/6 02:51",
-            "value": 24,
+            "at": "2026-11-05T20:03:27.286Z",
+            "label": "11/6 04:03",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-05T19:47:28.402Z",
-            "label": "11/6 03:47",
-            "value": 29,
+            "at": "2026-11-05T21:35:10.929Z",
+            "label": "11/6 05:35",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-05T20:43:17.870Z",
-            "label": "11/6 04:43",
-            "value": 34,
+            "at": "2026-11-05T23:06:54.572Z",
+            "label": "11/6 07:06",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:39:07.337Z",
-            "label": "11/6 05:39",
-            "value": 39,
+            "at": "2026-11-06T00:38:38.215Z",
+            "label": "11/6 08:38",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:34:56.805Z",
-            "label": "11/6 06:34",
-            "value": 44,
+            "at": "2026-11-06T02:10:21.858Z",
+            "label": "11/6 10:10",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:30:46.272Z",
-            "label": "11/6 07:30",
-            "value": 50,
+            "at": "2026-11-06T03:42:05.501Z",
+            "label": "11/6 11:42",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:26:35.740Z",
-            "label": "11/6 08:26",
-            "value": 55,
+            "at": "2026-11-06T05:13:49.144Z",
+            "label": "11/6 13:13",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:22:25.207Z",
-            "label": "11/6 09:22",
+            "at": "2026-11-06T06:45:32.787Z",
+            "label": "11/6 14:45",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:17:16.430Z",
+            "label": "11/6 16:17",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 65,
             "reports": 1
           }
@@ -1884,7 +2920,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T17:00:00.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1895,62 +2931,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T17:55:49.467Z",
-            "label": "11/6 01:55",
+            "at": "2026-11-05T18:31:43.643Z",
+            "label": "11/6 02:31",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-05T18:51:38.935Z",
-            "label": "11/6 02:51",
-            "value": 24,
+            "at": "2026-11-05T20:03:27.286Z",
+            "label": "11/6 04:03",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-05T19:47:28.402Z",
-            "label": "11/6 03:47",
-            "value": 29,
+            "at": "2026-11-05T21:35:10.929Z",
+            "label": "11/6 05:35",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-05T20:43:17.870Z",
-            "label": "11/6 04:43",
-            "value": 34,
+            "at": "2026-11-05T23:06:54.572Z",
+            "label": "11/6 07:06",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:39:07.337Z",
-            "label": "11/6 05:39",
-            "value": 39,
+            "at": "2026-11-06T00:38:38.215Z",
+            "label": "11/6 08:38",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:34:56.805Z",
-            "label": "11/6 06:34",
-            "value": 44,
+            "at": "2026-11-06T02:10:21.858Z",
+            "label": "11/6 10:10",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:30:46.272Z",
-            "label": "11/6 07:30",
-            "value": 50,
+            "at": "2026-11-06T03:42:05.501Z",
+            "label": "11/6 11:42",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:26:35.740Z",
-            "label": "11/6 08:26",
-            "value": 55,
+            "at": "2026-11-06T05:13:49.144Z",
+            "label": "11/6 13:13",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:22:25.207Z",
-            "label": "11/6 09:22",
+            "at": "2026-11-06T06:45:32.787Z",
+            "label": "11/6 14:45",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:17:16.430Z",
+            "label": "11/6 16:17",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 65,
             "reports": 1
           }
@@ -2091,7 +3133,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T16:46:24.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2102,62 +3144,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T17:43:35.067Z",
-            "label": "11/6 01:43",
+            "at": "2026-11-05T18:19:21.824Z",
+            "label": "11/6 02:19",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-05T18:40:46.135Z",
-            "label": "11/6 02:40",
-            "value": 24,
+            "at": "2026-11-05T19:52:19.649Z",
+            "label": "11/6 03:52",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-05T19:37:57.202Z",
-            "label": "11/6 03:37",
-            "value": 29,
+            "at": "2026-11-05T21:25:17.474Z",
+            "label": "11/6 05:25",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-05T20:35:08.270Z",
-            "label": "11/6 04:35",
-            "value": 34,
+            "at": "2026-11-05T22:58:15.299Z",
+            "label": "11/6 06:58",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:32:19.337Z",
-            "label": "11/6 05:32",
-            "value": 39,
+            "at": "2026-11-06T00:31:13.124Z",
+            "label": "11/6 08:31",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:29:30.405Z",
-            "label": "11/6 06:29",
-            "value": 44,
+            "at": "2026-11-06T02:04:10.948Z",
+            "label": "11/6 10:04",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:26:41.472Z",
-            "label": "11/6 07:26",
-            "value": 50,
+            "at": "2026-11-06T03:37:08.773Z",
+            "label": "11/6 11:37",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:23:52.540Z",
-            "label": "11/6 08:23",
-            "value": 55,
+            "at": "2026-11-06T05:10:06.598Z",
+            "label": "11/6 13:10",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:21:03.607Z",
-            "label": "11/6 09:21",
+            "at": "2026-11-06T06:43:04.423Z",
+            "label": "11/6 14:43",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-06T08:16:02.248Z",
+            "label": "11/6 16:16",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 65,
             "reports": 1
           }
@@ -2294,7 +3342,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-05T16:06:31.000Z",
-        "endedAt": "2026-11-06T02:18:14.675Z",
+        "endedAt": "2026-11-06T09:49:00.073Z",
         "current": 64,
         "peak": 64,
         "history": [
@@ -2305,68 +3353,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-05T17:02:07.697Z",
-            "label": "11/6 01:02",
+            "at": "2026-11-05T17:43:06.370Z",
+            "label": "11/6 01:43",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-05T17:57:44.395Z",
-            "label": "11/6 01:57",
+            "at": "2026-11-05T19:19:41.740Z",
+            "label": "11/6 03:19",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-05T18:53:21.093Z",
-            "label": "11/6 02:53",
+            "at": "2026-11-05T20:56:17.110Z",
+            "label": "11/6 04:56",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-05T19:48:57.790Z",
-            "label": "11/6 03:48",
+            "at": "2026-11-05T22:32:52.481Z",
+            "label": "11/6 06:32",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-05T20:44:34.488Z",
-            "label": "11/6 04:44",
+            "at": "2026-11-06T00:09:27.851Z",
+            "label": "11/6 08:09",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-05T21:40:11.186Z",
-            "label": "11/6 05:40",
+            "at": "2026-11-06T01:46:03.221Z",
+            "label": "11/6 09:46",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-11-05T22:35:47.884Z",
-            "label": "11/6 06:35",
+            "at": "2026-11-06T03:22:38.591Z",
+            "label": "11/6 11:22",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-05T23:31:24.581Z",
-            "label": "11/6 07:31",
+            "at": "2026-11-06T04:59:13.962Z",
+            "label": "11/6 12:59",
             "value": 50,
             "reports": 1
           },
           {
-            "at": "2026-11-06T00:27:01.279Z",
-            "label": "11/6 08:27",
+            "at": "2026-11-06T06:35:49.332Z",
+            "label": "11/6 14:35",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-11-06T01:22:37.977Z",
-            "label": "11/6 09:22",
+            "at": "2026-11-06T08:12:24.702Z",
+            "label": "11/6 16:12",
             "value": 59,
             "reports": 1
           },
           {
-            "at": "2026-11-06T02:18:14.675Z",
-            "label": "11/6 10:18",
+            "at": "2026-11-06T09:49:00.073Z",
+            "label": "11/6 17:49",
             "value": 64,
             "reports": 1
           }
