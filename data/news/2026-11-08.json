@@ -1,7 +1,185 @@
 {
-  "generatedAt": "2026-11-07T23:54:58.683Z",
+  "generatedAt": "2026-11-08T05:51:28.446Z",
   "date": "2026-11-08",
   "items": [
+    {
+      "id": "5f8103aa8ad8e667",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/7/link-rel-next",
+      "originalUrl": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+      "titleOriginal": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+      "summaryOriginal": "datasette #3046: Don&#x27;t serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: link: ; rel=\"next\" This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their browser is fetching unnecessary data and the Datasette server is having to render an entire page that then gets thrown away. I dug in and learned that Firefox has an issue that has been open for 24 years about this behavior... And one of the early comments on that issue links to my blog post from 2002 complaining about this feature. I hadn't just forgotten that I had written about it, I had forgotten the feature entirely! Tags: firefox , html , mozilla , datasette",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/datasette/issues/3046",
+        "https://developer.mozilla.org/en-US/docs/Glossary/Prefetch",
+        "https://latest.datasette.io/fixtures/compound_three_primary_keys?_next=a%2Cd%2Cv&gt",
+        "https://bugzilla.mozilla.org/show_bug.cgi?id=175418",
+        "https://simonwillison.net/2002/Oct/17/mozillaPrefetching/",
+        "https://simonwillison.net/tags/firefox",
+        "https://simonwillison.net/tags/html",
+        "https://simonwillison.net/tags/mozilla",
+        "https://simonwillison.net/tags/datasette"
+      ],
+      "publishedAt": "2026-11-07T23:57:46.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+          "publishedAt": "2026-11-07T23:57:46.000Z",
+          "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/datasette/issues/3046",
+            "https://developer.mozilla.org/en-US/docs/Glossary/Prefetch",
+            "https://latest.datasette.io/fixtures/compound_three_primary_keys?_next=a%2Cd%2Cv&gt",
+            "https://bugzilla.mozilla.org/show_bug.cgi?id=175418",
+            "https://simonwillison.net/2002/Oct/17/mozillaPrefetching/",
+            "https://simonwillison.net/tags/firefox",
+            "https://simonwillison.net/tags/html",
+            "https://simonwillison.net/tags/mozilla",
+            "https://simonwillison.net/tags/datasette"
+          ]
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "这是一个具体的 Web 性能优化实践，揭示了 HTTP link 头与浏览器预取行为之间的意外交互，对使用 Datasette 或类似分页服务的开发者有直接参考价值。",
+      "importanceReasonEn": "This is a concrete web performance optimization practice that reveals an unexpected interaction between HTTP link headers and browser prefetching, with direct reference value for developers using Datasette or similar paginated services.",
+      "scoringMode": "ai",
+      "titleZh": "Datasette #3046：不再向 Firefox 的 HTML 页面发送 link: rel=next HTTP 头",
+      "titleEn": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+      "summaryZh": "Simon Willison 发现 Datasette 表格页会向 Firefox 发送 link: rel=\"next\" HTTP 头，导致浏览器预取下一页数据，造成不必要的请求和服务器渲染开销。他为此提交了 Datasette #3046，并发现 Firefox 相关 issue 已开放 24 年，早期评论还链接到他 2002 年批评该功能的博客文章。",
+      "summaryEn": "Simon Willison noticed that Datasette table pages send a link: rel=\"next\" HTTP header to Firefox, causing the browser to prefetch the next page of rows and creating unnecessary requests and server rendering overhead. He filed Datasette #3046 and found a Firefox issue open for 24 years, whose early comments link to his own 2002 blog post complaining about the feature.",
+      "keywords": [
+        "Datasette",
+        "Firefox",
+        "link header",
+        "rel=next",
+        "prefetch",
+        "HTTP"
+      ],
+      "topics": [
+        "Datasette",
+        "Firefox",
+        "HTTP headers",
+        "prefetching",
+        "web performance"
+      ],
+      "models": [],
+      "detailZh": "Simon Willison 在查看 Firefox 网络面板时发现，访问 Datasette 表格页会触发浏览器对下一页行数据的 HTTP 预取。原因是 Datasette 页面会发送形如 link: ; rel=\"next\" 的 HTTP 响应头，Firefox 据此主动预取下一页。\n\nWillison 认为这是不良行为：只有极少数访客会点击“下一页”链接，但浏览器却会为所有访客预取数据，Datasette 服务器因此需要渲染一个最终被丢弃的完整页面。\n\n他进一步调查发现，Firefox 有一个关于该行为的 issue 已开放 24 年，且该 issue 的早期评论链接到他 2002 年批评此功能的博客文章。Willison 表示自己不仅忘了写过这篇文章，甚至完全忘记了这个功能的存在。\n\n为此他提交了 Datasette #3046，标题为“不要向 Firefox 的 HTML 页面发送 link: rel=next HTTP 头”，旨在避免这种不必要的预取。",
+      "keyPointsZh": [
+        "Datasette 表格页发送 link: rel=\"next\" HTTP 头，触发 Firefox 预取下一页。",
+        "预取导致不必要的网络请求和服务器渲染开销，因为多数访客不会点击下一页。",
+        "Firefox 相关 issue 已开放 24 年，早期评论链接到 Willison 2002 年的批评文章。",
+        "Willison 提交 Datasette #3046，要求不再向 Firefox 的 HTML 页面发送该头。"
+      ],
+      "impactZh": "该问题揭示了 HTTP link 头与浏览器预取机制之间的意外交互，提醒开发者注意响应头可能引发的额外流量和服务器负载，对分页型 Web 应用的性能优化有实际意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Datasette 的开发者可能因该预取行为产生额外服务器负载和带宽消耗；修复后可以减少不必要的页面渲染和请求。",
+      "howItWorksZh": "Datasette 在 HTML 页面响应中发送 link: ; rel=\"next\" HTTP 头，Firefox 解析该头后主动预取下一页资源。修复方式是针对 Firefox 的 HTML 页面请求不再发送该头，从而阻止浏览器预取。",
+      "interpretationZh": "已报告的事实是：Datasette 发送 link: rel=next 头，Firefox 据此预取下一页，Willison 提交了 #3046 修复。合理推断是：该修复能减少不必要的服务器渲染和带宽消耗，但具体影响范围取决于 Datasette 部署规模和 Firefox 用户比例。",
+      "limitationsZh": "输入未提供 #3046 的具体实现细节、合并状态或性能影响数据；Firefox 预取行为的具体触发条件也未详细说明。",
+      "actionStepsZh": [
+        "检查自己的 Web 应用是否发送 link: rel=next 头，评估是否会被浏览器预取。",
+        "对分页页面考虑按浏览器或场景有条件地发送该头，避免不必要的预取。",
+        "关注 Datasette #3046 的进展，了解修复方案。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+          "publishedAt": "2026-11-07T23:57:46.000Z",
+          "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/datasette/issues/3046",
+            "https://developer.mozilla.org/en-US/docs/Glossary/Prefetch",
+            "https://latest.datasette.io/fixtures/compound_three_primary_keys?_next=a%2Cd%2Cv&gt",
+            "https://bugzilla.mozilla.org/show_bug.cgi?id=175418",
+            "https://simonwillison.net/2002/Oct/17/mozillaPrefetching/",
+            "https://simonwillison.net/tags/firefox",
+            "https://simonwillison.net/tags/html",
+            "https://simonwillison.net/tags/mozilla",
+            "https://simonwillison.net/tags/datasette"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-07T23:57:46.000Z",
+        "endedAt": "2026-11-08T05:51:28.446Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-11-07T23:57:46.000Z",
+            "label": "11/8 07:57",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-08T00:56:43.074Z",
+            "label": "11/8 08:56",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T01:55:40.148Z",
+            "label": "11/8 09:55",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T02:54:37.223Z",
+            "label": "11/8 10:54",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T03:53:34.297Z",
+            "label": "11/8 11:53",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T04:52:31.371Z",
+            "label": "11/8 12:52",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T05:51:28.446Z",
+            "label": "11/8 13:51",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "51a247b5b6ae00e9",
       "normalizedUrl": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers",
@@ -37,13 +215,13 @@
           "resourceLinks": []
         }
       ],
-      "importance": 45,
-      "importanceReasonZh": "该条目仅说明Equity播客讨论了中期选举对科技行业的影响，并点出马斯克和数据中心前景不稳，但未提供具体政策、数据或事件细节。",
-      "importanceReasonEn": "The item only states that the Equity podcast discussed the midterms' impact on tech, noting rocky prospects for Elon Musk and data centers, without specific policies, figures or events.",
+      "importance": 35,
+      "importanceReasonZh": "该条目仅为一期播客的简短摘要，未提供具体事实、数据或政策细节，信息价值有限。",
+      "importanceReasonEn": "This item is only a brief podcast summary with no specific facts, figures or policy details, limiting its informational value.",
       "scoringMode": "ai",
-      "titleZh": "中期选举后，马斯克与数据中心面临不确定前景",
+      "titleZh": "中期选举后，埃隆·马斯克与数据中心面临严峻前景",
       "titleEn": "After the midterms, things are looking rocky for Elon Musk and data centers",
-      "summaryZh": "在Equity播客中，我们分析了中期选举结果对科技行业意味着什么。",
+      "summaryZh": "在Equity播客中，我们分析了中期选举结果对科技行业的影响。",
       "summaryEn": "On Equity, we unpacked what the midterms mean for the tech industry.",
       "keywords": [
         "midterms",
@@ -59,19 +237,18 @@
         "data centers"
       ],
       "models": [],
-      "detailZh": "TechCrunch AI发布了一条简短条目，标题为“中期选举后，马斯克与数据中心面临不确定前景”。摘要说明，在Equity播客中，团队分析了中期选举结果对科技行业意味着什么。\n\n从现有信息看，该内容属于播客节目导语，核心指向是选举政治变化可能影响科技行业，尤其是与埃隆·马斯克相关的业务以及数据中心领域。但原文没有给出具体选举结果、涉及的政策议题、受影响的公司或项目，也没有提供任何数据或引述。\n\n因此，目前只能确认这是一期讨论中期选举与科技行业关系的播客内容，无法核实“前景不稳”的具体依据和范围。",
+      "detailZh": "TechCrunch AI 发布了一条简短条目，标题为《中期选举后，埃隆·马斯克与数据中心面临严峻前景》。摘要仅说明在 Equity 播客节目中讨论了中期选举对科技行业意味着什么。\n\n除标题和摘要外，输入未提供任何具体事实：没有说明选举结果、涉及哪些政策或监管议题、马斯克或数据中心为何受到影响，也没有给出任何数据、引述或时间线。\n\n因此，目前只能确认该内容是一期播客节目，主题围绕中期选举对科技行业（尤其是马斯克相关业务和数据中心领域）的潜在影响，具体内容无法从现有材料中核实。",
       "keyPointsZh": [
-        "TechCrunch AI发布了关于中期选举后科技行业前景的简短条目",
-        "内容来自Equity播客，讨论中期选举对科技行业的意义",
-        "标题点名马斯克和数据中心面临不确定前景",
-        "原文未提供具体政策、数据或事件细节"
+        "TechCrunch AI 发布了一期 Equity 播客节目，讨论中期选举对科技行业的影响。",
+        "标题暗示马斯克相关业务和数据中心在选举后面临不利前景。",
+        "输入材料未提供任何具体政策、数据或事件细节。"
       ],
-      "impactZh": "该条目反映科技媒体开始关注选举政治对科技行业的影响，但由于缺乏具体内容，尚无法判断实际影响范围。",
+      "impactZh": "该条目表明科技媒体开始关注选举政治对科技行业的影响，但由于缺乏具体内容，尚无法判断实际影响范围。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：TechCrunch AI发布了一条播客导语，称中期选举后马斯克和数据中心前景不稳。合理推断是：该播客可能讨论选举结果带来的监管或政策变化，但原文没有展开，具体内容无法确认。",
-      "limitationsZh": "原文仅为播客导语，缺少具体选举结果、政策议题、受影响主体和数据，无法核实“前景不稳”的依据。",
+      "interpretationZh": "已确认的事实仅限于：这是一期讨论中期选举与科技行业的播客节目。标题中“面临严峻前景”的具体所指属于节目观点，输入材料未提供支撑细节，无法进一步判断。",
+      "limitationsZh": "输入仅为标题和一句话摘要，缺少节目中的具体论点、政策背景、数据和引述，无法核实标题所述影响是否成立。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -94,9 +271,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-07T22:07:22.000Z",
-        "endedAt": "2026-11-07T23:54:58.683Z",
-        "current": 50,
-        "peak": 50,
+        "endedAt": "2026-11-08T05:51:28.446Z",
+        "current": 44,
+        "peak": 44,
         "history": [
           {
             "at": "2026-11-07T22:07:22.000Z",
@@ -105,15 +282,51 @@
             "reports": 0
           },
           {
-            "at": "2026-11-07T23:01:10.341Z",
-            "label": "11/8 07:01",
-            "value": 32,
+            "at": "2026-11-07T23:05:22.805Z",
+            "label": "11/8 07:05",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-07T23:54:58.683Z",
-            "label": "11/8 07:54",
-            "value": 50,
+            "at": "2026-11-08T00:03:23.611Z",
+            "label": "11/8 08:03",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T01:01:24.417Z",
+            "label": "11/8 09:01",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T01:59:25.223Z",
+            "label": "11/8 09:59",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T02:57:26.028Z",
+            "label": "11/8 10:57",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T03:55:26.834Z",
+            "label": "11/8 11:55",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T04:53:27.640Z",
+            "label": "11/8 12:53",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T05:51:28.446Z",
+            "label": "11/8 13:51",
+            "value": 44,
             "reports": 1
           }
         ],
@@ -155,9 +368,9 @@
           "resourceLinks": []
         }
       ],
-      "importance": 62,
-      "importanceReasonZh": "该报道涉及英伟达这一全球AI芯片核心企业及其CEO，且牵涉美中科技与情报摩擦，具有较高关注度；但核心信息来自据称流传的备忘录，缺乏公开可核实的细节。",
-      "importanceReasonEn": "The report involves Nvidia, a central player in global AI chips, and its CEO, and touches on US-China technology and intelligence friction, giving it high attention value; however, the core claim rests on a reportedly circulated memo without publicly verifiable details.",
+      "importance": 55,
+      "importanceReasonZh": "该报道涉及英伟达及其供应链相关企业的高管，以及美中科技与情报摩擦，可能影响相关企业声誉与跨境业务环境，但核心信息来自据称流传的备忘录，公开可核实细节有限。",
+      "importanceReasonEn": "The report involves an executive linked to Nvidia's supply-chain ecosystem and US-China technology and intelligence tensions, which could affect corporate reputation and cross-border business conditions, but the core claim rests on a reportedly circulated memo with limited publicly verifiable detail",
       "scoringMode": "ai",
       "titleZh": "美情报备忘录称Megaspeed高管被招募监视英伟达CEO",
       "titleEn": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
@@ -165,33 +378,32 @@
       "summaryEn": "A memo circulated earlier this year reportedly claimed that China's Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO, according to TechCrunch AI.",
       "keywords": [
         "Megaspeed",
-        "Nvidia",
-        "intelligence memo",
-        "espionage",
-        "US-China"
+        "Nvidia CEO",
+        "US intelligence memo",
+        "Ministry of State Security",
+        "espionage allegation"
       ],
       "topics": [
         "Nvidia",
         "Megaspeed",
-        "US-China tech tensions",
-        "espionage allegations",
-        "semiconductor industry"
+        "US intelligence",
+        "China",
+        "technology executive"
       ],
       "models": [],
-      "detailZh": "TechCrunch AI报道称，今年早些时候流传的一份美国情报备忘录据称提出一项指控：中国国家安全部招募了一名女性科技高管，目的是监视英伟达CEO。报道将这名高管与Megaspeed公司联系在一起。\n\n目前公开信息仅来自该报道对备忘录内容的转述，报道没有披露备忘录的完整文本、发布机构、具体日期，也没有说明美方是否已对该指控作出正式确认或回应。\n\n报道同样没有提供可独立核实的证据细节，例如所谓招募的时间、方式、接触渠道，或相关人员的具体身份与职务。因此，这一说法目前属于未经证实的指控性信息。\n\n事件背景是美中在半导体与人工智能领域的持续紧张关系，英伟达因向中国市场销售AI芯片而长期处于出口管制与安全审查的焦点之中。此类情报备忘录指控若被进一步证实，可能加剧对企业高管安全与跨境商业往来的审视。",
+      "detailZh": "TechCrunch AI报道称，今年早些时候流传的一份美国情报备忘录据称声称，中国国家安全部招募了一名女性科技高管，目的是监视英伟达CEO。报道将这名高管与Megaspeed联系起来。\n\n目前公开信息主要来自对该备忘录内容的转述，报道没有在摘要中提供备忘录全文、具体日期、涉事高管姓名或美方机构的正式确认。因此，事件的核心事实仍属于“据称”层面。\n\n从背景看，英伟达处于美中科技竞争的中心，其芯片产品受到出口管制关注，围绕其高管和供应链伙伴的情报与安全议题容易引发高度关注。Megaspeed作为被提及的企业，其与英伟达的具体业务关系在现有材料中未被详细说明。\n\n现有信息不足以判断该备忘录的可信度、传播范围以及是否已引发正式调查或指控。报道本身属于对情报备忘录内容的转述，尚缺乏多方独立核实。",
       "keyPointsZh": [
-        "TechCrunch AI报道称，今年早些时候流传的一份美国情报备忘录包含相关指控。",
-        "备忘录据称声称中国国家安全部招募了一名女性科技高管监视英伟达CEO。",
-        "报道将该高管与Megaspeed公司相关联。",
-        "报道未披露备忘录全文、发布机构或可独立核实的证据。",
-        "目前没有公开信息显示美方已正式确认该指控。"
+        "TechCrunch AI报道称，今年早些时候流传的一份美国情报备忘录声称中国国家安全部招募了一名女性科技高管监视英伟达CEO。",
+        "报道将该高管与Megaspeed联系起来。",
+        "公开摘要未提供备忘录全文、涉事高管姓名或美方正式确认。",
+        "事件背景是美中围绕英伟达及芯片技术的持续紧张关系。"
       ],
-      "impactZh": "该报道把英伟达及其CEO置于美中科技与情报摩擦的叙事中心。若相关指控获得进一步证实，可能推动美国对企业高管安全审查、跨境人员往来以及AI芯片企业合规环境的收紧；在缺乏证实的情况下，其直接影响仍主要体现在舆论与政策讨论层面。",
+      "impactZh": "该报道可能加剧围绕英伟达及其合作伙伴的安全审查讨论，并影响相关企业在美中科技竞争环境下的声誉与合规风险。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "可确认的事实是：TechCrunch AI报道了一份据称今年早些时候流传的美国情报备忘录及其指控内容。属于推断或未经证实的是：备忘录的真实性、指控是否成立、涉事人员身份，以及美方是否采取任何行动。报道本身属于对二手情报材料的转述，读者应将其视为待核实的指控而非既定事实。",
-      "limitationsZh": "核心信息仅来自单一媒体报道对备忘录的转述，备忘录原文、发布机构与日期均未公开；没有独立证据或官方确认；涉事高管身份、职务及Megaspeed的具体角色未获详细说明；相关方均未公开回应，指控存在被夸大或误传的可能。",
+      "interpretationZh": "已报道的事实是：存在一份据称今年早些时候流传的美国情报备忘录，其内容声称中国国家安全部招募了一名女性科技高管监视英伟达CEO，报道将该高管与Megaspeed关联。合理推断是：此类备忘录内容若被广泛传播，可能引发对企业高管安全和供应链信任的讨论。但备忘录的真实性、来源和官方立场均未在现有材料中得到确认。",
+      "limitationsZh": "核心信息来自对一份据称流传的备忘录的转述，缺少备忘录原文、涉事高管身份、美方机构正式确认及中方回应。无法独立核实指控真实性，也无法确认是否已启动调查或产生法律后果。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -214,9 +426,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-07T21:17:08.000Z",
-        "endedAt": "2026-11-07T23:54:58.683Z",
-        "current": 59,
-        "peak": 59,
+        "endedAt": "2026-11-08T05:51:28.446Z",
+        "current": 55,
+        "peak": 55,
         "history": [
           {
             "at": "2026-11-07T21:17:08.000Z",
@@ -225,21 +437,57 @@
             "reports": 0
           },
           {
-            "at": "2026-11-07T22:09:44.894Z",
-            "label": "11/8 06:09",
-            "value": 29,
+            "at": "2026-11-07T22:14:16.938Z",
+            "label": "11/8 06:14",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-07T23:02:21.788Z",
-            "label": "11/8 07:02",
-            "value": 44,
+            "at": "2026-11-07T23:11:25.876Z",
+            "label": "11/8 07:11",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-07T23:54:58.683Z",
-            "label": "11/8 07:54",
-            "value": 59,
+            "at": "2026-11-08T00:08:34.815Z",
+            "label": "11/8 08:08",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T01:05:43.753Z",
+            "label": "11/8 09:05",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T02:02:52.692Z",
+            "label": "11/8 10:02",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T03:00:01.630Z",
+            "label": "11/8 11:00",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T03:57:10.569Z",
+            "label": "11/8 11:57",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T04:54:19.507Z",
+            "label": "11/8 12:54",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T05:51:28.446Z",
+            "label": "11/8 13:51",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -392,7 +640,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-07T17:37:25.000Z",
-        "endedAt": "2026-11-07T23:54:58.683Z",
+        "endedAt": "2026-11-08T05:51:28.446Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -403,44 +651,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-07T18:31:21.240Z",
-            "label": "11/8 02:31",
-            "value": 21,
+            "at": "2026-11-07T18:44:08.949Z",
+            "label": "11/8 02:44",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-07T19:25:17.480Z",
-            "label": "11/8 03:25",
-            "value": 29,
+            "at": "2026-11-07T19:50:52.899Z",
+            "label": "11/8 03:50",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-07T20:19:13.721Z",
-            "label": "11/8 04:19",
-            "value": 36,
+            "at": "2026-11-07T20:57:36.848Z",
+            "label": "11/8 04:57",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-07T21:13:09.961Z",
-            "label": "11/8 05:13",
-            "value": 43,
+            "at": "2026-11-07T22:04:20.798Z",
+            "label": "11/8 06:04",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-07T22:07:06.202Z",
-            "label": "11/8 06:07",
-            "value": 50,
+            "at": "2026-11-07T23:11:04.748Z",
+            "label": "11/8 07:11",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-07T23:01:02.442Z",
-            "label": "11/8 07:01",
-            "value": 58,
+            "at": "2026-11-08T00:17:48.697Z",
+            "label": "11/8 08:17",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-07T23:54:58.683Z",
-            "label": "11/8 07:54",
+            "at": "2026-11-08T01:24:32.647Z",
+            "label": "11/8 09:24",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T02:31:16.597Z",
+            "label": "11/8 10:31",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T03:38:00.546Z",
+            "label": "11/8 11:38",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T04:44:44.496Z",
+            "label": "11/8 12:44",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T05:51:28.446Z",
+            "label": "11/8 13:51",
             "value": 65,
             "reports": 1
           }
@@ -560,7 +832,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-07T16:56:38.000Z",
-        "endedAt": "2026-11-07T23:54:58.683Z",
+        "endedAt": "2026-11-08T05:51:28.446Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -571,44 +843,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-07T17:56:23.811Z",
-            "label": "11/8 01:56",
-            "value": 20,
+            "at": "2026-11-07T18:07:04.404Z",
+            "label": "11/8 02:07",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-07T18:56:09.623Z",
-            "label": "11/8 02:56",
-            "value": 26,
+            "at": "2026-11-07T19:17:30.808Z",
+            "label": "11/8 03:17",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-07T19:55:55.435Z",
-            "label": "11/8 03:55",
-            "value": 32,
+            "at": "2026-11-07T20:27:57.212Z",
+            "label": "11/8 04:27",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-07T20:55:41.247Z",
-            "label": "11/8 04:55",
-            "value": 38,
+            "at": "2026-11-07T21:38:23.616Z",
+            "label": "11/8 05:38",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-07T21:55:27.059Z",
-            "label": "11/8 05:55",
+            "at": "2026-11-07T22:48:50.020Z",
+            "label": "11/8 06:48",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-07T23:59:16.425Z",
+            "label": "11/8 07:59",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T01:09:42.829Z",
+            "label": "11/8 09:09",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T02:20:09.233Z",
+            "label": "11/8 10:20",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-07T22:55:12.871Z",
-            "label": "11/8 06:55",
-            "value": 50,
+            "at": "2026-11-08T03:30:35.637Z",
+            "label": "11/8 11:30",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-11-07T23:54:58.683Z",
-            "label": "11/8 07:54",
+            "at": "2026-11-08T04:41:02.041Z",
+            "label": "11/8 12:41",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T05:51:28.446Z",
+            "label": "11/8 13:51",
             "value": 55,
             "reports": 1
           }
@@ -751,7 +1047,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-07T16:31:00.000Z",
-        "endedAt": "2026-11-07T23:54:58.683Z",
+        "endedAt": "2026-11-08T05:51:28.446Z",
         "current": 48,
         "peak": 48,
         "history": [
@@ -762,50 +1058,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-07T17:26:29.835Z",
-            "label": "11/8 01:26",
-            "value": 18,
+            "at": "2026-11-07T17:43:46.222Z",
+            "label": "11/8 01:43",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-11-07T18:21:59.670Z",
-            "label": "11/8 02:21",
+            "at": "2026-11-07T18:56:32.444Z",
+            "label": "11/8 02:56",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-07T20:09:18.667Z",
+            "label": "11/8 04:09",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-07T19:17:29.506Z",
-            "label": "11/8 03:17",
-            "value": 27,
+            "at": "2026-11-07T21:22:04.889Z",
+            "label": "11/8 05:22",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-07T20:12:59.341Z",
-            "label": "11/8 04:12",
-            "value": 31,
+            "at": "2026-11-07T22:34:51.111Z",
+            "label": "11/8 06:34",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-07T21:08:29.176Z",
-            "label": "11/8 05:08",
-            "value": 35,
+            "at": "2026-11-07T23:47:37.334Z",
+            "label": "11/8 07:47",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-11-07T22:03:59.012Z",
-            "label": "11/8 06:03",
-            "value": 40,
+            "at": "2026-11-08T01:00:23.556Z",
+            "label": "11/8 09:00",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-11-07T22:59:28.847Z",
-            "label": "11/8 06:59",
-            "value": 44,
+            "at": "2026-11-08T02:13:09.778Z",
+            "label": "11/8 10:13",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-07T23:54:58.683Z",
-            "label": "11/8 07:54",
+            "at": "2026-11-08T03:25:56.001Z",
+            "label": "11/8 11:25",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T04:38:42.223Z",
+            "label": "11/8 12:38",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-08T05:51:28.446Z",
+            "label": "11/8 13:51",
             "value": 48,
             "reports": 1
           }
