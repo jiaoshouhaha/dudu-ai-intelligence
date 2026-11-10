@@ -1,7 +1,932 @@
 {
-  "generatedAt": "2026-11-09T20:42:07.684Z",
+  "generatedAt": "2026-11-10T03:28:16.039Z",
   "date": "2026-11-10",
   "items": [
+    {
+      "id": "9a8fde6cfa9ab68c",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/9/llm-anthropic",
+      "originalUrl": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+      "titleOriginal": "llm-anthropic 0.31",
+      "summaryOriginal": "Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic , so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five reasoning levels - low , medium , high , xhigh , and max . You can see them all here - here's the best result I got, from xhigh : max failed to return an image at all, running out of tokens after spending 128,000 thinking about them . That's the same bug that I saw with Opus 5.5 - but it's new for the Fable series, both Fable 5 and Fable 5.1 returned max effort pelicans just fine. Tags: llm , anthropic , claude , generative-ai , pelican-riding-a-bicycle , ai , llms , claude-mythos-fable",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/fable-5.2-xhigh.avif"
+      ],
+      "resourceLinks": [
+        "https://github.com/simonw/llm-anthropic/releases/tag/0.31",
+        "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbcd1a1bf38b929b0bbbae2e38b808e97",
+        "https://static.simonwillison.net/static/2026/fable-5.2-xhigh.avif",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbcd1a1bf38b929b0bbbae2e38b808e97#reasoning-2",
+        "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/#claude-opus-5-5-max-over-thinks-to-the-point-of-breaking",
+        "https://simonwillison.net/2026/Jun/9/claude-fable-5/#and-some-pelicans",
+        "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/#max",
+        "https://simonwillison.net/tags/llm",
+        "https://simonwillison.net/tags/anthropic",
+        "https://simonwillison.net/tags/claude",
+        "https://simonwillison.net/tags/generative-ai"
+      ],
+      "publishedAt": "2026-11-09T23:58:46.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+          "publishedAt": "2026-11-09T23:58:46.000Z",
+          "title": "llm-anthropic 0.31",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/fable-5.2-xhigh.avif"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-anthropic/releases/tag/0.31",
+            "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbcd1a1bf38b929b0bbbae2e38b808e97",
+            "https://static.simonwillison.net/static/2026/fable-5.2-xhigh.avif",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbcd1a1bf38b929b0bbbae2e38b808e97#reasoning-2",
+            "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/#claude-opus-5-5-max-over-thinks-to-the-point-of-breaking",
+            "https://simonwillison.net/2026/Jun/9/claude-fable-5/#and-some-pelicans",
+            "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/#max",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/anthropic",
+            "https://simonwillison.net/tags/claude",
+            "https://simonwillison.net/tags/generative-ai"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "这是一条实用的工具更新，展示了新模型的接入方式，并记录了一个可复现的推理等级缺陷，对使用 llm 工具和 Anthropic 模型的开发者有直接参考价值。",
+      "importanceReasonEn": "This is a practical tooling update that shows how to access new models and documents a reproducible reasoning-level defect, offering direct reference value for developers using the llm tool and Anthropic models.",
+      "scoringMode": "ai",
+      "titleZh": "llm-anthropic 0.31 发布",
+      "titleEn": "llm-anthropic 0.31",
+      "summaryZh": "Simon Willison 发布了 llm-anthropic 0.31，将 Anthropic 新推出的 Fable 5.2 和 Mythos 5.2 模型加入该插件，用户可通过 llm 命令行工具调用这些模型。他测试了 Fable 5.2 在五个推理等级下生成骑自行车鹈鹕 SVG 的效果，其中 max 等级因耗尽 128,000 个思考 token 而未能返回图像。",
+      "summaryEn": "Simon Willison released llm-anthropic 0.31, adding Anthropic's newly launched Fable 5.2 and Mythos 5.2 models to the plugin so users can call them via the llm command-line tool. He tested Fable 5.2 across five reasoning levels for generating a pelican-riding-a-bicycle SVG; the max level failed to return an image after exhausting 128,000 thinking tokens.",
+      "keywords": [
+        "llm-anthropic",
+        "Fable 5.2",
+        "Mythos 5.2",
+        "推理等级",
+        "SVG 生成",
+        "token 耗尽"
+      ],
+      "topics": [
+        "llm",
+        "anthropic",
+        "claude",
+        "generative-ai",
+        "命令行工具"
+      ],
+      "models": [
+        "Fable 5.2",
+        "Mythos 5.2",
+        "Fable 5",
+        "Fable 5.1",
+        "Opus 5.5"
+      ],
+      "detailZh": "Simon Willison 发布了 llm-anthropic 0.31 版本。据其说明，Anthropic 当天推出了 Fable 5.2 和 Mythos 5.2 两个模型，他已将它们加入 llm-anthropic 插件，因此用户现在可以通过 llm 命令行工具向 Fable 5.2 发送提示词。\n\n文中给出的使用流程是：先用 uv tool install llm 安装 llm，再执行 llm install llm-anthropic 安装插件，然后用 llm keys set anthropic 设置 API 密钥，最后通过 llm -m claude-fable-5.2 加上提示词来调用模型。示例提示词是生成一只骑自行车的鹈鹕的 SVG。\n\n作者在 low、medium、high、xhigh 和 max 五个推理等级下分别测试了该提示词，并称 xhigh 等级得到了最好的结果。max 等级则完全没有返回图像，在花费 128,000 个 token 进行思考后耗尽额度。\n\n作者指出，这一现象与他在 Opus 5.5 上看到的缺陷相同，但对 Fable 系列而言是新问题，因为 Fable 5 和 Fable 5.1 在 max 等级下都能正常返回鹈鹕图像。",
+      "keyPointsZh": [
+        "llm-anthropic 0.31 加入了 Fable 5.2 和 Mythos 5.2 模型。",
+        "用户可通过 llm 命令行工具调用 claude-fable-5.2。",
+        "作者在五个推理等级下测试了生成骑自行车鹈鹕 SVG 的提示词。",
+        "max 等级耗尽 128,000 个思考 token 后未能返回图像。",
+        "该缺陷此前出现在 Opus 5.5 上，对 Fable 系列是新问题。"
+      ],
+      "impactZh": "该更新让 llm 工具用户能立即使用 Anthropic 的新模型，同时暴露出高推理等级下可能耗尽 token 而不产出结果的问题，提醒开发者谨慎选择推理等级。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 llm 工具或 Anthropic 模型的开发者可以按文中步骤快速接入 Fable 5.2，并应注意 max 推理等级存在耗尽 token 且不返回结果的风险，可优先尝试 xhigh 等级。",
+      "howItWorksZh": "安装与调用流程：1) 运行 uv tool install llm 安装 llm 命令行工具；2) 运行 llm install llm-anthropic 安装插件；3) 运行 llm keys set anthropic 并粘贴 API 密钥；4) 运行 llm -m claude-fable-5.2 \"提示词\" 调用模型。推理等级可通过 low、medium、high、xhigh、max 五档选择。",
+      "interpretationZh": "据作者描述，Fable 5.2 已可通过 llm-anthropic 调用，且在 xhigh 等级下能生成较好的 SVG。max 等级失败是作者实测观察到的现象，其与 Opus 5.5 的相似性属于作者的对比判断，具体原因尚未说明。",
+      "limitationsZh": "来源仅为作者的个人发布说明与测试记录，未提供各推理等级结果的完整对比数据，也未说明 max 等级失败的确切原因或是否有官方回应。",
+      "actionStepsZh": [
+        "运行 uv tool install llm 安装 llm 工具。",
+        "运行 llm install llm-anthropic 安装插件。",
+        "运行 llm keys set anthropic 设置 API 密钥。",
+        "使用 llm -m claude-fable-5.2 调用模型，并优先尝试 xhigh 推理等级。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "作者称五个推理等级中 xhigh 结果最好，max 未返回图像；来源未给出各等级的具体评分，此处仅以是否返回图像作粗略对比。",
+        "data": [
+          {
+            "label": "low",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "medium",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "high",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "xhigh",
+            "value": 1,
+            "display": ""
+          },
+          {
+            "label": "max",
+            "value": 0,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+          "publishedAt": "2026-11-09T23:58:46.000Z",
+          "title": "llm-anthropic 0.31",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/fable-5.2-xhigh.avif"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-anthropic/releases/tag/0.31",
+            "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbcd1a1bf38b929b0bbbae2e38b808e97",
+            "https://static.simonwillison.net/static/2026/fable-5.2-xhigh.avif",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbcd1a1bf38b929b0bbbae2e38b808e97#reasoning-2",
+            "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/#claude-opus-5-5-max-over-thinks-to-the-point-of-breaking",
+            "https://simonwillison.net/2026/Jun/9/claude-fable-5/#and-some-pelicans",
+            "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/#max",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/anthropic",
+            "https://simonwillison.net/tags/claude",
+            "https://simonwillison.net/tags/generative-ai"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-09T23:58:46.000Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-09T23:58:46.000Z",
+            "label": "11/10 07:58",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-10T00:51:08.509Z",
+            "label": "11/10 08:51",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:43:31.019Z",
+            "label": "11/10 09:43",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:35:53.529Z",
+            "label": "11/10 10:35",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "0a48eaabdee096f9",
+      "normalizedUrl": "https://mp.weixin.qq.com/s/sKoVHL_oNsik9vtUjr0lHg",
+      "originalUrl": "https://mp.weixin.qq.com/s/sKoVHL_oNsik9vtUjr0lHg",
+      "titleOriginal": "实测 Claude Fable 5.2：一次直出视频与 3D 网页，审美与细节表现突出",
+      "summaryOriginal": "Anthropic 凌晨正式发布 Claude Fable 5.2，作者第一时间实测视频动效、Three.js 3D 场景和苹果静安店 3D 网页等 10 个任务，全部一次直出，未发现生成视频中的事实错误。",
+      "originalLanguage": "zh",
+      "author": "公众号：数字生命卡兹克",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 81,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/po2cdt1whxfqyfew3e81l8mb0",
+        "https://mp.weixin.qq.com/s/sKoVHL_oNsik9vtUjr0lHg"
+      ],
+      "publishedAt": "2026-11-09T23:21:03.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-09T23:31:28.465Z",
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/po2cdt1whxfqyfew3e81l8mb0"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:po2cdt1whxfqyfew3e81l8mb0",
+          "name": "公众号：数字生命卡兹克",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s/sKoVHL_oNsik9vtUjr0lHg",
+          "publishedAt": "2026-11-09T23:21:03.000Z",
+          "title": "实测 Claude Fable 5.2：一次直出视频与 3D 网页，审美与细节表现突出",
+          "authority": 81,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/po2cdt1whxfqyfew3e81l8mb0",
+            "https://mp.weixin.qq.com/s/sKoVHL_oNsik9vtUjr0lHg"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是新模型发布后的首批实测之一，覆盖视频与 3D 网页等生成任务，对关注模型实际能力的用户有参考价值，但样本量小且来自单一作者。",
+      "importanceReasonEn": "This is one of the first hands-on tests after the new model release, covering video and 3D web generation tasks. It is useful for users tracking practical model capability, but the sample is small and comes from a single author.",
+      "scoringMode": "ai",
+      "titleZh": "实测 Claude Fable 5.2：一次直出视频与 3D 网页，审美与细节表现突出",
+      "titleEn": "Hands-on with Claude Fable 5.2: One-Shot Video and 3D Web Pages with Strong Aesthetics and Detail",
+      "summaryZh": "Anthropic 凌晨正式发布 Claude Fable 5.2，作者第一时间实测视频动效、Three.js 3D 场景和苹果静安店 3D 网页等 10 个任务，全部一次直出，未发现生成视频中的事实错误。",
+      "summaryEn": "Anthropic officially released Claude Fable 5.2 in the early morning. The author immediately tested 10 tasks, including video motion effects, Three.js 3D scenes, and a 3D web page of Apple Jing'an store; all were produced in a single pass, with no factual errors found in the generated video.",
+      "keywords": [
+        "Claude Fable 5.2",
+        "one-shot generation",
+        "video",
+        "3D webpage",
+        "Anthropic"
+      ],
+      "topics": [
+        "Claude Fable 5.2",
+        "video generation",
+        "Three.js",
+        "3D web",
+        "model evaluation"
+      ],
+      "models": [
+        "Claude Fable 5.2"
+      ],
+      "detailZh": "Anthropic 在凌晨正式发布 Claude Fable 5.2。公众号作者数字生命卡兹克在发布后第一时间进行了实测，共设计 10 个任务，涵盖视频动效、Three.js 3D 场景以及苹果静安店 3D 网页等方向。\n\n据作者描述，这 10 个任务全部由模型一次直出完成，没有经过多轮返工。作者特别提到模型在审美和细节表现上较为突出，并称未在生成的视频中发现事实错误。\n\n目前公开信息主要来自这一篇实测文章，测试方法、提示词和具体产出细节未在摘要中展开，因此结论的普适性仍需更多独立测试验证。",
+      "keyPointsZh": [
+        "Anthropic 凌晨发布 Claude Fable 5.2",
+        "作者实测 10 个任务，覆盖视频动效、Three.js 3D 场景和苹果静安店 3D 网页",
+        "10 个任务均为一次直出，未经过多轮修改",
+        "作者称生成视频中未发现事实错误，审美与细节表现突出"
+      ],
+      "impactZh": "如果一次直出即可完成视频动效和 3D 网页这类复杂任务，模型在创意与前端可视化工作流中的可用性会明显提升，减少反复调试的成本。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 Claude 做视频动效或 Three.js 3D 网页的创作者和开发者而言，该实测提示新模型可能减少多轮返工，但需自行用实际任务验证。",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是：Anthropic 发布了 Claude Fable 5.2，且有一位作者完成了 10 项任务的实测并给出正面评价。至于模型是否普遍具备一次直出复杂视频与 3D 网页的能力，目前只是单一来源的实测结论，属于合理但尚未广泛验证的推断。",
+      "limitationsZh": "测试来自单一作者，样本仅 10 个任务，文章摘要未披露提示词、评分标准和产出细节；未发现事实错误也只是作者个人检查的结果，缺乏独立复现。",
+      "actionStepsZh": [
+        "用自己熟悉的视频动效或 Three.js 任务对 Claude Fable 5.2 做一次直出测试",
+        "对生成视频中的事实性内容进行人工核对",
+        "记录一次直出与多轮修改的成功率差异，作为选型依据"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:po2cdt1whxfqyfew3e81l8mb0",
+          "name": "公众号：数字生命卡兹克",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s/sKoVHL_oNsik9vtUjr0lHg",
+          "publishedAt": "2026-11-09T23:21:03.000Z",
+          "title": "实测 Claude Fable 5.2：一次直出视频与 3D 网页，审美与细节表现突出",
+          "authority": 81,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/po2cdt1whxfqyfew3e81l8mb0",
+            "https://mp.weixin.qq.com/s/sKoVHL_oNsik9vtUjr0lHg"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-09T23:21:03.000Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-09T23:21:03.000Z",
+            "label": "11/10 07:21",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-10T00:10:29.607Z",
+            "label": "11/10 08:10",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:59:56.215Z",
+            "label": "11/10 08:59",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:49:22.823Z",
+            "label": "11/10 09:49",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:38:49.431Z",
+            "label": "11/10 10:38",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c988f42abbf6068f",
+      "normalizedUrl": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo",
+      "originalUrl": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
+      "titleOriginal": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic&#039;s AI lead just before its IPO",
+      "summaryOriginal": "Anthropic is releasing Claude Fable 5.2 and Mythos 5.2, its most powerful models to date, in two versions: one freely available and one reserved for verified organizations. The models solve open physics problems, show stronger cybersecurity capabilities, design functioning operating systems, and write more than 90 percent of the changes merged into Anthropic's core code, according to the company. Anthropic says it has deliberately curbed any capabilities that would let the AI accelerate its own development. The article Claude Fable 5.2 and Mythos 5.2 cement Anthropic&#039;s AI lead just before its IPO appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Matthias Bastian",
+      "category": "models",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/11/fable_52_sand.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-11-09T21:15:23.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
+          "publishedAt": "2026-11-09T21:15:23.000Z",
+          "title": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic&#039;s AI lead just before its IPO",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/fable_52_sand.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 78,
+      "importanceReasonZh": "这是 Anthropic 在 IPO 前发布旗舰模型的重要事件，涉及双版本发布策略、代码自动化比例超过 90% 以及主动抑制自我加速能力等关键信息，对行业竞争格局和 AI 安全讨论都有影响。",
+      "importanceReasonEn": "This is a major event: Anthropic releasing flagship models just before its IPO, with a two-tier release strategy, over 90% of merged code written by AI, and deliberate curbing of self-acceleration capabilities—relevant to both competitive landscape and AI safety debate.",
+      "scoringMode": "ai",
+      "titleZh": "Claude Fable 5.2 与 Mythos 5.2 在 IPO 前巩固 Anthropic 的 AI 领先地位",
+      "titleEn": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic's AI lead just before its IPO",
+      "summaryZh": "Anthropic 发布迄今最强大的模型 Claude Fable 5.2 和 Mythos 5.2，分为两个版本：一个可自由使用，另一个仅限经过验证的组织。据公司称，这些模型能解决未解的物理问题、展现更强的网络安全能力、设计可运行的操作系统，并撰写了 Anthropic 核心代码中超过 90% 的合并变更。Anthropic 表示，它有意抑制了任何可能让 AI 加速自身发展的能力。",
+      "summaryEn": "Anthropic is releasing Claude Fable 5.2 and Mythos 5.2, its most powerful models to date, in two versions: one freely available and one reserved for verified organizations. The models solve open physics problems, show stronger cybersecurity capabilities, design functioning operating systems, and write more than 90 percent of the changes merged into Anthropic's core code, according to the company. Anthropic says it has deliberately curbed any capabilities that would let the AI accelerate its own development.",
+      "keywords": [
+        "Anthropic",
+        "Claude Fable 5.2",
+        "Mythos 5.2",
+        "IPO",
+        "网络安全",
+        "物理问题",
+        "代码生成",
+        "能力抑制"
+      ],
+      "topics": [
+        "Anthropic",
+        "Claude Fable 5.2",
+        "Mythos 5.2",
+        "AI 模型发布",
+        "IPO",
+        "AI 安全"
+      ],
+      "models": [
+        "Claude Fable 5.2",
+        "Mythos 5.2"
+      ],
+      "detailZh": "Anthropic 宣布推出 Claude Fable 5.2 和 Mythos 5.2，称这是其迄今为止最强大的模型。发布采取双版本形式：一个版本可自由使用，另一个版本仅限经过验证的组织使用。\n\n据公司介绍，这些模型能够解决未解的物理问题，展现出更强的网络安全能力，可以设计出可运行的操作系统，并撰写了 Anthropic 核心代码库中超过 90% 的合并变更。\n\nAnthropic 同时表示，它有意抑制了任何可能让 AI 加速自身发展的能力。这一表态与模型在代码自动化方面的高比例形成对照，显示公司在能力释放与安全控制之间采取谨慎立场。\n\n此次发布发生在 Anthropic IPO 之前，被外界视为其在上市前巩固 AI 领先地位的动作。目前披露的信息主要来自公司自身，具体基准测试、版本差异细节和验证组织标准尚未公开。",
+      "keyPointsZh": [
+        "Anthropic 发布 Claude Fable 5.2 和 Mythos 5.2，称其为迄今最强模型",
+        "发布分为自由使用版和仅限验证组织版两个版本",
+        "公司称模型能解决未解物理问题、设计可运行操作系统、展现更强网络安全能力",
+        "模型撰写了 Anthropic 核心代码中超过 90% 的合并变更",
+        "Anthropic 表示有意抑制可能让 AI 加速自身发展的能力"
+      ],
+      "impactZh": "此次发布在 IPO 前强化了 Anthropic 的技术叙事，双版本策略和主动抑制自我加速能力的表态，可能影响行业对前沿模型发布方式与安全治理的讨论。",
+      "readerImpactZh": "",
+      "userImpactZh": "若公司披露属实，开发者可能获得在物理问题求解、操作系统设计和网络安全任务上更强的模型能力；但验证组织版的具体准入标准和能力差异尚未公开，实际可用性仍待确认。",
+      "howItWorksZh": "",
+      "interpretationZh": "已披露的事实是：Anthropic 发布了两个新模型，采用双版本发布，并声称其在物理、网络安全、操作系统设计和代码自动化方面表现突出，同时主动限制了自我加速能力。可合理推断的是，这些说法目前主要来自公司自述，尚缺独立基准验证；双版本策略可能用于在开放使用与高风险能力管控之间取得平衡。",
+      "limitationsZh": "所有能力描述均来自 Anthropic 自身，缺少第三方基准测试和独立验证；验证组织的准入标准、两个版本的具体能力差异、模型参数与架构均未披露；'解决未解物理问题'和'设计可运行操作系统'的具体范围与可复现性不明。",
+      "actionStepsZh": [
+        "关注 Anthropic 官方后续发布的模型卡和基准测试结果",
+        "评估所在组织是否符合验证组织版本的申请条件",
+        "在涉及网络安全或代码自动化的场景中，先进行小范围测试再扩大使用"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
+          "publishedAt": "2026-11-09T21:15:23.000Z",
+          "title": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic&#039;s AI lead just before its IPO",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/fable_52_sand.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-09T21:15:23.000Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 68,
+        "peak": 68,
+        "history": [
+          {
+            "at": "2026-11-09T21:15:23.000Z",
+            "label": "11/10 05:15",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-09T22:08:39.148Z",
+            "label": "11/10 06:08",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:01:55.296Z",
+            "label": "11/10 07:01",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:55:11.445Z",
+            "label": "11/10 07:55",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:48:27.593Z",
+            "label": "11/10 08:48",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:41:43.742Z",
+            "label": "11/10 09:41",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:34:59.890Z",
+            "label": "11/10 10:34",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 68,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a5722ff729b707b2",
+      "normalizedUrl": "https://x.com/higgsfield/status/2119884452054937656",
+      "originalUrl": "https://x.com/higgsfield/status/2119884452054937656",
+      "titleOriginal": "Claude Fable 5.2 上线 Higgsfield，开放 3 天免费试用",
+      "summaryOriginal": "Higgsfield 宣布 Claude Fable 5.2 已在 Higgsfield MCP 上线，提供 3 天免费不限量使用全部顶级视频和图像模型。作者称该 Anthropic 新模型擅长 3D 建模、视觉推理、computer use 和编码；引用内容提到 Claude Fable 5.2 与 Claude Mythos 5.2 在编码、推理和视觉方面有提升。",
+      "originalLanguage": "zh",
+      "author": "X：Higgsfield AI (@higgsfield)",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/ugn21ui1m8kftffpe2c95qlkx",
+        "https://x.com/higgsfield/status/2119884452054937656"
+      ],
+      "publishedAt": "2026-11-09T20:06:53.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-09T20:15:48.928Z",
+      "contentType": "official",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/ugn21ui1m8kftffpe2c95qlkx"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:ugn21ui1m8kftffpe2c95qlkx",
+          "name": "X：Higgsfield AI (@higgsfield)",
+          "type": "aggregator",
+          "url": "https://x.com/higgsfield/status/2119884452054937656",
+          "publishedAt": "2026-11-09T20:06:53.000Z",
+          "title": "Claude Fable 5.2 上线 Higgsfield，开放 3 天免费试用",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ugn21ui1m8kftffpe2c95qlkx",
+            "https://x.com/higgsfield/status/2119884452054937656"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "这是 Higgsfield 官方账号发布的模型上线与限时免费活动信息，涉及 Anthropic 新模型在第三方 MCP 平台的接入，对关注视频、图像生成与多模态工具的用户有直接使用价值，但来源为单条社交媒体发布，细节有限。",
+      "importanceReasonEn": "This is an official Higgsfield account post about a model launch and limited-time free access, covering an Anthropic model's integration into a third-party MCP platform. It has direct practical value for users of video, image and multimodal tools, but comes from a single social media post with limit",
+      "scoringMode": "ai",
+      "titleZh": "Claude Fable 5.2 上线 Higgsfield，开放 3 天免费试用",
+      "titleEn": "Claude Fable 5.2 Launches on Higgsfield With 3-Day Free Trial",
+      "summaryZh": "Higgsfield 宣布 Claude Fable 5.2 已在 Higgsfield MCP 上线，并提供 3 天免费不限量使用全部顶级视频和图像模型。发布内容称该 Anthropic 新模型擅长 3D 建模、视觉推理、computer use 和编码，并引用内容提到 Claude Fable 5.2 与 Claude Mythos 5.2 在编码、推理和视觉方面有所提升。",
+      "summaryEn": "Higgsfield announced that Claude Fable 5.2 is now available on Higgsfield MCP, with a 3-day free unlimited trial of all top video and image models. The post says the new Anthropic model excels at 3D modeling, visual reasoning, computer use and coding, and cites claims that Claude Fable 5.2 and Claude Mythos 5.2 improve on coding, reasoning and vision.",
+      "keywords": [
+        "Claude Fable 5.2",
+        "Higgsfield",
+        "MCP",
+        "免费试用",
+        "3D 建模",
+        "视觉推理"
+      ],
+      "topics": [
+        "Claude Fable 5.2",
+        "Higgsfield MCP",
+        "Anthropic",
+        "视频与图像生成",
+        "computer use"
+      ],
+      "models": [
+        "Claude Fable 5.2",
+        "Claude Mythos 5.2"
+      ],
+      "detailZh": "Higgsfield 通过其官方 X 账号宣布，Claude Fable 5.2 已在 Higgsfield MCP 上线。发布内容称，用户可在 3 天内免费、不限量使用平台上的全部顶级视频和图像模型。\n\n该发布将 Claude Fable 5.2 描述为 Anthropic 的新模型，称其擅长 3D 建模、视觉推理、computer use 和编码。发布中还引用了关于 Claude Fable 5.2 与 Claude Mythos 5.2 在编码、推理和视觉方面有所提升的说法。\n\n目前公开信息仅来自这一条发布，未提供模型规格、基准测试数据、试用条款细节或与官方 Anthropic 公告的对应说明。因此，模型能力描述与免费试用范围均属于发布方单方面陈述，尚待进一步核实。",
+      "keyPointsZh": [
+        "Higgsfield 宣布 Claude Fable 5.2 已在其 MCP 平台上线。",
+        "平台提供 3 天免费不限量使用全部顶级视频和图像模型。",
+        "发布称该模型擅长 3D 建模、视觉推理、computer use 和编码。",
+        "发布引用内容提到 Claude Fable 5.2 与 Claude Mythos 5.2 在编码、推理和视觉方面有提升。",
+        "未公布模型规格、基准数据或试用条款细节。"
+      ],
+      "impactZh": "该消息表明 Anthropic 的新模型正通过第三方 MCP 平台进入视频与图像生成工作流，可能为创作者提供新的多模态工具入口；限时免费策略也有助于短期内吸引用户体验。但由于缺乏官方细节与独立验证，其实际能力与影响仍不确定。",
+      "readerImpactZh": "",
+      "userImpactZh": "关注视频、图像生成与多模态工作流的用户和团队，可在 3 天免费期内试用 Higgsfield MCP 上的相关模型，评估其在 3D 建模、视觉推理与编码任务中的实际表现；但试用前应留意条款与数据使用说明。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：Higgsfield 官方账号称 Claude Fable 5.2 已上线其 MCP 平台，并提供 3 天免费不限量试用。关于模型擅长 3D 建模、视觉推理、computer use 和编码，以及 Claude Fable 5.2 与 Claude Mythos 5.2 的能力提升，均来自发布中的描述与引用，属于发布方陈述，尚无独立来源佐证。",
+      "limitationsZh": "信息仅来自单条社交媒体发布，缺少模型规格、基准测试、价格、试用条款与地区限制等细节；未提供 Anthropic 官方公告链接；模型名称与能力描述尚未经独立验证。",
+      "actionStepsZh": [
+        "在试用期内访问 Higgsfield MCP，确认 Claude Fable 5.2 是否可用及试用条款。",
+        "用自身工作流中的 3D 建模、视觉推理或编码任务做小规模对比测试。",
+        "关注 Anthropic 官方渠道，核实模型发布与能力说明。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:ugn21ui1m8kftffpe2c95qlkx",
+          "name": "X：Higgsfield AI (@higgsfield)",
+          "type": "aggregator",
+          "url": "https://x.com/higgsfield/status/2119884452054937656",
+          "publishedAt": "2026-11-09T20:06:53.000Z",
+          "title": "Claude Fable 5.2 上线 Higgsfield，开放 3 天免费试用",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ugn21ui1m8kftffpe2c95qlkx",
+            "https://x.com/higgsfield/status/2119884452054937656"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-09T20:06:53.000Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-09T20:06:53.000Z",
+            "label": "11/10 04:06",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-09T21:02:03.379Z",
+            "label": "11/10 05:02",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:57:13.759Z",
+            "label": "11/10 05:57",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:52:24.139Z",
+            "label": "11/10 06:52",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:47:34.519Z",
+            "label": "11/10 07:47",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:42:44.899Z",
+            "label": "11/10 08:42",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:37:55.279Z",
+            "label": "11/10 09:37",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:33:05.659Z",
+            "label": "11/10 10:33",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b6f7d6d3f910ecb6",
+      "normalizedUrl": "https://x.com/ArtificialAnlys/status/2119878995386982508",
+      "originalUrl": "https://x.com/ArtificialAnlys/status/2119878995386982508",
+      "titleOriginal": "Artificial Analysis 评测 Claude Fable 5.2：以 65 分登顶 Intelligence Index v5",
+      "summaryOriginal": "Artificial Analysis 评测 Anthropic 发布的 Claude Fable 5.2，其在 Artificial Analysis Intelligence Index v5 以 65 分登顶，领先 Gemini 4 Carbon（60）和 Claude Opus 5.5（59）。",
+      "originalLanguage": "zh",
+      "author": "X：Artificial Analysis (@ArtificialAnlys)",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 81,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/m23i0fgxrk1t2gqysu6mqv82s",
+        "https://x.com/ArtificialAnlys/status/2119878995386982508"
+      ],
+      "publishedAt": "2026-11-09T19:45:12.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-09T20:07:49.182Z",
+      "contentType": "benchmark",
+      "evidenceLevel": "verified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/m23i0fgxrk1t2gqysu6mqv82s"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:m23i0fgxrk1t2gqysu6mqv82s",
+          "name": "X：Artificial Analysis (@ArtificialAnlys)",
+          "type": "aggregator",
+          "url": "https://x.com/ArtificialAnlys/status/2119878995386982508",
+          "publishedAt": "2026-11-09T19:45:12.000Z",
+          "title": "Artificial Analysis 评测 Claude Fable 5.2：以 65 分登顶 Intelligence Index v5",
+          "authority": 81,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/m23i0fgxrk1t2gqysu6mqv82s",
+            "https://x.com/ArtificialAnlys/status/2119878995386982508"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是第三方评测机构对新一代模型的公开排名结果，直接反映当前头部模型的相对位置，对模型选型有参考价值。",
+      "importanceReasonEn": "This is a public ranking from a third-party evaluator for a new-generation model, directly showing the relative standing of leading models and offering reference value for model selection.",
+      "scoringMode": "ai",
+      "titleZh": "Artificial Analysis 评测 Claude Fable 5.2：以 65 分登顶 Intelligence Index v5",
+      "titleEn": "Artificial Analysis Evaluates Claude Fable 5.2: Tops Intelligence Index v5 with 65 Points",
+      "summaryZh": "Artificial Analysis 对 Anthropic 发布的 Claude Fable 5.2 进行评测，该模型在 Artificial Analysis Intelligence Index v5 中以 65 分登顶，领先 Gemini 4 Carbon（60 分）和 Claude Opus 5.5（59 分）。",
+      "summaryEn": "Artificial Analysis evaluated Anthropic's Claude Fable 5.2, which topped the Artificial Analysis Intelligence Index v5 with 65 points, ahead of Gemini 4 Carbon (60) and Claude Opus 5.5 (59).",
+      "keywords": [
+        "Artificial Analysis",
+        "Intelligence Index v5",
+        "Claude Fable 5.2",
+        "benchmark",
+        "model ranking"
+      ],
+      "topics": [
+        "LLM evaluation",
+        "Intelligence Index",
+        "model rankings",
+        "Anthropic"
+      ],
+      "models": [
+        "Claude Fable 5.2",
+        "Gemini 4 Carbon",
+        "Claude Opus 5.5"
+      ],
+      "detailZh": "Artificial Analysis 在 X 上发布了对 Anthropic 新模型 Claude Fable 5.2 的评测结果。根据该机构公布的 Artificial Analysis Intelligence Index v5 分数，Claude Fable 5.2 获得 65 分，位列第一。\n\n同一榜单中，Gemini 4 Carbon 以 60 分排名其后，Claude Opus 5.5 以 59 分位列第三。三者分差分别为 5 分和 1 分，说明头部模型之间的差距相对有限。\n\n目前公开信息仅包含排名与总分，评测所覆盖的具体任务类别、分项得分、测试方法细节以及成本、速度等维度尚未在来源中披露。",
+      "keyPointsZh": [
+        "Claude Fable 5.2 在 Artificial Analysis Intelligence Index v5 中得分 65，排名第一。",
+        "Gemini 4 Carbon 以 60 分位列第二，落后 5 分。",
+        "Claude Opus 5.5 以 59 分位列第三，与第二名仅差 1 分。",
+        "该结果由第三方评测机构 Artificial Analysis 发布。"
+      ],
+      "impactZh": "该排名为观察当前头部模型的相对能力提供了第三方参照，也显示 Anthropic 在同一榜单中占据前两名中的两席，可能影响开发者和企业在模型选型时的比较基准。",
+      "readerImpactZh": "",
+      "userImpactZh": "对正在选择模型的开发者和团队而言，这一排名可作为横向比较的参考之一，但仅凭总分不足以判断模型在具体任务上的适用性，仍需结合分项表现和实际测试。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是 Artificial Analysis 公布了三个模型在 Intelligence Index v5 上的分数及排序。可以合理推断的是，该榜单衡量的是综合能力而非单一任务表现；由于来源未披露评测构成，65 分与 60 分之间的实际能力差异程度无法从现有信息判断。",
+      "limitationsZh": "来源仅提供总分和排名，未披露评测任务构成、分项得分、测试方法、运行成本或速度数据；分数差异是否具有实际意义无法从现有信息确认。",
+      "actionStepsZh": [
+        "查阅 Artificial Analysis 官方发布的完整报告，了解 Intelligence Index v5 的分项构成。",
+        "在选型时将总分与自身任务场景的实际测试结果结合评估。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Claude Fable 5.2 以 65 分领先 Gemini 4 Carbon 5 分，而 Gemini 4 Carbon 与 Claude Opus 5.5 之间仅相差 1 分。",
+        "data": [
+          {
+            "label": "Claude Fable 5.2",
+            "value": 65,
+            "display": ""
+          },
+          {
+            "label": "Gemini 4 Carbon",
+            "value": 60,
+            "display": ""
+          },
+          {
+            "label": "Claude Opus 5.5",
+            "value": 59,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:m23i0fgxrk1t2gqysu6mqv82s",
+          "name": "X：Artificial Analysis (@ArtificialAnlys)",
+          "type": "aggregator",
+          "url": "https://x.com/ArtificialAnlys/status/2119878995386982508",
+          "publishedAt": "2026-11-09T19:45:12.000Z",
+          "title": "Artificial Analysis 评测 Claude Fable 5.2：以 65 分登顶 Intelligence Index v5",
+          "authority": 81,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/m23i0fgxrk1t2gqysu6mqv82s",
+            "https://x.com/ArtificialAnlys/status/2119878995386982508"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-09T19:45:12.000Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-09T19:45:12.000Z",
+            "label": "11/10 03:45",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-09T20:43:05.004Z",
+            "label": "11/10 04:43",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:40:58.009Z",
+            "label": "11/10 05:40",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:38:51.014Z",
+            "label": "11/10 06:38",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:36:44.019Z",
+            "label": "11/10 07:36",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:34:37.024Z",
+            "label": "11/10 08:34",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:32:30.029Z",
+            "label": "11/10 09:32",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:30:23.034Z",
+            "label": "11/10 10:30",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "bcfee7afda18be7f",
       "normalizedUrl": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do",
@@ -10,7 +935,7 @@
       "summaryOriginal": "Meta is introducing Muse Ember, its smallest and most efficient AI model, optimized for repetitive agent tasks such as tool calls, routing, and data extraction. According to Meta, it delivers more intelligence per dollar than Claude Haiku 5.5 or GPT-6 Luna. But it falls short when it comes to actual programming tasks. The article Meta launches Muse Ember, a small AI model built for the repetitive work agents actually do appeared first on The Decoder .",
       "originalLanguage": "en",
       "author": "Matthias Bastian",
-      "category": "business",
+      "category": "models",
       "sourceType": "media",
       "authority": 84,
       "sourcePriority": 82,
@@ -47,51 +972,52 @@
           ]
         }
       ],
-      "importance": 62,
-      "importanceReasonZh": "Meta 推出面向智能体重复性任务的小型高效模型，反映行业从追求通用能力转向按任务优化成本效率的趋势，对智能体部署成本有实际影响。",
-      "importanceReasonEn": "Meta's launch of a small, efficient model for repetitive agent tasks reflects the industry shift from general capability toward task-specific cost efficiency, with practical implications for agent deployment costs.",
+      "importance": 58,
+      "importanceReasonZh": "Meta 进入面向智能体的小型模型细分市场，并以每美元智能密度作为卖点，可能影响智能体工作流的成本结构，但来源信息有限且性能对比仅来自厂商说法。",
+      "importanceReasonEn": "Meta is entering the small-model segment aimed at agents with a cost-per-intelligence pitch, which could affect agent workflow economics, but source detail is limited and performance comparisons come only from the vendor.",
       "scoringMode": "ai",
       "titleZh": "Meta 推出 Muse Ember：专为智能体重复性工作打造的小型 AI 模型",
       "titleEn": "Meta launches Muse Ember, a small AI model built for the repetitive work agents actually do",
-      "summaryZh": "Meta 推出其最小、最高效的 AI 模型 Muse Ember，针对工具调用、路由和数据提取等智能体重复性任务进行优化。据 Meta 称，其每美元智能密度高于 Claude Haiku 5.5 或 GPT-6 Luna，但在实际编程任务上表现不足。",
+      "summaryZh": "Meta 推出 Muse Ember，这是其最小、最高效的 AI 模型，针对工具调用、路由和数据提取等智能体重复性任务进行了优化。据 Meta 称，其每美元智能密度高于 Claude Haiku 5.5 或 GPT-6 Luna，但在实际编程任务上表现不足。",
       "summaryEn": "Meta is introducing Muse Ember, its smallest and most efficient AI model, optimized for repetitive agent tasks such as tool calls, routing, and data extraction. According to Meta, it delivers more intelligence per dollar than Claude Haiku 5.5 or GPT-6 Luna, but it falls short on actual programming tasks.",
       "keywords": [
         "Meta",
         "Muse Ember",
-        "小型模型",
-        "智能体",
-        "工具调用",
-        "每美元智能",
-        "编程能力"
+        "small model",
+        "agent tasks",
+        "tool calls",
+        "routing",
+        "data extraction",
+        "cost efficiency"
       ],
       "topics": [
-        "AI模型",
-        "智能体",
-        "成本效率",
-        "Meta"
+        "small models",
+        "AI agents",
+        "cost efficiency",
+        "tool calling"
       ],
       "models": [
         "Muse Ember",
         "Claude Haiku 5.5",
         "GPT-6 Luna"
       ],
-      "detailZh": "Meta 发布了一款名为 Muse Ember 的小型 AI 模型，定位为其目前最小、最高效的模型。该模型并非面向通用对话或复杂推理，而是专门针对智能体（agent）在实际运行中大量重复执行的任务进行优化，例如工具调用、请求路由和数据提取。\n\n据 Meta 介绍，Muse Ember 在“每美元智能”（intelligence per dollar）这一指标上优于 Claude Haiku 5.5 和 GPT-6 Luna，也就是说在相同成本下能提供更高的有效能力。这一表述强调的并非绝对能力上限，而是成本效率。\n\n不过，报道同时指出，Muse Ember 在实际编程任务上表现不足。这意味着它更适合承担智能体流程中的高频、低复杂度环节，而非替代通用大模型完成代码生成等复杂工作。\n\n目前公开信息主要来自 Meta 的官方说法与媒体报道，缺少独立的第三方基准测试细节，因此其成本效率优势的具体幅度和适用边界仍有待验证。",
+      "detailZh": "Meta 发布了名为 Muse Ember 的小型 AI 模型，定位为其目前最小、最高效的模型。该模型并非面向通用对话或复杂推理，而是专门针对智能体（agent）在实际运行中反复执行的琐碎任务进行优化，例如工具调用、请求路由和数据提取。\n\n据 Meta 的说法，Muse Ember 在“每美元智能密度”上优于 Claude Haiku 5.5 和 GPT-6 Luna，也就是说在相同成本下能完成更多此类重复性工作。这一指标直接指向智能体大规模部署时的成本问题。\n\n不过报道同时指出，Muse Ember 在实际编程任务上表现不足，说明其能力范围较窄，更适合作为智能体流水线中的廉价执行层，而非通用编码助手。\n\n目前公开信息来自 The Decoder 的报道，主要转述 Meta 的官方说法，缺少独立的基准测试细节、具体价格和上下文长度等参数。",
       "keyPointsZh": [
-        "Meta 发布小型高效模型 Muse Ember，定位为智能体重复性任务优化。",
-        "官方称其每美元智能高于 Claude Haiku 5.5 和 GPT-6 Luna。",
-        "模型在实际编程任务上表现不足。",
-        "主要适用场景包括工具调用、路由和数据提取。"
+        "Meta 发布小型模型 Muse Ember，定位为最小、最高效的模型。",
+        "该模型针对工具调用、路由、数据提取等智能体重复性任务优化。",
+        "Meta 声称其每美元智能密度高于 Claude Haiku 5.5 和 GPT-6 Luna。",
+        "该模型在实际编程任务上表现不足。"
       ],
-      "impactZh": "该模型体现了 AI 模型市场按任务分层、以成本效率为核心竞争点的趋势。对智能体开发者而言，高频重复环节可以使用更便宜的小模型，从而降低整体运行成本，而复杂任务仍交给更强的通用模型处理。",
+      "impactZh": "这反映出模型厂商正把竞争焦点从通用能力转向智能体运行成本，小型专用模型可能成为智能体流水线中的基础组件，改变团队构建多智能体系统的成本结构。",
       "readerImpactZh": "",
-      "userImpactZh": "使用智能体或构建自动化流程的开发者，可以考虑将工具调用、路由、数据提取等重复性环节交给此类低成本小模型，把复杂推理和编程任务留给更强的模型，以优化整体成本结构。",
+      "userImpactZh": "使用智能体框架的开发者可能多了一个低成本选项，用于处理工具调用、路由和数据提取等高频简单步骤，从而把更强、更贵的模型留给复杂推理环节。",
       "howItWorksZh": "",
-      "interpretationZh": "可确认的事实是：Meta 发布了 Muse Ember，并将其定位为面向智能体重复性任务的小型高效模型，官方给出了与 Claude Haiku 5.5、GPT-6 Luna 的成本效率对比，同时承认其在编程任务上较弱。合理推断是：该模型的目标场景是智能体流水线中的高频低复杂度环节，而非通用替代品。其“每美元智能”优势的具体幅度尚无独立验证。",
-      "limitationsZh": "目前信息主要来自 Meta 官方说法和媒体报道，缺少公开的独立基准测试、具体价格、参数规模和延迟数据。“每美元智能”是厂商自定义指标，跨模型比较的可比性存疑。编程能力不足的具体程度也未量化。",
+      "interpretationZh": "已报道的事实是：Meta 推出了 Muse Ember，并宣称其在每美元智能密度上优于两个竞品，同时编程能力较弱。合理的推断是：该模型被设计为智能体系统中的廉价执行层，用于承担高频、低复杂度的子任务。但“每美元智能密度”的具体计算方式、测试条件和价格均未在来源中说明。",
+      "limitationsZh": "来源仅为 The Decoder 的报道，主要转述 Meta 的说法；缺少独立基准测试、具体定价、上下文窗口、延迟和吞吐数据；“每美元智能密度”的定义与测量方法未公开；与 Claude Haiku 5.5、GPT-6 Luna 的对比未经第三方验证。",
       "actionStepsZh": [
-        "评估自身智能体流程中工具调用、路由、数据提取等重复环节的占比，判断是否适合迁移到小模型。",
-        "在引入 Muse Ember 前，用自有任务集做小规模对比测试，而非直接依赖厂商的成本效率声明。",
-        "对编程类任务保留现有更强模型，避免用 Muse Ember 承担代码生成工作。"
+        "关注 Meta 官方发布的模型卡和定价信息，确认每美元智能密度的计算口径。",
+        "在智能体流水线中评估将工具调用、路由、数据提取等步骤迁移到小型模型的可行性。",
+        "对编程类任务继续使用能力更强的模型，避免用 Muse Ember 承担代码生成。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -119,9 +1045,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-09T19:41:51.000Z",
-        "endedAt": "2026-11-09T20:42:07.684Z",
-        "current": 59,
-        "peak": 59,
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 57,
+        "peak": 57,
         "history": [
           {
             "at": "2026-11-09T19:41:51.000Z",
@@ -130,15 +1056,51 @@
             "reports": 0
           },
           {
-            "at": "2026-11-09T20:11:59.342Z",
-            "label": "11/10 04:11",
-            "value": 37,
+            "at": "2026-11-09T20:40:09.129Z",
+            "label": "11/10 04:40",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-09T20:42:07.684Z",
-            "label": "11/10 04:42",
-            "value": 59,
+            "at": "2026-11-09T21:38:27.259Z",
+            "label": "11/10 05:38",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:36:45.389Z",
+            "label": "11/10 06:36",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:35:03.519Z",
+            "label": "11/10 07:35",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:33:21.649Z",
+            "label": "11/10 08:33",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:31:39.779Z",
+            "label": "11/10 09:31",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:29:57.909Z",
+            "label": "11/10 10:29",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 57,
             "reports": 1
           }
         ],
@@ -180,19 +1142,20 @@
           "resourceLinks": []
         }
       ],
-      "importance": 60,
-      "importanceReasonZh": "Anthropic发布两款新模型，涉及编程、推理和视觉能力提升，同时伴随RSI（递归自我改进）担忧，属于模型发布类重要动态，但来源信息有限，缺乏具体基准数据。",
-      "importanceReasonEn": "Anthropic released two new models with claimed improvements in coding, reasoning and vision, alongside RSI (recursive self-improvement) concerns. It is a notable model-release development, but source material is limited and lacks concrete benchmark data.",
+      "importance": 55,
+      "importanceReasonZh": "这是Anthropic的新模型发布，涉及编程、推理和视觉能力提升，但现有信息仅来自简短报道，缺少具体基准、参数和可用性细节。",
+      "importanceReasonEn": "This is an Anthropic model release covering coding, reasoning and vision improvements, but the available information comes from a brief report without benchmarks, parameters or availability details.",
       "scoringMode": "ai",
-      "titleZh": "Anthropic在RSI担忧中发布Mythos与Fable新模型",
+      "titleZh": "Anthropic在RSI担忧中发布新的Mythos和Fable模型",
       "titleEn": "Anthropic releases new Mythos and Fable models amid RSI concerns",
-      "summaryZh": "Anthropic表示，新模型“在编程、推理和视觉等方面有所提升”，并且在更清晰地与用户沟通方面也有改进。",
+      "summaryZh": "Anthropic表示，新模型“在编程、推理和视觉等领域有所提升”，并且在更清晰地与用户沟通方面也有所改善。",
       "summaryEn": "Anthropic says the new models \"show improvements in areas like coding, reasoning, and vision,\" as well as in communicating more clearly with users.",
       "keywords": [
         "Anthropic",
         "Mythos",
         "Fable",
         "RSI",
+        "模型发布",
         "编程",
         "推理",
         "视觉"
@@ -201,32 +1164,30 @@
         "Anthropic",
         "Mythos",
         "Fable",
-        "模型发布",
-        "RSI"
+        "RSI",
+        "coding",
+        "reasoning",
+        "vision"
       ],
       "models": [
         "Mythos",
         "Fable"
       ],
-      "detailZh": "Anthropic发布了名为Mythos和Fable的两款新模型。据TechCrunch AI报道，Anthropic表示这两款模型“在编程、推理和视觉等方面有所提升”，并且在更清晰地与用户沟通方面也有改进。\n\n报道同时提到，此次发布伴随着对RSI（递归自我改进）的担忧。RSI通常指AI系统能够改进自身能力，从而可能引发快速、难以控制的进步，这一话题在AI安全讨论中受到关注。\n\n目前可获得的信息主要来自Anthropic的官方表述和媒体报道，尚未披露具体的基准测试分数、模型参数规模、定价或可用性细节。因此，关于模型实际能力提升幅度的判断仍需更多独立验证。",
+      "detailZh": "据TechCrunch AI报道，Anthropic发布了名为Mythos和Fable的新模型。Anthropic表示，这两个模型“在编程、推理和视觉等领域有所提升”，并且在更清晰地与用户沟通方面也有所改善。报道同时提到，此次发布伴随着对RSI（递归自我改进）的担忧。\n\n目前可获得的信息较为有限：报道没有给出模型的具体参数规模、基准测试分数、定价、上下文长度或开放方式，也没有说明Mythos与Fable之间的定位差异。因此，关于这两个模型的实际能力提升幅度，尚无法从现有材料中核实。\n\n报道中唯一明确的能力描述是编程、推理、视觉以及用户沟通清晰度方面的改进，这些均来自Anthropic方面的说法，属于厂商自述，而非独立评测结果。",
       "keyPointsZh": [
-        "Anthropic发布Mythos和Fable两款新模型。",
+        "Anthropic发布了Mythos和Fable两个新模型。",
         "Anthropic称新模型在编程、推理和视觉方面有所提升。",
-        "新模型在更清晰地与用户沟通方面也有改进。",
-        "此次发布伴随对RSI（递归自我改进）的担忧。",
-        "目前未披露具体基准分数、参数规模或定价信息。"
+        "Anthropic称新模型与用户沟通更清晰。",
+        "发布背景涉及对RSI（递归自我改进）的担忧。",
+        "报道未提供基准分数、参数规模或定价等具体信息。"
       ],
-      "impactZh": "此次发布表明Anthropic继续推进模型能力迭代，覆盖编程、推理和视觉等核心方向。同时，RSI担忧被与发布一同提及，反映AI安全议题正更紧密地进入产品发布叙事，可能影响行业对模型能力快速提升的讨论与监管关注。",
+      "impactZh": "这标志着Anthropic继续扩展其模型产品线，并将能力提升重点放在编程、推理和视觉等实用方向；同时，发布与RSI担忧同时出现，反映出前沿模型能力提升与安全讨论正在同步升温。",
       "readerImpactZh": "",
-      "userImpactZh": "对AI用户和开发者而言，新模型可能在编程、推理和视觉任务上带来体验变化，并可能改善与模型的沟通清晰度。但由于缺乏具体基准数据和可用性信息，实际效果和接入方式尚不明确，需等待官方文档和独立评测。",
+      "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "可确认的事实是：Anthropic发布了Mythos和Fable两款模型，并声称其在编程、推理、视觉及沟通清晰度方面有改进；报道还提到发布伴随RSI担忧。合理推断是：这些模型属于Anthropic的产品线更新，但具体能力提升幅度、技术路线和安全措施细节尚未公开，无法仅凭现有信息评估其实际表现。",
-      "limitationsZh": "来源信息有限，未提供具体基准测试分数、模型参数规模、上下文长度、定价、发布时间表或访问方式。RSI担忧的具体内容和背景也未详细说明。Anthropic的能力提升声明尚未经过独立验证。",
-      "actionStepsZh": [
-        "关注Anthropic官方公告和文档，获取Mythos与Fable的可用性、定价和技术细节。",
-        "等待独立基准测试和开发者实测，再评估模型在编程、推理和视觉任务上的实际提升。",
-        "关注Anthropic对RSI担忧的官方说明及相应的安全措施。"
-      ],
+      "interpretationZh": "可确认的事实是：Anthropic发布了Mythos和Fable，并自述其在编程、推理、视觉和沟通清晰度上有改进。合理推断是：这两个模型可能面向开发者或终端用户的不同使用场景，但报道未说明具体定位。至于能力提升的实际幅度、与竞品的差距以及RSI担忧的具体内容，现有材料均未展开，无法据此判断。",
+      "limitationsZh": "现有信息仅为一篇简短报道，缺少基准测试数据、模型参数、上下文长度、定价、发布时间表和访问方式；能力描述来自Anthropic自述，未经独立验证；Mythos与Fable的差异以及RSI担忧的具体所指均不明确。",
+      "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
@@ -248,9 +1209,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-09T19:24:51.000Z",
-        "endedAt": "2026-11-09T20:42:07.684Z",
-        "current": 58,
-        "peak": 58,
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 55,
+        "peak": 55,
         "history": [
           {
             "at": "2026-11-09T19:24:51.000Z",
@@ -259,15 +1220,256 @@
             "reports": 0
           },
           {
-            "at": "2026-11-09T20:03:29.342Z",
-            "label": "11/10 04:03",
-            "value": 36,
+            "at": "2026-11-09T20:18:33.782Z",
+            "label": "11/10 04:18",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-09T20:42:07.684Z",
-            "label": "11/10 04:42",
-            "value": 58,
+            "at": "2026-11-09T21:12:16.564Z",
+            "label": "11/10 05:12",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:05:59.346Z",
+            "label": "11/10 06:05",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:59:42.128Z",
+            "label": "11/10 06:59",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:53:24.910Z",
+            "label": "11/10 07:53",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:47:07.692Z",
+            "label": "11/10 08:47",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:40:50.474Z",
+            "label": "11/10 09:40",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:34:33.256Z",
+            "label": "11/10 10:34",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "18d657d53a308b4b",
+      "normalizedUrl": "https://x.com/cognition/status/2119869931135406452",
+      "originalUrl": "https://x.com/cognition/status/2119869931135406452",
+      "titleOriginal": "Claude Fable 5.2 上线 Devin Desktop 和 Devin CLI",
+      "summaryOriginal": "Cognition 宣布 Claude Fable 5.2 现已在 Devin Desktop 和 Devin CLI 中可用。该模型在 FrontierCode 2.0 上以 49.1 分排名第一；相比 Fable 5.1，在低推理力度下以约三分之一的价格超过前代得分。",
+      "originalLanguage": "zh",
+      "author": "X：Cognition (@cognition)",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/rth7pxd3xqp2zkd2e1psjgtbl",
+        "https://x.com/cognition/status/2119869931135406452"
+      ],
+      "publishedAt": "2026-11-09T19:09:11.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-09T19:41:47.738Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/rth7pxd3xqp2zkd2e1psjgtbl"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:rth7pxd3xqp2zkd2e1psjgtbl",
+          "name": "X：Cognition (@cognition)",
+          "type": "aggregator",
+          "url": "https://x.com/cognition/status/2119869931135406452",
+          "publishedAt": "2026-11-09T19:09:11.000Z",
+          "title": "Claude Fable 5.2 上线 Devin Desktop 和 Devin CLI",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/rth7pxd3xqp2zkd2e1psjgtbl",
+            "https://x.com/cognition/status/2119869931135406452"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是官方发布的产品集成消息，涉及新模型在 Devin 产品线中的可用性，并给出基准排名与价格对比，对使用 Devin 的开发者有直接参考价值。",
+      "importanceReasonEn": "This is an official product integration announcement covering the availability of a new model across Devin products, with benchmark ranking and price comparison, offering direct reference value for developers using Devin.",
+      "scoringMode": "ai",
+      "titleZh": "Claude Fable 5.2 上线 Devin Desktop 和 Devin CLI",
+      "titleEn": "Claude Fable 5.2 Now Available in Devin Desktop and Devin CLI",
+      "summaryZh": "Cognition 宣布 Claude Fable 5.2 现已在 Devin Desktop 和 Devin CLI 中可用。该模型在 FrontierCode 2.0 上以 49.1 分排名第一；相比 Fable 5.1，在低推理力度下以约三分之一的价格超过前代得分。",
+      "summaryEn": "Cognition announced that Claude Fable 5.2 is now available in Devin Desktop and Devin CLI. The model ranks first on FrontierCode 2.0 with a score of 49.1; compared with Fable 5.1, at low reasoning effort it surpasses the previous generation's score at roughly one-third the price.",
+      "keywords": [
+        "Claude Fable 5.2",
+        "Devin Desktop",
+        "Devin CLI",
+        "Cognition",
+        "FrontierCode 2.0",
+        "低推理力度",
+        "价格"
+      ],
+      "topics": [
+        "Claude Fable 5.2",
+        "Devin",
+        "Coding Agents",
+        "Model Pricing",
+        "Benchmarks"
+      ],
+      "models": [
+        "Claude Fable 5.2",
+        "Claude Fable 5.1"
+      ],
+      "detailZh": "Cognition 通过其官方 X 账号宣布，Claude Fable 5.2 现已在 Devin Desktop 和 Devin CLI 两款产品中可用。这意味着使用 Devin 桌面端或命令行工具的开发者可以直接调用该模型，而无需额外接入。\n\n公告称，Claude Fable 5.2 在 FrontierCode 2.0 基准上取得 49.1 分，排名第一。FrontierCode 2.0 是用于评估代码能力的基准，该分数是公告中给出的唯一具体性能数据。\n\n在价格与效率方面，公告表示相比 Fable 5.1，新模型在低推理力度设置下以约三分之一的价格超过了前代的得分。也就是说，用户可以在更低的推理成本下获得不低于上一代的基准表现。\n\n目前公开信息仅来自 Cognition 的一条发布公告，未披露 FrontierCode 2.0 的完整榜单、Fable 5.1 的具体得分、价格的具体数值，以及低推理力度设置下的其他评测结果。",
+      "keyPointsZh": [
+        "Claude Fable 5.2 已在 Devin Desktop 和 Devin CLI 中上线。",
+        "该模型在 FrontierCode 2.0 上以 49.1 分排名第一。",
+        "相比 Fable 5.1，在低推理力度下以约三分之一的价格超过前代得分。",
+        "消息由 Cognition 官方 X 账号发布。"
+      ],
+      "impactZh": "新模型直接进入 Devin 的桌面端与命令行产品，开发者无需额外配置即可使用；同时低推理力度下的价格优势可能降低日常编码任务的调用成本。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Devin Desktop 或 Devin CLI 的开发者可以直接切换到 Claude Fable 5.2，并在低推理力度设置下以更低成本获得不低于 Fable 5.1 的基准表现。",
+      "howItWorksZh": "",
+      "interpretationZh": "根据官方公告，可以确认的事实是：Fable 5.2 已集成进 Devin 两款产品，FrontierCode 2.0 得分为 49.1 且排名第一，低推理力度下价格约为 Fable 5.1 的三分之一并超过其得分。至于该价格优势在其他推理力度或任务类型下是否成立，公告未作说明，属于未验证范围。",
+      "limitationsZh": "信息仅来自一条官方发布公告，未公布 FrontierCode 2.0 完整榜单、Fable 5.1 的具体得分、价格的具体数值，也未说明低推理力度设置对实际编码任务质量的影响。",
+      "actionStepsZh": [
+        "在 Devin Desktop 或 Devin CLI 中切换到 Claude Fable 5.2 进行试用。",
+        "对成本敏感的任务可尝试低推理力度设置，并与 Fable 5.1 的实际表现做对比。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "公告给出的两个数值分别对应性能与价格：49.1 分为 FrontierCode 2.0 排名第一的得分，约三分之一为低推理力度下相对 Fable 5.1 的价格比例，二者单位不同，仅作并列呈现。",
+        "data": [
+          {
+            "label": "Fable 5.2 FrontierCode 2.0 得分",
+            "value": 49.1,
+            "display": ""
+          },
+          {
+            "label": "Fable 5.2 低推理力度价格（相对 Fable 5.1）",
+            "value": 0.33,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:rth7pxd3xqp2zkd2e1psjgtbl",
+          "name": "X：Cognition (@cognition)",
+          "type": "aggregator",
+          "url": "https://x.com/cognition/status/2119869931135406452",
+          "publishedAt": "2026-11-09T19:09:11.000Z",
+          "title": "Claude Fable 5.2 上线 Devin Desktop 和 Devin CLI",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/rth7pxd3xqp2zkd2e1psjgtbl",
+            "https://x.com/cognition/status/2119869931135406452"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-09T19:09:11.000Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-09T19:09:11.000Z",
+            "label": "11/10 03:09",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-09T20:04:38.226Z",
+            "label": "11/10 04:04",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:00:05.453Z",
+            "label": "11/10 05:00",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:55:32.679Z",
+            "label": "11/10 05:55",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:50:59.906Z",
+            "label": "11/10 06:50",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:46:27.132Z",
+            "label": "11/10 07:46",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:41:54.359Z",
+            "label": "11/10 08:41",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:37:21.585Z",
+            "label": "11/10 09:37",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:32:48.812Z",
+            "label": "11/10 10:32",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -372,7 +1574,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-09T19:00:00.000Z",
-        "endedAt": "2026-11-09T20:42:07.684Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -383,15 +1585,235 @@
             "reports": 0
           },
           {
-            "at": "2026-11-09T19:51:03.842Z",
-            "label": "11/10 03:51",
+            "at": "2026-11-09T19:56:28.448Z",
+            "label": "11/10 03:56",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T20:52:56.897Z",
+            "label": "11/10 04:52",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:49:25.346Z",
+            "label": "11/10 05:49",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:45:53.795Z",
+            "label": "11/10 06:45",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:42:22.243Z",
+            "label": "11/10 07:42",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:38:50.692Z",
+            "label": "11/10 08:38",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:35:19.141Z",
+            "label": "11/10 09:35",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:31:47.590Z",
+            "label": "11/10 10:31",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c70396cb1fa1d775",
+      "normalizedUrl": "https://youtube.com/watch?v=FMbXUxn_nBw",
+      "originalUrl": "https://www.youtube.com/watch?v=FMbXUxn_nBw",
+      "titleOriginal": "Claude Mythos 5.2 预测基因治疗载体 AAV 衣壳结构",
+      "summaryOriginal": "Claude 官方视频介绍 Claude Mythos 5.2 预测了完整 AAV 衣壳结构，即用于递送基因治疗的蛋白质外壳。模型编写代码在相邻五链分组上运行开源折叠模型，再利用衣壳对称性拼合全部 60 条链；在 AAV2 上预测结果与实验结构误差约为一个原子宽度。",
+      "originalLanguage": "zh",
+      "author": "Claude：YouTube（RSS）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/rxx1qxfjfuioem95lr868hhwq",
+        "https://www.youtube.com/watch?v=FMbXUxn_nBw"
+      ],
+      "publishedAt": "2026-11-09T18:56:56.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-09T19:44:44.302Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/rxx1qxfjfuioem95lr868hhwq"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:rxx1qxfjfuioem95lr868hhwq",
+          "name": "Claude：YouTube（RSS）",
+          "type": "aggregator",
+          "url": "https://www.youtube.com/watch?v=FMbXUxn_nBw",
+          "publishedAt": "2026-11-09T18:56:56.000Z",
+          "title": "Claude Mythos 5.2 预测基因治疗载体 AAV 衣壳结构",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/rxx1qxfjfuioem95lr868hhwq",
+            "https://www.youtube.com/watch?v=FMbXUxn_nBw"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是 Claude 官方发布的模型在真实科研任务上的应用案例，展示了模型通过编写代码调用开源折叠工具并利用对称性完成完整病毒衣壳组装，对 AI 辅助结构生物学有直接参考价值。",
+      "importanceReasonEn": "This is an official Claude case of the model applied to a real scientific task, showing it writing code to call open-source folding tools and using symmetry to assemble a full viral capsid, which is directly relevant to AI-assisted structural biology.",
+      "scoringMode": "ai",
+      "titleZh": "Claude Mythos 5.2 预测基因治疗载体 AAV 衣壳结构",
+      "titleEn": "Claude Mythos 5.2 Predicts AAV Capsid Structure for Gene Therapy Vectors",
+      "summaryZh": "Claude 官方视频介绍 Claude Mythos 5.2 预测了完整 AAV 衣壳结构，即用于递送基因治疗的蛋白质外壳。模型编写代码在相邻五链分组上运行开源折叠模型，再利用衣壳对称性拼合全部 60 条链；在 AAV2 上预测结果与实验结构误差约为一个原子宽度。",
+      "summaryEn": "An official Claude video introduces Claude Mythos 5.2 predicting the complete AAV capsid structure, the protein shell used to deliver gene therapy. The model wrote code to run an open-source folding model on adjacent five-chain groups, then used capsid symmetry to assemble all 60 chains; on AAV2 the prediction deviates from the experimental structure by roughly one atom's width.",
+      "keywords": [
+        "Claude Mythos 5.2",
+        "AAV capsid",
+        "protein folding",
+        "gene therapy",
+        "symmetry assembly"
+      ],
+      "topics": [
+        "protein structure prediction",
+        "AAV capsid",
+        "gene therapy",
+        "AI for science",
+        "Claude Mythos"
+      ],
+      "models": [
+        "Claude Mythos 5.2"
+      ],
+      "detailZh": "Claude 官方发布的一段视频介绍了 Claude Mythos 5.2 在结构生物学任务上的表现：模型预测了完整的 AAV 衣壳结构。AAV（腺相关病毒）的衣壳是由蛋白质构成的二十面体外壳，是基因治疗中常用的递送载体，其完整结构对载体设计和改造有重要意义。\n\n根据视频描述，模型并非直接一次性输出整个衣壳，而是编写代码，把相邻的五条链作为一组，调用开源折叠模型对这些分组进行结构预测。随后模型利用衣壳本身的对称性，把各分组的结果拼合起来，得到全部 60 条链组成的完整衣壳。\n\n在 AAV2 上，预测结构与实验测定结构之间的误差约为一个原子的宽度。视频将这一结果作为模型在科研场景中自主编写代码、组合工具并完成复杂任务的示例。\n\n目前公开信息来自官方视频，未披露所用开源折叠模型的具体名称、评估指标细节、计算资源与耗时，也未说明是否经过独立复现或同行评审。",
+      "keyPointsZh": [
+        "Claude Mythos 5.2 预测了完整的 AAV 衣壳结构，共 60 条链。",
+        "模型编写代码，在相邻五链分组上运行开源折叠模型，再利用衣壳对称性拼合结果。",
+        "在 AAV2 上，预测结构与实验结构的误差约为一个原子宽度。",
+        "信息来自 Claude 官方视频，未披露所用折叠模型名称与详细评估方法。"
+      ],
+      "impactZh": "AAV 是基因治疗中广泛使用的递送载体，完整衣壳结构对载体工程和优化有实际意义。该案例表明通用大模型可以通过编写代码调用专业工具、利用对称性约束，参与此前需要专门流程的结构建模工作，为 AI 辅助结构生物学提供了可参考的工作方式。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 AI 做科研的用户而言，该案例提示一种可复用的模式：让模型编写代码调用开源折叠工具，并利用体系自身的对称性把局部预测拼成完整结构，而不是要求模型直接输出大型复合体。",
+      "howItWorksZh": "根据官方视频描述，流程大致为：模型先编写代码，将衣壳中相邻的五条链划分为一组；再对每组调用开源蛋白质折叠模型进行结构预测；最后利用 AAV 衣壳的对称性，把各分组预测结果映射并拼合，得到全部 60 条链的完整衣壳。",
+      "interpretationZh": "已报道的事实是：Claude Mythos 5.2 通过编写代码调用开源折叠模型并利用对称性，完成了完整 AAV 衣壳的预测，AAV2 上误差约为一个原子宽度。可以合理推断，模型在其中主要承担流程编排与代码编写角色，折叠计算本身由开源模型完成。但该结果尚未见独立复现或同行评审，实际精度与泛化能力仍需进一步验证。",
+      "limitationsZh": "公开信息仅来自官方视频，未披露所用开源折叠模型的名称与版本、具体误差指标（如 RMSD 数值）、计算资源与耗时，也未说明是否在更多 AAV 血清型上验证或经过独立复现与同行评审。",
+      "actionStepsZh": [
+        "可参考该思路：让模型编写代码调用开源折叠工具，并利用体系对称性拼合局部预测结果。",
+        "在采用类似流程时，应明确记录所用折叠模型版本与评估指标，便于复现。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:rxx1qxfjfuioem95lr868hhwq",
+          "name": "Claude：YouTube（RSS）",
+          "type": "aggregator",
+          "url": "https://www.youtube.com/watch?v=FMbXUxn_nBw",
+          "publishedAt": "2026-11-09T18:56:56.000Z",
+          "title": "Claude Mythos 5.2 预测基因治疗载体 AAV 衣壳结构",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/rxx1qxfjfuioem95lr868hhwq",
+            "https://www.youtube.com/watch?v=FMbXUxn_nBw"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-09T18:56:56.000Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-09T18:56:56.000Z",
+            "label": "11/10 02:56",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-09T19:53:44.893Z",
+            "label": "11/10 03:53",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T20:50:33.786Z",
+            "label": "11/10 04:50",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:47:22.679Z",
+            "label": "11/10 05:47",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:44:11.572Z",
+            "label": "11/10 06:44",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-09T20:42:07.684Z",
-            "label": "11/10 04:42",
+            "at": "2026-11-09T23:41:00.466Z",
+            "label": "11/10 07:41",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:37:49.359Z",
+            "label": "11/10 08:37",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:34:38.252Z",
+            "label": "11/10 09:34",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:31:27.145Z",
+            "label": "11/10 10:31",
             "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -519,7 +1941,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-09T18:50:01.000Z",
-        "endedAt": "2026-11-09T20:42:07.684Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -530,14 +1952,56 @@
             "reports": 0
           },
           {
-            "at": "2026-11-09T19:46:04.342Z",
-            "label": "11/10 03:46",
-            "value": 37,
+            "at": "2026-11-09T19:47:36.004Z",
+            "label": "11/10 03:47",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-09T20:42:07.684Z",
-            "label": "11/10 04:42",
+            "at": "2026-11-09T20:45:11.008Z",
+            "label": "11/10 04:45",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:42:46.013Z",
+            "label": "11/10 05:42",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:40:21.017Z",
+            "label": "11/10 06:40",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:37:56.021Z",
+            "label": "11/10 07:37",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:35:31.026Z",
+            "label": "11/10 08:35",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:33:06.030Z",
+            "label": "11/10 09:33",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:30:41.034Z",
+            "label": "11/10 10:30",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
             "value": 59,
             "reports": 1
           }
@@ -644,7 +2108,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-09T18:00:00.000Z",
-        "endedAt": "2026-11-09T20:42:07.684Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -655,20 +2119,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-09T18:54:02.561Z",
-            "label": "11/10 02:54",
-            "value": 29,
+            "at": "2026-11-09T18:56:49.603Z",
+            "label": "11/10 02:56",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-09T19:48:05.122Z",
-            "label": "11/10 03:48",
-            "value": 44,
+            "at": "2026-11-09T19:53:39.207Z",
+            "label": "11/10 03:53",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-09T20:42:07.684Z",
-            "label": "11/10 04:42",
+            "at": "2026-11-09T20:50:28.811Z",
+            "label": "11/10 04:50",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:47:18.415Z",
+            "label": "11/10 05:47",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:44:08.019Z",
+            "label": "11/10 06:44",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:40:57.623Z",
+            "label": "11/10 07:40",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:37:47.227Z",
+            "label": "11/10 08:37",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:34:36.831Z",
+            "label": "11/10 09:34",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:31:26.435Z",
+            "label": "11/10 10:31",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
             "value": 59,
             "reports": 1
           }
@@ -816,7 +2322,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-09T17:15:53.000Z",
-        "endedAt": "2026-11-09T20:42:07.684Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -827,26 +2333,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-09T18:07:26.671Z",
-            "label": "11/10 02:07",
-            "value": 25,
+            "at": "2026-11-09T18:11:33.276Z",
+            "label": "11/10 02:11",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-09T18:59:00.342Z",
-            "label": "11/10 02:59",
-            "value": 37,
+            "at": "2026-11-09T19:07:13.552Z",
+            "label": "11/10 03:07",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-09T19:50:34.013Z",
-            "label": "11/10 03:50",
-            "value": 48,
+            "at": "2026-11-09T20:02:53.828Z",
+            "label": "11/10 04:02",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-09T20:42:07.684Z",
-            "label": "11/10 04:42",
+            "at": "2026-11-09T20:58:34.105Z",
+            "label": "11/10 04:58",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:54:14.381Z",
+            "label": "11/10 05:54",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:49:54.657Z",
+            "label": "11/10 06:49",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:45:34.933Z",
+            "label": "11/10 07:45",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:41:15.210Z",
+            "label": "11/10 08:41",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:36:55.486Z",
+            "label": "11/10 09:36",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:32:35.762Z",
+            "label": "11/10 10:32",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
             "value": 59,
             "reports": 1
           }
@@ -962,7 +2510,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-09T16:54:16.000Z",
-        "endedAt": "2026-11-09T20:42:07.684Z",
+        "endedAt": "2026-11-10T03:28:16.039Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -973,26 +2521,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-09T17:51:13.921Z",
+            "at": "2026-11-09T17:51:54.185Z",
             "label": "11/10 01:51",
-            "value": 25,
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-09T18:48:11.842Z",
-            "label": "11/10 02:48",
-            "value": 37,
+            "at": "2026-11-09T18:49:32.370Z",
+            "label": "11/10 02:49",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-09T19:45:09.763Z",
-            "label": "11/10 03:45",
-            "value": 48,
+            "at": "2026-11-09T19:47:10.556Z",
+            "label": "11/10 03:47",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-09T20:42:07.684Z",
-            "label": "11/10 04:42",
+            "at": "2026-11-09T20:44:48.741Z",
+            "label": "11/10 04:44",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T21:42:26.926Z",
+            "label": "11/10 05:42",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T22:40:05.112Z",
+            "label": "11/10 06:40",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-09T23:37:43.297Z",
+            "label": "11/10 07:37",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T00:35:21.482Z",
+            "label": "11/10 08:35",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T01:32:59.668Z",
+            "label": "11/10 09:32",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T02:30:37.853Z",
+            "label": "11/10 10:30",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T03:28:16.039Z",
+            "label": "11/10 11:28",
             "value": 59,
             "reports": 1
           }
