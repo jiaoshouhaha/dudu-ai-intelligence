@@ -2,8 +2,46 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { clamp, dateKeyInTimeZone } from './utils.mjs';
 import { buildTopicIndex } from './topic-taxonomy.mjs';
+import { buildSearchIndex, selectHomeIndexItems, toListRecord } from './catalog.mjs';
+
+function eventRichness(item) {
+  return (item.detailZh ? 4 : 0) + (item.summaryZh ? 2 : 0) + (item.titleZh ? 1 : 0) + (item.sources?.length || 0);
+}
+
+function dedupeEvents(items) {
+  const byId = new Map();
+  for (const item of items) {
+    if (!item?.id) continue;
+    const previous = byId.get(item.id);
+    if (!previous || eventRichness(item) >= eventRichness(previous)) byId.set(item.id, item);
+  }
+  return [...byId.values()];
+}
+
+async function readNewsItems(dataDir) {
+  const newsDir = path.join(dataDir, 'news');
+  let names = [];
+  try {
+    names = await fs.readdir(newsDir);
+  } catch {
+    return [];
+  }
+  const items = [];
+  for (const name of names) {
+    if (!/^\d{4}-\d{2}-\d{2}\.json$/.test(name)) continue;
+    try {
+      const parsed = JSON.parse(await fs.readFile(path.join(newsDir, name), 'utf8'));
+      if (Array.isArray(parsed.items)) items.push(...parsed.items);
+    } catch {
+      // One unreadable day file should not hide the rest of the archive.
+    }
+  }
+  return dedupeEvents(items);
+}
 
 export async function readExistingData(dataDir) {
+  const fromNews = await readNewsItems(dataDir);
+  if (fromNews.length) return fromNews;
   try {
     const search = JSON.parse(await fs.readFile(path.join(dataDir, 'search.json'), 'utf8'));
     return Array.isArray(search.items) ? search.items : [];
@@ -55,9 +93,7 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
 
   const archive = buildArchive(retained, status.finishedAt, retentionDays);
 
-  const indexItems = retained
-    .filter((item) => !(item.contentType === 'paper' && item.importance < 78))
-    .slice(0, 240);
+  const indexItems = selectHomeIndexItems(retained);
   const topicIndex = buildTopicIndex(indexItems, status.finishedAt);
   const categories = Object.entries(Object.groupBy(retained.slice(0, 120), (item) => item.category))
     .map(([name, categoryItems]) => ({ name, count: categoryItems.length }))
@@ -74,9 +110,19 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
   }
 
   await Promise.all([
-    atomicJson(path.join(dataDir, 'index.json'), { generatedAt: status.finishedAt, items: indexItems }),
+    atomicJson(path.join(dataDir, 'index.json'), {
+      generatedAt: status.finishedAt,
+      windowDays: retentionDays,
+      itemCount: indexItems.length,
+      items: indexItems.map(toListRecord)
+    }),
     atomicJson(path.join(dataDir, 'topic-index.json'), topicIndex),
-    atomicJson(path.join(dataDir, 'search.json'), { generatedAt: status.finishedAt, items: retained }),
+    atomicJson(path.join(dataDir, 'search-index.json'), buildSearchIndex(retained, status.finishedAt, retentionDays)),
+    atomicJson(path.join(dataDir, 'lookup.json'), {
+      generatedAt: status.finishedAt,
+      windowDays: retentionDays,
+      dates: Object.fromEntries(retained.map((item) => [item.id, dateKeyInTimeZone(item.publishedAt)]))
+    }),
     atomicJson(path.join(dataDir, 'seen.json'), { generatedAt: status.finishedAt, retentionDays: 7, events: seenEvents }),
     atomicJson(path.join(dataDir, 'archive.json'), archive),
     atomicJson(path.join(dataDir, 'trends.json'), {
@@ -89,6 +135,7 @@ export async function writeDataFiles(dataDir, items, status, todayKey, seenEvent
     }),
     atomicJson(path.join(dataDir, 'status.json'), status)
   ]);
+  await fs.rm(path.join(dataDir, 'search.json'), { force: true });
   return retained;
 }
 
@@ -162,6 +209,6 @@ function rankCounts(map, limit) {
 
 async function atomicJson(file, value) {
   const temp = `${file}.tmp`;
-  await fs.writeFile(temp, `${JSON.stringify(value, null, 2)}\n`);
+  await fs.writeFile(temp, JSON.stringify(value));
   await fs.rename(temp, file);
 }

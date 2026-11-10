@@ -212,6 +212,10 @@ test('pipeline isolates a failed source and writes valid data files', async () =
   assert.equal(items.length, 3);
   const output = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'index.json'), 'utf8'));
   assert.equal(output.items.length, 3);
+  assert.equal(output.items[0].titleZh, '中文标题');
+  assert.equal(output.items[0].detailZh, undefined);
+  assert.equal(output.items[0].heat, undefined);
+  assert.equal(output.items[0].reportTimeline, undefined);
   await fs.access(path.join(rootDir, 'data', 'news', '2026-07-31.json'));
   await fs.access(path.join(rootDir, 'data', 'news', '2026-08-01.json'));
   const archive = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'archive.json'), 'utf8'));
@@ -220,10 +224,18 @@ test('pipeline isolates a failed source and writes valid data files', async () =
   const topicIndex = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'topic-index.json'), 'utf8'));
   assert.equal(topicIndex.audit.totalItems, 3);
   assert.ok(topicIndex.topics.every((topic) => topic.count === new Set(topic.itemIds).size));
-  const generatedItem = output.items[0];
+  const day = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'news', '2026-08-01.json'), 'utf8'));
+  const generatedItem = day.items.find((item) => item.id === output.items[0].id) || day.items[0];
   assert.ok(generatedItem.heat.history.length >= 2);
   assert.equal(generatedItem.heat.history[0].at, generatedItem.publishedAt);
   assert.ok(generatedItem.heat.history.every((point) => new Date(point.at).valueOf() >= new Date(generatedItem.publishedAt).valueOf()));
+  const lookup = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'lookup.json'), 'utf8'));
+  assert.equal(lookup.dates[generatedItem.id], '2026-08-01');
+  const searchIndex = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'search-index.json'), 'utf8'));
+  assert.equal(searchIndex.items.length, 3);
+  assert.equal(Array.isArray(searchIndex.items[0]), true);
+  assert.equal(JSON.stringify(searchIndex).includes('detailZh'), false);
+  await assert.rejects(fs.access(path.join(rootDir, 'data', 'search.json')));
   const seen = JSON.parse(await fs.readFile(path.join(rootDir, 'data', 'seen.json'), 'utf8'));
   assert.equal(Object.keys(seen.events).length, 3);
 

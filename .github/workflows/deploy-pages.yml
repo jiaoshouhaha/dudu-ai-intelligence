@@ -35,7 +35,13 @@ jobs:
           ref: main
 
       - name: Prepare static site
-        run: cp -R data public/data
+        run: |
+          node scripts/build-site-meta.mjs
+          mkdir -p public/data/news
+          cp data/index.json data/lookup.json data/search-index.json data/archive.json data/trends.json data/status.json data/topic-index.json public/data/
+          if [ -f data/model-rankings.json ]; then cp data/model-rankings.json public/data/; fi
+          cp data/news/*.json public/data/news/
+          rm -f public/data/search.json public/data/seen.json
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

@@ -2,14 +2,18 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildTopicIndex } from '../src/lib/topic-taxonomy.mjs';
+import { readExistingData } from '../src/lib/storage.mjs';
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = path.join(rootDir, 'data');
 const index = JSON.parse(await fs.readFile(path.join(dataDir, 'index.json'), 'utf8'));
-const topicIndex = buildTopicIndex(index.items || [], new Date().toISOString());
+const fullItems = await readExistingData(dataDir);
+const byId = new Map(fullItems.map((item) => [item.id, item]));
+const items = (index.items || []).map((item) => byId.get(item.id) || item);
+const topicIndex = buildTopicIndex(items, new Date().toISOString());
 const output = path.join(dataDir, 'topic-index.json');
 const temporary = `${output}.tmp`;
-await fs.writeFile(temporary, `${JSON.stringify(topicIndex, null, 2)}\n`, 'utf8');
+await fs.writeFile(temporary, JSON.stringify(topicIndex));
 await fs.rename(temporary, output);
 
 const audit = {

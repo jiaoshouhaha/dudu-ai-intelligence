@@ -10,9 +10,11 @@
     "check:sources": "NODE_USE_ENV_PROXY=1 node scripts/check-sources.mjs",
     "topics": "node scripts/build-topic-index.mjs",
     "repair:data": "node scripts/repair-historical-merges.mjs",
+    "slim-data": "node scripts/slim-web-data.mjs",
+    "site-meta": "node scripts/build-site-meta.mjs",
     "serve": "node scripts/serve.mjs",
     "test": "node --test",
-    "check": "node --check public/app.js && node --check public/rankings.js && node --check public/topics.js && node --check scripts/fetch-news.mjs && node --check scripts/fetch-rankings.mjs && node --check scripts/build-topic-index.mjs && node --check scripts/repair-historical-merges.mjs && node --check scripts/check-sources.mjs && node --check src/lib/topic-taxonomy.mjs"
+    "check": "node --check public/app.js && node --check public/detail.js && node --check public/archive.js && node --check public/home-query.js && node --check public/detail-loader.js && node --check public/search-index.js && node --check public/rankings.js && node --check public/topics.js && node --check scripts/fetch-news.mjs && node --check scripts/fetch-rankings.mjs && node --check scripts/build-topic-index.mjs && node --check scripts/repair-historical-merges.mjs && node --check scripts/check-sources.mjs && node --check scripts/slim-web-data.mjs && node --check scripts/build-site-meta.mjs && node --check src/lib/topic-taxonomy.mjs && node --check src/lib/catalog.mjs && node --check src/lib/storage.mjs"
   },
   "dependencies": {
     "cheerio": "1.1.2",
