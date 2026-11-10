@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { applyEditorialRepairs } from '../src/lib/editorial-repairs.mjs';
-import { readSeenData, writeDataFiles } from '../src/lib/storage.mjs';
+import { readExistingData, readSeenData, writeDataFiles } from '../src/lib/storage.mjs';
 import { dateKeyInTimeZone } from '../src/lib/utils.mjs';
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -15,12 +15,12 @@ const repairs = new Map([
   }]
 ]);
 
-const search = JSON.parse(await fs.readFile(path.join(dataDir, 'search.json'), 'utf8'));
 const status = JSON.parse(await fs.readFile(path.join(dataDir, 'status.json'), 'utf8'));
 const seen = await readSeenData(dataDir);
+const existingItems = await readExistingData(dataDir);
 let removedReports = 0;
 
-const repairedItems = search.items.map((item) => {
+const repairedItems = existingItems.map((item) => {
   const repair = repairs.get(item.id);
   if (!repair) return item;
   const removed = (item.sources || []).filter(repair.removeWhen);

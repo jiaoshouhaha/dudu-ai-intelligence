@@ -48,7 +48,7 @@ pnpm fetch
 
 ## GitHub 自动更新
 
-`.github/workflows/update-news.yml` 使用 `2,32 * * * *`，约每 30 分钟扫描一次，也支持从 Actions 页面手动触发。GitHub cron 为尽力执行，可能出现少量排队延迟。
+`.github/workflows/update-news.yml` 使用 `2,32 * * * *`，约每 30 分钟扫描一次，也支持从 Actions 页面手动触发。GitHub cron 为尽力执行，可能出现少量排队延迟。页面把超过 12 小时没有成功更新视为延迟，并继续显示上次成功更新时间。
 
 启用 DeepSeek 增强时，在仓库设置中添加：
 
@@ -69,13 +69,16 @@ pnpm check:sources -- --only microsoft-ai,openai-developer,claude-blog
 
 ## 数据与隐私
 
-- `data/news/YYYY-MM-DD.json`：最近一次滚动快照
-- `data/index.json`：最近 240 条首页索引
-- `data/search.json`：最近 180 天搜索数据
+- `data/news/YYYY-MM-DD.json`：当天新闻全文，详情页按日期读取其中一篇
+- `data/index.json`：最近 240 条首页卡片，只含列表需要的字段
+- `data/search-index.json`：保留期内的轻量搜索索引，首页输入关键词时才下载
+- `data/lookup.json`：新闻 ID 到北京时间日期的对照，用来定位详情所在的日期文件
 - `data/archive.json`：按月份和北京时间日期组织的六个月归档索引
-- `data/seen.json`：最近 7 天已见事件 ID，用于跨运行去重
+- `data/seen.json`：最近 7 天已见事件 ID，用于跨运行去重，不发布到 Pages
 - `data/trends.json`：趋势汇总
 - `data/status.json`：来源健康状态
+
+`data/search.json` 不再生成，也不会被发布。采集程序直接读取 `data/news/` 里的全文。首页只下载 `index.json`，详情页下载 `lookup.json` 和对应的一天文件。
 
 网站只展示 RSS 提供的元数据与中文短摘要，并始终链接原文。收藏和已读状态只保存在浏览器本地。
 

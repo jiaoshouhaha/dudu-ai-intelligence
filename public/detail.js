@@ -1,3 +1,6 @@
+import { beijingDateKey, newsPathForDate, newsPathForId } from './detail-loader.js';
+
+const SITE_ORIGIN = 'https://jiaoshouhaha.github.io/dudu-ai-intelligence';
 const $ = (selector) => document.querySelector(selector);
 const categoryNames = { models:'模型动态',products:'AI 产品',agent:'Agent 与编程',tips:'实用技巧',opensource:'开源项目',research:'研究论文',policy:'政策监管',business:'商业融资',opinion:'人物观点',other:'其他' };
 const contentTypeNames = { official:'官方发布',practical:'实践方法',opensource:'开源项目',paper:'研究论文',benchmark:'实测对比',industry:'行业新闻',opinion:'人物观点' };
@@ -263,7 +266,16 @@ function render(item) {
     return tag;
   }));
 
-  document.title = `${item.titleZh || item.titleOriginal} · 嘟嘟的 AI 情报站`;
+  const shareTitle = `${item.titleZh || item.titleOriginal} · 嘟嘟的 AI 情报站`;
+  const shareDescription = String(item.summaryZh || item.summaryOriginal || '嘟嘟的 AI 情报站中文新闻详情').replace(/\s+/g, ' ').slice(0, 180);
+  const shareUrl = `${SITE_ORIGIN}/detail.html?id=${encodeURIComponent(item.id)}`;
+  document.title = shareTitle;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', shareDescription);
+  document.querySelector('meta[property="og:title"]')?.setAttribute('content', shareTitle);
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', shareDescription);
+  document.querySelector('meta[property="og:url"]')?.setAttribute('content', shareUrl);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = shareUrl;
   const read = new Set(JSON.parse(localStorage.getItem('signal-read') || '[]'));
   read.add(item.id);
   localStorage.setItem('signal-read', JSON.stringify([...read]));
@@ -277,19 +289,36 @@ function showError(message) {
   $('#errorState').hidden = false;
 }
 
+async function readJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) return null;
+  return response.json();
+}
+
+async function itemFromDay(url, id) {
+  if (!url) return null;
+  const data = await readJson(url);
+  return (data?.items || []).find((entry) => entry.id === id) || null;
+}
+
+async function loadItem(id) {
+  const lookup = await readJson('./data/lookup.json');
+  const fromLookup = await itemFromDay(newsPathForId(id, lookup), id);
+  if (fromLookup) return fromLookup;
+  const index = await readJson('./data/index.json');
+  const listed = (index?.items || []).find((entry) => entry.id === id);
+  if (!listed) return null;
+  if (listed.detailZh || listed.heat || listed.sources) return listed;
+  const fromDate = await itemFromDay(newsPathForDate(beijingDateKey(listed.publishedAt)), id);
+  return fromDate || listed;
+}
+
 const id = new URLSearchParams(location.search).get('id');
 if (!id) {
   showError('这个链接缺少新闻编号，请从首页重新打开。');
 } else {
   try {
-    const response = await fetch('./data/index.json');
-    if (!response.ok) throw new Error(`数据请求失败（${response.status}）`);
-    const data = await response.json();
-    let item = (data.items || []).find((entry) => entry.id === id);
-    if (!item) {
-      const archiveResponse = await fetch('./data/search.json');
-      if (archiveResponse.ok) item = ((await archiveResponse.json()).items || []).find((entry) => entry.id === id);
-    }
+    const item = await loadItem(id);
     if (!item) showError('链接可能已过期，或新闻已移出当前时间窗口。');
     else render(item);
   } catch (error) {
