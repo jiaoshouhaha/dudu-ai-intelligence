@@ -1,7 +1,792 @@
 {
-  "generatedAt": "2026-11-10T19:40:38.905Z",
+  "generatedAt": "2026-11-11T00:36:09.697Z",
   "date": "2026-11-11",
   "items": [
+    {
+      "id": "c553bd36c117428b",
+      "normalizedUrl": "https://openrouter.ai/blog/insights/llm-quantization",
+      "originalUrl": "https://openrouter.ai/blog/insights/llm-quantization/",
+      "titleOriginal": "OpenRouter 实测 fp8 与 fp4 量化对模型质量和价格的影响",
+      "summaryOriginal": "OpenRouter 发布量化解析文章，讲解 LLM 量化原理，并报告 2026 年 10 月 20 日对 1455 个 provider 端点和 Qwen3.8 27B 六个端点的实测。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/i3gp1xj4j11gi4qoreya18izb",
+        "https://openrouter.ai/blog/insights/llm-quantization/"
+      ],
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-11T00:21:29.451Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/i3gp1xj4j11gi4qoreya18izb"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:i3gp1xj4j11gi4qoreya18izb",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/llm-quantization/",
+          "publishedAt": "2026-11-11T00:00:00.000Z",
+          "title": "OpenRouter 实测 fp8 与 fp4 量化对模型质量和价格的影响",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/i3gp1xj4j11gi4qoreya18izb",
+            "https://openrouter.ai/blog/insights/llm-quantization/"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "量化直接影响推理价格与输出质量，OpenRouter 基于大量 provider 端点的实测对开发者和用户选择模型服务有实际参考价值。",
+      "importanceReasonEn": "Quantization directly affects inference price and output quality, and OpenRouter's tests across a large set of provider endpoints give developers and users practical reference for choosing model services.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 实测 fp8 与 fp4 量化对模型质量和价格的影响",
+      "titleEn": "OpenRouter Tests How fp8 and fp4 Quantization Affect Model Quality and Price",
+      "summaryZh": "OpenRouter 发布量化解析文章，讲解 LLM 量化原理，并报告 2026 年 10 月 20 日对 1455 个 provider 端点和 Qwen3.8 27B 六个端点的实测。",
+      "summaryEn": "OpenRouter published an explainer on LLM quantization and reported tests run on October 20, 2026 covering 1,455 provider endpoints and six endpoints serving Qwen3.8 27B.",
+      "keywords": [
+        "OpenRouter",
+        "quantization",
+        "fp8",
+        "fp4",
+        "provider endpoints",
+        "inference pricing"
+      ],
+      "topics": [
+        "LLM quantization",
+        "fp8",
+        "fp4",
+        "inference cost",
+        "model quality"
+      ],
+      "models": [
+        "Qwen3.8 27B"
+      ],
+      "detailZh": "OpenRouter 发布了一篇关于 LLM 量化的解析文章，介绍量化的基本原理，并公布了其实测结果。文章称，测试于 2026 年 10 月 20 日进行，覆盖 1455 个 provider 端点，另外还针对 Qwen3.8 27B 的六个端点做了单独测试。\n\n量化是把模型权重和计算从高精度数值格式压缩到更低精度格式（如 fp8、fp4）的做法，通常能降低显存占用和推理成本，但可能带来质量损失。OpenRouter 的文章正是围绕 fp8 与 fp4 两种格式对模型质量和价格的影响展开。\n\n从已披露的信息看，OpenRouter 的观察范围包括大量 provider 端点的整体情况，以及同一模型 Qwen3.8 27B 在不同端点上的表现对比。文章属于解析加实测性质，面向希望理解量化取舍的开发者与用户。\n\n目前公开摘要未给出具体的质量分数、价格差异数值或各端点的详细结论，因此量化的实际影响幅度仍需参考原文完整数据。",
+      "keyPointsZh": [
+        "OpenRouter 发布 LLM 量化解析文章，聚焦 fp8 与 fp4 两种格式。",
+        "实测于 2026 年 10 月 20 日进行，覆盖 1455 个 provider 端点。",
+        "另对 Qwen3.8 27B 的六个端点做了单独测试。",
+        "文章同时讨论量化对模型质量和价格的影响。"
+      ],
+      "impactZh": "量化是推理成本的重要杠杆，OpenRouter 基于大量端点的实测有助于厘清低精度格式在价格与质量之间的实际取舍，对模型服务选型有参考意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者和团队在选择 provider 或部署模型时，可参考量化格式对价格与输出质量的影响，避免只看低价而忽略质量下降。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：OpenRouter 发布了量化解析文章，并在 2026 年 10 月 20 日对 1455 个 provider 端点和 Qwen3.8 27B 的六个端点进行了测试。合理推断是：文章意在帮助读者理解 fp8、fp4 等低精度格式在成本与质量之间的权衡；但具体结论和数值需以原文为准。",
+      "limitationsZh": "公开摘要未提供具体的质量评分、价格差异或各端点对比数据，实测方法与判定标准也未披露，因此无法据此判断 fp8 与 fp4 的实际差距。",
+      "actionStepsZh": [
+        "阅读 OpenRouter 原文，查看 1455 个端点与 Qwen3.8 27B 六个端点的具体测试数据。",
+        "在选择 provider 时，将量化格式纳入价格与质量的综合评估。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:i3gp1xj4j11gi4qoreya18izb",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/insights/llm-quantization/",
+          "publishedAt": "2026-11-11T00:00:00.000Z",
+          "title": "OpenRouter 实测 fp8 与 fp4 量化对模型质量和价格的影响",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/i3gp1xj4j11gi4qoreya18izb",
+            "https://openrouter.ai/blog/insights/llm-quantization/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T00:00:00.000Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-11T00:00:00.000Z",
+            "label": "11/11 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "556a3c5f36817ca8",
+      "normalizedUrl": "https://rdi.berkeley.edu/blog/cyberbingym",
+      "originalUrl": "https://rdi.berkeley.edu/blog/cyberbingym",
+      "titleOriginal": "Berkeley RDI 发布 CyberBinGym 基准，测试 AI 智能体能否仅凭二进制补丁写出真实漏洞利用",
+      "summaryOriginal": "UC Berkeley 等机构发布 CyberBinGym 基准，评估 AI 智能体在无源码、无漏洞描述、无触发输入的 1-day 场景下，仅凭 stripped 的漏洞与补丁二进制能否恢复并利用真实漏洞，含 100 个来自 53 个开源项目的任务。",
+      "originalLanguage": "zh",
+      "author": "Berkeley RDI：Blog（AI 安全与评测）",
+      "category": "research",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/xenhfme3azzcf8qpihr57fb93",
+        "https://rdi.berkeley.edu/blog/cyberbingym"
+      ],
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-10T22:36:29.096Z",
+      "contentType": "benchmark",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/xenhfme3azzcf8qpihr57fb93"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:xenhfme3azzcf8qpihr57fb93",
+          "name": "Berkeley RDI：Blog（AI 安全与评测）",
+          "type": "aggregator",
+          "url": "https://rdi.berkeley.edu/blog/cyberbingym",
+          "publishedAt": "2026-11-11T00:00:00.000Z",
+          "title": "Berkeley RDI 发布 CyberBinGym 基准，测试 AI 智能体能否仅凭二进制补丁写出真实漏洞利用",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/xenhfme3azzcf8qpihr57fb93",
+            "https://rdi.berkeley.edu/blog/cyberbingym"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该基准把 AI 智能体的安全能力评测从有源码、有描述的辅助场景推进到仅有 stripped 二进制的真实 1-day 场景，直接关系到自动化漏洞利用能力的边界评估。",
+      "importanceReasonEn": "The benchmark pushes AI agent security evaluation from source-available, description-assisted settings to a realistic 1-day setting with only stripped binaries, directly bearing on how the boundaries of automated exploit capability are assessed.",
+      "scoringMode": "ai",
+      "titleZh": "伯克利 RDI 发布 CyberBinGym 基准，测试 AI 智能体能否仅凭二进制补丁写出真实漏洞利用",
+      "titleEn": "Berkeley RDI Releases CyberBinGym Benchmark to Test Whether AI Agents Can Write Real Exploits from Binary Patches Alone",
+      "summaryZh": "UC Berkeley 等机构发布 CyberBinGym 基准，评估 AI 智能体在无源码、无漏洞描述、无触发输入的 1-day 场景下，仅凭 stripped 的漏洞与补丁二进制能否恢复并利用真实漏洞，含 100 个来自 53 个开源项目的任务。",
+      "summaryEn": "UC Berkeley and partner institutions released the CyberBinGym benchmark to evaluate whether AI agents can recover and exploit real vulnerabilities in a 1-day setting with no source code, no vulnerability description and no trigger input, using only stripped vulnerable and patched binaries; it contains 100 tasks drawn from 53 open-source projects.",
+      "keywords": [
+        "CyberBinGym",
+        "Berkeley RDI",
+        "二进制补丁",
+        "漏洞利用",
+        "AI智能体",
+        "1-day"
+      ],
+      "topics": [
+        "AI安全",
+        "漏洞利用",
+        "二进制分析",
+        "AI智能体评测",
+        "1-day漏洞"
+      ],
+      "models": [],
+      "detailZh": "UC Berkeley RDI 联合其他机构发布了 CyberBinGym 基准，用于评估 AI 智能体在真实 1-day 漏洞场景下的能力。所谓 1-day 场景，是指漏洞已经存在且补丁已经公开，但攻击者需要自行从补丁差异中定位漏洞并构造利用。\n\n该基准的关键约束在于信息极度受限：智能体拿不到源代码，拿不到漏洞描述，也拿不到触发漏洞的输入，只能面对经过 stripped 处理的漏洞版本二进制和对应的补丁版本二进制。任务要求智能体据此恢复漏洞并写出可用的真实漏洞利用。\n\nCyberBinGym 共包含 100 个任务，这些任务来自 53 个开源项目，覆盖多种真实软件中的漏洞案例。基准的发布方为 Berkeley RDI，来源标注为 AI 安全与评测方向的博客。\n\n从评测设计看，该基准试图回答一个此前较少被系统量化的问题：当源码和文档都不存在时，AI 智能体能否仅靠二进制层面的补丁对比完成漏洞定位与利用开发。这比常见的、提供源码或漏洞描述的辅助型评测更接近真实攻击条件。",
+      "keyPointsZh": [
+        "CyberBinGym 由 UC Berkeley RDI 等机构发布，定位为 AI 智能体的二进制漏洞利用评测基准。",
+        "评测设定为 1-day 场景：无源码、无漏洞描述、无触发输入，仅有 stripped 的漏洞与补丁二进制。",
+        "基准包含 100 个任务，来自 53 个开源项目。",
+        "任务目标是让智能体恢复真实漏洞并写出可用的漏洞利用。"
+      ],
+      "impactZh": "该基准把 AI 智能体的安全能力评测推进到更接近真实攻击条件的二进制层面，为衡量自动化漏洞利用能力提供了统一任务集，也会影响对 AI 在攻防两端能力边界的判断。",
+      "readerImpactZh": "",
+      "userImpactZh": "对安全研究者和 AI 智能体开发者而言，该基准提供了评估智能体在无源码条件下进行二进制差异分析与漏洞利用开发能力的统一任务集，可用于测试和比较不同智能体的实际安全能力。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：基准名为 CyberBinGym，由 Berkeley RDI 等机构发布，包含 100 个来自 53 个开源项目的任务，设定为无源码、无漏洞描述、无触发输入、仅有 stripped 漏洞与补丁二进制的 1-day 场景，目标是恢复并利用真实漏洞。可以合理推断，该基准的核心难点在于从补丁二进制与漏洞二进制的差异中定位修复点，再据此反推漏洞成因并构造利用；但具体评分方式、智能体接口和任务难度分布，来源材料未作说明。",
+      "limitationsZh": "来源材料仅给出基准的名称、发布方、任务规模与场景设定，未披露具体评分标准、智能体接入方式、各任务难度分布，也未给出任何智能体在该基准上的实测成绩，因此无法据此判断当前 AI 智能体的实际表现。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "metrics",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "100 个任务分布在 53 个开源项目中，平均每个项目贡献不到 2 个任务。",
+        "data": [
+          {
+            "label": "任务数",
+            "value": 100,
+            "display": ""
+          },
+          {
+            "label": "来源开源项目数",
+            "value": 53,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:xenhfme3azzcf8qpihr57fb93",
+          "name": "Berkeley RDI：Blog（AI 安全与评测）",
+          "type": "aggregator",
+          "url": "https://rdi.berkeley.edu/blog/cyberbingym",
+          "publishedAt": "2026-11-11T00:00:00.000Z",
+          "title": "Berkeley RDI 发布 CyberBinGym 基准，测试 AI 智能体能否仅凭二进制补丁写出真实漏洞利用",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/xenhfme3azzcf8qpihr57fb93",
+            "https://rdi.berkeley.edu/blog/cyberbingym"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T00:00:00.000Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-11T00:00:00.000Z",
+            "label": "11/11 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a47950b9177a3bb8",
+      "normalizedUrl": "https://microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents",
+      "originalUrl": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+      "titleOriginal": "Microsoft Research 揭示 Lazarus 权重空间后门技术，通过重编程休眠神经元攻击 AI Agent",
+      "summaryOriginal": "Microsoft Research 发布对 Lazarus 后门技术的研究，重编程 LLM 中少于 10 个休眠神经元即可在没有训练的情况下给基于该模型的 Agent 安装后门。",
+      "originalLanguage": "zh",
+      "author": "Microsoft Research 博客（RSS）",
+      "category": "research",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/womexcn3n0ijhbehvhbsxxm4f",
+        "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/"
+      ],
+      "publishedAt": "2026-11-10T20:52:56.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-10T23:34:28.039Z",
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/womexcn3n0ijhbehvhbsxxm4f"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:womexcn3n0ijhbehvhbsxxm4f",
+          "name": "Microsoft Research 博客（RSS）",
+          "type": "aggregator",
+          "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+          "publishedAt": "2026-11-10T20:52:56.000Z",
+          "title": "Microsoft Research 揭示 Lazarus 权重空间后门技术，通过重编程休眠神经元攻击 AI Agent",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/womexcn3n0ijhbehvhbsxxm4f",
+            "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该研究提出一种无需训练、仅改动极少权重即可植入后门的攻击路径，直接针对基于 LLM 的 Agent，对模型供应链与 Agent 安全具有现实意义。",
+      "importanceReasonEn": "The research presents an attack path that installs a backdoor by modifying only a handful of weights without training, directly targeting LLM-based agents, which matters for model supply-chain and agent security.",
+      "scoringMode": "ai",
+      "titleZh": "微软研究院揭示 Lazarus 权重空间后门技术：重编程休眠神经元攻击 AI Agent",
+      "titleEn": "Microsoft Research Reveals Lazarus Weight-Space Backdoor Technique That Reprograms Dormant Neurons to Attack AI Agents",
+      "summaryZh": "微软研究院发布对 Lazarus 后门技术的研究，称只需重编程 LLM 中少于 10 个休眠神经元，即可在无需训练的情况下为基于该模型的 Agent 安装后门。",
+      "summaryEn": "Microsoft Research published research on the Lazarus backdoor technique, claiming that reprogramming fewer than 10 dormant neurons in an LLM can install a backdoor in agents built on that model without any training.",
+      "keywords": [
+        "Lazarus backdoor",
+        "dormant neurons",
+        "weight-space attack",
+        "AI agent security",
+        "Microsoft Research"
+      ],
+      "topics": [
+        "LLM security",
+        "backdoor attack",
+        "AI agents",
+        "weight-space manipulation",
+        "neuron reprogramming"
+      ],
+      "models": [],
+      "detailZh": "微软研究院在其博客中发布了对 Lazarus 后门技术的研究。该研究描述了一种权重空间攻击方法：攻击者不需要重新训练模型，而是定位 LLM 中处于休眠状态的神经元，并对其权重进行重编程，从而在模型中植入后门行为。\n\n研究称，实现这一后门所需的休眠神经元数量少于 10 个，改动规模远小于常规微调式后门植入。由于攻击发生在权重层面而非训练流程中，它可能绕过依赖训练数据审查或微调监控的防护思路。\n\n该后门的目标是使用该模型的 AI Agent：一旦模型被植入后门，基于它构建的 Agent 在特定条件下可能触发攻击者预设的行为。研究由微软研究院发布，属于安全研究性质，公开材料以博客形式呈现。\n\n目前公开信息集中在技术思路与神经元数量这一关键指标上，关于触发条件、攻击成功率、受影响模型范围及防御效果的具体数据尚未在摘要中给出。",
+      "keyPointsZh": [
+        "微软研究院发布 Lazarus 权重空间后门研究",
+        "攻击通过重编程 LLM 中的休眠神经元实现，无需训练",
+        "所需休眠神经元少于 10 个",
+        "攻击目标是基于该模型构建的 AI Agent"
+      ],
+      "impactZh": "该研究说明后门可以以极小的权重改动植入模型，且不依赖训练流程，这会削弱以训练数据审查和微调监控为核心的防御假设，并提高模型分发与 Agent 部署环节的供应链风险关注度。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用第三方模型或开源权重的开发者和团队需要更重视权重来源与完整性校验，因为少量权重改动就可能引入后门，常规的微调审查未必能发现。",
+      "howItWorksZh": "按研究描述，攻击者先在 LLM 中定位休眠神经元，即当前输入下激活贡献很低的神经元，然后对这些神经元的权重进行重编程，使模型在特定条件下表现出攻击者预设的行为。整个过程不涉及重新训练，改动仅涉及少于 10 个休眠神经元。",
+      "interpretationZh": "已报道的事实是：微软研究院发布了该研究，方法为权重空间重编程休眠神经元，数量少于 10 个，且无需训练。可合理推断的是，这类攻击对模型权重分发和 Agent 部署环节构成供应链风险；但具体触发机制、成功率与防御效果在现有材料中未说明。",
+      "limitationsZh": "公开材料为博客摘要，未给出触发条件、攻击成功率、测试模型范围、防御评估等细节；少于 10 个休眠神经元这一数字的具体实验设置也未说明，结论的普适性有待验证。",
+      "actionStepsZh": [
+        "关注微软研究院博客原文以获取触发条件与实验细节",
+        "对引入的第三方模型权重建立来源与完整性校验流程"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:womexcn3n0ijhbehvhbsxxm4f",
+          "name": "Microsoft Research 博客（RSS）",
+          "type": "aggregator",
+          "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+          "publishedAt": "2026-11-10T20:52:56.000Z",
+          "title": "Microsoft Research 揭示 Lazarus 权重空间后门技术，通过重编程休眠神经元攻击 AI Agent",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/womexcn3n0ijhbehvhbsxxm4f",
+            "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-10T20:52:56.000Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-10T20:52:56.000Z",
+            "label": "11/11 04:52",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-10T21:48:44.424Z",
+            "label": "11/11 05:48",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T22:44:32.848Z",
+            "label": "11/11 06:44",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:40:21.272Z",
+            "label": "11/11 07:40",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "5bf610d1dd7d8e14",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/10/llm-gemini",
+      "originalUrl": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+      "titleOriginal": "llm-gemini 0.36",
+      "summaryOriginal": "Release: llm-gemini 0.36 Gemini 4 Carbon was announced two weeks ago for \"a subset of cyber defenders\", but today it's available to everyone else . This is Google's best ever Gemini, priced at $2/million input and $10/million output at launch (that's GPT-6.1 Sol / Claude Sonnet 5.5 prices) but scheduled to double in price to $4/$20 on December 1st (same as Opus 5.5). Here are three pelicans for the low, medium and high thinking efforts (it defaults to medium). This is the pelican I got for high: Gemini pelicans have all been great for a while now, so I also tested it out using Google's Antigravity IDE with a prompt I first tried with Claude Fable 5.2 yesterday : Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and stomps around manhattan and queens and Brooklyn, use openstreetmap mapping data Here's the HTML result (I had to prompt \"build that into a standalone HTML file\" to get a version with no external dependencies). I then screen-captured that as a video: Update : Huh, just saw this on YouTube : Using Google Antigravity’s /swarm feature, Carbon built an open-world 3D game where you explore Google’s Mountain View campus as a pelican riding a",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "products",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/carbon-pelican.webp",
+        "https://static.simonwillison.net/static/2026/yonkers-carbon.jpg"
+      ],
+      "resourceLinks": [
+        "https://github.com/simonw/llm-gemini/releases/tag/0.36",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fe5bf860633fc12e8f926f305c4c3190c",
+        "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+        "https://static.simonwillison.net/static/2026/yonkers-mech-standalone.html",
+        "https://static.simonwillison.net/static/2026/yonkers-carbon.mp4",
+        "https://www.youtube.com/watch?v=dNbkThtNzS8",
+        "https://simonwillison.net/tags/llm-release",
+        "https://simonwillison.net/tags/gemini",
+        "https://simonwillison.net/tags/llm",
+        "https://simonwillison.net/tags/google"
+      ],
+      "publishedAt": "2026-11-10T20:09:44.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+          "publishedAt": "2026-11-10T20:09:44.000Z",
+          "title": "llm-gemini 0.36",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/carbon-pelican.webp",
+            "https://static.simonwillison.net/static/2026/yonkers-carbon.jpg"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-gemini/releases/tag/0.36",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fe5bf860633fc12e8f926f305c4c3190c",
+            "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+            "https://static.simonwillison.net/static/2026/yonkers-mech-standalone.html",
+            "https://static.simonwillison.net/static/2026/yonkers-carbon.mp4",
+            "https://www.youtube.com/watch?v=dNbkThtNzS8",
+            "https://simonwillison.net/tags/llm-release",
+            "https://simonwillison.net/tags/gemini",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/google"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该条目涉及 Google 最强 Gemini 模型从限量开放转为全面可用，并包含明确的定价与涨价时间点，对开发者和用户选择模型有直接影响。",
+      "importanceReasonEn": "This item covers Google's strongest Gemini model moving from limited to general availability, with explicit pricing and a scheduled price increase, directly affecting model choice for developers and users.",
+      "scoringMode": "ai",
+      "titleZh": "llm-gemini 0.36 发布：Gemini 4 Carbon 向公众开放",
+      "titleEn": "llm-gemini 0.36 Released: Gemini 4 Carbon Opens to the Public",
+      "summaryZh": "llm-gemini 0.36 发布，Gemini 4 Carbon 从面向“部分网络防御者”的限量开放转为面向所有人开放。该模型定价为每百万输入 2 美元、每百万输出 10 美元，并计划于 12 月 1 日翻倍至 4/20 美元。作者用鹈鹕测试和 Antigravity IDE 的 Three.js 动画提示进行了实测。",
+      "summaryEn": "llm-gemini 0.36 is released, and Gemini 4 Carbon moves from limited access for \"a subset of cyber defenders\" to general availability. It is priced at $2/million input and $10/million output, with a planned price doubling to $4/$20 on December 1st. The author tested it with pelican prompts and a Three.js animation prompt in Antigravity IDE.",
+      "keywords": [
+        "llm-gemini",
+        "Gemini 4 Carbon",
+        "Google",
+        "Antigravity IDE",
+        "pricing",
+        "pelican test"
+      ],
+      "topics": [
+        "Gemini 4 Carbon",
+        "LLM pricing",
+        "Google Antigravity",
+        "model release"
+      ],
+      "models": [
+        "Gemini 4 Carbon"
+      ],
+      "detailZh": "llm-gemini 0.36 发布，核心变化是 Gemini 4 Carbon 的可用范围扩大。该模型两周前宣布时仅面向“部分网络防御者”开放，而今天已向其他所有人开放。作者称这是 Google 迄今最好的 Gemini 模型。\n\n定价方面，发布时价格为每百万输入 token 2 美元、每百万输出 token 10 美元，作者称这与 GPT-6.1 Sol / Claude Sonnet 5.5 的价格相当。但该价格计划于 12 月 1 日翻倍至每百万输入 4 美元、每百万输出 20 美元，与 Opus 5.5 相同。\n\n作者进行了常规的鹈鹕测试，分别对应低、中、高三档思考强度，模型默认使用中档。作者展示了高档思考下生成的鹈鹕图像，并指出 Gemini 的鹈鹕生成已经有一段时间表现不错。\n\n作者还使用 Google 的 Antigravity IDE 进行了实测，提示词是前一天先用 Claude Fable 5.2 试过的：制作一个 Three.js 动画，让 Yonkers 站起来变成大型机甲，做出酷炫的起身动作，并在曼哈顿、皇后区和布鲁克林 stomp 行走，使用 OpenStreetMap 地图数据。作者需要额外提示“build that into a standalone HTML file”才能得到无外部依赖的版本，随后将结果录屏为视频。\n\n更新部分提到，作者在 YouTube 上看到，使用 Google Antigravity 的 /swarm 功能，Carbon 构建了一个开放世界 3D 游戏，玩家扮演一只骑着（原文在此处截断）的鹈鹕，探索 Google 山景城园区。",
+      "keyPointsZh": [
+        "Gemini 4 Carbon 从面向“部分网络防御者”的限量开放转为面向所有人开放。",
+        "发布时定价为每百万输入 2 美元、每百万输出 10 美元，计划 12 月 1 日翻倍至 4/20 美元。",
+        "作者用低、中、高三档思考强度进行鹈鹕测试，模型默认中档。",
+        "作者在 Antigravity IDE 中用 Three.js 动画提示进行了实测，需额外提示才能生成无外部依赖的独立 HTML 文件。",
+        "有视频显示 Carbon 通过 Antigravity 的 /swarm 功能构建了开放世界 3D 游戏。"
+      ],
+      "impactZh": "Gemini 4 Carbon 全面开放并给出明确的涨价时间表，会影响开发者在 12 月 1 日前后的模型选型和成本规划；同时 Antigravity IDE 的实测展示了其在代码生成和 3D 场景构建上的能力。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Gemini 4 Carbon 的开发者需注意 12 月 1 日价格翻倍，应在此之前评估成本或调整用量；在 Antigravity IDE 中生成独立 HTML 时可能需要额外提示以去除外部依赖。",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是：Gemini 4 Carbon 已向公众开放，定价为 2/10 美元并计划于 12 月 1 日翻倍至 4/20 美元；作者进行了鹈鹕测试和 Antigravity IDE 实测。作者称其为“Google 最好的 Gemini”属于主观评价；YouTube 上的 /swarm 3D 游戏案例来自作者转述，原文在该处截断，细节不完整。",
+      "limitationsZh": "来源为个人博客，鹈鹕测试和 Three.js 实测均为作者主观体验，未提供系统基准分数；YouTube 上的 /swarm 案例仅为转述且原文截断，无法核实完整细节；涨价计划为作者所述，未附官方公告链接。",
+      "actionStepsZh": [
+        "在 12 月 1 日涨价前评估 Gemini 4 Carbon 的使用成本。",
+        "在 Antigravity IDE 中生成独立 HTML 时，明确要求构建无外部依赖的 standalone 文件。",
+        "利用低、中、高三档思考强度按任务复杂度选择，默认中档可满足多数场景。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "12 月 1 日起输入和输出价格均翻倍，分别从 2/10 美元涨至 4/20 美元。",
+        "data": [
+          {
+            "label": "输入价格（发布时，美元/百万token）",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "输出价格（发布时，美元/百万token）",
+            "value": 10,
+            "display": ""
+          },
+          {
+            "label": "输入价格（12月1日起，美元/百万token）",
+            "value": 4,
+            "display": ""
+          },
+          {
+            "label": "输出价格（12月1日起，美元/百万token）",
+            "value": 20,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+          "publishedAt": "2026-11-10T20:09:44.000Z",
+          "title": "llm-gemini 0.36",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/carbon-pelican.webp",
+            "https://static.simonwillison.net/static/2026/yonkers-carbon.jpg"
+          ],
+          "resourceLinks": [
+            "https://github.com/simonw/llm-gemini/releases/tag/0.36",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fe5bf860633fc12e8f926f305c4c3190c",
+            "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+            "https://static.simonwillison.net/static/2026/yonkers-mech-standalone.html",
+            "https://static.simonwillison.net/static/2026/yonkers-carbon.mp4",
+            "https://www.youtube.com/watch?v=dNbkThtNzS8",
+            "https://simonwillison.net/tags/llm-release",
+            "https://simonwillison.net/tags/gemini",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/google"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-10T20:09:44.000Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-10T20:09:44.000Z",
+            "label": "11/11 04:09",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-10T21:03:01.139Z",
+            "label": "11/11 05:03",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:56:18.278Z",
+            "label": "11/11 05:56",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T22:49:35.418Z",
+            "label": "11/11 06:49",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:42:52.557Z",
+            "label": "11/11 07:42",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "68219fdebd4ad78c",
+      "normalizedUrl": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery",
+      "originalUrl": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+      "titleOriginal": "PSI is trying to make a business out of AI-driven scientific discovery",
+      "summaryOriginal": "PSI used an unreleased Anthropic model to answer a fundamental question about quantum computing that scientists have pursued for nearly two decades.",
+      "originalLanguage": "en",
+      "author": "Tim Fernholz",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-10T19:03:52.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+          "publishedAt": "2026-11-10T19:03:52.000Z",
+          "title": "PSI is trying to make a business out of AI-driven scientific discovery",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该事件涉及AI在基础科学问题上的应用及商业化尝试，但来源信息有限，缺乏具体技术细节和验证。",
+      "importanceReasonEn": "The event involves AI application to fundamental science and commercialization attempts, but source information is limited with few technical details or verification.",
+      "scoringMode": "ai",
+      "titleZh": "PSI试图将AI驱动的科学发现商业化",
+      "titleEn": "PSI is trying to make a business out of AI-driven scientific discovery",
+      "summaryZh": "PSI利用一个尚未发布的Anthropic模型，回答了一个科学家们追寻近二十年的量子计算基础问题。",
+      "summaryEn": "PSI used an unreleased Anthropic model to answer a fundamental question about quantum computing that scientists have pursued for nearly two decades.",
+      "keywords": [
+        "PSI",
+        "Anthropic",
+        "量子计算",
+        "科学发现",
+        "商业化"
+      ],
+      "topics": [
+        "AI驱动科学发现",
+        "量子计算",
+        "AI商业化",
+        "Anthropic模型"
+      ],
+      "models": [
+        "Anthropic未发布模型"
+      ],
+      "detailZh": "据TechCrunch AI报道，PSI公司正试图将AI驱动的科学发现做成一项业务。该公司使用了一个尚未发布的Anthropic模型，来回答量子计算领域一个科学家们已经追寻近二十年的基础性问题。报道未披露该问题的具体内容、模型的具体能力、PSI的商业模式细节，也未说明该答案是否经过同行评审或实验验证。目前可确认的事实仅限于：PSI使用了未公开的Anthropic模型，目标是一个长期未解的量子计算基础问题，且公司有意将此能力商业化。",
+      "keyPointsZh": [
+        "PSI使用了一个尚未发布的Anthropic模型",
+        "目标是量子计算领域一个科学家追寻近二十年的基础问题",
+        "PSI试图将AI驱动的科学发现商业化",
+        "报道未披露问题内容、模型细节或验证情况"
+      ],
+      "impactZh": "若AI能稳定产出可验证的科学发现，将改变基础研究的产出方式和商业格局；但当前信息不足以判断该案例的真实突破程度。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道呈现的核心事实是PSI借助未发布的Anthropic模型处理量子计算长期难题并寻求商业化。至于该答案是否正确、是否构成真正突破，属于尚未验证的部分，需等待更多技术披露或独立验证。",
+      "limitationsZh": "来源未说明具体科学问题、模型输出质量、是否经过实验或同行评审，也未披露PSI的商业模式与收入情况，因此无法评估其实际突破与商业可行性。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+          "publishedAt": "2026-11-10T19:03:52.000Z",
+          "title": "PSI is trying to make a business out of AI-driven scientific discovery",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-10T19:03:52.000Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-10T19:03:52.000Z",
+            "label": "11/11 03:03",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-10T19:59:14.949Z",
+            "label": "11/11 03:59",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T20:54:37.899Z",
+            "label": "11/11 04:54",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:50:00.848Z",
+            "label": "11/11 05:50",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T22:45:23.798Z",
+            "label": "11/11 06:45",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:40:46.747Z",
+            "label": "11/11 07:40",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "fafff4292c09fd93",
       "normalizedUrl": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices",
@@ -41,43 +826,46 @@
           "resourceLinks": []
         }
       ],
-      "importance": 55,
-      "importanceReasonZh": "这是 Google 官方发布的 Gemini Intelligence 设备扩展消息，属于产品可用性更新，但源材料仅提供概述，缺少具体功能、设备清单和上线时间等细节。",
-      "importanceReasonEn": "This is an official Google announcement about expanding Gemini Intelligence to more devices. It is a product availability update, but the source only provides a summary without specifics on features, device list or timing.",
+      "importance": 45,
+      "importanceReasonZh": "这是 Google 官方发布的 Gemini Intelligence 设备扩展公告，属于产品可用性更新，但原文仅提供概述性描述，缺少具体功能、设备清单和性能数据。",
+      "importanceReasonEn": "This is Google's official announcement about expanding Gemini Intelligence to more devices. It is a product availability update, but the source only provides a high-level description without specific features, device lists or performance data.",
       "scoringMode": "ai",
       "titleZh": "Gemini Intelligence：新功能登陆更多设备",
       "titleEn": "Gemini Intelligence: New features, on more devices",
-      "summaryZh": "Gemini Intelligence 正在向更多设备推出，这些设备上扩展的能力可帮助用户完成更多任务。",
+      "summaryZh": "Gemini Intelligence 正在向更多设备推出。文章介绍了这些设备上扩展的能力如何帮助用户完成更多工作。",
       "summaryEn": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
       "keywords": [
         "Gemini Intelligence",
+        "Google",
         "设备扩展",
-        "新功能",
-        "Google AI"
+        "功能更新"
       ],
       "topics": [
         "Gemini",
         "Google AI",
         "设备端AI",
-        "功能扩展"
+        "功能发布"
       ],
       "models": [
         "Gemini"
       ],
-      "detailZh": "Google AI 官方发布消息称，Gemini Intelligence 正在向更多设备推出。该消息标题为“Gemini Intelligence: New features, on more devices”，摘要说明扩展后的能力将覆盖这些设备，帮助用户完成更多事情。\n\n从现有信息看，这是一次产品可用性层面的更新，重点在于 Gemini Intelligence 的覆盖范围扩大，而非发布全新模型或技术论文。官方表述强调“新功能”与“更多设备”两个方向，但未在提供的材料中列出具体设备型号、功能清单、分阶段推送时间或地区范围。\n\n由于源材料仅为简短概述，目前可以确认的事实只有：该消息由 Google AI 发布，发布时间为 2026 年 11 月 10 日，内容涉及 Gemini Intelligence 向更多设备扩展。其余细节尚待官方页面或后续说明补充。",
+      "detailZh": "Google AI 官方发布消息称，Gemini Intelligence 正在向更多设备推出。该公告标题为“Gemini Intelligence: New features, on more devices”，强调扩展后的能力将覆盖更多设备，帮助用户完成更多任务。\n\n从现有信息看，这是一次可用性范围的扩大，而非全新模型发布。公告将“新功能”与“更多设备”并列，说明此次更新同时涉及功能层面的增强和设备覆盖面的扩展。\n\n原文未披露具体新增哪些功能、支持哪些设备型号、分阶段推送的时间表，也未提供性能指标或价格信息。因此目前只能确认这是一项官方宣布的扩展计划，具体细节有待后续资料补充。",
       "keyPointsZh": [
-        "Google AI 官方宣布 Gemini Intelligence 向更多设备推出",
-        "消息强调新功能与更广的设备覆盖",
-        "官方摘要称扩展能力可帮助用户完成更多任务",
-        "源材料未提供具体设备清单、功能细节或推送时间"
+        "Google 官方宣布 Gemini Intelligence 向更多设备推出",
+        "公告同时提及新功能与设备覆盖扩展",
+        "原文未列出具体功能、设备型号或推送时间表",
+        "未提供性能、价格等可量化数据"
       ],
-      "impactZh": "该更新意味着 Gemini Intelligence 的可用范围扩大，更多设备用户可能获得相关 AI 能力，体现 Google 将 Gemini 能力向终端设备铺开的策略方向。",
+      "impactZh": "该消息表明 Google 正在扩大 Gemini Intelligence 的设备覆盖面，反映其将 AI 能力从单一入口推向多终端生态的策略方向。由于缺少具体细节，目前对行业格局的实际影响尚不明确。",
       "readerImpactZh": "",
-      "userImpactZh": "",
+      "userImpactZh": "对 Gemini 用户而言，这意味着未来可能在更多自有设备上使用 Gemini Intelligence，但具体哪些设备、何时可用以及新增功能内容，原文均未说明，需等待官方后续公布。",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是 Google 官方发布了 Gemini Intelligence 设备扩展消息。至于具体哪些设备、哪些功能以及推送节奏，源材料未说明，属于尚待补充的信息，不应据此推断具体机型或时间表。",
-      "limitationsZh": "源材料仅为标题与一句摘要，缺少设备型号、功能清单、上线时间、地区范围和定价等关键信息，无法评估实际体验变化。",
-      "actionStepsZh": [],
+      "interpretationZh": "可确认的事实是：Google 官方发布了 Gemini Intelligence 扩展至更多设备的公告。合理推断是：这是一次分阶段的产品可用性更新，可能伴随功能增强。但原文没有说明技术实现方式、设备兼容条件或推送机制，因此无法进一步判断其实际能力边界。",
+      "limitationsZh": "原文为简短公告，缺少具体功能清单、支持设备型号、推送时间表、地区限制及性能数据。所有关于功能内容和覆盖范围的判断都只能停留在公告措辞层面，无法验证实际体验。",
+      "actionStepsZh": [
+        "关注 Google 官方渠道以获取具体支持设备与推送时间",
+        "在已支持设备上检查 Gemini Intelligence 是否有可用更新"
+      ],
       "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
@@ -101,9 +889,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T19:00:00.000Z",
-        "endedAt": "2026-11-10T19:40:38.905Z",
-        "current": 55,
-        "peak": 55,
+        "endedAt": "2026-11-11T00:36:09.697Z",
+        "current": 50,
+        "peak": 50,
         "history": [
           {
             "at": "2026-11-10T19:00:00.000Z",
@@ -112,9 +900,39 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T19:40:38.905Z",
-            "label": "11/11 03:40",
-            "value": 55,
+            "at": "2026-11-10T19:56:01.616Z",
+            "label": "11/11 03:56",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T20:52:03.232Z",
+            "label": "11/11 04:52",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:48:04.848Z",
+            "label": "11/11 05:48",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T22:44:06.464Z",
+            "label": "11/11 06:44",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:40:08.080Z",
+            "label": "11/11 07:40",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -146,7 +964,7 @@
       "publishedPrecision": "minute",
       "discoveredAt": null,
       "contentType": "industry",
-      "evidenceLevel": "unverified",
+      "evidenceLevel": "verified",
       "attribution": null,
       "sources": [
         {
@@ -171,47 +989,48 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "英伟达是机器人AI领域的重要参与者，GR00T 2尝试用大规模人类视频替代遥操作数据采集，这一方向若成立将显著降低机器人训练成本，因此值得关注。",
-      "importanceReasonEn": "Nvidia is a major player in robot AI, and GR00T 2 attempts to replace teleoperation data collection with large-scale human video, a direction that could significantly lower robot training costs if it works.",
+      "importanceReasonZh": "该模型尝试用大规模人类视频替代昂贵的遥操作数据采集，若能成熟将显著降低机器人技能训练成本，但成功率波动大说明技术仍处早期。",
+      "importanceReasonEn": "The model attempts to replace costly teleoperation data collection with large-scale human video, which could significantly lower robot skill-training costs if mature; however, wide success-rate variance shows the technology is still early-stage.",
       "scoringMode": "ai",
-      "titleZh": "英伟达GR00T 2模型通过观看人类视频学习机器人动作",
-      "titleEn": "Nvidia's GR00T 2 Model Learns Robot Actions by Watching Human Videos",
+      "titleZh": "英伟达GR00T 2模型：观看人类视频后想象自己成为机器人",
+      "titleEn": "Nvidia's GR00T 2 Model Watches Human Videos and Imagines Itself as the Robot",
       "summaryZh": "英伟达推出新AI模型GR00T 2，旨在让机器人无需繁琐的遥操作即可学习新任务。该系统将视频中的人类手部动作迁移到机械臂上，训练数据约为40万小时视频素材。不过成功率仍因任务而异，从10%到80%不等。",
-      "summaryEn": "Nvidia has introduced a new AI model, GR00T 2, designed to let robots learn new tasks without laborious teleoperation. The system transfers human hand movements from videos to robotic arms, trained on roughly 400,000 hours of video footage. However, success rates still vary widely, from 10% to 80% depending on the task.",
+      "summaryEn": "Nvidia has introduced its new AI model GR00T 2, designed to let robots learn new tasks without laborious teleoperation. The system transfers human hand movements from videos to robotic arms, trained on roughly 400,000 hours of video footage. Success rates still vary widely, from 10% to 80% depending on the task.",
       "keywords": [
-        "Nvidia",
         "GR00T 2",
-        "robot learning",
-        "video imitation",
-        "teleoperation",
-        "robotic arms"
+        "英伟达",
+        "机器人",
+        "视频学习",
+        "动作迁移",
+        "遥操作"
       ],
       "topics": [
-        "robot learning",
-        "video imitation",
-        "embodied AI",
-        "humanoid robots"
+        "机器人学习",
+        "视频模仿学习",
+        "具身智能",
+        "英伟达"
       ],
       "models": [
         "GR00T 2"
       ],
-      "detailZh": "英伟达发布了名为GR00T 2的AI模型，目标是让机器人学习新任务时不再依赖繁琐的遥操作。根据报道，该系统通过观看人类视频来学习，并把视频中的人类手部动作迁移到机械臂上执行。\n\n训练数据规模约为40万小时视频素材，这是该模型的核心卖点之一：用现成的人类视频替代专门采集的机器人操作数据。\n\n不过报道同时指出，实际效果仍不稳定。不同任务的成功率差异很大，从10%到80%不等，说明该方法在部分任务上可行，但尚未达到通用可靠的程度。\n\n目前公开信息有限，报道未披露具体任务类型、测试条件、机器人硬件平台或与基线方法的对比细节，因此对GR00T 2的能力边界仍需谨慎看待。",
+      "detailZh": "英伟达发布了名为GR00T 2的AI模型，目标是让机器人学习新任务时不再依赖繁琐的遥操作（teleoperation）数据采集。传统方式需要人类操作员逐帧遥控机器人完成动作，成本高且难以规模化。GR00T 2的思路是直接从人类视频中学习：系统观察视频里人类的手部动作，并将其迁移到机械臂上执行。\n\n据报道，该模型训练使用了约40万小时的视频素材。系统的一个关键特点是“想象自己成为机器人”，即把视频中人类的动作映射到机器人自身的身体形态上，从而生成可执行的动作。\n\n不过实际效果仍不稳定。报道指出，GR00T 2在不同任务上的成功率差异很大，从10%到80%不等，说明模型对任务类型较为敏感，尚未达到通用可靠的程度。\n\n目前公开信息有限，主要来自媒体报道，缺少详细的技术论文、基准测试细节和具体任务清单。",
       "keyPointsZh": [
-        "英伟达发布GR00T 2模型，用于教机器人学习新任务",
-        "系统通过视频学习人类手部动作，并迁移到机械臂",
-        "训练数据约为40万小时视频素材",
-        "不同任务成功率差异大，介于10%到80%之间"
+        "英伟达发布GR00T 2模型，用于机器人技能学习",
+        "系统从人类视频中提取手部动作并迁移到机械臂",
+        "训练数据规模约为40万小时视频",
+        "不同任务成功率在10%至80%之间波动",
+        "目标是减少对遥操作数据采集的依赖"
       ],
-      "impactZh": "该方向的意义在于绕开昂贵的遥操作数据采集，若大规模人类视频能有效迁移到机器人动作，将降低机器人技能训练的门槛和成本，影响整个具身智能的数据策略。",
+      "impactZh": "该方向若成熟，可大幅降低机器人训练的数据成本，推动具身智能从实验室走向更多实际场景；但当前成功率波动表明距离稳定商用仍有距离。",
       "readerImpactZh": "",
-      "userImpactZh": "对机器人开发团队而言，GR00T 2提示了一条用公开人类视频扩充训练数据的路径，但10%到80%的成功率区间意味着它目前更适合作为探索性方案，而非可直接部署的通用技能来源。",
-      "howItWorksZh": "根据报道，GR00T 2从人类视频中提取手部动作，并将其映射到机械臂上执行，从而让机器人“想象自己”完成视频中的动作。系统训练使用了约40万小时视频素材。报道未披露具体的模型结构、动作重定向方法或训练细节。",
-      "interpretationZh": "已报道的事实是：英伟达发布了GR00T 2，使用约40万小时视频训练，通过迁移人类手部动作教机械臂，任务成功率在10%到80%之间。可合理推断的是，该方法试图减少对遥操作数据的依赖；但成功率跨度大说明其可靠性高度依赖任务，尚不能视为通用解决方案。",
-      "limitationsZh": "公开信息有限：未说明具体任务、测试环境、机器人平台、成功率统计方式，也没有与遥操作基线或其他方法的对比。40万小时视频的来源与质量、动作迁移的泛化能力均未验证。",
+      "userImpactZh": "对机器人开发者和AI团队而言，GR00T 2提供了一条用现成人类视频替代遥操作采集的思路，但10%至80%的成功率差异意味着需要针对具体任务评估可靠性，不能直接假设通用可用。",
+      "howItWorksZh": "根据报道，GR00T 2从人类视频中观察手部动作，并将这些动作迁移到机械臂上执行；系统会把视频中的人类动作映射到机器人自身形态，相当于“想象自己作为机器人”完成同样动作。训练使用了约40万小时视频。报道未披露模型架构、动作表示方式或训练细节。",
+      "interpretationZh": "已报道的事实是：英伟达推出GR00T 2、使用约40万小时视频、成功率10%至80%。合理推断是：该模型试图以视频模仿学习替代遥操作数据，但成功率跨度大说明其泛化能力仍受任务限制。由于缺少技术论文和基准细节，目前不宜对其通用能力下结论。",
+      "limitationsZh": "公开信息主要来自媒体报道，缺少技术论文、基准测试方法和具体任务列表；成功率10%至80%的统计口径和测试条件未说明；40万小时视频的来源与质量未披露；未提及硬件平台、推理成本或与遥操作方案的直接对比。",
       "actionStepsZh": [
-        "关注英伟达后续发布的GR00T 2技术细节与评测结果",
-        "评估自身任务是否适合用人类视频替代遥操作数据采集",
-        "在采用前针对具体任务实测成功率，而非依赖整体区间"
+        "关注英伟达后续是否发布GR00T 2的技术论文或基准细节",
+        "在评估机器人学习方案时，将视频模仿学习与遥操作采集的成本和成功率做对比",
+        "针对自身任务类型验证成功率，而非直接采用通用结论"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -219,7 +1038,7 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "报道给出的任务成功率区间为10%到80%，跨度达70个百分点，显示效果高度依赖具体任务。",
+        "insightZh": "报道称GR00T 2在不同任务上的成功率从10%到80%不等，差距达70个百分点，显示任务相关性很强。",
         "data": [
           {
             "label": "最低成功率",
@@ -259,7 +1078,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T18:41:52.000Z",
-        "endedAt": "2026-11-10T19:40:38.905Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -270,8 +1089,38 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T19:40:38.905Z",
+            "at": "2026-11-10T19:40:54.949Z",
             "label": "11/11 03:40",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T20:39:57.899Z",
+            "label": "11/11 04:39",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:39:00.848Z",
+            "label": "11/11 05:39",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T22:38:03.798Z",
+            "label": "11/11 06:38",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:37:06.747Z",
+            "label": "11/11 07:37",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
             "value": 65,
             "reports": 1
           }
@@ -414,7 +1263,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T18:19:13.000Z",
-        "endedAt": "2026-11-10T19:40:38.905Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -425,14 +1274,44 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T18:59:55.952Z",
-            "label": "11/11 02:59",
-            "value": 39,
+            "at": "2026-11-10T19:13:03.956Z",
+            "label": "11/11 03:13",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-11-10T19:40:38.905Z",
-            "label": "11/11 03:40",
+            "at": "2026-11-10T20:06:54.913Z",
+            "label": "11/11 04:06",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:00:45.870Z",
+            "label": "11/11 05:00",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:54:36.826Z",
+            "label": "11/11 05:54",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T22:48:27.783Z",
+            "label": "11/11 06:48",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:42:18.740Z",
+            "label": "11/11 07:42",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
             "value": 65,
             "reports": 1
           }
@@ -555,7 +1434,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T17:11:10.000Z",
-        "endedAt": "2026-11-10T19:40:38.905Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -566,20 +1445,231 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T18:00:59.635Z",
-            "label": "11/11 02:00",
+            "at": "2026-11-10T18:06:47.462Z",
+            "label": "11/11 02:06",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T19:02:24.924Z",
+            "label": "11/11 03:02",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T19:58:02.386Z",
+            "label": "11/11 03:58",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T20:53:39.848Z",
+            "label": "11/11 04:53",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:49:17.310Z",
+            "label": "11/11 05:49",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T22:44:54.772Z",
+            "label": "11/11 06:44",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:40:32.234Z",
+            "label": "11/11 07:40",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "de829297c6f96fa1",
+      "normalizedUrl": "https://minimax.io/blog/minimax-h3-image",
+      "originalUrl": "https://www.minimax.io/blog/minimax-h3-image",
+      "titleOriginal": "MiniMax 发布开源图像生成模型 H3-Image，10 秒内生成 4K 图像",
+      "summaryOriginal": "MiniMax 发布基于 H3 的开源权重图像生成模型 H3-Image，支持文生图、参考图生成和图像编辑，可生成 4096 × 4096 的 4K 图像，速度最高达主流方案的 5 倍。",
+      "originalLanguage": "zh",
+      "author": "MiniMax：Blog（网页）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/eel6o8sxfldx5itfa8f8wigc0",
+        "https://www.minimax.io/blog/minimax-h3-image"
+      ],
+      "publishedAt": "2026-11-10T16:23:20.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-10T17:44:21.766Z",
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/eel6o8sxfldx5itfa8f8wigc0"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:eel6o8sxfldx5itfa8f8wigc0",
+          "name": "MiniMax：Blog（网页）",
+          "type": "aggregator",
+          "url": "https://www.minimax.io/blog/minimax-h3-image",
+          "publishedAt": "2026-11-10T16:23:20.000Z",
+          "title": "MiniMax 发布开源图像生成模型 H3-Image，10 秒内生成 4K 图像",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/eel6o8sxfldx5itfa8f8wigc0",
+            "https://www.minimax.io/blog/minimax-h3-image"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "开源权重的高分辨率图像生成模型，同时覆盖文生图、参考图生成与编辑，并强调速度优势，对开发者和内容生产团队有直接可用价值。",
+      "importanceReasonEn": "An open-weight high-resolution image model covering text-to-image, reference-based generation and editing with a speed claim, directly usable by developers and content teams.",
+      "scoringMode": "ai",
+      "titleZh": "MiniMax 发布开源图像生成模型 H3-Image，10 秒内生成 4K 图像",
+      "titleEn": "MiniMax Releases Open-Source H3-Image Model That Generates 4K Images in Under 10 Seconds",
+      "summaryZh": "MiniMax 发布基于 H3 的开源权重图像生成模型 H3-Image，支持文生图、参考图生成和图像编辑，可生成 4096 × 4096 的 4K 图像，速度最高达主流方案的 5 倍。",
+      "summaryEn": "MiniMax has released H3-Image, an open-weight image generation model built on H3 that supports text-to-image, reference-image generation and image editing, can produce 4096 × 4096 4K images, and is claimed to be up to 5x faster than mainstream alternatives.",
+      "keywords": [
+        "MiniMax",
+        "H3-Image",
+        "开源权重",
+        "4K 图像生成",
+        "文生图",
+        "图像编辑"
+      ],
+      "topics": [
+        "image-generation",
+        "open-weights",
+        "4K",
+        "text-to-image",
+        "image-editing"
+      ],
+      "models": [
+        "H3-Image",
+        "H3"
+      ],
+      "detailZh": "MiniMax 在其官方博客发布图像生成模型 H3-Image，并公开模型权重。该模型基于 H3 构建，定位为开源图像生成方案。\n\n功能上，H3-Image 支持三类任务：文生图、参考图生成以及图像编辑。输出分辨率最高可达 4096 × 4096，即 4K 级别。\n\n速度方面，MiniMax 称 H3-Image 生成 4K 图像可在 10 秒内完成，速度最高为主流方案的 5 倍。上述速度与对比数据来自官方表述，尚未见第三方独立评测。\n\n目前公开信息集中在模型能力与性能宣称，权重获取方式、许可证条款、具体参数规模与训练细节未在给定材料中说明。",
+      "keyPointsZh": [
+        "MiniMax 发布开源权重图像模型 H3-Image，基于 H3 构建",
+        "支持文生图、参考图生成和图像编辑三类任务",
+        "最高可生成 4096 × 4096 的 4K 图像",
+        "官方称 4K 图像生成可在 10 秒内完成，速度最高为主流方案的 5 倍"
+      ],
+      "impactZh": "开源权重加上 4K 输出与编辑能力，降低了高分辨率图像生成的使用门槛，可能加剧开源图像模型在分辨率与推理速度上的竞争。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者可基于公开权重自行部署或微调，用于高分辨率文生图、参考图生成与图像编辑流程；但需自行核实许可证条款与硬件要求。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：模型开源权重、支持三类图像任务、最高 4K 分辨率，以及官方给出的 10 秒内生成与最高 5 倍速度宣称。可以合理推断其面向需要高分辨率与较快出图的内容生产场景，但速度对比缺少第三方验证。",
+      "limitationsZh": "速度与倍数对比均为官方宣称，缺少独立基准测试；材料未披露模型参数量、训练数据、许可证细节、硬件条件及权重下载方式，实际部署成本与效果仍待验证。",
+      "actionStepsZh": [
+        "查阅 MiniMax 官方博客原文，确认权重获取方式与许可证条款",
+        "在自有硬件上复现 4K 生成耗时，验证 10 秒与 5 倍速度宣称",
+        "评估其在参考图生成与图像编辑任务上的实际质量"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:eel6o8sxfldx5itfa8f8wigc0",
+          "name": "MiniMax：Blog（网页）",
+          "type": "aggregator",
+          "url": "https://www.minimax.io/blog/minimax-h3-image",
+          "publishedAt": "2026-11-10T16:23:20.000Z",
+          "title": "MiniMax 发布开源图像生成模型 H3-Image，10 秒内生成 4K 图像",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/eel6o8sxfldx5itfa8f8wigc0",
+            "https://www.minimax.io/blog/minimax-h3-image"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-10T16:23:20.000Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-10T16:23:20.000Z",
+            "label": "11/11 00:23",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-10T17:18:05.521Z",
+            "label": "11/11 01:18",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T18:12:51.043Z",
+            "label": "11/11 02:12",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T19:07:36.565Z",
+            "label": "11/11 03:07",
             "value": 31,
             "reports": 1
           },
           {
-            "at": "2026-11-10T18:50:49.270Z",
-            "label": "11/11 02:50",
+            "at": "2026-11-10T20:02:22.087Z",
+            "label": "11/11 04:02",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T20:57:07.609Z",
+            "label": "11/11 04:57",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:51:53.131Z",
+            "label": "11/11 05:51",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-11-10T19:40:38.905Z",
-            "label": "11/11 03:40",
+            "at": "2026-11-10T22:46:38.653Z",
+            "label": "11/11 06:46",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:41:24.175Z",
+            "label": "11/11 07:41",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
             "value": 65,
             "reports": 1
           }
@@ -690,7 +1780,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T16:03:47.000Z",
-        "endedAt": "2026-11-10T19:40:38.905Z",
+        "endedAt": "2026-11-11T00:36:09.697Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -701,26 +1791,56 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T16:57:59.976Z",
-            "label": "11/11 00:57",
-            "value": 29,
+            "at": "2026-11-10T17:00:42.855Z",
+            "label": "11/11 01:00",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-11-10T17:52:12.952Z",
-            "label": "11/11 01:52",
-            "value": 44,
+            "at": "2026-11-10T17:57:38.710Z",
+            "label": "11/11 01:57",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-11-10T18:46:25.928Z",
-            "label": "11/11 02:46",
-            "value": 59,
+            "at": "2026-11-10T18:54:34.565Z",
+            "label": "11/11 02:54",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-11-10T19:40:38.905Z",
-            "label": "11/11 03:40",
+            "at": "2026-11-10T19:51:30.420Z",
+            "label": "11/11 03:51",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T20:48:26.276Z",
+            "label": "11/11 04:48",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T21:45:22.131Z",
+            "label": "11/11 05:45",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T22:42:17.986Z",
+            "label": "11/11 06:42",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-10T23:39:13.841Z",
+            "label": "11/11 07:39",
+            "value": 67,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T00:36:09.697Z",
+            "label": "11/11 08:36",
             "value": 74,
             "reports": 1
           }
