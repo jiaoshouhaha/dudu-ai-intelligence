@@ -1,7 +1,861 @@
 {
-  "generatedAt": "2026-11-11T07:43:54.679Z",
+  "generatedAt": "2026-11-11T16:06:40.756Z",
   "date": "2026-11-11",
   "items": [
+    {
+      "id": "d7414ba9c6092537",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+      "originalUrl": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+      "titleOriginal": "Anthropic's IPO roadshow video",
+      "summaryOriginal": "Anthropic&#x27;s IPO roadshow video Anthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works. The section on \"Approach to compute\" with co-founder Tom Brown is particularly interesting, describing how Anthropic train and serve Claude across AWS Trainium, Google TPUs, NVIDIA GPUs, and AMD GPUs. I'm not sure why there's no official video transcript, but here's one that I extracted using MacWhisper. Highlights below: We train and serve Claude now across all four major chip families. That's only possible because early on we made an unconventional bet on a multi-chip strategy. At the time, many people thought that running AI models on different chips wasn't worth the effort. Each chip needs its own tailored software stack and inference stack, which is expensive and difficult to build. We've now been doing it for years, and we've gotten incredibly good at it. [...] As an example, this year, we started working with AMD GPUs for the first time. In the past, bringing on a new chip platform took dozens of engineers months of work This time, we had Mythos try it out. It got Claude running on AMD in ju",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "business",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://ipo.anthropic.com/us/#roadshow-video",
+        "https://gist.github.com/simonw/9806757fe8acec6221cb0a5cce4d720d",
+        "https://www.anthropic.com/research/a-postmortem-of-three-recent-issues",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/llms",
+        "https://simonwillison.net/tags/anthropic",
+        "https://simonwillison.net/tags/gpus",
+        "https://simonwillison.net/tags/claude-mythos-fable",
+        "https://simonwillison.net/tags/recursive-self-improvement"
+      ],
+      "publishedAt": "2026-11-11T15:11:59.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+          "publishedAt": "2026-11-11T15:11:59.000Z",
+          "title": "Anthropic's IPO roadshow video",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://ipo.anthropic.com/us/#roadshow-video",
+            "https://gist.github.com/simonw/9806757fe8acec6221cb0a5cce4d720d",
+            "https://www.anthropic.com/research/a-postmortem-of-three-recent-issues",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/anthropic",
+            "https://simonwillison.net/tags/gpus",
+            "https://simonwillison.net/tags/claude-mythos-fable",
+            "https://simonwillison.net/tags/recursive-self-improvement"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是Anthropic IPO路演中少见的业务细节披露，首次系统说明其跨四种芯片训练与推理Claude的策略，对理解大模型算力成本和供应链多元化有参考价值。",
+      "importanceReasonEn": "This is a rare disclosure of business details from Anthropic's IPO roadshow, systematically explaining for the first time its strategy of training and serving Claude across four chip families, which is useful for understanding LLM compute costs and supply-chain diversification.",
+      "scoringMode": "ai",
+      "titleZh": "Anthropic IPO路演视频披露多芯片训练策略",
+      "titleEn": "Anthropic's IPO roadshow video reveals multi-chip training strategy",
+      "summaryZh": "Anthropic在IPO路演视频中披露，Claude的训练与推理已覆盖AWS Trainium、Google TPU、NVIDIA GPU和AMD GPU四大芯片家族，并称今年首次引入AMD GPU时，借助内部工具Mythos大幅缩短了适配时间。",
+      "summaryEn": "In its IPO roadshow video, Anthropic disclosed that Claude is now trained and served across four major chip families—AWS Trainium, Google TPUs, NVIDIA GPUs and AMD GPUs—and said an internal tool called Mythos sharply cut the time needed to bring Claude onto AMD GPUs this year.",
+      "keywords": [
+        "Anthropic",
+        "IPO roadshow",
+        "multi-chip",
+        "AMD GPU",
+        "Mythos",
+        "Tom Brown",
+        "inference stack"
+      ],
+      "topics": [
+        "Anthropic",
+        "IPO",
+        "multi-chip strategy",
+        "Claude",
+        "AMD GPU",
+        "AWS Trainium",
+        "Google TPU",
+        "NVIDIA GPU"
+      ],
+      "models": [
+        "Claude"
+      ],
+      "detailZh": "Anthropic在昨日启动IPO路演，其路演视频中包含一些此前未公开的业务运作信息。联合创始人Tom Brown负责的“Approach to compute”（算力策略）部分尤其引人关注，描述了Anthropic如何在AWS Trainium、Google TPU、NVIDIA GPU和AMD GPU上训练和提供Claude服务。\n\nTom Brown在视频中表示，Anthropic目前已在全部四大芯片家族上训练和提供Claude服务。他称这得益于公司早期对多芯片策略的一次“非常规押注”。当时许多人认为在不同芯片上运行AI模型不值得投入，因为每种芯片都需要各自定制的软件栈和推理栈，构建成本高、难度大。Anthropic已坚持多年，并称在这方面变得非常擅长。\n\n视频还举了一个具体例子：今年Anthropic首次开始使用AMD GPU。过去引入一个新的芯片平台需要数十名工程师花费数月时间，而这次他们让内部工具Mythos尝试，结果Mythos让Claude在AMD上运行起来，耗时大幅缩短。\n\n该信息来自Simon Willison对路演视频的整理。他表示不清楚为何没有官方视频文字稿，因此使用MacWhisper提取了转录文本。上述内容为转录摘录，部分句子在原文中即被截断。",
+      "keyPointsZh": [
+        "Anthropic已在AWS Trainium、Google TPU、NVIDIA GPU和AMD GPU四大芯片家族上训练和提供Claude服务。",
+        "联合创始人Tom Brown称，多芯片策略是公司早期的一次“非常规押注”，当时业界普遍认为不值得。",
+        "每种芯片需要独立的软件栈和推理栈，Anthropic称已积累多年经验。",
+        "今年Anthropic首次接入AMD GPU，并借助内部工具Mythos完成适配，耗时远低于过去数十名工程师数月的工作量。"
+      ],
+      "impactZh": "该披露显示头部大模型公司正在主动分散算力供应链，降低对单一芯片厂商的依赖，这对算力成本结构和芯片生态竞争具有信号意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用Claude的开发者而言，多芯片策略意味着服务容量和供应稳定性可能更有保障，但具体性能与价格影响尚未披露。",
+      "howItWorksZh": "",
+      "interpretationZh": "已披露的事实是：Anthropic在四种芯片上训练和提供Claude，并称多芯片适配能力已成熟，今年通过Mythos快速完成AMD GPU接入。可合理推断的是，多芯片策略有助于降低对单一供应商的依赖并提升议价能力，但视频未给出各芯片的负载比例、成本节省或性能对比数据。",
+      "limitationsZh": "信息来自第三方对路演视频的转录摘录，并非官方文字稿，部分句子被截断；Mythos的具体能力和AMD适配的实际耗时没有量化数据；各芯片在训练与推理中的分工、成本与性能差异均未披露。",
+      "actionStepsZh": [
+        "关注Anthropic官方后续是否发布路演视频完整文字稿以核实细节。",
+        "对算力成本敏感的团队可评估多芯片推理栈的可行性与迁移成本。",
+        "持续跟踪AMD GPU在大模型推理场景中的实际表现。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+          "publishedAt": "2026-11-11T15:11:59.000Z",
+          "title": "Anthropic's IPO roadshow video",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://ipo.anthropic.com/us/#roadshow-video",
+            "https://gist.github.com/simonw/9806757fe8acec6221cb0a5cce4d720d",
+            "https://www.anthropic.com/research/a-postmortem-of-three-recent-issues",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/llms",
+            "https://simonwillison.net/tags/anthropic",
+            "https://simonwillison.net/tags/gpus",
+            "https://simonwillison.net/tags/claude-mythos-fable",
+            "https://simonwillison.net/tags/recursive-self-improvement"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T15:11:59.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-11T15:11:59.000Z",
+            "label": "11/11 23:11",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "91652871d314100d",
+      "normalizedUrl": "https://a16z.news/p/welcome-to-the-b2a-economy",
+      "originalUrl": "https://www.a16z.news/p/welcome-to-the-b2a-economy",
+      "titleOriginal": "a16z 提出 B2A 经济：AI 智能体正成为互联网主要用户与流量来源",
+      "summaryOriginal": "a16z 发布分析文章，提出 B2A（Business to Agent）经济概念，认为 AI 智能体已构成互联网主要流量，并将替用户决定购买与订阅。",
+      "originalLanguage": "zh",
+      "author": "a16z：News（RSS）",
+      "category": "other",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/bisaluc0ii0f4s1gzi2zxbr1k",
+        "https://www.a16z.news/p/welcome-to-the-b2a-economy"
+      ],
+      "publishedAt": "2026-11-11T15:02:38.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-11T15:43:39.554Z",
+      "contentType": "opinion",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/bisaluc0ii0f4s1gzi2zxbr1k"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:bisaluc0ii0f4s1gzi2zxbr1k",
+          "name": "a16z：News（RSS）",
+          "type": "aggregator",
+          "url": "https://www.a16z.news/p/welcome-to-the-b2a-economy",
+          "publishedAt": "2026-11-11T15:02:38.000Z",
+          "title": "a16z 提出 B2A 经济：AI 智能体正成为互联网主要用户与流量来源",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/bisaluc0ii0f4s1gzi2zxbr1k",
+            "https://www.a16z.news/p/welcome-to-the-b2a-economy"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该文提出一个可能影响互联网商业模式与流量分配的新框架，但属于观点性分析，缺乏公开数据支撑。",
+      "importanceReasonEn": "The piece introduces a new framing that could affect internet business models and traffic distribution, but it is an opinion analysis without public supporting data.",
+      "scoringMode": "ai",
+      "titleZh": "a16z 提出 B2A 经济：AI 智能体正成为互联网主要用户与流量来源",
+      "titleEn": "a16z Proposes B2A Economy: AI Agents Are Becoming the Internet's Main Users and Traffic Source",
+      "summaryZh": "a16z 发布分析文章，提出 B2A（Business to Agent）经济概念，认为 AI 智能体已构成互联网主要流量，并将替用户决定购买与订阅。",
+      "summaryEn": "a16z published an analysis introducing the B2A (Business to Agent) economy concept, arguing that AI agents already make up a major share of internet traffic and will make purchasing and subscription decisions on users' behalf.",
+      "keywords": [
+        "B2A",
+        "Business to Agent",
+        "a16z",
+        "AI agents",
+        "agentic commerce",
+        "internet traffic"
+      ],
+      "topics": [
+        "AI agents",
+        "B2A economy",
+        "internet traffic",
+        "agentic commerce",
+        "subscriptions"
+      ],
+      "models": [],
+      "detailZh": "a16z 发布了一篇分析文章，提出 B2A（Business to Agent）经济这一概念。文章的核心主张是：AI 智能体已经构成互联网的主要流量来源，正在从辅助工具转变为互联网的主要“用户”。\n\n在这一框架下，企业不再只面向人类用户设计产品、内容和营销，而需要面向替人执行任务的智能体进行优化。文章进一步认为，智能体将替用户做出购买与订阅决定，从而改变商业转化路径。\n\n目前公开信息仅来自 a16z 的这篇文章本身，未提供流量占比、交易规模等具体数据，也未说明统计口径或样本来源。因此该判断应视为观点性预测，而非经过验证的行业事实。\n\n文章未披露具体产品、技术实现或时间表，属于对趋势的方向性判断。",
+      "keyPointsZh": [
+        "a16z 提出 B2A（Business to Agent）经济概念",
+        "文章认为 AI 智能体已构成互联网主要流量",
+        "文章认为智能体将替用户决定购买与订阅",
+        "该分析未公开具体流量或交易数据"
+      ],
+      "impactZh": "若该判断成立，互联网流量结构、营销投放与订阅转化逻辑都可能围绕智能体而非人类用户重构，企业需要重新考虑面向智能体的产品与内容设计。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是 a16z 发表了这一观点并提出 B2A 概念；至于智能体是否已成为互联网主要流量、是否会主导购买决策，属于文章的主张与推断，尚无公开数据佐证。",
+      "limitationsZh": "来源仅为 a16z 单篇分析文章，未提供流量占比、交易规模、统计口径或样本来源；B2A 目前是概念提法，尚无行业统一定义或验证数据。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:bisaluc0ii0f4s1gzi2zxbr1k",
+          "name": "a16z：News（RSS）",
+          "type": "aggregator",
+          "url": "https://www.a16z.news/p/welcome-to-the-b2a-economy",
+          "publishedAt": "2026-11-11T15:02:38.000Z",
+          "title": "a16z 提出 B2A 经济：AI 智能体正成为互联网主要用户与流量来源",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/bisaluc0ii0f4s1gzi2zxbr1k",
+            "https://www.a16z.news/p/welcome-to-the-b2a-economy"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T15:02:38.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-11T15:02:38.000Z",
+            "label": "11/11 23:02",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T15:34:39.378Z",
+            "label": "11/11 23:34",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "bc5d964e3327ab5e",
+      "normalizedUrl": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days",
+      "originalUrl": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+      "titleOriginal": "Anthropic says AI is eroding Nvidia&#039;s CUDA lead, cutting an AMD chip switch from months to three days",
+      "summaryOriginal": "Anthropic claims it used AI itself to breach Nvidia's CUDA moat. The company's in-house model Mythos reportedly ported Claude to AMD GPUs in just three days, with almost no human intervention. Anthropic now runs Claude on four chip families and aims to cut costs and reduce vendor dependencies. The article Anthropic says AI is eroding Nvidia&#039;s CUDA lead, cutting an AMD chip switch from months to three days appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Matthias Bastian",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/11/nvidia_moat.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-11-11T14:25:20.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+          "publishedAt": "2026-11-11T14:25:20.000Z",
+          "title": "Anthropic says AI is eroding Nvidia&#039;s CUDA lead, cutting an AMD chip switch from months to three days",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/nvidia_moat.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该消息涉及AI辅助完成跨芯片架构的软件迁移，若属实将直接挑战英伟达CUDA生态的锁定效应，对AI算力成本结构和硬件竞争格局有实质影响。",
+      "importanceReasonEn": "The claim concerns AI-assisted software migration across chip architectures; if accurate, it directly challenges Nvidia's CUDA lock-in and could materially affect AI compute cost structures and hardware competition.",
+      "scoringMode": "ai",
+      "titleZh": "Anthropic称AI正削弱英伟达CUDA优势，将AMD芯片迁移从数月缩短至三天",
+      "titleEn": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days",
+      "summaryZh": "Anthropic声称其利用自家AI模型Mythos，在几乎无人工干预的情况下，仅用三天就把Claude移植到AMD GPU上，从而突破了英伟达CUDA生态的壁垒。目前Claude已运行在四种芯片家族上，公司目标是降低成本并减少对单一供应商的依赖。",
+      "summaryEn": "Anthropic claims it used its own AI model, Mythos, to port Claude to AMD GPUs in just three days with almost no human intervention, breaching Nvidia's CUDA ecosystem barrier. Claude now runs on four chip families, with the company aiming to cut costs and reduce vendor dependencies.",
+      "keywords": [
+        "Anthropic",
+        "CUDA",
+        "AMD",
+        "GPU移植",
+        "Mythos",
+        "成本降低",
+        "供应商依赖"
+      ],
+      "topics": [
+        "AI芯片",
+        "CUDA生态",
+        "AMD GPU",
+        "AI辅助软件迁移",
+        "供应商多元化"
+      ],
+      "models": [
+        "Claude",
+        "Mythos"
+      ],
+      "detailZh": "Anthropic公开表示，其内部AI模型Mythos在几乎没有人工干预的情况下，仅用三天时间就将Claude移植到了AMD GPU上。相比之下，这类跨芯片架构的迁移通常需要数月工作量。Anthropic将这一结果描述为AI正在削弱英伟达CUDA生态的领先优势，因为CUDA长期被视为英伟达GPU最难被替代的护城河之一。\n\n据Anthropic介绍，目前Claude已经可以运行在四种不同的芯片家族上。公司推动这一工作的动机包括降低算力成本，以及减少对单一硬件供应商的依赖。\n\n需要说明的是，上述信息主要来自Anthropic自身的说法，报道中未提供移植的具体技术细节、性能对比数据或第三方验证。因此“三天完成迁移”和“几乎无人工干预”应视为公司声明，而非已独立核实的事实。",
+      "keyPointsZh": [
+        "Anthropic称其内部模型Mythos仅用三天就把Claude移植到AMD GPU，而此类工作通常需数月。",
+        "Anthropic表示该移植过程几乎无需人工干预。",
+        "Claude目前运行在四种芯片家族上。",
+        "Anthropic的目标是降低算力成本并减少对单一供应商的依赖。",
+        "相关说法来自Anthropic自身，尚无第三方验证或性能数据。"
+      ],
+      "impactZh": "CUDA生态长期是英伟达GPU的核心锁定机制，使客户迁移到其他芯片的成本极高。如果AI能够大幅压缩跨架构移植的时间和人力成本，硬件竞争的壁垒就会降低，云厂商和AI公司议价能力增强，长期可能影响GPU定价和算力供应格局。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用或自建AI基础设施的团队而言，这一说法暗示未来更换GPU供应商的迁移成本可能显著下降，采购时对单一硬件生态的顾虑会减少；但在获得独立验证和实际性能数据前，不宜据此调整采购或迁移决策。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：Anthropic声称用自家AI模型Mythos在三天内完成Claude向AMD GPU的移植，且Claude现已运行在四种芯片家族上。合理推断是：若此类AI辅助迁移可复现，将削弱CUDA作为锁定机制的作用。但报道未披露移植范围、性能损耗、稳定性及人工参与程度，因此不能等同于CUDA壁垒已被实质打破。",
+      "limitationsZh": "信息仅来自Anthropic单方面声明，缺少技术细节、性能基准、成本对比和第三方复现；不清楚“移植”覆盖多少代码与功能、是否存在性能损失，以及“几乎无人工干预”的具体含义。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+          "publishedAt": "2026-11-11T14:25:20.000Z",
+          "title": "Anthropic says AI is eroding Nvidia&#039;s CUDA lead, cutting an AMD chip switch from months to three days",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/nvidia_moat.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T14:25:20.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-11T14:25:20.000Z",
+            "label": "11/11 22:25",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T15:16:00.378Z",
+            "label": "11/11 23:16",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "87209848417b63cf",
+      "normalizedUrl": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads",
+      "originalUrl": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
+      "titleOriginal": "Plurai wants to help AI agents work better using the same approach that helped get self-driving cars to roads",
+      "summaryOriginal": "Like the end-to-end models trained to drive cars, AI agents are probabilistic systems operating in unpredictable environments.",
+      "originalLanguage": "en",
+      "author": "Tim Fernholz",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-11T14:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
+          "publishedAt": "2026-11-11T14:00:00.000Z",
+          "title": "Plurai wants to help AI agents work better using the same approach that helped get self-driving cars to roads",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该消息提出将自动驾驶的端到端训练思路迁移到 AI 智能体，属于方法论层面的行业动向，但来源信息有限，缺少具体产品、数据和验证结果。",
+      "importanceReasonEn": "The item proposes transferring end-to-end autonomous-driving training ideas to AI agents, an industry methodology trend, but source material is limited with no concrete product, data or validation results.",
+      "scoringMode": "ai",
+      "titleZh": "Plurai 借鉴自动驾驶训练方法，提升 AI 智能体可靠性",
+      "titleEn": "Plurai applies self-driving car training methods to improve AI agent reliability",
+      "summaryZh": "Plurai 希望借鉴让自动驾驶汽车上路的同类方法，帮助 AI 智能体更好地工作。与端到端训练的自动驾驶模型类似，AI 智能体是在不可预测环境中运行的概率性系统。",
+      "summaryEn": "Plurai wants to help AI agents work better using the same approach that helped get self-driving cars onto roads. Like end-to-end models trained to drive cars, AI agents are probabilistic systems operating in unpredictable environments.",
+      "keywords": [
+        "Plurai",
+        "AI agents",
+        "self-driving",
+        "end-to-end training",
+        "probabilistic systems"
+      ],
+      "topics": [
+        "AI agents",
+        "autonomous driving",
+        "agent reliability",
+        "AI training methods"
+      ],
+      "models": [],
+      "detailZh": "TechCrunch AI 报道称，Plurai 希望帮助 AI 智能体更好地工作，所采用的方法与推动自动驾驶汽车上路的思路相同。报道将 AI 智能体与端到端训练的自动驾驶模型进行类比：两者都是概率性系统，都需要在不可预测的环境中运行。\n\n目前可确认的信息仅限于这一类比和方法方向。报道没有披露 Plurai 的具体产品形态、训练流程、客户案例、性能数据或融资情况，也没有说明该方法在智能体场景中如何落地。\n\n从背景看，端到端自动驾驶强调用统一模型直接从感知输入学习驾驶行为，而非依赖大量手工规则；将这一思路用于智能体，意味着更强调在真实、多变环境中通过数据训练提升整体行为表现。但这一解读属于合理推断，并非报道明确给出的技术细节。\n\n由于信息有限，该消息更适合作为行业方向信号看待，尚不足以判断其实际效果或商业价值。",
+      "keyPointsZh": [
+        "Plurai 提出用自动驾驶领域的训练思路提升 AI 智能体表现",
+        "报道将 AI 智能体类比为在不可预测环境中运行的概率性系统",
+        "方法参照端到端训练的自动驾驶模型",
+        "报道未披露具体产品、性能数据或客户案例"
+      ],
+      "impactZh": "该消息反映 AI 智能体可靠性问题正吸引创业公司尝试跨领域方法，若思路可行，可能影响智能体训练与评估方式的演进方向。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道明确的事实是：Plurai 采用与自动驾驶相似的方法帮助 AI 智能体工作，并将智能体视为在不可预测环境中运行的概率性系统。合理推断是：这可能意味着用端到端数据驱动训练替代大量手工规则，但具体技术实现未被披露。",
+      "limitationsZh": "来源仅为一篇简短的行业报道，缺少产品细节、技术文档、基准测试、客户案例和效果数据；Plurai 的方法是否真正有效、与现有智能体方案相比有何优势均未经验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
+          "publishedAt": "2026-11-11T14:00:00.000Z",
+          "title": "Plurai wants to help AI agents work better using the same approach that helped get self-driving cars to roads",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T14:00:00.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-11-11T14:00:00.000Z",
+            "label": "11/11 22:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T14:42:13.585Z",
+            "label": "11/11 22:42",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:24:27.170Z",
+            "label": "11/11 23:24",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f083050eb798df23",
+      "normalizedUrl": "https://the-decoder.com/with-its-new-voice-model-deepl-voice-now-translates-intonation-and-speaking-speed-into-other-languages-as-well",
+      "originalUrl": "https://the-decoder.com/with-its-new-voice-model-deepl-voice-now-translates-intonation-and-speaking-speed-into-other-languages-as-well/",
+      "titleOriginal": "DeepL wants real-time translation to finally capture sarcasm and mood shifts",
+      "summaryOriginal": "DeepL Voice's real-time translations are about to sound a lot more natural. The company's new Aure model carries over tone, emotion, emphasis, and speaking pace from the original speaker's voice into the target language. The article DeepL wants real-time translation to finally capture sarcasm and mood shifts appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Jonathan Kemper",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/11/DeepL-Logo-ChatGPT-5.6.jpg"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/with-its-new-voice-model-deepl-voice-now-translates-intonation-and-speaking-speed-into-other-languages-as-well/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-11-11T13:50:30.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/with-its-new-voice-model-deepl-voice-now-translates-intonation-and-speaking-speed-into-other-languages-as-well/",
+          "publishedAt": "2026-11-11T13:50:30.000Z",
+          "title": "DeepL wants real-time translation to finally capture sarcasm and mood shifts",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/DeepL-Logo-ChatGPT-5.6.jpg"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/with-its-new-voice-model-deepl-voice-now-translates-intonation-and-speaking-speed-into-other-languages-as-well/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该消息涉及DeepL在实时语音翻译中引入情绪与语气保留能力，对翻译产品体验有实际意义，但来源信息有限，缺少技术细节与发布时间。",
+      "importanceReasonEn": "The item concerns DeepL adding emotion and tone preservation to real-time voice translation, which matters for translation product experience, but source material is limited with few technical details or timing.",
+      "scoringMode": "ai",
+      "titleZh": "DeepL希望实时翻译终于能捕捉讽刺语气与情绪变化",
+      "titleEn": "DeepL wants real-time translation to finally capture sarcasm and mood shifts",
+      "summaryZh": "DeepL Voice的实时翻译将听起来自然得多。该公司的新模型Aure会把原说话者声音中的语气、情绪、强调和语速带入目标语言。",
+      "summaryEn": "DeepL Voice's real-time translations are about to sound a lot more natural. The company's new Aure model carries over tone, emotion, emphasis, and speaking pace from the original speaker's voice into the target language.",
+      "keywords": [
+        "DeepL",
+        "Aure",
+        "real-time translation",
+        "voice translation",
+        "emotion preservation"
+      ],
+      "topics": [
+        "real-time translation",
+        "speech AI",
+        "DeepL",
+        "voice translation"
+      ],
+      "models": [
+        "Aure"
+      ],
+      "detailZh": "据The Decoder AI报道，DeepL正为其实时语音翻译产品DeepL Voice引入一项新能力：让翻译后的语音保留原说话者的语气、情绪、强调和语速。支撑这一功能的是DeepL的新模型Aure。\n\n报道称，DeepL Voice的实时翻译将因此听起来更自然。标题进一步指出，DeepL希望实时翻译能够捕捉讽刺语气和情绪变化，这意味着系统不仅要翻译字面内容，还要传递说话方式所携带的隐含态度。\n\n目前已知的信息集中在功能描述层面：Aure模型负责把原声中的语气、情绪、强调与语速迁移到目标语言。报道未披露模型架构、支持语言数量、延迟指标、上线时间或定价等细节。\n\n从产品定位看，这属于对现有实时翻译体验的改进，而非全新产品线。其价值在于减少机器翻译语音的平淡感，让跨语言交流更接近真人表达。",
+      "keyPointsZh": [
+        "DeepL推出新模型Aure，用于实时语音翻译",
+        "Aure可将原说话者的语气、情绪、强调和语速带入目标语言",
+        "该能力应用于DeepL Voice实时翻译产品",
+        "目标是让翻译语音更自然，并能传达讽刺等隐含语气",
+        "报道未披露技术细节、支持语言和上线时间"
+      ],
+      "impactZh": "实时语音翻译长期以准确传达字面意思为主，语气和情绪往往在转换中丢失。若DeepL能稳定保留这些副语言特征，跨语言会议、客服和内容本地化的体验会更接近真人交流，也可能推动同类产品在“表达自然度”上展开竞争。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用实时翻译的团队而言，翻译输出可能不再单调平淡，语气与强调的保留有助于减少跨语言沟通中的误解，尤其在涉及讽刺、委婉或情绪表达的场合。但具体效果仍需实际测试验证。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：DeepL有一个名为Aure的新模型，用于DeepL Voice实时翻译，并声称能保留语气、情绪、强调和语速。至于它如何实现、效果如何、何时可用，报道均未说明，属于尚待验证的部分。",
+      "limitationsZh": "来源仅为一篇简短报道，缺少模型架构、评测数据、支持语言、延迟和发布时间等信息。“捕捉讽刺”是报道标题层面的表述，实际能力未经独立验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/with-its-new-voice-model-deepl-voice-now-translates-intonation-and-speaking-speed-into-other-languages-as-well/",
+          "publishedAt": "2026-11-11T13:50:30.000Z",
+          "title": "DeepL wants real-time translation to finally capture sarcasm and mood shifts",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/DeepL-Logo-ChatGPT-5.6.jpg"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/with-its-new-voice-model-deepl-voice-now-translates-intonation-and-speaking-speed-into-other-languages-as-well/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T13:50:30.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-11T13:50:30.000Z",
+            "label": "11/11 21:50",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T14:35:53.585Z",
+            "label": "11/11 22:35",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:21:17.170Z",
+            "label": "11/11 23:21",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e09fad6dcc25f1ba",
+      "normalizedUrl": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu",
+      "originalUrl": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+      "titleOriginal": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "summaryOriginal": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "other",
+      "sourceType": "official",
+      "authority": 98,
+      "sourcePriority": 98,
+      "images": [
+        "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/esther_video_still.max-600x600.format-webp.webp"
+      ],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-11T09:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "google-ai",
+          "name": "Google AI",
+          "type": "official",
+          "url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+          "publishedAt": "2026-11-11T09:00:00.000Z",
+          "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+          "authority": 98,
+          "sourcePriority": 98,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/esther_video_still.max-600x600.format-webp.webp"
+          ],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 35,
+      "importanceReasonZh": "这是 Google Arts & Culture 上线的文化档案项目，属于文化数字化内容，与 AI 技术本身关联较弱。",
+      "importanceReasonEn": "This is a cultural archive launch on Google Arts & Culture; it is a digitization project with little direct connection to AI technology.",
+      "scoringMode": "ai",
+      "titleZh": "探索埃斯特·马兰古博士的艺术与遗产",
+      "titleEn": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "summaryZh": "埃斯特·马兰古博士生平与艺术的全新在线档案现已上线 Google Arts & Culture。",
+      "summaryEn": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
+      "keywords": [
+        "Esther Mahlangu",
+        "Google Arts & Culture",
+        "在线档案",
+        "艺术遗产"
+      ],
+      "topics": [
+        "艺术档案",
+        "Google Arts & Culture",
+        "文化遗产"
+      ],
+      "models": [],
+      "detailZh": "Google 宣布在 Google Arts & Culture 平台上线埃斯特·马兰古博士（Dr. Esther Mahlangu）生平与艺术的全新在线档案。该档案以在线形式集中呈现这位艺术家的生活与创作。\n\n目前公开信息仅说明档案已上线及其所在平台，未披露档案的具体内容构成、收录作品数量、策展方式或制作过程。\n\n从已知事实看，这是一项文化数字化发布，由 Google 方面对外公布，发布时间标注为 2026 年 11 月 11 日。",
+      "keyPointsZh": [
+        "Google Arts & Culture 上线埃斯特·马兰古博士的全新在线档案",
+        "档案主题为艺术家的生平与艺术",
+        "信息由 Google 官方发布"
+      ],
+      "impactZh": "该档案为公众在线了解埃斯特·马兰古博士的艺术与生平提供了一个集中入口，属于文化遗产数字化展示。",
+      "readerImpactZh": "普通读者可以通过 Google Arts & Culture 在线浏览该艺术家的生平与艺术档案。",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：Google 在 Google Arts & Culture 平台上线了关于埃斯特·马兰古博士的在线档案。至于档案包含哪些作品、采用何种数字化或策展技术，来源未作说明，无法进一步推断。",
+      "limitationsZh": "来源仅为一句话的发布说明，未提供档案内容、作品数量、策展细节或技术实现方式，也无法确认其与 AI 技术的具体关联。",
+      "actionStepsZh": [
+        "访问 Google Arts & Culture 查看该在线档案"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "google-ai",
+          "name": "Google AI",
+          "type": "official",
+          "url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+          "publishedAt": "2026-11-11T09:00:00.000Z",
+          "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+          "authority": 98,
+          "sourcePriority": 98,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/esther_video_still.max-600x600.format-webp.webp"
+          ],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T09:00:00.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 44,
+        "peak": 44,
+        "history": [
+          {
+            "at": "2026-11-11T09:00:00.000Z",
+            "label": "11/11 17:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T09:53:20.094Z",
+            "label": "11/11 17:53",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:46:40.189Z",
+            "label": "11/11 18:46",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T11:40:00.283Z",
+            "label": "11/11 19:40",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T12:33:20.378Z",
+            "label": "11/11 20:33",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T13:26:40.472Z",
+            "label": "11/11 21:26",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T14:20:00.567Z",
+            "label": "11/11 22:20",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:13:20.661Z",
+            "label": "11/11 23:13",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 44,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "19b4fcb1faac9c9b",
       "normalizedUrl": "https://huggingface.co/blog/qvac/botpsy",
@@ -37,48 +891,45 @@
           "resourceLinks": []
         }
       ],
-      "importance": 55,
-      "importanceReasonZh": "该项目展示了在端侧运行智能体式个人助理的可行方向，参数量低于十亿意味着对本地算力要求较低，对关注隐私和离线部署的开发者有参考价值；但来源信息有限，尚无独立评测。",
-      "importanceReasonEn": "The project points to a feasible direction for running an agentic personal assistant on-device; sub-billion parameters imply low local compute requirements, which is relevant to developers focused on privacy and offline deployment. However, source information is limited and no independent evaluation",
+      "importance": 45,
+      "importanceReasonZh": "该项目展示了在端侧运行十亿参数以下智能体模型的思路，对小模型与本地助理方向有一定参考价值，但现有信息非常有限。",
+      "importanceReasonEn": "The project illustrates an approach to running a sub-billion-parameter agentic model on-device, offering some reference value for small-model and local-assistant work, though available information is very limited.",
       "scoringMode": "ai",
       "titleZh": "BotPsy：搭载十亿参数以下智能体语言模型的端侧个人助理",
       "titleEn": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
-      "summaryZh": "BotPsy 是一个面向端侧部署的个人助理项目，其核心是一个参数量低于十亿的智能体语言模型，发布在 Hugging Face 上。",
-      "summaryEn": "BotPsy is an on-device personal assistant project built around a sub-billion-parameter agentic language model, released on Hugging Face.",
+      "summaryZh": "BotPsy 是一个端侧个人助理项目，其核心是一个参数量低于十亿的智能体语言模型，相关项目发布在 Hugging Face 上。",
+      "summaryEn": "BotPsy is an on-device personal assistant project built around a sub-billion-parameter agentic language model, published on Hugging Face.",
       "keywords": [
         "BotPsy",
-        "on-device",
-        "agentic language model",
-        "sub-billion parameters",
-        "personal assistant",
+        "on-device assistant",
+        "sub-billion parameter",
+        "agentic model",
         "Hugging Face"
       ],
       "topics": [
         "on-device AI",
-        "agentic LLM",
+        "agentic language model",
         "personal assistant",
         "small language models"
       ],
       "models": [
         "BotPsy"
       ],
-      "detailZh": "BotPsy 是一个发布在 Hugging Face 上的开源项目，定位为端侧个人助理，其核心是一个参数量低于十亿的智能体语言模型。所谓“智能体”通常指模型能够进行多步推理并调用工具或执行动作，而“端侧”意味着模型设计目标是在本地设备上运行，而非依赖云端服务。\n\n从标题信息看，该项目强调两个关键点：一是模型规模控制在十亿参数以下，以适配本地算力与存储限制；二是面向个人助理场景，可能涉及日程、信息查询或设备操作等任务。\n\n目前可获取的信息仅限于项目名称、定位和发布平台，缺少模型架构、训练数据、评测结果、许可证和具体功能说明等细节。因此无法确认其实际能力、运行所需硬件以及与其他端侧模型的对比表现。\n\n该项目的意义在于顺应了小模型与端侧智能体结合的趋势，但需要等待更完整的模型卡、代码仓库或演示后才能做出可靠判断。",
+      "detailZh": "BotPsy 是一个发布在 Hugging Face 上的端侧个人助理项目，其核心是一个参数量低于十亿的智能体语言模型。根据现有信息，该项目将个人助理功能与本地运行的智能体模型结合，目标是在设备端完成助理任务，而非依赖云端大模型。\n\n目前可确认的信息仅限于项目名称、定位（端侧个人助理）以及模型规模（十亿参数以下、具备智能体能力）和发布来源。关于其具体功能范围、支持的平台、模型架构、训练数据、评测结果以及开源许可证等细节，现有材料均未提供。\n\n由于信息有限，尚无法判断该项目的成熟度、实际可用性以及与其他端侧助理方案的差异。",
       "keyPointsZh": [
-        "BotPsy 是发布在 Hugging Face 上的端侧个人助理项目。",
-        "其核心模型参数量低于十亿，面向本地设备运行。",
-        "项目定位为智能体式语言模型，可能具备多步任务处理能力。",
-        "目前公开信息有限，缺少评测、架构和许可证等细节。"
+        "BotPsy 是一个端侧个人助理项目，发布在 Hugging Face 上。",
+        "其核心模型参数量低于十亿，并具备智能体能力。",
+        "项目定位为在本地设备上运行助理，而非依赖云端。",
+        "现有信息未披露具体功能、平台支持与评测结果。"
       ],
-      "impactZh": "该项目体现了端侧小模型与智能体结合的方向，若成熟可减少对云端的依赖，提升隐私性和离线可用性，对个人助理类应用的产品形态有潜在影响。",
+      "impactZh": "该项目体现了将智能体能力压缩到十亿参数以下模型并在端侧运行的探索方向，对小模型本地化部署具有一定参考意义。",
       "readerImpactZh": "",
-      "userImpactZh": "对开发者和 AI 用户而言，该项目提供了一个可探索的端侧智能体助理思路，但在缺少模型卡和评测的情况下，暂不适合直接用于生产环境。",
+      "userImpactZh": "对关注本地部署和隐私的开发者而言，该项目提供了一个小参数智能体助理的参考方向，但当前信息不足以直接评估或采用。",
       "howItWorksZh": "",
-      "interpretationZh": "从已披露信息看，BotPsy 试图用十亿参数以下的模型在本地设备上实现智能体式个人助理。这是合理的技术方向，但项目实际效果、工具调用能力和硬件门槛均未公开，需谨慎看待。",
-      "limitationsZh": "来源仅包含标题和发布平台，缺少模型卡、训练细节、基准测试、许可证和代码仓库信息；无法验证其智能体能力、运行硬件要求及实际可用性。",
+      "interpretationZh": "从已披露的信息看，BotPsy 的定位是端侧个人助理加小型智能体模型。这属于合理的方向性描述，但项目是否真正实现本地推理、智能体能力覆盖哪些任务，均无法从现有材料中确认。",
+      "limitationsZh": "现有信息仅包含项目名称、定位和模型规模，缺少功能说明、技术细节、评测数据和许可证信息，无法验证其实际效果与可用性。",
       "actionStepsZh": [
-        "访问 Hugging Face 上的 BotPsy 项目页面，查看模型卡和许可证。",
-        "关注项目是否提供代码仓库或演示，以评估实际功能。",
-        "在本地测试前确认硬件要求与量化版本情况。"
+        "在 Hugging Face 上查看 BotPsy 项目页面以获取模型卡和许可证信息。"
       ],
       "detailCompleteness": "limited",
       "visual": null,
@@ -101,9 +952,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T05:01:16.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
-        "current": 55,
-        "peak": 55,
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 50,
+        "peak": 50,
         "history": [
           {
             "at": "2026-11-11T05:01:16.000Z",
@@ -112,21 +963,459 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T05:55:28.893Z",
-            "label": "11/11 13:55",
-            "value": 28,
+            "at": "2026-11-11T06:01:45.523Z",
+            "label": "11/11 14:01",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:49:41.786Z",
-            "label": "11/11 14:49",
-            "value": 42,
+            "at": "2026-11-11T07:02:15.046Z",
+            "label": "11/11 15:02",
+            "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T08:02:44.569Z",
+            "label": "11/11 16:02",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T09:03:14.093Z",
+            "label": "11/11 17:03",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:03:43.616Z",
+            "label": "11/11 18:03",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T11:04:13.139Z",
+            "label": "11/11 19:04",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T12:04:42.662Z",
+            "label": "11/11 20:04",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T13:05:12.186Z",
+            "label": "11/11 21:05",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T14:05:41.709Z",
+            "label": "11/11 22:05",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:06:11.232Z",
+            "label": "11/11 23:06",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "4bd6d8fca0727cd4",
+      "normalizedUrl": "https://arxiv.org/abs/2611.12936",
+      "originalUrl": "https://arxiv.org/abs/2611.12936",
+      "titleOriginal": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
+      "summaryOriginal": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple visual tasks via a Source-Agreement Graduated Trust semi-supervised learning framework that leverages limited labeled data alongside abundant unlabeled data. Furthermore, predicted landslide regions provide explicit spatial guidance to a Vision-Language Model adapted through parameter-efficient fine-tuning, enabling comprehensive landslide reasoning. To support training and evaluation in this domain, we also present LandslideVL, the first benchmark for intelligent landslide analysis, combining visual imagery and newly introduced textual prompts. Comprehensive experiments across public datasets and LandslideVL demonstrate that LandslideFM achieves superior quantitative and qualitative performan",
+      "originalLanguage": "en",
+      "author": "Shanwen Wang, Sirui Wang, Xin Sun, Jungong Han",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/wangshanwen001/LandslideFM"
+      ],
+      "publishedAt": "2026-11-11T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.12936",
+          "publishedAt": "2026-11-11T05:00:00.000Z",
+          "title": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/wangshanwen001/LandslideFM"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文提出首个统一滑坡感知与理解的基础模型，并发布首个滑坡智能分析基准，将视觉检测与视觉语言推理结合，对灾害防治领域有潜在应用价值；但目前仅为 arXiv 摘要，缺少实验细节与可复现信息。",
+      "importanceReasonEn": "The paper proposes the first unified foundation model for landslide perception and understanding and releases the first benchmark for intelligent landslide analysis, combining visual detection with vision-language reasoning, with potential value for disaster prevention. However, only the arXiv abstr",
+      "scoringMode": "ai",
+      "titleZh": "LandslideFM：面向统一滑坡感知与理解的基础模型",
+      "titleEn": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
+      "summaryZh": "arXiv:2611.12936v1 公告类型：新论文。摘要：智能滑坡检测对防灾至关重要。然而，现有模型主要聚焦于孤立的视觉任务，需要大量标注数据，且缺乏深度分析与场景理解能力。为解决这些局限，我们提出 LandslideFM，这是首个将滑坡视觉感知任务与上下文解释相连接的统一基础模型。具体而言，LandslideFM 通过 Source-Agreement Graduated Trust 半监督学习框架适配多种视觉任务，利用有限的标注数据和丰富的无标注数据。此外，预测的滑坡区域为通过参数高效微调适配的视觉语言模型提供显式空间引导，从而实现全面的滑坡推理。为支持该领域的训练与评估，我们还提出了 LandslideVL，这是首个面向智能滑坡分析的基准，结合视觉影像与新引入的文本提示。在公开数据集和 LandslideVL 上的综合实验表明，LandslideFM 在定量和定性性能上均表现优越。",
+      "summaryEn": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple visual tasks via a Source-Agreement Graduated Trust semi-supervised learning framework that leverages limited labeled data alongside abundant unlabeled data. Furthermore, predicted landslide regions provide explicit spatial guidance to a Vision-Language Model adapted through parameter-efficient fine-t",
+      "keywords": [
+        "LandslideFM",
+        "LandslideVL",
+        "滑坡感知",
+        "半监督学习",
+        "视觉语言模型",
+        "参数高效微调",
+        "灾害分析基准"
+      ],
+      "topics": [
+        "滑坡检测",
+        "基础模型",
+        "半监督学习",
+        "视觉语言模型",
+        "灾害防治",
+        "遥感视觉"
+      ],
+      "models": [
+        "LandslideFM",
+        "LandslideVL"
+      ],
+      "detailZh": "该论文以 arXiv 预印本形式发布，摘要指出智能滑坡检测对防灾至关重要，但现有模型存在三方面局限：只处理孤立的视觉任务、依赖大量标注数据、缺乏深度分析与场景理解能力。\n\n为应对这些局限，作者提出 LandslideFM，称其为首个将滑坡视觉感知任务与上下文解释相连接的统一基础模型。在视觉感知方面，模型通过名为 Source-Agreement Graduated Trust 的半监督学习框架适配多种视觉任务，同时利用有限的标注数据和丰富的无标注数据。\n\n在理解与推理方面，模型预测出的滑坡区域会作为显式空间引导，输入到一个经过参数高效微调适配的视觉语言模型中，从而支持较全面的滑坡推理。\n\n为支持该领域的训练与评估，作者还提出 LandslideVL，称其为首个面向智能滑坡分析的基准，结合视觉影像与新引入的文本提示。摘要称，在公开数据集和 LandslideVL 上的综合实验显示，LandslideFM 在定量和定性性能上均表现优越，但摘要未给出具体指标数值。",
+      "keyPointsZh": [
+        "提出 LandslideFM，声称是首个统一滑坡视觉感知与上下文解释的基础模型。",
+        "采用 Source-Agreement Graduated Trust 半监督学习框架，结合有限标注数据与大量无标注数据适配多种视觉任务。",
+        "将预测的滑坡区域作为空间引导输入经参数高效微调的视觉语言模型，实现滑坡推理。",
+        "发布 LandslideVL，声称是首个结合视觉影像与文本提示的智能滑坡分析基准。",
+        "摘要称在公开数据集和 LandslideVL 上取得更优的定量与定性表现，但未披露具体数值。"
+      ],
+      "impactZh": "若该方法成立，滑坡检测可从单一视觉识别扩展到结合空间定位的文本推理，有助于在标注数据稀缺的灾害场景中降低数据依赖，并为滑坡分析提供统一评测基准。",
+      "readerImpactZh": "",
+      "userImpactZh": "对从事遥感、灾害监测或视觉语言模型应用的研究者与开发者而言，该工作提供了一个可参考的半监督多任务适配思路，以及一个结合图像与文本提示的滑坡分析评测基准；但摘要未提供代码、数据或具体指标，暂无法直接复现或部署。",
+      "howItWorksZh": "根据摘要，LandslideFM 包含两个相互衔接的部分：其一，视觉感知端使用 Source-Agreement Graduated Trust 半监督学习框架，在少量标注数据与大量无标注数据上适配多种滑坡视觉任务；其二，将预测出的滑坡区域作为显式空间引导，输入到通过参数高效微调适配的视觉语言模型，用于滑坡的上下文推理。评测侧则构建 LandslideVL 基准，将视觉影像与新引入的文本提示结合。摘要未披露网络结构、训练超参数或具体流程细节。",
+      "interpretationZh": "摘要陈述的事实包括：提出 LandslideFM 与 LandslideVL、使用半监督框架与参数高效微调的视觉语言模型、在公开数据集和自建基准上报告了更优表现。可合理推断的是，该方法试图用空间预测结果约束语言模型的推理输入，以减少纯文本推理与图像脱节的问题。但“首个”“优越性能”等表述均为作者自述，尚待独立验证。",
+      "limitationsZh": "当前仅有 arXiv 摘要，缺少具体实验数值、对比基线、数据集规模、消融结果与失败案例分析；未说明代码或数据是否公开；LandslideVL 的构建方式与文本提示来源未披露；“首个”与“优越性能”属作者声明，未经同行评审或独立复现验证。",
+      "actionStepsZh": [
+        "查阅 arXiv 原文以获取实验设置、对比基线与具体指标。",
+        "关注作者是否公开 LandslideFM 代码与 LandslideVL 基准数据。",
+        "在遥感或灾害监测项目中评估半监督适配与空间引导视觉语言推理思路的可行性。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.12936",
+          "publishedAt": "2026-11-11T05:00:00.000Z",
+          "title": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/wangshanwen001/LandslideFM"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T05:00:00.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-11T05:00:00.000Z",
+            "label": "11/11 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T06:00:36.432Z",
+            "label": "11/11 14:00",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T07:01:12.864Z",
+            "label": "11/11 15:01",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T08:01:49.297Z",
+            "label": "11/11 16:01",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T09:02:25.729Z",
+            "label": "11/11 17:02",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:03:02.161Z",
+            "label": "11/11 18:03",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T11:03:38.594Z",
+            "label": "11/11 19:03",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T12:04:15.026Z",
+            "label": "11/11 20:04",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T13:04:51.458Z",
+            "label": "11/11 21:04",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T14:05:27.891Z",
+            "label": "11/11 22:05",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:06:04.323Z",
+            "label": "11/11 23:06",
             "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e15dfd244ed580c8",
+      "normalizedUrl": "https://arxiv.org/abs/2611.12937",
+      "originalUrl": "https://arxiv.org/abs/2611.12937",
+      "titleOriginal": "Tracing Psychometric Inference in Large Language Models",
+      "summaryOriginal": "arXiv:2611.12937v1 Announce Type: new Abstract: Do large language models represent psychological constructs internally, or do they only generate outputs that resemble psychometric structure? We address this question using a cross-persona paradigm across 14 model variants from two families (Llama 3 and Qwen 2.5, 0.5B-14B, base and instruct). Given responses on one psychological scale from real individuals (N = 272 Taiwanese university students), models predict responses on six other scales. At the behavioral level, larger variants reproduce and amplify human cross-scale correlations; amplification persists after correcting the seven-scale human correlations for measurement attenuation. We then examine whether this structure is reflected internally. Contrastive direction analysis finds geometry aligned with the human matrix in larger instruct variants, but little alignment in base variants under this assay. Across models, geometry strength is associated with behavioral amplification (r = 0.68, p = 0.008; partial r = 0.69 controlling for log size). To relate internal structure to output behavior, a matched activation-probing paradigm shows that probe slopes vary less than behavioral s",
+      "originalLanguage": "en",
+      "author": "Chih-Hao Hsu, Feng-Chun B. Chou, Pin-Hao A. Chen",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-11T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.12937",
+          "publishedAt": "2026-11-11T05:00:00.000Z",
+          "title": "Tracing Psychometric Inference in Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究直接检验大语言模型是否在内部表征心理构念，而非仅模仿心理测量结构，并给出行为与内部几何之间的定量关联，对理解模型可解释性与心理测量应用有参考价值。",
+      "importanceReasonEn": "The study directly tests whether LLMs internally represent psychological constructs rather than merely mimicking psychometric structure, and provides a quantitative link between behavior and internal geometry, useful for interpretability and psychometric applications.",
+      "scoringMode": "ai",
+      "titleZh": "追踪大语言模型中的心理测量推断",
+      "titleEn": "Tracing Psychometric Inference in Large Language Models",
+      "summaryZh": "arXiv:2611.12937v1 新论文摘要：大语言模型是在内部表征心理构念，还是仅生成类似心理测量结构的结果？我们采用跨人格范式，覆盖两个系列（Llama 3 与 Qwen 2.5，0.5B-14B，基础版与指令版）的 14 个模型变体来回答这一问题。基于真实个体（N = 272 名台湾大学生）在一个心理量表上的作答，模型预测其在另外六个量表上的作答。在行为层面，较大变体复现并放大了人类的跨量表相关性；在针对七个人类量表相关性进行测量衰减校正后，放大效应依然存在。随后我们检验该结构是否在内部得到反映。对比方向分析发现，较大指令版变体的几何结构与人类矩阵对齐，而基础版变体在该检测下几乎无对齐。跨模型来看，几何强度与行为放大相关（r = 0.68，p = 0.008；控制对数规模后的偏相关 r = 0.69）。为将内部结构与输出行为联系起来，一项匹配的激活探测范式显示，探测斜率的变化小于行为……",
+      "summaryEn": "arXiv:2611.12937v1 Announce Type: new Abstract: Do large language models represent psychological constructs internally, or do they only generate outputs that resemble psychometric structure? We address this question using a cross-persona paradigm across 14 model variants from two families (Llama 3 and Qwen 2.5, 0.5B-14B, base and instruct). Given responses on one psychological scale from real individuals (N = 272 Taiwanese university students), models predict responses on six other scales. At the behavioral level, larger variants reproduce and amplify human cross-scale correlations; amplification persists after correcting the seven-scale human correlations for measurement attenuation. We then examine whether this structure is reflected internally. Contrastive direction analysis finds geome",
+      "keywords": [
+        "心理测量推断",
+        "跨人格范式",
+        "对比方向分析",
+        "激活探测",
+        "行为放大",
+        "内部几何"
+      ],
+      "topics": [
+        "心理测量学",
+        "大语言模型内部表征",
+        "跨人格推断",
+        "模型规模效应",
+        "可解释性"
+      ],
+      "models": [
+        "Llama 3",
+        "Qwen 2.5"
+      ],
+      "detailZh": "该论文关注一个核心问题：大语言模型是在内部真正表征心理构念，还是仅仅生成看起来具有心理测量结构的结果。研究采用跨人格范式，覆盖 Llama 3 和 Qwen 2.5 两个系列共 14 个模型变体，参数规模从 0.5B 到 14B，并区分基础版与指令版。\n\n实验以 272 名台湾大学生在一个人格或心理量表上的真实作答为输入，要求模型预测这些个体在另外六个量表上的作答。行为层面的结果显示，较大模型变体能够复现并放大人类跨量表相关性；即使对七个人类量表相关性进行测量衰减校正后，这种放大效应仍然存在。\n\n随后研究转向内部表征。对比方向分析发现，较大指令版模型的内部几何结构与人类相关矩阵对齐，而基础版变体在该检测下几乎无对齐。跨模型比较显示，几何强度与行为放大之间存在关联（r = 0.68，p = 0.008；控制对数规模后的偏相关 r = 0.69）。\n\n为连接内部结构与输出行为，研究还采用匹配的激活探测范式，摘要指出探测斜率的变化小于行为层面的变化，但该句在输入中被截断，完整结论未知。整体上，该研究提供了行为放大与内部几何对齐之间的初步定量证据，但具体机制、因果方向及跨文化泛化仍需进一步验证。",
+      "keyPointsZh": [
+        "研究覆盖 Llama 3 与 Qwen 2.5 两个系列共 14 个模型变体，参数规模 0.5B-14B，含基础版与指令版。",
+        "以 272 名台湾大学生在一个量表上的真实作答为输入，模型预测其在另外六个量表上的作答。",
+        "较大模型变体复现并放大了人类跨量表相关性，且在校正测量衰减后放大效应仍存在。",
+        "较大指令版模型的内部几何与人类相关矩阵对齐，基础版在该检测下几乎无对齐。",
+        "几何强度与行为放大相关（r = 0.68，p = 0.008；控制对数规模后偏相关 r = 0.69）。"
+      ],
+      "impactZh": "该研究为“大语言模型是否具有内部心理结构”提供了行为与内部表征两个层面的证据，并给出二者之间的定量关联，有助于推动心理测量学与模型可解释性交叉研究，也提醒在将模型用于心理推断时需关注规模与训练方式带来的放大效应。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用大语言模型进行心理测量或人格推断的研究者与开发者而言，该研究提示较大指令版模型可能放大人类跨量表相关性，在解读模型输出时需考虑规模与训练方式的影响，并谨慎对待基础版模型在该类任务上的内部对齐证据。",
+      "howItWorksZh": "研究采用跨人格范式：将真实个体在一个心理量表上的作答作为条件输入，让模型预测同一批个体在另外六个量表上的作答，从而在行为层面比较模型输出与人类跨量表相关矩阵。内部层面使用对比方向分析，检测模型激活空间中是否存在与人类相关矩阵对齐的几何结构；并使用匹配的激活探测范式，将内部探测斜率与行为输出联系起来。",
+      "interpretationZh": "论文报告的事实是：较大模型在行为上复现并放大人类跨量表相关性，较大指令版模型的内部几何与人类矩阵对齐，且几何强度与行为放大相关。可合理推断的是，模型规模与指令微调可能影响内部心理结构的形成与表达；但相关关系不等于因果，摘要未说明机制。",
+      "limitationsZh": "输入仅为论文摘要，且激活探测部分句子被截断，完整结论未知。样本为 272 名台湾大学生，跨文化泛化性未验证。研究为相关性分析，几何强度与行为放大的因果关系未确立。基础版变体在对比方向检测下对齐较弱，可能受检测方法限制。",
+      "actionStepsZh": [
+        "在复现或扩展该研究时，注意区分基础版与指令版模型，并报告参数规模。",
+        "对心理测量相关性分析考虑测量衰减校正，以避免低估或误读放大效应。",
+        "将内部几何分析与行为输出结合报告，避免仅凭行为相似性推断内部表征。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "控制对数规模后，几何强度与行为放大的偏相关（0.69）略高于原始相关（0.68），说明该关联并非仅由模型规模驱动。",
+        "data": [
+          {
+            "label": "几何强度与行为放大相关 r",
+            "value": 0.68,
+            "display": ""
+          },
+          {
+            "label": "控制对数规模后偏相关 r",
+            "value": 0.69,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.12937",
+          "publishedAt": "2026-11-11T05:00:00.000Z",
+          "title": "Tracing Psychometric Inference in Large Language Models",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T05:00:00.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-11T05:00:00.000Z",
+            "label": "11/11 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T06:00:36.432Z",
+            "label": "11/11 14:00",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T07:01:12.864Z",
+            "label": "11/11 15:01",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T08:01:49.297Z",
+            "label": "11/11 16:01",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T09:02:25.729Z",
+            "label": "11/11 17:02",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:03:02.161Z",
+            "label": "11/11 18:03",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T11:03:38.594Z",
+            "label": "11/11 19:03",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T12:04:15.026Z",
+            "label": "11/11 20:04",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T13:04:51.458Z",
+            "label": "11/11 21:04",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T14:05:27.891Z",
+            "label": "11/11 22:05",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:06:04.323Z",
+            "label": "11/11 23:06",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -168,20 +1457,21 @@
           "resourceLinks": []
         }
       ],
-      "importance": 72,
-      "importanceReasonZh": "该研究首次在真实同步辐射仪器上持续运行智能体系统，并用完整对话记录审计决策来源，为多智能体科学系统的设计提供了可复用的证据。",
-      "importanceReasonEn": "The study is among the first to sustain agentic operation on a real synchrotron instrument and audits decision provenance via complete transcripts, offering reusable evidence for designing multi-agent scientific systems.",
+      "importance": 62,
+      "importanceReasonZh": "该论文提供了在真实物理仪器上持续运行人类-智能体团队的实证证据，并通过完整对话记录审计决策来源与认知分工，对多智能体科学系统设计有直接参考价值。",
+      "importanceReasonEn": "The paper provides empirical evidence of sustained human-agent team operation on a real physical instrument and audits decision provenance and cognitive division of labor via complete transcripts, offering direct reference value for multi-agent scientific system design.",
       "scoringMode": "ai",
       "titleZh": "可审计的人类-智能体团队用于自主X射线实验",
       "titleEn": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
-      "summaryZh": "该研究利用基于经验证科学方法的编码智能体基础设施，在纳米颗粒超晶格上实现了自主同步辐射X射线实验，并依据完整的人-智能体与智能体-智能体对话记录进行审计，重建决策来源并刻画认知分工。",
-      "summaryEn": "Using coding-agent infrastructure grounded in validated scientific methods, this study demonstrates autonomous synchrotron X-ray experiments on nanoparticle superlattices and audits complete human-agent and agent-agent transcripts to reconstruct decision provenance and characterize the division of cognitive labor.",
+      "summaryZh": "arXiv:2611.12933v1 新论文摘要：闭环自主实验可加速科学发现，但实施成本限制了其可及性。智能体系统可能降低这一门槛，不过在物理仪器上持续运行仍基本未被探索。本研究利用基于经验证科学方法的编程智能体基础设施，在人类定义的不断演变的目标下，展示了针对纳米颗粒超晶格的自主同步辐射X射线实验。完整的人类-智能体与智能体-智能体对话记录支持审计，可重建决策来源并刻画认知分工。在三次实验中，61-67%的消息涉及解释或判断，而方法与科学贡献的占比从以搭建为主的第一实验的46%上升到后续实验的56-61%。来源追踪显示，59-68%的错误纠正涉及多方参与者，约一半的决策纳入了另一参与者的输入。这些结果可为多智能体科学系统的设计原则提供参考，并为未来的智能体框架、模型训练和可及性提供启示。",
+      "summaryEn": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined objectives. Complete human-agent and agent-agent transcripts enable an audit that reconstructs decision provenance and characterizes the division of cognitive labor. Across three experiments, 61-67% of messages involved interpretation or judgment, while the share of methodological and scientific contribution",
       "keywords": [
         "自主实验",
-        "智能体团队",
-        "X射线实验",
-        "决策溯源",
-        "认知分工"
+        "人类-智能体团队",
+        "决策来源",
+        "认知分工",
+        "同步辐射X射线",
+        "纳米颗粒超晶格"
       ],
       "topics": [
         "自主实验",
@@ -191,34 +1481,34 @@
         "可审计性"
       ],
       "models": [],
-      "detailZh": "该论文（arXiv:2611.12933v1）报告了在同步辐射光源上对纳米颗粒超晶格开展自主X射线实验的工作。研究团队采用以经验证科学方法为基础的编码智能体基础设施，在人类设定的、会随实验推进而变化的目标下，让智能体系统持续操作物理仪器。\n\n实验共进行三次。作者保留了完整的人-智能体与智能体-智能体对话记录，并据此开展审计，重建每一项决策的来源，并刻画人类与智能体之间的认知分工。\n\n审计结果显示，在三次实验中，61%至67%的消息涉及解释或判断。方法与科学类贡献的占比从第一次实验（以搭建为主）的46%上升到后续实验的56%至61%。在错误纠正方面，59%至68%涉及多个参与者；约一半的决策纳入了另一位参与者的输入。\n\n作者认为，这些结果可为多智能体科学系统的设计原则提供参考，并有助于未来智能体运行框架、模型训练以及更易获取的自主实验方案的设计。",
+      "detailZh": "该论文（arXiv:2611.12933v1）研究闭环自主实验的可及性问题。作者指出，闭环自主实验能加速科学发现，但实施成本高；智能体系统可能降低门槛，但在物理仪器上持续运行仍基本未被探索。\n\n研究采用基于经验证科学方法的编程智能体基础设施，在人类定义的、不断演变的目标下，对纳米颗粒超晶格开展自主同步辐射X射线实验。\n\n研究保留完整的人类-智能体与智能体-智能体对话记录，并据此进行审计，重建决策来源并刻画认知分工。三次实验的结果显示：61-67%的消息涉及解释或判断；方法与科学贡献的占比从以搭建为主的第一实验的46%上升到后续实验的56-61%。\n\n来源追踪还显示，59-68%的错误纠正涉及多方参与者，约一半的决策纳入了另一参与者的输入。作者认为，这些结果可为多智能体科学系统的设计原则提供参考，并启示未来的智能体框架、模型训练与可及性。",
       "keyPointsZh": [
-        "在同步辐射光源上对纳米颗粒超晶格完成了三次自主X射线实验。",
-        "完整保留人-智能体与智能体-智能体对话记录，用于审计决策来源。",
-        "61%至67%的消息涉及解释或判断；方法与科学贡献占比从46%升至56%至61%。",
-        "59%至68%的错误纠正涉及多个参与者，约一半决策纳入了他人输入。"
+        "在纳米颗粒超晶格上实现了自主同步辐射X射线实验，目标由人类定义并持续演变。",
+        "完整保留人类-智能体与智能体-智能体对话记录，用于审计决策来源和认知分工。",
+        "三次实验中61-67%的消息涉及解释或判断，方法与科学贡献占比从46%升至56-61%。",
+        "59-68%的错误纠正涉及多方参与者，约一半决策纳入了另一参与者的输入。"
       ],
-      "impactZh": "该工作表明智能体系统可以在真实物理仪器上持续运行，并提供了用对话记录审计科学决策的方法，这对自主实验的可信度评估和多智能体协作设计具有参考价值。",
+      "impactZh": "该工作把智能体从软件环境推进到真实物理仪器上的持续实验，并用可审计记录量化人类与智能体的分工，为多智能体科学系统的设计与评估提供了可复用的方法。",
       "readerImpactZh": "",
-      "userImpactZh": "对开发科学智能体的团队而言，该研究提示应保留完整交互记录以支持决策溯源，并在系统设计中显式安排人类与智能体之间的判断分工。",
-      "howItWorksZh": "系统以编码智能体基础设施为基础，将经验证的科学方法作为行动依据，在人类设定的目标下驱动机器执行同步辐射X射线实验。实验过程中，人类与智能体、智能体与智能体之间的全部消息被记录；审计时依据这些记录重建每项决策由谁提出、由谁修正，从而统计解释性消息占比、方法与科学贡献占比以及多参与者纠错的比例。",
-      "interpretationZh": "论文报告的是三次实验的审计统计结果，属于对协作过程的描述性分析。作者据此提出可指导多智能体科学系统设计的结论，但这些结论来自有限次数的实验，尚不能直接推广为普遍规律。",
-      "limitationsZh": "实验仅进行三次，样本量有限；统计结果描述的是消息与决策的分布，并未证明智能体判断的科学正确性；论文未提供与其他自主实验方案的对照；长期运行稳定性与跨仪器泛化能力尚未验证。",
+      "userImpactZh": "对开发多智能体系统的团队而言，该研究表明保留完整对话记录可用于审计决策来源、识别错误纠正中的协作模式，并可据此设计智能体框架与训练策略。",
+      "howItWorksZh": "研究使用基于经验证科学方法的编程智能体基础设施，在人类设定的目标下驱动同步辐射X射线实验；人类与智能体、智能体与智能体之间的完整对话被记录，随后通过审计重建每条决策的来源，并统计消息中解释/判断、方法与科学贡献的占比以及错误纠正的参与方数量。",
+      "interpretationZh": "报道事实：论文在三次实验中统计了消息类型占比、贡献占比变化和错误纠正的参与情况。合理推断：这些统计表明人类与智能体在实验中形成较紧密的协作，且随着实验推进，智能体承担的方法与科学贡献比例上升；但该推断基于单一论文的三次实验，尚需更多场景验证。",
+      "limitationsZh": "来源仅为论文摘要，缺少实验细节、样本规模、基线对比和统计显著性信息；三次实验的结论能否推广到其他仪器与任务尚不明确。",
       "actionStepsZh": [
-        "在科学智能体系统中保留完整的人机与机机对话记录，以支持决策溯源审计。",
-        "在设计多智能体协作时明确区分解释判断类与方法执行类任务的分工。",
-        "对错误纠正环节记录多参与者介入情况，用于评估协作质量。"
+        "在多智能体实验系统中保留完整的人类-智能体与智能体-智能体对话记录，以支持决策来源审计。",
+        "统计消息中解释/判断与方法贡献的占比，用于评估认知分工随实验阶段的演变。",
+        "记录错误纠正涉及哪些参与者，以识别协作瓶颈。"
       ],
-      "detailCompleteness": "full",
+      "detailCompleteness": "summary",
       "visual": {
         "type": "bar",
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "后续实验中方法与科学贡献占比（56%至61%）明显高于首次实验（46%），而解释或判断类消息占比与多参与者纠错占比均处于较高区间。",
+        "insightZh": "方法与科学贡献占比从第一实验的46%上升到后续实验的56-61%，同时61-67%的消息涉及解释或判断，59-68%的错误纠正涉及多方参与者。",
         "data": [
           {
-            "label": "首次实验方法与科学贡献占比",
+            "label": "第一实验方法与科学贡献占比",
             "value": 46,
             "display": ""
           },
@@ -233,22 +1523,22 @@
             "display": ""
           },
           {
-            "label": "解释或判断类消息占比下限",
+            "label": "消息涉及解释或判断占比下限",
             "value": 61,
             "display": ""
           },
           {
-            "label": "解释或判断类消息占比上限",
+            "label": "消息涉及解释或判断占比上限",
             "value": 67,
             "display": ""
           },
           {
-            "label": "多参与者纠错占比下限",
+            "label": "错误纠正涉及多方参与者占比下限",
             "value": 59,
             "display": ""
           },
           {
-            "label": "多参与者纠错占比上限",
+            "label": "错误纠正涉及多方参与者占比上限",
             "value": 68,
             "display": ""
           }
@@ -273,9 +1563,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T05:00:00.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
-        "current": 65,
-        "peak": 65,
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 59,
+        "peak": 59,
         "history": [
           {
             "at": "2026-11-11T05:00:00.000Z",
@@ -284,21 +1574,69 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T05:54:38.226Z",
-            "label": "11/11 13:54",
-            "value": 31,
+            "at": "2026-11-11T06:00:36.432Z",
+            "label": "11/11 14:00",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:49:16.452Z",
-            "label": "11/11 14:49",
-            "value": 48,
+            "at": "2026-11-11T07:01:12.864Z",
+            "label": "11/11 15:01",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
-            "value": 65,
+            "at": "2026-11-11T08:01:49.297Z",
+            "label": "11/11 16:01",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T09:02:25.729Z",
+            "label": "11/11 17:02",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:03:02.161Z",
+            "label": "11/11 18:03",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T11:03:38.594Z",
+            "label": "11/11 19:03",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T12:04:15.026Z",
+            "label": "11/11 20:04",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T13:04:51.458Z",
+            "label": "11/11 21:04",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T14:05:27.891Z",
+            "label": "11/11 22:05",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:06:04.323Z",
+            "label": "11/11 23:06",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -416,7 +1754,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T05:00:00.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -427,20 +1765,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T05:54:38.226Z",
-            "label": "11/11 13:54",
-            "value": 29,
+            "at": "2026-11-11T06:00:36.432Z",
+            "label": "11/11 14:00",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:49:16.452Z",
-            "label": "11/11 14:49",
-            "value": 44,
+            "at": "2026-11-11T07:01:12.864Z",
+            "label": "11/11 15:01",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T08:01:49.297Z",
+            "label": "11/11 16:01",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T09:02:25.729Z",
+            "label": "11/11 17:02",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:03:02.161Z",
+            "label": "11/11 18:03",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T11:03:38.594Z",
+            "label": "11/11 19:03",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T12:04:15.026Z",
+            "label": "11/11 20:04",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T13:04:51.458Z",
+            "label": "11/11 21:04",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T14:05:27.891Z",
+            "label": "11/11 22:05",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:06:04.323Z",
+            "label": "11/11 23:06",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 59,
             "reports": 1
           }
@@ -586,7 +1972,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T04:49:48.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -597,21 +1983,242 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T05:47:50.226Z",
-            "label": "11/11 13:47",
-            "value": 28,
+            "at": "2026-11-11T05:51:20.068Z",
+            "label": "11/11 13:51",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:45:52.452Z",
-            "label": "11/11 14:45",
-            "value": 42,
+            "at": "2026-11-11T06:52:52.137Z",
+            "label": "11/11 14:52",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T07:54:24.206Z",
+            "label": "11/11 15:54",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T08:55:56.274Z",
+            "label": "11/11 16:55",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T09:57:28.343Z",
+            "label": "11/11 17:57",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:59:00.412Z",
+            "label": "11/11 18:59",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T12:00:32.481Z",
+            "label": "11/11 20:00",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T13:02:04.549Z",
+            "label": "11/11 21:02",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T14:03:36.618Z",
+            "label": "11/11 22:03",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T15:05:08.687Z",
+            "label": "11/11 23:05",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "11568aa8dfcf9a3c",
+      "normalizedUrl": "https://huggingface.co/blog/token-pooling",
+      "originalUrl": "https://huggingface.co/blog/token-pooling",
+      "titleOriginal": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+      "summaryOriginal": "",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "opensource",
+      "sourceType": "official",
+      "authority": 94,
+      "sourcePriority": 95,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opensource",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "huggingface",
+          "name": "Hugging Face",
+          "type": "official",
+          "url": "https://huggingface.co/blog/token-pooling",
+          "publishedAt": "2026-11-11T00:00:00.000Z",
+          "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+          "authority": 94,
+          "sourcePriority": 95,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该条目涉及多向量嵌入模型的训练优化，对检索与嵌入模型开发者有潜在价值，但来源仅有标题，无法核实具体方法与效果。",
+      "importanceReasonEn": "The item concerns training optimization for multi-vector embedding models and may be useful to retrieval and embedding developers, but only a title is available, so the method and results cannot be verified.",
+      "scoringMode": "ai",
+      "titleZh": "面向多向量嵌入模型的Token池化感知训练",
+      "titleEn": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+      "summaryZh": "Hugging Face 发布了一项面向多向量嵌入模型的 Token 池化感知训练方法，但来源仅提供标题，缺少正文细节。",
+      "summaryEn": "Hugging Face released a token pooling-aware training method for multi-vector embedding models, but the source provides only a title with no body details.",
+      "keywords": [
+        "token pooling",
+        "multi-vector embedding",
+        "Hugging Face",
+        "训练方法"
+      ],
+      "topics": [
+        "多向量嵌入",
+        "Token池化",
+        "嵌入模型训练"
+      ],
+      "models": [],
+      "detailZh": "该条目来自 Hugging Face，标题为“面向多向量嵌入模型的Token池化感知训练”。多向量嵌入模型通常为一段文本生成多个向量表示，再通过池化等操作聚合或压缩这些向量，以平衡检索效果与存储、计算成本。标题暗示该方法在训练阶段就考虑后续的 Token 池化操作，使模型学到的表示更适合被池化压缩。\n\n然而，来源仅提供标题，没有摘要、正文、代码链接或实验数据。因此无法确认其具体技术路线、池化策略、所基于的模型、评测数据集以及效果提升幅度。\n\n目前可确认的事实仅限于：发布方为 Hugging Face，主题是多向量嵌入模型的 Token 池化感知训练，发布时间标注为 2026 年 11 月 11 日。其余内容均属未知，需等待原文或代码发布后再评估。",
+      "keyPointsZh": [
+        "发布方为 Hugging Face，主题是多向量嵌入模型的 Token 池化感知训练。",
+        "来源仅提供标题，缺少方法细节、实验数据与代码链接。",
+        "多向量嵌入模型常用于检索场景，池化会影响效果与存储成本。",
+        "该方法的具体技术路线与效果提升幅度目前无法核实。"
+      ],
+      "impactZh": "若该方法有效，可能帮助多向量嵌入模型在池化压缩后保持更好的检索质量，从而降低存储与计算开销；但在缺少正文与实验数据的情况下，其实际影响尚无法判断。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用多向量嵌入模型做检索的开发者而言，该方法若被验证有效，可能提供一种在训练阶段适配池化压缩的思路；目前尚无可用代码或配置细节，暂无法直接采用。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：Hugging Face 发布了一个关于多向量嵌入模型 Token 池化感知训练的条目。合理推断是：该方法可能让模型在训练时考虑后续池化操作，以减轻池化带来的表示损失。但这一推断缺乏原文支持，具体机制与效果均未确认。",
+      "limitationsZh": "来源仅有标题，没有摘要、正文、代码或实验数据；无法确认方法细节、基线模型、评测结果与可复现性。发布时间与内容真实性也需以原文为准。",
+      "actionStepsZh": [
+        "关注 Hugging Face 官方发布渠道，等待该方法的正文或代码链接。",
+        "在原文发布后，核对其实验设置与基线，评估是否适用于自身检索场景。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "huggingface",
+          "name": "Hugging Face",
+          "type": "official",
+          "url": "https://huggingface.co/blog/token-pooling",
+          "publishedAt": "2026-11-11T00:00:00.000Z",
+          "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+          "authority": 94,
+          "sourcePriority": 95,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T00:00:00.000Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-11-11T00:00:00.000Z",
+            "label": "11/11 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T01:27:52.796Z",
+            "label": "11/11 09:27",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T02:55:45.592Z",
+            "label": "11/11 10:55",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T04:23:38.388Z",
+            "label": "11/11 12:23",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T05:51:31.184Z",
+            "label": "11/11 13:51",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T07:19:23.980Z",
+            "label": "11/11 15:19",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T08:47:16.776Z",
+            "label": "11/11 16:47",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:15:09.572Z",
+            "label": "11/11 18:15",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T11:43:02.368Z",
+            "label": "11/11 19:43",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T13:10:55.164Z",
+            "label": "11/11 21:10",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T14:38:47.960Z",
+            "label": "11/11 22:38",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -729,7 +2336,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T00:00:00.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 57,
         "peak": 57,
         "history": [
@@ -740,50 +2347,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T00:57:59.334Z",
-            "label": "11/11 08:57",
-            "value": 19,
+            "at": "2026-11-11T01:27:52.796Z",
+            "label": "11/11 09:27",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:55:58.669Z",
-            "label": "11/11 09:55",
-            "value": 25,
+            "at": "2026-11-11T02:55:45.592Z",
+            "label": "11/11 10:55",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:53:58.004Z",
-            "label": "11/11 10:53",
+            "at": "2026-11-11T04:23:38.388Z",
+            "label": "11/11 12:23",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T05:51:31.184Z",
+            "label": "11/11 13:51",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:51:57.339Z",
-            "label": "11/11 11:51",
-            "value": 36,
+            "at": "2026-11-11T07:19:23.980Z",
+            "label": "11/11 15:19",
+            "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:49:56.674Z",
-            "label": "11/11 12:49",
+            "at": "2026-11-11T08:47:16.776Z",
+            "label": "11/11 16:47",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:15:09.572Z",
+            "label": "11/11 18:15",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:47:56.009Z",
-            "label": "11/11 13:47",
-            "value": 46,
+            "at": "2026-11-11T11:43:02.368Z",
+            "label": "11/11 19:43",
+            "value": 45,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:45:55.344Z",
-            "label": "11/11 14:45",
-            "value": 52,
+            "at": "2026-11-11T13:10:55.164Z",
+            "label": "11/11 21:10",
+            "value": 49,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T14:38:47.960Z",
+            "label": "11/11 22:38",
+            "value": 53,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 57,
             "reports": 1
           }
@@ -916,7 +2541,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T00:00:00.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -927,50 +2552,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T00:57:59.334Z",
-            "label": "11/11 08:57",
-            "value": 20,
+            "at": "2026-11-11T01:27:52.796Z",
+            "label": "11/11 09:27",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:55:58.669Z",
-            "label": "11/11 09:55",
-            "value": 27,
+            "at": "2026-11-11T02:55:45.592Z",
+            "label": "11/11 10:55",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:53:58.004Z",
-            "label": "11/11 10:53",
-            "value": 33,
+            "at": "2026-11-11T04:23:38.388Z",
+            "label": "11/11 12:23",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:51:57.339Z",
-            "label": "11/11 11:51",
-            "value": 39,
+            "at": "2026-11-11T05:51:31.184Z",
+            "label": "11/11 13:51",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:49:56.674Z",
-            "label": "11/11 12:49",
+            "at": "2026-11-11T07:19:23.980Z",
+            "label": "11/11 15:19",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T08:47:16.776Z",
+            "label": "11/11 16:47",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T10:15:09.572Z",
+            "label": "11/11 18:15",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:47:56.009Z",
-            "label": "11/11 13:47",
-            "value": 52,
+            "at": "2026-11-11T11:43:02.368Z",
+            "label": "11/11 19:43",
+            "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:45:55.344Z",
-            "label": "11/11 14:45",
-            "value": 58,
+            "at": "2026-11-11T13:10:55.164Z",
+            "label": "11/11 21:10",
+            "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T14:38:47.960Z",
+            "label": "11/11 22:38",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 65,
             "reports": 1
           }
@@ -1086,7 +2729,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T20:52:56.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1097,68 +2740,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T21:52:06.789Z",
-            "label": "11/11 05:52",
+            "at": "2026-11-10T22:37:49.159Z",
+            "label": "11/11 06:37",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-10T22:51:17.578Z",
-            "label": "11/11 06:51",
+            "at": "2026-11-11T00:22:42.319Z",
+            "label": "11/11 08:22",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:50:28.367Z",
-            "label": "11/11 07:50",
+            "at": "2026-11-11T02:07:35.478Z",
+            "label": "11/11 10:07",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:49:39.156Z",
-            "label": "11/11 08:49",
+            "at": "2026-11-11T03:52:28.638Z",
+            "label": "11/11 11:52",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:48:49.945Z",
-            "label": "11/11 09:48",
+            "at": "2026-11-11T05:37:21.798Z",
+            "label": "11/11 13:37",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:48:00.734Z",
-            "label": "11/11 10:48",
+            "at": "2026-11-11T07:22:14.957Z",
+            "label": "11/11 15:22",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:47:11.523Z",
-            "label": "11/11 11:47",
+            "at": "2026-11-11T09:07:08.117Z",
+            "label": "11/11 17:07",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:46:22.312Z",
-            "label": "11/11 12:46",
+            "at": "2026-11-11T10:52:01.277Z",
+            "label": "11/11 18:52",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:45:33.101Z",
-            "label": "11/11 13:45",
+            "at": "2026-11-11T12:36:54.436Z",
+            "label": "11/11 20:36",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:44:43.890Z",
-            "label": "11/11 14:44",
+            "at": "2026-11-11T14:21:47.596Z",
+            "label": "11/11 22:21",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 65,
             "reports": 1
           }
@@ -1342,7 +2985,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T20:09:44.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1353,68 +2996,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T21:12:50.425Z",
-            "label": "11/11 05:12",
+            "at": "2026-11-10T21:58:32.796Z",
+            "label": "11/11 05:58",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-10T22:15:56.850Z",
-            "label": "11/11 06:15",
+            "at": "2026-11-10T23:47:21.592Z",
+            "label": "11/11 07:47",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:19:03.276Z",
-            "label": "11/11 07:19",
+            "at": "2026-11-11T01:36:10.388Z",
+            "label": "11/11 09:36",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:22:09.701Z",
-            "label": "11/11 08:22",
+            "at": "2026-11-11T03:24:59.184Z",
+            "label": "11/11 11:24",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:25:16.126Z",
-            "label": "11/11 09:25",
+            "at": "2026-11-11T05:13:47.980Z",
+            "label": "11/11 13:13",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:28:22.552Z",
-            "label": "11/11 10:28",
+            "at": "2026-11-11T07:02:36.776Z",
+            "label": "11/11 15:02",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:31:28.977Z",
-            "label": "11/11 11:31",
+            "at": "2026-11-11T08:51:25.572Z",
+            "label": "11/11 16:51",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:34:35.402Z",
-            "label": "11/11 12:34",
+            "at": "2026-11-11T10:40:14.368Z",
+            "label": "11/11 18:40",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:37:41.828Z",
-            "label": "11/11 13:37",
+            "at": "2026-11-11T12:29:03.164Z",
+            "label": "11/11 20:29",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:40:48.253Z",
-            "label": "11/11 14:40",
+            "at": "2026-11-11T14:17:51.960Z",
+            "label": "11/11 22:17",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 65,
             "reports": 1
           }
@@ -1516,7 +3159,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T19:03:52.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -1527,68 +3170,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T20:12:57.698Z",
-            "label": "11/11 04:12",
+            "at": "2026-11-10T20:58:40.068Z",
+            "label": "11/11 04:58",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:22:03.396Z",
-            "label": "11/11 05:22",
+            "at": "2026-11-10T22:53:28.137Z",
+            "label": "11/11 06:53",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-10T22:31:09.094Z",
-            "label": "11/11 06:31",
+            "at": "2026-11-11T00:48:16.206Z",
+            "label": "11/11 08:48",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:40:14.792Z",
-            "label": "11/11 07:40",
+            "at": "2026-11-11T02:43:04.274Z",
+            "label": "11/11 10:43",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:49:20.490Z",
-            "label": "11/11 08:49",
+            "at": "2026-11-11T04:37:52.343Z",
+            "label": "11/11 12:37",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:58:26.188Z",
-            "label": "11/11 09:58",
+            "at": "2026-11-11T06:32:40.412Z",
+            "label": "11/11 14:32",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:07:31.886Z",
-            "label": "11/11 11:07",
+            "at": "2026-11-11T08:27:28.481Z",
+            "label": "11/11 16:27",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:16:37.584Z",
-            "label": "11/11 12:16",
+            "at": "2026-11-11T10:22:16.549Z",
+            "label": "11/11 18:22",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:25:43.282Z",
-            "label": "11/11 13:25",
+            "at": "2026-11-11T12:17:04.618Z",
+            "label": "11/11 20:17",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:34:48.980Z",
-            "label": "11/11 14:34",
+            "at": "2026-11-11T14:11:52.687Z",
+            "label": "11/11 22:11",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 55,
             "reports": 1
           }
@@ -1698,7 +3341,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T19:00:00.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -1709,68 +3352,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T20:09:26.789Z",
-            "label": "11/11 04:09",
+            "at": "2026-11-10T20:55:09.159Z",
+            "label": "11/11 04:55",
             "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:18:53.578Z",
-            "label": "11/11 05:18",
+            "at": "2026-11-10T22:50:18.319Z",
+            "label": "11/11 06:50",
             "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-11-10T22:28:20.367Z",
-            "label": "11/11 06:28",
+            "at": "2026-11-11T00:45:27.478Z",
+            "label": "11/11 08:45",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:37:47.156Z",
-            "label": "11/11 07:37",
+            "at": "2026-11-11T02:40:36.638Z",
+            "label": "11/11 10:40",
             "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:47:13.945Z",
-            "label": "11/11 08:47",
+            "at": "2026-11-11T04:35:45.798Z",
+            "label": "11/11 12:35",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:56:40.734Z",
-            "label": "11/11 09:56",
+            "at": "2026-11-11T06:30:54.957Z",
+            "label": "11/11 14:30",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:06:07.523Z",
-            "label": "11/11 11:06",
+            "at": "2026-11-11T08:26:04.117Z",
+            "label": "11/11 16:26",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:15:34.312Z",
-            "label": "11/11 12:15",
+            "at": "2026-11-11T10:21:13.277Z",
+            "label": "11/11 18:21",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:25:01.101Z",
-            "label": "11/11 13:25",
+            "at": "2026-11-11T12:16:22.436Z",
+            "label": "11/11 20:16",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:34:27.890Z",
-            "label": "11/11 14:34",
+            "at": "2026-11-11T14:11:31.596Z",
+            "label": "11/11 22:11",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 50,
             "reports": 1
           }
@@ -1917,7 +3560,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T18:41:52.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1928,68 +3571,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T19:52:57.698Z",
-            "label": "11/11 03:52",
+            "at": "2026-11-10T20:38:40.068Z",
+            "label": "11/11 04:38",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:04:03.396Z",
-            "label": "11/11 05:04",
+            "at": "2026-11-10T22:35:28.137Z",
+            "label": "11/11 06:35",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-10T22:15:09.094Z",
-            "label": "11/11 06:15",
+            "at": "2026-11-11T00:32:16.206Z",
+            "label": "11/11 08:32",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:26:14.792Z",
-            "label": "11/11 07:26",
+            "at": "2026-11-11T02:29:04.274Z",
+            "label": "11/11 10:29",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:37:20.490Z",
-            "label": "11/11 08:37",
+            "at": "2026-11-11T04:25:52.343Z",
+            "label": "11/11 12:25",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:48:26.188Z",
-            "label": "11/11 09:48",
+            "at": "2026-11-11T06:22:40.412Z",
+            "label": "11/11 14:22",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:59:31.886Z",
-            "label": "11/11 10:59",
+            "at": "2026-11-11T08:19:28.481Z",
+            "label": "11/11 16:19",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:10:37.584Z",
-            "label": "11/11 12:10",
+            "at": "2026-11-11T10:16:16.549Z",
+            "label": "11/11 18:16",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:21:43.282Z",
-            "label": "11/11 13:21",
+            "at": "2026-11-11T12:13:04.618Z",
+            "label": "11/11 20:13",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:32:48.980Z",
-            "label": "11/11 14:32",
+            "at": "2026-11-11T14:09:52.687Z",
+            "label": "11/11 22:09",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 65,
             "reports": 1
           }
@@ -2132,7 +3775,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T18:19:13.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2143,68 +3786,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T19:32:22.243Z",
-            "label": "11/11 03:32",
+            "at": "2026-11-10T20:18:04.614Z",
+            "label": "11/11 04:18",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-10T20:45:31.487Z",
-            "label": "11/11 04:45",
+            "at": "2026-11-10T22:16:56.228Z",
+            "label": "11/11 06:16",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:58:40.730Z",
-            "label": "11/11 05:58",
+            "at": "2026-11-11T00:15:47.842Z",
+            "label": "11/11 08:15",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:11:49.974Z",
-            "label": "11/11 07:11",
+            "at": "2026-11-11T02:14:39.456Z",
+            "label": "11/11 10:14",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:24:59.217Z",
-            "label": "11/11 08:24",
+            "at": "2026-11-11T04:13:31.070Z",
+            "label": "11/11 12:13",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:38:08.461Z",
-            "label": "11/11 09:38",
+            "at": "2026-11-11T06:12:22.685Z",
+            "label": "11/11 14:12",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:51:17.704Z",
-            "label": "11/11 10:51",
+            "at": "2026-11-11T08:11:14.299Z",
+            "label": "11/11 16:11",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:04:26.948Z",
-            "label": "11/11 12:04",
+            "at": "2026-11-11T10:10:05.913Z",
+            "label": "11/11 18:10",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:17:36.191Z",
-            "label": "11/11 13:17",
+            "at": "2026-11-11T12:08:57.527Z",
+            "label": "11/11 20:08",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:30:45.435Z",
-            "label": "11/11 14:30",
+            "at": "2026-11-11T14:07:49.141Z",
+            "label": "11/11 22:07",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 65,
             "reports": 1
           }
@@ -2309,7 +3952,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T17:30:00.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -2320,68 +3963,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T18:47:37.698Z",
-            "label": "11/11 02:47",
+            "at": "2026-11-10T19:33:20.068Z",
+            "label": "11/11 03:33",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-10T20:05:15.396Z",
-            "label": "11/11 04:05",
+            "at": "2026-11-10T21:36:40.137Z",
+            "label": "11/11 05:36",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:22:53.094Z",
-            "label": "11/11 05:22",
+            "at": "2026-11-10T23:40:00.206Z",
+            "label": "11/11 07:40",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-10T22:40:30.792Z",
-            "label": "11/11 06:40",
+            "at": "2026-11-11T01:43:20.274Z",
+            "label": "11/11 09:43",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:58:08.490Z",
-            "label": "11/11 07:58",
+            "at": "2026-11-11T03:46:40.343Z",
+            "label": "11/11 11:46",
             "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:15:46.188Z",
-            "label": "11/11 09:15",
+            "at": "2026-11-11T05:50:00.412Z",
+            "label": "11/11 13:50",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:33:23.886Z",
-            "label": "11/11 10:33",
+            "at": "2026-11-11T07:53:20.481Z",
+            "label": "11/11 15:53",
             "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:51:01.584Z",
-            "label": "11/11 11:51",
+            "at": "2026-11-11T09:56:40.549Z",
+            "label": "11/11 17:56",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:08:39.282Z",
-            "label": "11/11 13:08",
+            "at": "2026-11-11T12:00:00.618Z",
+            "label": "11/11 20:00",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:26:16.980Z",
-            "label": "11/11 14:26",
+            "at": "2026-11-11T14:03:20.687Z",
+            "label": "11/11 22:03",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 55,
             "reports": 1
           }
@@ -2504,7 +4147,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T17:11:10.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2515,68 +4158,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T18:30:30.425Z",
-            "label": "11/11 02:30",
+            "at": "2026-11-10T19:16:12.796Z",
+            "label": "11/11 03:16",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-10T19:49:50.850Z",
-            "label": "11/11 03:49",
+            "at": "2026-11-10T21:21:15.592Z",
+            "label": "11/11 05:21",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:09:11.276Z",
-            "label": "11/11 05:09",
+            "at": "2026-11-10T23:26:18.388Z",
+            "label": "11/11 07:26",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-10T22:28:31.701Z",
-            "label": "11/11 06:28",
+            "at": "2026-11-11T01:31:21.184Z",
+            "label": "11/11 09:31",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:47:52.126Z",
-            "label": "11/11 07:47",
+            "at": "2026-11-11T03:36:23.980Z",
+            "label": "11/11 11:36",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T01:07:12.552Z",
-            "label": "11/11 09:07",
+            "at": "2026-11-11T05:41:26.776Z",
+            "label": "11/11 13:41",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:26:32.977Z",
-            "label": "11/11 10:26",
+            "at": "2026-11-11T07:46:29.572Z",
+            "label": "11/11 15:46",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:45:53.402Z",
-            "label": "11/11 11:45",
+            "at": "2026-11-11T09:51:32.368Z",
+            "label": "11/11 17:51",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-11T05:05:13.828Z",
-            "label": "11/11 13:05",
+            "at": "2026-11-11T11:56:35.164Z",
+            "label": "11/11 19:56",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:24:34.253Z",
-            "label": "11/11 14:24",
+            "at": "2026-11-11T14:01:37.960Z",
+            "label": "11/11 22:01",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 65,
             "reports": 1
           }
@@ -2697,7 +4340,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T16:23:20.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -2708,68 +4351,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T17:47:01.334Z",
-            "label": "11/11 01:47",
+            "at": "2026-11-10T18:32:43.705Z",
+            "label": "11/11 02:32",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-10T19:10:42.668Z",
-            "label": "11/11 03:10",
+            "at": "2026-11-10T20:42:07.410Z",
+            "label": "11/11 04:42",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-10T20:34:24.003Z",
-            "label": "11/11 04:34",
+            "at": "2026-11-10T22:51:31.115Z",
+            "label": "11/11 06:51",
             "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:58:05.337Z",
-            "label": "11/11 05:58",
+            "at": "2026-11-11T01:00:54.820Z",
+            "label": "11/11 09:00",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:21:46.672Z",
-            "label": "11/11 07:21",
+            "at": "2026-11-11T03:10:18.525Z",
+            "label": "11/11 11:10",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:45:28.006Z",
-            "label": "11/11 08:45",
+            "at": "2026-11-11T05:19:42.230Z",
+            "label": "11/11 13:19",
             "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:09:09.341Z",
-            "label": "11/11 10:09",
+            "at": "2026-11-11T07:29:05.935Z",
+            "label": "11/11 15:29",
             "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:32:50.675Z",
-            "label": "11/11 11:32",
+            "at": "2026-11-11T09:38:29.640Z",
+            "label": "11/11 17:38",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:56:32.010Z",
-            "label": "11/11 12:56",
+            "at": "2026-11-11T11:47:53.345Z",
+            "label": "11/11 19:47",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:20:13.344Z",
-            "label": "11/11 14:20",
+            "at": "2026-11-11T13:57:17.050Z",
+            "label": "11/11 21:57",
             "value": 60,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 65,
             "reports": 1
           }
@@ -2880,7 +4523,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T16:03:47.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -2891,68 +4534,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T17:29:14.970Z",
-            "label": "11/11 01:29",
+            "at": "2026-11-10T18:14:57.341Z",
+            "label": "11/11 02:14",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-10T18:54:42.941Z",
-            "label": "11/11 02:54",
+            "at": "2026-11-10T20:26:07.682Z",
+            "label": "11/11 04:26",
             "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-10T20:20:10.912Z",
-            "label": "11/11 04:20",
+            "at": "2026-11-10T22:37:18.024Z",
+            "label": "11/11 06:37",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:45:38.883Z",
-            "label": "11/11 05:45",
+            "at": "2026-11-11T00:48:28.365Z",
+            "label": "11/11 08:48",
             "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:11:06.854Z",
-            "label": "11/11 07:11",
+            "at": "2026-11-11T02:59:38.707Z",
+            "label": "11/11 10:59",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:36:34.824Z",
-            "label": "11/11 08:36",
+            "at": "2026-11-11T05:10:49.048Z",
+            "label": "11/11 13:10",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:02:02.795Z",
-            "label": "11/11 10:02",
+            "at": "2026-11-11T07:21:59.390Z",
+            "label": "11/11 15:21",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:27:30.766Z",
-            "label": "11/11 11:27",
+            "at": "2026-11-11T09:33:09.731Z",
+            "label": "11/11 17:33",
             "value": 57,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:52:58.737Z",
-            "label": "11/11 12:52",
+            "at": "2026-11-11T11:44:20.073Z",
+            "label": "11/11 19:44",
             "value": 63,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:18:26.708Z",
-            "label": "11/11 14:18",
+            "at": "2026-11-11T13:55:30.414Z",
+            "label": "11/11 21:55",
             "value": 68,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 74,
             "reports": 1
           }
@@ -3090,7 +4733,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T16:03:25.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -3101,68 +4744,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T17:28:54.970Z",
-            "label": "11/11 01:28",
+            "at": "2026-11-10T18:14:37.341Z",
+            "label": "11/11 02:14",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-10T18:54:24.941Z",
-            "label": "11/11 02:54",
+            "at": "2026-11-10T20:25:49.682Z",
+            "label": "11/11 04:25",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-10T20:19:54.912Z",
-            "label": "11/11 04:19",
+            "at": "2026-11-10T22:37:02.024Z",
+            "label": "11/11 06:37",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:45:24.883Z",
-            "label": "11/11 05:45",
+            "at": "2026-11-11T00:48:14.365Z",
+            "label": "11/11 08:48",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:10:54.854Z",
-            "label": "11/11 07:10",
+            "at": "2026-11-11T02:59:26.707Z",
+            "label": "11/11 10:59",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:36:24.824Z",
-            "label": "11/11 08:36",
+            "at": "2026-11-11T05:10:39.048Z",
+            "label": "11/11 13:10",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:01:54.795Z",
-            "label": "11/11 10:01",
+            "at": "2026-11-11T07:21:51.390Z",
+            "label": "11/11 15:21",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:27:24.766Z",
-            "label": "11/11 11:27",
+            "at": "2026-11-11T09:33:03.731Z",
+            "label": "11/11 17:33",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:52:54.737Z",
-            "label": "11/11 12:52",
+            "at": "2026-11-11T11:44:16.073Z",
+            "label": "11/11 19:44",
             "value": 51,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:18:24.708Z",
-            "label": "11/11 14:18",
+            "at": "2026-11-11T13:55:28.414Z",
+            "label": "11/11 21:55",
             "value": 55,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 59,
             "reports": 1
           }
@@ -3302,7 +4945,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-10T16:00:00.000Z",
-        "endedAt": "2026-11-11T07:43:54.679Z",
+        "endedAt": "2026-11-11T16:06:40.756Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -3313,68 +4956,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-10T17:25:48.607Z",
-            "label": "11/11 01:25",
+            "at": "2026-11-10T18:11:30.977Z",
+            "label": "11/11 02:11",
             "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-10T18:51:37.214Z",
-            "label": "11/11 02:51",
+            "at": "2026-11-10T20:23:01.955Z",
+            "label": "11/11 04:23",
             "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-11-10T20:17:25.821Z",
-            "label": "11/11 04:17",
+            "at": "2026-11-10T22:34:32.933Z",
+            "label": "11/11 06:34",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-10T21:43:14.428Z",
-            "label": "11/11 05:43",
+            "at": "2026-11-11T00:46:03.911Z",
+            "label": "11/11 08:46",
             "value": 34,
             "reports": 1
           },
           {
-            "at": "2026-11-10T23:09:03.035Z",
-            "label": "11/11 07:09",
+            "at": "2026-11-11T02:57:34.889Z",
+            "label": "11/11 10:57",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-11T00:34:51.643Z",
-            "label": "11/11 08:34",
+            "at": "2026-11-11T05:09:05.866Z",
+            "label": "11/11 13:09",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-11T02:00:40.250Z",
-            "label": "11/11 10:00",
+            "at": "2026-11-11T07:20:36.844Z",
+            "label": "11/11 15:20",
             "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-11-11T03:26:28.857Z",
-            "label": "11/11 11:26",
+            "at": "2026-11-11T09:32:07.822Z",
+            "label": "11/11 17:32",
             "value": 53,
             "reports": 1
           },
           {
-            "at": "2026-11-11T04:52:17.464Z",
-            "label": "11/11 12:52",
+            "at": "2026-11-11T11:43:38.800Z",
+            "label": "11/11 19:43",
             "value": 58,
             "reports": 1
           },
           {
-            "at": "2026-11-11T06:18:06.071Z",
-            "label": "11/11 14:18",
+            "at": "2026-11-11T13:55:09.778Z",
+            "label": "11/11 21:55",
             "value": 63,
             "reports": 1
           },
           {
-            "at": "2026-11-11T07:43:54.679Z",
-            "label": "11/11 15:43",
+            "at": "2026-11-11T16:06:40.756Z",
+            "label": "11/12 00:06",
             "value": 68,
             "reports": 1
           }
