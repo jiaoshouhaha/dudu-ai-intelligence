@@ -1,7 +1,1050 @@
 {
-  "generatedAt": "2026-11-11T16:06:40.756Z",
+  "generatedAt": "2026-11-11T23:00:16.400Z",
   "date": "2026-11-12",
   "items": [
+    {
+      "id": "8cfe95d5a7efcad0",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api",
+      "originalUrl": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+      "titleOriginal": "Gemini Decisions API",
+      "summaryOriginal": "Gemini Decisions API Google join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a yes/no question. It's priced the same as the GPT-6 Luna decision model: 10 cents per million input tokens, and output is free. Jev remains the cheapest of the three, at 4.2 cents per million. Jev is text (and JSON) only. OpenAI can handle text and images. Gemini Decision 1 is fully multi-model: it covers text, images, audio, video, and PDFs. I tested it against video by passing these questions to it along with my Yonkers stomping robot video file: dragon: Does this video have a dragon in it? robot: Does this video have a robot in it? france: Is this video set in France? usa: Is this video set in the USA? Jev and OpenAI both return 1.0 or 0.0 for yes/no questions, but Gemini insists on being a little less confident than that: { \"dragon\" : { \"type\" : \" yes_no \" , \"probability\" : 0.04976021841520312 }, \"robot\" : { \"type\" : \" yes_no \" , \"probability\" : 0.9234055387792485 }, \"france\" : { \"type\" : \" yes_no \" , \"probab",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "products",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "https://simonwillison.net/2026/Sep/21/jev/",
+        "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+        "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+        "https://news.ycombinator.com/item?id=50456791",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/gemini",
+        "https://simonwillison.net/tags/llm-release",
+        "https://simonwillison.net/tags/jev",
+        "https://simonwillison.net/tags/decision-models"
+      ],
+      "publishedAt": "2026-11-11T22:03:25.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+          "publishedAt": "2026-11-11T22:03:25.000Z",
+          "title": "Gemini Decisions API",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+            "https://simonwillison.net/2026/Sep/21/jev/",
+            "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+            "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+            "https://news.ycombinator.com/item?id=50456791",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/gemini",
+            "https://simonwillison.net/tags/llm-release",
+            "https://simonwillison.net/tags/jev",
+            "https://simonwillison.net/tags/decision-models"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是 Google 进入决策模型这一细分 API 类别的产品发布，涉及多模态能力和与竞品的直接价格对比，对开发者选型有实际参考价值。",
+      "importanceReasonEn": "This is Google's product entry into the decision-model API niche, with multimodal capability and direct price comparison against competitors, offering practical value for developer selection.",
+      "scoringMode": "ai",
+      "titleZh": "Gemini Decisions API 发布",
+      "titleEn": "Gemini Decisions API",
+      "summaryZh": "Google 推出 Gemini Decisions API，加入决策模型类别，与 Jev 和 OpenAI 竞争。该模型支持是/否、选择和评分标准打分三类问题，定价为每百万输入 token 10 美分、输出免费，并支持文本、图像、音频、视频和 PDF 多模态输入。",
+      "summaryEn": "Google launched the Gemini Decisions API, entering the decision-model category alongside Jev and OpenAI. It supports yes/no, choice, and rubric-scoring questions, is priced at 10 cents per million input tokens with free output, and accepts text, images, audio, video, and PDFs.",
+      "keywords": [
+        "Gemini Decisions API",
+        "decision model",
+        "multimodal",
+        "probability",
+        "pricing"
+      ],
+      "topics": [
+        "decision models",
+        "multimodal",
+        "API pricing",
+        "Gemini"
+      ],
+      "models": [
+        "Gemini Decision 1",
+        "Jev",
+        "GPT-6 Luna"
+      ],
+      "detailZh": "Google 发布了 Gemini Decisions API，推出名为“Gemini Decision 1”的决策模型，正式加入 Jev 和 OpenAI 所在的决策模型类别。该 API 支持与 Jev 相同的三类问题：是/否判断、多选选择以及按评分标准打分，甚至沿用了 Jev 用于是/否问题的术语“Noul”。\n\n定价方面，Gemini Decision 1 与 GPT-6 Luna 决策模型相同，为每百万输入 token 10 美分，输出免费。三者中 Jev 最便宜，为每百万 4.2 美分。能力范围上，Jev 仅支持文本和 JSON，OpenAI 可处理文本与图像，而 Gemini Decision 1 为全多模态，覆盖文本、图像、音频、视频和 PDF。\n\n作者 Simon Willison 用一段“Yonkers 踩踏机器人”视频做了测试，向模型提出四个是/否问题：视频中是否有龙、是否有机器人、是否拍摄于法国、是否拍摄于美国。Jev 和 OpenAI 对是/否问题返回 1.0 或 0.0 的确定值，而 Gemini 返回的是概率值，例如“是否有机器人”为 0.9234，“是否有龙”为 0.0498，表现出更低的确定性。\n\n输入材料在概率输出部分被截断，因此完整的测试结果和其余问题的概率值尚不清楚。",
+      "keyPointsZh": [
+        "Google 推出 Gemini Decisions API，模型名为 Gemini Decision 1，加入决策模型类别。",
+        "支持是/否、选择和评分标准打分三类问题，并沿用 Jev 的“Noul”术语。",
+        "定价为每百万输入 token 10 美分、输出免费，与 GPT-6 Luna 相同，Jev 最便宜为 4.2 美分。",
+        "Gemini Decision 1 支持文本、图像、音频、视频和 PDF，Jev 仅支持文本和 JSON，OpenAI 支持文本和图像。",
+        "测试中 Gemini 对是/否问题返回概率值而非 1.0/0.0 的确定值。"
+      ],
+      "impactZh": "决策模型是一类专门用于结构化判断的 API，Google 的加入意味着这一细分市场形成三家竞争格局，多模态输入能力可能成为差异化优势。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者在需要视频、音频或 PDF 输入的结构化判断场景中多了一个可选 API；其概率输出形式与竞品的 0/1 输出不同，可能需要调整阈值处理逻辑。",
+      "howItWorksZh": "调用时向 API 提交一组带名称的问题，每个问题指定类型（是/否、选择或评分标准打分），并附带待判断的输入内容（文本、图像、音频、视频或 PDF）。模型对每个问题返回结构化结果，是/否类问题以“Noul”类型返回 probability 概率值，而非二值结果。",
+      "interpretationZh": "已报道的事实是：Google 发布了该 API、定价与多模态支持范围明确、测试中 Gemini 返回概率值。合理推断是：概率输出可能更适合需要置信度的场景，但也意味着调用方需自行设定判定阈值；由于测试结果被截断，无法据此全面比较三家模型的准确率。",
+      "limitationsZh": "输入材料在测试结果处被截断，四个问题的完整概率和对比结论缺失；仅有一个视频样本，不能代表整体准确率；未提供延迟、速率限制或正式文档信息。",
+      "actionStepsZh": [
+        "在需要视频或 PDF 输入的结构化判断场景中，可试用 Gemini Decision 1 并与现有方案对比。",
+        "对概率输出设定判定阈值，而不是直接当作 0/1 使用。",
+        "根据输入模态和成本在 Jev、OpenAI 与 Gemini 之间做选型。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "每百万输入 token 价格（美分）：Jev 4.2 美分最便宜，Gemini Decision 1 与 GPT-6 Luna 均为 10 美分。",
+        "data": [
+          {
+            "label": "Jev",
+            "value": 4.2,
+            "display": ""
+          },
+          {
+            "label": "Gemini Decision 1",
+            "value": 10,
+            "display": ""
+          },
+          {
+            "label": "GPT-6 Luna",
+            "value": 10,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+          "publishedAt": "2026-11-11T22:03:25.000Z",
+          "title": "Gemini Decisions API",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+            "https://simonwillison.net/2026/Sep/21/jev/",
+            "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+            "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+            "https://news.ycombinator.com/item?id=50456791",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/gemini",
+            "https://simonwillison.net/tags/llm-release",
+            "https://simonwillison.net/tags/jev",
+            "https://simonwillison.net/tags/decision-models"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T22:03:25.000Z",
+        "endedAt": "2026-11-11T23:00:16.400Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-11T22:03:25.000Z",
+            "label": "11/12 06:03",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T23:00:16.400Z",
+            "label": "11/12 07:00",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e2c2882f272c7eb7",
+      "normalizedUrl": "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass",
+      "originalUrl": "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
+      "titleOriginal": "Google joins the decision-model wave with Gemini Decision 1, scoring 1,000 questions in a single pass",
+      "summaryOriginal": "Google Deepmind's new Gemini Decisions API evaluates up to 1,000 closed-ended questions in a single pass across text, images, audio, and video. Gemini Decision 1 returns results in 150 to 250 milliseconds at roughly five times lower cost than Gemini 3.5 Flash-Lite, according to Google. The article Google joins the decision-model wave with Gemini Decision 1, scoring 1,000 questions in a single pass appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Matthias Bastian",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/10/gemini_4_logo_wall.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-11-11T20:12:46.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
+          "publishedAt": "2026-11-11T20:12:46.000Z",
+          "title": "Google joins the decision-model wave with Gemini Decision 1, scoring 1,000 questions in a single pass",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/10/gemini_4_logo_wall.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是谷歌正式进入决策模型细分领域的产品发布，单次批量评估1000个问题、低延迟和低成本对需要大规模分类与判定的业务场景有直接价值。",
+      "importanceReasonEn": "This is Google's formal entry into the decision-model niche, with batch evaluation of 1,000 questions per pass, low latency and low cost that directly matter for large-scale classification and judgment workflows.",
+      "scoringMode": "ai",
+      "titleZh": "谷歌推出Gemini Decision 1，加入决策模型浪潮，单次可评分1000个问题",
+      "titleEn": "Google joins the decision-model wave with Gemini Decision 1, scoring 1,000 questions in a single pass",
+      "summaryZh": "谷歌DeepMind推出Gemini Decisions API，可在单次调用中跨文本、图像、音频和视频评估最多1000个封闭式问题。据谷歌称，Gemini Decision 1在150至250毫秒内返回结果，成本约为Gemini 3.5 Flash-Lite的五分之一。",
+      "summaryEn": "Google DeepMind's new Gemini Decisions API evaluates up to 1,000 closed-ended questions in a single pass across text, images, audio, and video. Gemini Decision 1 returns results in 150 to 250 milliseconds at roughly five times lower cost than Gemini 3.5 Flash-Lite, according to Google.",
+      "keywords": [
+        "Gemini Decision 1",
+        "Gemini Decisions API",
+        "封闭式问题",
+        "多模态评估",
+        "低延迟",
+        "低成本"
+      ],
+      "topics": [
+        "Gemini",
+        "决策模型",
+        "多模态",
+        "API",
+        "成本效率"
+      ],
+      "models": [
+        "Gemini Decision 1",
+        "Gemini 3.5 Flash-Lite"
+      ],
+      "detailZh": "谷歌DeepMind发布了Gemini Decisions API，并推出配套模型Gemini Decision 1。该API的定位是决策与判定类任务：用户可以在一次调用中提交最多1000个封闭式问题，模型一次性给出全部结果，而不是逐条请求。\n\n据谷歌介绍，该接口支持文本、图像、音频和视频四种输入模态，因此可用于对多模态内容做批量判定，例如内容分类、合规检查或质量评估等封闭式问题场景。\n\n性能方面，谷歌称Gemini Decision 1的返回延迟在150至250毫秒之间，成本约为Gemini 3.5 Flash-Lite的五分之一。这意味着在需要高频、大批量判定的业务中，单次批量调用可以显著降低请求次数与单位成本。\n\n该消息由The Decoder AI报道，属于谷歌官方产品发布。目前公开信息集中在能力范围、延迟与成本对比，尚未披露具体基准测试成绩、可用区域或定价细节。",
+      "keyPointsZh": [
+        "Gemini Decisions API单次调用最多可评估1000个封闭式问题",
+        "支持文本、图像、音频和视频四种输入模态",
+        "谷歌称返回延迟为150至250毫秒",
+        "成本约为Gemini 3.5 Flash-Lite的五分之一"
+      ],
+      "impactZh": "决策类任务（分类、判定、合规检查）是大模型落地最广泛的场景之一。谷歌以批量评估、低延迟和低成本切入，可能推动这一细分领域的价格与性能竞争，并影响企业在内容审核、数据标注和自动化判定上的技术选型。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和团队而言，单次调用批量提交最多1000个封闭式问题可减少请求次数和编排复杂度；150至250毫秒延迟与约五分之一的成本，适合高频判定类流水线。但具体定价、配额和可用区域尚未公布，需等待官方文档确认。",
+      "howItWorksZh": "根据来源，Gemini Decisions API面向封闭式问题：调用方在一次请求中提交最多1000个问题，模型一次性返回全部判定结果，输入可包含文本、图像、音频和视频。谷歌给出的延迟为150至250毫秒，成本约为Gemini 3.5 Flash-Lite的五分之一。来源未披露具体的评分机制、输出格式或置信度处理方式。",
+      "interpretationZh": "已报道的事实是：谷歌发布了Gemini Decisions API和Gemini Decision 1，支持单次最多1000个封闭式问题、四种输入模态，并给出延迟与成本对比。可以合理推断，该产品瞄准的是需要大规模、低延迟判定的业务场景，而非开放式生成。但基准表现、准确率和实际成本结构均未在来源中说明。",
+      "limitationsZh": "来源未提供基准测试成绩、准确率数据、正式定价、速率限制、可用区域或与竞品的直接对比；延迟与成本数字均为谷歌自述，未经独立验证。",
+      "actionStepsZh": [
+        "关注Gemini Decisions API官方文档，确认定价、配额与可用区域",
+        "评估现有分类或判定流水线是否适合改为单次批量提交最多1000个问题",
+        "在正式采用前用自有数据验证判定准确率"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "谷歌称Gemini Decision 1延迟为150至250毫秒，单次调用最多处理1000个封闭式问题。",
+        "data": [
+          {
+            "label": "Gemini Decision 1延迟下限",
+            "value": 150,
+            "display": ""
+          },
+          {
+            "label": "Gemini Decision 1延迟上限",
+            "value": 250,
+            "display": ""
+          },
+          {
+            "label": "单次最多问题数",
+            "value": 1000,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
+          "publishedAt": "2026-11-11T20:12:46.000Z",
+          "title": "Google joins the decision-model wave with Gemini Decision 1, scoring 1,000 questions in a single pass",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/10/gemini_4_logo_wall.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T20:12:46.000Z",
+        "endedAt": "2026-11-11T23:00:16.400Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-11T20:12:46.000Z",
+            "label": "11/12 04:12",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T21:08:36.133Z",
+            "label": "11/12 05:08",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T22:04:26.266Z",
+            "label": "11/12 06:04",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:00:16.400Z",
+            "label": "11/12 07:00",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "08f6941bcdbe742c",
+      "normalizedUrl": "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent",
+      "originalUrl": "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/",
+      "titleOriginal": "US corporate AI spending hits a new high in October, but growth slows to 1.65 percent",
+      "summaryOriginal": "According to the Ramp AI Index, US corporate AI spending rose just 1.65 percent in October 2026. One percent of companies still drive 80 percent of revenue for OpenAI and Anthropic. Customer support is emerging as a new growth driver, but it may bring lower margins than the coding business that has fueled spending so far. The article US corporate AI spending hits a new high in October, but growth slows to 1.65 percent appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Matthias Bastian",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/02/openai_anthropic_logos-1.jpeg"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-11-11T19:35:11.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/",
+          "publishedAt": "2026-11-11T19:35:11.000Z",
+          "title": "US corporate AI spending hits a new high in October, but growth slows to 1.65 percent",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/02/openai_anthropic_logos-1.jpeg"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该数据反映美国企业AI支出的最新走势与收入集中度，对判断AI商业化节奏和增长来源有参考价值。",
+      "importanceReasonEn": "The data reflects the latest trend in US enterprise AI spending and revenue concentration, offering a useful signal on the pace and sources of AI commercialization.",
+      "scoringMode": "ai",
+      "titleZh": "美国企业AI支出10月创新高，但增速放缓至1.65%",
+      "titleEn": "US corporate AI spending hits a new high in October, but growth slows to 1.65 percent",
+      "summaryZh": "据Ramp AI指数，2026年10月美国企业AI支出仅增长1.65%。1%的公司仍贡献了OpenAI和Anthropic 80%的收入。客户支持正成为新的增长驱动力，但其利润率可能低于此前推动支出的编程业务。",
+      "summaryEn": "According to the Ramp AI Index, US corporate AI spending rose just 1.65 percent in October 2026. One percent of companies still drive 80 percent of revenue for OpenAI and Anthropic. Customer support is emerging as a new growth driver, but it may bring lower margins than the coding business that has fueled spending so far.",
+      "keywords": [
+        "Ramp AI Index",
+        "enterprise AI spending",
+        "OpenAI revenue",
+        "Anthropic revenue",
+        "customer support AI"
+      ],
+      "topics": [
+        "enterprise AI spending",
+        "AI market growth",
+        "OpenAI",
+        "Anthropic",
+        "customer support AI"
+      ],
+      "models": [],
+      "detailZh": "据The Decoder AI报道，Ramp AI指数显示，2026年10月美国企业AI支出创下新高，但环比增速仅为1.65%，显示增长明显放缓。该指数用于追踪美国企业在AI工具和服务上的实际支出变化。\n\n报道指出，收入集中度依然极高：仅1%的公司贡献了OpenAI和Anthropic约80%的收入。这意味着企业AI市场的大部分收入仍来自少数大型客户。\n\n在增长来源方面，客户支持正成为新的驱动力。不过报道提示，客户支持业务的利润率可能低于此前推动支出增长的编程业务，这可能影响AI厂商的收入结构。\n\n上述信息来自Ramp AI指数的统计与The Decoder AI的报道，具体统计口径、样本范围和计算方法在现有材料中未详细说明。",
+      "keyPointsZh": [
+        "2026年10月美国企业AI支出创新高，但环比仅增长1.65%",
+        "1%的公司贡献了OpenAI和Anthropic约80%的收入",
+        "客户支持成为新的增长驱动力",
+        "客户支持业务的利润率可能低于编程业务"
+      ],
+      "impactZh": "该数据表明企业AI支出增长正在放缓，且收入高度集中于少数大客户，同时增长来源正从编程转向利润率可能更低的客户支持，这会影响市场对AI厂商收入质量和持续增长能力的判断。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实：Ramp AI指数显示10月美国企业AI支出增长1.65%，1%的公司贡献OpenAI和Anthropic约80%收入，客户支持成为新增长点。合理推断：增速放缓与收入集中意味着AI厂商的增长更依赖少数大客户和利润率较低的应用场景，但这一推断需更多数据验证。",
+      "limitationsZh": "现有材料未说明Ramp AI指数的统计口径、样本规模与计算方法，也未给出具体支出金额或历史对比数据；客户支持利润率低于编程业务的说法缺乏具体数据支撑。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "支出环比增速仅1.65%，而收入高度集中，1%的公司贡献约80%收入。",
+        "data": [
+          {
+            "label": "10月企业AI支出环比增速",
+            "value": 1.65,
+            "display": ""
+          },
+          {
+            "label": "1%公司贡献OpenAI/Anthropic收入占比",
+            "value": 80,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/",
+          "publishedAt": "2026-11-11T19:35:11.000Z",
+          "title": "US corporate AI spending hits a new high in October, but growth slows to 1.65 percent",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/02/openai_anthropic_logos-1.jpeg"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T19:35:11.000Z",
+        "endedAt": "2026-11-11T23:00:16.400Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-11T19:35:11.000Z",
+            "label": "11/12 03:35",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T20:26:27.350Z",
+            "label": "11/12 04:26",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T21:17:43.700Z",
+            "label": "11/12 05:17",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T22:09:00.050Z",
+            "label": "11/12 06:09",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:00:16.400Z",
+            "label": "11/12 07:00",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "02bfed5e7aa817ea",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+      "originalUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "titleOriginal": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "summaryOriginal": "Google 推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动，可在 150-250ms 端到端延迟内对文本、图像、音频、视频和 PDF（最多 256K tokens）一次性评估最多 1000 个是/否、多选和评分题。",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "models",
+      "sourceType": "official",
+      "authority": 98,
+      "sourcePriority": 98,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/r8hsm3m3munjwk1n3u885zszw",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+      ],
+      "publishedAt": "2026-11-11T18:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "google-ai",
+          "name": "Google AI",
+          "type": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "publishedAt": "2026-11-11T18:00:00.000Z",
+          "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+          "authority": 98,
+          "sourcePriority": 98,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 78,
+      "importanceReasonZh": "这是 Google 面向批量决策场景推出的专用模型与 API，强调低延迟和一次性多题评估，可能改变内容审核、标注和结构化判断类应用的实现方式。",
+      "importanceReasonEn": "This is a dedicated Google model and API for batch decision-making, emphasizing low latency and single-pass multi-question evaluation, which could change how content moderation, labeling, and structured judgment applications are built.",
+      "scoringMode": "ai",
+      "titleZh": "Gemini Decisions API：快速、校准的多模态决策",
+      "titleEn": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "summaryZh": "Google 推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动，可在 150-250ms 端到端延迟内对文本、图像、音频、视频和 PDF（最多 256K tokens）一次性评估最多 1000 个是/否、多选和评分题。",
+      "summaryEn": "Google launched the Gemini Decisions API, powered by the new Gemini Decision 1 model, which can evaluate up to 1,000 yes/no, multiple-choice, and rating questions in a single pass over text, images, audio, video, and PDFs (up to 256K tokens) with 150-250ms end-to-end latency.",
+      "keywords": [
+        "Gemini Decisions API",
+        "Gemini Decision 1",
+        "multimodal",
+        "low latency",
+        "calibration"
+      ],
+      "topics": [
+        "multimodal",
+        "decision API",
+        "low latency",
+        "Gemini"
+      ],
+      "models": [
+        "Gemini Decision 1"
+      ],
+      "detailZh": "Google 发布了 Gemini Decisions API，由新模型 Gemini Decision 1 驱动。根据官方说明，该 API 面向“决策”类任务，而不是开放式生成：它可以在一次调用中对同一份输入评估最多 1000 个问题，题型包括是/否判断、多选和评分。\n\n输入支持多模态，包括文本、图像、音频、视频和 PDF，单次上下文最多 256K tokens。Google 给出的端到端延迟为 150-250ms，并强调输出经过校准，适合需要稳定判断结果的场景。\n\n从定位看，这一产品把大模型能力包装成批量结构化判断接口，目标用户可能是需要做内容审核、数据标注、合规检查或问卷式评估的团队。目前公开信息集中在能力与延迟指标，尚未披露定价、配额和可用区域等细节。",
+      "keyPointsZh": [
+        "Google 推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动。",
+        "单次调用可评估最多 1000 个是/否、多选和评分题。",
+        "支持文本、图像、音频、视频和 PDF，上下文最多 256K tokens。",
+        "官方称端到端延迟为 150-250ms，并强调输出经过校准。"
+      ],
+      "impactZh": "该 API 把多模态模型从“生成内容”转向“批量结构化判断”，低延迟和单次多题评估可能降低内容审核、标注和合规检查类应用的工程复杂度与成本。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和团队而言，可以用一次调用完成对同一份多模态输入的成百上千个判断，减少多次请求带来的延迟和编排成本，适合审核、标注和规则化评估流程。",
+      "howItWorksZh": "按官方描述，用户向 Gemini Decisions API 提交一份多模态输入（文本、图像、音频、视频或 PDF，最多 256K tokens），并附带最多 1000 个问题；模型在一次前向处理中返回每个问题的判断结果，题型包括是/否、多选和评分，输出经过校准，端到端延迟为 150-250ms。",
+      "interpretationZh": "已报道的事实是：Google 发布了该 API 和新模型，并给出多模态支持、1000 题上限、256K tokens 上下文和 150-250ms 延迟等指标。合理推断是：它更适合高频、结构化的判断任务，而非长文生成；但定价、限流和实际准确率尚未公开，需以官方后续文档为准。",
+      "limitationsZh": "公开信息未披露定价、速率限制、可用区域和具体基准测试结果；“校准”和延迟指标来自官方说明，缺少第三方复现。",
+      "actionStepsZh": [
+        "查阅 Google 官方文档，确认 Gemini Decisions API 的可用区域和接入方式。",
+        "用自有数据测试多题批量判断的准确率与延迟是否符合预期。",
+        "评估将现有内容审核或标注流程迁移到单次多题调用的可行性。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "metrics",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "官方给出的延迟为 150-250ms，同时单次可评估最多 1000 个问题、上下文上限 256K tokens。",
+        "data": [
+          {
+            "label": "端到端延迟下限",
+            "value": 150,
+            "display": ""
+          },
+          {
+            "label": "端到端延迟上限",
+            "value": 250,
+            "display": ""
+          },
+          {
+            "label": "单次最多问题数",
+            "value": 1000,
+            "display": ""
+          },
+          {
+            "label": "最大上下文 tokens",
+            "value": 256000,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "google-ai",
+          "name": "Google AI",
+          "type": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "publishedAt": "2026-11-11T18:00:00.000Z",
+          "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+          "authority": 98,
+          "sourcePriority": 98,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T18:00:00.000Z",
+        "endedAt": "2026-11-11T23:00:16.400Z",
+        "current": 68,
+        "peak": 68,
+        "history": [
+          {
+            "at": "2026-11-11T18:00:00.000Z",
+            "label": "11/12 02:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T18:50:02.733Z",
+            "label": "11/12 02:50",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T19:40:05.466Z",
+            "label": "11/12 03:40",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T20:30:08.200Z",
+            "label": "11/12 04:30",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T21:20:10.933Z",
+            "label": "11/12 05:20",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T22:10:13.666Z",
+            "label": "11/12 06:10",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:00:16.400Z",
+            "label": "11/12 07:00",
+            "value": 68,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "ad2ea4442f787919",
+      "normalizedUrl": "https://youtube.com/watch?v=C33hJGt-ySg",
+      "originalUrl": "https://www.youtube.com/watch?v=C33hJGt-ySg",
+      "titleOriginal": "Claude Code 中如何选择 Fable 5.2 与 Opus 等模型",
+      "summaryOriginal": "Claude 发布视频教程，讲解在 Claude Code 中何时使用 Fable 5.2、Opus 5.5，何时降级到 Sonnet 5.5 或 Haiku 5.5，以及如何把一个任务拆分给多个模型。视频覆盖复杂编码与开放式技术工作、低成本明确任务等场景，并提供在自有任务上测量各模型表现的指南链接；可用性与用量限制因套餐而异。",
+      "originalLanguage": "zh",
+      "author": "Claude：YouTube（RSS）",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/ep5oqt7m4l7gn3tqieilznmuk",
+        "https://www.youtube.com/watch?v=C33hJGt-ySg"
+      ],
+      "publishedAt": "2026-11-11T17:30:20.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-11T18:30:19.841Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/ep5oqt7m4l7gn3tqieilznmuk"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:ep5oqt7m4l7gn3tqieilznmuk",
+          "name": "Claude：YouTube（RSS）",
+          "type": "practitioner",
+          "url": "https://www.youtube.com/watch?v=C33hJGt-ySg",
+          "publishedAt": "2026-11-11T17:30:20.000Z",
+          "title": "Claude Code 中如何选择 Fable 5.2 与 Opus 等模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ep5oqt7m4l7gn3tqieilznmuk",
+            "https://www.youtube.com/watch?v=C33hJGt-ySg"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是官方发布的实用教程，直接指导开发者在 Claude Code 中按任务复杂度选择模型并拆分任务，有助于在效果与成本之间取得平衡。",
+      "importanceReasonEn": "This is an official practical tutorial that directly guides developers on choosing models by task complexity and splitting tasks in Claude Code, helping balance quality and cost.",
+      "scoringMode": "ai",
+      "titleZh": "Claude Code 中如何选择 Fable 5.2 与 Opus 等模型",
+      "titleEn": "How to Choose Between Fable 5.2 and Opus Models in Claude Code",
+      "summaryZh": "Claude 发布视频教程，讲解在 Claude Code 中何时使用 Fable 5.2、Opus 5.5，何时降级到 Sonnet 5.5 或 Haiku 5.5，以及如何把一个任务拆分给多个模型。视频覆盖复杂编码与开放式技术工作、低成本明确任务等场景，并提供在自有任务上测量各模型表现的指南链接；可用性与用量限制因套餐而异。",
+      "summaryEn": "Claude released a video tutorial explaining when to use Fable 5.2 and Opus 5.5 in Claude Code, when to downgrade to Sonnet 5.5 or Haiku 5.5, and how to split a task across multiple models. The video covers scenarios such as complex coding and open-ended technical work versus low-cost well-defined tasks, and provides a link to a guide for measuring each model's performance on your own tasks; availability and usage limits vary by plan.",
+      "keywords": [
+        "Claude Code",
+        "Fable 5.2",
+        "Opus 5.5",
+        "Sonnet 5.5",
+        "Haiku 5.5",
+        "model routing",
+        "task splitting"
+      ],
+      "topics": [
+        "Claude Code",
+        "model selection",
+        "coding agents",
+        "cost optimization"
+      ],
+      "models": [
+        "Fable 5.2",
+        "Opus 5.5",
+        "Sonnet 5.5",
+        "Haiku 5.5"
+      ],
+      "detailZh": "Claude 通过其 YouTube 频道发布了一段视频教程，主题是在 Claude Code 中如何选择模型。教程涉及 Fable 5.2、Opus 5.5、Sonnet 5.5 和 Haiku 5.5 四款模型，说明何时应使用能力更强的 Fable 5.2 或 Opus 5.5，何时可以降级到成本更低的 Sonnet 5.5 或 Haiku 5.5。\n\n视频还讲解了如何把一个任务拆分给多个模型处理，即不同环节交给不同模型完成。教程覆盖的典型场景包括复杂编码与开放式技术工作，以及目标明确、成本敏感的低成本任务。\n\n此外，教程提供了在自有任务上测量各模型表现的指南链接，方便团队根据实际结果决定模型分配。官方同时提示，各模型的可用性与用量限制因套餐而异。\n\n目前公开信息仅为视频简介层面的概述，未披露具体的模型能力数据、价格或拆分策略细节。",
+      "keyPointsZh": [
+        "Claude 官方发布视频教程，讲解 Claude Code 中的模型选择。",
+        "教程涉及 Fable 5.2、Opus 5.5、Sonnet 5.5 和 Haiku 5.5 四款模型。",
+        "内容覆盖复杂编码、开放式技术工作与低成本明确任务等场景。",
+        "教程讲解如何把一个任务拆分给多个模型处理。",
+        "提供在自有任务上测量各模型表现的指南链接，可用性与用量限制因套餐而异。"
+      ],
+      "impactZh": "该教程为 Claude Code 用户提供了按任务复杂度分配模型的官方思路，有助于在保证复杂任务质量的同时降低简单任务的成本，并推动多模型协作的工作方式。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 Claude Code 的开发者可以据此为复杂编码任务选用 Fable 5.2 或 Opus 5.5，为明确、低成本的任务降级到 Sonnet 5.5 或 Haiku 5.5，并尝试把任务拆分给多个模型，同时需注意套餐对应的可用性与用量限制。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：Claude 发布了该视频教程，涉及四款模型、任务拆分方法以及自测指南链接。至于各模型在具体任务上的优劣、拆分策略的实际收益，目前仅有教程层面的描述，尚无公开的量化数据支撑。",
+      "limitationsZh": "公开信息仅为视频简介，未披露各模型的具体能力对比、价格、拆分策略细节及自测指南的具体内容；各模型的可用性与用量限制因套餐而异，实际效果需用户自行测量。",
+      "actionStepsZh": [
+        "观看该视频教程，了解 Claude Code 中的模型选择思路。",
+        "对复杂编码与开放式技术工作优先考虑 Fable 5.2 或 Opus 5.5。",
+        "对目标明确、成本敏感的任务降级到 Sonnet 5.5 或 Haiku 5.5。",
+        "参考教程提供的指南链接，在自有任务上测量各模型表现后再决定分配。",
+        "确认所用套餐对应的模型可用性与用量限制。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:ep5oqt7m4l7gn3tqieilznmuk",
+          "name": "Claude：YouTube（RSS）",
+          "type": "practitioner",
+          "url": "https://www.youtube.com/watch?v=C33hJGt-ySg",
+          "publishedAt": "2026-11-11T17:30:20.000Z",
+          "title": "Claude Code 中如何选择 Fable 5.2 与 Opus 等模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ep5oqt7m4l7gn3tqieilznmuk",
+            "https://www.youtube.com/watch?v=C33hJGt-ySg"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T17:30:20.000Z",
+        "endedAt": "2026-11-11T23:00:16.400Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-11T17:30:20.000Z",
+            "label": "11/12 01:30",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T18:25:19.400Z",
+            "label": "11/12 02:25",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T19:20:18.800Z",
+            "label": "11/12 03:20",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T20:15:18.200Z",
+            "label": "11/12 04:15",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T21:10:17.600Z",
+            "label": "11/12 05:10",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T22:05:17.000Z",
+            "label": "11/12 06:05",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:00:16.400Z",
+            "label": "11/12 07:00",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "88d1ecd11797604c",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/11/llm",
+      "originalUrl": "https://simonwillison.net/2026/Nov/11/llm/",
+      "titleOriginal": "llm 0.37.2",
+      "summaryOriginal": "Release: llm 0.37.2 Fixes a security issue reported by Daniel de Araujo in GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w . LLM has a mechanism called extra-openai-models.yaml - now managed by the new-in-0.37 llm openai endpoint add command - for using LLM with OpenAI-compatible API endpoints from other providers. Daniel reported two ways this could accidentally send your configured OpenAI API key to one of those providers: if the key named by api_key_name had never been stored, or if a responses: true model was run with -o chat_completions 1 . Tags: projects , security , llm , releases",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/llm/releases/tag/0.37.2",
+        "https://github.com/BluePlexus",
+        "https://github.com/simonw/llm/security/advisories/GHSA-v9h7-jj4g-f862",
+        "https://github.com/simonw/llm/security/advisories/GHSA-r639-rr7r-x72w",
+        "https://llm.datasette.io/en/stable/other-models.html#configure-an-openai-compatible-model",
+        "https://llm.datasette.io/en/stable/other-models.html#openai-endpoint-add",
+        "https://simonwillison.net/tags/projects",
+        "https://simonwillison.net/tags/security",
+        "https://simonwillison.net/tags/llm",
+        "https://simonwillison.net/tags/releases"
+      ],
+      "publishedAt": "2026-11-11T17:19:52.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/11/llm/",
+          "publishedAt": "2026-11-11T17:19:52.000Z",
+          "title": "llm 0.37.2",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm/releases/tag/0.37.2",
+            "https://github.com/BluePlexus",
+            "https://github.com/simonw/llm/security/advisories/GHSA-v9h7-jj4g-f862",
+            "https://github.com/simonw/llm/security/advisories/GHSA-r639-rr7r-x72w",
+            "https://llm.datasette.io/en/stable/other-models.html#configure-an-openai-compatible-model",
+            "https://llm.datasette.io/en/stable/other-models.html#openai-endpoint-add",
+            "https://simonwillison.net/tags/projects",
+            "https://simonwillison.net/tags/security",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/releases"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是一次涉及 API 密钥可能泄露给第三方端点的安全修复，直接影响使用 LLM 工具连接 OpenAI 兼容服务的用户。",
+      "importanceReasonEn": "This is a security fix involving possible API key leakage to third-party endpoints, directly affecting users who connect LLM to OpenAI-compatible services.",
+      "scoringMode": "ai",
+      "titleZh": "llm 0.37.2 修复 API 密钥泄露安全问题",
+      "titleEn": "llm 0.37.2 Fixes API Key Leak Security Issue",
+      "summaryZh": "llm 0.37.2 修复了 Daniel de Araujo 报告的 GHSA-v9h7-jj4g-f862 和 GHSA-r639-rr7r-x72w 两个安全问题。LLM 通过 extra-openai-models.yaml（现由 0.37 版新增的 llm openai endpoint add 命令管理）支持第三方 OpenAI 兼容 API 端点。报告指出两种可能将已配置的 OpenAI API 密钥误发给第三方提供商的情形：一是 api_key_name 指定的密钥从未被存储，二是对 responses: true 的模型使用 -o chat_completions 1 运行。",
+      "summaryEn": "llm 0.37.2 fixes two security issues reported by Daniel de Araujo: GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w. LLM uses extra-openai-models.yaml (now managed by the new-in-0.37 llm openai endpoint add command) to work with OpenAI-compatible API endpoints from other providers. The report identified two ways the configured OpenAI API key could accidentally be sent to those providers: when the key named by api_key_name had never been stored, or when a responses: true model was run with -o chat_completions 1.",
+      "keywords": [
+        "llm",
+        "API key leak",
+        "extra-openai-models.yaml",
+        "GHSA",
+        "security fix"
+      ],
+      "topics": [
+        "security",
+        "llm",
+        "api-keys",
+        "openai-compatible"
+      ],
+      "models": [],
+      "detailZh": "Simon Willison 发布了 llm 0.37.2 版本，主要目的是修复由 Daniel de Araujo 报告的两个安全公告：GHSA-v9h7-jj4g-f862 和 GHSA-r639-rr7r-x72w。这两个问题都涉及 LLM 工具在特定情况下可能把用户配置的 OpenAI API 密钥发送给第三方 OpenAI 兼容 API 提供商。\n\nLLM 提供 extra-openai-models.yaml 机制，用于接入其他厂商提供的 OpenAI 兼容 API 端点。0.37 版本新增了 llm openai endpoint add 命令来管理该配置。\n\n根据发布说明，报告指出了两条可能触发密钥误发的路径。第一，如果 api_key_name 指定的密钥从未被存储，系统可能回退使用已配置的 OpenAI 密钥。第二，如果对一个标记为 responses: true 的模型使用 -o chat_completions 1 选项运行，也可能导致密钥被发送到第三方端点。\n\n0.37.2 版本针对上述两条路径进行了修复。发布说明未披露更多技术细节，也未说明是否已有实际利用案例。",
+      "keyPointsZh": [
+        "llm 0.37.2 修复了 GHSA-v9h7-jj4g-f862 和 GHSA-r639-rr7r-x72w 两个安全公告",
+        "问题涉及将 OpenAI API 密钥误发给第三方 OpenAI 兼容端点",
+        "触发路径之一是 api_key_name 指定的密钥从未被存储",
+        "另一条触发路径是对 responses: true 模型使用 -o chat_completions 1",
+        "extra-openai-models.yaml 现由 0.37 新增的 llm openai endpoint add 命令管理"
+      ],
+      "impactZh": "使用 LLM 连接第三方 OpenAI 兼容服务的用户可能在不经意间把 OpenAI API 密钥暴露给这些第三方，造成密钥泄露和潜在费用风险。该修复消除了这两条已知的误发路径。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 LLM 工具并配置了第三方 OpenAI 兼容端点的开发者应立即升级到 0.37.2，并检查是否曾通过上述两条路径运行过请求；如有疑虑，应轮换 OpenAI API 密钥。",
+      "howItWorksZh": "",
+      "interpretationZh": "发布说明明确列出了两条导致密钥误发的具体条件，并说明 0.37.2 已修复。可以合理推断，修复方式是确保在密钥未存储或切换 chat_completions 模式时不会回退使用 OpenAI 密钥，但发布说明未描述具体实现。",
+      "limitationsZh": "发布说明未披露修复的具体代码改动、受影响版本范围，也未说明是否已有实际泄露案例。两条触发路径的完整技术细节未公开。",
+      "actionStepsZh": [
+        "将 llm 升级到 0.37.2 或更高版本",
+        "检查是否曾对 responses: true 模型使用 -o chat_completions 1 运行",
+        "检查 api_key_name 指定的密钥是否已正确存储",
+        "如有疑虑，轮换 OpenAI API 密钥"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/11/llm/",
+          "publishedAt": "2026-11-11T17:19:52.000Z",
+          "title": "llm 0.37.2",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm/releases/tag/0.37.2",
+            "https://github.com/BluePlexus",
+            "https://github.com/simonw/llm/security/advisories/GHSA-v9h7-jj4g-f862",
+            "https://github.com/simonw/llm/security/advisories/GHSA-r639-rr7r-x72w",
+            "https://llm.datasette.io/en/stable/other-models.html#configure-an-openai-compatible-model",
+            "https://llm.datasette.io/en/stable/other-models.html#openai-endpoint-add",
+            "https://simonwillison.net/tags/projects",
+            "https://simonwillison.net/tags/security",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/releases"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T17:19:52.000Z",
+        "endedAt": "2026-11-11T23:00:16.400Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-11T17:19:52.000Z",
+            "label": "11/12 01:19",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-11T18:16:36.066Z",
+            "label": "11/12 02:16",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T19:13:20.133Z",
+            "label": "11/12 03:13",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T20:10:04.200Z",
+            "label": "11/12 04:10",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T21:06:48.266Z",
+            "label": "11/12 05:06",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T22:03:32.333Z",
+            "label": "11/12 06:03",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:00:16.400Z",
+            "label": "11/12 07:00",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "3d65ccc2f5cdce69",
       "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop",
@@ -41,47 +1084,45 @@
           "resourceLinks": []
         }
       ],
-      "importance": 55,
-      "importanceReasonZh": "这是 Google Labs 推出的新协作实验产品，方向明确但信息有限，尚未公布技术细节或定价，对普通用户和开发者的直接影响暂不明确。",
-      "importanceReasonEn": "This is a new collaboration experiment from Google Labs with a clear direction but limited detail; no technical specifics or pricing are disclosed, so immediate impact on users and developers is unclear.",
+      "importance": 42,
+      "importanceReasonZh": "这是Google Labs的一项新协作产品实验，方向明确但尚处早期等待名单阶段，实际能力与可用性有限。",
+      "importanceReasonEn": "This is a new Google Labs collaboration experiment with a clear direction but is still in early waitlist stage, limiting its current availability and proven capability.",
       "scoringMode": "ai",
-      "titleZh": "Google Labs 推出 Tabletop：面向小组协作的可定制互动空间",
+      "titleZh": "Google Labs推出Tabletop：面向小组协作的可定制空间",
       "titleEn": "Google Labs Launches Tabletop: Customizable Collaborative Spaces for Groups",
-      "summaryZh": "Google Labs 推出新实验产品 Tabletop，这是一个面向小组协作的可定制互动空间，用户可与团队一起制作互动行程表、投票和分组对阵表，目前需加入等待名单。",
-      "summaryEn": "Google Labs has introduced Tabletop, a new experiment for group collaboration where users can build interactive itineraries, polls, and brackets with their team. Access currently requires joining a waitlist.",
+      "summaryZh": "Google Labs发布新实验产品Tabletop，为团队提供可定制的协作空间，支持创建互动行程、投票和对阵表等小组活动工具，目前需加入等待名单。",
+      "summaryEn": "Google Labs introduces Tabletop, a new experiment offering customizable collaborative spaces for groups, with tools to build interactive itineraries, polls, and brackets. A waitlist is now open.",
       "keywords": [
         "Tabletop",
         "Google Labs",
         "collaboration",
-        "itinerary",
-        "poll",
-        "bracket",
-        "waitlist"
+        "polls",
+        "brackets",
+        "itinerary"
       ],
       "topics": [
-        "group collaboration",
+        "collaboration",
         "Google Labs",
-        "interactive planning",
-        "polls",
-        "brackets"
+        "group planning",
+        "productivity tools"
       ],
       "models": [],
-      "detailZh": "Google Labs 发布了一项名为 Tabletop 的新实验，定位为面向小组的可定制、协作式空间，供团队一起规划、娱乐和完成更多事情。根据官方简介，Tabletop 支持用户与团队共同构建互动行程表、投票和分组对阵表（brackets）等协作内容。\n\n该产品目前处于实验阶段，用户需要加入等待名单才能获得访问权限。官方未披露底层技术实现、支持的平台、是否收费或具体上线时间。\n\n从已知信息看，Tabletop 属于 Google Labs 一贯的早期实验项目模式：先以有限访问方式收集反馈，再决定后续产品化方向。其核心场景是多人围绕同一目标进行规划与决策，例如安排活动、收集意见或组织比赛对阵。\n\n目前没有关于 Tabletop 与 Google Workspace 或其他 Google 产品集成情况的说明，也没有可用的截图或功能演示细节。",
+      "detailZh": "Google Labs宣布推出名为Tabletop的新实验产品，定位是为小组提供可定制的协作空间，让团队一起规划、娱乐并完成更多事情。根据官方介绍，Tabletop支持构建互动行程、投票和对阵表等小组协作工具。\n\n该产品目前处于实验阶段，用户需要加入等待名单才能获得访问权限。官方未披露具体的发布时间表、支持的平台或定价信息。\n\n从描述看，Tabletop面向的是需要多人共同决策和组织的场景，例如团队活动安排、意见收集和趣味性对阵比较。它与Google现有的协作工具生态可能存在关联，但官方材料未说明具体集成方式。",
       "keyPointsZh": [
-        "Google Labs 推出新实验产品 Tabletop，定位为小组协作空间。",
-        "支持制作互动行程表、投票和分组对阵表。",
-        "目前需加入等待名单，尚未全面开放。",
-        "官方未公布技术细节、平台支持或定价信息。"
+        "Google Labs推出新实验产品Tabletop，定位为小组可定制协作空间",
+        "支持创建互动行程、投票和对阵表等工具",
+        "目前需加入等待名单，尚未全面开放",
+        "官方未公布平台支持、定价或发布时间细节"
       ],
-      "impactZh": "Tabletop 表明 Google 正在探索轻量级、面向小组的互动协作工具，可能补充现有文档和表格类协作产品在活动规划与集体决策场景中的不足。但由于仍处实验阶段且需等待名单，短期内对市场格局影响有限。",
-      "readerImpactZh": "普通用户目前只能加入等待名单，尚无法直接使用；若后续开放，可能为组织活动、收集意见和安排比赛提供更直观的协作方式。",
-      "userImpactZh": "对 AI 用户和开发者而言，目前没有公开 API、模型能力或集成方式，暂无可操作的技术影响；可关注其后续是否开放接口或与 Google 生态整合。",
+      "impactZh": "该产品显示Google Labs继续探索面向小组协作的轻量级互动工具，可能补充现有办公协作产品在非正式群体活动场景中的空白。",
+      "readerImpactZh": "",
+      "userImpactZh": "对关注协作工具的团队而言，Tabletop提供了一种将行程、投票和对阵表整合到同一空间的潜在方式，但目前仅能通过等待名单申请，尚无法实际评估其体验。",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：Google Labs 发布了 Tabletop 实验，定位为小组协作空间，支持行程表、投票和对阵表，并采用等待名单机制。合理推断是：这类工具可能面向活动策划、团队决策和轻量社交场景，但具体交互方式、数据存储和是否使用 AI 能力均未在来源中说明。",
-      "limitationsZh": "来源仅为官方简介，缺少功能截图、技术架构、平台支持、定价、发布时间和隐私政策等信息；等待名单的开放范围和审核标准也未说明。",
+      "interpretationZh": "已报道的事实是：Google Labs发布了Tabletop这一实验产品，定位为小组协作空间，包含互动行程、投票和对阵表功能，并开放等待名单。合理推断是：它可能面向活动策划、团队决策和轻量社交互动场景，但具体交互方式、数据共享机制和与Google其他产品的整合均未在材料中说明。",
+      "limitationsZh": "官方材料非常简短，未说明支持平台、是否免费、与Google Workspace等产品的集成情况、数据隐私处理方式，也没有实际界面或使用演示。等待名单意味着大多数用户暂时无法使用。",
       "actionStepsZh": [
-        "访问 Google Labs 的 Tabletop 页面并加入等待名单。",
-        "关注 Google Labs 后续公告，了解功能演示和开放范围。"
+        "访问Google Labs页面加入Tabletop等待名单以获取试用资格",
+        "关注Google Labs官方渠道以获取后续功能与开放信息"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -106,9 +1147,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T16:00:00.000Z",
-        "endedAt": "2026-11-11T16:06:40.756Z",
-        "current": 55,
-        "peak": 55,
+        "endedAt": "2026-11-11T23:00:16.400Z",
+        "current": 48,
+        "peak": 48,
         "history": [
           {
             "at": "2026-11-11T16:00:00.000Z",
@@ -117,9 +1158,51 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T16:06:40.756Z",
-            "label": "11/12 00:06",
-            "value": 55,
+            "at": "2026-11-11T16:52:32.050Z",
+            "label": "11/12 00:52",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T17:45:04.100Z",
+            "label": "11/12 01:45",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T18:37:36.150Z",
+            "label": "11/12 02:37",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T19:30:08.200Z",
+            "label": "11/12 03:30",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T20:22:40.250Z",
+            "label": "11/12 04:22",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T21:15:12.300Z",
+            "label": "11/12 05:15",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T22:07:44.350Z",
+            "label": "11/12 06:07",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:00:16.400Z",
+            "label": "11/12 07:00",
+            "value": 48,
             "reports": 1
           }
         ],
