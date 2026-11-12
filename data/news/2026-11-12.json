@@ -1,7 +1,471 @@
 {
-  "generatedAt": "2026-11-11T23:00:16.400Z",
+  "generatedAt": "2026-11-12T03:48:23.196Z",
   "date": "2026-11-12",
   "items": [
+    {
+      "id": "f0c5c05cabb8755b",
+      "normalizedUrl": "https://openrouter.ai/blog/tutorials/ai-agent-infinite-loop",
+      "originalUrl": "https://openrouter.ai/blog/tutorials/ai-agent-infinite-loop/",
+      "titleOriginal": "OpenRouter 实测六模型并给出四层防护，解决 AI Agent 无限循环烧钱问题",
+      "summaryOriginal": "OpenRouter 发布教程，讲解 AI Agent 因工具反复失败而陷入无限循环的成因，并给出四层防护：doom-loop 检测、loopKey 参数归一化、stopWhen 步数与成本上限、API key 信用额度。",
+      "originalLanguage": "zh",
+      "author": "OpenRouter：Announcements（RSS）",
+      "category": "agent",
+      "sourceType": "practitioner",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/vq9nwgwhtm31cgoliyb7ydyde",
+        "https://openrouter.ai/blog/tutorials/ai-agent-infinite-loop/"
+      ],
+      "publishedAt": "2026-11-12T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-12T00:38:14.713Z",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/vq9nwgwhtm31cgoliyb7ydyde"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:vq9nwgwhtm31cgoliyb7ydyde",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/tutorials/ai-agent-infinite-loop/",
+          "publishedAt": "2026-11-12T00:00:00.000Z",
+          "title": "OpenRouter 实测六模型并给出四层防护，解决 AI Agent 无限循环烧钱问题",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/vq9nwgwhtm31cgoliyb7ydyde",
+            "https://openrouter.ai/blog/tutorials/ai-agent-infinite-loop/"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该教程针对 Agent 反复调用工具导致成本失控这一常见工程问题，给出可落地的四层防护方案，对开发者和团队有直接参考价值。",
+      "importanceReasonEn": "The tutorial addresses a common engineering problem—agents repeatedly calling tools and driving up costs—and offers an actionable four-layer defense that is directly useful to developers and teams.",
+      "scoringMode": "ai",
+      "titleZh": "OpenRouter 实测六模型并给出四层防护，解决 AI Agent 无限循环烧钱问题",
+      "titleEn": "OpenRouter Tests Six Models and Offers Four-Layer Defense Against Runaway AI Agent Loops",
+      "summaryZh": "OpenRouter 发布教程，讲解 AI Agent 因工具反复失败而陷入无限循环的成因，并给出四层防护：doom-loop 检测、loopKey 参数归一化、stopWhen 步数与成本上限、API key 信用额度。",
+      "summaryEn": "OpenRouter published a tutorial explaining why AI agents get stuck in infinite loops when tools repeatedly fail, and offers four layers of protection: doom-loop detection, loopKey parameter normalization, stopWhen step and cost limits, and API key credit limits.",
+      "keywords": [
+        "doom-loop",
+        "loopKey",
+        "stopWhen",
+        "Agent 循环",
+        "成本上限"
+      ],
+      "topics": [
+        "AI Agent",
+        "无限循环",
+        "成本控制",
+        "OpenRouter",
+        "工具调用"
+      ],
+      "models": [],
+      "detailZh": "OpenRouter 发布了一篇教程，讨论 AI Agent 在工具调用反复失败时陷入无限循环的问题。这类循环会让 Agent 不断重试同一工具，持续消耗 token 和费用，却无法推进任务。\n\n教程指出，循环的根源之一是工具参数在每次重试中发生细微变化，导致系统无法识别这是重复调用。为此 OpenRouter 提出四层防护。第一层是 doom-loop 检测，用于识别 Agent 反复执行相同动作的模式。第二层是 loopKey 参数归一化，把参数中不影响语义的差异抹平，使重复调用能被正确识别。第三层是 stopWhen 限制，为 Agent 设置步数和成本上限，达到阈值即停止。第四层是 API key 信用额度，从账户层面限制最大支出。\n\n教程还提到对六个模型进行了实测，但输入未给出具体模型名称、测试方法或结果数据。整体内容偏向工程实践，重点在于如何配置防护而非模型能力对比。",
+      "keyPointsZh": [
+        "OpenRouter 教程聚焦 Agent 工具反复失败导致的无限循环问题",
+        "提出四层防护：doom-loop 检测、loopKey 参数归一化、stopWhen 步数与成本上限、API key 信用额度",
+        "loopKey 通过归一化参数，让细微变化的重复调用可被识别",
+        "stopWhen 从步数和成本两个维度设置停止条件",
+        "教程称实测了六个模型，但未披露具体模型与结果"
+      ],
+      "impactZh": "Agent 循环是生产环境中成本失控的常见原因，该教程把检测、归一化、停止条件和账户额度组合成多层防护，为团队提供了可复用的工程思路。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用或开发 Agent 的团队可参考四层防护，在工具调用层加入循环检测和参数归一化，并设置步数、成本与账户额度上限，避免意外账单。",
+      "howItWorksZh": "四层防护从不同层面拦截循环：doom-loop 检测在运行中识别重复动作模式；loopKey 对工具参数做归一化，消除不影响语义的差异，使重复调用可被匹配；stopWhen 在达到预设步数或成本阈值时终止 Agent；API key 信用额度则在账户层面设置支出上限，作为最后一道防线。",
+      "interpretationZh": "据教程描述，Agent 循环主要源于工具失败后的反复重试和参数细微变化导致的识别困难。四层防护分别对应运行检测、调用识别、任务终止和账户限额，属于工程层面的组合方案。六个模型的实测细节未在输入中披露，因此无法判断不同模型在循环倾向上的差异。",
+      "limitationsZh": "输入未提供六个模型的具体名称、测试方法、循环发生率或成本节省数据，也未说明四层防护的实现代码和配置示例。教程的实际效果缺乏可验证的量化结果。",
+      "actionStepsZh": [
+        "在 Agent 工具调用层加入 doom-loop 检测，识别重复动作",
+        "对工具参数做 loopKey 归一化，使细微变化的重复调用可被匹配",
+        "用 stopWhen 设置步数和成本上限，达到阈值即停止",
+        "为 API key 设置信用额度，从账户层面限制最大支出"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:vq9nwgwhtm31cgoliyb7ydyde",
+          "name": "OpenRouter：Announcements（RSS）",
+          "type": "practitioner",
+          "url": "https://openrouter.ai/blog/tutorials/ai-agent-infinite-loop/",
+          "publishedAt": "2026-11-12T00:00:00.000Z",
+          "title": "OpenRouter 实测六模型并给出四层防护，解决 AI Agent 无限循环烧钱问题",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/vq9nwgwhtm31cgoliyb7ydyde",
+            "https://openrouter.ai/blog/tutorials/ai-agent-infinite-loop/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-12T00:00:00.000Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-12T00:00:00.000Z",
+            "label": "11/12 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-12T00:57:05.799Z",
+            "label": "11/12 08:57",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:54:11.598Z",
+            "label": "11/12 09:54",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:51:17.397Z",
+            "label": "11/12 10:51",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "65b96c238445cded",
+      "normalizedUrl": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "originalUrl": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "titleOriginal": "Gilbert + Tobin rethinks the business of law with AI",
+      "summaryOriginal": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "business",
+      "sourceType": "official",
+      "authority": 100,
+      "sourcePriority": 100,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-12T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+          "publishedAt": "2026-11-12T00:00:00.000Z",
+          "title": "Gilbert + Tobin rethinks the business of law with AI",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 35,
+      "importanceReasonZh": "这是一篇由OpenAI发布的高管对话，主题是律所如何借助AI调整业务模式，属于行业实践视角，但输入仅提供标题和一句话摘要，缺少具体做法、数据与结论。",
+      "importanceReasonEn": "This is an executive conversation published by OpenAI about how a law firm is reshaping its business model with AI. It offers an industry-practice perspective, but the input contains only a title and one-line summary, with no concrete methods, data or conclusions.",
+      "scoringMode": "ai",
+      "titleZh": "Gilbert + Tobin借助AI重新思考法律业务",
+      "titleEn": "Gilbert + Tobin rethinks the business of law with AI",
+      "summaryZh": "与Gilbert + Tobin合伙人兼首席执行官Sam Nickless的对话。",
+      "summaryEn": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
+      "keywords": [
+        "Gilbert + Tobin",
+        "Sam Nickless",
+        "法律业务",
+        "AI转型",
+        "OpenAI"
+      ],
+      "topics": [
+        "法律行业AI应用",
+        "企业AI转型",
+        "AI与专业服务"
+      ],
+      "models": [],
+      "detailZh": "OpenAI发布了一篇与Gilbert + Tobin合伙人兼首席执行官Sam Nickless的对话，主题是这家澳大利亚律所如何借助AI重新思考法律业务。从现有信息看，内容形式是访谈式对话，发布方为OpenAI，发布时间标注为2026年11月12日。\n\n输入材料只给出了标题和一句摘要，没有披露对话中讨论的具体AI工具、部署范围、使用场景、效率数据或商业模式调整细节。因此目前只能确认这是一次围绕“AI与法律业务”的高管访谈，无法还原其具体主张。\n\n由于缺少正文内容，本条目不对律所的具体做法、成效或风险作任何推断，相关判断需以原文为准。",
+      "keyPointsZh": [
+        "OpenAI发布了与Gilbert + Tobin合伙人兼首席执行官Sam Nickless的对话。",
+        "对话主题是律所如何借助AI重新思考法律业务。",
+        "现有材料仅含标题与一句摘要，未披露具体工具、场景或成效数据。"
+      ],
+      "impactZh": "该对话体现了主流AI厂商与专业服务机构合作叙事的延续，为观察法律行业如何引入生成式AI提供了一个高管视角的样本，但仅凭现有摘要无法评估其实际影响。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是：OpenAI发布了一篇对Gilbert + Tobin首席执行官Sam Nickless的访谈，主题涉及AI与法律业务。至于该律所具体如何使用AI、取得了什么效果，属于原文可能涉及但当前输入未提供的内容，不应据此推断。",
+      "limitationsZh": "输入仅包含标题和一句摘要，缺少对话正文、具体AI应用场景、量化成效及时间背景说明；发布时间为未来日期，其真实性无法从材料中核实。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+          "publishedAt": "2026-11-12T00:00:00.000Z",
+          "title": "Gilbert + Tobin rethinks the business of law with AI",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-12T00:00:00.000Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
+        "current": 44,
+        "peak": 44,
+        "history": [
+          {
+            "at": "2026-11-12T00:00:00.000Z",
+            "label": "11/12 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-12T00:57:05.799Z",
+            "label": "11/12 08:57",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:54:11.598Z",
+            "label": "11/12 09:54",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:51:17.397Z",
+            "label": "11/12 10:51",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
+            "value": 44,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "b937bd19524d6cb3",
+      "normalizedUrl": "https://runwayml.com/news/company-news/praxis-1-is-now-available",
+      "originalUrl": "https://runwayml.com/news/company-news/praxis-1-is-now-available",
+      "titleOriginal": "Runway 开源 27B 世界动作模型 Praxis-1，权重采用 Apache 2.0 许可",
+      "summaryOriginal": "Runway 宣布世界动作模型 Praxis-1 以 Apache 2.0 开放权重面向所有人开放。该模型为 27B 参数 MoE 扩散 Transformer，同时预测视频与动作，在 NVIDIA RoboLab-120 榜单以 46.2% 成功率居首，超过 FLUX 3 Action（42.9%）、Cosmos3 Nano（36.8%）和 π0.5（28.0%）。",
+      "originalLanguage": "zh",
+      "author": "Runway：News（网页）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/bx3sq4dxfqblyztkuiktiz0wv",
+        "https://runwayml.com/news/company-news/praxis-1-is-now-available"
+      ],
+      "publishedAt": "2026-11-11T23:25:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-11T17:03:41.713Z",
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/bx3sq4dxfqblyztkuiktiz0wv"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:bx3sq4dxfqblyztkuiktiz0wv",
+          "name": "Runway：News（网页）",
+          "type": "aggregator",
+          "url": "https://runwayml.com/news/company-news/praxis-1-is-now-available",
+          "publishedAt": "2026-11-11T23:25:00.000Z",
+          "title": "Runway 开源 27B 世界动作模型 Praxis-1，权重采用 Apache 2.0 许可",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/bx3sq4dxfqblyztkuiktiz0wv",
+            "https://runwayml.com/news/company-news/praxis-1-is-now-available"
+          ]
+        }
+      ],
+      "importance": 78,
+      "importanceReasonZh": "27B 参数的世界动作模型以 Apache 2.0 开放权重发布，并在公开机器人榜单上取得领先成绩，对机器人学习与视频-动作联合建模社区具有较高实用价值。",
+      "importanceReasonEn": "A 27B world action model released under Apache 2.0 open weights and leading a public robotics benchmark is highly useful to the robot-learning and joint video-action modeling community.",
+      "scoringMode": "ai",
+      "titleZh": "Runway 开源 27B 世界动作模型 Praxis-1，权重采用 Apache 2.0 许可",
+      "titleEn": "Runway Open-Sources 27B World Action Model Praxis-1 Under Apache 2.0",
+      "summaryZh": "Runway 宣布世界动作模型 Praxis-1 以 Apache 2.0 开放权重面向所有人开放。该模型为 27B 参数 MoE 扩散 Transformer，同时预测视频与动作，在 NVIDIA RoboLab-120 榜单以 46.2% 成功率居首，超过 FLUX 3 Action（42.9%）、Cosmos3 Nano（36.8%）和 π0.5（28.0%）。",
+      "summaryEn": "Runway announced that its world action model Praxis-1 is released as open weights under Apache 2.0 for everyone. The model is a 27B-parameter MoE diffusion Transformer that jointly predicts video and actions, and it ranks first on the NVIDIA RoboLab-120 leaderboard with a 46.2% success rate, ahead of FLUX 3 Action (42.9%), Cosmos3 Nano (36.8%) and π0.5 (28.0%).",
+      "keywords": [
+        "Runway",
+        "Praxis-1",
+        "Apache 2.0",
+        "MoE",
+        "RoboLab-120",
+        "世界动作模型"
+      ],
+      "topics": [
+        "world action model",
+        "open weights",
+        "robotics",
+        "video prediction",
+        "diffusion transformer"
+      ],
+      "models": [
+        "Praxis-1",
+        "FLUX 3 Action",
+        "Cosmos3 Nano",
+        "π0.5"
+      ],
+      "detailZh": "Runway 通过官方新闻页面宣布，世界动作模型 Praxis-1 以 Apache 2.0 许可开放权重，面向所有人开放。这意味着外部开发者可以在该许可下获取并使用模型权重，而非仅通过 API 访问。\n\n根据公布信息，Praxis-1 是一个 27B 参数的混合专家（MoE）扩散 Transformer。其核心特点是同时预测视频与动作，即把视觉世界建模与动作生成放在同一模型中处理。\n\n在评测方面，Runway 称 Praxis-1 在 NVIDIA RoboLab-120 榜单上以 46.2% 的成功率排名第一。同一榜单中，FLUX 3 Action 为 42.9%，Cosmos3 Nano 为 36.8%，π0.5 为 28.0%。\n\n目前公开信息集中在模型规模、架构类型、许可方式与榜单成绩，尚未披露训练数据、推理成本或具体使用方式等细节。",
+      "keyPointsZh": [
+        "Praxis-1 为 27B 参数 MoE 扩散 Transformer，同时预测视频与动作",
+        "权重以 Apache 2.0 许可开放",
+        "在 NVIDIA RoboLab-120 榜单以 46.2% 成功率排名第一",
+        "对比成绩：FLUX 3 Action 42.9%、Cosmos3 Nano 36.8%、π0.5 28.0%"
+      ],
+      "impactZh": "该发布把较大规模的世界动作模型以宽松许可开放，可能降低机器人策略与视频-动作联合建模的研究门槛，并加剧开源世界模型在公开榜单上的竞争。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者可在 Apache 2.0 许可下获取 27B 世界动作模型权重，用于视频与动作联合预测相关的研究或应用探索；但需自行评估 27B 规模带来的算力与部署成本。",
+      "howItWorksZh": "Praxis-1 采用混合专家（MoE）扩散 Transformer 架构，总参数量 27B，其设计目标是同时预测视频与动作，从而在同一模型中联合建模视觉动态与动作序列。",
+      "interpretationZh": "已报道的事实是：Runway 以 Apache 2.0 开放 Praxis-1 权重，模型为 27B MoE 扩散 Transformer，并在 RoboLab-120 上取得 46.2% 成功率、位列第一。可合理推断的是，开放权重将便于社区复现与二次开发；但榜单成绩能否迁移到真实机器人任务，尚需更多证据。",
+      "limitationsZh": "来源仅提供模型规模、架构、许可与榜单成绩，未披露训练数据、评测设置细节、推理硬件需求与实际部署案例；榜单领先幅度（相对第二名约 3.3 个百分点）的稳健性也未说明。",
+      "actionStepsZh": [
+        "查阅 Runway 官方新闻页确认 Apache 2.0 许可条款与权重获取方式",
+        "对照 NVIDIA RoboLab-120 榜单核实各模型成功率数据",
+        "评估 27B MoE 模型的显存与推理算力需求后再规划实验"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Praxis-1 以 46.2% 成功率领先 FLUX 3 Action 3.3 个百分点，领先 π0.5 18.2 个百分点。",
+        "data": [
+          {
+            "label": "Praxis-1",
+            "value": 46.2,
+            "display": ""
+          },
+          {
+            "label": "FLUX 3 Action",
+            "value": 42.9,
+            "display": ""
+          },
+          {
+            "label": "Cosmos3 Nano",
+            "value": 36.8,
+            "display": ""
+          },
+          {
+            "label": "π0.5",
+            "value": 28,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:bx3sq4dxfqblyztkuiktiz0wv",
+          "name": "Runway：News（网页）",
+          "type": "aggregator",
+          "url": "https://runwayml.com/news/company-news/praxis-1-is-now-available",
+          "publishedAt": "2026-11-11T23:25:00.000Z",
+          "title": "Runway 开源 27B 世界动作模型 Praxis-1，权重采用 Apache 2.0 许可",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/bx3sq4dxfqblyztkuiktiz0wv",
+            "https://runwayml.com/news/company-news/praxis-1-is-now-available"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-11T23:25:00.000Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
+        "current": 68,
+        "peak": 68,
+        "history": [
+          {
+            "at": "2026-11-11T23:25:00.000Z",
+            "label": "11/12 07:25",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-12T00:17:40.639Z",
+            "label": "11/12 08:17",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:10:21.278Z",
+            "label": "11/12 09:10",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:03:01.917Z",
+            "label": "11/12 10:03",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:55:42.556Z",
+            "label": "11/12 10:55",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
+            "value": 68,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "8cfe95d5a7efcad0",
       "normalizedUrl": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api",
@@ -31,7 +495,7 @@
       "publishedAt": "2026-11-11T22:03:25.000Z",
       "publishedPrecision": "minute",
       "discoveredAt": null,
-      "contentType": "industry",
+      "contentType": "official",
       "evidenceLevel": "practitioner",
       "attribution": null,
       "sources": [
@@ -62,19 +526,19 @@
         }
       ],
       "importance": 62,
-      "importanceReasonZh": "这是 Google 进入决策模型这一细分 API 类别的产品发布，涉及多模态能力和与竞品的直接价格对比，对开发者选型有实际参考价值。",
-      "importanceReasonEn": "This is Google's product entry into the decision-model API niche, with multimodal capability and direct price comparison against competitors, offering practical value for developer selection.",
+      "importanceReasonZh": "这是 Google 正式进入决策模型这一细分 API 类别，并首次在该类产品中提供完整多模态支持，对需要结构化判断的开发者有直接参考价值。",
+      "importanceReasonEn": "Google formally enters the decision-model API niche and is the first in this category to offer full multimodal support, which is directly relevant to developers needing structured judgments.",
       "scoringMode": "ai",
       "titleZh": "Gemini Decisions API 发布",
       "titleEn": "Gemini Decisions API",
-      "summaryZh": "Google 推出 Gemini Decisions API，加入决策模型类别，与 Jev 和 OpenAI 竞争。该模型支持是/否、选择和评分标准打分三类问题，定价为每百万输入 token 10 美分、输出免费，并支持文本、图像、音频、视频和 PDF 多模态输入。",
-      "summaryEn": "Google launched the Gemini Decisions API, entering the decision-model category alongside Jev and OpenAI. It supports yes/no, choice, and rubric-scoring questions, is priced at 10 cents per million input tokens with free output, and accepts text, images, audio, video, and PDFs.",
+      "summaryZh": "Google 推出 Gemini Decisions API，加入决策模型类别，与 Jev 和 OpenAI 竞争。该 API 支持是/否、选择和评分标准打分三类问题，定价为每百万输入 token 10 美分、输出免费，并支持文本、图像、音频、视频和 PDF 多模态输入。",
+      "summaryEn": "Google launches the Gemini Decisions API, entering the decision-model category alongside Jev and OpenAI. It supports yes/no, choice, and rubric-scoring questions, is priced at 10 cents per million input tokens with free output, and accepts text, images, audio, video, and PDFs.",
       "keywords": [
         "Gemini Decisions API",
         "decision model",
         "multimodal",
-        "probability",
-        "pricing"
+        "yes/no",
+        "probability"
       ],
       "topics": [
         "decision models",
@@ -87,24 +551,23 @@
         "Jev",
         "GPT-6 Luna"
       ],
-      "detailZh": "Google 发布了 Gemini Decisions API，推出名为“Gemini Decision 1”的决策模型，正式加入 Jev 和 OpenAI 所在的决策模型类别。该 API 支持与 Jev 相同的三类问题：是/否判断、多选选择以及按评分标准打分，甚至沿用了 Jev 用于是/否问题的术语“Noul”。\n\n定价方面，Gemini Decision 1 与 GPT-6 Luna 决策模型相同，为每百万输入 token 10 美分，输出免费。三者中 Jev 最便宜，为每百万 4.2 美分。能力范围上，Jev 仅支持文本和 JSON，OpenAI 可处理文本与图像，而 Gemini Decision 1 为全多模态，覆盖文本、图像、音频、视频和 PDF。\n\n作者 Simon Willison 用一段“Yonkers 踩踏机器人”视频做了测试，向模型提出四个是/否问题：视频中是否有龙、是否有机器人、是否拍摄于法国、是否拍摄于美国。Jev 和 OpenAI 对是/否问题返回 1.0 或 0.0 的确定值，而 Gemini 返回的是概率值，例如“是否有机器人”为 0.9234，“是否有龙”为 0.0498，表现出更低的确定性。\n\n输入材料在概率输出部分被截断，因此完整的测试结果和其余问题的概率值尚不清楚。",
+      "detailZh": "Google 发布了 Gemini Decisions API，产品名为 Gemini Decision 1，正式加入决策模型这一类别，与 Jev 和 OpenAI 的同类产品竞争。该 API 支持三种问题类型：是/否判断、多选项选择，以及按评分标准打分。它沿用了 Jev 对是/否问题的术语“Noul”。\n\n定价方面，Gemini Decision 1 与 GPT-6 Luna 决策模型相同：每百万输入 token 10 美分，输出免费。Jev 仍是三者中最便宜的，为每百万 4.2 美分。\n\n输入能力上，Jev 仅支持文本和 JSON，OpenAI 支持文本和图像，而 Gemini Decision 1 是三者中唯一完全多模态的，覆盖文本、图像、音频、视频和 PDF。\n\n测试者用一段“Yonkers stomping robot”视频向 Gemini 提出四个是/否问题：视频中是否有龙、是否有机器人、是否拍摄于法国、是否拍摄于美国。Jev 和 OpenAI 对是/否问题返回 1.0 或 0.0，而 Gemini 返回的是概率值，例如“dragon”为 0.0497、“robot”为 0.9234，表现出更细粒度的置信度。",
       "keyPointsZh": [
-        "Google 推出 Gemini Decisions API，模型名为 Gemini Decision 1，加入决策模型类别。",
-        "支持是/否、选择和评分标准打分三类问题，并沿用 Jev 的“Noul”术语。",
-        "定价为每百万输入 token 10 美分、输出免费，与 GPT-6 Luna 相同，Jev 最便宜为 4.2 美分。",
-        "Gemini Decision 1 支持文本、图像、音频、视频和 PDF，Jev 仅支持文本和 JSON，OpenAI 支持文本和图像。",
-        "测试中 Gemini 对是/否问题返回概率值而非 1.0/0.0 的确定值。"
+        "Gemini Decision 1 支持是/否、选择和评分标准打分三类问题。",
+        "定价为每百万输入 token 10 美分，输出免费，与 GPT-6 Luna 相同；Jev 为 4.2 美分。",
+        "Gemini Decision 1 支持文本、图像、音频、视频和 PDF，是三者中唯一完全多模态的。",
+        "对是/否问题，Gemini 返回概率值而非 1.0/0.0 的硬判断。"
       ],
-      "impactZh": "决策模型是一类专门用于结构化判断的 API，Google 的加入意味着这一细分市场形成三家竞争格局，多模态输入能力可能成为差异化优势。",
+      "impactZh": "决策模型 API 把“结构化判断”从通用对话模型中独立出来，Google 的加入意味着这一细分市场形成三方竞争，多模态输入能力可能成为差异化关键。",
       "readerImpactZh": "",
-      "userImpactZh": "开发者在需要视频、音频或 PDF 输入的结构化判断场景中多了一个可选 API；其概率输出形式与竞品的 0/1 输出不同，可能需要调整阈值处理逻辑。",
-      "howItWorksZh": "调用时向 API 提交一组带名称的问题，每个问题指定类型（是/否、选择或评分标准打分），并附带待判断的输入内容（文本、图像、音频、视频或 PDF）。模型对每个问题返回结构化结果，是/否类问题以“Noul”类型返回 probability 概率值，而非二值结果。",
-      "interpretationZh": "已报道的事实是：Google 发布了该 API、定价与多模态支持范围明确、测试中 Gemini 返回概率值。合理推断是：概率输出可能更适合需要置信度的场景，但也意味着调用方需自行设定判定阈值；由于测试结果被截断，无法据此全面比较三家模型的准确率。",
-      "limitationsZh": "输入材料在测试结果处被截断，四个问题的完整概率和对比结论缺失；仅有一个视频样本，不能代表整体准确率；未提供延迟、速率限制或正式文档信息。",
+      "userImpactZh": "需要批量做是/否、分类或评分判断的开发者可以评估 Gemini Decision 1，尤其是输入包含视频、音频或 PDF 的场景；其概率输出便于设置阈值，但成本高于 Jev。",
+      "howItWorksZh": "调用时向 API 提交问题与输入内容，问题类型包括是/否、选择和评分标准打分。对于是/否问题，Gemini 返回带 type 字段和 probability 字段的 JSON 对象，概率表示模型对该判断的置信程度，而非固定的 1.0 或 0.0。输入可以是文本、图像、音频、视频或 PDF。",
+      "interpretationZh": "已报道的事实包括：产品名称、三类问题类型、定价、多模态支持范围，以及测试中返回概率值的表现。可以合理推断，概率输出让调用方自行设定判定阈值，但来源未说明概率是否经过校准，也未给出与其他模型在准确率上的对比。",
+      "limitationsZh": "来源仅为个人测试，样本只有一段视频和四个问题，未提供准确率、延迟或大规模基准数据；概率值的校准情况未知；除定价外的配额与可用性细节未提及。",
       "actionStepsZh": [
-        "在需要视频或 PDF 输入的结构化判断场景中，可试用 Gemini Decision 1 并与现有方案对比。",
-        "对概率输出设定判定阈值，而不是直接当作 0/1 使用。",
-        "根据输入模态和成本在 Jev、OpenAI 与 Gemini 之间做选型。"
+        "在需要视频、音频或 PDF 判断的场景中试用 Gemini Decision 1。",
+        "对是/否问题设置概率阈值，而不是直接依赖单一判断。",
+        "若仅需文本判断且成本敏感，可对比 Jev 的 4.2 美分定价。"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -112,7 +575,7 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "每百万输入 token 价格（美分）：Jev 4.2 美分最便宜，Gemini Decision 1 与 GPT-6 Luna 均为 10 美分。",
+        "insightZh": "每百万输入 token 价格（美分）：Jev 最低，Gemini Decision 1 与 GPT-6 Luna 相同。",
         "data": [
           {
             "label": "Jev",
@@ -162,7 +625,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T22:03:25.000Z",
-        "endedAt": "2026-11-11T23:00:16.400Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -173,8 +636,38 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T23:00:16.400Z",
+            "at": "2026-11-11T23:00:54.699Z",
             "label": "11/12 07:00",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:58:24.398Z",
+            "label": "11/12 07:58",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T00:55:54.098Z",
+            "label": "11/12 08:55",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:53:23.797Z",
+            "label": "11/12 09:53",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:50:53.496Z",
+            "label": "11/12 10:50",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
             "value": 59,
             "reports": 1
           }
@@ -228,49 +721,50 @@
         }
       ],
       "importance": 72,
-      "importanceReasonZh": "这是谷歌正式进入决策模型细分领域的产品发布，单次批量评估1000个问题、低延迟和低成本对需要大规模分类与判定的业务场景有直接价值。",
-      "importanceReasonEn": "This is Google's formal entry into the decision-model niche, with batch evaluation of 1,000 questions per pass, low latency and low cost that directly matter for large-scale classification and judgment workflows.",
+      "importanceReasonZh": "这是谷歌进入决策模型细分领域的产品发布，主打单次批量评分与低延迟、低成本，可能影响需要大规模分类或判定任务的业务场景。",
+      "importanceReasonEn": "This is Google's product entry into the decision-model niche, emphasizing batch scoring in a single pass with low latency and cost, which could affect business use cases requiring large-scale classification or judgment tasks.",
       "scoringMode": "ai",
       "titleZh": "谷歌推出Gemini Decision 1，加入决策模型浪潮，单次可评分1000个问题",
       "titleEn": "Google joins the decision-model wave with Gemini Decision 1, scoring 1,000 questions in a single pass",
-      "summaryZh": "谷歌DeepMind推出Gemini Decisions API，可在单次调用中跨文本、图像、音频和视频评估最多1000个封闭式问题。据谷歌称，Gemini Decision 1在150至250毫秒内返回结果，成本约为Gemini 3.5 Flash-Lite的五分之一。",
-      "summaryEn": "Google DeepMind's new Gemini Decisions API evaluates up to 1,000 closed-ended questions in a single pass across text, images, audio, and video. Gemini Decision 1 returns results in 150 to 250 milliseconds at roughly five times lower cost than Gemini 3.5 Flash-Lite, according to Google.",
+      "summaryZh": "谷歌DeepMind推出Gemini Decisions API，可在单次调用中评估最多1000个封闭式问题，支持文本、图像、音频和视频。据谷歌称，Gemini Decision 1在150至250毫秒内返回结果，成本约为Gemini 3.5 Flash-Lite的五分之一。",
+      "summaryEn": "Google DeepMind launched the Gemini Decisions API, which can evaluate up to 1,000 closed-ended questions in a single pass across text, images, audio and video. According to Google, Gemini Decision 1 returns results in 150 to 250 milliseconds at roughly one-fifth the cost of Gemini 3.5 Flash-Lite.",
       "keywords": [
         "Gemini Decision 1",
         "Gemini Decisions API",
-        "封闭式问题",
-        "多模态评估",
-        "低延迟",
-        "低成本"
+        "Google DeepMind",
+        "closed-ended questions",
+        "latency",
+        "cost"
       ],
       "topics": [
         "Gemini",
-        "决策模型",
-        "多模态",
+        "decision models",
         "API",
-        "成本效率"
+        "multimodal",
+        "cost efficiency"
       ],
       "models": [
         "Gemini Decision 1",
         "Gemini 3.5 Flash-Lite"
       ],
-      "detailZh": "谷歌DeepMind发布了Gemini Decisions API，并推出配套模型Gemini Decision 1。该API的定位是决策与判定类任务：用户可以在一次调用中提交最多1000个封闭式问题，模型一次性给出全部结果，而不是逐条请求。\n\n据谷歌介绍，该接口支持文本、图像、音频和视频四种输入模态，因此可用于对多模态内容做批量判定，例如内容分类、合规检查或质量评估等封闭式问题场景。\n\n性能方面，谷歌称Gemini Decision 1的返回延迟在150至250毫秒之间，成本约为Gemini 3.5 Flash-Lite的五分之一。这意味着在需要高频、大批量判定的业务中，单次批量调用可以显著降低请求次数与单位成本。\n\n该消息由The Decoder AI报道，属于谷歌官方产品发布。目前公开信息集中在能力范围、延迟与成本对比，尚未披露具体基准测试成绩、可用区域或定价细节。",
+      "detailZh": "谷歌DeepMind发布了Gemini Decisions API，并推出Gemini Decision 1模型。该模型的核心能力是在单次调用中评估最多1000个封闭式问题，即答案为有限选项的判定类问题，而不是开放式生成。\n\n该API支持文本、图像、音频和视频四种输入模态，意味着同一批判定问题可以跨多种媒体内容进行评分。\n\n据谷歌提供的数据，Gemini Decision 1的返回延迟为150至250毫秒，成本约为Gemini 3.5 Flash-Lite的五分之一。这一定位显示该模型面向高吞吐、低成本的批量判定场景，而非复杂推理或长文本生成。\n\n该消息由The Decoder AI报道，属于谷歌官方发布的产品信息。目前公开信息集中在能力范围、延迟和成本三项指标上，关于准确率、具体定价、可用区域和接入方式等细节尚未在源材料中披露。",
       "keyPointsZh": [
-        "Gemini Decisions API单次调用最多可评估1000个封闭式问题",
-        "支持文本、图像、音频和视频四种输入模态",
-        "谷歌称返回延迟为150至250毫秒",
-        "成本约为Gemini 3.5 Flash-Lite的五分之一"
+        "Gemini Decision 1可在单次调用中评估最多1000个封闭式问题",
+        "支持文本、图像、音频和视频输入",
+        "返回延迟为150至250毫秒",
+        "成本约为Gemini 3.5 Flash-Lite的五分之一",
+        "由谷歌DeepMind发布，通过Gemini Decisions API提供"
       ],
-      "impactZh": "决策类任务（分类、判定、合规检查）是大模型落地最广泛的场景之一。谷歌以批量评估、低延迟和低成本切入，可能推动这一细分领域的价格与性能竞争，并影响企业在内容审核、数据标注和自动化判定上的技术选型。",
+      "impactZh": "决策模型正成为大模型厂商的一个细分竞争方向，主打批量判定而非生成。谷歌以低延迟和低成本切入，可能推动分类、审核、打分等高频判定任务的成本下降，并加剧该领域的厂商竞争。",
       "readerImpactZh": "",
-      "userImpactZh": "对开发者和团队而言，单次调用批量提交最多1000个封闭式问题可减少请求次数和编排复杂度；150至250毫秒延迟与约五分之一的成本，适合高频判定类流水线。但具体定价、配额和可用区域尚未公布，需等待官方文档确认。",
-      "howItWorksZh": "根据来源，Gemini Decisions API面向封闭式问题：调用方在一次请求中提交最多1000个问题，模型一次性返回全部判定结果，输入可包含文本、图像、音频和视频。谷歌给出的延迟为150至250毫秒，成本约为Gemini 3.5 Flash-Lite的五分之一。来源未披露具体的评分机制、输出格式或置信度处理方式。",
-      "interpretationZh": "已报道的事实是：谷歌发布了Gemini Decisions API和Gemini Decision 1，支持单次最多1000个封闭式问题、四种输入模态，并给出延迟与成本对比。可以合理推断，该产品瞄准的是需要大规模、低延迟判定的业务场景，而非开放式生成。但基准表现、准确率和实际成本结构均未在来源中说明。",
-      "limitationsZh": "来源未提供基准测试成绩、准确率数据、正式定价、速率限制、可用区域或与竞品的直接对比；延迟与成本数字均为谷歌自述，未经独立验证。",
+      "userImpactZh": "对开发者和团队而言，该API适合需要一次性对大量封闭式问题做判定的场景，例如内容分类、合规检查或批量打分，低延迟和低成本有利于降低高吞吐任务的运行开销。但源材料未披露准确率和具体定价，选型前仍需自行验证效果。",
+      "howItWorksZh": "根据源材料，Gemini Decisions API的工作方式是在一次请求中提交最多1000个封闭式问题，模型对这些有限选项的问题统一给出判定结果，而不是逐条生成开放式回答。输入可包含文本、图像、音频和视频。谷歌称其响应时间为150至250毫秒，成本约为Gemini 3.5 Flash-Lite的五分之一。源材料未披露具体的调用参数、计费单位和准确率指标。",
+      "interpretationZh": "已报道的事实是：谷歌发布了Gemini Decisions API和Gemini Decision 1，具备单次最多1000个封闭式问题、多模态输入、150至250毫秒延迟和约为Gemini 3.5 Flash-Lite五分之一成本的特点。可合理推断，该产品瞄准的是高吞吐的批量判定任务，而非复杂生成或推理。关于其判定准确率、与竞品的实际效果对比以及定价细节，目前没有公开信息，不宜据此下结论。",
+      "limitationsZh": "源材料未提供准确率、基准测试结果、具体定价、上下文长度限制、可用区域、接入方式以及与其他决策模型的对比数据。延迟和成本数据均来自谷歌自述，尚未经过独立验证。",
       "actionStepsZh": [
-        "关注Gemini Decisions API官方文档，确认定价、配额与可用区域",
-        "评估现有分类或判定流水线是否适合改为单次批量提交最多1000个问题",
-        "在正式采用前用自有数据验证判定准确率"
+        "关注Gemini Decisions API的正式开放情况和接入文档",
+        "在自身业务中挑选批量判定任务，用自有数据测试其准确率",
+        "将150至250毫秒延迟和约为Gemini 3.5 Flash-Lite五分之一的成本作为评估参考，但需以官方定价为准"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -278,21 +772,21 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "谷歌称Gemini Decision 1延迟为150至250毫秒，单次调用最多处理1000个封闭式问题。",
+        "insightZh": "Gemini Decision 1的响应时间为150至250毫秒，成本约为Gemini 3.5 Flash-Lite的五分之一，即后者成本约为其5倍。",
         "data": [
           {
-            "label": "Gemini Decision 1延迟下限",
+            "label": "Gemini Decision 1 延迟下限",
             "value": 150,
             "display": ""
           },
           {
-            "label": "Gemini Decision 1延迟上限",
+            "label": "Gemini Decision 1 延迟上限",
             "value": 250,
             "display": ""
           },
           {
-            "label": "单次最多问题数",
-            "value": 1000,
+            "label": "Gemini 3.5 Flash-Lite 相对成本",
+            "value": 5,
             "display": ""
           }
         ]
@@ -321,7 +815,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T20:12:46.000Z",
-        "endedAt": "2026-11-11T23:00:16.400Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -332,20 +826,50 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T21:08:36.133Z",
-            "label": "11/12 05:08",
-            "value": 31,
+            "at": "2026-11-11T21:09:43.149Z",
+            "label": "11/12 05:09",
+            "value": 20,
             "reports": 1
           },
           {
-            "at": "2026-11-11T22:04:26.266Z",
-            "label": "11/12 06:04",
-            "value": 48,
+            "at": "2026-11-11T22:06:40.299Z",
+            "label": "11/12 06:06",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-11-11T23:00:16.400Z",
-            "label": "11/12 07:00",
+            "at": "2026-11-11T23:03:37.448Z",
+            "label": "11/12 07:03",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T00:00:34.598Z",
+            "label": "11/12 08:00",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T00:57:31.747Z",
+            "label": "11/12 08:57",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:54:28.897Z",
+            "label": "11/12 09:54",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:51:26.046Z",
+            "label": "11/12 10:51",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
             "value": 65,
             "reports": 1
           }
@@ -420,7 +944,10 @@
         "Anthropic",
         "customer support AI"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex",
+        "Claude"
+      ],
       "detailZh": "据The Decoder AI报道，Ramp AI指数显示，2026年10月美国企业AI支出创下新高，但环比增速仅为1.65%，显示增长明显放缓。该指数用于追踪美国企业在AI工具和服务上的实际支出变化。\n\n报道指出，收入集中度依然极高：仅1%的公司贡献了OpenAI和Anthropic约80%的收入。这意味着企业AI市场的大部分收入仍来自少数大型客户。\n\n在增长来源方面，客户支持正成为新的驱动力。不过报道提示，客户支持业务的利润率可能低于此前推动支出增长的编程业务，这可能影响AI厂商的收入结构。\n\n上述信息来自Ramp AI指数的统计与The Decoder AI的报道，具体统计口径、样本范围和计算方法在现有材料中未详细说明。",
       "keyPointsZh": [
         "2026年10月美国企业AI支出创新高，但环比仅增长1.65%",
@@ -479,7 +1006,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T19:35:11.000Z",
-        "endedAt": "2026-11-11T23:00:16.400Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -490,26 +1017,56 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T20:26:27.350Z",
-            "label": "11/12 04:26",
-            "value": 25,
+            "at": "2026-11-11T20:29:59.021Z",
+            "label": "11/12 04:29",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-11T21:17:43.700Z",
-            "label": "11/12 05:17",
-            "value": 37,
+            "at": "2026-11-11T21:24:47.043Z",
+            "label": "11/12 05:24",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-11-11T22:09:00.050Z",
-            "label": "11/12 06:09",
-            "value": 48,
+            "at": "2026-11-11T22:19:35.065Z",
+            "label": "11/12 06:19",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-11T23:00:16.400Z",
-            "label": "11/12 07:00",
+            "at": "2026-11-11T23:14:23.087Z",
+            "label": "11/12 07:14",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T00:09:11.108Z",
+            "label": "11/12 08:09",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:03:59.130Z",
+            "label": "11/12 09:03",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:58:47.152Z",
+            "label": "11/12 09:58",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:53:35.174Z",
+            "label": "11/12 10:53",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
             "value": 59,
             "reports": 1
           }
@@ -646,7 +1203,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T18:00:00.000Z",
-        "endedAt": "2026-11-11T23:00:16.400Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -657,38 +1214,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T18:50:02.733Z",
-            "label": "11/12 02:50",
-            "value": 23,
+            "at": "2026-11-11T18:58:50.319Z",
+            "label": "11/12 02:58",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-11T19:40:05.466Z",
-            "label": "11/12 03:40",
-            "value": 32,
+            "at": "2026-11-11T19:57:40.639Z",
+            "label": "11/12 03:57",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-11T20:30:08.200Z",
-            "label": "11/12 04:30",
+            "at": "2026-11-11T20:56:30.958Z",
+            "label": "11/12 04:56",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T21:55:21.278Z",
+            "label": "11/12 05:55",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T22:54:11.598Z",
+            "label": "11/12 06:54",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-11-11T21:20:10.933Z",
-            "label": "11/12 05:20",
-            "value": 50,
+            "at": "2026-11-11T23:53:01.917Z",
+            "label": "11/12 07:53",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-11T22:10:13.666Z",
-            "label": "11/12 06:10",
-            "value": 59,
+            "at": "2026-11-12T00:51:52.237Z",
+            "label": "11/12 08:51",
+            "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-11-11T23:00:16.400Z",
-            "label": "11/12 07:00",
+            "at": "2026-11-12T01:50:42.556Z",
+            "label": "11/12 09:50",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:49:32.876Z",
+            "label": "11/12 10:49",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
             "value": 68,
             "reports": 1
           }
@@ -814,7 +1395,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T17:30:20.000Z",
-        "endedAt": "2026-11-11T23:00:16.400Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -825,38 +1406,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T18:25:19.400Z",
-            "label": "11/12 02:25",
+            "at": "2026-11-11T18:26:31.199Z",
+            "label": "11/12 02:26",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T19:22:42.399Z",
+            "label": "11/12 03:22",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-11T19:20:18.800Z",
-            "label": "11/12 03:20",
-            "value": 29,
+            "at": "2026-11-11T20:18:53.598Z",
+            "label": "11/12 04:18",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-11T20:15:18.200Z",
-            "label": "11/12 04:15",
-            "value": 37,
+            "at": "2026-11-11T21:15:04.798Z",
+            "label": "11/12 05:15",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-11T21:10:17.600Z",
-            "label": "11/12 05:10",
-            "value": 44,
+            "at": "2026-11-11T22:11:15.998Z",
+            "label": "11/12 06:11",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-11-11T22:05:17.000Z",
-            "label": "11/12 06:05",
-            "value": 52,
+            "at": "2026-11-11T23:07:27.197Z",
+            "label": "11/12 07:07",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-11T23:00:16.400Z",
-            "label": "11/12 07:00",
+            "at": "2026-11-12T00:03:38.397Z",
+            "label": "11/12 08:03",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T00:59:49.597Z",
+            "label": "11/12 08:59",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:56:00.796Z",
+            "label": "11/12 09:56",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:52:11.996Z",
+            "label": "11/12 10:52",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
             "value": 59,
             "reports": 1
           }
@@ -942,7 +1553,9 @@
         "api-keys",
         "openai-compatible"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "Simon Willison 发布了 llm 0.37.2 版本，主要目的是修复由 Daniel de Araujo 报告的两个安全公告：GHSA-v9h7-jj4g-f862 和 GHSA-r639-rr7r-x72w。这两个问题都涉及 LLM 工具在特定情况下可能把用户配置的 OpenAI API 密钥发送给第三方 OpenAI 兼容 API 提供商。\n\nLLM 提供 extra-openai-models.yaml 机制，用于接入其他厂商提供的 OpenAI 兼容 API 端点。0.37 版本新增了 llm openai endpoint add 命令来管理该配置。\n\n根据发布说明，报告指出了两条可能触发密钥误发的路径。第一，如果 api_key_name 指定的密钥从未被存储，系统可能回退使用已配置的 OpenAI 密钥。第二，如果对一个标记为 responses: true 的模型使用 -o chat_completions 1 选项运行，也可能导致密钥被发送到第三方端点。\n\n0.37.2 版本针对上述两条路径进行了修复。发布说明未披露更多技术细节，也未说明是否已有实际利用案例。",
       "keyPointsZh": [
         "llm 0.37.2 修复了 GHSA-v9h7-jj4g-f862 和 GHSA-r639-rr7r-x72w 两个安全公告",
@@ -995,7 +1608,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T17:19:52.000Z",
-        "endedAt": "2026-11-11T23:00:16.400Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1006,38 +1619,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T18:16:36.066Z",
-            "label": "11/12 02:16",
-            "value": 22,
+            "at": "2026-11-11T18:17:00.290Z",
+            "label": "11/12 02:17",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-11T19:13:20.133Z",
-            "label": "11/12 03:13",
-            "value": 31,
+            "at": "2026-11-11T19:14:08.581Z",
+            "label": "11/12 03:14",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-11T20:10:04.200Z",
-            "label": "11/12 04:10",
-            "value": 39,
+            "at": "2026-11-11T20:11:16.871Z",
+            "label": "11/12 04:11",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-11T21:06:48.266Z",
-            "label": "11/12 05:06",
-            "value": 48,
+            "at": "2026-11-11T21:08:25.162Z",
+            "label": "11/12 05:08",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-11T22:03:32.333Z",
-            "label": "11/12 06:03",
+            "at": "2026-11-11T22:05:33.452Z",
+            "label": "11/12 06:05",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:02:41.743Z",
+            "label": "11/12 07:02",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T23:59:50.033Z",
+            "label": "11/12 07:59",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T00:56:58.324Z",
+            "label": "11/12 08:56",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T01:54:06.614Z",
+            "label": "11/12 09:54",
             "value": 56,
             "reports": 1
           },
           {
-            "at": "2026-11-11T23:00:16.400Z",
-            "label": "11/12 07:00",
+            "at": "2026-11-12T02:51:14.905Z",
+            "label": "11/12 10:51",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
             "value": 65,
             "reports": 1
           }
@@ -1147,7 +1790,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-11T16:00:00.000Z",
-        "endedAt": "2026-11-11T23:00:16.400Z",
+        "endedAt": "2026-11-12T03:48:23.196Z",
         "current": 48,
         "peak": 48,
         "history": [
@@ -1158,50 +1801,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-11T16:52:32.050Z",
-            "label": "11/12 00:52",
-            "value": 18,
+            "at": "2026-11-11T17:04:23.926Z",
+            "label": "11/12 01:04",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-11-11T17:45:04.100Z",
-            "label": "11/12 01:45",
+            "at": "2026-11-11T18:08:47.853Z",
+            "label": "11/12 02:08",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-11T19:13:11.780Z",
+            "label": "11/12 03:13",
             "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-11T18:37:36.150Z",
-            "label": "11/12 02:37",
-            "value": 27,
+            "at": "2026-11-11T20:17:35.707Z",
+            "label": "11/12 04:17",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-11T19:30:08.200Z",
-            "label": "11/12 03:30",
-            "value": 31,
+            "at": "2026-11-11T21:21:59.634Z",
+            "label": "11/12 05:21",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-11T20:22:40.250Z",
-            "label": "11/12 04:22",
-            "value": 35,
+            "at": "2026-11-11T22:26:23.561Z",
+            "label": "11/12 06:26",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-11-11T21:15:12.300Z",
-            "label": "11/12 05:15",
-            "value": 40,
+            "at": "2026-11-11T23:30:47.488Z",
+            "label": "11/12 07:30",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-11-11T22:07:44.350Z",
-            "label": "11/12 06:07",
-            "value": 44,
+            "at": "2026-11-12T00:35:11.415Z",
+            "label": "11/12 08:35",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-11T23:00:16.400Z",
-            "label": "11/12 07:00",
+            "at": "2026-11-12T01:39:35.342Z",
+            "label": "11/12 09:39",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T02:43:59.269Z",
+            "label": "11/12 10:43",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-12T03:48:23.196Z",
+            "label": "11/12 11:48",
             "value": 48,
             "reports": 1
           }
