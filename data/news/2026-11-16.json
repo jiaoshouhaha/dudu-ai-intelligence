@@ -1,7 +1,1795 @@
 {
-  "generatedAt": "2026-11-16T00:59:07.916Z",
+  "generatedAt": "2026-11-16T07:55:54.962Z",
   "date": "2026-11-16",
   "items": [
+    {
+      "id": "f5dc4cd120b45659",
+      "normalizedUrl": "https://arxiv.org/abs/2611.17338",
+      "originalUrl": "https://arxiv.org/abs/2611.17338",
+      "titleOriginal": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+      "summaryOriginal": "arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater degradation than false-keep, while a non-deleting baseline can still fail when incorrect labels steer generation. On a frozen 102/102 calibration/test split, a simple deployment-matched gate reaches 0.655 accuracy versus 0.641 for always hard-drop and 0.662 for test-informed oracle selection. Global-accuracy crossovers require gold labels and are model- and task-specific diagnostics, not deployment thresholds. Deletion should instead be treated as cost-sensitive: validate query-critical false-drop risk on matched data, or default to label-free retention when such validation is unavailable.",
+      "originalLanguage": "en",
+      "author": "Samarth Vinayaka",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-16T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.17338",
+          "publishedAt": "2026-11-16T05:00:00.000Z",
+          "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该论文直接挑战LLM记忆系统中常见的硬过滤删除做法，用受控实验量化了误删查询关键事实的代价，并给出可操作的部署建议，对构建记忆型智能体的团队有实际参考价值。",
+      "importanceReasonEn": "The paper directly challenges the common hard-filter deletion practice in LLM memory systems, quantifies the cost of falsely dropping query-critical facts through controlled experiments, and offers actionable deployment guidance valuable to teams building memory-based agents.",
+      "scoringMode": "ai",
+      "titleZh": "LLM智能体何时该遗忘？查询关键解析器错误下的记忆过滤",
+      "titleEn": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+      "summaryZh": "一篇arXiv论文研究了LLM记忆系统中的硬过滤删除机制：当解析器错误地删除查询关键事实时，下游准确率会下降。在三个模型上，受控敏感性干预显示，硬删除在完美解析下带来+0.186至+0.230的增益，但在最低可靠性下变为-0.176至-0.181的损失。配对干预表明，误删造成的退化显著大于误留。在冻结的102/102校准/测试划分上，一个简单的部署匹配门控达到0.655准确率，而始终硬删除为0.641，测试信息神谕选择为0.662。作者建议将删除视为成本敏感决策：在匹配数据上验证查询关键误删风险，或在无法验证时默认采用无标签保留。",
+      "summaryEn": "An arXiv paper examines hard-filter deletion in LLM memory systems: when resolver errors delete query-critical facts, downstream accuracy drops. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show false-drop causes significantly greater degradation than false-keep. On a frozen 102/102 calibration/test split, a simple deployment-matched gate reaches 0.655 accuracy versus 0.641 for always hard-drop and 0.662 for test-informed oracle selection. The authors recommend treating deletion as cost-sensitive: validate query-critical false-drop risk on matched data, or default to label-free retention when such validation is unav",
+      "keywords": [
+        "记忆过滤",
+        "硬删除",
+        "查询关键事实",
+        "误删",
+        "误留",
+        "解析器可靠性",
+        "部署门控"
+      ],
+      "topics": [
+        "LLM记忆系统",
+        "记忆过滤",
+        "智能体",
+        "解析器错误",
+        "成本敏感决策"
+      ],
+      "models": [],
+      "detailZh": "该论文关注LLM记忆系统中的一个常见做法：将判定为过时的事实直接删除，即硬过滤。作者指出，当解析器出现错误、把查询关键事实误判为过时并删除时，这一硬删除步骤会降低下游任务准确率。\n\n研究在三个模型上进行了受控敏感性干预。结果显示，在完美解析条件下，硬删除带来+0.186至+0.230的准确率增益；而在测试的最低可靠性条件下，硬删除反而造成-0.176至-0.181的损失。这说明硬删除的效果高度依赖解析器可靠性。\n\n配对的目标干预进一步表明，误删（false-drop）造成的性能退化显著大于误留（false-keep）。此外，即使采用不删除的基线，如果错误标签引导生成，仍可能失败。\n\n在冻结的102/102校准/测试划分上，一个简单的部署匹配门控达到0.655准确率，始终硬删除为0.641，测试信息神谕选择为0.662。作者强调，全局准确率交叉点需要金标签，属于模型和任务特定的诊断指标，而非部署阈值。\n\n作者建议将删除视为成本敏感决策：在匹配数据上验证查询关键误删风险，或在无法进行此类验证时默认采用无标签保留策略。",
+      "keyPointsZh": [
+        "硬删除在完美解析下带来+0.186至+0.230增益，但在最低可靠性下造成-0.176至-0.181损失。",
+        "误删查询关键事实造成的退化显著大于误留。",
+        "部署匹配门控准确率0.655，高于始终硬删除的0.641，低于测试信息神谕的0.662。",
+        "全局准确率交叉点依赖金标签，不能直接作为部署阈值。",
+        "建议将删除视为成本敏感决策，无法验证时默认无标签保留。"
+      ],
+      "impactZh": "该研究提醒记忆型智能体开发者：硬删除并非总是有益，解析器不可靠时误删关键事实的代价可能超过保留过时信息的代价。这为记忆管理策略的设计提供了量化依据。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用或开发带记忆功能的AI智能体时，应谨慎启用自动删除过时记忆的硬过滤；在解析器可靠性未经验证的情况下，保留记忆通常比误删更安全。",
+      "howItWorksZh": "论文采用受控敏感性干预：在三个模型上调节解析器可靠性，观察硬删除对下游准确率的影响；并用配对目标干预对比误删与误留的退化程度。随后在冻结的102/102校准/测试划分上比较三种策略：部署匹配门控、始终硬删除、测试信息神谕选择。",
+      "interpretationZh": "论文报告的事实是：硬删除的效果随解析器可靠性变化，误删代价大于误留，部署匹配门控优于始终硬删除但不及神谕选择。合理推断是：在缺乏可靠验证数据时，默认保留记忆是更稳妥的工程选择。",
+      "limitationsZh": "实验仅覆盖三个模型和特定任务设置；全局准确率交叉点依赖金标签，属于诊断指标而非通用部署阈值；部署匹配门控需要匹配的校准数据，实际场景中未必可得。",
+      "actionStepsZh": [
+        "在启用硬删除前，先在匹配数据上评估查询关键事实的误删风险。",
+        "若无法进行此类验证，默认采用无标签保留策略而非硬删除。",
+        "将删除决策视为成本敏感问题，权衡误删与误留的代价。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "部署匹配门控准确率高于始终硬删除，但低于依赖测试信息的理想化神谕选择。",
+        "data": [
+          {
+            "label": "部署匹配门控",
+            "value": 0.655,
+            "display": ""
+          },
+          {
+            "label": "始终硬删除",
+            "value": 0.641,
+            "display": ""
+          },
+          {
+            "label": "测试信息神谕",
+            "value": 0.662,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.17338",
+          "publishedAt": "2026-11-16T05:00:00.000Z",
+          "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T05:00:00.000Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-16T05:00:00.000Z",
+            "label": "11/16 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T05:58:38.320Z",
+            "label": "11/16 13:58",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:57:16.641Z",
+            "label": "11/16 14:57",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "5b66b471dda6a306",
+      "normalizedUrl": "https://arxiv.org/abs/2611.17339",
+      "originalUrl": "https://arxiv.org/abs/2611.17339",
+      "titleOriginal": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "summaryOriginal": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning three paradigms: length-normalized token-margin calibration, a lexical n-gram baseline, and two sampling-based consistency methods (semantic entropy and SelfCheckGPT-NLI) on two small open instruction-tuned models (Llama-3.2-3B-Instruct and Qwen2.5-3B-Instruct) loaded at 4-bit NF4 quantization on a single Colab T4 GPU, evaluated on closed-book TriviaQA. Cross-model ranking transfer is poor: Spearman rho is -0.80 and Kendall tau-b is -0.667, meaning the detector ranking actively inverts between the two models, and the cheap lexical baseline is statistically indistinguishable from the sampling-based consistency detectors on both models under bootstrap 95 percent confidence intervals. As a seco",
+      "originalLanguage": "en",
+      "author": "Shubhra Mittal, Gaurav Naresh Mittal",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-16T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.17339",
+          "publishedAt": "2026-11-16T05:00:00.000Z",
+          "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该研究直接挑战了幻觉检测器在真实端侧小模型上的有效性假设，指出排名不可迁移且复杂采样方法未必优于廉价基线，对实践者选型有参考价值。",
+      "importanceReasonEn": "The study directly challenges assumptions about hallucination detector effectiveness on real on-device small models, showing rankings do not transfer and complex sampling methods may not beat a cheap baseline, which is useful for practitioner selection.",
+      "scoringMode": "ai",
+      "titleZh": "排名是否成立？面向实践者的小型量化端侧大模型幻觉检测器审计",
+      "titleEn": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "summaryZh": "一篇 arXiv 论文对四类幻觉检测器在小型、4 比特量化、单 GPU 端侧模型上的表现进行了可复现审计。结果显示，检测器排名在不同模型之间发生反转，且廉价的词法 n-gram 基线在统计上与基于采样的语义熵和 SelfCheckGPT-NLI 检测器无法区分。",
+      "summaryEn": "An arXiv paper presents a reproducible audit of four hallucination detectors on small, 4-bit quantized, single-GPU on-device models. It finds that detector rankings invert across models, and a cheap lexical n-gram baseline is statistically indistinguishable from sampling-based semantic entropy and SelfCheckGPT-NLI detectors.",
+      "keywords": [
+        "幻觉检测",
+        "4-bit NF4量化",
+        "语义熵",
+        "SelfCheckGPT-NLI",
+        "TriviaQA",
+        "排名迁移"
+      ],
+      "topics": [
+        "幻觉检测",
+        "端侧小模型",
+        "量化模型",
+        "评估可复现性",
+        "LLM可靠性"
+      ],
+      "models": [
+        "Phi-3-mini",
+        "Llama-3.2-3B-Instruct",
+        "Qwen2.5-3B-Instruct",
+        "Gemma-2-2B-Instruct"
+      ],
+      "detailZh": "该论文针对大语言模型幻觉检测研究中的一个证据缺口：现有检测方法多在 7B–70B 研究级模型上评估，拥有充足采样预算和精确匹配或 ROUGE 正确性标签，而实践者实际部署在端侧的小模型（Phi-3-mini、Llama-3.2-3B-Instruct、Qwen2.5-3B-Instruct、Gemma-2-2B-Instruct）通常以 4 比特精度运行，处于这一证据基础之外。\n\n作者进行了一次可复现的单 GPU 审计，覆盖三种范式的四种检测器：长度归一化的 token-margin 校准、词法 n-gram 基线，以及两种基于采样一致性的方法（语义熵和 SelfCheckGPT-NLI）。实验在两个小型开源指令微调模型 Llama-3.2-3B-Instruct 和 Qwen2.5-3B-Instruct 上进行，以 4 比特 NF4 量化加载于单块 Colab T4 GPU，评估数据集为闭卷 TriviaQA。\n\n核心发现是跨模型排名迁移很差：Spearman rho 为 -0.80，Kendall tau-b 为 -0.667，意味着检测器排名在两个模型之间发生主动反转。此外，廉价的词法基线在两个模型上都在 bootstrap 95% 置信区间内与基于采样的—致性检测器统计上无法区分。摘要在此处截断，第二项发现的具体内容未在输入中完整给出。",
+      "keyPointsZh": [
+        "审计覆盖三种范式的四种幻觉检测器，在 4 比特 NF4 量化的 Llama-3.2-3B-Instruct 和 Qwen2.5-3B-Instruct 上评估。",
+        "检测器排名在两个模型之间发生反转：Spearman rho 为 -0.80，Kendall tau-b 为 -0.667。",
+        "廉价词法 n-gram 基线在 bootstrap 95% 置信区间内与语义熵和 SelfCheckGPT-NLI 统计上无法区分。",
+        "实验在单块 Colab T4 GPU 上完成，评估集为闭卷 TriviaQA，强调可复现性。"
+      ],
+      "impactZh": "该研究提示，在小型量化端侧模型上，幻觉检测器的相对优劣可能无法从大模型研究直接外推，且复杂采样方法未必带来统计上可辨的收益。这对检测方法的评估规范和部署选型具有警示意义。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用或开发端侧小模型的团队应注意：在大模型上表现更好的幻觉检测器不一定在小模型上同样领先，选型时应基于目标模型自行验证，并考虑廉价基线是否已足够。",
+      "howItWorksZh": "实验在单块 Colab T4 GPU 上以 4 比特 NF4 量化加载 Llama-3.2-3B-Instruct 和 Qwen2.5-3B-Instruct，在闭卷 TriviaQA 上比较四种检测器：长度归一化 token-margin 校准、词法 n-gram 基线、语义熵和 SelfCheckGPT-NLI。通过 Spearman rho 与 Kendall tau-b 衡量跨模型排名一致性，并用 bootstrap 95% 置信区间比较检测器间差异。",
+      "interpretationZh": "已报告的事实是：在两个 4 比特量化小模型上，检测器排名发生反转，且词法基线在统计上与采样一致性方法无法区分。由此可合理推断，基于大模型研究得出的检测器优劣排序未必适用于端侧小模型；但这一推断仅限于本研究的两个模型、单一数据集和特定量化设置。",
+      "limitationsZh": "输入仅为摘要且末尾截断，第二项发现未完整呈现。评估仅涉及两个模型和闭卷 TriviaQA 单一数据集，量化方式固定为 4 比特 NF4，硬件为单块 T4。结论是否推广到其他小模型、数据集或精度设置尚不可知。",
+      "actionStepsZh": [
+        "在目标端侧模型上复现检测器对比，而非直接沿用大模型研究中的排名。",
+        "将廉价词法 n-gram 基线纳入对比，确认复杂采样方法是否带来统计显著收益。",
+        "使用 bootstrap 置信区间而非单点分数来判断检测器间差异是否可靠。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "两个排名一致性指标均为负值，表明检测器排名在两个模型之间发生反转而非保持。",
+        "data": [
+          {
+            "label": "Spearman rho",
+            "value": -0.8,
+            "display": ""
+          },
+          {
+            "label": "Kendall tau-b",
+            "value": -0.667,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.17339",
+          "publishedAt": "2026-11-16T05:00:00.000Z",
+          "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T05:00:00.000Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-16T05:00:00.000Z",
+            "label": "11/16 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T05:58:38.320Z",
+            "label": "11/16 13:58",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:57:16.641Z",
+            "label": "11/16 14:57",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "5ce534ca0f65865f",
+      "normalizedUrl": "https://hunyuan.tencent.com/research/100145?langVersion=zh",
+      "originalUrl": "https://hunyuan.tencent.com/research/100145?langVersion=zh",
+      "titleOriginal": "腾讯混元发布 Hy4 flash：224B 总参数、1M 上下文的日常高性价比模型",
+      "summaryOriginal": "腾讯混元推出 Hy4 flash，总参数 224B（含 64B Engram 参数）、激活 12B，支持多模态和 1M 上下文，API 价格大幅低于 Hy4（输入 0.5 元、输出 2 元每百万 tokens）。",
+      "originalLanguage": "zh",
+      "author": "腾讯混元：Research（API）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/u36vxmxeopbsx4if4lap30899",
+        "https://hunyuan.tencent.com/research/100145?langVersion=zh"
+      ],
+      "publishedAt": "2026-11-16T04:29:37.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-16T05:27:46.472Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/u36vxmxeopbsx4if4lap30899"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:u36vxmxeopbsx4if4lap30899",
+          "name": "腾讯混元：Research（API）",
+          "type": "aggregator",
+          "url": "https://hunyuan.tencent.com/research/100145?langVersion=zh",
+          "publishedAt": "2026-11-16T04:29:37.000Z",
+          "title": "腾讯混元发布 Hy4 flash：224B 总参数、1M 上下文的日常高性价比模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/u36vxmxeopbsx4if4lap30899",
+            "https://hunyuan.tencent.com/research/100145?langVersion=zh"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该发布同时涉及参数规模、稀疏激活、1M 上下文和多模态能力，并给出明显更低的 API 价格，对日常调用大模型的开发者和团队有直接成本影响。",
+      "importanceReasonEn": "The release combines parameter scale, sparse activation, 1M context and multimodality with notably lower API pricing, directly affecting the cost for developers and teams that call large models routinely.",
+      "scoringMode": "ai",
+      "titleZh": "腾讯混元发布 Hy4 flash：224B 总参数、1M 上下文的日常高性价比模型",
+      "titleEn": "Tencent Hunyuan Releases Hy4 flash: A 224B-Parameter, 1M-Context Everyday Cost-Effective Model",
+      "summaryZh": "腾讯混元推出 Hy4 flash，总参数 224B（含 64B Engram 参数）、激活 12B，支持多模态和 1M 上下文，API 价格大幅低于 Hy4（输入 0.5 元、输出 2 元每百万 tokens）。",
+      "summaryEn": "Tencent Hunyuan launched Hy4 flash, with 224B total parameters (including 64B Engram parameters) and 12B activated, supporting multimodality and a 1M context, with API pricing substantially lower than Hy4 (0.5 yuan input and 2 yuan output per million tokens).",
+      "keywords": [
+        "腾讯混元",
+        "Hy4 flash",
+        "224B 总参数",
+        "12B 激活",
+        "1M 上下文",
+        "Engram 参数",
+        "API 价格"
+      ],
+      "topics": [
+        "大模型发布",
+        "稀疏激活架构",
+        "长上下文",
+        "多模态",
+        "API 定价"
+      ],
+      "models": [
+        "Hy4 flash",
+        "Hy4"
+      ],
+      "detailZh": "腾讯混元发布 Hy4 flash 模型，定位为面向日常使用的高性价比模型。根据官方信息，Hy4 flash 总参数为 224B，其中包含 64B 的 Engram 参数，实际激活参数为 12B。这一配置意味着模型整体容量较大，但每次推理只调用其中一部分参数。\n\nHy4 flash 支持多模态能力和 1M 上下文长度，可处理更长的输入内容。官方同时公布了 API 价格：输入为每百万 tokens 0.5 元，输出为每百万 tokens 2 元，明显低于 Hy4。\n\n目前公开信息集中在参数结构、上下文长度、多模态支持和定价上，尚未披露具体评测分数、训练细节或与同类模型的横向对比。",
+      "keyPointsZh": [
+        "Hy4 flash 总参数 224B，其中含 64B Engram 参数，激活参数为 12B。",
+        "支持多模态和 1M 上下文。",
+        "API 定价为输入 0.5 元、输出 2 元每百万 tokens，低于 Hy4。",
+        "官方将其定位为日常使用的高性价比模型。"
+      ],
+      "impactZh": "Hy4 flash 以较大总参数配合较小激活参数，并给出较低的 API 价格，可能降低长上下文和多模态任务的调用成本，加剧同价位模型的性价比竞争。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者和团队可以用更低的每百万 tokens 价格调用支持 1M 上下文和多模态的模型，适合长文档处理、批量调用等对成本敏感的场景。",
+      "howItWorksZh": "Hy4 flash 采用稀疏激活设计：总参数 224B，但每次推理仅激活 12B 参数，其中总参数里包含 64B 的 Engram 参数。模型支持多模态输入和最长 1M tokens 的上下文。API 按输入和输出 tokens 分别计费，输入 0.5 元、输出 2 元每百万 tokens。",
+      "interpretationZh": "官方披露的事实是参数结构、上下文长度、多模态支持和定价。可以合理推断，稀疏激活加低定价的组合意在覆盖高频、长上下文的日常调用场景；但模型实际能力仍需评测数据验证。",
+      "limitationsZh": "官方未公布基准评测分数、训练数据规模、推理速度、延迟或可用区域等细节，也未提供与同类模型的横向对比，因此实际性能尚无法判断。",
+      "actionStepsZh": [
+        "在需要长上下文或多模态的日常任务中，可按官方定价评估 Hy4 flash 的调用成本。",
+        "接入前先用自有任务样本测试其输出质量，再决定是否替换现有模型。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "总参数 224B 中仅激活 12B，输入价格 0.5 元、输出价格 2 元每百万 tokens，官方称低于 Hy4。",
+        "data": [
+          {
+            "label": "Hy4 flash 总参数",
+            "value": 224,
+            "display": ""
+          },
+          {
+            "label": "Hy4 flash 激活参数",
+            "value": 12,
+            "display": ""
+          },
+          {
+            "label": "Engram 参数",
+            "value": 64,
+            "display": ""
+          },
+          {
+            "label": "Hy4 flash 输入价格（元/百万 tokens）",
+            "value": 0.5,
+            "display": ""
+          },
+          {
+            "label": "Hy4 flash 输出价格（元/百万 tokens）",
+            "value": 2,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:u36vxmxeopbsx4if4lap30899",
+          "name": "腾讯混元：Research（API）",
+          "type": "aggregator",
+          "url": "https://hunyuan.tencent.com/research/100145?langVersion=zh",
+          "publishedAt": "2026-11-16T04:29:37.000Z",
+          "title": "腾讯混元发布 Hy4 flash：224B 总参数、1M 上下文的日常高性价比模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/u36vxmxeopbsx4if4lap30899",
+            "https://hunyuan.tencent.com/research/100145?langVersion=zh"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T04:29:37.000Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-16T04:29:37.000Z",
+            "label": "11/16 12:29",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T05:21:11.490Z",
+            "label": "11/16 13:21",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:12:45.981Z",
+            "label": "11/16 14:12",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:04:20.471Z",
+            "label": "11/16 15:04",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "cc559c8d7865a53b",
+      "normalizedUrl": "https://qwen.ai/blog?id=qwen3.8",
+      "originalUrl": "https://qwen.ai/blog?id=qwen3.8",
+      "titleOriginal": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+      "summaryOriginal": "Alibaba's Qwen team is previewing the Qwen4 architecture with Qwen3.8-Flash-Next, a mixture-of-experts model that activates just 6 out of 125 billion parameters per token. At one-ninth the training cost, it beats much larger competitors like DeepSeek-V4-Flash and Claude Opus 4.6 on coding and office benchmarks, adding more pricing pressure on OpenAI and Anthropic. The article Alibaba releases Qwen3.8-Flash-Next, targeting \"ultimate cost efficiency\" appeared first on The Decoder .",
+      "originalLanguage": "zh",
+      "author": "Qwen：Blog Retrieval（API）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 89,
+      "publishedAt": "2026-11-16T03:46:34.000Z",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-new-qwen-model-is-also-taking-your-job-but-this-time-its-great/",
+          "publishedAt": "2026-08-03T17:12:23.000Z"
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-open-weight-qwen3-8-max-takes-on-long-horizon-ai-tasks-with-2-4-trillion-parameters/",
+          "publishedAt": "2026-08-03T10:48:50.000Z"
+        },
+        {
+          "id": "aihot-selected:cmscldw820c4kroeu7bw1kb27",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8",
+          "publishedAt": "2026-08-03T02:00:00.000Z",
+          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+          "authority": 89,
+          "sourcePriority": 96
+        },
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+          "publishedAt": "2026-08-04T03:49:14.000Z",
+          "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
+          "authority": 84,
+          "sourcePriority": 82
+        },
+        {
+          "id": "aihot-selected:cmsib6211178jronko75alzk2",
+          "name": "公众号：千问APP（阿里）",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzYzNDE5MDEwMQ%3D%3D&mid=2247488266&idx=1&sn=3a1988ba0710abcefba9c9dd282b464e",
+          "publishedAt": "2026-08-07T02:04:51.000Z",
+          "title": "千问功能上新：推出思考研究、定时任务、办公助理、语音通话等多项新功能，并支持 Qwen3.8-MAX",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": []
+        },
+        {
+          "id": "aihot-selected:cmsqagyyz00yuroucf55e5fue",
+          "name": "IT之家（RSS）",
+          "type": "aggregator",
+          "url": "https://www.ithome.com/0/989/001.htm",
+          "publishedAt": "2026-08-12T16:10:01.000Z",
+          "title": "阿里开放 Qwen3.8-2.4T-A95B 模型权重：2.4T MoE、激活 95B、原生 256K 上下文",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmsqagyyz00yuroucf55e5fue",
+            "https://www.ithome.com/0/989/001.htm"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmsrlvwfp05gdro46mbfqtsgm",
+          "name": "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
+          "type": "aggregator",
+          "url": "https://x.com/SiliconFlowAI/status/2087903227224412222",
+          "publishedAt": "2026-08-13T14:04:55.000Z",
+          "title": "Qwen3.8-2.4T-A95B 开源，硅基流动即日上线",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmsrlvwfp05gdro46mbfqtsgm",
+            "https://x.com/SiliconFlowAI/status/2087903227224412222"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmst3j53e03ncro068tgsr4xn",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2088280182356611304",
+          "publishedAt": "2026-08-14T15:02:48.000Z",
+          "title": "通义千问开源 Qwen3.8 系列模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmst3j53e03ncro068tgsr4xn",
+            "https://x.com/Alibaba_Qwen/status/2088280182356611304"
+          ]
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-qwen-team-releases-qwen-3-8-models-with-open-weights-under-the-apache-2-0-license/",
+          "publishedAt": "2026-08-14T17:01:54.000Z",
+          "title": "Alibaba&#039;s Qwen team releases Qwen 3.8 models with open weights under the Apache 2.0 license",
+          "authority": 84,
+          "sourcePriority": 82,
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/08/qwen_logo-2.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/alibabas-qwen-team-releases-qwen-3-8-models-with-open-weights-under-the-apache-2-0-license/",
+            "https://the-decoder.com"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmta2x13k03t3rolwmr6pzc67",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2092591393424515114",
+          "publishedAt": "2026-08-26T12:34:01.000Z",
+          "title": "通义千问发布 Qwen3.8-Flash，多模态 MoE 模型，Qwen4 架构早期预览",
+          "authority": 81,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmta2x13k03t3rolwmr6pzc67",
+            "https://x.com/Alibaba_Qwen/status/2092591393424515114"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmta2veap03nmrolwxllvp4ay",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+          "publishedAt": "2026-08-26T12:30:00.000Z",
+          "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
+          "authority": 83,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmta2veap03nmrolwxllvp4ay",
+            "https://qwen.ai/blog?id=qwen3.8-flash-next"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmta9ciqt07c1roj219h5liie",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2092636376990990503",
+          "publishedAt": "2026-08-26T15:32:46.000Z",
+          "title": "Qwen3.8-Flash 开源，Qwen4 架构预览",
+          "authority": 84,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmta9ciqt07c1roj219h5liie",
+            "https://x.com/Alibaba_Qwen/status/2092636376990990503"
+          ]
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibaba-releases-qwen3-8-flash-next-targeting-ultimate-cost-efficiency/",
+          "publishedAt": "2026-08-26T14:40:09.000Z",
+          "title": "Alibaba releases Qwen3.8-Flash-Next, targeting \"ultimate cost efficiency\"",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/07/qwen_logo-1.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/alibaba-releases-qwen3-8-flash-next-targeting-ultimate-cost-efficiency/",
+            "https://the-decoder.com"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmu5smj860insroqokcuh0u9v",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+          "publishedAt": "2026-09-17T17:18:08.568Z",
+          "title": "Qwen 发布原生全模态模型 Qwen3.8-Omni-Flash，主打音视频智能体任务交付",
+          "authority": 77,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmu5smj860insroqokcuh0u9v",
+            "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmu74vaqy0qeerowkch23r6nd",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8-livetranslate",
+          "publishedAt": "2026-09-18T09:30:00.000Z",
+          "title": "Qwen 发布 Qwen3.8-LiveTranslate 实时同传模型，LAAL 降至 2.3 秒",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmu74vaqy0qeerowkch23r6nd",
+            "https://qwen.ai/blog?id=qwen3.8-livetranslate"
+          ]
+        },
+        {
+          "id": "aihot-selected:r9e7azie93xzxxdf6yyd1jmqe",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2122174463479542126",
+          "publishedAt": "2026-11-16T03:46:34.000Z",
+          "title": "通义千问发布 Qwen4 Max，Intelligence Index 较 Qwen3.8 Max 高 9 分且成本更低",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/r9e7azie93xzxxdf6yyd1jmqe",
+            "https://x.com/Alibaba_Qwen/status/2122174463479542126"
+          ]
+        }
+      ],
+      "importance": 85,
+      "importanceReasonZh": "该事件是 Qwen 系列的重大发布，首次开源 Max 级权重，对 AI 社区和开发者有重要影响。",
+      "importanceReasonEn": "This is a major release in the Qwen series, open-sourcing Max-level weights for the first time, with significant impact on the AI community and developers.",
+      "scoringMode": "ai",
+      "titleZh": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+      "titleEn": "Qwen3.8-Max Released: Open-Source Strongest Coding and Collaboration Model, 2.4T Parameters",
+      "summaryZh": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
+      "summaryEn": "Qwen officially released Qwen3.8-Max, the strongest model in the Qwen family, with 2.4T parameters (95B active), and for the first time open-sourced Qwen-Max-level weights, with open weights to be released next week.",
+      "keywords": [
+        "Qwen3.8-Max",
+        "开源",
+        "2.4T参数",
+        "编码",
+        "协作"
+      ],
+      "topics": [
+        "Qwen",
+        "模型发布",
+        "开源"
+      ],
+      "models": [
+        "Qwen3.8-Max"
+      ],
+      "detailZh": "Qwen 正式发布了 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 总参数和 95B 激活参数。该模型在编码和协作任务上表现卓越，据称是开源模型中的最强。此次发布首次开源了 Qwen-Max 级别的权重，开放权重将于下周发布。这一举措标志着 Qwen 在开源策略上的重大转变，此前 Max 级模型通常仅通过 API 提供。Qwen3.8-Max 的发布预计将推动开源模型在编码和协作领域的应用，为开发者提供更强大的工具。",
+      "keyPointsZh": [
+        "Qwen3.8-Max 拥有 2.4T 总参数和 95B 激活参数。",
+        "该模型在编码和协作任务上表现卓越，据称为开源最强。",
+        "首次开源 Qwen-Max 级权重，开放权重将于下周发布。"
+      ],
+      "impactZh": "该事件对 AI 社区和开发者有重要影响，因为 Qwen3.8-Max 的开源将提供更强大的编码和协作能力，可能改变开源模型的竞争格局。",
+      "actionStepsZh": [
+        "关注 Qwen 官方渠道，获取下周开放权重的下载链接。",
+        "查看模型文档，了解许可条款和部署要求。",
+        "在本地环境测试模型性能，验证其编码和协作能力。"
+      ],
+      "detailCompleteness": "summary",
+      "processingError": null,
+      "sourcePriority": 96,
+      "reportCount": 16,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:r9e7azie93xzxxdf6yyd1jmqe",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2122174463479542126",
+          "publishedAt": "2026-11-16T03:46:34.000Z",
+          "title": "通义千问发布 Qwen4 Max，Intelligence Index 较 Qwen3.8 Max 高 9 分且成本更低",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/r9e7azie93xzxxdf6yyd1jmqe",
+            "https://x.com/Alibaba_Qwen/status/2122174463479542126"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmu74vaqy0qeerowkch23r6nd",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8-livetranslate",
+          "publishedAt": "2026-09-18T09:30:00.000Z",
+          "title": "Qwen 发布 Qwen3.8-LiveTranslate 实时同传模型，LAAL 降至 2.3 秒",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmu74vaqy0qeerowkch23r6nd",
+            "https://qwen.ai/blog?id=qwen3.8-livetranslate"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmu5smj860insroqokcuh0u9v",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+          "publishedAt": "2026-09-17T17:18:08.568Z",
+          "title": "Qwen 发布原生全模态模型 Qwen3.8-Omni-Flash，主打音视频智能体任务交付",
+          "authority": 77,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/cmu5smj860insroqokcuh0u9v",
+            "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmta9ciqt07c1roj219h5liie",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2092636376990990503",
+          "publishedAt": "2026-08-26T15:32:46.000Z",
+          "title": "Qwen3.8-Flash 开源，Qwen4 架构预览",
+          "authority": 84,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmta9ciqt07c1roj219h5liie",
+            "https://x.com/Alibaba_Qwen/status/2092636376990990503"
+          ]
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibaba-releases-qwen3-8-flash-next-targeting-ultimate-cost-efficiency/",
+          "publishedAt": "2026-08-26T14:40:09.000Z",
+          "title": "Alibaba releases Qwen3.8-Flash-Next, targeting \"ultimate cost efficiency\"",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/07/qwen_logo-1.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/alibaba-releases-qwen3-8-flash-next-targeting-ultimate-cost-efficiency/",
+            "https://the-decoder.com"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmta2x13k03t3rolwmr6pzc67",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2092591393424515114",
+          "publishedAt": "2026-08-26T12:34:01.000Z",
+          "title": "通义千问发布 Qwen3.8-Flash，多模态 MoE 模型，Qwen4 架构早期预览",
+          "authority": 81,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmta2x13k03t3rolwmr6pzc67",
+            "https://x.com/Alibaba_Qwen/status/2092591393424515114"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmta2veap03nmrolwxllvp4ay",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+          "publishedAt": "2026-08-26T12:30:00.000Z",
+          "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
+          "authority": 83,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmta2veap03nmrolwxllvp4ay",
+            "https://qwen.ai/blog?id=qwen3.8-flash-next"
+          ]
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-qwen-team-releases-qwen-3-8-models-with-open-weights-under-the-apache-2-0-license/",
+          "publishedAt": "2026-08-14T17:01:54.000Z",
+          "title": "Alibaba&#039;s Qwen team releases Qwen 3.8 models with open weights under the Apache 2.0 license",
+          "authority": 84,
+          "sourcePriority": 82,
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/08/qwen_logo-2.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/alibabas-qwen-team-releases-qwen-3-8-models-with-open-weights-under-the-apache-2-0-license/",
+            "https://the-decoder.com"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmst3j53e03ncro068tgsr4xn",
+          "name": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+          "type": "aggregator",
+          "url": "https://x.com/Alibaba_Qwen/status/2088280182356611304",
+          "publishedAt": "2026-08-14T15:02:48.000Z",
+          "title": "通义千问开源 Qwen3.8 系列模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmst3j53e03ncro068tgsr4xn",
+            "https://x.com/Alibaba_Qwen/status/2088280182356611304"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmsrlvwfp05gdro46mbfqtsgm",
+          "name": "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
+          "type": "aggregator",
+          "url": "https://x.com/SiliconFlowAI/status/2087903227224412222",
+          "publishedAt": "2026-08-13T14:04:55.000Z",
+          "title": "Qwen3.8-2.4T-A95B 开源，硅基流动即日上线",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmsrlvwfp05gdro46mbfqtsgm",
+            "https://x.com/SiliconFlowAI/status/2087903227224412222"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmsqagyyz00yuroucf55e5fue",
+          "name": "IT之家（RSS）",
+          "type": "aggregator",
+          "url": "https://www.ithome.com/0/989/001.htm",
+          "publishedAt": "2026-08-12T16:10:01.000Z",
+          "title": "阿里开放 Qwen3.8-2.4T-A95B 模型权重：2.4T MoE、激活 95B、原生 256K 上下文",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.virxact.com/items/cmsqagyyz00yuroucf55e5fue",
+            "https://www.ithome.com/0/989/001.htm"
+          ]
+        },
+        {
+          "id": "aihot-selected:cmsib6211178jronko75alzk2",
+          "name": "公众号：千问APP（阿里）",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzYzNDE5MDEwMQ%3D%3D&mid=2247488266&idx=1&sn=3a1988ba0710abcefba9c9dd282b464e",
+          "publishedAt": "2026-08-07T02:04:51.000Z",
+          "title": "千问功能上新：推出思考研究、定时任务、办公助理、语音通话等多项新功能，并支持 Qwen3.8-MAX",
+          "authority": 76,
+          "sourcePriority": 96,
+          "images": []
+        },
+        {
+          "id": "latent-space",
+          "name": "Latent Space",
+          "type": "community",
+          "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+          "publishedAt": "2026-08-04T03:49:14.000Z",
+          "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
+          "authority": 84,
+          "sourcePriority": 82
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-new-qwen-model-is-also-taking-your-job-but-this-time-its-great/",
+          "publishedAt": "2026-08-03T17:12:23.000Z",
+          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数"
+        },
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/alibabas-open-weight-qwen3-8-max-takes-on-long-horizon-ai-tasks-with-2-4-trillion-parameters/",
+          "publishedAt": "2026-08-03T10:48:50.000Z",
+          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数"
+        },
+        {
+          "id": "aihot-selected:cmscldw820c4kroeu7bw1kb27",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen3.8",
+          "publishedAt": "2026-08-03T02:00:00.000Z",
+          "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+          "authority": 89,
+          "sourcePriority": 96
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T03:46:34.000Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 100,
+        "peak": 100,
+        "history": [
+          {
+            "at": "2026-11-16T03:46:34.000Z",
+            "label": "11/16 11:46",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T04:36:26.192Z",
+            "label": "11/16 12:36",
+            "value": 62,
+            "reports": 16
+          },
+          {
+            "at": "2026-11-16T05:26:18.384Z",
+            "label": "11/16 13:26",
+            "value": 79,
+            "reports": 16
+          },
+          {
+            "at": "2026-11-16T06:16:10.577Z",
+            "label": "11/16 14:16",
+            "value": 96,
+            "reports": 16
+          },
+          {
+            "at": "2026-11-16T07:06:02.769Z",
+            "label": "11/16 15:06",
+            "value": 100,
+            "reports": 16
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 100,
+            "reports": 16
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      },
+      "images": [
+        "https://pbs.substack.com/profile_images/2064231947149377536/Ab70PxT5_normal.jpg\",\"date\":\"2026-08-03T02:15:04.000Z\",\"photos\":[{\"img_url\":\"https://pbs.substack.com/media/HOw1F2ebgAAkpJJ.jpg\",\"link_url\":\"https://t.co/e3YFj2hqcT\"}],\"quoted_tweet\":{},\"reply_count\":1038,\"retweet_count\":2496,\"like_count\":20111,\"impression_count\":4961874,\"expanded_url\":null,\"video_url\":null,\"video_preview_media_key\":null,\"belowTheFold\":false}",
+        "https://substackcdn.com/image/fetch/$s_!W0RB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fmedia%2FHOw1F2ebgAAkpJJ.jpg",
+        "https://the-decoder.com/wp-content/uploads/2026/08/qwenlogo.png",
+        "https://the-decoder.com/wp-content/uploads/2026/07/qwen_logo-1.png",
+        "https://the-decoder.com/wp-content/uploads/2026/08/qwen_logo-2.png"
+      ],
+      "visual": null,
+      "resourceLinks": [
+        "https://modelfit.io/blog/qwen-team-exodus-alibaba/",
+        "https://qwen.ai/blog?id=qwen3.8",
+        "https://www.latent.space/p/ainews-much-ado-about-open-weights",
+        "https://x.com/Alibaba_Qwen/status/2084100707423289643&quot;,&quot;full_text&quot;:&quot;&#128226;Meet",
+        "https://pbs.substack.com/profile_images/2064231947149377536/Ab70PxT5_normal.jpg&quot;,&quot;date&quot;:&quot;2026-08-03T02:15:04.000Z&quot;,&quot;photos&quot;:[{&quot;img_url&quot;:&quot;https://pbs.substack.com/media/HOw1F2ebgAAkpJJ.jpg&quot;,&quot;link_url&quot;:&quot;https://t.co/e3YFj2hqcT&quot;}],&quot;quoted_tweet&quot;:{},&quot;reply_count&quot;:1038,&quot;retweet_count&quot;:2496,&quot;like_count&quot;:20111,&quot;impression_count&quot;:4961874,&quot;expanded_url&quot;:null,&quot;video_url&quot;:null,&quot;video_preview_media_key&quot;:null,&quot;belowTheFold&quot;:false}",
+        "https://www.latent.space/p/inference-eng",
+        "https://www.youtube-nocookie.com/embed/7PSXtru6mmY?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+        "https://twitter.com/i/lists/1585430245762441216",
+        "https://news.smol.ai/",
+        "https://www.latent.space/p/2026",
+        "https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack",
+        "https://x.com/Alibaba_Qwen/status/2084100707423289643"
+      ],
+      "readerImpactZh": "对于普通用户，Qwen3.8-Max 的开源可能带来更多基于该模型的创新应用，但具体影响尚不明确。",
+      "userImpactZh": "对于 AI 用户、开发者或团队，Qwen3.8-Max 的开源权重将允许他们本地部署和微调，从而在编码和协作任务上获得更强的性能，并可能降低使用成本。",
+      "howItWorksZh": "Qwen3.8-Max 采用 MoE 架构，总参数 2.4T，激活参数 95B，这意味着在推理时仅使用部分参数，从而在保持高性能的同时降低计算成本。开放权重将于下周发布，开发者可以下载模型权重并在自己的基础设施上进行部署和微调。",
+      "interpretationZh": "根据报道，Qwen3.8-Max 是 Qwen 家族最强的模型，并在编码和协作任务上表现卓越。然而，具体性能数据尚未公布，因此“开源最强”的说法需要等待基准测试结果验证。此外，开源权重是首次，但具体许可条款尚未明确。",
+      "limitationsZh": "目前信息有限，未提供具体性能基准、许可条款或与其他模型的对比数据。"
+    },
+    {
+      "id": "cf35697b0e1bb93f",
+      "normalizedUrl": "https://x.com/arena/status/2122153116959482051",
+      "originalUrl": "https://x.com/arena/status/2122153116959482051",
+      "titleOriginal": "Qwen4-Max 登顶 Agent Arena 中国模型榜首，Alibaba 排名升至总榜第14",
+      "summaryOriginal": "Arena 榜单显示 Qwen4-Max 以 +7.5% 净提升在 Agent Arena 总排名第14，成为第一中国模型，使 Alibaba 成为排名第一的中国实验室、总榜第5，仅次于 Anthropic、Google、OpenAI 和 Meta。",
+      "originalLanguage": "zh",
+      "author": "X：Arena (@arena)",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 82,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/kzt8bjcin243qefkuiq49c2i6",
+        "https://x.com/arena/status/2122153116959482051"
+      ],
+      "publishedAt": "2026-11-16T02:21:45.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-16T02:58:51.746Z",
+      "contentType": "benchmark",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/kzt8bjcin243qefkuiq49c2i6"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:kzt8bjcin243qefkuiq49c2i6",
+          "name": "X：Arena (@arena)",
+          "type": "aggregator",
+          "url": "https://x.com/arena/status/2122153116959482051",
+          "publishedAt": "2026-11-16T02:21:45.000Z",
+          "title": "Qwen4-Max 登顶 Agent Arena 中国模型榜首，Alibaba 排名升至总榜第14",
+          "authority": 82,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/kzt8bjcin243qefkuiq49c2i6",
+            "https://x.com/arena/status/2122153116959482051"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是 Arena 官方账号发布的榜单结果，直接反映 Qwen4-Max 在 Agent 类评测中的位置变化，以及 Alibaba 在实验室排名中的上升，对关注中国模型竞争力的人有参考价值。",
+      "importanceReasonEn": "This is a leaderboard result posted by the official Arena account, directly reflecting Qwen4-Max's position change in agent-style evaluation and Alibaba's rise in lab rankings, useful for those tracking Chinese model competitiveness.",
+      "scoringMode": "ai",
+      "titleZh": "Qwen4-Max 登顶 Agent Arena 中国模型榜首，Alibaba 排名升至总榜第14",
+      "titleEn": "Qwen4-Max Becomes Top Chinese Model on Agent Arena, Alibaba Rises to No.14 Overall",
+      "summaryZh": "Arena 榜单显示，Qwen4-Max 在 Agent Arena 总排名第14，净提升 +7.5%，成为排名最高的中国模型；Alibaba 由此成为排名第一的中国实验室，总榜第5，仅次于 Anthropic、Google、OpenAI 和 Meta。",
+      "summaryEn": "The Arena leaderboard shows Qwen4-Max at No.14 overall on Agent Arena with a +7.5% net gain, making it the highest-ranked Chinese model; Alibaba becomes the top Chinese lab and No.5 overall, behind Anthropic, Google, OpenAI and Meta.",
+      "keywords": [
+        "Qwen4-Max",
+        "Agent Arena",
+        "Alibaba",
+        "排行榜",
+        "净提升"
+      ],
+      "topics": [
+        "Agent Arena",
+        "Qwen4-Max",
+        "Alibaba",
+        "模型排行榜",
+        "中国大模型"
+      ],
+      "models": [
+        "Qwen4-Max"
+      ],
+      "detailZh": "Arena 在 X 上发布榜单信息称，Qwen4-Max 在 Agent Arena 总排名中位列第14，净提升为 +7.5%，是当前排名最高的中国模型。\n\n同一榜单显示，凭借这一成绩，Alibaba 成为排名第一的中国实验室，在实验室总榜中位列第5，排在其前面的只有 Anthropic、Google、OpenAI 和 Meta。\n\n来源没有披露 Agent Arena 的具体评测任务、样本规模、评分方法或对比基线，也没有给出 Qwen4-Max 与榜首模型之间的分差。因此目前可以确认的是排名与净提升数值，而非模型能力的完整画像。",
+      "keyPointsZh": [
+        "Qwen4-Max 在 Agent Arena 总排名第14，净提升 +7.5%。",
+        "Qwen4-Max 是 Agent Arena 上排名最高的中国模型。",
+        "Alibaba 因此成为排名第一的中国实验室，实验室总榜第5。",
+        "实验室总榜前四为 Anthropic、Google、OpenAI 和 Meta。"
+      ],
+      "impactZh": "Agent 类评测关注模型在多步骤任务中的实际表现，Qwen4-Max 进入总榜前15并成为第一中国模型，说明中国模型在 Agent 场景中的竞争力正在被第三方榜单记录，也为 Alibaba 的模型路线提供了外部参照。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和团队而言，这一排名可作为选择 Agent 场景基础模型的参考信号之一，但来源未披露评测细节，选型时仍应结合自身任务做实测。",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是 Arena 公布的排名与净提升数值。合理推断是 Qwen4-Max 在 Agent 类任务上的相对位置有所改善，但净提升 +7.5% 的具体计算口径、评测任务构成和对手配置均未在来源中说明，不宜据此推断模型在通用能力上已接近榜首。",
+      "limitationsZh": "来源仅为 Arena 的一条榜单公告，未披露评测任务、样本量、评分方法、对比基线及与榜首的分差；净提升 +7.5% 的计算方式不明，榜单结果也可能随评测更新而变化。",
+      "actionStepsZh": [
+        "查阅 Agent Arena 官方榜单页面，确认 Qwen4-Max 的具体分数与排名细节。",
+        "在自身 Agent 工作流中对 Qwen4-Max 做小规模实测，再决定是否采用。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Qwen4-Max 在模型总榜位列第14，而 Alibaba 在实验室总榜位列第5，两个排名口径不同，不能直接等同。",
+        "data": [
+          {
+            "label": "Qwen4-Max 总排名",
+            "value": 14,
+            "display": ""
+          },
+          {
+            "label": "Alibaba 实验室总榜排名",
+            "value": 5,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:kzt8bjcin243qefkuiq49c2i6",
+          "name": "X：Arena (@arena)",
+          "type": "aggregator",
+          "url": "https://x.com/arena/status/2122153116959482051",
+          "publishedAt": "2026-11-16T02:21:45.000Z",
+          "title": "Qwen4-Max 登顶 Agent Arena 中国模型榜首，Alibaba 排名升至总榜第14",
+          "authority": 82,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/kzt8bjcin243qefkuiq49c2i6",
+            "https://x.com/arena/status/2122153116959482051"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T02:21:45.000Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-16T02:21:45.000Z",
+            "label": "11/16 10:21",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T03:17:26.660Z",
+            "label": "11/16 11:17",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:13:08.320Z",
+            "label": "11/16 12:13",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:08:49.981Z",
+            "label": "11/16 13:08",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:04:31.641Z",
+            "label": "11/16 14:04",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:00:13.301Z",
+            "label": "11/16 15:00",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "756563a4144915c6",
+      "normalizedUrl": "https://qwen.ai/blog?id=qwen4-max",
+      "originalUrl": "https://qwen.ai/blog?id=qwen4-max",
+      "titleOriginal": "Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力",
+      "summaryOriginal": "Qwen 团队发布 Qwen4-Max，基于新 Qwen4 架构，拥有 2.4T 骨干参数、每 token 激活 71B、328B N-gram Embedding 参数，具备原生视觉能力和 100 万 token 上下文窗口。",
+      "originalLanguage": "zh",
+      "author": "Qwen：Blog Retrieval（API）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 80,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/nqcfrkilrh7nhnpd03t9q1zfh",
+        "https://qwen.ai/blog?id=qwen4-max"
+      ],
+      "publishedAt": "2026-11-16T02:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-16T02:14:46.238Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/nqcfrkilrh7nhnpd03t9q1zfh"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:nqcfrkilrh7nhnpd03t9q1zfh",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen4-max",
+          "publishedAt": "2026-11-16T02:00:00.000Z",
+          "title": "Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力",
+          "authority": 80,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/nqcfrkilrh7nhnpd03t9q1zfh",
+            "https://qwen.ai/blog?id=qwen4-max"
+          ]
+        }
+      ],
+      "importance": 82,
+      "importanceReasonZh": "这是 Qwen 新一代旗舰模型的官方发布，涉及 2.4T 参数骨干、稀疏激活、百万 token 上下文和原生视觉，属于基础模型能力层面的重要更新，对开发者和智能体应用有直接影响。",
+      "importanceReasonEn": "This is the official launch of Qwen's new flagship model, involving a 2.4T-parameter backbone, sparse activation, a million-token context and native vision. It is a significant foundation-model capability update with direct implications for developers and agent applications.",
+      "scoringMode": "ai",
+      "titleZh": "Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力",
+      "titleEn": "Qwen Releases Qwen4-Max: 2.4T-Parameter Backbone, Million-Token Context and Long-Horizon Agent Capabilities",
+      "summaryZh": "Qwen 团队发布 Qwen4-Max，基于新的 Qwen4 架构，拥有 2.4T 骨干参数、每 token 激活 71B、328B N-gram Embedding 参数，具备原生视觉能力和 100 万 token 上下文窗口。",
+      "summaryEn": "The Qwen team released Qwen4-Max, built on the new Qwen4 architecture, with a 2.4T-parameter backbone, 71B activated per token, 328B N-gram embedding parameters, native vision capability and a 1-million-token context window.",
+      "keywords": [
+        "Qwen4-Max",
+        "Qwen4",
+        "2.4T 参数",
+        "71B 激活",
+        "百万 token 上下文",
+        "N-gram Embedding",
+        "原生视觉",
+        "长程智能体"
+      ],
+      "topics": [
+        "大模型发布",
+        "长上下文",
+        "智能体",
+        "多模态",
+        "MoE 架构"
+      ],
+      "models": [
+        "Qwen4-Max",
+        "Qwen4"
+      ],
+      "detailZh": "Qwen 团队通过官方博客发布新一代旗舰模型 Qwen4-Max，该模型基于全新的 Qwen4 架构构建。根据公布的信息，Qwen4-Max 的骨干参数规模达到 2.4T，但采用稀疏激活方式，每个 token 仅激活 71B 参数，此外还包含 328B 的 N-gram Embedding 参数。\n\n在能力层面，官方强调 Qwen4-Max 具备原生视觉能力，并支持 100 万 token 的上下文窗口。发布信息同时提到该模型面向长程智能体（long-horizon agent）场景，意味着其设计目标包括在较长任务链条中保持上下文与执行能力。\n\n目前公开材料主要来自 Qwen 官方博客的检索摘要，给出了参数结构、上下文长度和视觉能力等核心规格，但未披露训练数据规模、评测分数、定价、开放方式（API 或权重）以及具体基准表现。\n\n从架构命名看，Qwen4-Max 属于 Qwen4 系列中的旗舰型号，稀疏激活加 N-gram Embedding 的组合表明其在总参数规模与推理成本之间做了权衡，但具体实现细节仍需等待官方技术文档补充。",
+      "keyPointsZh": [
+        "Qwen4-Max 基于新的 Qwen4 架构，骨干参数规模为 2.4T。",
+        "采用稀疏激活，每个 token 激活 71B 参数，另含 328B N-gram Embedding 参数。",
+        "支持 100 万 token 上下文窗口，并具备原生视觉能力。",
+        "官方定位包含长程智能体能力，面向长任务链条场景。"
+      ],
+      "impactZh": "2.4T 级稀疏模型加上百万 token 上下文和原生视觉，意味着旗舰模型竞争进一步向超大规模稀疏架构与长上下文智能体方向集中。若该模型可通过 API 或权重获取，将影响开发者在长文档处理、多模态智能体和复杂任务编排上的模型选型。",
+      "readerImpactZh": "",
+      "userImpactZh": "对 AI 开发者而言，百万 token 上下文和原生视觉能力可用于处理超长文档、代码库级分析和多模态智能体流程；稀疏激活结构理论上有利于控制推理成本，但实际定价与可用性尚未公布，需等待官方进一步信息。",
+      "howItWorksZh": "根据官方披露，Qwen4-Max 采用稀疏激活的混合专家式结构：总骨干参数为 2.4T，但每个 token 只激活其中 71B 参数，从而在扩大模型容量的同时控制单次推理计算量。模型还引入 328B 的 N-gram Embedding 参数，用于增强 token 表示。上下文窗口扩展至 100 万 token，并原生支持视觉输入，官方将其定位为可执行长程智能体任务的模型。",
+      "interpretationZh": "已披露的事实是：Qwen4-Max 基于 Qwen4 架构，具备 2.4T 骨干参数、71B 每 token 激活、328B N-gram Embedding、原生视觉和 100 万 token 上下文。可以合理推断，该模型延续了稀疏激活路线以平衡规模与成本，并将长上下文与智能体能力作为主要卖点。但关于实际性能、评测结果、价格和开放形式，目前没有官方数据支撑。",
+      "limitationsZh": "现有信息来自官方博客的检索摘要，缺少评测分数、训练细节、推理成本、定价、API 可用性和权重开放情况。'长程智能体能力'目前是官方定位描述，尚无第三方验证。N-gram Embedding 的具体作用机制也未展开说明。",
+      "actionStepsZh": [
+        "关注 Qwen 官方博客与技术文档，获取 Qwen4-Max 的完整规格与评测数据。",
+        "若计划用于长文档或多模态场景，待 API 开放后优先测试百万 token 上下文下的召回与稳定性。",
+        "针对智能体工作流，设计长任务链条的验证用例，评估其在多步执行中的表现。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "骨干总参数为 2.4T，但每 token 仅激活 71B，激活比例远低于总规模，体现稀疏激活设计。",
+        "data": [
+          {
+            "label": "骨干总参数",
+            "value": 2400,
+            "display": ""
+          },
+          {
+            "label": "每 token 激活参数",
+            "value": 71,
+            "display": ""
+          },
+          {
+            "label": "N-gram Embedding 参数",
+            "value": 328,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:nqcfrkilrh7nhnpd03t9q1zfh",
+          "name": "Qwen：Blog Retrieval（API）",
+          "type": "aggregator",
+          "url": "https://qwen.ai/blog?id=qwen4-max",
+          "publishedAt": "2026-11-16T02:00:00.000Z",
+          "title": "Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力",
+          "authority": 80,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/nqcfrkilrh7nhnpd03t9q1zfh",
+            "https://qwen.ai/blog?id=qwen4-max"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T02:00:00.000Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 70,
+        "peak": 70,
+        "history": [
+          {
+            "at": "2026-11-16T02:00:00.000Z",
+            "label": "11/16 10:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T02:59:19.160Z",
+            "label": "11/16 10:59",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:58:38.320Z",
+            "label": "11/16 11:58",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:57:57.481Z",
+            "label": "11/16 12:57",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:57:16.641Z",
+            "label": "11/16 13:57",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:56:35.801Z",
+            "label": "11/16 14:56",
+            "value": 61,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 70,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "87b76e5b13944ae0",
+      "normalizedUrl": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health",
+      "originalUrl": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+      "titleOriginal": "Apple launches new app to study how people use AI for health",
+      "summaryOriginal": "Apple's new app for a study will answer everyday medical questions",
+      "originalLanguage": "en",
+      "author": "Ivan Mehta",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-16T01:30:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+          "publishedAt": "2026-11-16T01:30:00.000Z",
+          "title": "Apple launches new app to study how people use AI for health",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "苹果以研究应用的形式切入AI健康问答场景，反映大型科技公司对医疗AI数据与用户行为的关注，但现有信息有限。",
+      "importanceReasonEn": "Apple is entering AI health Q&A through a research app, signaling big-tech interest in medical AI data and user behavior, though source details are limited.",
+      "scoringMode": "ai",
+      "titleZh": "苹果推出新应用，研究人们如何用AI管理健康",
+      "titleEn": "Apple launches new app to study how people use AI for health",
+      "summaryZh": "苹果推出一款用于研究的应用，旨在回答日常医疗问题。",
+      "summaryEn": "Apple's new app for a study will answer everyday medical questions.",
+      "keywords": [
+        "苹果",
+        "健康AI",
+        "研究应用",
+        "日常医疗问题"
+      ],
+      "topics": [
+        "AI健康",
+        "苹果",
+        "医疗AI",
+        "用户研究"
+      ],
+      "models": [],
+      "detailZh": "据TechCrunch AI报道，苹果推出一款新应用，用于开展一项研究，研究人们如何使用AI处理健康相关问题。该应用会回答日常医疗问题。\n\n目前公开信息仅包含上述要点，报道未披露应用名称、上线地区、参与方式、数据收集范围、合作机构以及研究周期等细节。\n\n从已知事实看，这一举措将AI健康问答与用户研究结合：应用既提供日常医疗问题的回答功能，也作为研究工具收集使用情况。\n\n由于来源材料有限，尚无法确认该研究是否面向公众开放、是否涉及临床验证，以及苹果将如何使用研究数据。",
+      "keyPointsZh": [
+        "苹果推出一款新应用，用于研究人们如何使用AI处理健康问题",
+        "该应用会回答日常医疗问题",
+        "报道未披露应用名称、地区、参与方式等细节"
+      ],
+      "impactZh": "大型科技公司进入AI健康问答领域，可能推动医疗AI产品形态和用户研究方式的变化，并引发对健康数据使用与医疗建议可靠性的关注。",
+      "readerImpactZh": "普通用户未来可能通过此类应用获得日常医疗问题的AI回答，但具体可用性和安全性尚不明确。",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：苹果推出了一款用于研究AI健康使用情况的应用，该应用能回答日常医疗问题。至于该应用的具体功能、数据政策和研究设计，目前均属未披露信息，不宜推断。",
+      "limitationsZh": "来源仅为一条简短报道，缺少应用名称、上线时间、覆盖地区、参与门槛、数据隐私安排和研究合作方等关键信息，无法评估其实际效果与合规性。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+          "publishedAt": "2026-11-16T01:30:00.000Z",
+          "title": "Apple launches new app to study how people use AI for health",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T01:30:00.000Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-16T01:30:00.000Z",
+            "label": "11/16 09:30",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T02:25:07.851Z",
+            "label": "11/16 10:25",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:20:15.703Z",
+            "label": "11/16 11:20",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:15:23.555Z",
+            "label": "11/16 12:15",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:10:31.406Z",
+            "label": "11/16 13:10",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:05:39.258Z",
+            "label": "11/16 14:05",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:00:47.110Z",
+            "label": "11/16 15:00",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "c6febd82e4661f8d",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/15/datasette-maplibre",
+      "originalUrl": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+      "titleOriginal": "datasette-maplibre 0.1a0",
+      "summaryOriginal": "Release: datasette-maplibre 0.1a0 The first new Datasette geospatial plugin in quite a while! This one combines the excellent MapLibre GL library with OpenFreeMap , the free vector map server operated by Zsolt Ero (you should sponsor Zsolt on GitHub .) I built most of this with a single prompt to Claude Fable 5.2: Look at datasette-cluster-map and datasette-leaflet-geojson plugins, then look at ~/dev/tools/openfreemap-demo.html - then build a brand new Datasette plugin that uses maplibreGL and openfreemap and combines the features of those other two plugins - but be creative and think outside the box for other useful features the plugin might have \"Be creative and think outside the box\" resulted in a few neat ideas - my favorite is that it displays SVG previews of GeoJSON shapes, then loads a WebGL preview only when they scroll into view. I also had Claude build a comprehensive demo which works in the latest Datasette Lite, so you can visit this link to load the plugin and a demo database in your browser via Pyodide and WebAssembly. I like this demo page showing both GeoJSON shapes and lat/lon points on the same map: Tags: visualization , generative-ai , datasette-lite , claude-myt",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "opensource",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/cors-allow/2026/datasette-maplibre.webp"
+      ],
+      "resourceLinks": [
+        "https://github.com/datasette/datasette-maplibre/releases/tag/0.1a0",
+        "https://maplibre.org/maplibre-gl-js/docs/",
+        "https://openfreemap.org",
+        "https://github.com/sponsors/hyperknot",
+        "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml",
+        "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/demo/capitals_and_countries%23map=0/4.2/180&color=continent",
+        "https://simonwillison.net/tags/visualization",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/datasette-lite",
+        "https://simonwillison.net/tags/claude-mythos-fable",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/llms"
+      ],
+      "publishedAt": "2026-11-15T23:58:36.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+          "publishedAt": "2026-11-15T23:58:36.000Z",
+          "title": "datasette-maplibre 0.1a0",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/cors-allow/2026/datasette-maplibre.webp"
+          ],
+          "resourceLinks": [
+            "https://github.com/datasette/datasette-maplibre/releases/tag/0.1a0",
+            "https://maplibre.org/maplibre-gl-js/docs/",
+            "https://openfreemap.org",
+            "https://github.com/sponsors/hyperknot",
+            "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml",
+            "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/demo/capitals_and_countries%23map=0/4.2/180&color=continent",
+            "https://simonwillison.net/tags/visualization",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/datasette-lite",
+            "https://simonwillison.net/tags/claude-mythos-fable",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/llms"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "这是 Datasette 生态中新的地理空间插件，展示了用单次 AI 提示生成完整插件并融合多个既有插件功能的可行做法，对数据可视化与 AI 辅助开发都有参考价值。",
+      "importanceReasonEn": "It is a new geospatial plugin in the Datasette ecosystem that demonstrates generating a complete plugin from a single AI prompt while merging features of existing plugins, offering reference value for data visualization and AI-assisted development.",
+      "scoringMode": "ai",
+      "titleZh": "datasette-maplibre 0.1a0 发布：结合 MapLibre GL 与 OpenFreeMap 的 Datasette 地理空间插件",
+      "titleEn": "datasette-maplibre 0.1a0 Released: A Datasette Geospatial Plugin Combining MapLibre GL and OpenFreeMap",
+      "summaryZh": "Simon Willison 发布了 datasette-maplibre 0.1a0，这是时隔一段时间后首个新的 Datasette 地理空间插件。它把 MapLibre GL 库与 Zsolt Ero 运营的免费矢量地图服务器 OpenFreeMap 结合起来，并融合了 datasette-cluster-map 和 datasette-leaflet-geojson 两个插件的功能。作者表示大部分代码由一次 Claude 提示生成，其中最有意思的创意是先用 SVG 预览 GeoJSON 形状，滚动进入视野后才加载 WebGL 预览。插件还附带一个可在最新 Datasette Lite 中运行的完整演示。",
+      "summaryEn": "Simon Willison released datasette-maplibre 0.1a0, the first new Datasette geospatial plugin in quite a while. It combines the MapLibre GL library with OpenFreeMap, the free vector map server operated by Zsolt Ero, and merges features from the datasette-cluster-map and datasette-leaflet-geojson plugins. The author says most of the code was generated from a single Claude prompt, with the most interesting idea being SVG previews of GeoJSON shapes that only load a WebGL preview once scrolled into view. The plugin also ships with a comprehensive demo that runs in the latest Datasette Lite.",
+      "keywords": [
+        "datasette-maplibre",
+        "MapLibre GL",
+        "OpenFreeMap",
+        "GeoJSON",
+        "Datasette Lite",
+        "Claude"
+      ],
+      "topics": [
+        "Datasette",
+        "MapLibre GL",
+        "OpenFreeMap",
+        "地理空间可视化",
+        "生成式AI编程"
+      ],
+      "models": [
+        "Claude"
+      ],
+      "detailZh": "Simon Willison 发布了 datasette-maplibre 0.1a0，称这是时隔一段时间后首个新的 Datasette 地理空间插件。该插件把 MapLibre GL 库与 OpenFreeMap 结合使用，后者是由 Zsolt Ero 运营的免费矢量地图服务器，作者也呼吁在 GitHub 上赞助 Zsolt。\n\n据作者描述，插件的大部分代码是通过一次发给 Claude 的提示生成的。提示要求 Claude 先查看 datasette-cluster-map 和 datasette-leaflet-geojson 两个插件，再查看本地的 openfreemap-demo.html 文件，然后构建一个使用 MapLibre GL 和 OpenFreeMap、融合这两个插件功能的全新 Datasette 插件，并被要求“有创意、跳出框框”思考其他有用功能。\n\n“有创意、跳出框框”的要求带来了几个不错的想法，作者最喜欢的是：先显示 GeoJSON 形状的 SVG 预览，只有当这些预览滚动进入视野时才加载 WebGL 预览。\n\n作者还让 Claude 构建了一个完整的演示，可在最新 Datasette Lite 中运行，用户可以通过链接在浏览器中借助 Pyodide 和 WebAssembly 加载插件和演示数据库。作者特别提到一个演示页面，能在同一张地图上同时显示 GeoJSON 形状和经纬度点。",
+      "keyPointsZh": [
+        "datasette-maplibre 0.1a0 是新的 Datasette 地理空间插件，结合 MapLibre GL 与 OpenFreeMap。",
+        "插件融合了 datasette-cluster-map 和 datasette-leaflet-geojson 两个既有插件的功能。",
+        "大部分代码由一次 Claude 提示生成，并包含 SVG 预览、滚动进入视野后再加载 WebGL 预览的优化。",
+        "附带可在 Datasette Lite 中通过 Pyodide 和 WebAssembly 运行的完整演示。",
+        "演示页面可在同一地图上同时展示 GeoJSON 形状和经纬度点。"
+      ],
+      "impactZh": "该插件为 Datasette 用户提供了基于 MapLibre GL 和免费矢量地图服务 OpenFreeMap 的新地理空间可视化选项，同时展示了用单次 AI 提示生成完整插件并融合多个既有插件功能的实践路径。",
+      "readerImpactZh": "",
+      "userImpactZh": "Datasette 用户和开发者可以直接试用该插件，在 Datasette 中可视化 GeoJSON 形状和经纬度点，并借助 Datasette Lite 在浏览器中无需本地安装即可体验演示。",
+      "howItWorksZh": "插件使用 MapLibre GL 渲染地图，并连接 OpenFreeMap 这一免费矢量地图服务器提供底图。它融合了 datasette-cluster-map 的点聚合展示和 datasette-leaflet-geojson 的 GeoJSON 展示能力。为优化性能，插件先以 SVG 形式预览 GeoJSON 形状，只有当预览滚动进入视野时才加载 WebGL 预览。演示可在 Datasette Lite 中通过 Pyodide 和 WebAssembly 在浏览器内运行。",
+      "interpretationZh": "据作者描述，该插件的大部分代码由一次 Claude 提示生成，提示中明确要求参考两个既有插件和本地演示文件，并要求有创意地扩展功能。SVG 预览加按需加载 WebGL 的做法是这次生成中较有代表性的成果。需要区分的是，这些是作者自述的生成过程与功能，插件实际质量与稳定性仍需用户自行验证。",
+      "limitationsZh": "版本号为 0.1a0，属于早期 alpha 版本，功能和稳定性可能尚不完善。作者未说明测试覆盖、浏览器兼容性或性能基准。代码由 AI 生成，具体实现细节与潜在问题未在来源中展开。",
+      "actionStepsZh": [
+        "访问作者提供的链接，在 Datasette Lite 中加载插件和演示数据库进行体验。",
+        "查看 datasette-cluster-map 和 datasette-leaflet-geojson 插件以了解被融合的功能。",
+        "考虑在 GitHub 上赞助 OpenFreeMap 的运营者 Zsolt Ero。"
+      ],
+      "detailCompleteness": "full",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+          "publishedAt": "2026-11-15T23:58:36.000Z",
+          "title": "datasette-maplibre 0.1a0",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/cors-allow/2026/datasette-maplibre.webp"
+          ],
+          "resourceLinks": [
+            "https://github.com/datasette/datasette-maplibre/releases/tag/0.1a0",
+            "https://maplibre.org/maplibre-gl-js/docs/",
+            "https://openfreemap.org",
+            "https://github.com/sponsors/hyperknot",
+            "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml",
+            "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/demo/capitals_and_countries%23map=0/4.2/180&color=continent",
+            "https://simonwillison.net/tags/visualization",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/datasette-lite",
+            "https://simonwillison.net/tags/claude-mythos-fable",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/llms"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-15T23:58:36.000Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-15T23:58:36.000Z",
+            "label": "11/16 07:58",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T00:58:15.870Z",
+            "label": "11/16 08:58",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T01:57:55.740Z",
+            "label": "11/16 09:57",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:57:35.610Z",
+            "label": "11/16 10:57",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:57:15.481Z",
+            "label": "11/16 11:57",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:56:55.351Z",
+            "label": "11/16 12:56",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:56:35.221Z",
+            "label": "11/16 13:56",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:56:15.091Z",
+            "label": "11/16 14:56",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "d72009fe316a2e7d",
       "normalizedUrl": "https://mp.weixin.qq.com/s/ZJddy1ssHBvw_1sm12jrkg",
@@ -130,7 +1918,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-15T23:56:00.000Z",
-        "endedAt": "2026-11-16T00:59:07.916Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -141,14 +1929,50 @@
             "reports": 0
           },
           {
-            "at": "2026-11-16T00:27:33.958Z",
-            "label": "11/16 08:27",
+            "at": "2026-11-16T00:55:59.370Z",
+            "label": "11/16 08:55",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T01:55:58.740Z",
+            "label": "11/16 09:55",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:55:58.110Z",
+            "label": "11/16 10:55",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:55:57.481Z",
+            "label": "11/16 11:55",
             "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:59:07.916Z",
-            "label": "11/16 08:59",
+            "at": "2026-11-16T04:55:56.851Z",
+            "label": "11/16 12:55",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:55:56.221Z",
+            "label": "11/16 13:55",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:55:55.591Z",
+            "label": "11/16 14:55",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
             "value": 55,
             "reports": 1
           }
@@ -191,9 +2015,9 @@
           "resourceLinks": []
         }
       ],
-      "importance": 55,
-      "importanceReasonZh": "该消息反映印度半导体初创企业在AI传感器细分领域的融资与商业化进展，并披露了具体客户设计订单，对关注AI硬件供应链和新兴芯片公司的读者具有参考价值。",
-      "importanceReasonEn": "The news reflects fundraising and commercialization progress of an Indian semiconductor startup in the AI sensor niche, and discloses specific customer design wins, offering reference value for readers tracking AI hardware supply chains and emerging chip companies.",
+      "importance": 45,
+      "importanceReasonZh": "该消息反映印度半导体初创企业在AI传感器领域的融资与商业化进展，但披露细节有限，影响范围主要集中于细分硬件市场。",
+      "importanceReasonEn": "The news reflects funding and commercialization progress for an Indian semiconductor startup in AI sensors, but disclosed details are limited and impact is concentrated in a niche hardware market.",
       "scoringMode": "ai",
       "titleZh": "印度芯片初创公司Bharat Semi完成2400万美元种子轮融资，瞄准全球AI传感器市场",
       "titleEn": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
@@ -210,22 +2034,22 @@
         "AI芯片",
         "传感器",
         "融资",
-        "印度半导体"
+        "印度科技"
       ],
       "models": [],
-      "detailZh": "印度芯片初创公司Bharat Semi宣布完成2400万美元种子轮融资。公司表示，这笔资金将用于推进其AI传感器相关业务，并着眼于全球AI传感器市场。\n\nBharat Semi称，其AI赋能的传感器技术已经获得设计订单（design wins），客户包括General Atomics等公司。设计订单通常意味着客户已选择将该公司的芯片或传感器方案纳入其产品设计中，是芯片初创企业商业化的重要早期信号。\n\n目前公开信息较为有限：报道未披露本轮融资的具体投资方、公司估值、传感器产品的技术规格、量产时间表，也未说明设计订单的规模或收入贡献。因此，该消息主要确认了融资事实与客户合作的存在，尚不足以评估其技术竞争力和市场前景。",
+      "detailZh": "印度芯片初创公司Bharat Semi宣布完成2400万美元种子轮融资，并表示将借助这笔资金推进其AI传感器技术，瞄准全球市场。据TechCrunch AI报道，该公司称已获得多家企业的设计订单（design wins），客户中包括美国国防与核技术承包商General Atomics。\n\n所谓设计订单，通常指芯片或传感器供应商的技术被客户选中并纳入其产品设计，是硬件初创公司从研发走向量产商业化的关键信号。Bharat Semi将自身定位在AI与传感器结合的赛道，即让传感器在端侧具备一定的智能处理能力。\n\n目前公开信息仅涵盖融资规模、客户名称和公司战略方向，未披露具体产品参数、量产时间表、投资方名单或融资金额对应的估值。因此对该公司的技术成熟度和市场竞争力仍缺乏可验证的细节。\n\n从行业背景看，印度近年来持续推动本土半导体产业发展，初创企业融资活跃度上升，而AI传感器在工业、国防和消费电子领域需求增长，是资本关注的细分方向之一。",
       "keyPointsZh": [
-        "Bharat Semi完成2400万美元种子轮融资。",
-        "公司聚焦AI赋能的传感器技术，并瞄准全球市场。",
-        "公司称已获得设计订单，客户包括General Atomics。",
-        "报道未披露投资方、估值及产品技术细节。"
+        "Bharat Semi完成2400万美元种子轮融资",
+        "公司称其AI传感器技术已获得设计订单",
+        "客户包括General Atomics",
+        "公司目标是全球AI传感器市场"
       ],
-      "impactZh": "该融资表明资本仍在关注AI硬件与传感器这一细分方向，也显示印度半导体初创企业正尝试在全球AI传感器供应链中占据位置。若设计订单顺利转化为量产，可能为AI感知类硬件提供新的供应来源。",
+      "impactZh": "该融资表明资本继续关注印度本土半导体初创企业，以及AI与传感器融合这一细分硬件方向；若设计订单顺利转化为量产，可能增强印度在全球AI硬件供应链中的存在感。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "已确认的事实是：Bharat Semi完成了2400万美元种子轮融资，并称获得包括General Atomics在内的设计订单。可合理推断的是，设计订单代表客户已在其产品设计中采用该公司的传感器方案，但订单规模、是否进入量产以及收入贡献均未披露，因此不宜据此判断其商业成熟度。",
-      "limitationsZh": "报道未提供投资方名单、估值、产品技术参数、量产时间、订单金额及收入情况；设计订单能否转化为规模化出货仍不确定。",
+      "interpretationZh": "已报道的事实是：Bharat Semi完成2400万美元种子轮融资，并称获得包括General Atomics在内的设计订单。可合理推断的是，设计订单意味着其技术已进入客户产品设计阶段，但距离大规模量产和收入确认仍有距离。公司具体技术路线、产品性能和量产能力均未在报道中说明。",
+      "limitationsZh": "报道未披露投资方、估值、产品技术细节、设计订单的规模与金额、量产时间表，也未说明General Atomics具体将该技术用于何种产品。设计订单不等同于确定收入，后续仍存在不确定性。",
       "actionStepsZh": [],
       "detailCompleteness": "summary",
       "visual": null,
@@ -248,9 +2072,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-15T23:30:00.000Z",
-        "endedAt": "2026-11-16T00:59:07.916Z",
-        "current": 55,
-        "peak": 55,
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 50,
+        "peak": 50,
         "history": [
           {
             "at": "2026-11-15T23:30:00.000Z",
@@ -259,15 +2083,57 @@
             "reports": 0
           },
           {
-            "at": "2026-11-16T00:14:33.958Z",
-            "label": "11/16 08:14",
-            "value": 35,
+            "at": "2026-11-16T00:26:12.773Z",
+            "label": "11/16 08:26",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:59:07.916Z",
-            "label": "11/16 08:59",
-            "value": 55,
+            "at": "2026-11-16T01:22:25.547Z",
+            "label": "11/16 09:22",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:18:38.320Z",
+            "label": "11/16 10:18",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:14:51.094Z",
+            "label": "11/16 11:14",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:11:03.867Z",
+            "label": "11/16 12:11",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:07:16.641Z",
+            "label": "11/16 13:07",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:03:29.414Z",
+            "label": "11/16 14:03",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:59:42.188Z",
+            "label": "11/16 14:59",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -306,7 +2172,7 @@
       "publishedAt": "2026-11-15T23:20:27.000Z",
       "publishedPrecision": "minute",
       "discoveredAt": null,
-      "contentType": "opensource",
+      "contentType": "official",
       "evidenceLevel": "primary",
       "attribution": null,
       "sources": [
@@ -339,48 +2205,48 @@
           ]
         }
       ],
-      "importance": 62,
-      "importanceReasonZh": "这是 Datasette 1.0 进程中的重要版本，流式输出改变了大数据导出的实现方式，安全修复涉及私有查询信息泄露，对使用 Datasette 的开发者有直接影响。",
-      "importanceReasonEn": "This is a significant release in Datasette's 1.0 progress: streaming changes how large exports work, the security fix concerns private query information exposure, and it directly affects developers using Datasette.",
+      "importance": 58,
+      "importanceReasonZh": "这是 Datasette 1.0 路线图上的实质性版本，流式输出改变了插件导出大数据的方式，安全修复涉及私有查询信息泄露，对使用 Datasette 的开发者有直接影响。",
+      "importanceReasonEn": "This is a substantive release on the Datasette 1.0 roadmap: streaming changes how plugins export large data, and the security fix addresses leakage of private query information, directly affecting Datasette developers.",
       "scoringMode": "ai",
-      "titleZh": "Datasette 1.0a43 发布：流式输出、安全修复与多页视图过渡",
-      "titleEn": "Datasette 1.0a43 Released: Streaming Output, Security Fixes and Multi-Page View Transitions",
-      "summaryZh": "Datasette 1.0a43 发布，1.0 里程碑完成度达 53%。本次最大更新是为输出渲染器加入流式支持，内置 TSV 和 CSV 导出已采用该机制，插件可通过新的 Response.stream() 方法一次性流式输出整张表的每一行。此外修复了私有存储查询可能泄露标题和 SQL 的安全问题，并带来行页面 JSON 表示重新设计、copy-schema Web Component、JSON 列美化打印、DatasetteModal.confirm() 工具方法以及 CSS 多页视图过渡等改进。",
-      "summaryEn": "Datasette 1.0a43 is released with the 1.0 milestone now 53% complete. The biggest update adds streaming support for output renderers, with built-in TSV and CSV exports adopting it and plugins able to stream every row of a table via the new Response.stream() method. It also fixes a security issue where private stored queries could leak titles and SQL, and brings a redesigned row page JSON representation, a copy-schema Web Component, pretty-printed JSON columns, a DatasetteModal.confirm() utility and CSS multi-page view transitions.",
+      "titleZh": "Datasette 1.0a43 发布：流式输出、安全修复与 CSS 视图过渡",
+      "titleEn": "Datasette 1.0a43 Released: Streaming Output, Security Fixes and CSS View Transitions",
+      "summaryZh": "Datasette 发布 1.0a43 版本，1.0 里程碑完成度达 53%。本次最大更新是为输出渲染器加入流式支持，内置 TSV 和 CSV 导出已采用该机制，插件可通过新的 Response.stream() 方法一次性流式输出整张表的每一行。此外修复了私有存储查询可能泄露标题和 SQL 的安全问题（已发布 GitHub 安全公告），并带来行页面 JSON 表示重新设计、copy-schema Web Component、JSON 列美化打印、DatasetteModal.confirm() 工具方法以及 CSS 多页面视图过渡等数十项改进。",
+      "summaryEn": "Datasette released version 1.0a43, with the 1.0 milestone now 53% complete. The biggest update adds streaming support for output renderers; the built-in TSV and CSV exports now use it, and plugins can stream every row of a table in one go via the new Response.stream() method. It also fixes a security issue where private stored queries could leak their title and SQL (a GitHub advisory was issued), and brings a redesigned row-page JSON representation, a copy-schema Web Component, pretty-printed JSON columns, a DatasetteModal.confirm() utility, CSS multi-page view transitions, and dozens of other improvements.",
       "keywords": [
-        "Datasette 1.0a43",
-        "Response.stream()",
-        "TSV/CSV streaming",
-        "private stored queries",
-        "view transitions"
+        "Datasette",
+        "1.0a43",
+        "Response.stream",
+        "CSV/TSV 流式导出",
+        "安全公告",
+        "视图过渡"
       ],
       "topics": [
         "Datasette",
         "streaming",
         "security",
         "web components",
-        "view transitions"
+        "release"
       ],
       "models": [],
-      "detailZh": "Datasette 发布了 1.0a43 版本，作者 Simon Willison 表示 1.0 里程碑目前完成度为 53%，并借助 Claude Fable 5.2 推进剩余事项。本次版本中最大的 1.0 相关条目是输出渲染器的流式支持：内置的 TSV 和 CSV 导出机制现在都使用流式输出，插件也可以通过新的 Response.stream() 方法注册为能够一次性流式输出整张表的每一行。\n\n安全方面包含两项修复，其中一项被作者认为值得发布 GitHub 安全公告：私有存储查询可能被暴露，导致查询的标题和 SQL 被访问，但该问题不允许执行该查询。\n\n此外还有数十项较小的改进。行页面的 JSON 表示终于有了适合 1.0 的设计；新增一个 Web Component，在多个位置提供 copy-schema 功能；行页面中列内的 JSON 可以美化打印；新增 DatasetteModal.confirm() JavaScript 工具方法。版本还包含数十个缺陷修复，贡献者包括 Zihan Dai、Peter Olkhovets、Ilya Khalafi 和 Ankita Advitot。\n\n作者最兴奋的功能其实很小：为 Datasette 添加了 CSS 多页视图过渡（multi-page view transitions）。",
+      "detailZh": "Datasette 作者 Simon Willison 发布了 1.0a43 版本，并说明 1.0 里程碑目前完成 53%，他借助 Claude Fable 5.2 推进剩余事项。本次最核心的 1.0 条目是输出渲染器的流式支持：内置的 TSV 和 CSV 导出机制已改用流式方式，插件也可以通过新增的 Response.stream() 方法注册为能够一次性流式输出整张表的每一行。\n\n安全方面包含两项修复，其中一项被作者认为值得发布 GitHub 安全公告：私有存储查询可能被暴露，泄露查询的标题和 SQL 内容，但不会导致该查询被实际执行。\n\n功能改进包括数十项较小更新：行页面的 JSON 表示终于有了适合 1.0 的设计；新增 Web Component 在多个位置提供 copy-schema 功能；行页面中列内的 JSON 可以美化打印；新增 DatasetteModal.confirm() JavaScript 工具方法。此外还有数十个缺陷修复，贡献者包括 Zihan Dai、Peter Olkhovets、Ilya Khalafi 和 Ankita Advitot。\n\n作者最兴奋的功能其实很小：为 Datasette 加入了 CSS 多页面视图过渡（multi-page view transitions）。",
       "keyPointsZh": [
-        "1.0 里程碑完成度达到 53%",
-        "内置 TSV 和 CSV 导出改用流式输出，插件可通过 Response.stream() 流式输出整表行",
-        "修复私有存储查询标题和 SQL 可能泄露的问题，但该查询无法被执行",
-        "行页面 JSON 表示重新设计，新增 copy-schema Web Component 和 DatasetteModal.confirm()",
-        "加入 CSS 多页视图过渡，并包含数十个缺陷修复"
+        "1.0 里程碑完成度达 53%，本次发布聚焦流式输出与安全修复",
+        "内置 TSV/CSV 导出改用流式，插件可通过 Response.stream() 流式输出整表行",
+        "私有存储查询可能泄露标题和 SQL（不可执行），已发布 GitHub 安全公告",
+        "行页面 JSON 表示重新设计，新增 copy-schema Web Component 与 JSON 美化打印",
+        "加入 CSS 多页面视图过渡，并有四位外部贡献者参与修复"
       ],
-      "impactZh": "流式输出让 Datasette 在处理大表导出时不必一次性加载全部数据，插件生态也能复用该机制；安全修复避免了私有查询元数据泄露；行页面 JSON 和前端工具的改进提升了开发者体验。",
+      "impactZh": "流式输出让 Datasette 在导出大表时不必一次性把全部数据载入内存，插件生态也能复用同一机制；安全修复则消除了私有查询元数据泄露的风险，对公开部署的 Datasette 实例尤为重要。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 Datasette 的开发者可以升级以获得流式 CSV/TSV 导出能力，并在插件中调用 Response.stream()；若站点中存在私有存储查询，应尽快升级以修复元数据泄露问题。",
-      "howItWorksZh": "输出渲染器现在支持流式模式：内置 TSV 和 CSV 导出通过流式方式逐行输出数据，插件可调用新的 Response.stream() 方法声明自己能够一次性流式输出整张表的每一行。安全修复针对私有存储查询的访问控制，阻止未授权方读取查询标题和 SQL。前端方面，copy-schema 以 Web Component 形式在多个位置提供复制功能，DatasetteModal.confirm() 提供确认对话框工具方法，CSS 多页视图过渡则利用浏览器原生的跨页面过渡能力。",
-      "interpretationZh": "已报告的事实是：1.0a43 发布、里程碑完成度 53%、流式输出、安全修复及若干前端改进。合理推断是：流式输出主要面向大表导出场景，可降低内存压力；安全修复属于信息泄露而非查询执行风险。作者提到借助 Claude Fable 5.2 推进 1.0 事项，属于开发过程说明。",
-      "limitationsZh": "输入未说明流式输出的具体性能数据或兼容性限制，也未给出安全公告编号和受影响版本范围；1.0 仍处于 alpha 阶段，接口可能继续变化。",
+      "userImpactZh": "使用 Datasette 的开发者应升级到 1.0a43 以获取安全修复；编写导出类插件的开发者可以改用 Response.stream() 实现逐行流式输出，避免大表导出时的内存压力。",
+      "howItWorksZh": "插件通过新增的 Response.stream() 方法声明自己能够流式输出整张表的每一行，内置 TSV 和 CSV 导出已基于该机制实现，从而在导出时逐行产生输出而非一次性构建完整响应。",
+      "interpretationZh": "已报告的事实是：1.0a43 发布、流式支持落地、两项安全修复、若干 UI 与 JSON 改进。合理推断是：流式导出主要改善大表场景下的内存与响应表现，但输入未给出具体性能数字；安全公告的具体影响范围也未在输入中详述。",
+      "limitationsZh": "输入未说明流式导出的具体性能收益、安全公告的编号与受影响版本范围，也未列出全部数十项改进的细节；1.0 仍处于 alpha 阶段，接口可能继续变化。",
       "actionStepsZh": [
-        "升级到 datasette 1.0a43 以获取流式 CSV/TSV 导出",
-        "在插件中使用 Response.stream() 实现整表流式输出",
-        "检查站点中的私有存储查询并确认已应用安全修复",
-        "在行页面使用新的 JSON 美化打印和 copy-schema 功能"
+        "升级到 datasette 1.0a43 以获取私有存储查询泄露的安全修复",
+        "在自定义导出插件中使用 Response.stream() 实现逐行流式输出",
+        "查看 GitHub 安全公告了解私有查询泄露的具体影响范围"
       ],
       "detailCompleteness": "full",
       "visual": null,
@@ -418,9 +2284,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-15T23:20:27.000Z",
-        "endedAt": "2026-11-16T00:59:07.916Z",
-        "current": 59,
-        "peak": 59,
+        "endedAt": "2026-11-16T07:55:54.962Z",
+        "current": 57,
+        "peak": 57,
         "history": [
           {
             "at": "2026-11-15T23:20:27.000Z",
@@ -429,15 +2295,57 @@
             "reports": 0
           },
           {
-            "at": "2026-11-16T00:09:47.458Z",
-            "label": "11/16 08:09",
-            "value": 37,
+            "at": "2026-11-16T00:17:43.440Z",
+            "label": "11/16 08:17",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:59:07.916Z",
-            "label": "11/16 08:59",
-            "value": 59,
+            "at": "2026-11-16T01:14:59.880Z",
+            "label": "11/16 09:14",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:12:16.320Z",
+            "label": "11/16 10:12",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:09:32.760Z",
+            "label": "11/16 11:09",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:06:49.201Z",
+            "label": "11/16 12:06",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:04:05.641Z",
+            "label": "11/16 13:04",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:01:22.081Z",
+            "label": "11/16 14:01",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:58:38.521Z",
+            "label": "11/16 14:58",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
+            "value": 57,
             "reports": 1
           }
         ],
@@ -552,7 +2460,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-15T23:18:17.000Z",
-        "endedAt": "2026-11-16T00:59:07.916Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -563,14 +2471,56 @@
             "reports": 0
           },
           {
-            "at": "2026-11-16T00:08:42.458Z",
-            "label": "11/16 08:08",
-            "value": 35,
+            "at": "2026-11-16T00:15:47.884Z",
+            "label": "11/16 08:15",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:59:07.916Z",
-            "label": "11/16 08:59",
+            "at": "2026-11-16T01:13:18.769Z",
+            "label": "11/16 09:13",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:10:49.654Z",
+            "label": "11/16 10:10",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:08:20.538Z",
+            "label": "11/16 11:08",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:05:51.423Z",
+            "label": "11/16 12:05",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:03:22.308Z",
+            "label": "11/16 13:03",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:00:53.192Z",
+            "label": "11/16 14:00",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:58:24.077Z",
+            "label": "11/16 14:58",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
             "value": 55,
             "reports": 1
           }
@@ -676,7 +2626,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-15T22:00:01.000Z",
-        "endedAt": "2026-11-16T00:59:07.916Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -687,20 +2637,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-15T22:59:43.305Z",
+            "at": "2026-11-15T22:59:36.396Z",
             "label": "11/16 06:59",
-            "value": 31,
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-15T23:59:25.610Z",
+            "at": "2026-11-15T23:59:11.792Z",
             "label": "11/16 07:59",
-            "value": 48,
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:59:07.916Z",
-            "label": "11/16 08:59",
+            "at": "2026-11-16T00:58:47.188Z",
+            "label": "11/16 08:58",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T01:58:22.584Z",
+            "label": "11/16 09:58",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:57:57.981Z",
+            "label": "11/16 10:57",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:57:33.377Z",
+            "label": "11/16 11:57",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:57:08.773Z",
+            "label": "11/16 12:57",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:56:44.169Z",
+            "label": "11/16 13:56",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:56:19.565Z",
+            "label": "11/16 14:56",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
             "value": 65,
             "reports": 1
           }
@@ -764,7 +2756,9 @@
         "scientific research",
         "AI applications"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "OpenAI在其官方渠道宣布推出一个面向科学的新博客。根据公开摘要，该博客将分享新发现、实用方法，以及研究人员使用AI推进科学发现的第一手叙述。\n\n目前披露的信息非常有限：没有说明博客的具体栏目结构、更新频率、首批文章内容，也没有提及涉及哪些模型、合作机构或具体科学领域。已知的只有博客的定位——围绕AI与科学研究，兼顾研究发现、方法与实践经验。\n\n从时间线看，这是OpenAI在科学传播方向上的一次官方动作，但摘要未提供更多背景，例如该博客是否取代此前的科学相关发布渠道，或是否与特定研究项目绑定。\n\n因此，现阶段可确认的事实仅限于“OpenAI上线了一个科学主题博客，内容方向包括研究发现、实用方法和研究人员的第一手经验”。其余细节均需等待博客实际内容发布后才能判断。",
       "keyPointsZh": [
         "OpenAI官方宣布推出面向科学的博客",
@@ -803,7 +2797,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-15T22:00:00.000Z",
-        "endedAt": "2026-11-16T00:59:07.916Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -814,20 +2808,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-15T22:59:42.638Z",
+            "at": "2026-11-15T22:59:35.496Z",
             "label": "11/16 06:59",
-            "value": 28,
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-15T23:59:25.277Z",
+            "at": "2026-11-15T23:59:10.992Z",
             "label": "11/16 07:59",
-            "value": 42,
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:59:07.916Z",
-            "label": "11/16 08:59",
+            "at": "2026-11-16T00:58:46.488Z",
+            "label": "11/16 08:58",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T01:58:21.984Z",
+            "label": "11/16 09:58",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:57:57.481Z",
+            "label": "11/16 10:57",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:57:32.977Z",
+            "label": "11/16 11:57",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T04:57:08.473Z",
+            "label": "11/16 12:57",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:56:43.969Z",
+            "label": "11/16 13:56",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:56:19.465Z",
+            "label": "11/16 14:56",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
             "value": 55,
             "reports": 1
           }
@@ -926,7 +2962,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-15T21:56:35.000Z",
-        "endedAt": "2026-11-16T00:59:07.916Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -937,26 +2973,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-15T22:42:13.229Z",
-            "label": "11/16 06:42",
-            "value": 23,
+            "at": "2026-11-15T22:56:30.996Z",
+            "label": "11/16 06:56",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-15T23:27:51.458Z",
-            "label": "11/16 07:27",
+            "at": "2026-11-15T23:56:26.992Z",
+            "label": "11/16 07:56",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T00:56:22.988Z",
+            "label": "11/16 08:56",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T01:56:18.984Z",
+            "label": "11/16 09:56",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:56:14.981Z",
+            "label": "11/16 10:56",
             "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:13:29.687Z",
-            "label": "11/16 08:13",
-            "value": 41,
+            "at": "2026-11-16T03:56:10.977Z",
+            "label": "11/16 11:56",
+            "value": 36,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:59:07.916Z",
-            "label": "11/16 08:59",
+            "at": "2026-11-16T04:56:06.973Z",
+            "label": "11/16 12:56",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:56:02.969Z",
+            "label": "11/16 13:56",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T06:55:58.965Z",
+            "label": "11/16 14:55",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
             "value": 50,
             "reports": 1
           }
@@ -1054,7 +3126,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-15T20:20:57.000Z",
-        "endedAt": "2026-11-16T00:59:07.916Z",
+        "endedAt": "2026-11-16T07:55:54.962Z",
         "current": 33,
         "peak": 33,
         "history": [
@@ -1065,32 +3137,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-15T21:16:35.183Z",
-            "label": "11/16 05:16",
+            "at": "2026-11-15T21:24:07.723Z",
+            "label": "11/16 05:24",
+            "value": 16,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-15T22:27:18.447Z",
+            "label": "11/16 06:27",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-15T22:12:13.366Z",
-            "label": "11/16 06:12",
-            "value": 22,
+            "at": "2026-11-15T23:30:29.171Z",
+            "label": "11/16 07:30",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-15T23:07:51.549Z",
-            "label": "11/16 07:07",
+            "at": "2026-11-16T00:33:39.895Z",
+            "label": "11/16 08:33",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T01:36:50.619Z",
+            "label": "11/16 09:36",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T02:40:01.342Z",
+            "label": "11/16 10:40",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T03:43:12.066Z",
+            "label": "11/16 11:43",
             "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:03:29.732Z",
-            "label": "11/16 08:03",
+            "at": "2026-11-16T04:46:22.790Z",
+            "label": "11/16 12:46",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T05:49:33.514Z",
+            "label": "11/16 13:49",
             "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-16T00:59:07.916Z",
-            "label": "11/16 08:59",
+            "at": "2026-11-16T06:52:44.238Z",
+            "label": "11/16 14:52",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T07:55:54.962Z",
+            "label": "11/16 15:55",
             "value": 33,
             "reports": 1
           }
