@@ -1,7 +1,688 @@
 {
-  "generatedAt": "2026-11-16T18:24:10.683Z",
+  "generatedAt": "2026-11-17T02:03:44.473Z",
   "date": "2026-11-17",
   "items": [
+    {
+      "id": "eb3125817116c9db",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/16/llm",
+      "originalUrl": "https://simonwillison.net/2026/Nov/16/llm/",
+      "titleOriginal": "llm 0.37.3",
+      "summaryOriginal": "Release: llm 0.37.3 A bug fix release for LLM , mainly to cover a problem with the most recent Homebrew package of the software. Homebrew now ships the latest SQLite, 3.54.1 , which includes a fix that broke LLM's logging code . Short version: in SQLite 3.54.0 the following SQL: select json_object('a', (select json_array(1))) Returns this: {\"a\":[1]} But in 3.54.1 the same query returns this: {\"a\":\"[1]\"} According to D. Richard Hipp : That was a bug fix. Per the documentation, (SELECT json_array(...)) returns SQL text, not JSON. Hence the 3.54.1 behavior is correct and 3.54.0 was a bug. The workaround looks like this: select json_object('a', json((select json_array(1)))) Tags: llm , webassembly , sqlite , generative-ai , ai , llms , d-richard-hipp",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [],
+      "resourceLinks": [
+        "https://github.com/simonw/llm/releases/tag/0.37.3",
+        "https://llm.datasette.io",
+        "https://www.sqlite.org/releaselog/3_54_1.html",
+        "https://sqlite.org/bugs/info/2026-10-12T13:52:22Z",
+        "https://github.com/simonw/llm/issues/1879",
+        "https://sqlite.org/forum/forumpost/dff1a343157e422f",
+        "https://simonwillison.net/tags/llm",
+        "https://simonwillison.net/tags/webassembly",
+        "https://simonwillison.net/tags/sqlite",
+        "https://simonwillison.net/tags/generative-ai",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/llms"
+      ],
+      "publishedAt": "2026-11-16T23:57:26.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/16/llm/",
+          "publishedAt": "2026-11-16T23:57:26.000Z",
+          "title": "llm 0.37.3",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm/releases/tag/0.37.3",
+            "https://llm.datasette.io",
+            "https://www.sqlite.org/releaselog/3_54_1.html",
+            "https://sqlite.org/bugs/info/2026-10-12T13:52:22Z",
+            "https://github.com/simonw/llm/issues/1879",
+            "https://sqlite.org/forum/forumpost/dff1a343157e422f",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/webassembly",
+            "https://simonwillison.net/tags/sqlite",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/llms"
+          ]
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "这是一次具体的兼容性修复，涉及 SQLite 行为变更对 LLM 日志代码的影响，对使用 LLM 工具和 Homebrew 的用户有直接参考价值。",
+      "importanceReasonEn": "This is a concrete compatibility fix involving how a SQLite behavior change affected LLM's logging code, with direct reference value for users of the LLM tool and Homebrew.",
+      "scoringMode": "ai",
+      "titleZh": "llm 0.37.3 修复 SQLite 3.54.1 兼容性问题",
+      "titleEn": "llm 0.37.3 fixes SQLite 3.54.1 compatibility issue",
+      "summaryZh": "LLM 发布 0.37.3 版本，这是一个缺陷修复版本，主要解决最新 Homebrew 软件包带来的问题。Homebrew 现在附带最新的 SQLite 3.54.1，其中包含的一项修复破坏了 LLM 的日志记录代码。",
+      "summaryEn": "LLM released version 0.37.3, a bug fix release mainly addressing a problem caused by the latest Homebrew package. Homebrew now ships the latest SQLite 3.54.1, which includes a fix that broke LLM's logging code.",
+      "keywords": [
+        "llm",
+        "SQLite 3.54.1",
+        "Homebrew",
+        "json_object",
+        "json_array",
+        "bug fix"
+      ],
+      "topics": [
+        "LLM",
+        "SQLite",
+        "Homebrew",
+        "bug fix"
+      ],
+      "models": [],
+      "detailZh": "LLM 发布了 0.37.3 版本，这是一个缺陷修复版本，主要目的是解决最新 Homebrew 软件包带来的问题。Homebrew 现在附带最新的 SQLite 3.54.1，其中包含的一项修复破坏了 LLM 的日志记录代码。\n\n问题根源在于 SQLite 3.54.0 与 3.54.1 之间的行为差异。在 SQLite 3.54.0 中，执行 select json_object('a', (select json_array(1))) 会返回 {\"a\":[1]}；而在 3.54.1 中，同样的查询返回 {\"a\":\"[1]\"}。\n\n根据 D. Richard Hipp 的解释，这是对原有缺陷的修复。按照文档说明，(SELECT json_array(...)) 返回的是 SQL 文本而非 JSON，因此 3.54.1 的行为才是正确的，3.54.0 属于缺陷。\n\n针对这一变化，给出的变通方案是使用 select json_object('a', json((select json_array(1))))，通过显式调用 json() 函数将 SQL 文本转换为 JSON。",
+      "keyPointsZh": [
+        "LLM 0.37.3 是缺陷修复版本，主要解决 Homebrew 最新 SQLite 3.54.1 导致的日志代码问题。",
+        "SQLite 3.54.0 中 select json_object('a', (select json_array(1))) 返回 {\"a\":[1]}，3.54.1 中返回 {\"a\":\"[1]\"}。",
+        "D. Richard Hipp 表示 3.54.1 的行为是正确的，因为 (SELECT json_array(...)) 按文档返回 SQL 文本而非 JSON。",
+        "变通方案是使用 json((select json_array(1))) 显式将 SQL 文本转换为 JSON。"
+      ],
+      "impactZh": "该修复确保 LLM 在 Homebrew 提供的最新 SQLite 环境下日志记录功能正常，避免因上游 SQLite 行为变更导致工具异常。",
+      "readerImpactZh": "使用 Homebrew 安装或更新 LLM 的用户升级到 0.37.3 后，可避免日志记录功能因 SQLite 3.54.1 而失效。",
+      "userImpactZh": "依赖 LLM 日志功能的开发者应升级到 0.37.3；在 SQLite 3.54.1 及以上环境中编写类似 json_object 嵌套子查询时，需用 json() 显式转换子查询结果。",
+      "howItWorksZh": "问题出在 SQLite 对子查询返回值的处理：在 3.54.0 中，(select json_array(1)) 作为 json_object 的参数时被当作 JSON 处理，而在 3.54.1 中按文档返回 SQL 文本，导致结果被当作字符串。修复方式是在子查询外包裹 json() 函数，将 SQL 文本显式解析为 JSON，即 select json_object('a', json((select json_array(1))))。",
+      "interpretationZh": "已报告的事实是：SQLite 3.54.1 改变了嵌套子查询在 json_object 中的返回形式，LLM 因此发布 0.37.3 修复。合理推断是：任何依赖旧行为的 SQL 代码在升级 SQLite 后都可能遇到同类问题，需要按文档语义调整。",
+      "limitationsZh": "输入未说明 LLM 0.37.3 具体修改了哪些代码，也未提供除该示例外的其他受影响场景；变通方案仅针对所给示例，是否覆盖 LLM 全部日志路径未经验证。",
+      "actionStepsZh": [
+        "将 LLM 升级到 0.37.3 以兼容 Homebrew 提供的 SQLite 3.54.1。",
+        "在 SQLite 3.54.1 及以上环境中，对 json_object 内嵌套的 json_array 子查询使用 json() 包裹。",
+        "检查自有 SQL 代码中是否存在依赖 3.54.0 旧行为的 json_object 嵌套子查询。"
+      ],
+      "detailCompleteness": "full",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/16/llm/",
+          "publishedAt": "2026-11-16T23:57:26.000Z",
+          "title": "llm 0.37.3",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://github.com/simonw/llm/releases/tag/0.37.3",
+            "https://llm.datasette.io",
+            "https://www.sqlite.org/releaselog/3_54_1.html",
+            "https://sqlite.org/bugs/info/2026-10-12T13:52:22Z",
+            "https://github.com/simonw/llm/issues/1879",
+            "https://sqlite.org/forum/forumpost/dff1a343157e422f",
+            "https://simonwillison.net/tags/llm",
+            "https://simonwillison.net/tags/webassembly",
+            "https://simonwillison.net/tags/sqlite",
+            "https://simonwillison.net/tags/generative-ai",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/llms"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T23:57:26.000Z",
+        "endedAt": "2026-11-17T02:03:44.473Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-11-16T23:57:26.000Z",
+            "label": "11/17 07:57",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T00:39:32.157Z",
+            "label": "11/17 08:39",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T01:21:38.315Z",
+            "label": "11/17 09:21",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T02:03:44.473Z",
+            "label": "11/17 10:03",
+            "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e103c7330eb391b4",
+      "normalizedUrl": "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice",
+      "originalUrl": "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
+      "titleOriginal": "OpenAI&#039;s GPT-6 Astra tackles the Standard Model&#039;s toughest math problem on a lattice",
+      "summaryOriginal": "OpenAI physicist Nathaniel Craig used GPT-6 Astra to tackle a problem that had stumped particle physicists for over 25 years. The AI model took Craig's strategy for defining the full Standard Model on a computational lattice and turned it into a working proof. Craig says a lot of work remains before realistic simulations are possible. The article OpenAI&#039;s GPT-6 Astra tackles the Standard Model&#039;s toughest math problem on a lattice appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Manuel Uth",
+      "category": "research",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/11/openai_standard_model.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-11-16T19:19:56.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
+          "publishedAt": "2026-11-16T19:19:56.000Z",
+          "title": "OpenAI&#039;s GPT-6 Astra tackles the Standard Model&#039;s toughest math problem on a lattice",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/openai_standard_model.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该事件涉及前沿大模型在理论物理核心难题上的实际应用，若属实将体现 AI 在科学发现中的新角色，但来源信息有限且缺乏独立验证。",
+      "importanceReasonEn": "The event concerns a frontier model's practical application to a core theoretical physics problem; if accurate it signals a new role for AI in scientific discovery, though source detail is limited and independent verification is lacking.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI GPT-6 Astra 攻克标准模型格点计算难题",
+      "titleEn": "OpenAI's GPT-6 Astra tackles the Standard Model's toughest math problem on a lattice",
+      "summaryZh": "OpenAI 物理学家 Nathaniel Craig 利用 GPT-6 Astra，将自己在计算格点上定义完整标准模型的策略转化为可运行的证明，攻克了困扰粒子物理学家逾 25 年的难题。Craig 表示，距离实现真实模拟仍有大量工作要做。",
+      "summaryEn": "OpenAI physicist Nathaniel Craig used GPT-6 Astra to turn his strategy for defining the full Standard Model on a computational lattice into a working proof, tackling a problem that had stumped particle physicists for over 25 years. Craig says a lot of work remains before realistic simulations are possible.",
+      "keywords": [
+        "GPT-6 Astra",
+        "标准模型",
+        "格点",
+        "粒子物理",
+        "OpenAI",
+        "数学证明"
+      ],
+      "topics": [
+        "GPT-6 Astra",
+        "标准模型",
+        "格点计算",
+        "粒子物理",
+        "AI辅助科研"
+      ],
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "detailZh": "据 The Decoder AI 报道，OpenAI 物理学家 Nathaniel Craig 使用 GPT-6 Astra 处理了一个困扰粒子物理学家超过 25 年的问题：如何在计算格点上定义完整的标准模型。报道称，Craig 提出了相应策略，而 GPT-6 Astra 将该策略转化为一个可运行的证明。\n\n标准模型是描述基本粒子及其相互作用的理论框架，格点方法则是把连续时空离散化以便进行数值计算的重要手段。在格点上完整实现标准模型长期存在技术障碍，这也是该问题被视为难题的背景。\n\n报道同时指出，Craig 表示距离实现真实、可用的模拟仍有大量工作要做，说明当前成果更接近方法或证明层面的进展，而非已完成的物理计算。\n\n目前公开信息仅来自单一媒体报道，缺少论文、代码或同行评审等一手材料，具体证明内容、验证方式与适用范围均未披露。",
+      "keyPointsZh": [
+        "OpenAI 物理学家 Nathaniel Craig 使用 GPT-6 Astra 处理标准模型格点定义问题。",
+        "该问题据称已困扰粒子物理学家超过 25 年。",
+        "GPT-6 Astra 将 Craig 的策略转化为可运行的证明。",
+        "Craig 表示距离真实模拟仍有大量工作。",
+        "信息来自单一媒体报道，缺少一手材料。"
+      ],
+      "impactZh": "若该成果得到证实，将展示前沿大模型在理论物理形式化推导中的实际作用，可能推动 AI 参与基础科学难题求解的讨论；但当前信息有限，尚不足以判断其科学价值。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实：Craig 提出在格点上定义完整标准模型的策略，GPT-6 Astra 将其转化为可运行证明。合理推断：该成果可能属于形式化或推导层面的进展，而非完成实际数值模拟，因为 Craig 明确表示仍有大量工作。",
+      "limitationsZh": "仅有单一媒体报道，未提供论文、代码或同行评审信息；证明的具体内容、正确性验证方式、GPT-6 Astra 的参与程度均不明确；'可运行的证明'表述含义未澄清。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
+          "publishedAt": "2026-11-16T19:19:56.000Z",
+          "title": "OpenAI&#039;s GPT-6 Astra tackles the Standard Model&#039;s toughest math problem on a lattice",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/openai_standard_model.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T19:19:56.000Z",
+        "endedAt": "2026-11-17T02:03:44.473Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-16T19:19:56.000Z",
+            "label": "11/17 03:19",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T20:17:37.210Z",
+            "label": "11/17 04:17",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T21:15:18.420Z",
+            "label": "11/17 05:15",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T22:12:59.631Z",
+            "label": "11/17 06:12",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T23:10:40.841Z",
+            "label": "11/17 07:10",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T00:08:22.052Z",
+            "label": "11/17 08:08",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T01:06:03.262Z",
+            "label": "11/17 09:06",
+            "value": 58,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T02:03:44.473Z",
+            "label": "11/17 10:03",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "43b552aeb88ac4f0",
+      "normalizedUrl": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten",
+      "originalUrl": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+      "titleOriginal": "Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten",
+      "summaryOriginal": "Moonshot AI is done chasing coding benchmarks, it says. The Beijing startup is pivoting its Kimi language models toward biology, chemistry, and pharma research, arguing that science demands smarter AI than law, finance, or code. The article Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Manuel Uth",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/11/moonshot_ai_sciences.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-11-16T18:52:55.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+          "publishedAt": "2026-11-16T18:52:55.000Z",
+          "title": "Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/moonshot_ai_sciences.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该消息反映一家主要中国大模型公司调整产品方向，从编程基准竞争转向科学领域，对关注模型定位和行业趋势的读者有参考价值，但来源信息有限。",
+      "importanceReasonEn": "The report signals a major Chinese model company shifting product direction from coding benchmarks to science, useful for readers tracking model positioning and industry trends, though source detail is limited.",
+      "scoringMode": "ai",
+      "titleZh": "Moonshot AI 将 Kimi 模型重心从编程转向科学研究",
+      "titleEn": "Moonshot AI pivots Kimi models from coding to science",
+      "summaryZh": "Moonshot AI 表示不再追逐编程基准测试，转而将 Kimi 语言模型应用于生物学、化学和制药研究，认为科学研究对 AI 的要求高于法律、金融或编程。",
+      "summaryEn": "Moonshot AI says it is done chasing coding benchmarks and is pivoting its Kimi language models toward biology, chemistry and pharma research, arguing science demands smarter AI than law, finance or code.",
+      "keywords": [
+        "Moonshot AI",
+        "Kimi",
+        "科学应用",
+        "编程基准",
+        "战略转向"
+      ],
+      "topics": [
+        "Kimi",
+        "Moonshot AI",
+        "科学AI",
+        "模型战略",
+        "基准测试"
+      ],
+      "models": [
+        "Kimi"
+      ],
+      "detailZh": "据 The Decoder AI 报道，Moonshot AI 表示将不再以编程基准测试作为 Kimi 语言模型的主要追赶目标，而是把重心转向生物学、化学和制药研究等科学领域。报道称，该公司认为科学研究对 AI 能力的要求高于法律、金融或编程任务。\n\n报道将这一转向与编程基准测试收益趋于平缓联系起来，暗示继续在编程评测上投入的边际回报下降。目前公开信息仅包含上述方向性表述，未披露具体产品功能、发布时间表、合作机构或评测数据。\n\n因此，这一消息目前应理解为战略意图的公开表达，而非已落地的产品变更。Kimi 模型在科学场景中的实际能力、可用性和效果尚缺乏可验证的细节。",
+      "keyPointsZh": [
+        "Moonshot AI 表示不再以编程基准测试为主要目标",
+        "Kimi 模型将转向生物学、化学和制药研究",
+        "公司称科学研究对 AI 的要求高于法律、金融和编程",
+        "报道将转向与编程基准收益放缓联系起来",
+        "未披露具体产品、时间表或评测数据"
+      ],
+      "impactZh": "这反映头部中国大模型公司在同质化编程基准竞争之外寻找差异化定位，可能影响其产品路线和科学计算类 AI 市场的竞争格局。",
+      "readerImpactZh": "",
+      "userImpactZh": "",
+      "howItWorksZh": "",
+      "interpretationZh": "报道事实是 Moonshot AI 公开表达了从编程基准转向科学领域的意图。合理推断是该公司认为编程评测的边际提升空间有限，而科学场景可能带来差异化价值。但具体如何实现、是否已有对应模型能力，来源未提供信息。",
+      "limitationsZh": "来源仅为简短报道，缺少官方公告原文、具体模型版本、评测结果、发布时间和合作方信息；科学场景的实际能力无法验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+          "publishedAt": "2026-11-16T18:52:55.000Z",
+          "title": "Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/moonshot_ai_sciences.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T18:52:55.000Z",
+        "endedAt": "2026-11-17T02:03:44.473Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-16T18:52:55.000Z",
+            "label": "11/17 02:52",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T19:46:46.184Z",
+            "label": "11/17 03:46",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T20:40:37.368Z",
+            "label": "11/17 04:40",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T21:34:28.552Z",
+            "label": "11/17 05:34",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T22:28:19.736Z",
+            "label": "11/17 06:28",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T23:22:10.920Z",
+            "label": "11/17 07:22",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T00:16:02.104Z",
+            "label": "11/17 08:16",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T01:09:53.288Z",
+            "label": "11/17 09:09",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T02:03:44.473Z",
+            "label": "11/17 10:03",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "474a91e84ee7b824",
+      "normalizedUrl": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours",
+      "originalUrl": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/",
+      "titleOriginal": "FBI 通报开源 AI 攻击工具 Artex 被用于入侵美国及韩国机构网络",
+      "summaryOriginal": "FBI 发布网络安全通告，警告黑客利用开源 AI 渗透测试工具 Artex 发起自主化攻击，部分入侵从锁定目标到完成攻陷可在不到三小时内完成。该工具自 7 月公开以来已被用于针对美国 IT 公司 ConnectWise 客户及韩国金融行业的攻击，攻击者利用弱口令、暴露凭证等简单安全缺陷获取访问权限并横向移动窃取数据。FBI 表示，尽管开发者已将 Artex 转为闭源，但此前开源版本仍在流传并可被广泛获取用于网络攻击。",
+      "originalLanguage": "zh",
+      "author": "TechCrunch：AI（RSS）",
+      "category": "business",
+      "sourceType": "aggregator",
+      "authority": 82,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/zficxtnfx6piiwlefryulanmh",
+        "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/"
+      ],
+      "publishedAt": "2026-11-16T17:36:43.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/",
+          "publishedAt": "2026-11-16T17:36:43.000Z",
+          "title": "FBI says Artex AI open source hacking tool used to breach networks in &#8216;under three hours&#8217;",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 78,
+      "importanceReasonZh": "这是官方机构首次明确将一款开源 AI 攻击工具与真实入侵事件关联并发布通告，且攻击速度（不到三小时完成攻陷）体现了 AI 自动化对攻防节奏的实际改变，对企业和安全团队具有直接警示价值。",
+      "importanceReasonEn": "This is a case where an official agency explicitly linked an open-source AI attack tool to real intrusions in a public advisory, and the sub-three-hour compromise time shows how AI automation is changing the pace of attack and defense, making it directly relevant to enterprises and security teams.",
+      "scoringMode": "ai",
+      "titleZh": "FBI 通报开源 AI 攻击工具 Artex 被用于入侵美国及韩国机构网络",
+      "titleEn": "FBI Warns Open-Source AI Attack Tool Artex Used to Breach US and South Korean Networks",
+      "summaryZh": "FBI 发布网络安全通告，警告黑客利用开源 AI 渗透测试工具 Artex 发起自主化攻击，部分入侵从锁定目标到完成攻陷可在不到三小时内完成。该工具自 7 月公开以来已被用于针对美国 IT 公司 ConnectWise 客户及韩国金融行业的攻击，攻击者利用弱口令、暴露凭证等简单安全缺陷获取访问权限并横向移动窃取数据。FBI 表示，尽管开发者已将 Artex 转为闭源，但此前开源版本仍在流传并可被广泛获取用于网络攻击。",
+      "summaryEn": "The FBI issued a cybersecurity advisory warning that hackers are using the open-source AI penetration-testing tool Artex to launch autonomous attacks, with some intrusions going from target identification to full compromise in under three hours. Since the tool was released publicly in July, it has been used in attacks targeting customers of US IT company ConnectWise and South Korea's financial sector, with attackers exploiting weak passwords and exposed credentials to gain access, move laterally and steal data. The FBI said that although the developer has since made Artex closed-source, the previously open-source version remains in circulation and widely obtainable for cyberattacks.",
+      "keywords": [
+        "Artex",
+        "FBI 通告",
+        "AI 渗透测试",
+        "自主攻击",
+        "ConnectWise",
+        "韩国金融业",
+        "开源转闭源"
+      ],
+      "topics": [
+        "AI 网络安全",
+        "自主化攻击",
+        "开源工具滥用",
+        "FBI 通告",
+        "金融行业安全"
+      ],
+      "models": [],
+      "detailZh": "美国联邦调查局（FBI）发布网络安全通告，警告攻击者正在利用一款名为 Artex 的开源 AI 渗透测试工具发起自主化网络攻击。据通告，部分入侵行动从锁定目标到完成攻陷可在不到三小时内完成，显示出 AI 驱动的自动化显著压缩了攻击周期。\n\n该工具自今年 7 月公开以来，已被用于多起真实攻击。其中一类攻击针对美国 IT 公司 ConnectWise 的客户，另一类针对韩国金融行业机构。攻击者主要利用弱口令、暴露的凭证等基础性安全缺陷获取初始访问权限，随后在网络内部横向移动并窃取数据。\n\nFBI 表示，Artex 的开发者在此之后已将项目转为闭源，但此前发布的开源版本仍在网络上流传，可被广泛获取并用于网络攻击，因此风险并未因闭源而消除。\n\n通告的核心信息是：AI 工具正在降低自主化攻击的门槛，并加快从侦察到攻陷的整体节奏，而攻击入口仍集中在凭证管理和口令强度等传统薄弱环节。",
+      "keyPointsZh": [
+        "FBI 发布通告，警告开源 AI 渗透测试工具 Artex 被用于真实网络入侵。",
+        "部分攻击从锁定目标到完成攻陷耗时不到三小时。",
+        "攻击目标包括美国 IT 公司 ConnectWise 的客户以及韩国金融行业机构。",
+        "攻击者利用弱口令和暴露凭证等基础缺陷获取访问权限，随后横向移动并窃取数据。",
+        "开发者已将 Artex 转为闭源，但此前开源版本仍在流传并可被广泛获取。"
+      ],
+      "impactZh": "该事件表明 AI 自动化正在实质性缩短攻击链条的时间窗口，传统的“发现—响应”节奏可能不足以应对。同时，开源 AI 攻击工具一旦流出便难以收回，闭源并不能消除已扩散版本的风险，这对开源安全工具的发布治理提出了新问题。",
+      "readerImpactZh": "",
+      "userImpactZh": "对使用 AI 工具的安全团队和企业 IT 人员而言，需要重新评估凭证管理、弱口令排查和暴露面收敛的优先级，并假设攻击者具备 AI 加速的侦察与横向移动能力，相应压缩检测与响应时间。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是：FBI 发布了相关通告，Artex 为开源 AI 渗透测试工具，7 月公开，被用于针对 ConnectWise 客户和韩国金融行业的攻击，攻击者利用弱口令与暴露凭证进入，开发者已转为闭源但旧版本仍可获取。可合理推断的是：AI 在其中承担了侦察、漏洞利用编排或横向移动等环节的自动化，从而缩短了攻陷时间；但通告未披露具体技术细节，因此不宜过度外推其能力边界。",
+      "limitationsZh": "现有信息未披露 Artex 的具体技术实现、涉及的受害机构数量与规模、数据泄露的具体内容，也未说明 FBI 是否已采取执法或下架行动。不到三小时的攻陷时间来自通告表述，缺乏独立验证的细节。",
+      "actionStepsZh": [
+        "排查并强制更换弱口令，清理系统中暴露的凭证。",
+        "对 ConnectWise 相关环境及金融行业相关系统加强访问审计与异常检测。",
+        "缩短从告警到响应的处置时间，以应对 AI 加速的攻击节奏。",
+        "关注 FBI 通告原文以获取最新失陷指标与防护建议。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/",
+          "publishedAt": "2026-11-16T17:36:43.000Z",
+          "title": "FBI says Artex AI open source hacking tool used to breach networks in &#8216;under three hours&#8217;",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-16T17:36:43.000Z",
+        "endedAt": "2026-11-17T02:03:44.473Z",
+        "current": 68,
+        "peak": 68,
+        "history": [
+          {
+            "at": "2026-11-16T17:36:43.000Z",
+            "label": "11/17 01:36",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-16T18:33:03.163Z",
+            "label": "11/17 02:33",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T19:29:23.327Z",
+            "label": "11/17 03:29",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T20:25:43.491Z",
+            "label": "11/17 04:25",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T21:22:03.654Z",
+            "label": "11/17 05:22",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T22:18:23.818Z",
+            "label": "11/17 06:18",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T23:14:43.982Z",
+            "label": "11/17 07:14",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T00:11:04.145Z",
+            "label": "11/17 08:11",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T01:07:24.309Z",
+            "label": "11/17 09:07",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T02:03:44.473Z",
+            "label": "11/17 10:03",
+            "value": 68,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "dd659f011024f04f",
       "normalizedUrl": "https://openai.com/index/strengthening-online-child-safety",
@@ -41,46 +722,49 @@
         }
       ],
       "importance": 88,
-      "importanceReasonZh": "这是 OpenAI 官方发布的儿童安全治理举措，涉及可检测 AI 生成 CSAM 的分类器、ChatGPT 访问限制和开发者指南，对内容审核行业和平台治理有直接影响。",
-      "importanceReasonEn": "This is an official OpenAI child-safety governance initiative covering a classifier that detects AI-generated CSAM, ChatGPT access restrictions and a developer guide, with direct impact on the content moderation industry and platform governance.",
+      "importanceReasonZh": "OpenAI 以官方身份发布可免费使用的 CSAM 检测分类器，并同步更新 ChatGPT 的拦截机制与开发者指南，对内容审核行业和 AI 平台安全实践有直接影响。",
+      "importanceReasonEn": "OpenAI officially released a freely available CSAM detection classifier and simultaneously updated ChatGPT's blocking mechanisms and developer guidance, with direct impact on the content moderation industry and AI platform safety practices.",
       "scoringMode": "ai",
       "titleZh": "OpenAI 推出新工具与支持，加强打击网络儿童性虐待",
       "titleEn": "Strengthening the fight against online child sexual abuse with new tools and support",
       "summaryZh": "OpenAI 发布可检测 CSAM（含 AI 生成内容）的图像分类器，通过 API 向审核机构免费开放，测试显示可将需复审图像减少 48%，fal 实测 72% 高置信标记确认为新型 CSAM。同时 ChatGPT 上线新警告，在用户尝试查找涉儿童性剥削内容时打断并暂停访问 24 小时，还发布了面向开发者的 CSAM 治理指南和执法调查支持工具。",
-      "summaryEn": "OpenAI released an image classifier that detects CSAM, including AI-generated content, made freely available to moderation organizations via API; tests show it can reduce images needing review by 48%, and fal found 72% of high-confidence flags confirmed as novel CSAM. ChatGPT also added new warnings that interrupt users attempting to seek child sexual exploitation content and suspend access for 24 hours, alongside a CSAM governance guide for developers and law-enforcement investigation support tools.",
+      "summaryEn": "OpenAI released an image classifier that detects CSAM, including AI-generated content, and made it freely available to moderation organizations via API. Tests show it can reduce images requiring review by 48%, and fal found that 72% of high-confidence flags were confirmed as novel CSAM. ChatGPT also added a new warning that interrupts users attempting to find child sexual exploitation content and suspends access for 24 hours. OpenAI additionally published CSAM governance guidance for developers and tools to support law enforcement investigations.",
       "keywords": [
         "CSAM",
-        "image classifier",
-        "OpenAI",
+        "图像分类器",
+        "内容审核",
         "ChatGPT",
-        "content moderation",
-        "child safety"
+        "API",
+        "执法支持"
       ],
       "topics": [
-        "CSAM detection",
-        "content moderation",
-        "AI safety",
-        "child safety",
-        "API access"
+        "CSAM检测",
+        "内容审核",
+        "AI安全",
+        "ChatGPT安全策略",
+        "开发者指南"
       ],
-      "models": [],
-      "detailZh": "OpenAI 发布了一套针对儿童性虐待材料（CSAM）的治理工具与支持措施。核心是一个图像分类器，能够检测 CSAM，包括 AI 生成的内容，并通过 API 向审核机构免费开放。测试数据显示，该分类器可将需要人工复审的图像数量减少 48%；合作方 fal 的实测中，72% 的高置信标记被确认为新型 CSAM。\n\n在 ChatGPT 产品侧，OpenAI 上线了新的警告机制：当用户尝试查找涉及儿童性剥削的内容时，系统会打断该行为并暂停其访问 24 小时。此外，OpenAI 还发布了面向开发者的 CSAM 治理指南，以及用于支持执法调查的工具。\n\n这些措施的背景是 AI 生成内容增加了 CSAM 检测的难度，平台和审核机构需要更高效的工具来识别和处置此类内容。OpenAI 通过免费开放分类器 API，试图降低审核机构的接入门槛。\n\n目前公开信息主要来自 OpenAI 官方，分类器的具体技术细节、误报率、覆盖范围以及 24 小时暂停机制的执行细则尚未完整披露。",
+      "models": [
+        "OpenAI 图像分类器",
+        "ChatGPT"
+      ],
+      "detailZh": "OpenAI 发布了一套针对儿童性虐待材料（CSAM）的治理措施，核心是一个能够检测 CSAM 的图像分类器，其中也包括 AI 生成的内容。该分类器通过 API 向审核机构免费开放，供其用于识别和处置相关图像。\n\n在测试数据方面，OpenAI 表示该分类器可将需要人工复审的图像数量减少 48%。合作方 fal 的实测结果显示，在被高置信度标记的图像中，有 72% 被确认为新型 CSAM。这些数字来自 OpenAI 官方披露，具体测试方法和数据集细节未在摘要中说明。\n\n在 ChatGPT 产品层面，OpenAI 上线了新的警告机制：当用户尝试查找涉及儿童性剥削的内容时，系统会打断该行为并暂停其访问 24 小时。这一措施针对的是用户主动搜索此类内容的行为。\n\n此外，OpenAI 还发布了面向开发者的 CSAM 治理指南，以及用于支持执法调查的工具。整体来看，这是一组覆盖检测、拦截、开发者规范和执法协作的组合措施。",
       "keyPointsZh": [
         "OpenAI 发布可检测 CSAM（含 AI 生成内容）的图像分类器，通过 API 免费向审核机构开放。",
-        "测试显示该分类器可将需人工复审的图像减少 48%，fal 实测中 72% 高置信标记确认为新型 CSAM。",
+        "测试显示该分类器可将需人工复审的图像减少 48%；fal 实测中 72% 的高置信标记被确认为新型 CSAM。",
         "ChatGPT 新增警告机制，用户尝试查找涉儿童性剥削内容时会被打断并暂停访问 24 小时。",
-        "OpenAI 同时发布面向开发者的 CSAM 治理指南和执法调查支持工具。"
+        "OpenAI 同步发布面向开发者的 CSAM 治理指南和执法调查支持工具。"
       ],
-      "impactZh": "该举措为审核机构提供了免费且可检测 AI 生成 CSAM 的工具，可能降低中小型平台的审核成本；ChatGPT 的访问限制则把治理前移到用户交互环节，对平台内容治理模式有示范意义。",
+      "impactZh": "该举措将 CSAM 检测能力以免费 API 形式开放给审核机构，可能降低中小型平台部署检测工具的门槛；ChatGPT 的强制中断机制则把拦截前移到用户搜索环节，对 AI 平台的内容安全设计具有示范意义。",
       "readerImpactZh": "",
-      "userImpactZh": "使用 ChatGPT 的用户若尝试查找涉儿童性剥削内容，会被系统打断并暂停访问 24 小时；开发者和审核团队可通过 API 免费接入该分类器，用于自身内容审核流程。",
-      "howItWorksZh": "根据官方信息，图像分类器通过 API 提供，用于识别 CSAM 及 AI 生成的相关内容，输出高置信标记供审核机构优先处理；ChatGPT 侧则在检测到相关查询意图时触发警告并暂停访问 24 小时。具体模型架构和判定阈值未在来源中披露。",
-      "interpretationZh": "已报道的事实是 OpenAI 发布了分类器、ChatGPT 警告机制、开发者指南和执法支持工具，并给出了 48% 和 72% 两项测试数据。可合理推断的是，免费 API 旨在扩大审核机构的采用范围，但分类器的误报率、覆盖内容和实际部署效果仍需更多独立验证。",
-      "limitationsZh": "来源未披露分类器的技术架构、误报率、训练数据来源和适用内容范围；48% 和 72% 两项数据来自特定测试场景，不能直接推广到所有审核环境；24 小时暂停机制的具体判定标准和申诉渠道也未说明。",
+      "userImpactZh": "使用 ChatGPT 的用户在尝试搜索涉儿童性剥削内容时会收到警告并被暂停访问 24 小时；开发者和审核团队可通过免费 API 接入 CSAM 图像分类器，并参考 OpenAI 发布的治理指南设计自身审核流程。",
+      "howItWorksZh": "根据官方披露，图像分类器通过 API 提供，用于识别 CSAM 图像（包括 AI 生成内容），输出结果可用于减少人工复审量。ChatGPT 侧则在用户尝试查找涉儿童性剥削内容时触发警告，打断当前行为并暂停访问 24 小时。分类器的具体模型结构、训练数据和判定阈值未在来源中说明。",
+      "interpretationZh": "已披露的事实是：OpenAI 发布了 CSAM 图像分类器、公布了 48% 和 72% 两项测试数据、上线了 ChatGPT 的 24 小时暂停机制，并发布了开发者指南和执法支持工具。可以合理推断，这些措施旨在把检测能力扩展到第三方审核机构，同时在 ChatGPT 端前置拦截主动搜索行为。但两项百分比数据的具体测试条件、样本规模和误报率均未公开，实际效果仍需独立验证。",
+      "limitationsZh": "来源未说明分类器的模型架构、训练数据来源、误报率与漏报率，也未披露 48% 和 72% 两项数据的测试方法、样本规模和统计口径。ChatGPT 的 24 小时暂停机制如何判定“尝试查找”以及是否存在申诉渠道，同样未在来源中说明。",
       "actionStepsZh": [
-        "审核机构可通过 API 免费接入该图像分类器，用于 CSAM 内容筛查。",
-        "开发者可参考 OpenAI 发布的 CSAM 治理指南，完善自身平台的内容审核流程。",
-        "平台可将高置信标记优先送人工复审，以降低整体复审工作量。"
+        "审核机构可通过 API 接入 OpenAI 的 CSAM 图像分类器，用于辅助识别和分流待复审图像。",
+        "开发者可参考 OpenAI 发布的 CSAM 治理指南，设计自身平台的内容审核与上报流程。",
+        "平台在部署分类器时应保留人工复审环节，并结合自身数据评估误报与漏报情况。"
       ],
       "detailCompleteness": "summary",
       "visual": {
@@ -88,7 +772,7 @@
         "titleZh": "数据对比",
         "unit": "",
         "noteZh": "",
-        "insightZh": "两项数据衡量对象不同：48% 是分类器减少人工复审量的比例，72% 是 fal 实测中高置信标记被确认为新型 CSAM 的比例，不能直接相加或等同比较。",
+        "insightZh": "两项数据口径不同：48% 指分类器减少的需人工复审图像比例，72% 指 fal 实测中被高置信标记且确认为新型 CSAM 的比例，二者不可直接相加或等同比较。",
         "data": [
           {
             "label": "需复审图像减少比例",
@@ -96,7 +780,7 @@
             "display": ""
           },
           {
-            "label": "fal 高置信标记确认为新型 CSAM 比例",
+            "label": "高置信标记确认为新型 CSAM 比例",
             "value": 72,
             "display": ""
           }
@@ -121,7 +805,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-16T17:00:00.000Z",
-        "endedAt": "2026-11-16T18:24:10.683Z",
+        "endedAt": "2026-11-17T02:03:44.473Z",
         "current": 74,
         "peak": 74,
         "history": [
@@ -132,14 +816,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-16T17:42:05.341Z",
-            "label": "11/17 01:42",
+            "at": "2026-11-16T17:54:22.447Z",
+            "label": "11/17 01:54",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T18:48:44.894Z",
+            "label": "11/17 02:48",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T19:43:07.341Z",
+            "label": "11/17 03:43",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T20:37:29.789Z",
+            "label": "11/17 04:37",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T21:31:52.236Z",
+            "label": "11/17 05:31",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-16T18:24:10.683Z",
-            "label": "11/17 02:24",
+            "at": "2026-11-16T22:26:14.683Z",
+            "label": "11/17 06:26",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T23:20:37.131Z",
+            "label": "11/17 07:20",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T00:14:59.578Z",
+            "label": "11/17 08:14",
+            "value": 62,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T01:09:22.025Z",
+            "label": "11/17 09:09",
+            "value": 68,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T02:03:44.473Z",
+            "label": "11/17 10:03",
             "value": 74,
             "reports": 1
           }
@@ -182,14 +914,14 @@
           "resourceLinks": []
         }
       ],
-      "importance": 72,
-      "importanceReasonZh": "这是OpenAI官方宣布的科研普惠项目扩展，涉及20万研究者免费使用前沿模型，对科研AI可及性有直接影响。",
-      "importanceReasonEn": "This is an official OpenAI announcement expanding a science-access program, giving 200,000 researchers free use of frontier models, directly affecting AI accessibility in research.",
+      "importance": 62,
+      "importanceReasonZh": "这是OpenAI官方宣布的项目扩展，直接影响全球学术研究人员的AI工具可及性，但公告本身信息有限，未披露具体模型、资格标准和实施细节。",
+      "importanceReasonEn": "This is an official OpenAI announcement of a program expansion that directly affects global academic researchers' access to AI tools, but the announcement itself is brief and does not disclose specific models, eligibility criteria or implementation details.",
       "scoringMode": "ai",
-      "titleZh": "OpenAI扩大科研人员AI访问：20万研究者免费使用前沿模型",
-      "titleEn": "OpenAI Expands AI Access for Scientists: 200,000 Researchers Get Free Frontier Models",
-      "summaryZh": "OpenAI宣布将其“ChatGPT for Academic Researchers”项目扩展至全球20万名科研人员，提供前沿模型的免费访问权限。",
-      "summaryEn": "OpenAI is expanding its ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to its frontier models.",
+      "titleZh": "OpenAI扩大面向科学家的AI访问：20万名研究人员免费使用前沿模型",
+      "titleEn": "OpenAI Expands AI Access for Scientists: Free Frontier Models for 200,000 Researchers",
+      "summaryZh": "OpenAI宣布将其“ChatGPT for Academic Researchers”项目扩展至全球20万名研究人员，提供前沿模型的免费访问权限。",
+      "summaryEn": "OpenAI announced it is expanding its ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to its frontier models.",
       "keywords": [
         "OpenAI",
         "academic researchers",
@@ -204,27 +936,27 @@
         "OpenAI program"
       ],
       "models": [
-        "ChatGPT"
+        "ChatGPT",
+        "OpenAI frontier models"
       ],
-      "detailZh": "OpenAI于2026年11月16日发布公告，宣布扩大其“ChatGPT for Academic Researchers”项目。根据公告，该项目将向全球20万名科研人员提供其前沿模型的免费访问权限。\n\n公告将此举定位为“扩大科学家对AI的访问”，即降低学术研究者使用先进AI模型的门槛。原文未披露具体覆盖的国家、机构名单、申请资格、使用额度或项目期限等细节。\n\n目前可确认的核心事实是：项目名称为ChatGPT for Academic Researchers，扩展后的规模为20万名研究者，提供的内容是前沿模型的免费访问。其余执行层面的信息在现有材料中尚未说明。",
+      "detailZh": "OpenAI于2026年11月16日发布公告，宣布扩大其“ChatGPT for Academic Researchers”（面向学术研究人员的ChatGPT）项目。根据公告，该项目将向全球20万名研究人员提供其前沿模型的免费访问权限。\n\n公告将这一举措定位为“扩大科学家使用AI的渠道”，强调让更多科研人员能够使用OpenAI的前沿模型。原文仅包含一句话说明，未进一步披露参与资格、申请流程、覆盖学科、合作机构或具体开放哪些模型。\n\n从已知信息看，这是一次规模上的扩展：项目从原有范围扩大到20万名研究人员。但公告没有说明原有项目规模、扩展前后的对比数据，也没有给出时间表或地区分布。\n\n由于信息来自OpenAI官方渠道，事件本身具有一手来源的可信度；但公告内容非常简短，属于典型的项目发布声明，缺乏可验证的执行细节。",
       "keyPointsZh": [
         "OpenAI宣布扩展ChatGPT for Academic Researchers项目",
-        "扩展后覆盖全球20万名科研人员",
-        "提供前沿模型的免费访问权限",
-        "公告未披露申请资格、额度或期限等细节"
+        "扩展后向全球20万名研究人员提供免费访问",
+        "免费开放的是OpenAI的前沿模型",
+        "公告未披露资格标准、申请流程和具体模型清单"
       ],
-      "impactZh": "该举措可能降低学术研究者使用前沿AI模型的成本门槛，扩大科研场景中AI工具的可及范围，并可能推动其他AI厂商跟进类似的学术支持计划。",
+      "impactZh": "该举措可能降低学术研究人员使用前沿AI模型的门槛，扩大AI在科研工作流中的渗透范围，并可能促使其他AI厂商推出类似的学术访问计划。",
       "readerImpactZh": "",
-      "userImpactZh": "对科研人员和学术团队而言，该项目若落地，可能意味着无需自付费用即可使用前沿模型辅助文献调研、写作与数据分析；但具体资格与额度尚待官方细则公布。",
+      "userImpactZh": "对科研人员和高校团队而言，若符合资格，可能获得无需自付费的前沿模型访问渠道，从而降低研究中的AI工具成本；但具体申请方式和适用范围尚不明确。",
       "howItWorksZh": "",
-      "interpretationZh": "已报道的事实是OpenAI宣布将项目扩展至20万名研究者并免费提供前沿模型访问。合理推断是此举意在扩大科研领域的用户基础与生态影响力，但具体执行方式、覆盖范围和实际可用能力在现有材料中无法确认。",
-      "limitationsZh": "现有材料仅为简短公告，缺少申请条件、覆盖机构、使用额度、项目起止时间、是否包含API访问等关键信息，实际落地效果尚不可验证。",
+      "interpretationZh": "已报道的事实是：OpenAI官方宣布将项目扩展至20万名研究人员并免费提供前沿模型访问。合理推断是：这是一项面向学术群体的市场与生态投入，可能附带使用条款或数据政策约束，但公告未说明这些内容。",
+      "limitationsZh": "公告仅有一句话，未说明具体开放哪些模型、资格如何认定、是否覆盖中国等地区的研究人员、是否有使用限制或数据共享条款，也没有独立第三方验证。",
       "actionStepsZh": [
-        "关注OpenAI官方渠道以获取该项目的申请资格与开放时间",
-        "科研人员可提前梳理自身研究场景中对前沿模型的具体需求",
-        "机构科研管理者可评估是否组织团队统一申请与合规使用"
+        "关注OpenAI官方渠道后续发布的申请入口和资格说明",
+        "研究人员可提前梳理自身研究场景，评估前沿模型在文献综述、数据分析等环节的适用性"
       ],
-      "detailCompleteness": "summary",
+      "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
       "reportCount": 1,
@@ -245,9 +977,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-16T17:00:00.000Z",
-        "endedAt": "2026-11-16T18:24:10.683Z",
-        "current": 65,
-        "peak": 65,
+        "endedAt": "2026-11-17T02:03:44.473Z",
+        "current": 59,
+        "peak": 59,
         "history": [
           {
             "at": "2026-11-16T17:00:00.000Z",
@@ -256,15 +988,63 @@
             "reports": 0
           },
           {
-            "at": "2026-11-16T17:42:05.341Z",
-            "label": "11/17 01:42",
-            "value": 39,
+            "at": "2026-11-16T17:54:22.447Z",
+            "label": "11/17 01:54",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-16T18:24:10.683Z",
-            "label": "11/17 02:24",
-            "value": 65,
+            "at": "2026-11-16T18:48:44.894Z",
+            "label": "11/17 02:48",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T19:43:07.341Z",
+            "label": "11/17 03:43",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T20:37:29.789Z",
+            "label": "11/17 04:37",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T21:31:52.236Z",
+            "label": "11/17 05:31",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T22:26:14.683Z",
+            "label": "11/17 06:26",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T23:20:37.131Z",
+            "label": "11/17 07:20",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T00:14:59.578Z",
+            "label": "11/17 08:14",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T01:09:22.025Z",
+            "label": "11/17 09:09",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T02:03:44.473Z",
+            "label": "11/17 10:03",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -276,7 +1056,7 @@
       "normalizedUrl": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam",
       "originalUrl": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
       "titleOriginal": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-      "summaryOriginal": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
+      "summaryOriginal": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
       "originalLanguage": "en",
       "author": "Ivan Mehta",
       "category": "business",
@@ -369,7 +1149,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-16T17:00:00.000Z",
-        "endedAt": "2026-11-16T18:24:10.683Z",
+        "endedAt": "2026-11-17T02:03:44.473Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -380,14 +1160,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-16T17:42:05.341Z",
-            "label": "11/17 01:42",
+            "at": "2026-11-16T17:54:22.447Z",
+            "label": "11/17 01:54",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T18:48:44.894Z",
+            "label": "11/17 02:48",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T19:43:07.341Z",
+            "label": "11/17 03:43",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T20:37:29.789Z",
+            "label": "11/17 04:37",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T21:31:52.236Z",
+            "label": "11/17 05:31",
             "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-16T18:24:10.683Z",
-            "label": "11/17 02:24",
+            "at": "2026-11-16T22:26:14.683Z",
+            "label": "11/17 06:26",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T23:20:37.131Z",
+            "label": "11/17 07:20",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T00:14:59.578Z",
+            "label": "11/17 08:14",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T01:09:22.025Z",
+            "label": "11/17 09:09",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T02:03:44.473Z",
+            "label": "11/17 10:03",
             "value": 65,
             "reports": 1
           }
@@ -535,7 +1363,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-16T16:56:04.000Z",
-        "endedAt": "2026-11-16T18:24:10.683Z",
+        "endedAt": "2026-11-17T02:03:44.473Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -546,14 +1374,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-16T17:40:07.341Z",
-            "label": "11/17 01:40",
+            "at": "2026-11-16T17:50:50.047Z",
+            "label": "11/17 01:50",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T18:45:36.094Z",
+            "label": "11/17 02:45",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T19:40:22.141Z",
+            "label": "11/17 03:40",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T20:35:08.189Z",
+            "label": "11/17 04:35",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T21:29:54.236Z",
+            "label": "11/17 05:29",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-11-16T18:24:10.683Z",
-            "label": "11/17 02:24",
+            "at": "2026-11-16T22:24:40.283Z",
+            "label": "11/17 06:24",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-16T23:19:26.331Z",
+            "label": "11/17 07:19",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T00:14:12.378Z",
+            "label": "11/17 08:14",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T01:08:58.425Z",
+            "label": "11/17 09:08",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T02:03:44.473Z",
+            "label": "11/17 10:03",
             "value": 68,
             "reports": 1
           }
