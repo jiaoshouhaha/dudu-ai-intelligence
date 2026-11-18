@@ -1,225 +1,120 @@
 {
-  "generatedAt": "2026-11-17T19:48:35.415Z",
+  "generatedAt": "2026-11-18T02:23:00.695Z",
   "date": "2026-11-18",
   "items": [
     {
-      "id": "2fb55c3571a040c5",
-      "normalizedUrl": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work",
-      "originalUrl": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
-      "titleOriginal": "Model ML raises $250M to automate investment banking grunt work",
-      "summaryOriginal": "The three-year-old Model ML was valued at $1.5 billion in a new round co-led by General Atlantic and QED Investors.",
+      "id": "e45fd791e1fe03c2",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents",
+      "originalUrl": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+      "titleOriginal": "External sandboxes for coding agents",
+      "summaryOriginal": "External sandboxes for coding agents I've been exploring new ways to sandbox code that is executed by agents, with a focus on making it safer to try out local models without worrying that a mistake or prompt injection attack might cause them to take damaging actions on a machine. I worked on this project with Prime Radiant , the AI research lab behind Superpowers and other projects . My post on the Prime Radiant blog introduces the external sandbox pattern, where code executed by the agent runs inside a dedicated sandbox while the agent itself lives outside of that sandbox. To demonstrate this pattern we've released three sandbox server implementations: external-sandbox-v86 runs a Node.js server which then uses v86 to run Alpine Linux inside WebAssembly. external-sandbox-container is a Python web server which runs the sandbox in Alpine Linux inside an Apple Containers instance. external-sandbox-quicksand is another Python web server, this time using Microsoft's Quicksand sandboxing library, which bundles QEMU and Alpine Linux in a Python package! Each of these implementations offers the same localhost API. You can then configure Pi, Claude Code, or Codex to send API calls to that s",
       "originalLanguage": "en",
-      "author": "Marina Temkin",
-      "category": "business",
-      "sourceType": "media",
-      "authority": 82,
-      "sourcePriority": 78,
-      "images": [],
-      "resourceLinks": [],
-      "publishedAt": "2026-11-17T19:32:11.000Z",
+      "author": "",
+      "category": "agent",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
+      ],
+      "resourceLinks": [
+        "https://blog.primeradiant.com/external-sandboxes-for-coding-agents/",
+        "https://primeradiant.com",
+        "https://github.com/orgs/prime-radiant-inc/repositories",
+        "https://github.com/prime-radiant-inc/external-sandbox-v86",
+        "https://github.com/copy/v86",
+        "https://github.com/prime-radiant-inc/external-sandbox-container",
+        "https://github.com/prime-radiant-inc/external-sandbox-quicksand",
+        "https://github.com/microsoft/quicksand",
+        "https://simonwillison.net/tags/sandboxing",
+        "https://simonwillison.net/tags/security",
+        "https://simonwillison.net/tags/ai",
+        "https://simonwillison.net/tags/webassembly"
+      ],
+      "publishedAt": "2026-11-17T22:52:29.000Z",
       "publishedPrecision": "minute",
       "discoveredAt": null,
-      "contentType": "industry",
-      "evidenceLevel": "verified",
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
       "attribution": null,
       "sources": [
         {
-          "id": "techcrunch-ai",
-          "name": "TechCrunch AI",
-          "type": "media",
-          "url": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
-          "publishedAt": "2026-11-17T19:32:11.000Z",
-          "title": "Model ML raises $250M to automate investment banking grunt work",
-          "authority": 82,
-          "sourcePriority": 78,
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+          "publishedAt": "2026-11-17T22:52:29.000Z",
+          "title": "External sandboxes for coding agents",
+          "authority": 90,
+          "sourcePriority": 90,
           "publishedPrecision": "minute",
-          "images": [],
-          "resourceLinks": []
-        }
-      ],
-      "importance": 62,
-      "importanceReasonZh": "该事件反映资本持续押注面向专业服务业的垂直 AI 工具，2.5 亿美元融资和 15 亿美元估值是较大规模的交易，但来源信息有限，缺少产品细节和客户数据。",
-      "importanceReasonEn": "The event shows continued investor appetite for vertical AI tools aimed at professional services; a $250M round at a $1.5B valuation is sizable, though source details on product and customers are limited.",
-      "scoringMode": "ai",
-      "titleZh": "Model ML 融资 2.5 亿美元，用 AI 自动化投行基础工作",
-      "titleEn": "Model ML raises $250M to automate investment banking grunt work",
-      "summaryZh": "成立三年的 Model ML 在新一轮融资中估值 15 亿美元，本轮由 General Atlantic 和 QED Investors 联合领投。",
-      "summaryEn": "The three-year-old Model ML was valued at $1.5 billion in a new round co-led by General Atlantic and QED Investors.",
-      "keywords": [
-        "Model ML",
-        "investment banking",
-        "funding round",
-        "valuation",
-        "General Atlantic",
-        "QED Investors"
-      ],
-      "topics": [
-        "AI in finance",
-        "investment banking automation",
-        "funding",
-        "enterprise AI"
-      ],
-      "models": [],
-      "detailZh": "TechCrunch AI 报道，成立三年的初创公司 Model ML 完成了一轮 2.5 亿美元融资，公司估值达到 15 亿美元。本轮融资由 General Atlantic 和 QED Investors 联合领投。\n\nModel ML 的定位是自动化投资银行中的基础性、重复性工作，即通常所说的“grunt work”。报道未披露具体产品形态、客户数量、收入规模或资金用途等细节。\n\n从时间线看，公司成立仅三年便达到 15 亿美元估值，属于较快进入独角兽行列的案例。本轮融资规模在垂直 AI 应用公司中处于较高水平。\n\n目前可确认的事实仅限于融资金额、估值、领投方和公司业务方向；关于技术路线、商业模式和市场竞争格局的信息尚不充分。",
-      "keyPointsZh": [
-        "Model ML 完成 2.5 亿美元融资，估值 15 亿美元。",
-        "本轮由 General Atlantic 和 QED Investors 联合领投。",
-        "公司成立约三年，业务方向是自动化投资银行的基础性工作。",
-        "报道未披露产品细节、客户数量或收入数据。"
-      ],
-      "impactZh": "该融资表明，投资者仍愿意为面向金融等专业服务行业的垂直 AI 应用支付高估值，可能推动更多创业公司进入投行工作流自动化赛道。",
-      "readerImpactZh": "",
-      "userImpactZh": "",
-      "howItWorksZh": "",
-      "interpretationZh": "已报道的事实是融资规模、估值和领投方；可以合理推断，资本市场看好用 AI 替代投行中重复性分析、文档和数据处理工作的商业前景，但具体技术能力和落地效果尚无公开信息支撑。",
-      "limitationsZh": "来源仅为一篇简短的融资报道，缺少产品演示、客户案例、收入与盈利情况、资金用途以及竞争格局等信息；15 亿美元估值是否合理无法从现有材料判断。",
-      "actionStepsZh": [],
-      "detailCompleteness": "summary",
-      "visual": {
-        "type": "comparison",
-        "titleZh": "数据对比",
-        "unit": "",
-        "noteZh": "",
-        "insightZh": "本轮 2.5 亿美元融资对应 15 亿美元估值，融资额约为估值的六分之一。",
-        "data": [
-          {
-            "label": "融资金额（亿美元）",
-            "value": 2.5,
-            "display": ""
-          },
-          {
-            "label": "估值（亿美元）",
-            "value": 15,
-            "display": ""
-          }
-        ]
-      },
-      "processingError": null,
-      "reportCount": 1,
-      "reportTimeline": [
-        {
-          "id": "techcrunch-ai",
-          "name": "TechCrunch AI",
-          "type": "media",
-          "url": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
-          "publishedAt": "2026-11-17T19:32:11.000Z",
-          "title": "Model ML raises $250M to automate investment banking grunt work",
-          "authority": 82,
-          "sourcePriority": 78,
-          "publishedPrecision": "minute",
-          "images": [],
-          "resourceLinks": []
-        }
-      ],
-      "heat": {
-        "startedAt": "2026-11-17T19:32:11.000Z",
-        "endedAt": "2026-11-17T19:48:35.415Z",
-        "current": 59,
-        "peak": 59,
-        "history": [
-          {
-            "at": "2026-11-17T19:32:11.000Z",
-            "label": "11/18 03:32",
-            "value": 0,
-            "reports": 0
-          },
-          {
-            "at": "2026-11-17T19:48:35.415Z",
-            "label": "11/18 03:48",
-            "value": 59,
-            "reports": 1
-          }
-        ],
-        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
-      }
-    },
-    {
-      "id": "9d1dabbd0ad9fdc7",
-      "normalizedUrl": "https://microsoft.ai/news/introducing-mai-realtime-1",
-      "originalUrl": "https://microsoft.ai/news/introducing-mai-realtime-1/",
-      "titleOriginal": "Microsoft AI 发布首个语音到语音模型 MAI Realtime 1，定价 $0.01 每分钟音频",
-      "summaryOriginal": "Microsoft AI 发布首个语音到语音模型 MAI Realtime 1，起价 $0.01 每音频分钟，称在 Big Bench Audio 和 Tau-Voice 公开基准及微软产品评估中于质量、速度和价格上超过 GPT Realtime 2.1。",
-      "originalLanguage": "zh",
-      "author": "Microsoft AI：官方博客（RSS）",
-      "category": "models",
-      "sourceType": "aggregator",
-      "authority": 76,
-      "sourcePriority": 96,
-      "images": [],
-      "resourceLinks": [
-        "https://aihot.news/items/eewx1bbnzfmbj6r40v7b6s6nb",
-        "https://microsoft.ai/news/introducing-mai-realtime-1/"
-      ],
-      "publishedAt": "2026-11-17T18:16:17.000Z",
-      "publishedPrecision": "minute",
-      "discoveredAt": "2026-11-17T19:05:33.570Z",
-      "contentType": "official",
-      "evidenceLevel": "primary",
-      "attribution": {
-        "name": "AIHOT",
-        "url": "https://aihot.news/items/eewx1bbnzfmbj6r40v7b6s6nb"
-      },
-      "sources": [
-        {
-          "id": "aihot-selected:eewx1bbnzfmbj6r40v7b6s6nb",
-          "name": "Microsoft AI：官方博客（RSS）",
-          "type": "aggregator",
-          "url": "https://microsoft.ai/news/introducing-mai-realtime-1/",
-          "publishedAt": "2026-11-17T18:16:17.000Z",
-          "title": "Microsoft AI 发布首个语音到语音模型 MAI Realtime 1，定价 $0.01 每分钟音频",
-          "authority": 76,
-          "sourcePriority": 96,
-          "publishedPrecision": "minute",
-          "images": [],
+          "images": [
+            "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
+          ],
           "resourceLinks": [
-            "https://aihot.news/items/eewx1bbnzfmbj6r40v7b6s6nb",
-            "https://microsoft.ai/news/introducing-mai-realtime-1/"
+            "https://blog.primeradiant.com/external-sandboxes-for-coding-agents/",
+            "https://primeradiant.com",
+            "https://github.com/orgs/prime-radiant-inc/repositories",
+            "https://github.com/prime-radiant-inc/external-sandbox-v86",
+            "https://github.com/copy/v86",
+            "https://github.com/prime-radiant-inc/external-sandbox-container",
+            "https://github.com/prime-radiant-inc/external-sandbox-quicksand",
+            "https://github.com/microsoft/quicksand",
+            "https://simonwillison.net/tags/sandboxing",
+            "https://simonwillison.net/tags/security",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/webassembly"
           ]
         }
       ],
-      "importance": 72,
-      "importanceReasonZh": "这是微软 AI 推出的首个语音到语音模型，并直接对标 GPT Realtime 2.1，同时给出明确的低价定价，对实时语音应用的成本与选型有实际影响。",
-      "importanceReasonEn": "It is Microsoft AI's first speech-to-speech model, directly positioned against GPT Realtime 2.1 with explicit low pricing, which has practical impact on the cost and model choice for realtime voice applications.",
+      "importance": 62,
+      "importanceReasonZh": "该内容提供了一个可复用的安全模式与三个开源实现，直接回应智能体执行代码时的安全风险，对使用本地模型和编码智能体的开发者有实际价值。",
+      "importanceReasonEn": "It offers a reusable safety pattern plus three open implementations, directly addressing the security risk of agents executing code, with practical value for developers using local models and coding agents.",
       "scoringMode": "ai",
-      "titleZh": "微软 AI 发布首个语音到语音模型 MAI Realtime 1，定价每分钟音频 0.01 美元",
-      "titleEn": "Microsoft AI Releases First Speech-to-Speech Model MAI Realtime 1, Priced at $0.01 per Audio Minute",
-      "summaryZh": "微软 AI 发布其首个语音到语音模型 MAI Realtime 1，起价每音频分钟 0.01 美元，并称在 Big Bench Audio、Tau-Voice 公开基准及微软产品评估中，在质量、速度和价格上超过 GPT Realtime 2.1。",
-      "summaryEn": "Microsoft AI released MAI Realtime 1, its first speech-to-speech model, starting at $0.01 per audio minute, claiming it beats GPT Realtime 2.1 on quality, speed and price in the public Big Bench Audio and Tau-Voice benchmarks and in Microsoft product evaluations.",
+      "titleZh": "为编码智能体构建外部沙箱",
+      "titleEn": "External sandboxes for coding agents",
+      "summaryZh": "Simon Willison 与 AI 研究实验室 Prime Radiant 合作，提出“外部沙箱”模式：智能体本身运行在沙箱之外，而它执行的代码被隔离在专用沙箱内，从而降低本地模型误操作或提示注入攻击造成破坏的风险。团队发布了三个提供相同 localhost API 的沙箱服务器实现，可配置 Pi、Claude Code 或 Codex 调用。",
+      "summaryEn": "Simon Willison, working with AI research lab Prime Radiant, introduces the \"external sandbox\" pattern: the agent runs outside the sandbox while the code it executes runs inside a dedicated sandbox, reducing the risk of damaging actions from local model mistakes or prompt injection. Three sandbox server implementations sharing the same localhost API were released, configurable for Pi, Claude Code or Codex.",
       "keywords": [
-        "MAI Realtime 1",
-        "Microsoft AI",
-        "speech-to-speech",
-        "Big Bench Audio",
-        "Tau-Voice",
-        "GPT Realtime 2.1",
-        "audio pricing"
+        "external sandbox",
+        "v86",
+        "Apple Containers",
+        "Quicksand",
+        "QEMU",
+        "Alpine Linux",
+        "localhost API",
+        "prompt injection"
       ],
       "topics": [
-        "speech-to-speech",
-        "realtime voice",
-        "model pricing",
-        "benchmarks"
+        "AI agent safety",
+        "code sandboxing",
+        "prompt injection",
+        "local models",
+        "developer tooling"
       ],
       "models": [
-        "MAI Realtime 1",
-        "GPT Realtime 2.1"
+        "Pi",
+        "Claude Code",
+        "Codex"
       ],
-      "detailZh": "微软 AI 通过官方博客宣布发布 MAI Realtime 1，这是其首个语音到语音模型。该模型采用按音频分钟计费的定价方式，起价为每分钟 0.01 美元。\n\n微软 AI 表示，MAI Realtime 1 在 Big Bench Audio 和 Tau-Voice 两个公开基准测试，以及微软内部的产品评估中，在质量、速度和价格三个维度上均超过 GPT Realtime 2.1。\n\n目前公开信息集中在发布、定价和对比结论上，微软未在摘要中披露模型架构、支持的语音能力细节、可用区域或接入方式等具体信息。",
+      "detailZh": "Simon Willison 在 Prime Radiant 博客中介绍了“外部沙箱”模式，目标是让智能体执行的代码在专用沙箱中运行，而智能体本身留在沙箱之外。这样在尝试本地模型时，即使模型犯错或遭遇提示注入攻击，也不容易对宿主机造成破坏性操作。该项目由他与 AI 研究实验室 Prime Radiant 合作完成，该实验室也是 Superpowers 等项目背后的团队。\n\n为演示这一模式，团队发布了三个沙箱服务器实现。external-sandbox-v86 运行一个 Node.js 服务器，再通过 v86 在 WebAssembly 中运行 Alpine Linux。external-sandbox-container 是一个 Python Web 服务器，在 Apple Containers 实例内的 Alpine Linux 中运行沙箱。external-sandbox-quicksand 同样是 Python Web 服务器，使用微软的 Quicksand 沙箱库，该库将 QEMU 和 Alpine Linux 打包进一个 Python 包。\n\n三个实现对外提供相同的 localhost API。用户可以据此配置 Pi、Claude Code 或 Codex，将 API 调用发送到该沙箱服务，从而把代码执行与智能体运行环境分离。原文未披露各实现的性能、资源占用或安全边界细节。",
       "keyPointsZh": [
-        "微软 AI 发布首个语音到语音模型 MAI Realtime 1",
-        "定价起于每音频分钟 0.01 美元",
-        "微软称其在 Big Bench Audio、Tau-Voice 及内部产品评估中质量、速度、价格均超过 GPT Realtime 2.1",
-        "对比对象为 GPT Realtime 2.1"
+        "提出“外部沙箱”模式：智能体在沙箱外，执行的代码在沙箱内。",
+        "发布三个实现：v86（Node.js + WebAssembly）、Apple Containers（Python）、Quicksand（Python，打包 QEMU 与 Alpine Linux）。",
+        "三个实现提供相同的 localhost API，可配置 Pi、Claude Code 或 Codex 调用。",
+        "目标是降低本地模型误操作和提示注入攻击对宿主机的破坏风险。"
       ],
-      "impactZh": "实时语音交互是语音助手、客服和实时翻译等场景的核心能力，微软以首个语音到语音模型进入该领域并给出低价，可能加剧实时语音模型的竞争并降低相关应用的成本门槛。",
+      "impactZh": "为编码智能体提供了一种将代码执行与宿主环境隔离的通用模式，并给出可直接使用的开源实现，有助于推动智能体工具链在安全默认值上的改进。",
       "readerImpactZh": "",
-      "userImpactZh": "对开发实时语音应用的团队而言，MAI Realtime 1 提供了一个按分钟计费、起价 0.01 美元的新选项，并声称在质量、速度和价格上优于 GPT Realtime 2.1，可作为选型时的对比候选。",
-      "howItWorksZh": "",
-      "interpretationZh": "已报道的事实是：微软 AI 发布了 MAI Realtime 1，定价起于每音频分钟 0.01 美元，并声称在指定基准和内部评估中优于 GPT Realtime 2.1。需要区分的是，这些对比结论来自微软自身表述，公开摘要未提供具体分数或测试细节。",
-      "limitationsZh": "公开信息未披露模型架构、具体基准分数、速度指标数值、可用区域与接入方式；质量、速度和价格优于 GPT Realtime 2.1 的说法来自微软自身，尚缺独立验证。",
+      "userImpactZh": "使用本地模型或编码智能体的开发者可以借助统一的 localhost API 把代码执行转移到隔离沙箱，降低误操作和提示注入带来的风险，同时便于在 Pi、Claude Code、Codex 等工具间切换。",
+      "howItWorksZh": "外部沙箱模式将智能体进程与代码执行环境分离：智能体通过 localhost API 向沙箱服务器发送执行请求，沙箱服务器在隔离环境中运行代码并返回结果。三个实现分别用不同技术承载隔离环境：v86 在 WebAssembly 中运行 Alpine Linux；Apple Containers 在容器实例中运行 Alpine Linux；Quicksand 库将 QEMU 与 Alpine Linux 打包为 Python 包。用户只需将 Pi、Claude Code 或 Codex 配置为调用该 API 即可。",
+      "interpretationZh": "已报道的事实是：该模式由 Simon Willison 与 Prime Radiant 合作提出，三个实现已发布且共享同一 localhost API，可配置给 Pi、Claude Code 或 Codex。合理推断是：统一 API 降低了在不同沙箱后端之间切换的成本，但各实现的实际隔离强度与性能表现原文未说明。",
+      "limitationsZh": "原文未提供各实现的性能、资源开销、隔离强度或安全测试结果；也未说明 API 的具体接口细节和配置步骤。沙箱能否完全抵御提示注入或逃逸攻击尚缺乏验证。",
       "actionStepsZh": [
-        "关注微软 AI 官方博客以获取 MAI Realtime 1 的接入方式与可用区域信息",
-        "在选型时用自身语音场景对比 MAI Realtime 1 与 GPT Realtime 2.1 的实际表现与成本"
+        "根据运行环境选择三个实现之一：v86、Apple Containers 或 Quicksand。",
+        "启动沙箱服务器，确认其 localhost API 可用。",
+        "将 Pi、Claude Code 或 Codex 配置为向该 API 发送代码执行请求。",
+        "在本地模型试验中优先使用沙箱，避免直接在宿主机执行智能体生成的代码。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -227,44 +122,68 @@
       "reportCount": 1,
       "reportTimeline": [
         {
-          "id": "aihot-selected:eewx1bbnzfmbj6r40v7b6s6nb",
-          "name": "Microsoft AI：官方博客（RSS）",
-          "type": "aggregator",
-          "url": "https://microsoft.ai/news/introducing-mai-realtime-1/",
-          "publishedAt": "2026-11-17T18:16:17.000Z",
-          "title": "Microsoft AI 发布首个语音到语音模型 MAI Realtime 1，定价 $0.01 每分钟音频",
-          "authority": 76,
-          "sourcePriority": 96,
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+          "publishedAt": "2026-11-17T22:52:29.000Z",
+          "title": "External sandboxes for coding agents",
+          "authority": 90,
+          "sourcePriority": 90,
           "publishedPrecision": "minute",
-          "images": [],
+          "images": [
+            "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
+          ],
           "resourceLinks": [
-            "https://aihot.news/items/eewx1bbnzfmbj6r40v7b6s6nb",
-            "https://microsoft.ai/news/introducing-mai-realtime-1/"
+            "https://blog.primeradiant.com/external-sandboxes-for-coding-agents/",
+            "https://primeradiant.com",
+            "https://github.com/orgs/prime-radiant-inc/repositories",
+            "https://github.com/prime-radiant-inc/external-sandbox-v86",
+            "https://github.com/copy/v86",
+            "https://github.com/prime-radiant-inc/external-sandbox-container",
+            "https://github.com/prime-radiant-inc/external-sandbox-quicksand",
+            "https://github.com/microsoft/quicksand",
+            "https://simonwillison.net/tags/sandboxing",
+            "https://simonwillison.net/tags/security",
+            "https://simonwillison.net/tags/ai",
+            "https://simonwillison.net/tags/webassembly"
           ]
         }
       ],
       "heat": {
-        "startedAt": "2026-11-17T18:16:17.000Z",
-        "endedAt": "2026-11-17T19:48:35.415Z",
-        "current": 65,
-        "peak": 65,
+        "startedAt": "2026-11-17T22:52:29.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 59,
+        "peak": 59,
         "history": [
           {
-            "at": "2026-11-17T18:16:17.000Z",
-            "label": "11/18 02:16",
+            "at": "2026-11-17T22:52:29.000Z",
+            "label": "11/18 06:52",
             "value": 0,
             "reports": 0
           },
           {
-            "at": "2026-11-17T19:02:26.207Z",
-            "label": "11/18 03:02",
-            "value": 39,
+            "at": "2026-11-17T23:45:06.923Z",
+            "label": "11/18 07:45",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-17T19:48:35.415Z",
-            "label": "11/18 03:48",
-            "value": 65,
+            "at": "2026-11-18T00:37:44.847Z",
+            "label": "11/18 08:37",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:30:22.771Z",
+            "label": "11/18 09:30",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 59,
             "reports": 1
           }
         ],
@@ -274,25 +193,35 @@
     {
       "id": "b9289a09b3f0dda2",
       "normalizedUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-      "originalUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
-      "titleOriginal": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol",
-      "summaryOriginal": "OpenRouter 宣布 OpenAI 的 GPT-6.2 Astra 和 GPT-6.2 Sol 上线。Astra 面向最难的项目，评测成绩创新高且每任务成本不到 GPT-6 Astra 的三分之一，价格为 $8/M 输入、$40/M 输出；Sol 面向日常智能体工作，价格为 $2/M 输入、$10/M 输出，两者均有 Pro 版本。",
-      "originalLanguage": "zh",
-      "author": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "originalUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "titleOriginal": "Introducing GPT-6.2 Astra and Sol",
+      "summaryOriginal": "GPT‑6.2 Astra and GPT‑6.2 Sol OpenAI: We’re introducing GPT‑6.2 Astra, our new frontier model for your hardest projects, and GPT‑6.2 Sol, our efficient, versatile model for everyday work. They're available in the API as gpt-6.2-astra and gpt-6.2-sol . I shipped LLM 0.38 with support for the new models. 6.2 Astra is 80% of the price of 6 Astra - $8/MTok input and $40/MTok output, the same price as Claude Fable 5.2 (which was also 80% of its predecessor). 6 Astra and Fable 5 were both $10/$50. The cached price is an even bigger discount - $0.40/million compared to $1/million for the older model. This is great news for longer running agentic sessions. GPT-6.2 Sol is the same $2/$10 price as 6.1 Sol and 6 Sol - which are half the price of GPT-5.6 Sol ($4/$20). Here are the pelicans for GPT-6.2 Sol and for GPT-6.2 Astra . The 6.2 Astra max pelican looks like this: I have a full comparison grid here , but here's how the high/xhigh/max pelicans compare with the previous Sol and Astra releases: I also ran my most recent benchmark prompt against the two models, using \"Ultra' effort levels in the Codex CLI: Make a three js animation where yonkers stands up as a big mech (cool stand up motion",
+      "originalLanguage": "en",
+      "author": "",
       "category": "models",
-      "sourceType": "aggregator",
-      "authority": 86,
-      "sourcePriority": 96,
-      "images": [],
+      "sourceType": "official",
+      "authority": 100,
+      "sourcePriority": 100,
+      "images": [
+        "https://static.simonwillison.net/static/2026/astra-6-2-max.webp",
+        "https://static.simonwillison.net/static/2026/gpt-6-2-grid.webp",
+        "https://static.simonwillison.net/static/2026/yonkers-astra-sol-20s.webp"
+      ],
       "resourceLinks": [
         "https://aihot.news/items/tww8adkmqsbjxg8u6m16vuzta",
         "https://x.com/OpenRouter/status/2122754139533066653",
         "https://aihot.news/items/jr7fqw95e5ihuevr1rzib208l",
         "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
         "https://aihot.news/items/otq9bl1a2a9hmm8wooxbc6frd",
-        "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
+        "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+        "https://llm.datasette.io/en/stable/changelog.html#v0-38",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fa940cc2750162ac9edf0ddf881067b83",
+        "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Ffe836e13c90c00233c9e9e499a941805",
+        "https://static.simonwillison.net/static/2026/openai-pelicans-november-2026.html",
+        "https://static.simonwillison.net/static/2026/yonkers-gpt-6.2-sol-ultra/index.html",
+        "https://static.simonwillison.net/static/2026/yonkers-gpt-6.2-astra-ultra/index.html"
       ],
-      "publishedAt": "2026-11-17T18:10:00.000Z",
+      "publishedAt": "2026-11-17T22:38:52.000Z",
       "publishedPrecision": "minute",
       "discoveredAt": "2026-11-17T18:23:44.813Z",
       "contentType": "official",
@@ -349,6 +278,49 @@
             "https://aihot.news/items/otq9bl1a2a9hmm8wooxbc6frd",
             "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
           ]
+        },
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+          "publishedAt": "2026-11-17T22:38:52.000Z",
+          "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/astra-6-2-max.webp",
+            "https://static.simonwillison.net/static/2026/gpt-6-2-grid.webp",
+            "https://static.simonwillison.net/static/2026/yonkers-astra-sol-20s.webp"
+          ],
+          "resourceLinks": [
+            "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+            "https://llm.datasette.io/en/stable/changelog.html#v0-38",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fa940cc2750162ac9edf0ddf881067b83",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Ffe836e13c90c00233c9e9e499a941805",
+            "https://static.simonwillison.net/static/2026/openai-pelicans-november-2026.html",
+            "https://static.simonwillison.net/static/2026/yonkers-gpt-6.2-sol-ultra/index.html",
+            "https://static.simonwillison.net/static/2026/yonkers-gpt-6.2-astra-ultra/index.html",
+            "https://tools.simonwillison.net/yonkers-rises",
+            "https://static.simonwillison.net/static/2026/yonkers-mech-standalone.html",
+            "https://static.simonwillison.net/static/2026/yonkers-astra-sol-20s-largest.mp4",
+            "https://gist.github.com/simonw/6b44c588a1321b60799dbbfd13db6d23",
+            "https://twitter.com/theo/status/2122760447103484410"
+          ]
+        },
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "publishedAt": "2026-11-17T17:45:00.000Z",
+          "title": "Introducing GPT-6.2 Astra and Sol",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
         }
       ],
       "importance": 82,
@@ -430,8 +402,38 @@
         ]
       },
       "processingError": null,
-      "reportCount": 3,
+      "reportCount": 5,
       "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+          "publishedAt": "2026-11-17T22:38:52.000Z",
+          "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/astra-6-2-max.webp",
+            "https://static.simonwillison.net/static/2026/gpt-6-2-grid.webp",
+            "https://static.simonwillison.net/static/2026/yonkers-astra-sol-20s.webp"
+          ],
+          "resourceLinks": [
+            "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+            "https://llm.datasette.io/en/stable/changelog.html#v0-38",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fa940cc2750162ac9edf0ddf881067b83",
+            "https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Ffe836e13c90c00233c9e9e499a941805",
+            "https://static.simonwillison.net/static/2026/openai-pelicans-november-2026.html",
+            "https://static.simonwillison.net/static/2026/yonkers-gpt-6.2-sol-ultra/index.html",
+            "https://static.simonwillison.net/static/2026/yonkers-gpt-6.2-astra-ultra/index.html",
+            "https://tools.simonwillison.net/yonkers-rises",
+            "https://static.simonwillison.net/static/2026/yonkers-mech-standalone.html",
+            "https://static.simonwillison.net/static/2026/yonkers-astra-sol-20s-largest.mp4",
+            "https://gist.github.com/simonw/6b44c588a1321b60799dbbfd13db6d23",
+            "https://twitter.com/theo/status/2122760447103484410"
+          ]
+        },
         {
           "id": "aihot-selected:tww8adkmqsbjxg8u6m16vuzta",
           "name": "X：OpenRouter (@OpenRouter)",
@@ -465,6 +467,19 @@
           ]
         },
         {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "official",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "publishedAt": "2026-11-17T17:45:00.000Z",
+          "title": "Introducing GPT-6.2 Astra and Sol",
+          "authority": 100,
+          "sourcePriority": 100,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        },
+        {
           "id": "aihot-selected:otq9bl1a2a9hmm8wooxbc6frd",
           "name": "OpenAI：部署安全与系统卡（网页）",
           "type": "aggregator",
@@ -482,28 +497,1279 @@
         }
       ],
       "heat": {
-        "startedAt": "2026-11-17T18:10:00.000Z",
-        "endedAt": "2026-11-17T19:48:35.415Z",
+        "startedAt": "2026-11-17T22:38:52.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
         "current": 100,
         "peak": 100,
         "history": [
           {
-            "at": "2026-11-17T18:10:00.000Z",
-            "label": "11/18 02:10",
+            "at": "2026-11-17T22:38:52.000Z",
+            "label": "11/18 06:38",
             "value": 0,
             "reports": 0
           },
           {
-            "at": "2026-11-17T18:59:17.707Z",
-            "label": "11/18 02:59",
-            "value": 81,
+            "at": "2026-11-17T23:34:54.173Z",
+            "label": "11/18 07:34",
+            "value": 66,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-18T00:30:56.347Z",
+            "label": "11/18 08:30",
+            "value": 87,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-18T01:26:58.521Z",
+            "label": "11/18 09:26",
+            "value": 100,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 100,
+            "reports": 5
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "fa1bb856bdb01888",
+      "normalizedUrl": "https://mp.weixin.qq.com/s/0cEoTueGjSGtm0-glpYGcA",
+      "originalUrl": "https://mp.weixin.qq.com/s/0cEoTueGjSGtm0-glpYGcA",
+      "titleOriginal": "深度实测GPT-6.2 Astra：极致省钱但偏科严重，沟通可读性依旧拉胯",
+      "summaryOriginal": "OpenAI 发布 GPT-6.2 Astra 与 Sol，已同步上线 ChatGPT、Codex 和 API。",
+      "originalLanguage": "zh",
+      "author": "公众号：数字生命卡兹克",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/n125mhueen4ul4elntsa1kk1v",
+        "https://mp.weixin.qq.com/s/0cEoTueGjSGtm0-glpYGcA"
+      ],
+      "publishedAt": "2026-11-17T22:36:45.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-17T23:01:18.892Z",
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/n125mhueen4ul4elntsa1kk1v"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:n125mhueen4ul4elntsa1kk1v",
+          "name": "公众号：数字生命卡兹克",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s/0cEoTueGjSGtm0-glpYGcA",
+          "publishedAt": "2026-11-17T22:36:45.000Z",
+          "title": "深度实测GPT-6.2 Astra：极致省钱但偏科严重，沟通可读性依旧拉胯",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/n125mhueen4ul4elntsa1kk1v",
+            "https://mp.weixin.qq.com/s/0cEoTueGjSGtm0-glpYGcA"
+          ]
+        }
+      ],
+      "importance": 62,
+      "importanceReasonZh": "该文提供了对 OpenAI 新发布模型 GPT-6.2 Astra 与 Sol 的第一手实测观察，涉及成本与可读性等实际使用维度，对关注模型选型的用户有参考价值，但来源为个人公众号实测，缺乏官方基准数据支撑。",
+      "importanceReasonEn": "The article offers first-hand hands-on observations of OpenAI's newly released GPT-6.2 Astra and Sol, covering practical dimensions such as cost and readability, which is useful for users choosing models; however, it comes from a personal WeChat account test without official benchmark data.",
+      "scoringMode": "ai",
+      "titleZh": "深度实测GPT-6.2 Astra：极致省钱但偏科严重，沟通可读性依旧拉胯",
+      "titleEn": "Hands-on Test of GPT-6.2 Astra: Extremely Cost-Effective but Highly Uneven, Communication Readability Still Poor",
+      "summaryZh": "OpenAI 发布 GPT-6.2 Astra 与 Sol，已同步上线 ChatGPT、Codex 和 API。",
+      "summaryEn": "OpenAI releases GPT-6.2 Astra and Sol, now available across ChatGPT, Codex, and the API.",
+      "keywords": [
+        "GPT-6.2 Astra",
+        "Sol",
+        "OpenAI",
+        "ChatGPT",
+        "Codex",
+        "API",
+        "省钱",
+        "可读性"
+      ],
+      "topics": [
+        "GPT-6.2 Astra",
+        "OpenAI 新模型",
+        "模型实测",
+        "成本优化",
+        "API 更新"
+      ],
+      "models": [
+        "GPT-6.2 Astra",
+        "Sol"
+      ],
+      "detailZh": "OpenAI 发布了 GPT-6.2 Astra 与 Sol 两款模型，并已同步上线 ChatGPT、Codex 和 API 三个入口。该消息来自公众号“数字生命卡兹克”的实测文章，发布时间为 2026 年 11 月 17 日。\n\n文章标题概括了作者的核心实测结论：GPT-6.2 Astra 在成本控制上表现突出，被形容为“极致省钱”，但在能力分布上“偏科严重”，即在部分任务上表现不均衡。\n\n此外，作者指出该模型在沟通可读性方面“依旧拉胯”，说明这一短板在此前版本中可能已存在，而新版本并未明显改善。\n\n需要说明的是，输入材料仅包含标题与摘要，未提供具体测试方法、对比数据、价格数字或基准分数，因此无法核实“省钱”与“偏科”的具体程度。",
+      "keyPointsZh": [
+        "OpenAI 发布 GPT-6.2 Astra 与 Sol 两款模型。",
+        "新模型已同步上线 ChatGPT、Codex 和 API。",
+        "实测作者认为 Astra 成本极低，但能力分布不均衡。",
+        "作者指出其沟通可读性仍然较差，未见明显改善。"
+      ],
+      "impactZh": "该发布扩展了 OpenAI 的模型产品线，并通过 ChatGPT、Codex 与 API 三端同步上线，使用户和开发者可以立即选用。若实测中“极致省钱”的结论成立，可能影响开发者在成本敏感场景下的模型选型。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发者和团队而言，若 Astra 确实在成本上具备优势，可能适合用于成本敏感或大批量调用的场景；但其能力不均衡与可读性短板意味着在需要清晰表达或综合能力的任务上仍需谨慎评估或搭配其他模型。",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是：OpenAI 发布了 GPT-6.2 Astra 与 Sol，并已上线 ChatGPT、Codex 和 API。至于“极致省钱”和“偏科严重”，属于实测作者基于个人使用得出的主观评价，输入材料未给出具体价格、测试任务或对比基准，应视为待验证的实践观察而非官方结论。",
+      "limitationsZh": "输入材料仅有标题与摘要，缺少具体测试方法、任务类型、价格数据、基准分数与对比对象；文章来自个人公众号，属于非官方实测，结论可能受作者使用场景影响，无法据此判断模型的客观能力边界。",
+      "actionStepsZh": [
+        "在 ChatGPT、Codex 或 API 中实际试用 GPT-6.2 Astra，结合自身任务评估其能力分布。",
+        "针对成本敏感场景，对比 Astra 与现有模型的调用成本后再决定是否迁移。",
+        "对可读性要求高的输出场景，保留人工校对或搭配其他模型使用。"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:n125mhueen4ul4elntsa1kk1v",
+          "name": "公众号：数字生命卡兹克",
+          "type": "aggregator",
+          "url": "https://mp.weixin.qq.com/s/0cEoTueGjSGtm0-glpYGcA",
+          "publishedAt": "2026-11-17T22:36:45.000Z",
+          "title": "深度实测GPT-6.2 Astra：极致省钱但偏科严重，沟通可读性依旧拉胯",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/n125mhueen4ul4elntsa1kk1v",
+            "https://mp.weixin.qq.com/s/0cEoTueGjSGtm0-glpYGcA"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-17T22:36:45.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 59,
+        "peak": 59,
+        "history": [
+          {
+            "at": "2026-11-17T22:36:45.000Z",
+            "label": "11/18 06:36",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T23:33:18.923Z",
+            "label": "11/18 07:33",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:29:52.847Z",
+            "label": "11/18 08:29",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:26:26.771Z",
+            "label": "11/18 09:26",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "6c990ee64177b1f8",
+      "normalizedUrl": "https://x.com/Google/status/2122820914777845813",
+      "originalUrl": "https://x.com/Google/status/2122820914777845813",
+      "titleOriginal": "Gemini 4 Hydrogen 全面上线 Google Search",
+      "summaryOriginal": "Google 宣布 Gemini 4 Hydrogen 已在全球范围的 Google Search 中上线，称为 Search 迄今最大的一次模型升级。升级包括更好地理解用户意图、更智能的 query fan-out 与链接、更可视化自适应的回复，以及更强的多语言能力。",
+      "originalLanguage": "zh",
+      "author": "X：Google (@Google)",
+      "category": "products",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/vxcsjujkrvgpqxl56xkjgdfqf",
+        "https://x.com/Google/status/2122820914777845813"
+      ],
+      "publishedAt": "2026-11-17T22:35:20.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-17T23:02:32.999Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/vxcsjujkrvgpqxl56xkjgdfqf"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:vxcsjujkrvgpqxl56xkjgdfqf",
+          "name": "X：Google (@Google)",
+          "type": "aggregator",
+          "url": "https://x.com/Google/status/2122820914777845813",
+          "publishedAt": "2026-11-17T22:35:20.000Z",
+          "title": "Gemini 4 Hydrogen 全面上线 Google Search",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/vxcsjujkrvgpqxl56xkjgdfqf",
+            "https://x.com/Google/status/2122820914777845813"
+          ]
+        }
+      ],
+      "importance": 82,
+      "importanceReasonZh": "这是 Google 官方宣布的 Search 核心模型升级，且覆盖全球范围，直接影响海量搜索用户的使用体验，属于平台级产品变更。",
+      "importanceReasonEn": "This is an official Google announcement of a core Search model upgrade deployed worldwide, directly affecting a massive user base, making it a platform-level product change.",
+      "scoringMode": "ai",
+      "titleZh": "Gemini 4 Hydrogen 全面上线 Google Search",
+      "titleEn": "Gemini 4 Hydrogen Rolls Out Across Google Search",
+      "summaryZh": "Google 宣布 Gemini 4 Hydrogen 已在全球范围的 Google Search 中上线，称为 Search 迄今最大的一次模型升级。升级包括更好地理解用户意图、更智能的 query fan-out 与链接、更可视化自适应的回复，以及更强的多语言能力。",
+      "summaryEn": "Google announced that Gemini 4 Hydrogen is now live in Google Search worldwide, describing it as Search's largest model upgrade to date. The upgrade includes better intent understanding, smarter query fan-out and links, more visual and adaptive responses, and stronger multilingual capabilities.",
+      "keywords": [
+        "Gemini 4 Hydrogen",
+        "Google Search",
+        "query fan-out",
+        "multilingual",
+        "model upgrade"
+      ],
+      "topics": [
+        "Google Search",
+        "Gemini",
+        "AI search",
+        "multilingual AI"
+      ],
+      "models": [
+        "Gemini 4 Hydrogen"
+      ],
+      "detailZh": "Google 通过官方 X 账号宣布，Gemini 4 Hydrogen 已在全球范围的 Google Search 中上线。Google 将其描述为 Search 迄今规模最大的一次模型升级。\n\n根据公布的信息，此次升级包含几个方面：更好地理解用户意图；更智能的 query fan-out 与链接处理；更可视化、自适应的回复呈现；以及更强的多语言能力。\n\n目前公开信息仅为 Google 的官方发布内容，未披露模型参数、具体技术细节、分阶段上线时间表或各地区差异。因此这是一次产品层面的能力升级公告，而非技术论文或基准测试报告。",
+      "keyPointsZh": [
+        "Gemini 4 Hydrogen 已在全球 Google Search 上线",
+        "Google 称其为 Search 迄今最大的一次模型升级",
+        "升级涵盖意图理解、query fan-out 与链接、可视化自适应回复和多语言能力",
+        "信息来自 Google 官方 X 账号，未披露技术细节"
+      ],
+      "impactZh": "Search 是使用量极大的入口级产品，核心模型升级会改变用户获取信息和点击链接的方式，也影响依赖搜索流量的内容发布者与网站。",
+      "readerImpactZh": "普通用户在使用 Google Search 时可能获得更贴合意图的结果、更丰富的可视化回复，以及更好的非英语查询体验。",
+      "userImpactZh": "依赖搜索流量的网站和内容团队需要关注 query fan-out 与链接处理方式的变化，因为这会影响到内容被检索和呈现的方式。",
+      "howItWorksZh": "",
+      "interpretationZh": "已确认的事实是 Google 官方宣布该模型在全球 Search 上线，并列出四项能力方向。至于实际效果提升幅度、覆盖范围是否完全一致、对排名与流量的具体影响，目前均无公开数据，属于待观察部分。",
+      "limitationsZh": "仅有官方公告，缺少模型参数、技术细节、基准数据、分阶段上线时间表与地区差异说明；实际体验改善程度未经独立验证。",
+      "actionStepsZh": [
+        "关注 Google 后续发布的 Search 相关技术说明与更新日志",
+        "网站与内容团队观察升级后搜索流量与展现形式的变化",
+        "非英语内容创作者留意多语言能力提升带来的机会"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:vxcsjujkrvgpqxl56xkjgdfqf",
+          "name": "X：Google (@Google)",
+          "type": "aggregator",
+          "url": "https://x.com/Google/status/2122820914777845813",
+          "publishedAt": "2026-11-17T22:35:20.000Z",
+          "title": "Gemini 4 Hydrogen 全面上线 Google Search",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/vxcsjujkrvgpqxl56xkjgdfqf",
+            "https://x.com/Google/status/2122820914777845813"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-17T22:35:20.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 70,
+        "peak": 70,
+        "history": [
+          {
+            "at": "2026-11-17T22:35:20.000Z",
+            "label": "11/18 06:35",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T23:32:15.173Z",
+            "label": "11/18 07:32",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:29:10.347Z",
+            "label": "11/18 08:29",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:26:05.521Z",
+            "label": "11/18 09:26",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 70,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "a82ce3e8b8f303a4",
+      "normalizedUrl": "https://wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+      "originalUrl": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+      "titleOriginal": "Microsoft agent-framework 1.26.1/1.26.2 恶意版本被发布至 PyPI，窃取 Azure 与 CI 凭据",
+      "summaryOriginal": "Wiz 报告，PyPI 上的 agent-framework 出现恶意版本 1.26.1 和 1.26.2（上传于 2026-11-17，约 21:30 UTC 后已下架），植入 .pth 文件在 Python 启动时运行凭据窃取器，收集环境变量、凭据文件及 Azure 与 Azure DevOps 托管标识和 OIDC 令牌，并回传至 webhook.site。",
+      "originalLanguage": "zh",
+      "author": "Wiz：Research（安全研究）",
+      "category": "business",
+      "sourceType": "aggregator",
+      "authority": 77,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/ekt4wsp34savbuzq0vafnlhpw",
+        "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi"
+      ],
+      "publishedAt": "2026-11-17T22:03:37.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-17T23:29:27.058Z",
+      "contentType": "industry",
+      "evidenceLevel": "verified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/ekt4wsp34savbuzq0vafnlhpw"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:ekt4wsp34savbuzq0vafnlhpw",
+          "name": "Wiz：Research（安全研究）",
+          "type": "aggregator",
+          "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+          "publishedAt": "2026-11-17T22:03:37.000Z",
+          "title": "Microsoft agent-framework 1.26.1/1.26.2 恶意版本被发布至 PyPI，窃取 Azure 与 CI 凭据",
+          "authority": 77,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ekt4wsp34savbuzq0vafnlhpw",
+            "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi"
+          ]
+        }
+      ],
+      "importance": 78,
+      "importanceReasonZh": "这是针对微软官方 AI 框架包的供应链投毒事件，攻击面覆盖 Azure 凭据与 CI 令牌，影响使用该包的开发者和企业环境。",
+      "importanceReasonEn": "This is a supply-chain poisoning incident targeting a Microsoft official AI framework package, with an attack surface covering Azure credentials and CI tokens, affecting developers and enterprise environments using the package.",
+      "scoringMode": "ai",
+      "titleZh": "微软 agent-framework 恶意版本被发布至 PyPI，窃取 Azure 与 CI 凭据",
+      "titleEn": "Malicious agent-framework Versions Published to PyPI, Stealing Azure and CI Credentials",
+      "summaryZh": "Wiz 报告，PyPI 上的 agent-framework 出现恶意版本 1.26.1 和 1.26.2（上传于 2026-11-17，约 21:30 UTC 后已下架），植入 .pth 文件在 Python 启动时运行凭据窃取器，收集环境变量、凭据文件及 Azure 与 Azure DevOps 托管标识和 OIDC 令牌，并回传至 webhook.site。",
+      "summaryEn": "Wiz reports that malicious versions 1.26.1 and 1.26.2 of agent-framework appeared on PyPI (uploaded 2026-11-17, removed after about 21:30 UTC), planting a .pth file that runs a credential stealer at Python startup, collecting environment variables, credential files, and Azure and Azure DevOps managed identity and OIDC tokens, then exfiltrating them to webhook.site.",
+      "keywords": [
+        "agent-framework",
+        "PyPI",
+        "恶意包",
+        "凭据窃取",
+        ".pth",
+        "Azure",
+        "OIDC",
+        "webhook.site"
+      ],
+      "topics": [
+        "supply chain security",
+        "PyPI",
+        "credential theft",
+        "Azure",
+        "CI/CD"
+      ],
+      "models": [],
+      "detailZh": "Wiz 安全研究团队报告，PyPI 上出现了名为 agent-framework 的恶意版本 1.26.1 和 1.26.2。这两个版本于 2026-11-17 上传，并在约 21:30 UTC 之后被下架。agent-framework 是微软发布的 AI 代理框架包，正常版本由官方维护，而此次出现的版本被植入了恶意代码。\n\n恶意代码的核心是一个 .pth 文件。Python 在启动时会自动执行 site-packages 目录下 .pth 文件中指定的代码，因此攻击者无需用户显式导入该包，只要恶意版本被安装到环境中，凭据窃取器就会在 Python 进程启动时运行。\n\n窃取器收集的内容包括环境变量、凭据文件，以及 Azure 和 Azure DevOps 的托管标识与 OIDC 令牌。这些凭据一旦泄露，攻击者可能借此访问云资源、CI/CD 流水线和相关服务。收集到的数据被回传至 webhook.site。\n\n目前已知的事实是恶意版本已被下架，但尚不清楚这些版本是如何被上传到 PyPI 的，也不清楚是否有用户已经安装并运行了恶意版本。Wiz 的报告未披露受影响范围、下载量或是否已有实际利用的迹象。",
+      "keyPointsZh": [
+        "PyPI 上出现 agent-framework 恶意版本 1.26.1 和 1.26.2，上传于 2026-11-17，约 21:30 UTC 后下架。",
+        "恶意版本植入 .pth 文件，在 Python 启动时自动执行凭据窃取器，无需显式导入。",
+        "窃取目标包括环境变量、凭据文件、Azure 与 Azure DevOps 托管标识及 OIDC 令牌。",
+        "窃取数据被回传至 webhook.site。",
+        "恶意版本的上传途径和实际影响范围尚未披露。"
+      ],
+      "impactZh": "该事件直接威胁使用 agent-framework 的开发者与企业环境。Azure 托管标识和 OIDC 令牌一旦泄露，攻击者可能获得云资源访问权限，并可能横向进入 CI/CD 流水线。由于 .pth 文件在 Python 启动时自动执行，即使用户没有主动导入该包，只要安装了恶意版本就会触发窃取行为，扩大了潜在受影响面。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 agent-framework 的开发者应立即检查环境中是否安装了 1.26.1 或 1.26.2 版本，并轮换可能暴露的 Azure 凭据、托管标识和 OIDC 令牌；CI/CD 流水线中引用该包的环境需要重点排查。",
+      "howItWorksZh": "恶意版本在包中放置 .pth 文件。Python 启动时会处理 site-packages 下的 .pth 文件，并执行其中以 import 开头的行所指定的代码，因此窃取器会在 Python 进程启动时自动运行，不依赖用户导入 agent-framework。窃取器读取环境变量和凭据文件，获取 Azure 与 Azure DevOps 的托管标识和 OIDC 令牌，然后将收集到的数据发送至 webhook.site。",
+      "interpretationZh": "已确认的事实是：PyPI 上出现了 agent-framework 的 1.26.1 和 1.26.2 恶意版本，包含 .pth 持久化与凭据窃取逻辑，数据回传至 webhook.site，相关版本已下架。合理推断是：攻击者可能通过账号劫持或发布流程缺陷上传了这些版本；任何在暴露窗口内安装该版本的环境都应视为凭据可能已泄露。上传途径、下载量和实际利用情况目前均未得到证实。",
+      "limitationsZh": "Wiz 的报告未说明恶意版本是如何上传到 PyPI 的，也未披露下载量、受影响用户数量或是否已有实际利用迹象。恶意版本的下架时间约为 2026-11-17 21:30 UTC 之后，但具体下架时间与暴露窗口长度尚不明确。",
+      "actionStepsZh": [
+        "检查 Python 环境与依赖锁文件中是否安装了 agent-framework 1.26.1 或 1.26.2。",
+        "若曾安装上述版本，轮换环境变量、凭据文件、Azure 托管标识和 OIDC 令牌等相关凭据。",
+        "审查 CI/CD 流水线中对该包的引用，并检查是否有异常外连 webhook.site 的记录。"
+      ],
+      "detailCompleteness": "full",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:ekt4wsp34savbuzq0vafnlhpw",
+          "name": "Wiz：Research（安全研究）",
+          "type": "aggregator",
+          "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+          "publishedAt": "2026-11-17T22:03:37.000Z",
+          "title": "Microsoft agent-framework 1.26.1/1.26.2 恶意版本被发布至 PyPI，窃取 Azure 与 CI 凭据",
+          "authority": 77,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/ekt4wsp34savbuzq0vafnlhpw",
+            "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-17T22:03:37.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 68,
+        "peak": 68,
+        "history": [
+          {
+            "at": "2026-11-17T22:03:37.000Z",
+            "label": "11/18 06:03",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T22:55:29.739Z",
+            "label": "11/18 06:55",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T23:47:22.478Z",
+            "label": "11/18 07:47",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:39:15.217Z",
+            "label": "11/18 08:39",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:31:07.956Z",
+            "label": "11/18 09:31",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 68,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "e918fc955d52a71e",
+      "normalizedUrl": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains",
+      "originalUrl": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+      "titleOriginal": "OpenAI launches GPT-6.2 Astra and Sol with lower API prices and some benchmark gains",
+      "summaryOriginal": "OpenAI releases GPT-6.2 Astra and Sol, two new models that are more capable and cheaper than their predecessors. In the independent Artificial Analysis Intelligence Index, Astra ranks second behind Claude Fable 5.2, and it is the first released model to reach the High threshold for AI self-improvement on OpenAI's own scale. OpenAI itself classifies that as a risk. The article OpenAI launches GPT-6.2 Astra and Sol with lower API prices and some benchmark gains appeared first on The Decoder .",
+      "originalLanguage": "en",
+      "author": "Matthias Bastian",
+      "category": "models",
+      "sourceType": "media",
+      "authority": 84,
+      "sourcePriority": 82,
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/11/openai_vals_sol.png"
+      ],
+      "resourceLinks": [
+        "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+        "https://the-decoder.com"
+      ],
+      "publishedAt": "2026-11-17T20:30:50.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "official",
+      "evidenceLevel": "verified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+          "publishedAt": "2026-11-17T20:30:50.000Z",
+          "title": "OpenAI launches GPT-6.2 Astra and Sol with lower API prices and some benchmark gains",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/openai_vals_sol.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "importance": 78,
+      "importanceReasonZh": "这是 OpenAI 的一次重要模型发布，同时涉及能力提升、API 降价和 AI 自我改进风险评级，对开发者和行业竞争格局都有直接影响。",
+      "importanceReasonEn": "This is a significant OpenAI model release that combines capability gains, API price cuts and an AI self-improvement risk rating, with direct implications for developers and the competitive landscape.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI 发布 GPT-6.2 Astra 与 Sol，API 价格下调且部分基准提升",
+      "titleEn": "OpenAI launches GPT-6.2 Astra and Sol with lower API prices and some benchmark gains",
+      "summaryZh": "OpenAI 发布 GPT-6.2 Astra 和 Sol 两款新模型，能力更强且价格低于前代。在独立的 Artificial Analysis Intelligence Index 中，Astra 排名第二，仅次于 Claude Fable 5.2；它也是首个在 OpenAI 自有的 AI 自我改进量表上达到“High”阈值的已发布模型，OpenAI 自身将这一水平归类为风险。",
+      "summaryEn": "OpenAI releases GPT-6.2 Astra and Sol, two new models that are more capable and cheaper than their predecessors. In the independent Artificial Analysis Intelligence Index, Astra ranks second behind Claude Fable 5.2, and it is the first released model to reach the High threshold for AI self-improvement on OpenAI's own scale. OpenAI itself classifies that as a risk.",
+      "keywords": [
+        "OpenAI",
+        "GPT-6.2",
+        "Astra",
+        "Sol",
+        "API 降价",
+        "Artificial Analysis",
+        "AI 自我改进"
+      ],
+      "topics": [
+        "大模型发布",
+        "API 定价",
+        "模型评测",
+        "AI 安全"
+      ],
+      "models": [
+        "GPT-6.2 Astra",
+        "GPT-6.2 Sol",
+        "Claude Fable 5.2"
+      ],
+      "detailZh": "OpenAI 发布了 GPT-6.2 系列的两款新模型 Astra 和 Sol。据 The Decoder 报道，这两款模型相比前代能力更强，同时 API 价格更低，延续了近期大模型厂商在提升能力的同时压低调用成本的趋势。\n\n在独立的 Artificial Analysis Intelligence Index 评测中，Astra 排名第二，仅次于 Anthropic 的 Claude Fable 5.2。该指数是业界常用的第三方模型能力对比参考，说明 Astra 处于当前第一梯队，但并非榜首。\n\n更受关注的是安全层面的信息：Astra 是首个在 OpenAI 自有的 AI 自我改进（self-improvement）量表上达到“High”阈值的已发布模型。OpenAI 自身将该等级归类为风险，这意味着公司在发布时已明确承认该模型具备较高程度的自我改进相关能力。\n\n目前公开信息主要集中在排名、价格方向和风险评级上，具体的基准分数、各档 API 定价、上下文长度、可用渠道等细节尚未在现有材料中给出。",
+      "keyPointsZh": [
+        "OpenAI 发布 GPT-6.2 Astra 与 Sol 两款新模型，能力更强且 API 价格低于前代。",
+        "在 Artificial Analysis Intelligence Index 中 Astra 排名第二，仅次于 Claude Fable 5.2。",
+        "Astra 是首个在 OpenAI 自有 AI 自我改进量表上达到“High”阈值的已发布模型。",
+        "OpenAI 自身将该“High”等级归类为风险。"
+      ],
+      "impactZh": "该发布同时推进了能力、成本和风险三条线：价格下调会加剧 API 市场的价格竞争，Astra 的高排名会改变第三方榜单的竞争格局，而“High”级自我改进评级则把前沿模型的安全治理问题再次推到台前。",
+      "readerImpactZh": "",
+      "userImpactZh": "开发者和团队可以用更低价格获得更强模型，但需注意 Astra 被 OpenAI 标注为高等级自我改进风险，在涉及自主迭代、自动化决策等场景时应评估是否需要额外的人工监督与限制措施。",
+      "howItWorksZh": "",
+      "interpretationZh": "可确认的事实是：两款模型已发布、价格方向为下降、Astra 在第三方指数中排第二、并达到 OpenAI 自我改进量表的 High 阈值且被公司列为风险。至于具体便宜多少、强多少、High 阈值的判定标准是什么，现有材料未说明，属于待补充信息。",
+      "limitationsZh": "现有材料未提供具体基准分数、各模型 API 定价数字、上下文窗口、开放地区与渠道，也未说明“High”阈值的具体定义和评测方法；Artificial Analysis 排名为第三方结果，可能随评测更新而变化。",
+      "actionStepsZh": [
+        "查阅 OpenAI 官方文档确认 Astra 与 Sol 的具体定价、上下文长度和可用渠道。",
+        "在 Artificial Analysis 上核对 Astra 的细分基准表现，判断是否匹配自身任务需求。",
+        "对涉及自主迭代或高风险自动化的用例，评估是否需要额外人工审核环节。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Astra 在该指数中位列第二，落后于 Claude Fable 5.2 一个名次。",
+        "data": [
+          {
+            "label": "Astra 在 Artificial Analysis 排名",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "Claude Fable 5.2 排名",
+            "value": 1,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "the-decoder",
+          "name": "The Decoder AI",
+          "type": "media",
+          "url": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+          "publishedAt": "2026-11-17T20:30:50.000Z",
+          "title": "OpenAI launches GPT-6.2 Astra and Sol with lower API prices and some benchmark gains",
+          "authority": 84,
+          "sourcePriority": 82,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://the-decoder.com/wp-content/uploads/2026/11/openai_vals_sol.png"
+          ],
+          "resourceLinks": [
+            "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+            "https://the-decoder.com"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-17T20:30:50.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 68,
+        "peak": 68,
+        "history": [
+          {
+            "at": "2026-11-17T20:30:50.000Z",
+            "label": "11/18 04:30",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T21:29:31.782Z",
+            "label": "11/18 05:29",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T22:28:13.565Z",
+            "label": "11/18 06:28",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T23:26:55.347Z",
+            "label": "11/18 07:26",
+            "value": 41,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:25:37.130Z",
+            "label": "11/18 08:25",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:24:18.912Z",
+            "label": "11/18 09:24",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 68,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "dec03632416072e3",
+      "normalizedUrl": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+      "originalUrl": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+      "titleOriginal": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡",
+      "summaryOriginal": "OpenRouter 宣布 OpenAI 的 GPT-6.2 Astra 和 GPT-6.2 Sol 上线。Astra 面向最难的项目，评测成绩创新高且每任务成本不到 GPT-6 Astra 的三分之一，价格为 $8/M 输入、$40/M 输出；Sol 面向日常智能体工作，价格为 $2/M 输入、$10/M 输出，两者均有 Pro 版本。",
+      "originalLanguage": "zh",
+      "author": "OpenAI：部署安全与系统卡（网页）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/e4x7s78pcoe8yhieqmns68q0g",
+        "https://x.com/openclaw/status/2122778563829174468",
+        "https://aihot.news/items/tww8adkmqsbjxg8u6m16vuzta",
+        "https://x.com/OpenRouter/status/2122754139533066653",
+        "https://aihot.news/items/otq9bl1a2a9hmm8wooxbc6frd",
+        "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
+      ],
+      "publishedAt": "2026-11-17T19:47:03.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-17T19:56:43.775Z",
+      "contentType": "official",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/e4x7s78pcoe8yhieqmns68q0g"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:e4x7s78pcoe8yhieqmns68q0g",
+          "name": "X：OpenClaw (@openclaw)",
+          "type": "aggregator",
+          "url": "https://x.com/openclaw/status/2122778563829174468",
+          "publishedAt": "2026-11-17T19:47:03.000Z",
+          "title": "OpenClaw 上线 OpenAI GPT-6.2 Astra 和 Sol 模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/e4x7s78pcoe8yhieqmns68q0g",
+            "https://x.com/openclaw/status/2122778563829174468"
+          ]
+        },
+        {
+          "id": "aihot-selected:tww8adkmqsbjxg8u6m16vuzta",
+          "name": "X：OpenRouter (@OpenRouter)",
+          "type": "aggregator",
+          "url": "https://x.com/OpenRouter/status/2122754139533066653",
+          "publishedAt": "2026-11-17T18:10:00.000Z",
+          "title": "OpenAI GPT-6.2 Astra 和 GPT-6.2 Sol 上线 OpenRouter",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/tww8adkmqsbjxg8u6m16vuzta",
+            "https://x.com/OpenRouter/status/2122754139533066653"
+          ]
+        },
+        {
+          "id": "aihot-selected:otq9bl1a2a9hmm8wooxbc6frd",
+          "name": "OpenAI：部署安全与系统卡（网页）",
+          "type": "aggregator",
+          "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+          "publishedAt": "2026-11-17T07:00:00.000Z",
+          "title": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/otq9bl1a2a9hmm8wooxbc6frd",
+            "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是新一代旗舰与日常智能体模型的发布，涉及评测成绩、每任务成本和明确价格，对模型选型与成本规划有直接影响。",
+      "importanceReasonEn": "This is a launch of a new flagship and an everyday agent model, with evaluation results, per-task cost and explicit pricing, directly affecting model selection and cost planning.",
+      "scoringMode": "ai",
+      "titleZh": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡",
+      "titleEn": "OpenAI Releases GPT-6.2 Astra and GPT-6.2 Sol System Cards",
+      "summaryZh": "OpenRouter 宣布 OpenAI 的 GPT-6.2 Astra 和 GPT-6.2 Sol 上线。Astra 面向最难的项目，评测成绩创新高且每任务成本不到 GPT-6 Astra 的三分之一，价格为 $8/M 输入、$40/M 输出；Sol 面向日常智能体工作，价格为 $2/M 输入、$10/M 输出，两者均有 Pro 版本。",
+      "summaryEn": "OpenRouter announced that OpenAI's GPT-6.2 Astra and GPT-6.2 Sol are now available. Astra targets the hardest projects, sets new highs on evaluations, and costs less than one-third per task compared with GPT-6 Astra, priced at $8/M input and $40/M output; Sol targets everyday agent work, priced at $2/M input and $10/M output. Both have Pro versions.",
+      "keywords": [
+        "OpenAI",
+        "GPT-6.2",
+        "Astra",
+        "Sol",
+        "OpenRouter",
+        "系统卡",
+        "定价"
+      ],
+      "topics": [
+        "OpenAI",
+        "GPT-6.2 Astra",
+        "GPT-6.2 Sol",
+        "模型定价",
+        "智能体"
+      ],
+      "models": [
+        "GPT-6.2 Astra",
+        "GPT-6.2 Sol",
+        "GPT-6 Astra"
+      ],
+      "detailZh": "据 X 平台账号 OpenClaw（@openclaw）发布的信息，OpenRouter 宣布 OpenAI 的 GPT-6.2 Astra 和 GPT-6.2 Sol 已上线，并提到 OpenAI 同步发布了这两款模型的系统卡。\n\nGPT-6.2 Astra 定位为面向最难项目的模型，评测成绩创新高，且每任务成本不到 GPT-6 Astra 的三分之一。其定价为每百万输入 token 8 美元、每百万输出 token 40 美元。\n\nGPT-6.2 Sol 定位为面向日常智能体工作的模型，定价为每百万输入 token 2 美元、每百万输出 token 10 美元。两款模型均提供 Pro 版本。\n\n目前公开信息仅来自这一条社交平台消息，系统卡的具体内容、评测项目名称与分数、上下文长度、可用渠道等细节均未在来源中给出。",
+      "keyPointsZh": [
+        "OpenRouter 宣布 GPT-6.2 Astra 与 GPT-6.2 Sol 上线，OpenAI 同步发布系统卡。",
+        "Astra 面向最难项目，评测成绩创新高，每任务成本不到 GPT-6 Astra 的三分之一。",
+        "Astra 定价 $8/M 输入、$40/M 输出；Sol 定价 $2/M 输入、$10/M 输出。",
+        "Sol 面向日常智能体工作，两款模型均有 Pro 版本。"
+      ],
+      "impactZh": "新模型同时覆盖高难度项目与日常智能体两类场景，并给出明确价格与成本对比，可能影响开发者在旗舰模型与低成本模型之间的选型与预算安排。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 OpenRouter 的开发者可以按任务难度在 Astra 与 Sol 之间分配调用：高难度任务用 Astra，日常智能体任务用 Sol 以控制成本；具体能力与限制需查阅系统卡确认。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：OpenRouter 宣布两款模型上线，并给出定位、价格和 Astra 相对 GPT-6 Astra 的成本对比。可以合理推断，OpenAI 试图用 Astra 覆盖高难度任务、用 Sol 覆盖高频智能体调用，形成高低搭配。但评测成绩的具体数值、系统卡内容以及“每任务成本不到三分之一”的测算方式，来源均未说明。",
+      "limitationsZh": "信息仅来自一条社交平台消息，未见 OpenAI 官方公告或系统卡原文；评测项目、分数、上下文长度、可用渠道、Pro 版本差异均未披露；“每任务成本不到三分之一”的测算口径不明。",
+      "actionStepsZh": [
+        "查阅 OpenAI 官方系统卡，确认 Astra 与 Sol 的评测项目与具体分数。",
+        "根据任务难度在 Astra 与 Sol 之间分配调用，控制日常智能体任务的成本。",
+        "在正式接入前，用自身业务样本对比两款模型与 GPT-6 Astra 的实际效果和单任务成本。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "Astra 的输入与输出价格均为 Sol 的 4 倍，对应其面向最难项目的定位。",
+        "data": [
+          {
+            "label": "Astra 输入 ($/M)",
+            "value": 8,
+            "display": ""
+          },
+          {
+            "label": "Astra 输出 ($/M)",
+            "value": 40,
+            "display": ""
+          },
+          {
+            "label": "Sol 输入 ($/M)",
+            "value": 2,
+            "display": ""
+          },
+          {
+            "label": "Sol 输出 ($/M)",
+            "value": 10,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 3,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:e4x7s78pcoe8yhieqmns68q0g",
+          "name": "X：OpenClaw (@openclaw)",
+          "type": "aggregator",
+          "url": "https://x.com/openclaw/status/2122778563829174468",
+          "publishedAt": "2026-11-17T19:47:03.000Z",
+          "title": "OpenClaw 上线 OpenAI GPT-6.2 Astra 和 Sol 模型",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/e4x7s78pcoe8yhieqmns68q0g",
+            "https://x.com/openclaw/status/2122778563829174468"
+          ]
+        },
+        {
+          "id": "aihot-selected:tww8adkmqsbjxg8u6m16vuzta",
+          "name": "X：OpenRouter (@OpenRouter)",
+          "type": "aggregator",
+          "url": "https://x.com/OpenRouter/status/2122754139533066653",
+          "publishedAt": "2026-11-17T18:10:00.000Z",
+          "title": "OpenAI GPT-6.2 Astra 和 GPT-6.2 Sol 上线 OpenRouter",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/tww8adkmqsbjxg8u6m16vuzta",
+            "https://x.com/OpenRouter/status/2122754139533066653"
+          ]
+        },
+        {
+          "id": "aihot-selected:otq9bl1a2a9hmm8wooxbc6frd",
+          "name": "OpenAI：部署安全与系统卡（网页）",
+          "type": "aggregator",
+          "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+          "publishedAt": "2026-11-17T07:00:00.000Z",
+          "title": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/otq9bl1a2a9hmm8wooxbc6frd",
+            "https://deploymentsafety.openai.com/gpt-6-2-astra-sol"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-17T19:47:03.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 100,
+        "peak": 100,
+        "history": [
+          {
+            "at": "2026-11-17T19:47:03.000Z",
+            "label": "11/18 03:47",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T20:43:36.956Z",
+            "label": "11/18 04:43",
+            "value": 52,
             "reports": 3
           },
           {
-            "at": "2026-11-17T19:48:35.415Z",
-            "label": "11/18 03:48",
+            "at": "2026-11-17T21:40:10.912Z",
+            "label": "11/18 05:40",
+            "value": 63,
+            "reports": 3
+          },
+          {
+            "at": "2026-11-17T22:36:44.869Z",
+            "label": "11/18 06:36",
+            "value": 73,
+            "reports": 3
+          },
+          {
+            "at": "2026-11-17T23:33:18.825Z",
+            "label": "11/18 07:33",
+            "value": 84,
+            "reports": 3
+          },
+          {
+            "at": "2026-11-18T00:29:52.782Z",
+            "label": "11/18 08:29",
+            "value": 94,
+            "reports": 3
+          },
+          {
+            "at": "2026-11-18T01:26:26.738Z",
+            "label": "11/18 09:26",
             "value": 100,
             "reports": 3
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 100,
+            "reports": 3
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "2fb55c3571a040c5",
+      "normalizedUrl": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work",
+      "originalUrl": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
+      "titleOriginal": "Model ML raises $250M to automate investment banking grunt work",
+      "summaryOriginal": "The startup says its agents understand the full context of deals that bankers and consultants are working on and can automatically update financial models and presentations when new developments affect their analysis.",
+      "originalLanguage": "en",
+      "author": "Marina Temkin",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-17T19:32:11.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
+          "publishedAt": "2026-11-17T19:32:11.000Z",
+          "title": "Model ML raises $250M to automate investment banking grunt work",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该消息显示资本正大举押注面向投行与咨询的AI智能体，但报道仅基于公司自述，缺少产品细节与客户验证。",
+      "importanceReasonEn": "The news shows heavy capital backing for AI agents aimed at investment banking and consulting, but it rests on company claims without product details or customer validation.",
+      "scoringMode": "ai",
+      "titleZh": "Model ML融资2.5亿美元，用AI自动化投行基础工作",
+      "titleEn": "Model ML raises $250M to automate investment banking grunt work",
+      "summaryZh": "这家初创公司表示，其智能体能够理解银行家和顾问正在处理的交易的完整背景，并能在新进展影响分析时自动更新财务模型和演示文稿。",
+      "summaryEn": "The startup says its agents understand the full context of deals that bankers and consultants are working on and can automatically update financial models and presentations when new developments affect their analysis.",
+      "keywords": [
+        "Model ML",
+        "investment banking",
+        "AI agents",
+        "financial models",
+        "funding"
+      ],
+      "topics": [
+        "investment banking",
+        "AI agents",
+        "enterprise automation",
+        "funding"
+      ],
+      "models": [],
+      "detailZh": "据TechCrunch AI报道，初创公司Model ML宣布完成2.5亿美元融资，目标是自动化投资银行和咨询行业中的基础性工作。公司称其智能体能够理解银行家和顾问正在处理的交易的完整背景，而不仅仅是执行孤立的单点任务。\n\n按照公司的说法，当出现影响分析的新进展时，这些智能体可以自动更新财务模型和演示文稿。这意味着产品定位在投行交易流程中反复出现的建模与材料制作环节，而非仅提供通用问答或文本生成。\n\n目前公开信息仅来自公司自身的描述，报道未披露投资方、估值、客户名单、具体产品界面或性能数据，也没有第三方对自动化效果的验证。因此，该消息的核心事实是融资规模与产品定位，实际能力仍待观察。",
+      "keyPointsZh": [
+        "Model ML宣布完成2.5亿美元融资，用于自动化投行与咨询的基础工作。",
+        "公司称其智能体理解交易的完整背景，而非只处理孤立任务。",
+        "智能体可在新进展影响分析时自动更新财务模型和演示文稿。",
+        "报道未披露投资方、估值、客户或性能验证信息。"
+      ],
+      "impactZh": "若产品能力属实，这类智能体可能改变投行初级分析师和咨询顾问的工作结构，把大量建模与做材料的重复劳动交给AI；同时，大额融资也表明资本看好垂直行业智能体这一方向。",
+      "readerImpactZh": "",
+      "userImpactZh": "对金融与咨询从业者而言，值得关注这类工具能否真正理解交易上下文并保持模型一致性；在缺乏独立验证前，不宜将其视为可直接替代人工建模的方案。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：公司获得2.5亿美元融资，并宣称其智能体可理解交易全貌、自动更新财务模型与演示文稿。合理推断是，产品面向投行交易执行中的建模和材料制作环节；但其准确率、集成方式与实际节省的时间均未公开，无法判断成熟度。",
+      "limitationsZh": "信息几乎全部来自公司自述，缺少投资方、估值、客户案例、产品演示和性能数据；自动更新财务模型的准确性与可靠性未经第三方验证。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
+          "publishedAt": "2026-11-17T19:32:11.000Z",
+          "title": "Model ML raises $250M to automate investment banking grunt work",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-17T19:32:11.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-17T19:32:11.000Z",
+            "label": "11/18 03:32",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T20:30:52.385Z",
+            "label": "11/18 04:30",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T21:29:33.770Z",
+            "label": "11/18 05:29",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T22:28:15.155Z",
+            "label": "11/18 06:28",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T23:26:56.540Z",
+            "label": "11/18 07:26",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:25:37.925Z",
+            "label": "11/18 08:25",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:24:19.310Z",
+            "label": "11/18 09:24",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9d1dabbd0ad9fdc7",
+      "normalizedUrl": "https://microsoft.ai/news/introducing-mai-realtime-1",
+      "originalUrl": "https://microsoft.ai/news/introducing-mai-realtime-1/",
+      "titleOriginal": "Microsoft AI 发布首个语音到语音模型 MAI Realtime 1，定价 $0.01 每分钟音频",
+      "summaryOriginal": "Microsoft AI 发布首个语音到语音模型 MAI Realtime 1，起价 $0.01 每音频分钟，称在 Big Bench Audio 和 Tau-Voice 公开基准及微软产品评估中于质量、速度和价格上超过 GPT Realtime 2.1。",
+      "originalLanguage": "zh",
+      "author": "Microsoft AI：官方博客（RSS）",
+      "category": "models",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/eewx1bbnzfmbj6r40v7b6s6nb",
+        "https://microsoft.ai/news/introducing-mai-realtime-1/"
+      ],
+      "publishedAt": "2026-11-17T18:16:17.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-17T19:05:33.570Z",
+      "contentType": "official",
+      "evidenceLevel": "primary",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/eewx1bbnzfmbj6r40v7b6s6nb"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:eewx1bbnzfmbj6r40v7b6s6nb",
+          "name": "Microsoft AI：官方博客（RSS）",
+          "type": "aggregator",
+          "url": "https://microsoft.ai/news/introducing-mai-realtime-1/",
+          "publishedAt": "2026-11-17T18:16:17.000Z",
+          "title": "Microsoft AI 发布首个语音到语音模型 MAI Realtime 1，定价 $0.01 每分钟音频",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/eewx1bbnzfmbj6r40v7b6s6nb",
+            "https://microsoft.ai/news/introducing-mai-realtime-1/"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是微软 AI 推出的首个语音到语音模型，并以极低定价和公开基准对比直接进入实时语音模型竞争，对开发者和语音应用成本结构有实际影响。",
+      "importanceReasonEn": "This is Microsoft AI's first speech-to-speech model, entering the realtime voice model competition with very low pricing and public benchmark comparisons, with practical implications for developers and voice application cost structures.",
+      "scoringMode": "ai",
+      "titleZh": "微软 AI 发布首个语音到语音模型 MAI Realtime 1，定价每分钟音频 0.01 美元",
+      "titleEn": "Microsoft AI Releases First Speech-to-Speech Model MAI Realtime 1, Priced at $0.01 per Audio Minute",
+      "summaryZh": "微软 AI 发布首个语音到语音模型 MAI Realtime 1，起价每音频分钟 0.01 美元，并称其在 Big Bench Audio、Tau-Voice 公开基准及微软产品评估中，于质量、速度和价格上超过 GPT Realtime 2.1。",
+      "summaryEn": "Microsoft AI released its first speech-to-speech model, MAI Realtime 1, starting at $0.01 per audio minute, claiming it surpasses GPT Realtime 2.1 in quality, speed and price on the public Big Bench Audio and Tau-Voice benchmarks as well as in Microsoft product evaluations.",
+      "keywords": [
+        "MAI Realtime 1",
+        "Microsoft AI",
+        "speech-to-speech",
+        "Big Bench Audio",
+        "Tau-Voice",
+        "GPT Realtime 2.1",
+        "audio pricing"
+      ],
+      "topics": [
+        "speech-to-speech",
+        "realtime voice",
+        "model pricing",
+        "benchmarks"
+      ],
+      "models": [
+        "MAI Realtime 1",
+        "GPT Realtime 2.1"
+      ],
+      "detailZh": "微软 AI 通过官方博客宣布发布其首个语音到语音模型 MAI Realtime 1。该模型直接处理语音输入并输出语音，属于实时语音交互类模型。\n\n定价方面，官方给出的起价为每音频分钟 0.01 美元。\n\n性能方面，微软 AI 称 MAI Realtime 1 在 Big Bench Audio 和 Tau-Voice 两个公开基准，以及微软自身的产品评估中，在质量、速度和价格三个维度上均超过 GPT Realtime 2.1。\n\n目前公开信息集中在发布、定价和基准对比层面，模型的具体架构、延迟数值、支持语言和接入方式等细节尚未在输入材料中披露。",
+      "keyPointsZh": [
+        "微软 AI 发布首个语音到语音模型 MAI Realtime 1。",
+        "起价为每音频分钟 0.01 美元。",
+        "官方称其在 Big Bench Audio、Tau-Voice 及微软产品评估中于质量、速度和价格上超过 GPT Realtime 2.1。",
+        "该消息来自微软 AI 官方博客。"
+      ],
+      "impactZh": "实时语音模型市场新增一个低价竞争者，微软以官方基准对比直接对标 GPT Realtime 2.1，可能推动语音交互类应用的成本下降和供应商选择变化。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发实时语音应用的团队而言，每音频分钟 0.01 美元的起价提供了一个新的低成本选项，官方基准对比可作为选型参考，但实际延迟、语言支持和稳定性仍需自行验证。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：微软 AI 发布了 MAI Realtime 1，给出每音频分钟 0.01 美元的起价，并声称在两项公开基准和微软产品评估中于质量、速度和价格上优于 GPT Realtime 2.1。需要区分的是，这些性能结论来自微软自身的表述，输入材料未提供具体分数、延迟数据或第三方复现结果。",
+      "limitationsZh": "输入材料未披露模型架构、具体基准分数、延迟数值、支持语言、接入渠道和可用地区；性能超越 GPT Realtime 2.1 的说法来自微软官方，尚无独立验证。",
+      "actionStepsZh": [
+        "关注微软 AI 官方渠道，获取 MAI Realtime 1 的接入方式和可用地区信息。",
+        "在选型时自行用自有语音场景测试其质量与延迟，而非仅依赖官方基准结论。",
+        "按每音频分钟 0.01 美元的起价估算语音应用的调用成本。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:eewx1bbnzfmbj6r40v7b6s6nb",
+          "name": "Microsoft AI：官方博客（RSS）",
+          "type": "aggregator",
+          "url": "https://microsoft.ai/news/introducing-mai-realtime-1/",
+          "publishedAt": "2026-11-17T18:16:17.000Z",
+          "title": "Microsoft AI 发布首个语音到语音模型 MAI Realtime 1，定价 $0.01 每分钟音频",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/eewx1bbnzfmbj6r40v7b6s6nb",
+            "https://microsoft.ai/news/introducing-mai-realtime-1/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-17T18:16:17.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-17T18:16:17.000Z",
+            "label": "11/18 02:16",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T19:10:21.855Z",
+            "label": "11/18 03:10",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T20:04:26.710Z",
+            "label": "11/18 04:04",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T20:58:31.565Z",
+            "label": "11/18 04:58",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T21:52:36.420Z",
+            "label": "11/18 05:52",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T22:46:41.275Z",
+            "label": "11/18 06:46",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T23:40:46.130Z",
+            "label": "11/18 07:40",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:34:50.985Z",
+            "label": "11/18 08:34",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:28:55.840Z",
+            "label": "11/18 09:28",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 65,
+            "reports": 1
           }
         ],
         "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
@@ -600,7 +1866,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-17T18:10:00.000Z",
-        "endedAt": "2026-11-17T19:48:35.415Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -611,14 +1877,56 @@
             "reports": 0
           },
           {
-            "at": "2026-11-17T18:59:17.707Z",
-            "label": "11/18 02:59",
-            "value": 32,
+            "at": "2026-11-17T19:04:46.743Z",
+            "label": "11/18 03:04",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-17T19:48:35.415Z",
-            "label": "11/18 03:48",
+            "at": "2026-11-17T19:59:33.487Z",
+            "label": "11/18 03:59",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T20:54:20.231Z",
+            "label": "11/18 04:54",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T21:49:06.975Z",
+            "label": "11/18 05:49",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T22:43:53.719Z",
+            "label": "11/18 06:43",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T23:38:40.463Z",
+            "label": "11/18 07:38",
+            "value": 38,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:33:27.207Z",
+            "label": "11/18 08:33",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:28:13.951Z",
+            "label": "11/18 09:28",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
             "value": 50,
             "reports": 1
           }
@@ -884,7 +2192,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-17T17:45:00.000Z",
-        "endedAt": "2026-11-17T19:48:35.415Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -895,20 +2203,56 @@
             "reports": 0
           },
           {
-            "at": "2026-11-17T18:26:11.805Z",
-            "label": "11/18 02:26",
+            "at": "2026-11-17T18:42:33.410Z",
+            "label": "11/18 02:42",
+            "value": 55,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-17T19:40:06.821Z",
+            "label": "11/18 03:40",
+            "value": 64,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-17T20:37:40.231Z",
+            "label": "11/18 04:37",
             "value": 74,
             "reports": 5
           },
           {
-            "at": "2026-11-17T19:07:23.610Z",
-            "label": "11/18 03:07",
+            "at": "2026-11-17T21:35:13.642Z",
+            "label": "11/18 05:35",
+            "value": 84,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-17T22:32:47.052Z",
+            "label": "11/18 06:32",
+            "value": 93,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-17T23:30:20.463Z",
+            "label": "11/18 07:30",
             "value": 100,
             "reports": 5
           },
           {
-            "at": "2026-11-17T19:48:35.415Z",
-            "label": "11/18 03:48",
+            "at": "2026-11-18T00:27:53.873Z",
+            "label": "11/18 08:27",
+            "value": 100,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-18T01:25:27.284Z",
+            "label": "11/18 09:25",
+            "value": 100,
+            "reports": 5
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
             "value": 100,
             "reports": 5
           }
@@ -1025,7 +2369,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-17T17:00:00.000Z",
-        "endedAt": "2026-11-17T19:48:35.415Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -1036,20 +2380,288 @@
             "reports": 0
           },
           {
-            "at": "2026-11-17T17:56:11.805Z",
+            "at": "2026-11-17T17:56:18.069Z",
             "label": "11/18 01:56",
-            "value": 31,
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-17T18:52:23.610Z",
+            "at": "2026-11-17T18:52:36.139Z",
             "label": "11/18 02:52",
-            "value": 48,
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-11-17T19:48:35.415Z",
+            "at": "2026-11-17T19:48:54.208Z",
             "label": "11/18 03:48",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T20:45:12.278Z",
+            "label": "11/18 04:45",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T21:41:30.347Z",
+            "label": "11/18 05:41",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T22:37:48.417Z",
+            "label": "11/18 06:37",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T23:34:06.486Z",
+            "label": "11/18 07:34",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:30:24.556Z",
+            "label": "11/18 08:30",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:26:42.625Z",
+            "label": "11/18 09:26",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "6f0fb0223e38d4b7",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/17/datasette-lite",
+      "originalUrl": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+      "titleOriginal": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+      "summaryOriginal": "Datasette Lite is my port of the Datasette Python application to run directly in the browser using WebAssembly and Pyodide . I've released a complete rewrite of Datasette Lite using service workers, and it's now almost indistinguishable from the real server-side application. You can now do all of the following, using a carefully crafted URL to lite.datasette.io : Load client-side Datasette to browse any SQLite database, JSON file, CSV file or SQL script Select a released version of Datasette to load from PyPI Load a specific commit, tag, or branch name from the Datasette GitHub repository Pick from over 100 versions of SQLite to use with Datasette Install additional Datasette plugins from PyPI or URLs to wheel files, including JavaScript visualization tools The ability to load specific Datasette references, plugins, and SQLite versions makes this a fantastic tool for linking to demos of work-in-progress features or bug reproductions, without needing to spin up a full web server to serve that demo. As an example, consider the following URL: https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba9",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "tips",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/cors-allow/2026/datasette-maplibre.webp",
+        "https://static.simonwillison.net/static/2026/datasette-lite-diag.webp",
+        "https://static.simonwillison.net/static/2026/compare-sqlite.webp"
+      ],
+      "resourceLinks": [
+        "https://lite.datasette.io/",
+        "https://datasette.io/",
+        "https://pyodide.org/",
+        "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/demo/capitals_and_countries%23map=0/4.2/180&color=continent",
+        "https://github.com/datasette/datasette-maplibre",
+        "https://.../demo.db",
+        "https://.../metadata.yml",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS",
+        "https://gist.github.com/",
+        "https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml",
+        "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/",
+        "https://simonwillison.net/2025/Feb/13/url-addressable-python/"
+      ],
+      "publishedAt": "2026-11-17T16:48:33.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "practical",
+      "evidenceLevel": "practitioner",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+          "publishedAt": "2026-11-17T16:48:33.000Z",
+          "title": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/cors-allow/2026/datasette-maplibre.webp",
+            "https://static.simonwillison.net/static/2026/datasette-lite-diag.webp",
+            "https://static.simonwillison.net/static/2026/compare-sqlite.webp"
+          ],
+          "resourceLinks": [
+            "https://lite.datasette.io/",
+            "https://datasette.io/",
+            "https://pyodide.org/",
+            "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/demo/capitals_and_countries%23map=0/4.2/180&color=continent",
+            "https://github.com/datasette/datasette-maplibre",
+            "https://.../demo.db",
+            "https://.../metadata.yml",
+            "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS",
+            "https://gist.github.com/",
+            "https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml",
+            "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/",
+            "https://simonwillison.net/2025/Feb/13/url-addressable-python/"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "这是将完整服务端 Python 应用迁移到浏览器运行的实用案例，展示了 Pyodide 与 Service Worker 结合的能力，并为分享演示和复现 bug 提供了无需服务器的便捷方式。",
+      "importanceReasonEn": "It is a practical case of moving a full server-side Python application into the browser, demonstrating the combination of Pyodide and Service Workers and offering a serverless way to share demos and reproduce bugs.",
+      "scoringMode": "ai",
+      "titleZh": "用 Service Worker 和 Pyodide 在浏览器中运行完整的服务端 Datasette Python 应用",
+      "titleEn": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+      "summaryZh": "Simon Willison 发布了 Datasette Lite 的完整重写版本，利用 Service Worker 和 Pyodide 在浏览器中运行 Datasette Python 应用，使其几乎与真实的服务端应用无异。用户可通过精心构造的 URL 加载任意 SQLite 数据库、JSON、CSV 或 SQL 脚本，选择 PyPI 上已发布的 Datasette 版本，加载 GitHub 仓库的特定提交、标签或分支，从 100 多个 SQLite 版本中选择，并从 PyPI 或 wheel 文件 URL 安装额外的 Datasette 插件，包括 JavaScript 可视化工具。",
+      "summaryEn": "Simon Willison released a complete rewrite of Datasette Lite that runs the Datasette Python application in the browser using Service Workers and Pyodide, making it almost indistinguishable from the real server-side application. Users can load any SQLite database, JSON file, CSV file or SQL script via a crafted URL, select a released Datasette version from PyPI, load a specific commit, tag or branch from the Datasette GitHub repository, choose from over 100 SQLite versions, and install additional Datasette plugins from PyPI or wheel file URLs, including JavaScript visualization tools.",
+      "keywords": [
+        "Datasette Lite",
+        "Pyodide",
+        "Service Worker",
+        "WebAssembly",
+        "SQLite",
+        "插件",
+        "浏览器"
+      ],
+      "topics": [
+        "Datasette",
+        "Pyodide",
+        "WebAssembly",
+        "Service Worker",
+        "SQLite",
+        "浏览器端应用"
+      ],
+      "models": [],
+      "detailZh": "Simon Willison 宣布 Datasette Lite 完成完整重写，改用 Service Worker 技术，使 Datasette 这个原本运行在服务端的 Python 应用可以直接在浏览器中运行。Datasette Lite 基于 WebAssembly 和 Pyodide 将 Python 运行时带入浏览器，此次重写后其行为已几乎与真实的服务端应用无异。\n\n用户通过访问 lite.datasette.io 并构造特定 URL 参数即可使用多项功能：加载客户端 Datasette 以浏览任意 SQLite 数据库、JSON 文件、CSV 文件或 SQL 脚本；从 PyPI 选择已发布的 Datasette 版本；从 Datasette GitHub 仓库加载特定提交、标签或分支；从 100 多个 SQLite 版本中选择；以及从 PyPI 或 wheel 文件 URL 安装额外的 Datasette 插件，包括 JavaScript 可视化工具。\n\n作者指出，能够加载特定 Datasette 引用、插件和 SQLite 版本，使其成为链接到进行中功能演示或 bug 复现的绝佳工具，无需启动完整 Web 服务器即可提供演示。文中给出了一个示例 URL，通过 install 参数安装 datasette-maplibre 插件并加载一个 gist 中的远程数据。",
+      "keyPointsZh": [
+        "Datasette Lite 使用 Service Worker 和 Pyodide 在浏览器中运行完整的 Datasette Python 应用。",
+        "支持通过 URL 参数加载 SQLite、JSON、CSV 或 SQL 脚本，并选择 PyPI 上的 Datasette 版本或 GitHub 提交、标签、分支。",
+        "可从 100 多个 SQLite 版本中选择，并安装来自 PyPI 或 wheel URL 的插件。",
+        "该工具适合分享进行中功能的演示和复现 bug，无需搭建 Web 服务器。"
+      ],
+      "impactZh": "该重写让浏览器端运行的 Datasette 接近服务端体验，降低了分享数据应用演示和复现问题的门槛，也展示了 Pyodide 与 Service Worker 结合运行复杂 Python 应用的可行性。",
+      "readerImpactZh": "普通用户无需安装软件或启动服务器，只需打开一个链接即可在浏览器中浏览 SQLite 数据库、CSV 等数据，并体验特定版本的 Datasette 功能。",
+      "userImpactZh": "开发者和数据团队可以用构造好的 URL 分享可复现的 Datasette 演示、插件效果或 bug 场景，无需部署服务器，便于协作和问题定位。",
+      "howItWorksZh": "Datasette Lite 通过 Pyodide 在浏览器中加载 Python 运行时和 Datasette 包，并利用 Service Worker 拦截请求、模拟服务端行为。URL 参数用于指定要加载的 Datasette 版本、GitHub 引用、SQLite 版本、插件以及数据源（如远程 SQLite、CSV、JSON 或 SQL 脚本），从而在客户端完成数据加载与应用运行。",
+      "interpretationZh": "报道事实显示 Datasette Lite 已完成基于 Service Worker 的重写，并支持版本、插件和 SQLite 版本选择。合理推断是，这种 URL 驱动的方式特别适合演示和复现，但具体性能与兼容性细节未在文中说明。",
+      "limitationsZh": "文中未说明浏览器兼容性范围、大数据库加载性能、Service Worker 缓存行为以及安全限制等细节，这些方面仍需实际验证。",
+      "actionStepsZh": [
+        "访问 lite.datasette.io 并尝试用 URL 参数加载一个 SQLite 或 CSV 文件。",
+        "使用 install 参数安装 Datasette 插件，体验 JavaScript 可视化工具。",
+        "通过指定 GitHub 提交或标签来复现特定版本的 Datasette 行为。",
+        "在分享演示或 bug 复现时，直接提供构造好的 Datasette Lite URL 而非部署服务器。"
+      ],
+      "detailCompleteness": "full",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+          "publishedAt": "2026-11-17T16:48:33.000Z",
+          "title": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/cors-allow/2026/datasette-maplibre.webp",
+            "https://static.simonwillison.net/static/2026/datasette-lite-diag.webp",
+            "https://static.simonwillison.net/static/2026/compare-sqlite.webp"
+          ],
+          "resourceLinks": [
+            "https://lite.datasette.io/",
+            "https://datasette.io/",
+            "https://pyodide.org/",
+            "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/demo/capitals_and_countries%23map=0/4.2/180&color=continent",
+            "https://github.com/datasette/datasette-maplibre",
+            "https://.../demo.db",
+            "https://.../metadata.yml",
+            "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS",
+            "https://gist.github.com/",
+            "https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml",
+            "https://lite.datasette.io/?install=datasette-maplibre&url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&metadata=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/metadata.yml#/",
+            "https://simonwillison.net/2025/Feb/13/url-addressable-python/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-17T16:48:33.000Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-17T16:48:33.000Z",
+            "label": "11/18 00:48",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-17T17:45:59.769Z",
+            "label": "11/18 01:45",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T18:43:26.539Z",
+            "label": "11/18 02:43",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T19:40:53.308Z",
+            "label": "11/18 03:40",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T20:38:20.078Z",
+            "label": "11/18 04:38",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T21:35:46.847Z",
+            "label": "11/18 05:35",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T22:33:13.617Z",
+            "label": "11/18 06:33",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T23:30:40.386Z",
+            "label": "11/18 07:30",
+            "value": 50,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:28:07.156Z",
+            "label": "11/18 08:28",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:25:33.925Z",
+            "label": "11/18 09:25",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
             "value": 65,
             "reports": 1
           }
@@ -1171,7 +2783,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-17T16:47:21.000Z",
-        "endedAt": "2026-11-17T19:48:35.415Z",
+        "endedAt": "2026-11-18T02:23:00.695Z",
         "current": 68,
         "peak": 68,
         "history": [
@@ -1182,26 +2794,62 @@
             "reports": 0
           },
           {
-            "at": "2026-11-17T17:32:39.603Z",
-            "label": "11/18 01:32",
-            "value": 28,
+            "at": "2026-11-17T17:44:54.969Z",
+            "label": "11/18 01:44",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-17T18:17:58.207Z",
-            "label": "11/18 02:17",
+            "at": "2026-11-17T18:42:28.939Z",
+            "label": "11/18 02:42",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T19:40:02.908Z",
+            "label": "11/18 03:40",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T20:37:36.878Z",
+            "label": "11/18 04:37",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-17T21:35:10.847Z",
+            "label": "11/18 05:35",
             "value": 41,
             "reports": 1
           },
           {
-            "at": "2026-11-17T19:03:16.811Z",
-            "label": "11/18 03:03",
-            "value": 55,
+            "at": "2026-11-17T22:32:44.817Z",
+            "label": "11/18 06:32",
+            "value": 46,
             "reports": 1
           },
           {
-            "at": "2026-11-17T19:48:35.415Z",
-            "label": "11/18 03:48",
+            "at": "2026-11-17T23:30:18.786Z",
+            "label": "11/18 07:30",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T00:27:52.756Z",
+            "label": "11/18 08:27",
+            "value": 57,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T01:25:26.725Z",
+            "label": "11/18 09:25",
+            "value": 63,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-18T02:23:00.695Z",
+            "label": "11/18 10:23",
             "value": 68,
             "reports": 1
           }
