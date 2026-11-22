@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T01:34:48.977Z",
+  "generatedAt": "2026-11-22T08:50:48.133Z",
   "date": "2026-11-22",
   "items": [
     {
@@ -33,7 +33,7 @@
       "publishedPrecision": "minute",
       "discoveredAt": null,
       "contentType": "opensource",
-      "evidenceLevel": "practitioner",
+      "evidenceLevel": "primary",
       "attribution": null,
       "sources": [
         {
@@ -64,13 +64,13 @@
         }
       ],
       "importance": 62,
-      "importanceReasonZh": "这是知名 Python 基础设施作者的新项目，且以罕见的公开开发日志形式呈现，对 Python 部署生态有实际参考价值，但尚处早期、无正式发布与基准数据。",
-      "importanceReasonEn": "It is a new project from a well-known Python infrastructure author, documented through an unusually open development log. It has practical relevance for Python deployment, though it is early-stage with no formal release or benchmarks.",
+      "importanceReasonZh": "这是 Python Web 部署领域资深作者的新开源项目，且以罕见的详细开发日志形式公开，对运行 Python Web 应用的开发者具有直接参考价值。",
+      "importanceReasonEn": "It is a new open-source project from a veteran author in Python web deployment, documented through an unusually detailed public development log, making it directly relevant to developers running Python web apps.",
       "scoringMode": "ai",
       "titleZh": "Muru：Graham Dumpleton 推出 AI 辅助开发的 Rust Python 应用服务器",
       "titleEn": "Muru: Graham Dumpleton's AI-Assisted Rust Server for Python Web Apps",
-      "summaryZh": "Muru 是 mod_wsgi 作者 Graham Dumpleton 用 AI 辅助开发的新 Rust 服务器，目标是同时为开发和生产环境提供运行 ASGI 与 WSGI Python 应用的最佳工具。他在三周内发布了十余篇详细开发记录，涵盖 worker 架构、fork 模型、HTTPS、WSGI/ASGI 共存、发布不重启、无服务网格金丝雀、容器与 Kubernetes 适配、按 worker 报告扩缩容及缩容到零等主题。",
-      "summaryEn": "Muru is a new AI-assisted Rust server by Graham Dumpleton, creator of mod_wsgi, aiming to be the best tool for running ASGI and WSGI Python apps in both development and production. Over three weeks he published a detailed series of development posts covering worker architecture, the fork model, HTTPS, WSGI/ASGI coexistence, releases without restarts, service-mesh-free canaries, container and Kubernetes fit, worker-reported scaling and scale-to-zero.",
+      "summaryZh": "mod_wsgi 作者 Graham Dumpleton 在启动该项目 20 年后，推出了用 Rust 编写、AI 辅助开发的新服务器 Muru，目标是同时为开发和生产环境提供运行 ASGI 与 WSGI Python 应用的最佳工具。他延续此前 wrapture 项目的做法，在开发过程中持续发布极为详细的系列文章，三周内已发布十余篇，涵盖 worker 内部结构、import once fork many、开发环境 HTTPS、WSGI 与 ASGI 共存、发布而非重启、无服务网格的灰度发布、容器与 Kubernetes 适配、按 worker 报告扩缩容以及缩容到零等主题。",
+      "summaryEn": "Twenty years after starting mod_wsgi, Graham Dumpleton has introduced Muru, a new AI-assisted Rust server aimed at providing the best possible tools for running ASGI and WSGI Python apps in both development and production. Following his approach with wrapture, he is publishing an extraordinarily detailed running account of the project, with more than a dozen posts in three weeks covering worker internals, import once fork many, HTTPS in development, WSGI and ASGI together, releases not restarts, canaries without a service mesh, container and Kubernetes fit, scaling from worker reports, and scaling to zero.",
       "keywords": [
         "Muru",
         "mod_wsgi",
@@ -78,8 +78,8 @@
         "ASGI",
         "WSGI",
         "Rust",
-        "scale-to-zero",
-        "canary"
+        "Kubernetes",
+        "scale to zero"
       ],
       "topics": [
         "Python",
@@ -87,25 +87,27 @@
         "WSGI",
         "Rust",
         "Kubernetes",
-        "AI辅助开发"
+        "AI-assisted development"
       ],
       "models": [],
-      "detailZh": "Graham Dumpleton 是 mod_wsgi 的作者，该项目始于约 20 年前。他此后一直在思考如何在生产环境中理想地服务 Python Web 应用。现在他推出了 Muru：一个用 Rust 编写、AI 辅助开发的新服务器，目标是同时为开发和生产环境提供运行 ASGI 和 WSGI Python 应用的最佳工具。\n\n与他在 wrapture 项目中的做法一样，Dumpleton 在开发过程中同步发布极为详细的记录。据 Simon Willison 汇总，过去三周内他发布了以下系列文章：2026-11-04《mod_wsgi 二十年，以及接下来是什么》；11-05《初识 Muru》；11-07《Muru：深入 worker 内部》；11-08《Muru：各部分如何组合》；11-09《Muru：一次导入，多次 fork》；11-10《Muru：开发环境中的 HTTPS》；11-11《Muru：WSGI 与 ASGI 并存》以及《AI 作为一种生活方式选择》；11-12《Muru：发布而非重启》；11-13《Muru：无需服务网格的金丝雀发布》；11-14《Muru：容器中的好租户》；11-15《Muru：与 Kubernetes 协作而非绕开它》；11-16《Muru：依据 worker 报告进行扩缩容》；11-17《Muru：缩容到零》；11-18《Muru：overlays o…》（标题在原文中被截断）。\n\n从标题可以看出，Muru 关注的是 Python 应用服务器的经典难题：worker 进程模型与预加载（import once, fork many）、开发期 HTTPS、WSGI 与 ASGI 两种协议共存、不重启进程完成版本发布、无服务网格情况下的金丝雀发布、容器与 Kubernetes 环境下的资源行为、基于 worker 自报指标的扩缩容，以及缩容到零。\n\n需要说明的是，现有材料仅为文章标题清单与项目简介，未包含具体实现细节、性能数据或正式发布信息，因此对其能力与成熟度的判断应保持谨慎。",
+      "detailZh": "Graham Dumpleton 是 mod_wsgi 的作者，该项目始于 20 年前。他在 2026-11-04 的文章《Twenty years of mod_wsgi, and what comes next》中回顾了这段历史，并引出后续方向。次日他发布了《A first look at Muru》，正式介绍这个新项目。\n\nMuru 是一个用 Rust 编写的服务器，目标是同时支持 ASGI 和 WSGI 两类 Python 应用，并覆盖开发与生产两种场景。据描述，该项目在开发过程中使用了 AI 辅助。作者表示，他从 20 年前启动 mod_wsgi 起就一直在思考如何在生产环境中理想地服务 Python Web 应用，Muru 是这一思考的最新产物。\n\n与他在 wrapture 项目中的做法一致，Dumpleton 在开发的同时公开发布极为详细的进展记录。从 2026-11-04 到 2026-11-18 的三周内，他发布了十余篇文章，主题包括：Muru 的首次亮相、worker 内部结构、整体架构如何组合、import once fork many 的加载策略、开发环境中的 HTTPS、WSGI 与 ASGI 共存、以“发布而非重启”方式更新、无需服务网格的灰度发布（canaries）、作为容器中的良好租户、与 Kubernetes 协作而非绕开它、依据 worker 上报信息进行扩缩容、缩容到零，以及 overlays 等。\n\n这些文章按时间顺序构成了一条完整的开发叙事，既记录了设计决策，也展示了实现细节。目前公开的信息主要来自作者本人的系列文章，尚未看到独立的第三方评测或生产使用报告。",
       "keyPointsZh": [
-        "Muru 由 mod_wsgi 作者 Graham Dumpleton 开发，用 Rust 编写并借助 AI 辅助。",
-        "目标是同时服务 ASGI 与 WSGI 两类 Python 应用，覆盖开发与生产环境。",
-        "三周内发布十余篇开发日志，涉及 worker 模型、HTTPS、金丝雀发布、Kubernetes 与缩容到零。",
-        "目前公开信息以文章标题和简介为主，尚无正式发布与性能基准。"
+        "Muru 是 mod_wsgi 作者 Graham Dumpleton 的新项目，用 Rust 编写并借助 AI 辅助开发。",
+        "目标是同时为开发和生产环境提供运行 ASGI 与 WSGI Python 应用的工具。",
+        "作者在约三周内发布了十余篇详细开发日志，覆盖架构、worker、部署与扩缩容等主题。",
+        "系列文章涉及 import once fork many、开发环境 HTTPS、无服务网格灰度发布、Kubernetes 适配和缩容到零等具体机制。",
+        "目前信息主要来自作者自述，尚无独立评测或生产案例公开。"
       ],
-      "impactZh": "Python 部署领域长期由 gunicorn、uvicorn 等工具主导，Muru 由该领域资深作者打造，并明确针对容器与 Kubernetes 场景设计，可能为 Python 应用服务器带来新的设计思路，尤其是发布不重启、无服务网格金丝雀和缩容到零等能力。",
+      "impactZh": "Python Web 部署长期依赖 mod_wsgi、Gunicorn、Uvicorn 等工具，Muru 试图在同一服务器中统一 WSGI 与 ASGI，并原生考虑容器、Kubernetes 和缩容到零等现代部署需求。若项目成熟，可能为 Python 生产部署提供新的选择，其公开的开发日志本身也是理解服务器设计取舍的珍贵材料。",
       "readerImpactZh": "",
-      "userImpactZh": "对部署 Python Web 应用的开发者而言，Muru 值得关注其后续发布：它计划同时支持 WSGI 与 ASGI，并针对容器、Kubernetes 和缩容到零等现代部署需求设计，可能成为现有应用服务器之外的候选方案。",
+      "userImpactZh": "运行 Python Web 应用的开发者和团队可以关注 Muru 的设计思路，尤其是 WSGI 与 ASGI 共存、发布而非重启、无服务网格灰度发布和缩容到零等机制，这些思路可迁移到现有部署方案中；但在项目成熟和独立验证出现前，不宜直接用于关键生产环境。",
       "howItWorksZh": "",
-      "interpretationZh": "已报道的事实是：Dumpleton 正在开发 Muru，并持续公开发布开发日志，文章标题显示其覆盖 worker 架构、fork 预加载、HTTPS、WSGI/ASGI 共存、发布不重启、金丝雀发布、容器与 Kubernetes 适配、按 worker 报告扩缩容及缩容到零。合理推断是：该项目试图把传统 WSGI 服务器的进程模型经验与现代 ASGI、容器化部署需求结合起来。但具体实现方式与效果目前无法从现有材料确认。",
-      "limitationsZh": "现有材料仅为文章标题清单和简短项目介绍，缺少具体实现细节、性能数据、版本号与发布时间表；标题在最后一条被截断；项目处于早期开发阶段，尚无正式发布，实际能力与稳定性未经独立验证。",
+      "interpretationZh": "据作者自述，Muru 是一个 Rust 实现的 Python 应用服务器，支持 ASGI 与 WSGI，并围绕现代部署场景设计。从系列文章标题可以合理推断，它包含多 worker 架构、预加载后 fork 的模块导入策略、内置开发 HTTPS、不依赖服务网格的灰度发布、容器与 Kubernetes 友好行为，以及基于 worker 上报的扩缩容和缩容到零能力。这些属于作者公开描述的设计目标与机制，实际成熟度和稳定性尚未经独立验证。",
+      "limitationsZh": "目前所有信息均来自作者本人的系列文章，缺少独立评测、性能基准和生产使用案例；项目的发布状态、许可证、成熟度和长期维护计划在给定材料中未明确说明；文章标题所暗示的具体机制细节也未在材料中展开。",
       "actionStepsZh": [
-        "阅读 Dumpleton 的系列文章，了解其 worker 模型、fork 预加载与扩缩容设计思路。",
-        "若使用 WSGI 或 ASGI 部署 Python 应用，可将 Muru 列入后续评估清单，等待正式发布后再做基准测试。"
+        "阅读作者 2026-11-04 起的系列文章，了解 Muru 的设计动机与架构。",
+        "关注项目中与现有部署方案（如 Gunicorn、Uvicorn）的差异点，评估是否值得试用。",
+        "在非关键环境中跟踪项目进展，等待独立评测或生产案例后再考虑采用。"
       ],
       "detailCompleteness": "summary",
       "visual": null,
@@ -141,7 +143,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-21T23:56:28.000Z",
-        "endedAt": "2026-11-22T01:34:48.977Z",
+        "endedAt": "2026-11-22T08:50:48.133Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -152,15 +154,232 @@
             "reports": 0
           },
           {
-            "at": "2026-11-22T00:45:38.488Z",
-            "label": "11/22 08:45",
+            "at": "2026-11-22T00:55:50.237Z",
+            "label": "11/22 08:55",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T01:55:12.474Z",
+            "label": "11/22 09:55",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T02:54:34.711Z",
+            "label": "11/22 10:54",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T03:53:56.948Z",
+            "label": "11/22 11:53",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T04:53:19.185Z",
+            "label": "11/22 12:53",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T05:52:41.422Z",
+            "label": "11/22 13:52",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T06:52:03.659Z",
+            "label": "11/22 14:52",
+            "value": 49,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T07:51:25.896Z",
+            "label": "11/22 15:51",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T08:50:48.133Z",
+            "label": "11/22 16:50",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f6f5282ad9e3c36b",
+      "normalizedUrl": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance",
+      "originalUrl": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+      "titleOriginal": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+      "summaryOriginal": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
+      "originalLanguage": "en",
+      "author": "Anthony Ha",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-21T21:37:10.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+          "publishedAt": "2026-11-21T21:37:10.000Z",
+          "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该消息涉及主流加密通讯应用对截屏功能的限制，反映隐私产品在AI监控压力下的策略调整，但来源信息有限，缺乏官方细节。",
+      "importanceReasonEn": "The item concerns a mainstream encrypted messaging app restricting screenshots, reflecting how privacy products are adapting under AI surveillance pressure, but source material is limited and lacks official detail.",
+      "scoringMode": "ai",
+      "titleZh": "Signal限制移动端截图功能，以应对AI监控的“生存威胁”",
+      "titleEn": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+      "summaryZh": "Signal正在限制用户在Android和iOS应用中截屏的能力。",
+      "summaryEn": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
+      "keywords": [
+        "Signal",
+        "screenshot restriction",
+        "AI surveillance",
+        "privacy",
+        "mobile security"
+      ],
+      "topics": [
+        "privacy",
+        "messaging",
+        "AI surveillance",
+        "mobile apps"
+      ],
+      "models": [],
+      "detailZh": "据TechCrunch AI报道，加密通讯应用Signal正在限制用户在Android和iOS应用中截屏的能力。报道将这一举措与Signal所面对的AI监控“生存威胁”联系起来，暗示该限制旨在减少消息内容被截取并用于自动化监控或分析的可能。\n\n目前可获得的信息仅包括上述要点：限制同时覆盖Android和iOS两个平台，且Signal方面将其置于AI监控威胁的背景下。报道未提供该功能的具体实现方式、生效时间、是否可被绕过，以及是否适用于所有会话类型等细节。\n\n从已知事实看，这是一项面向移动端的产品行为调整，而非加密协议层面的变更。其直接效果是降低用户通过系统截屏保存或外传聊天内容的便利性。\n\n由于来源材料有限，关于该限制是否为默认开启、是否存在用户可配置选项、以及桌面端是否同步调整等问题，目前均无法确认。",
+      "keyPointsZh": [
+        "Signal正在限制Android和iOS应用中的截屏能力",
+        "报道将此举与AI监控带来的“生存威胁”相关联",
+        "限制覆盖Android和iOS两个移动平台",
+        "报道未披露具体实现方式与生效范围"
+      ],
+      "impactZh": "该举措表明隐私通讯产品正把防御重点从传输加密扩展到终端内容外泄，可能推动其他通讯应用重新评估截屏策略，并引发关于用户控制权与隐私保护之间平衡的讨论。",
+      "readerImpactZh": "Signal移动端用户可能无法再像以往那样直接截屏保存聊天内容，需要在隐私保护与日常记录便利之间做出权衡。",
+      "userImpactZh": "使用Signal进行敏感沟通的个人与团队需调整信息留存方式；开发者可关注此类终端防护思路对隐私产品设计的影响。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报道的事实是：Signal在Android和iOS上限制截屏，并将其与AI监控威胁联系起来。合理推断是：该限制意在减少聊天内容被截取后进入自动化监控或分析流程的机会。但具体技术手段、是否可关闭、是否覆盖所有场景，均属未证实内容。",
+      "limitationsZh": "来源仅为TechCrunch AI的简短报道，缺少Signal官方公告、功能细节、生效时间、平台差异及可绕过性说明；限制是否默认启用、是否可配置均未确认。",
+      "actionStepsZh": [
+        "关注Signal官方渠道以获取该限制的正式说明与适用范围",
+        "评估团队在Signal中传输敏感信息时的留存与归档方式"
+      ],
+      "detailCompleteness": "limited",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+          "publishedAt": "2026-11-21T21:37:10.000Z",
+          "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-21T21:37:10.000Z",
+        "endedAt": "2026-11-22T08:50:48.133Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-11-21T21:37:10.000Z",
+            "label": "11/22 05:37",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-21T22:38:24.375Z",
+            "label": "11/22 06:38",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T23:39:38.751Z",
+            "label": "11/22 07:39",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T00:40:53.127Z",
+            "label": "11/22 08:40",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T01:42:07.502Z",
+            "label": "11/22 09:42",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T02:43:21.878Z",
+            "label": "11/22 10:43",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T03:44:36.254Z",
+            "label": "11/22 11:44",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T04:45:50.630Z",
+            "label": "11/22 12:45",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-22T01:34:48.977Z",
-            "label": "11/22 09:34",
-            "value": 59,
+            "at": "2026-11-22T05:47:05.005Z",
+            "label": "11/22 13:47",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T06:48:19.381Z",
+            "label": "11/22 14:48",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T07:49:33.757Z",
+            "label": "11/22 15:49",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T08:50:48.133Z",
+            "label": "11/22 16:50",
+            "value": 50,
             "reports": 1
           }
         ],
@@ -203,19 +422,18 @@
         }
       ],
       "importance": 45,
-      "importanceReasonZh": "该报道将英伟达财报表现与业界对黄仁勋回归的呼声并置，反映市场对英伟达领导层与业务走向的关注，但原文信息有限，缺乏具体数据与细节。",
-      "importanceReasonEn": "The piece juxtaposes Nvidia's earnings with industry calls for Jensen Huang's return, reflecting attention on Nvidia's leadership and direction, but the source material is thin and lacks concrete figures or details.",
+      "importanceReasonZh": "该报道将英伟达财报表现与业界对黄仁勋回归的呼声并置，反映市场对英伟达领导层与业务走向的不同解读，但原文信息有限。",
+      "importanceReasonEn": "The piece juxtaposes Nvidia's earnings with industry calls for Jensen Huang's return, reflecting divergent readings of the company's leadership and direction, though source detail is limited.",
       "scoringMode": "ai",
       "titleZh": "两个截然不同的英伟达",
       "titleEn": "A tale of two Nvidias",
-      "summaryZh": "英伟达最新财报与科技高管们高调呼吁黄仁勋回归，呈现出关于这家公司的两幅截然不同的图景。",
-      "summaryEn": "We got two very different pictures of Nvidia — the company's latest earnings report vs. the tech executives loudly calling for Jensen Huang's return.",
+      "summaryZh": "英伟达最新财报与科技高管们高调呼吁黄仁勋回归，呈现出两种截然不同的英伟达图景。",
+      "summaryEn": "Nvidia's latest earnings report and tech executives loudly calling for Jensen Huang's return paint two very different pictures of the company.",
       "keywords": [
         "Nvidia",
-        "黄仁勋",
-        "财报",
-        "科技高管",
-        "AI芯片"
+        "Jensen Huang",
+        "earnings",
+        "tech executives"
       ],
       "topics": [
         "Nvidia",
@@ -224,19 +442,19 @@
         "AI industry"
       ],
       "models": [],
-      "detailZh": "TechCrunch AI 发布了一篇题为《两个截然不同的英伟达》的报道，将两件事放在一起对照：一是英伟达最新发布的财报，二是科技行业高管们公开、高调地呼吁黄仁勋回归。\n\n报道的核心观察是，这两条线索勾勒出关于英伟达的两幅非常不同的图景——财报所呈现的公司面貌，与业界人士表态所折射出的期待和情绪并不一致。\n\n原文摘要仅提供了这一对比框架，没有给出财报的具体营收、利润数据，也没有说明是哪些高管、在什么场合、以何种方式发出呼吁，以及“回归”具体指向何种角色或安排。\n\n因此，目前可以确认的事实仅限于：存在一份最新财报，以及存在一批科技高管的公开呼吁；两者被媒体并置解读。其余细节均未在源材料中展开。",
+      "detailZh": "TechCrunch AI 发布了一篇题为《两个截然不同的英伟达》的报道，将英伟达最新财报所呈现的公司形象，与科技高管们公开呼吁黄仁勋回归的声音放在一起对照。报道认为，这两者构成了关于英伟达的两种非常不同的图景。\n\n从现有信息看，一方是财报数据所反映的经营状况，另一方是部分科技界人士对黄仁勋重新掌舵的期待。原文并未展开财报的具体数字，也没有说明呼吁者是谁、以何种方式表达，以及黄仁勋当前的具体职务状态。\n\n因此，这篇报道更像是一个观察角度的提出，而非完整的事实梳理。读者能确认的是：存在财报视角与业界呼声视角的并置，但两种图景的具体内容、背景和因果关系在源材料中均未充分展开。",
       "keyPointsZh": [
         "TechCrunch AI 将英伟达最新财报与科技高管呼吁黄仁勋回归并置报道",
-        "报道认为两者呈现出关于英伟达的两幅不同图景",
-        "源材料未披露财报具体数据",
-        "源材料未说明呼吁者的身份、场合与“回归”的具体含义"
+        "报道称两者呈现两种非常不同的英伟达图景",
+        "原文未披露财报具体数据或呼吁者的具体身份",
+        "报道未说明黄仁勋当前职务状态及回归呼声的背景"
       ],
-      "impactZh": "该报道的意义在于提示：英伟达的业务表现与业界对其领导层的期待之间可能存在张力，这种张力会影响外界对英伟达未来走向的判断。但由于缺乏具体数据与细节，其实际影响尚难评估。",
+      "impactZh": "该报道提示，市场对英伟达的评估可能同时受到财务表现与领导层叙事的影响，但源材料未提供足够细节支撑更具体的判断。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "可以确认的报道事实是：英伟达发布了最新财报，同时有科技高管公开呼吁黄仁勋回归，媒体将两者对照解读。至于财报好坏、呼吁的规模与动机、以及“回归”是否指向具体职位变动，均属于源材料未覆盖的内容，不宜据此推断。",
-      "limitationsZh": "源材料仅为一段摘要，缺少财报具体数字、呼吁者名单、时间地点、以及“回归”的确切含义；报道的对比框架本身带有解读色彩，相关说法尚未得到独立核实。",
+      "interpretationZh": "可确认的事实是：存在一篇将财报与业界呼声对照的报道。至于两种图景具体指什么、为何出现分歧，属于报道提出但未充分展开的内容，读者不宜据此推断英伟达的实际经营或人事走向。",
+      "limitationsZh": "源材料仅为标题与摘要，缺少财报数字、呼吁者身份、时间线和黄仁勋职务状态等关键信息；报道中的对比框架本身也未在摘要中说明依据。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -259,7 +477,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-21T21:07:42.000Z",
-        "endedAt": "2026-11-22T01:34:48.977Z",
+        "endedAt": "2026-11-22T08:50:48.133Z",
         "current": 50,
         "peak": 50,
         "history": [
@@ -270,33 +488,279 @@
             "reports": 0
           },
           {
-            "at": "2026-11-21T22:01:07.395Z",
-            "label": "11/22 06:01",
+            "at": "2026-11-21T22:11:37.103Z",
+            "label": "11/22 06:11",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T23:15:32.206Z",
+            "label": "11/22 07:15",
             "value": 21,
             "reports": 1
           },
           {
-            "at": "2026-11-21T22:54:32.790Z",
-            "label": "11/22 06:54",
-            "value": 28,
+            "at": "2026-11-22T00:19:27.309Z",
+            "label": "11/22 08:19",
+            "value": 24,
             "reports": 1
           },
           {
-            "at": "2026-11-21T23:47:58.186Z",
-            "label": "11/22 07:47",
-            "value": 36,
+            "at": "2026-11-22T01:23:22.412Z",
+            "label": "11/22 09:23",
+            "value": 27,
             "reports": 1
           },
           {
-            "at": "2026-11-22T00:41:23.581Z",
-            "label": "11/22 08:41",
+            "at": "2026-11-22T02:27:17.515Z",
+            "label": "11/22 10:27",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T03:31:12.618Z",
+            "label": "11/22 11:31",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T04:35:07.721Z",
+            "label": "11/22 12:35",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T05:39:02.824Z",
+            "label": "11/22 13:39",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T06:42:57.927Z",
+            "label": "11/22 14:42",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-11-22T01:34:48.977Z",
-            "label": "11/22 09:34",
+            "at": "2026-11-22T07:46:53.030Z",
+            "label": "11/22 15:46",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T08:50:48.133Z",
+            "label": "11/22 16:50",
             "value": 50,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "cecd5256be0d3dab",
+      "normalizedUrl": "https://x.com/rohanpaul_ai/status/2124213113583174076",
+      "originalUrl": "https://x.com/rohanpaul_ai/status/2124213113583174076",
+      "titleOriginal": "Columbia 与 MIT 论文展示 Claude 发现的算法突破 3SUM 与 APSP 长期速度上限",
+      "summaryOriginal": "Columbia 和 MIT 的论文展示 Claude 发现的算法在 3SUM 和全对最短路径（APSP）上取得多项式改进，3SUM 达到 O(n^1.9992)、APSP 达到 O(n^2.9995)，推翻了 3SUM 和 APSP 假设。",
+      "originalLanguage": "zh",
+      "author": "X：Rohan Paul (@rohanpaul_ai)",
+      "category": "research",
+      "sourceType": "aggregator",
+      "authority": 77,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/d32df9vzpliz9m348fug74inq",
+        "https://x.com/rohanpaul_ai/status/2124213113583174076"
+      ],
+      "publishedAt": "2026-11-21T18:47:26.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-21T18:49:23.280Z",
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/d32df9vzpliz9m348fug74inq"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:d32df9vzpliz9m348fug74inq",
+          "name": "X：Rohan Paul (@rohanpaul_ai)",
+          "type": "aggregator",
+          "url": "https://x.com/rohanpaul_ai/status/2124213113583174076",
+          "publishedAt": "2026-11-21T18:47:26.000Z",
+          "title": "Columbia 与 MIT 论文展示 Claude 发现的算法突破 3SUM 与 APSP 长期速度上限",
+          "authority": 77,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/d32df9vzpliz9m348fug74inq",
+            "https://x.com/rohanpaul_ai/status/2124213113583174076"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该消息声称 AI 模型 Claude 参与发现推翻经典复杂性假设的算法，若属实将同时影响算法理论与 AI 辅助科研的可信度，因此值得关注。",
+      "importanceReasonEn": "The report claims an AI model, Claude, contributed to discovering algorithms that refute classic complexity conjectures; if true, it matters both for algorithm theory and for the credibility of AI-assisted research.",
+      "scoringMode": "ai",
+      "titleZh": "Columbia 与 MIT 论文展示 Claude 发现的算法突破 3SUM 与 APSP 长期速度上限",
+      "titleEn": "Columbia and MIT Paper Shows Claude-Discovered Algorithms Break Longstanding 3SUM and APSP Speed Limits",
+      "summaryZh": "Columbia 和 MIT 的论文展示 Claude 发现的算法在 3SUM 和全对最短路径（APSP）上取得多项式改进，3SUM 达到 O(n^1.9992)、APSP 达到 O(n^2.9995)，推翻了 3SUM 和 APSP 假设。",
+      "summaryEn": "A Columbia and MIT paper presents algorithms discovered by Claude that achieve polynomial improvements for 3SUM and all-pairs shortest paths (APSP), reaching O(n^1.9992) for 3SUM and O(n^2.9995) for APSP, refuting the 3SUM and APSP conjectures.",
+      "keywords": [
+        "3SUM",
+        "APSP",
+        "Claude",
+        "Columbia",
+        "MIT",
+        "algorithm discovery",
+        "complexity"
+      ],
+      "topics": [
+        "algorithmic research",
+        "AI-assisted discovery",
+        "3SUM",
+        "APSP",
+        "complexity theory"
+      ],
+      "models": [
+        "Claude"
+      ],
+      "detailZh": "据 X 用户 Rohan Paul 的帖子，Columbia 与 MIT 的一篇论文展示了由 Claude 发现的算法，在 3SUM 和全对最短路径（APSP）两个经典问题上取得多项式级别的速度改进。帖子称 3SUM 的新上界为 O(n^1.9992)，APSP 的新上界为 O(n^2.9995)，并称这些结果推翻了长期存在的 3SUM 与 APSP 假设。\n\n3SUM 问题要求在给定整数集合中判断是否存在三个数之和为零，长期被用作细粒度复杂性中的核心假设来源；APSP 则要求计算图中所有点对之间的最短路径。两者此前都被认为难以获得显著优于朴素方法的指数改进，相关假设常被用来证明其他问题的下界。\n\n该帖将成果归因于 Claude 的发现能力，但未提供论文标题、作者、发表 venue 或同行评审状态等细节。目前可确认的信息仅来自这一条社交媒体帖子，论文原文与具体算法构造尚未在输入中呈现。\n\n因此，这一消息的核心事实是：有帖子声称存在这样一篇论文及其具体复杂度数值；至于算法是否正确、证明是否经过检验、Claude 在其中扮演何种角色，均需以论文原文和后续评审为准。",
+      "keyPointsZh": [
+        "帖子称 Columbia 与 MIT 的论文展示了 Claude 发现的算法。",
+        "3SUM 被报告达到 O(n^1.9992)，APSP 被报告达到 O(n^2.9995。",
+        "帖子称这些结果推翻了 3SUM 与 APSP 的长期假设。",
+        "输入未提供论文标题、作者、发表渠道或评审状态。"
+      ],
+      "impactZh": "若结果成立，将动摇细粒度复杂性中以 3SUM 和 APSP 假设为基础的一批下界结论，并成为 AI 辅助数学与算法发现的标志性案例；在获得论文与评审验证前，其影响仍属待确认。",
+      "readerImpactZh": "",
+      "userImpactZh": "对算法研究者与使用 AI 辅助科研的团队而言，该消息提示应关注论文原文与可复现证明，而不是仅凭社交媒体结论调整对相关复杂性假设的依赖。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：一条社交媒体帖子声称存在这样一篇论文，并给出了两个具体复杂度数值。合理推断是：如果论文与证明经得起检验，相关复杂性假设需要重新审视；但帖子本身不构成验证，Claude 的具体贡献方式也无法从输入中判断。",
+      "limitationsZh": "信息仅来自单条社交媒体帖子，缺少论文标题、作者名单、发表渠道、同行评审与证明细节；算法正确性与复杂度上界均未独立核实，Claude 的参与程度不明。",
+      "actionStepsZh": [
+        "查找该论文原文，核对 3SUM 与 APSP 的具体算法与证明。",
+        "关注后续同行评审与独立复现结果，再评估对相关下界结论的影响。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "帖子给出的两个指数均略低于对应的整数阈值 2 和 3，这正是其被称为多项式改进的依据。",
+        "data": [
+          {
+            "label": "3SUM 新上界指数",
+            "value": 1.9992,
+            "display": ""
+          },
+          {
+            "label": "APSP 新上界指数",
+            "value": 2.9995,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:d32df9vzpliz9m348fug74inq",
+          "name": "X：Rohan Paul (@rohanpaul_ai)",
+          "type": "aggregator",
+          "url": "https://x.com/rohanpaul_ai/status/2124213113583174076",
+          "publishedAt": "2026-11-21T18:47:26.000Z",
+          "title": "Columbia 与 MIT 论文展示 Claude 发现的算法突破 3SUM 与 APSP 长期速度上限",
+          "authority": 77,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/d32df9vzpliz9m348fug74inq",
+            "https://x.com/rohanpaul_ai/status/2124213113583174076"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-21T18:47:26.000Z",
+        "endedAt": "2026-11-22T08:50:48.133Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-21T18:47:26.000Z",
+            "label": "11/22 02:47",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-21T20:04:06.193Z",
+            "label": "11/22 04:04",
+            "value": 19,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T21:20:46.387Z",
+            "label": "11/22 05:20",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T22:37:26.581Z",
+            "label": "11/22 06:37",
+            "value": 28,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T23:54:06.775Z",
+            "label": "11/22 07:54",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T01:10:46.969Z",
+            "label": "11/22 09:10",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T02:27:27.163Z",
+            "label": "11/22 10:27",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T03:44:07.357Z",
+            "label": "11/22 11:44",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T05:00:47.551Z",
+            "label": "11/22 13:00",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T06:17:27.745Z",
+            "label": "11/22 14:17",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T07:34:07.939Z",
+            "label": "11/22 15:34",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T08:50:48.133Z",
+            "label": "11/22 16:50",
+            "value": 65,
             "reports": 1
           }
         ],
@@ -477,7 +941,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-21T17:00:00.000Z",
-        "endedAt": "2026-11-22T01:34:48.977Z",
+        "endedAt": "2026-11-22T08:50:48.133Z",
         "current": 100,
         "peak": 100,
         "history": [
@@ -488,56 +952,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-21T17:57:12.108Z",
-            "label": "11/22 01:57",
-            "value": 51,
+            "at": "2026-11-21T18:26:26.193Z",
+            "label": "11/22 02:26",
+            "value": 50,
             "reports": 4
           },
           {
-            "at": "2026-11-21T18:54:24.217Z",
-            "label": "11/22 02:54",
-            "value": 58,
+            "at": "2026-11-21T19:52:52.387Z",
+            "label": "11/22 03:52",
+            "value": 55,
             "reports": 4
           },
           {
-            "at": "2026-11-21T19:51:36.325Z",
-            "label": "11/22 03:51",
-            "value": 64,
+            "at": "2026-11-21T21:19:18.581Z",
+            "label": "11/22 05:19",
+            "value": 61,
             "reports": 4
           },
           {
-            "at": "2026-11-21T20:48:48.434Z",
-            "label": "11/22 04:48",
+            "at": "2026-11-21T22:45:44.775Z",
+            "label": "11/22 06:45",
+            "value": 66,
+            "reports": 4
+          },
+          {
+            "at": "2026-11-22T00:12:10.969Z",
+            "label": "11/22 08:12",
             "value": 71,
             "reports": 4
           },
           {
-            "at": "2026-11-21T21:46:00.542Z",
-            "label": "11/22 05:46",
-            "value": 77,
+            "at": "2026-11-22T01:38:37.163Z",
+            "label": "11/22 09:38",
+            "value": 76,
             "reports": 4
           },
           {
-            "at": "2026-11-21T22:43:12.651Z",
-            "label": "11/22 06:43",
-            "value": 83,
+            "at": "2026-11-22T03:05:03.357Z",
+            "label": "11/22 11:05",
+            "value": 82,
             "reports": 4
           },
           {
-            "at": "2026-11-21T23:40:24.759Z",
-            "label": "11/22 07:40",
-            "value": 90,
+            "at": "2026-11-22T04:31:29.551Z",
+            "label": "11/22 12:31",
+            "value": 87,
             "reports": 4
           },
           {
-            "at": "2026-11-22T00:37:36.868Z",
-            "label": "11/22 08:37",
-            "value": 96,
+            "at": "2026-11-22T05:57:55.745Z",
+            "label": "11/22 13:57",
+            "value": 92,
             "reports": 4
           },
           {
-            "at": "2026-11-22T01:34:48.977Z",
-            "label": "11/22 09:34",
+            "at": "2026-11-22T07:24:21.939Z",
+            "label": "11/22 15:24",
+            "value": 97,
+            "reports": 4
+          },
+          {
+            "at": "2026-11-22T08:50:48.133Z",
+            "label": "11/22 16:50",
             "value": 100,
             "reports": 4
           }
@@ -656,7 +1132,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-21T16:23:45.000Z",
-        "endedAt": "2026-11-22T01:34:48.977Z",
+        "endedAt": "2026-11-22T08:50:48.133Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -667,62 +1143,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-21T17:18:51.397Z",
-            "label": "11/22 01:18",
+            "at": "2026-11-21T17:53:28.921Z",
+            "label": "11/22 01:53",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-21T18:13:57.795Z",
-            "label": "11/22 02:13",
+            "at": "2026-11-21T19:23:12.842Z",
+            "label": "11/22 03:23",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-21T19:09:04.193Z",
-            "label": "11/22 03:09",
-            "value": 26,
+            "at": "2026-11-21T20:52:56.763Z",
+            "label": "11/22 04:52",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-21T20:04:10.590Z",
-            "label": "11/22 04:04",
-            "value": 31,
+            "at": "2026-11-21T22:22:40.684Z",
+            "label": "11/22 06:22",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-21T20:59:16.988Z",
-            "label": "11/22 04:59",
-            "value": 35,
+            "at": "2026-11-21T23:52:24.605Z",
+            "label": "11/22 07:52",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-11-21T21:54:23.386Z",
-            "label": "11/22 05:54",
-            "value": 39,
+            "at": "2026-11-22T01:22:08.527Z",
+            "label": "11/22 09:22",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-21T22:49:29.783Z",
-            "label": "11/22 06:49",
-            "value": 43,
+            "at": "2026-11-22T02:51:52.448Z",
+            "label": "11/22 10:51",
+            "value": 40,
             "reports": 1
           },
           {
-            "at": "2026-11-21T23:44:36.181Z",
-            "label": "11/22 07:44",
-            "value": 47,
+            "at": "2026-11-22T04:21:36.369Z",
+            "label": "11/22 12:21",
+            "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-22T00:39:42.579Z",
-            "label": "11/22 08:39",
-            "value": 51,
+            "at": "2026-11-22T05:51:20.290Z",
+            "label": "11/22 13:51",
+            "value": 48,
             "reports": 1
           },
           {
-            "at": "2026-11-22T01:34:48.977Z",
-            "label": "11/22 09:34",
+            "at": "2026-11-22T07:21:04.211Z",
+            "label": "11/22 15:21",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T08:50:48.133Z",
+            "label": "11/22 16:50",
             "value": 55,
             "reports": 1
           }
@@ -841,7 +1323,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-21T16:04:29.000Z",
-        "endedAt": "2026-11-22T01:34:48.977Z",
+        "endedAt": "2026-11-22T08:50:48.133Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -852,63 +1334,242 @@
             "reports": 0
           },
           {
-            "at": "2026-11-21T17:01:30.997Z",
-            "label": "11/22 01:01",
+            "at": "2026-11-21T17:35:58.012Z",
+            "label": "11/22 01:35",
             "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-21T17:58:32.995Z",
-            "label": "11/22 01:58",
+            "at": "2026-11-21T19:07:27.024Z",
+            "label": "11/22 03:07",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-21T18:55:34.993Z",
-            "label": "11/22 02:55",
-            "value": 26,
+            "at": "2026-11-21T20:38:56.036Z",
+            "label": "11/22 04:38",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-21T19:52:36.990Z",
-            "label": "11/22 03:52",
-            "value": 31,
+            "at": "2026-11-21T22:10:25.048Z",
+            "label": "11/22 06:10",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-21T20:49:38.988Z",
-            "label": "11/22 04:49",
-            "value": 35,
+            "at": "2026-11-21T23:41:54.060Z",
+            "label": "11/22 07:41",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-11-21T21:46:40.986Z",
-            "label": "11/22 05:46",
-            "value": 39,
+            "at": "2026-11-22T01:13:23.072Z",
+            "label": "11/22 09:13",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-21T22:43:42.983Z",
-            "label": "11/22 06:43",
+            "at": "2026-11-22T02:44:52.084Z",
+            "label": "11/22 10:44",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T04:16:21.096Z",
+            "label": "11/22 12:16",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T05:47:50.108Z",
+            "label": "11/22 13:47",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T07:19:19.120Z",
+            "label": "11/22 15:19",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T08:50:48.133Z",
+            "label": "11/22 16:50",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "f2e0e504895b9fb3",
+      "normalizedUrl": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood",
+      "originalUrl": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+      "titleOriginal": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+      "summaryOriginal": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
+      "originalLanguage": "en",
+      "author": "Lucas Ropek",
+      "category": "business",
+      "sourceType": "media",
+      "authority": 82,
+      "sourcePriority": 78,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-21T16:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "industry",
+      "evidenceLevel": "unverified",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+          "publishedAt": "2026-11-21T16:00:00.000Z",
+          "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 45,
+      "importanceReasonZh": "该事件反映AI面孔授权从中国微短剧市场向好莱坞扩散的早期迹象，涉及演员劳动权益与肖像商业化，但报道细节有限，尚无具体交易条款或规模数据。",
+      "importanceReasonEn": "The story signals early signs of AI face licensing spreading from China's microdrama market to Hollywood, touching on actor labor rights and likeness commercialization, but details on deal terms and scale are limited.",
+      "scoringMode": "ai",
+      "titleZh": "把AI版面孔卖给微短剧创业公司，会是好莱坞的未来吗？",
+      "titleEn": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+      "summaryZh": "一名演员已将自己的面部授权给一家微短剧创业公司，这一趋势在中国已相当流行。专家质疑，如果它也在好莱坞成为潮流，长期后果会是什么。",
+      "summaryEn": "An actor has licensed his face to a microdrama startup — a trend already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
+      "keywords": [
+        "AI面孔授权",
+        "微短剧",
+        "演员肖像",
+        "数字替身",
+        "好莱坞"
+      ],
+      "topics": [
+        "AI数字人",
+        "演员肖像授权",
+        "微短剧",
+        "好莱坞",
+        "AI版权与劳动"
+      ],
+      "models": [],
+      "detailZh": "据TechCrunch AI报道，一名演员已将自己的面部授权给一家微短剧创业公司，允许对方以AI方式使用其面孔。报道指出，这类做法在中国微短剧行业已经相当流行，如今开始出现在美国市场。\n\n微短剧通常指单集时长很短、节奏快、成本低的竖屏剧集，制作方对成本和产能高度敏感，AI生成面孔被视为降低演员成本与排期约束的手段。\n\n报道提到，专家对这类授权若在好莱坞成为趋势的长期后果提出质疑，但未披露具体合同条款、授权费用、使用范围或该创业公司的名称与规模。\n\n目前可确认的事实仅限于：存在一例演员向微短剧创业公司授权AI面孔的案例，以及该模式在中国已有先例。关于其商业成效、法律安排和行业扩散程度，尚缺乏公开信息。",
+      "keyPointsZh": [
+        "一名演员已将面部授权给一家微短剧创业公司，用于AI化使用。",
+        "报道称此类AI面孔授权在中国微短剧行业已较为流行。",
+        "专家担忧若该模式在好莱坞普及，可能带来长期负面影响。",
+        "报道未披露交易金额、授权范围或公司具体信息。"
+      ],
+      "impactZh": "若AI面孔授权在影视行业扩散，可能改变演员的议价方式与用工结构，并推动围绕肖像权、授权范围和AI替代的行业规则讨论。",
+      "readerImpactZh": "",
+      "userImpactZh": "对AI内容创作者和影视团队而言，这意味着AI生成面孔的商业授权路径正在被探索，但授权边界、合规与伦理风险仍需自行评估。",
+      "howItWorksZh": "",
+      "interpretationZh": "报道呈现的是一例个案加一个趋势判断：演员把面孔授权给微短剧公司做AI化使用，类似模式在中国已有市场基础。至于它是否会成为好莱坞主流，目前只是专家层面的担忧与推测，缺乏交易规模和行业数据的支撑。",
+      "limitationsZh": "报道未说明创业公司名称、授权费用、授权期限与使用限制，也未提供该模式在好莱坞的实际采用数量；专家观点属于预判而非实证结论。",
+      "actionStepsZh": [],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "techcrunch-ai",
+          "name": "TechCrunch AI",
+          "type": "media",
+          "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+          "publishedAt": "2026-11-21T16:00:00.000Z",
+          "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+          "authority": 82,
+          "sourcePriority": 78,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-21T16:00:00.000Z",
+        "endedAt": "2026-11-22T08:50:48.133Z",
+        "current": 50,
+        "peak": 50,
+        "history": [
+          {
+            "at": "2026-11-21T16:00:00.000Z",
+            "label": "11/22 00:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-21T17:31:53.466Z",
+            "label": "11/22 01:31",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T19:03:46.933Z",
+            "label": "11/22 03:03",
+            "value": 21,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T20:35:40.399Z",
+            "label": "11/22 04:35",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T22:07:33.866Z",
+            "label": "11/22 06:07",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-21T23:39:27.333Z",
+            "label": "11/22 07:39",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T01:11:20.799Z",
+            "label": "11/22 09:11",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T02:43:14.266Z",
+            "label": "11/22 10:43",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T04:15:07.733Z",
+            "label": "11/22 12:15",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-22T05:47:01.199Z",
+            "label": "11/22 13:47",
             "value": 43,
             "reports": 1
           },
           {
-            "at": "2026-11-21T23:40:44.981Z",
-            "label": "11/22 07:40",
+            "at": "2026-11-22T07:18:54.666Z",
+            "label": "11/22 15:18",
             "value": 47,
             "reports": 1
           },
           {
-            "at": "2026-11-22T00:37:46.979Z",
-            "label": "11/22 08:37",
-            "value": 51,
-            "reports": 1
-          },
-          {
-            "at": "2026-11-22T01:34:48.977Z",
-            "label": "11/22 09:34",
-            "value": 55,
+            "at": "2026-11-22T08:50:48.133Z",
+            "label": "11/22 16:50",
+            "value": 50,
             "reports": 1
           }
         ],
