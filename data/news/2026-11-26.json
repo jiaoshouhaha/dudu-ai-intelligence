@@ -1,7 +1,710 @@
 {
-  "generatedAt": "2026-11-26T00:15:22.023Z",
+  "generatedAt": "2026-11-26T08:53:10.370Z",
   "date": "2026-11-26",
   "items": [
+    {
+      "id": "651273c9af5bc4aa",
+      "normalizedUrl": "https://arxiv.org/abs/2611.31301",
+      "originalUrl": "https://arxiv.org/abs/2611.31301",
+      "titleOriginal": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+      "summaryOriginal": "arXiv:2611.31301v2 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both. Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a detector relies on the picture, the voice, or encoding traces. We present MOZAIC, a paired benchmark with a 4-way label in which every source clip is released in all four combinations of real or fake video and real or fake audio so each modality contribution can be measured directly. Fakes cover inner-face swapping, whole-frame video diffusion and voice conversion. MOZAIC has 137,745 clips from 15,014 source pairs and four tasks: T1 AV authenticity, T2 manipulation type, T3 identity verification and T4 explanation. We evaluate 12 AV multimodal LLMs (MLLMs), train four detectors and fine-tune MLLMs with LoRA. Overall, the best MLLM reaches only 35.6% on the four-way T1 and catches far more video-only fakes than voice-only fakes (43.6% vs 7.5%). Trained detectors reach 98.4% on T1, and LoRA fine-tuning raises explanation scores (OmniVinci 4.17 to 7.40, Qwen2.5-Omni 4.42 to 6.98), but the best T1 detector falls to 78.3% when the face-swap generator is held out of training, so generalizat",
+      "originalLanguage": "en",
+      "author": "Shaina Raza, Mohamed Hafez, Ahmed Y. Radwan, Khalid Elgazzar, Kathryn Hume",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [
+        "https://vectorinstitute.github.io/mozaic/"
+      ],
+      "publishedAt": "2026-11-26T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.31301",
+          "publishedAt": "2026-11-26T05:00:00.000Z",
+          "title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://vectorinstitute.github.io/mozaic/"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该论文提出首个按音视频真/假四种组合配对的深度伪造基准，能直接测量检测器对各模态的依赖，并揭示当前多模态大模型在纯语音伪造上的严重短板与跨生成器泛化不足，对检测研究与评测设计有直接参考价值。",
+      "importanceReasonEn": "The paper introduces a paired deepfake benchmark with all four real/fake audio-video combinations, enabling direct measurement of modality reliance and exposing both the severe weakness of current MLLMs on voice-only fakes and poor cross-generator generalization, which is directly useful for detecti",
+      "scoringMode": "ai",
+      "titleZh": "MOZAIC：用于辨别真伪的音视频深度伪造基准",
+      "titleEn": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+      "summaryZh": "arXiv:2611.31301v2 新发布。音视频（AV）深度伪造可以伪造人脸、声音或两者兼有。多数基准只判断片段真伪，无法揭示检测器依赖画面、声音还是编码痕迹。我们提出 MOZAIC，一个带四分类标签的配对基准：每个源片段都以视频真/假与音频真/假的全部四种组合发布，从而可直接测量各模态贡献。伪造涵盖内脸替换、整帧视频扩散和声音转换。MOZAIC 含 15,014 个源对生成的 137,745 个片段，设四项任务：T1 音视频真实性、T2 操纵类型、T3 身份验证、T4 解释。我们评估了 12 个音视频多模态大模型（MLLM），训练了四个检测器，并用 LoRA 微调 MLLM。总体而言，最佳 MLLM 在四分类 T1 上仅达 35.6%，且对纯视频伪造的识别率远高于纯语音伪造（43.6% 对 7.5%）。训练后的检测器在 T1 上达 98.4%，LoRA 微调提升了解释分数（OmniVinci 从 4.17 升至 7.40，Qwen2.5-Omni 从 4.42 升至 6.98），但最佳 T1 检测器在训练中排除换脸生成器后降至 78.3%，说明泛化能力有限。",
+      "summaryEn": "arXiv:2611.31301v2 Announce Type: new. Audio-video (AV) deepfakes can fake the face, the voice, or both. Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a detector relies on the picture, the voice, or encoding traces. We present MOZAIC, a paired benchmark with a 4-way label in which every source clip is released in all four combinations of real or fake video and real or fake audio so each modality contribution can be measured directly. Fakes cover inner-face swapping, whole-frame video diffusion and voice conversion. MOZAIC has 137,745 clips from 15,014 source pairs and four tasks: T1 AV authenticity, T2 manipulation type, T3 identity verification and T4 explanation. We evaluate 12 AV multimodal LLMs (MLLMs), train four detectors and fine-tune MLLMs wit",
+      "keywords": [
+        "MOZAIC",
+        "AV deepfake",
+        "4-way label",
+        "T1 authenticity",
+        "LoRA fine-tuning",
+        "generalization"
+      ],
+      "topics": [
+        "deepfake detection",
+        "audio-video benchmark",
+        "multimodal LLM",
+        "face swap",
+        "voice conversion"
+      ],
+      "models": [
+        "OmniVinci",
+        "Qwen2.5-Omni"
+      ],
+      "detailZh": "该论文发布 MOZAIC 音视频深度伪造基准，核心设计是配对四分类标签：每个源片段同时提供视频真/假与音频真/假的全部四种组合，因此可以分别测量检测器对画面和声音的依赖，而不是只回答整段真伪。伪造类型覆盖内脸替换、整帧视频扩散和声音转换。\n\n数据规模为 15,014 个源对生成的 137,745 个片段，设四项任务：T1 音视频真实性、T2 操纵类型、T3 身份验证、T4 解释。\n\n实验评估了 12 个音视频多模态大模型，训练了四个检测器，并用 LoRA 微调 MLLM。结果显示最佳 MLLM 在四分类 T1 上仅 35.6%，对纯视频伪造识别率 43.6%，对纯语音伪造仅 7.5%。训练后的检测器在 T1 上达 98.4%。LoRA 微调显著提升解释分数：OmniVinci 从 4.17 升至 7.40，Qwen2.5-Omni 从 4.42 升至 6.98。\n\n泛化方面，最佳 T1 检测器在训练中排除换脸生成器后降至 78.3%，说明对未见生成器的泛化能力有限。",
+      "keyPointsZh": [
+        "MOZAIC 采用配对四分类标签，每个源片段提供视频真/假与音频真/假的全部四种组合。",
+        "数据集含 15,014 个源对生成的 137,745 个片段，覆盖内脸替换、整帧视频扩散和声音转换。",
+        "最佳多模态大模型在四分类 T1 上仅 35.6%，纯语音伪造识别率仅 7.5%，远低于纯视频伪造的 43.6%。",
+        "训练后的检测器在 T1 上达 98.4%，但排除换脸生成器后最佳检测器降至 78.3%。",
+        "LoRA 微调提升解释分数：OmniVinci 4.17→7.40，Qwen2.5-Omni 4.42→6.98。"
+      ],
+      "impactZh": "该基准把真伪判断拆解为音视频四组合，使检测器对各模态的依赖可被量化，暴露了当前多模态大模型在纯语音伪造上的严重盲区，并提示跨生成器泛化仍是检测落地的主要障碍。",
+      "readerImpactZh": "",
+      "userImpactZh": "对开发检测系统的团队而言，该基准提示不能只依赖视频线索，需专门覆盖纯语音伪造场景，并在评测中纳入未见生成器以检验泛化；LoRA 微调可改善解释质量，但不能替代检测器训练。",
+      "howItWorksZh": "MOZAIC 对每个源片段生成视频真/假与音频真/假的四种组合，形成配对四分类标签，从而在评测时可直接比较同一内容在不同模态伪造下的检测表现。伪造由内脸替换、整帧视频扩散和声音转换三类方法产生。评测设四项任务：T1 判断音视频真实性，T2 识别操纵类型，T3 验证身份，T4 给出解释。实验对 12 个音视频多模态大模型直接评测，另训练四个检测器，并用 LoRA 对 MLLM 做微调以提升解释分数。",
+      "interpretationZh": "论文报告的事实是：配对四分类设计可测量模态贡献；MLLM 在四分类 T1 上表现很低且严重偏向视频线索；专用检测器在同分布下接近饱和，但排除换脸生成器后明显下降。由此可合理推断，现有 MLLM 尚不能可靠承担音视频真伪判断，检测器的高分部分依赖与训练生成器相同的分布。",
+      "limitationsZh": "摘要未给出各任务的详细定义、数据采集来源与人群分布，也未说明 T2、T3、T4 的具体指标和跨生成器实验的完整设置；78.3% 的泛化结果仅针对换脸生成器留出这一种情形，其他生成器的泛化情况未在摘要中报告。",
+      "actionStepsZh": [
+        "在评测音视频伪造检测时采用配对四组合标签，分别报告视频与音频模态的识别率。",
+        "对纯语音伪造单独设评测项，避免被视频线索的高识别率掩盖。",
+        "在训练集中留出至少一个生成器做泛化测试，报告留出后的性能下降。",
+        "如需解释性输出，可考虑 LoRA 微调，但需与检测准确率分开评估。"
+      ],
+      "detailCompleteness": "full",
+      "visual": {
+        "type": "comparison",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "多模态大模型在四分类 T1 上仅 35.6%，且纯语音伪造识别率 7.5% 远低于纯视频伪造 43.6%；专用检测器同分布达 98.4%，但留出换脸生成器后降至 78.3%。",
+        "data": [
+          {
+            "label": "最佳 MLLM T1 四分类",
+            "value": 35.6,
+            "display": ""
+          },
+          {
+            "label": "MLLM 纯视频伪造识别",
+            "value": 43.6,
+            "display": ""
+          },
+          {
+            "label": "MLLM 纯语音伪造识别",
+            "value": 7.5,
+            "display": ""
+          },
+          {
+            "label": "训练检测器 T1",
+            "value": 98.4,
+            "display": ""
+          },
+          {
+            "label": "检测器留出换脸生成器",
+            "value": 78.3,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.31301",
+          "publishedAt": "2026-11-26T05:00:00.000Z",
+          "title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://vectorinstitute.github.io/mozaic/"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-26T05:00:00.000Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-26T05:00:00.000Z",
+            "label": "11/26 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-26T05:58:17.592Z",
+            "label": "11/26 13:58",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:56:35.185Z",
+            "label": "11/26 14:56",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:54:52.777Z",
+            "label": "11/26 15:54",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "77050cf38aa17dde",
+      "normalizedUrl": "https://arxiv.org/abs/2611.31329",
+      "originalUrl": "https://arxiv.org/abs/2611.31329",
+      "titleOriginal": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
+      "summaryOriginal": "arXiv:2611.31329v1 Announce Type: new Abstract: Attribute reduction in incomplete information systems is difficult because missing values break the equivalence-class structure of rough set theory. We propose the Conservative Overlap Fuzzy Rough Set (COFRS) model. Each object is described by its set of present attributes. The similarity of two objects is a weighted overlap on the attributes present in both, divided by the fixed number of attributes |A| instead of the size of their union, so missing values are penalised globally and are not matched as wildcards. From this similarity we define a soft dependency degree based on weighted granule consistency, and we search for reducts by greedy backward elimination in O(|U|^2 |A|^2) time. We show that the relation is symmetric and non-reflexive, that the dependency degree is not monotone, and we give a sufficient condition under which monotonicity holds. On 11 UCI benchmarks with missing rates from 0.15% to 20.46%, COFRS gives the smallest reducts on average (4.1 attributes, against 5.0-11.2 for Tolerance-RS, a range-threshold variant Tol-RS_tau, Zhou-RS and the min-aggregation variant COFRS-min). The difference is significant against To",
+      "originalLanguage": "en",
+      "author": "Trung Hieu Vuong, Van Thien Nguyen, Nhu Son Nguyen, Thanh Dai Tran",
+      "category": "research",
+      "sourceType": "paper",
+      "authority": 92,
+      "sourcePriority": 60,
+      "images": [],
+      "resourceLinks": [],
+      "publishedAt": "2026-11-26T05:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "paper",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.31329",
+          "publishedAt": "2026-11-26T05:00:00.000Z",
+          "title": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "该论文针对不完整数据下的属性约简提出新模型，并在 11 个 UCI 基准上取得更小约简，属于粗糙集与特征选择方向的方法论进展，但应用范围较窄、尚属预印本。",
+      "importanceReasonEn": "The paper proposes a new model for attribute reduction with incomplete data and achieves smaller reducts on 11 UCI benchmarks, a methodological advance in rough sets and feature selection, though narrow in scope and still a preprint.",
+      "scoringMode": "ai",
+      "titleZh": "面向不完整数据的保守重叠模糊粗糙集",
+      "titleEn": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
+      "summaryZh": "arXiv:2611.31329v1 新论文摘要：不完整信息系统中的属性约简因缺失值破坏粗糙集理论的等价类结构而困难。作者提出保守重叠模糊粗糙集（COFRS）模型：每个对象由其现有属性集合描述；两个对象的相似度是在双方共有属性上的加权重叠，除以固定属性总数 |A| 而非并集大小，从而对缺失值进行全局惩罚，不将其视为通配符匹配。基于该相似度定义加权粒度一致性的软依赖度，并用贪心后向消除在 O(|U|^2 |A|^2) 时间内搜索约简。作者证明该关系对称但非自反、依赖度不单调，并给出单调性成立的充分条件。在 11 个 UCI 基准（缺失率 0.15% 至 20.46%）上，COFRS 平均得到最小约简（4.1 个属性，对比 Tolerance-RS、范围阈值变体 Tol-RS_tau、Zhou-RS 和最小聚合变体 COFRS-min 的 5.0–11.2 个），差异显著。",
+      "summaryEn": "arXiv:2611.31329v1 new paper abstract: Attribute reduction in incomplete information systems is difficult because missing values break the equivalence-class structure of rough set theory. The authors propose the Conservative Overlap Fuzzy Rough Set (COFRS) model: each object is described by its set of present attributes; similarity between two objects is a weighted overlap on attributes present in both, divided by the fixed number of attributes |A| rather than the union size, so missing values are penalised globally and not matched as wildcards. From this similarity they define a soft dependency degree based on weighted granule consistency and search for reducts by greedy backward elimination in O(|U|^2 |A|^2) time. They show the relation is symmetric but non-reflexive, the dependency degr",
+      "keywords": [
+        "保守重叠模糊粗糙集",
+        "不完整信息系统",
+        "属性约简",
+        "软依赖度",
+        "贪心后向消除",
+        "UCI 基准"
+      ],
+      "topics": [
+        "粗糙集",
+        "模糊粗糙集",
+        "属性约简",
+        "不完整数据",
+        "缺失值处理"
+      ],
+      "models": [
+        "COFRS",
+        "COFRS-min",
+        "Tolerance-RS",
+        "Tol-RS_tau",
+        "Zhou-RS"
+      ],
+      "detailZh": "该论文关注不完整信息系统中的属性约简问题。传统粗糙集理论依赖等价类结构，而缺失值会破坏这一结构，使约简变得困难。作者提出保守重叠模糊粗糙集（COFRS）模型：每个对象由其现有属性集合描述，两个对象的相似度定义为双方共有属性上的加权重叠，并除以固定属性总数 |A|，而不是除以并集大小。这样缺失值会被全局惩罚，而不会被当作通配符匹配。\n\n基于该相似度，作者定义了基于加权粒度一致性的软依赖度，并采用贪心后向消除搜索约简，时间复杂度为 O(|U|^2 |A|^2)。理论分析方面，作者证明该关系是对称但非自反的，依赖度不单调，并给出单调性成立的充分条件。\n\n实验在 11 个 UCI 基准数据集上进行，缺失率从 0.15% 到 20.46%。COFRS 平均得到最小约简，为 4.1 个属性；对比方法 Tolerance-RS、范围阈值变体 Tol-RS_tau、Zhou-RS 和最小聚合变体 COFRS-min 的平均约简为 5.0 至 11.2 个属性。摘要称该差异相对于对比方法显著。",
+      "keyPointsZh": [
+        "提出 COFRS 模型，用固定属性总数 |A| 归一化共有属性加权重叠，对缺失值全局惩罚而非通配符匹配。",
+        "定义基于加权粒度一致性的软依赖度，并用贪心后向消除在 O(|U|^2 |A|^2) 时间内搜索约简。",
+        "证明相似关系对称但非自反、依赖度不单调，并给出单调性成立的充分条件。",
+        "在 11 个 UCI 基准（缺失率 0.15%–20.46%）上平均约简为 4.1 个属性，小于对比方法的 5.0–11.2 个。"
+      ],
+      "impactZh": "为不完整数据下的特征选择与属性约简提供了一种对缺失值更保守的处理思路，并给出理论性质与基准对比，可作为粗糙集方法在缺失数据场景下的参考基线。",
+      "readerImpactZh": "",
+      "userImpactZh": "对从事特征选择、数据预处理或粗糙集方法研究的开发者与团队，COFRS 提供了一种在缺失值较多时压缩属性数量的可选方法，并给出了复杂度与理论性质，便于复现与对比。",
+      "howItWorksZh": "1）将每个对象表示为其现有属性集合；2）相似度取两对象共有属性上的加权重叠，除以固定属性总数 |A|，使缺失值被全局惩罚；3）由该相似度计算基于加权粒度一致性的软依赖度；4）用贪心后向消除逐步删除属性以搜索约简，复杂度 O(|U|^2 |A|^2)。",
+      "interpretationZh": "论文报告的事实是：COFRS 在 11 个 UCI 基准上平均约简最小（4.1 个属性），并给出了对称性、非自反性与非单调性等理论结论。合理推断是：固定分母的归一化方式使缺失值越多相似度越低，从而避免把缺失当作匹配，这可能是约简更小的原因之一；但摘要未给出完整实验细节与统计检验数值。",
+      "limitationsZh": "当前仅有 arXiv 摘要，缺少完整实验设置、统计检验细节与运行时间对比；摘要中“差异显著”的表述未给出具体显著性数值；结论基于 11 个 UCI 基准，泛化性有待更多数据验证；论文为预印本，尚未经同行评审。",
+      "actionStepsZh": [
+        "在含缺失值的表格数据上，可将 COFRS 的固定分母相似度作为特征筛选的候选方法进行对比实验。",
+        "复现时注意其依赖度不单调，贪心后向消除不保证全局最优，需结合充分条件判断单调性。",
+        "与 Tolerance-RS、Zhou-RS 等基线在相同缺失率区间上对比约简大小与下游任务表现。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": {
+        "type": "bar",
+        "titleZh": "数据对比",
+        "unit": "",
+        "noteZh": "",
+        "insightZh": "COFRS 平均约简为 4.1 个属性，低于对比方法的 5.0–11.2 个属性区间。",
+        "data": [
+          {
+            "label": "COFRS",
+            "value": 4.1,
+            "display": ""
+          },
+          {
+            "label": "对比方法范围下限",
+            "value": 5,
+            "display": ""
+          },
+          {
+            "label": "对比方法范围上限",
+            "value": 11.2,
+            "display": ""
+          }
+        ]
+      },
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "arxiv-ai",
+          "name": "arXiv Artificial Intelligence",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2611.31329",
+          "publishedAt": "2026-11-26T05:00:00.000Z",
+          "title": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
+          "authority": 92,
+          "sourcePriority": 60,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": []
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-26T05:00:00.000Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-26T05:00:00.000Z",
+            "label": "11/26 13:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-26T05:58:17.592Z",
+            "label": "11/26 13:58",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:56:35.185Z",
+            "label": "11/26 14:56",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:54:52.777Z",
+            "label": "11/26 15:54",
+            "value": 45,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
+            "value": 55,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "07123c15091dbf6e",
+      "normalizedUrl": "https://calif.io/research/tortilla-with-onion",
+      "originalUrl": "https://calif.io/research/tortilla-with-onion",
+      "titleOriginal": "Calif 披露 Tor Browser 15.0.22 UAF 漏洞链可致真实 IP 泄露",
+      "summaryOriginal": "Calif 在 OpenAI Patch the Planet 项目下发布研究，展示恶意网站可通过 UAF 漏洞链绕过 Tor Browser 15.0.22 默认防御，泄露用户真实 IP。",
+      "originalLanguage": "zh",
+      "author": "Calif：Research（AI 漏洞研究）",
+      "category": "research",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/gv1y811sp5p9kl7p3ci7xjt5n",
+        "https://calif.io/research/tortilla-with-onion"
+      ],
+      "publishedAt": "2026-11-26T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-26T04:04:08.093Z",
+      "contentType": "paper",
+      "evidenceLevel": "unverified",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/gv1y811sp5p9kl7p3ci7xjt5n"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:gv1y811sp5p9kl7p3ci7xjt5n",
+          "name": "Calif：Research（AI 漏洞研究）",
+          "type": "aggregator",
+          "url": "https://calif.io/research/tortilla-with-onion",
+          "publishedAt": "2026-11-26T00:00:00.000Z",
+          "title": "Calif 披露 Tor Browser 15.0.22 UAF 漏洞链可致真实 IP 泄露",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/gv1y811sp5p9kl7p3ci7xjt5n",
+            "https://calif.io/research/tortilla-with-onion"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该研究声称可绕过 Tor Browser 的默认隐私防御并泄露真实 IP，直接触及匿名浏览的核心安全承诺，对隐私工具用户具有较高关注价值。",
+      "importanceReasonEn": "The research claims to bypass Tor Browser's default privacy defenses and leak the real IP, directly touching the core security promise of anonymous browsing and warranting attention from privacy-tool users.",
+      "scoringMode": "ai",
+      "titleZh": "Calif 披露 Tor Browser 15.0.22 UAF 漏洞链可致真实 IP 泄露",
+      "titleEn": "Calif Discloses Tor Browser 15.0.22 UAF Exploit Chain That Can Leak Real IP",
+      "summaryZh": "Calif 在 OpenAI Patch the Planet 项目下发布研究，展示恶意网站可通过 UAF 漏洞链绕过 Tor Browser 15.0.22 默认防御，泄露用户真实 IP。",
+      "summaryEn": "Calif published research under OpenAI's Patch the Planet project showing that a malicious website can bypass Tor Browser 15.0.22's default defenses via a use-after-free (UAF) exploit chain and leak the user's real IP address.",
+      "keywords": [
+        "Tor Browser 15.0.22",
+        "UAF",
+        "真实 IP 泄露",
+        "漏洞链",
+        "Patch the Planet"
+      ],
+      "topics": [
+        "Tor Browser",
+        "use-after-free",
+        "exploit chain",
+        "privacy",
+        "AI vulnerability research"
+      ],
+      "models": [],
+      "detailZh": "Calif 在 OpenAI 的 Patch the Planet 项目下发布了一项漏洞研究，目标为 Tor Browser 15.0.22 版本。研究称，恶意网站可以借助一条 use-after-free（UAF，释放后使用）漏洞链，绕过该版本的默认防御机制，最终导致用户真实 IP 地址泄露。\n\n根据现有信息，攻击路径的起点是用户访问一个恶意网站，随后通过 UAF 类内存安全缺陷串联利用，突破 Tor Browser 的防护。研究将这一问题定位为可实际触发的漏洞链，而非单纯的理论缺陷。\n\n目前公开材料仅包含研究标题、所属项目与结论性描述，未披露具体漏洞编号、受影响组件、利用细节或修复状态。因此该发现的实际可利用条件、影响范围以及是否已有补丁，仍有待进一步核实。",
+      "keyPointsZh": [
+        "研究针对 Tor Browser 15.0.22 版本",
+        "漏洞类型为 use-after-free，并以漏洞链形式组合利用",
+        "攻击者通过恶意网站触发，可绕过默认防御",
+        "最终后果是泄露用户真实 IP 地址",
+        "研究发布于 OpenAI Patch the Planet 项目下"
+      ],
+      "impactZh": "若该漏洞链被证实可利用，Tor Browser 用户访问恶意网站时可能失去匿名性，真实 IP 暴露会直接削弱 Tor 的核心隐私保护承诺，并可能影响依赖 Tor 进行敏感通信的记者、活动人士等群体。",
+      "readerImpactZh": "普通 Tor Browser 用户应关注官方后续更新与安全公告，在修复信息明确前避免用该浏览器访问不可信网站。",
+      "userImpactZh": "使用 Tor Browser 进行匿名访问的个人与团队需评估该风险，关注版本更新，并在敏感场景中谨慎打开来源不明的链接。",
+      "howItWorksZh": "",
+      "interpretationZh": "已报告的事实是：Calif 在 Patch the Planet 项目下发布研究，声称 Tor Browser 15.0.22 存在可被恶意网站触发的 UAF 漏洞链并导致真实 IP 泄露。合理推断是：此类漏洞通常涉及浏览器内存管理缺陷，需多个缺陷配合才能突破 Tor 的隔离设计；但具体机制、触发条件和修复情况在现有材料中均未说明，尚不能确认其现实可利用性。",
+      "limitationsZh": "公开信息未提供漏洞编号、受影响组件、利用代码、复现条件或厂商修复状态，也未说明是否已向 Tor Project 报告。研究结论目前仅有研究者单方描述，缺乏独立验证。",
+      "actionStepsZh": [
+        "关注 Tor Project 官方安全公告与 Tor Browser 版本更新",
+        "在修复信息明确前，避免用 Tor Browser 访问来源不可信的网站",
+        "对高敏感场景评估是否需要额外的网络隔离措施"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:gv1y811sp5p9kl7p3ci7xjt5n",
+          "name": "Calif：Research（AI 漏洞研究）",
+          "type": "aggregator",
+          "url": "https://calif.io/research/tortilla-with-onion",
+          "publishedAt": "2026-11-26T00:00:00.000Z",
+          "title": "Calif 披露 Tor Browser 15.0.22 UAF 漏洞链可致真实 IP 泄露",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/gv1y811sp5p9kl7p3ci7xjt5n",
+            "https://calif.io/research/tortilla-with-onion"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-26T00:00:00.000Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-26T00:00:00.000Z",
+            "label": "11/26 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-26T00:59:14.485Z",
+            "label": "11/26 08:59",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T01:58:28.971Z",
+            "label": "11/26 09:58",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T02:57:43.456Z",
+            "label": "11/26 10:57",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T03:56:57.942Z",
+            "label": "11/26 11:56",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:56:12.427Z",
+            "label": "11/26 12:56",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T05:55:26.913Z",
+            "label": "11/26 13:55",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:54:41.398Z",
+            "label": "11/26 14:54",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:53:55.884Z",
+            "label": "11/26 15:53",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "fdc82ec1d1962403",
+      "normalizedUrl": "https://calif.io/research/oempocalypse-part-2",
+      "originalUrl": "https://calif.io/research/oempocalypse-part-2",
+      "titleOriginal": "OEMpocalypse Part 2：利用 Knox DualDAR 漏洞链 root Galaxy S23 与 S26 旗舰机",
+      "summaryOriginal": "Calif Research 发布 OEMpocalypse 系列第二篇，通过 Knox DualDAR 的 confused-deputy 漏洞与内核驱动页 UAF 组成两阶段利用链，从零权限应用在 Galaxy S23、S26 EU、S26 US 和 S26 Ultra 四款机型上高可靠获取 root。",
+      "originalLanguage": "zh",
+      "author": "Calif：Research（AI 漏洞研究）",
+      "category": "research",
+      "sourceType": "aggregator",
+      "authority": 76,
+      "sourcePriority": 96,
+      "images": [],
+      "resourceLinks": [
+        "https://aihot.news/items/g5yjacklnlbp3v51hkzciksjy",
+        "https://calif.io/research/oempocalypse-part-2"
+      ],
+      "publishedAt": "2026-11-26T00:00:00.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": "2026-11-26T04:04:08.070Z",
+      "contentType": "industry",
+      "evidenceLevel": "practitioner",
+      "attribution": {
+        "name": "AIHOT",
+        "url": "https://aihot.news/items/g5yjacklnlbp3v51hkzciksjy"
+      },
+      "sources": [
+        {
+          "id": "aihot-selected:g5yjacklnlbp3v51hkzciksjy",
+          "name": "Calif：Research（AI 漏洞研究）",
+          "type": "aggregator",
+          "url": "https://calif.io/research/oempocalypse-part-2",
+          "publishedAt": "2026-11-26T00:00:00.000Z",
+          "title": "OEMpocalypse Part 2：利用 Knox DualDAR 漏洞链 root Galaxy S23 与 S26 旗舰机",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/g5yjacklnlbp3v51hkzciksjy",
+            "https://calif.io/research/oempocalypse-part-2"
+          ]
+        }
+      ],
+      "importance": 72,
+      "importanceReasonZh": "该研究展示了从零权限应用直达旗舰机 root 的两阶段利用链，涉及三星核心安全组件 Knox DualDAR，对 Android 安全生态和三星设备用户具有实际影响。",
+      "importanceReasonEn": "The research demonstrates a two-stage chain that goes from a zero-permission app to root on flagship devices, involving Samsung's core Knox DualDAR security component, with practical implications for the Android security ecosystem and Samsung device users.",
+      "scoringMode": "ai",
+      "titleZh": "OEMpocalypse 第二篇：利用 Knox DualDAR 漏洞链 root Galaxy S23 与 S26 旗舰机",
+      "titleEn": "OEMpocalypse Part 2: Rooting Galaxy S23 and S26 Flagships via a Knox DualDAR Exploit Chain",
+      "summaryZh": "Calif Research 发布 OEMpocalypse 系列第二篇，通过 Knox DualDAR 的 confused-deputy 漏洞与内核驱动页 UAF 组成两阶段利用链，从零权限应用在 Galaxy S23、S26 EU、S26 US 和 S26 Ultra 四款机型上高可靠获取 root。",
+      "summaryEn": "Calif Research published the second installment of its OEMpocalypse series, chaining a confused-deputy flaw in Knox DualDAR with a kernel driver page use-after-free to gain highly reliable root from a zero-permission app on four devices: Galaxy S23, S26 EU, S26 US and S26 Ultra.",
+      "keywords": [
+        "Knox DualDAR",
+        "confused deputy",
+        "UAF",
+        "Galaxy S23",
+        "Galaxy S26",
+        "root",
+        "Android内核"
+      ],
+      "topics": [
+        "Android安全",
+        "Samsung Knox",
+        "漏洞利用链",
+        "root",
+        "内核漏洞"
+      ],
+      "models": [],
+      "detailZh": "Calif Research 发布了 OEMpocalypse 系列的第二篇研究，主题是针对三星 Galaxy 旗舰机的 root 利用。研究称其构建了一条两阶段利用链，起点是一个零权限的普通应用，终点是在设备上获得 root 权限。\n\n利用链的第一阶段针对 Knox DualDAR 组件中的 confused-deputy（混淆代理）漏洞。confused-deputy 类问题的本质是：一个拥有较高权限的组件被低权限调用方诱导，代为执行了调用方本不应被允许的操作。研究将这一阶段作为提权路径的入口。\n\n第二阶段利用内核驱动中的页级 use-after-free（UAF）漏洞。UAF 指内存已被释放但指针仍被使用，攻击者可在该窗口内操纵内存内容，从而在内核态获得更强的控制能力。两个阶段组合后形成完整的 root 链。\n\n研究称该利用链在四款机型上均能高可靠地获取 root：Galaxy S23、Galaxy S26 EU、Galaxy S26 US 和 Galaxy S26 Ultra。来源未披露具体漏洞编号、受影响固件版本、三星的修复状态，也未说明利用是否需要额外的用户交互或特定配置。",
+      "keyPointsZh": [
+        "研究构建了两阶段利用链：Knox DualDAR 的 confused-deputy 漏洞加内核驱动页 UAF。",
+        "攻击起点为零权限应用，终点为设备 root。",
+        "受影响机型包括 Galaxy S23、S26 EU、S26 US 和 S26 Ultra。",
+        "研究称在四款机型上均可高可靠获取 root。",
+        "来源未披露漏洞编号、固件版本与修复状态。"
+      ],
+      "impactZh": "Knox 是三星设备安全体系的核心组件，若其 DualDAR 模块可被低权限应用滥用，将削弱三星旗舰机的安全边界假设。该研究也说明即便是主打安全的 OEM 定制组件，仍可能存在可组合利用的逻辑缺陷。",
+      "readerImpactZh": "使用上述 Galaxy 机型的普通用户可能面临本地提权风险：恶意应用理论上可在无额外权限的情况下获取系统最高权限。在厂商发布修复前，应谨慎安装来源不明的应用。",
+      "userImpactZh": "对 Android 安全研究者与渗透测试人员而言，该研究提供了 OEM 定制安全组件作为攻击面的思路；对依赖 Knox 保障数据隔离的企业移动管理团队，需关注该链是否影响工作资料（Work Profile）等隔离机制的信任前提。",
+      "howItWorksZh": "按来源描述，利用链分两步：第一步滥用 Knox DualDAR 中的 confused-deputy 缺陷，让高权限组件代替零权限应用执行受限操作，从而跨越权限边界；第二步触发内核驱动的页级 use-after-free，在已释放内存被复用的窗口内操纵内核数据，最终取得 root。来源未给出具体触发代码、偏移或堆布局细节。",
+      "interpretationZh": "已报道的事实是：研究团队声称构建了这条两阶段链，并在四款机型上验证成功。合理推断是：该链依赖三星定制组件的逻辑缺陷与内核驱动的内存安全缺陷同时存在，因此修复可能需要分别针对两个环节。来源未提供漏洞编号、补丁状态或复现材料，实际可利用性与影响范围仍需独立验证。",
+      "limitationsZh": "来源为研究方自述，未提供漏洞 CVE 编号、受影响固件版本、三星回应或修复时间表；也未说明利用是否需要用户交互、是否受 Knox 熔断机制或启动验证影响，以及在其他三星机型上的适用性。四款机型的成功率数据未量化披露。",
+      "actionStepsZh": [
+        "关注三星后续安全公告，确认 Knox DualDAR 相关组件是否已修复。",
+        "在受影响机型上避免安装来源不明的应用，降低本地提权被利用的机会。",
+        "安全团队可评估该利用链对依赖 Knox 隔离机制的企业移动管理策略的影响。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "aihot-selected:g5yjacklnlbp3v51hkzciksjy",
+          "name": "Calif：Research（AI 漏洞研究）",
+          "type": "aggregator",
+          "url": "https://calif.io/research/oempocalypse-part-2",
+          "publishedAt": "2026-11-26T00:00:00.000Z",
+          "title": "OEMpocalypse Part 2：利用 Knox DualDAR 漏洞链 root Galaxy S23 与 S26 旗舰机",
+          "authority": 76,
+          "sourcePriority": 96,
+          "publishedPrecision": "minute",
+          "images": [],
+          "resourceLinks": [
+            "https://aihot.news/items/g5yjacklnlbp3v51hkzciksjy",
+            "https://calif.io/research/oempocalypse-part-2"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-26T00:00:00.000Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
+        "current": 65,
+        "peak": 65,
+        "history": [
+          {
+            "at": "2026-11-26T00:00:00.000Z",
+            "label": "11/26 08:00",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-26T00:59:14.485Z",
+            "label": "11/26 08:59",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T01:58:28.971Z",
+            "label": "11/26 09:58",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T02:57:43.456Z",
+            "label": "11/26 10:57",
+            "value": 31,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T03:56:57.942Z",
+            "label": "11/26 11:56",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:56:12.427Z",
+            "label": "11/26 12:56",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T05:55:26.913Z",
+            "label": "11/26 13:55",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:54:41.398Z",
+            "label": "11/26 14:54",
+            "value": 54,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:53:55.884Z",
+            "label": "11/26 15:53",
+            "value": 59,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
+            "value": 65,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
     {
       "id": "3c53fbfc405d080f",
       "normalizedUrl": "https://simonwillison.net/2026/Nov/25/scott-aaronson",
@@ -49,41 +752,40 @@
           ]
         }
       ],
-      "importance": 42,
-      "importanceReasonZh": "这是知名理论计算机科学家对 AI 辅助数学发现潜力的公开表态，具有观点影响力，但本身不含具体研究结果或可验证数据。",
-      "importanceReasonEn": "A prominent theoretical computer scientist's public statement on AI-assisted mathematical discovery carries opinion influence, but contains no concrete results or verifiable data.",
+      "importance": 38,
+      "importanceReasonZh": "这是一位知名理论计算机科学家对 AI 与数学关系的公开评论，观点鲜明但属于个人判断，不含具体研究结果或数据。",
+      "importanceReasonEn": "This is a public remark by a prominent theoretical computer scientist on AI and mathematics. It is a striking opinion but contains no concrete results or data.",
       "scoringMode": "ai",
-      "titleZh": "Scott Aaronson：大语言模型正开启数学真理的新大陆",
-      "titleEn": "Scott Aaronson: LLMs Are Opening a New Continent of Mathematical Truth",
-      "summaryZh": "Scott Aaronson 以范列文虎克和伽利略改良观测工具作类比，认为大语言模型带来的不是零散的复杂度问题解答，而是一片此前只能透过迷雾窥见的数学真理新大陆。",
-      "summaryEn": "Scott Aaronson compares large language models to van Leeuwenhoek's microscope and Galileo's telescope, arguing they are not delivering one-off answers to complexity questions but revealing a whole new continent of mathematical truth previously glimpsed only through fog.",
+      "titleZh": "Scott Aaronson：大语言模型正开启数学真理的“新大陆”",
+      "titleEn": "Scott Aaronson: LLMs Are Opening a 'New Continent' of Mathematical Truth",
+      "summaryZh": "计算机科学家 Scott Aaronson 以范·列文虎克和伽利略的比喻，形容大语言模型让人类对复杂性理论乃至整个数学真理宇宙的分辨率大幅提升，不再只是零散地解决单个问题。",
+      "summaryEn": "Computer scientist Scott Aaronson compares large language models to van Leeuwenhoek's microscope and Galileo's telescope, saying they have sharply improved our resolution into the complexity-theoretic universe and the broader universe of mathematical truth, rather than merely yielding one-off solutions to individual problems.",
       "keywords": [
         "Scott Aaronson",
+        "复杂性理论",
         "数学真理",
-        "复杂度理论",
         "大语言模型",
-        "科学发现"
+        "AI 科研"
       ],
       "topics": [
-        "mathematics",
-        "llms",
-        "ai",
-        "generative-ai"
+        "大语言模型",
+        "数学研究",
+        "复杂性理论",
+        "AI 辅助科研"
       ],
       "models": [],
-      "detailZh": "Simon Willison 在其博客中引用并标注了 Scott Aaronson 的一段话。Aaronson 在文中表示，如今已经很明显，我们将会得到的不是针对这个或那个复杂度问题的一次性解答，而是一整片全新的数学真理大陆——一片此前只能透过迷雾隐约窥见的大陆。\n\n他用两个科学史上的观测工具革新作类比：范列文虎克第一次把显微镜对准池水，伽利略第一次把望远镜对准星空。Aaronson 认为，这或许能让人大致体会，我们对复杂度理论宇宙以及其背后整个数学真理宇宙的“分辨率”如今提升到了什么程度。\n\n这段话属于观点性表述，没有给出具体的技术方法、实验结果或案例。它反映的是一位理论计算机科学家对 AI（尤其是大语言模型）在数学发现中作用的判断，而非一项可复现的研究成果。\n\n原始引用来自 Aaronson 本人的文字，经 Simon Willison 摘录传播，标签为 mathematics、llms、ai、generative-ai。",
+      "detailZh": "这条内容来自 Simon Willison 的引用，原文是理论计算机科学家 Scott Aaronson 的一段评论。Aaronson 表示，现在已经很明显：大语言模型带来的不会是对这个或那个复杂性问题的零散解答，而是一整块此前只能透过迷雾隐约看到的数学真理“新大陆”。\n\n他用两个科学史比喻来说明这种变化：范·列文虎克第一次把显微镜对准池水，伽利略第一次把望远镜对准星空。Aaronson 认为，这两个时刻可以让人大致体会，人类对复杂性理论宇宙、以及其背后整个数学真理宇宙的“分辨率”如今提升了多少。\n\n需要说明的是，这段文字是观点性表达，没有给出具体的研究案例、模型名称、实验结果或数据。它反映的是一位资深理论计算机科学家对 AI 在数学发现中作用的整体判断，而非某项可验证的技术成果。",
       "keyPointsZh": [
-        "Scott Aaronson 认为 AI 将带来整片新的数学真理领域，而非零散的问题解答。",
-        "他以范列文虎克用显微镜观察池水、伽利略用望远镜观测星空作类比。",
-        "该表述属于观点，未附带具体方法、实验或可验证结果。",
-        "内容由 Simon Willison 摘录传播，标签涉及数学、大语言模型与生成式 AI。"
+        "Scott Aaronson 认为大语言模型将带来系统性的数学发现，而非零散解题。",
+        "他用显微镜和望远镜的发明类比 AI 提升人类对数学真理的“分辨率”。",
+        "该表述属于观点性评论，未附带具体研究结果或数据。"
       ],
-      "impactZh": "这类表态来自理论计算机科学领域的知名人物，会影响学界和公众对 AI 在数学研究中角色的预期，也可能推动更多研究者尝试用大语言模型辅助数学探索。",
+      "impactZh": "这类来自知名理论计算机科学家的公开表态，会影响学界和公众对 AI 在基础数学研究中角色的预期，也可能推动更多研究者尝试用大模型辅助数学探索。",
       "readerImpactZh": "",
-      "userImpactZh": "",
+      "userImpactZh": "对使用 AI 辅助数学或理论研究的用户而言，这一观点提示可以把大模型当作拓展探索视野的工具，而不只是求解单个问题的计算器；但原文未提供具体方法或验证结果。",
       "howItWorksZh": "",
-      "interpretationZh": "可确认的事实是：Aaronson 发表了上述类比性评论，Willison 进行了引用。合理的推断是：他认为大语言模型正在显著提升人类探索数学与复杂度理论的能力，其意义类似观测工具的发明。但这段话没有说明具体是哪些工具、哪些发现或哪些证据支撑这一判断。",
-      "limitationsZh": "该内容仅为一段观点引语，没有提供具体研究、实验数据或案例；Aaronson 所指的“新大陆”具体包含什么、由哪些工作体现，原文未说明；类比本身是修辞而非论证，不能作为 AI 数学能力的证据。",
+      "interpretationZh": "已报道的事实是：Aaronson 发表了上述评论，并用显微镜与望远镜的比喻描述 AI 对数学探索的影响。合理推断是：他认为大语言模型的价值在于扩大人类可触及的数学问题空间，而非替代严格的数学证明。原文没有说明具体机制或证据。",
+      "limitationsZh": "该内容仅为一段观点引语，没有具体案例、模型、实验或数据支撑；Aaronson 所描述的“新大陆”是否已经出现、以何种形式出现，均无法从原文核实。",
       "actionStepsZh": [],
       "detailCompleteness": "limited",
       "visual": null,
@@ -112,9 +814,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-25T23:26:32.000Z",
-        "endedAt": "2026-11-26T00:15:22.023Z",
-        "current": 48,
-        "peak": 48,
+        "endedAt": "2026-11-26T08:53:10.370Z",
+        "current": 46,
+        "peak": 46,
         "history": [
           {
             "at": "2026-11-25T23:26:32.000Z",
@@ -123,9 +825,63 @@
             "reports": 0
           },
           {
-            "at": "2026-11-26T00:15:22.023Z",
-            "label": "11/26 08:15",
-            "value": 48,
+            "at": "2026-11-26T00:23:11.837Z",
+            "label": "11/26 08:23",
+            "value": 17,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T01:19:51.674Z",
+            "label": "11/26 09:19",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T02:16:31.511Z",
+            "label": "11/26 10:16",
+            "value": 24,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T03:13:11.348Z",
+            "label": "11/26 11:13",
+            "value": 27,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:09:51.185Z",
+            "label": "11/26 12:09",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T05:06:31.022Z",
+            "label": "11/26 13:06",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:03:10.859Z",
+            "label": "11/26 14:03",
+            "value": 36,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:59:50.696Z",
+            "label": "11/26 14:59",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:56:30.533Z",
+            "label": "11/26 15:56",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
+            "value": 46,
             "reports": 1
           }
         ],
@@ -211,43 +967,47 @@
           ]
         }
       ],
-      "importance": 55,
-      "importanceReasonZh": "该条目指出AI辅助数学证明的产出速度正在加快，涉及埃尔德什问题、矩阵乘法与傅里叶变换等多个方向，但源材料仅有一句摘要，缺少具体证明、作者或验证信息，因此重要性中等且证据有限。",
-      "importanceReasonEn": "The item suggests AI-assisted math proofs are arriving faster, spanning Erdős problems, matrix multiplication and Fourier transforms, but the source is only a one-line summary with no specific proofs, authors or verification, so importance is moderate and evidence limited.",
+      "importance": 38,
+      "importanceReasonZh": "该条目仅以标题和一句话摘要形式出现，指出AI相关数学证明产出加快，涉及埃尔德什问题、矩阵乘法与傅里叶变换等方向，但未提供具体证明、作者、方法或数据，信息量有限。",
+      "importanceReasonEn": "The item appears only as a headline and one-line summary noting faster output of AI-related math proofs across Erdős problems, matrix multiplication and Fourier transforms, but gives no specific proofs, authors, methods or data, so information value is limited.",
       "scoringMode": "ai",
-      "titleZh": "数学证明的产出速度已超过我们的阅读速度",
-      "titleEn": "Math Proofs Are Landing Faster Than We Can Read Them",
+      "titleZh": "[AINews] 数学证明的产出速度已超过我们的阅读速度",
+      "titleEn": "[AINews] Math Proofs Are Landing Faster Than We Can Read Them",
       "summaryZh": "2026年11月25日——从埃尔德什问题到矩阵乘法与傅里叶变换的新界。",
       "summaryEn": "November 25, 2026 — From Erdős problems to new bounds for matrix multiplication and Fourier transforms.",
       "keywords": [
-        "数学证明",
-        "AI研究",
+        "AI数学",
         "埃尔德什问题",
         "矩阵乘法",
-        "傅里叶变换"
+        "傅里叶变换",
+        "证明生成"
       ],
       "topics": [
-        "AI数学研究",
-        "自动定理证明",
-        "埃尔德什问题",
-        "矩阵乘法",
-        "傅里叶变换"
+        "AI for mathematics",
+        "Erdős problems",
+        "matrix multiplication",
+        "Fourier transforms",
+        "automated proof generation"
       ],
       "models": [],
-      "detailZh": "Latent Space 于2026年11月25日发布的一条简讯称，数学证明正以超过人们阅读速度的节奏出现，并列举了从埃尔德什问题到矩阵乘法与傅里叶变换新界等方向。该条目属于行业动态汇总，而非单篇论文或官方公告。\n\n从标题与摘要可知，所涉内容集中在数学研究领域，可能由AI系统或AI辅助工具推动，但源材料没有给出具体证明数量、作者、机构、模型名称或验证状态。\n\n摘要提到的三个方向——埃尔德什问题、矩阵乘法新界、傅里叶变换新界——属于不同数学分支，暗示产出并非单一成果，而是多个方向的集中涌现。\n\n由于信息量极少，无法判断这些证明是否经过同行评审、是否由AI独立完成，也无法确认其数学正确性。读者应将其视为趋势信号而非可核验的成果清单。",
+      "detailZh": "该条目来自 Latent Space 的 AINews 栏目，发布日期为2026年11月25日。标题称“数学证明的产出速度已超过我们的阅读速度”，摘要进一步说明内容涉及从埃尔德什问题到矩阵乘法与傅里叶变换的新界。\n\n从现有材料看，这是一则围绕AI参与数学研究进展的汇总性报道，指向多个数学方向的证明或界值结果在短时间内集中出现。但输入未给出具体证明内容、作者、所用模型或工具、证明是否经过同行评审，也未说明这些结果由AI独立完成还是人机协作完成。\n\n因此，目前只能确认该报道的主题方向：数学证明产出节奏加快，覆盖埃尔德什问题、矩阵乘法复杂度界和傅里叶变换相关界值等话题。具体事实、方法与验证状态均需查阅原文。",
       "keyPointsZh": [
-        "Latent Space 简讯称数学证明的产出速度已超过阅读速度",
-        "涉及方向包括埃尔德什问题、矩阵乘法与傅里叶变换的新界",
-        "源材料仅为一句摘要，未提供具体证明、作者或验证信息",
-        "该条目属于行业动态汇总，而非单篇论文或官方公告"
+        "报道日期为2026年11月25日，来源为 Latent Space 的 AINews 栏目。",
+        "标题主张数学证明的产出速度已超过人类阅读速度。",
+        "摘要提及涉及埃尔德什问题、矩阵乘法与傅里叶变换的新界。",
+        "输入未提供具体证明、作者、模型或验证状态。"
       ],
-      "impactZh": "若该趋势属实，意味着AI辅助数学研究的产出节奏可能正在加快，研究社区需要新的筛选、验证与传播机制来跟上证明的涌现速度。",
+      "impactZh": "若报道所述趋势成立，说明AI辅助或自动化的数学证明产出正在加速，可能改变数学研究的节奏与成果审阅方式；但仅凭标题与摘要无法评估具体成果的重要性。",
       "readerImpactZh": "",
       "userImpactZh": "",
       "howItWorksZh": "",
-      "interpretationZh": "已报道的事实是：Latent Space 发布了一条简讯，称数学证明正快速涌现，并点名埃尔德什问题、矩阵乘法与傅里叶变换三个方向。合理推断是：这些成果可能与AI辅助证明工具相关，且数量多到难以逐一阅读。但源材料未说明具体机制、参与方或验证情况，因此不能据此判断任何单项成果的正确性或重要性。",
-      "limitationsZh": "源材料仅有一句摘要，缺少具体证明列表、作者、机构、模型名称、发布时间线与同行评审状态；无法确认这些证明是否由AI独立完成、是否正确，也无法判断‘超过阅读速度’这一说法是否有量化依据。",
-      "actionStepsZh": [],
+      "interpretationZh": "可确认的事实是：该报道以数学证明产出加速为主题，并列举了埃尔德什问题、矩阵乘法与傅里叶变换等方向。合理推断是：这些结果可能与AI辅助证明或自动化数学探索有关，但输入未说明具体技术路径，无法进一步判断。",
+      "limitationsZh": "输入仅为标题和一句话摘要，缺少具体证明、作者、模型、工具、评审状态与时间线；无法确认这些成果是否由AI完成、是否经过验证，也无法评估其数学意义。",
+      "actionStepsZh": [
+        "查阅 Latent Space 原文以获取具体证明与来源链接。",
+        "对涉及的数学结果核对预印本或期刊状态。",
+        "区分AI独立产出与人机协作产出的证据。"
+      ],
       "detailCompleteness": "limited",
       "visual": null,
       "processingError": null,
@@ -291,9 +1051,9 @@
       ],
       "heat": {
         "startedAt": "2026-11-25T22:23:41.000Z",
-        "endedAt": "2026-11-26T00:15:22.023Z",
-        "current": 55,
-        "peak": 55,
+        "endedAt": "2026-11-26T08:53:10.370Z",
+        "current": 46,
+        "peak": 46,
         "history": [
           {
             "at": "2026-11-25T22:23:41.000Z",
@@ -302,15 +1062,69 @@
             "reports": 0
           },
           {
-            "at": "2026-11-25T23:19:31.511Z",
-            "label": "11/26 07:19",
-            "value": 35,
+            "at": "2026-11-25T23:20:54.579Z",
+            "label": "11/26 07:20",
+            "value": 17,
             "reports": 1
           },
           {
-            "at": "2026-11-26T00:15:22.023Z",
-            "label": "11/26 08:15",
-            "value": 55,
+            "at": "2026-11-26T00:18:08.158Z",
+            "label": "11/26 08:18",
+            "value": 20,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T01:15:21.737Z",
+            "label": "11/26 09:15",
+            "value": 23,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T02:12:35.316Z",
+            "label": "11/26 10:12",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T03:09:48.895Z",
+            "label": "11/26 11:09",
+            "value": 29,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:07:02.474Z",
+            "label": "11/26 12:07",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T05:04:16.053Z",
+            "label": "11/26 13:04",
+            "value": 34,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:01:29.632Z",
+            "label": "11/26 14:01",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:58:43.211Z",
+            "label": "11/26 14:58",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:55:56.790Z",
+            "label": "11/26 15:55",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
+            "value": 46,
             "reports": 1
           }
         ],
@@ -432,7 +1246,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-25T20:51:02.000Z",
-        "endedAt": "2026-11-26T00:15:22.023Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -443,26 +1257,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-25T21:42:07.005Z",
-            "label": "11/26 05:42",
-            "value": 27,
+            "at": "2026-11-25T21:56:40.942Z",
+            "label": "11/26 05:56",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-25T22:33:12.011Z",
-            "label": "11/26 06:33",
-            "value": 39,
+            "at": "2026-11-25T23:02:19.885Z",
+            "label": "11/26 07:02",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-25T23:24:17.017Z",
-            "label": "11/26 07:24",
-            "value": 52,
+            "at": "2026-11-26T00:07:58.828Z",
+            "label": "11/26 08:07",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-26T00:15:22.023Z",
-            "label": "11/26 08:15",
+            "at": "2026-11-26T01:13:37.770Z",
+            "label": "11/26 09:13",
+            "value": 32,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T02:19:16.713Z",
+            "label": "11/26 10:19",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T03:24:55.656Z",
+            "label": "11/26 11:24",
+            "value": 42,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:30:34.599Z",
+            "label": "11/26 12:30",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T05:36:13.541Z",
+            "label": "11/26 13:36",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:41:52.484Z",
+            "label": "11/26 14:41",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:47:31.427Z",
+            "label": "11/26 15:47",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
             "value": 65,
             "reports": 1
           }
@@ -526,7 +1382,9 @@
         "AI research automation",
         "industry debate"
       ],
-      "models": [],
+      "models": [
+        "Claude"
+      ],
       "detailZh": "据 TechCrunch AI 报道，Anthropic CEO Dario Amodei 对竞争对手提出的指控作出回应，称所谓他主张“向AI交出人类控制权”的说法“荒谬”。报道未披露指控的具体提出者、场合与原文措辞，也未给出 Amodei 回应的完整语境。\n\n报道同时指出一个行业背景：领先的AI公司正越来越多地自动化自身的研究与模型开发流程。这一趋势与围绕人类监督、控制权归属的争论交织在一起，构成本次公开交锋的语境。\n\n目前可确认的事实仅限于：存在来自竞争对手的指控、Amodei 以“荒谬”予以否认，以及行业研发自动化程度上升这一背景描述。指控的具体内容、双方论据与后续影响均未在来源中展开。",
       "keyPointsZh": [
         "Anthropic CEO Dario Amodei 称竞争对手关于他主张向AI交出人类控制权的指控“荒谬”。",
@@ -562,7 +1420,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-25T19:44:24.000Z",
-        "endedAt": "2026-11-26T00:15:22.023Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
         "current": 55,
         "peak": 55,
         "history": [
@@ -573,32 +1431,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-25T20:38:35.604Z",
-            "label": "11/26 04:38",
+            "at": "2026-11-25T20:56:06.397Z",
+            "label": "11/26 04:56",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-25T22:07:48.794Z",
+            "label": "11/26 06:07",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-25T21:32:47.209Z",
-            "label": "11/26 05:32",
-            "value": 31,
+            "at": "2026-11-25T23:19:31.191Z",
+            "label": "11/26 07:19",
+            "value": 25,
             "reports": 1
           },
           {
-            "at": "2026-11-25T22:26:58.813Z",
-            "label": "11/26 06:26",
-            "value": 39,
+            "at": "2026-11-26T00:31:13.589Z",
+            "label": "11/26 08:31",
+            "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-25T23:21:10.418Z",
-            "label": "11/26 07:21",
-            "value": 47,
+            "at": "2026-11-26T01:42:55.986Z",
+            "label": "11/26 09:42",
+            "value": 33,
             "reports": 1
           },
           {
-            "at": "2026-11-26T00:15:22.023Z",
-            "label": "11/26 08:15",
+            "at": "2026-11-26T02:54:38.383Z",
+            "label": "11/26 10:54",
+            "value": 37,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:06:20.780Z",
+            "label": "11/26 12:06",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T05:18:03.178Z",
+            "label": "11/26 13:18",
+            "value": 44,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:29:45.575Z",
+            "label": "11/26 14:29",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:41:27.972Z",
+            "label": "11/26 15:41",
+            "value": 52,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
             "value": 55,
             "reports": 1
           }
@@ -672,7 +1566,9 @@
         "AI信任",
         "企业级AI"
       ],
-      "models": [],
+      "models": [
+        "GPT / Codex"
+      ],
       "detailZh": "据The Decoder报道，OpenAI正在测试一项名为“私有推理”（Private Inference）的新功能。该功能的目标是让企业能够在其最强大的模型上运行查询，同时OpenAI自身无法访问这些数据。\n\n报道将这一举措放在企业信任的背景下：企业往往因为担心数据被模型提供方看到而不愿将敏感工作交给外部AI服务。OpenAI希望通过“私有推理”承诺不查看企业数据，从而打消这一顾虑。\n\n目前公开信息有限，报道未披露该功能的具体技术实现方式、支持哪些模型、何时正式上线，也未说明“无法访问数据”的具体边界与验证机制。因此该功能仍处于测试阶段，实际效果有待观察。",
       "keyPointsZh": [
         "OpenAI正在测试名为“私有推理”的新功能。",
@@ -716,7 +1612,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-25T18:22:02.000Z",
-        "endedAt": "2026-11-26T00:15:22.023Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -727,39 +1623,281 @@
             "reports": 0
           },
           {
-            "at": "2026-11-25T19:20:55.337Z",
-            "label": "11/26 03:20",
+            "at": "2026-11-25T19:41:13.670Z",
+            "label": "11/26 03:41",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-25T21:00:25.340Z",
+            "label": "11/26 05:00",
             "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-25T20:19:48.674Z",
-            "label": "11/26 04:19",
+            "at": "2026-11-25T22:19:37.010Z",
+            "label": "11/26 06:19",
+            "value": 26,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-25T23:38:48.680Z",
+            "label": "11/26 07:38",
+            "value": 30,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T00:58:00.350Z",
+            "label": "11/26 08:58",
+            "value": 35,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T02:17:12.020Z",
+            "label": "11/26 10:17",
+            "value": 39,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T03:36:23.690Z",
+            "label": "11/26 11:36",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:55:35.360Z",
+            "label": "11/26 12:55",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:14:47.030Z",
+            "label": "11/26 14:14",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:33:58.700Z",
+            "label": "11/26 15:33",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
+            "value": 59,
+            "reports": 1
+          }
+        ],
+        "note": "从新闻发布时间开始，根据公开报道数量、来源权威度与时效估算"
+      }
+    },
+    {
+      "id": "9685432920849ecf",
+      "normalizedUrl": "https://simonwillison.net/2026/Nov/25/datasette-charts",
+      "originalUrl": "https://simonwillison.net/2026/Nov/25/datasette-charts/",
+      "titleOriginal": "datasette-charts 0.3a0",
+      "summaryOriginal": "Release: datasette-charts 0.3a0 I added chart annotations to datasette-charts ! You can now render a chart and then annotate it with lines, shaded areas, labels, or a combination of the three. A chart with annotations looks like this: Here's that same chart in Datasette Lite , where you can tweak the annotations using the chart builder UI: If you also install Datasette Agent the agent can build annotated charts for you. Here's what I got on the agent.datasette.io demo for this prompt: Show a chart comparing Simon's tagged content about LLMs with his tagged content about Datasette, with annotations Tags: datasette , visualization , datasette-charts",
+      "originalLanguage": "en",
+      "author": "",
+      "category": "opensource",
+      "sourceType": "practitioner",
+      "authority": 90,
+      "sourcePriority": 90,
+      "images": [
+        "https://static.simonwillison.net/static/2026/chart-with-annotations.webp",
+        "https://static.simonwillison.net/static/2026/chart-annotate.gif",
+        "https://static.simonwillison.net/static/2026/annotations-agent.webp"
+      ],
+      "resourceLinks": [
+        "https://github.com/datasette/datasette-charts/releases/tag/0.3a0",
+        "https://github.com/datasette/datasette-charts",
+        "https://lite.datasette.io/?install=datasette-charts&url=https://datasette.io/global-power-plants.db#/global-power-plants/-/query?sql=SELECT+CAST%28commissioning_year+%2F+10+AS+INTEGER%29+%2A+10+AS+decade%2C+capacity_mw+FROM+%22global-power-plants%22+WHERE+commissioning_year+BETWEEN+1950+AND+2019+AND+capacity_mw+IS+NOT+NULL#chart=%7B%22v%22%3A1%2C%22type%22%3A%22bar%22%2C%22encoding%22%3A%7B%22x%22%3A%7B%22column%22%3A%22decade%22%2C%22sort%22%3A%22key%22%2C%22limit%22%3A20%2C%22other%22%3Afalse%7D%2C%22y%22%3A%7B%22column%22%3A%22capacity_mw%22%2C%22aggregate%22%3A%22sum%22%7D%7D%2C%22options%22%3A%7B%22orientation%22%3A%22vertical%22%7D%2C%22annotations%22%3A%5B%7B%22type%22%3A%22point%22%2C%22x%22%3A2000%2C%22text%22%3A%22Largest%20decade%20total%20in%20these%20records%3A%201.157%20million%20MW%22%7D%2C%7B%22type%22%3A%22range%22%2C%22x%22%3A1950%2C%22x2%22%3A1990%2C%22text%22%3A%22Much%20smaller%20summed%20capacity%20in%20earlier%20decades%22%7D%2C%7B%22type%22%3A%22line%22%2C%22y%22%3A1000000%2C%22text%22%3A%221%2C000%2C000%20MW%20reference%22%7D%2C%7B%22type%22%3A%22text%22%2C%22left%22%3A0.02%2C%22top%22%3A0.04%2C%22text%22%3A%22Global%20plant%20records%20with%20commissioning%20years%201950–2019%3B%20coverage%20and%20missing%20years%20may%20affect%20comparisons.%22%7D%5D%7D",
+        "https://agent.datasette.io/",
+        "https://simonwillison.net/tags/datasette",
+        "https://simonwillison.net/tags/visualization",
+        "https://simonwillison.net/tags/datasette-charts"
+      ],
+      "publishedAt": "2026-11-25T18:16:50.000Z",
+      "publishedPrecision": "minute",
+      "discoveredAt": null,
+      "contentType": "opensource",
+      "evidenceLevel": "primary",
+      "attribution": null,
+      "sources": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/25/datasette-charts/",
+          "publishedAt": "2026-11-25T18:16:50.000Z",
+          "title": "datasette-charts 0.3a0",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/chart-with-annotations.webp",
+            "https://static.simonwillison.net/static/2026/chart-annotate.gif",
+            "https://static.simonwillison.net/static/2026/annotations-agent.webp"
+          ],
+          "resourceLinks": [
+            "https://github.com/datasette/datasette-charts/releases/tag/0.3a0",
+            "https://github.com/datasette/datasette-charts",
+            "https://lite.datasette.io/?install=datasette-charts&url=https://datasette.io/global-power-plants.db#/global-power-plants/-/query?sql=SELECT+CAST%28commissioning_year+%2F+10+AS+INTEGER%29+%2A+10+AS+decade%2C+capacity_mw+FROM+%22global-power-plants%22+WHERE+commissioning_year+BETWEEN+1950+AND+2019+AND+capacity_mw+IS+NOT+NULL#chart=%7B%22v%22%3A1%2C%22type%22%3A%22bar%22%2C%22encoding%22%3A%7B%22x%22%3A%7B%22column%22%3A%22decade%22%2C%22sort%22%3A%22key%22%2C%22limit%22%3A20%2C%22other%22%3Afalse%7D%2C%22y%22%3A%7B%22column%22%3A%22capacity_mw%22%2C%22aggregate%22%3A%22sum%22%7D%7D%2C%22options%22%3A%7B%22orientation%22%3A%22vertical%22%7D%2C%22annotations%22%3A%5B%7B%22type%22%3A%22point%22%2C%22x%22%3A2000%2C%22text%22%3A%22Largest%20decade%20total%20in%20these%20records%3A%201.157%20million%20MW%22%7D%2C%7B%22type%22%3A%22range%22%2C%22x%22%3A1950%2C%22x2%22%3A1990%2C%22text%22%3A%22Much%20smaller%20summed%20capacity%20in%20earlier%20decades%22%7D%2C%7B%22type%22%3A%22line%22%2C%22y%22%3A1000000%2C%22text%22%3A%221%2C000%2C000%20MW%20reference%22%7D%2C%7B%22type%22%3A%22text%22%2C%22left%22%3A0.02%2C%22top%22%3A0.04%2C%22text%22%3A%22Global%20plant%20records%20with%20commissioning%20years%201950–2019%3B%20coverage%20and%20missing%20years%20may%20affect%20comparisons.%22%7D%5D%7D",
+            "https://agent.datasette.io/",
+            "https://simonwillison.net/tags/datasette",
+            "https://simonwillison.net/tags/visualization",
+            "https://simonwillison.net/tags/datasette-charts"
+          ]
+        }
+      ],
+      "importance": 55,
+      "importanceReasonZh": "这是 datasette-charts 插件的功能更新，为数据可视化增加了标注能力，对使用 Datasette 展示数据的用户有实际价值，但影响范围限于该生态。",
+      "importanceReasonEn": "This is a feature update to the datasette-charts plugin that adds annotation capability to data visualization, practically useful for Datasette users but limited in scope to that ecosystem.",
+      "scoringMode": "ai",
+      "titleZh": "datasette-charts 0.3a0 发布：新增图表标注功能",
+      "titleEn": "datasette-charts 0.3a0 Released with Chart Annotations",
+      "summaryZh": "Simon Willison 发布 datasette-charts 0.3a0，新增图表标注功能，支持在图表上添加线条、阴影区域和标签，并可组合使用。用户可在 Datasette Lite 中通过图表构建器界面调整标注；若同时安装 Datasette Agent，智能体也能自动生成带标注的图表。",
+      "summaryEn": "Simon Willison released datasette-charts 0.3a0, adding chart annotations that let users overlay lines, shaded areas, labels, or a combination on rendered charts. Annotations can be tweaked in the chart builder UI in Datasette Lite, and with Datasette Agent installed the agent can build annotated charts automatically.",
+      "keywords": [
+        "datasette-charts",
+        "图表标注",
+        "Datasette Lite",
+        "Datasette Agent",
+        "可视化"
+      ],
+      "topics": [
+        "datasette",
+        "数据可视化",
+        "开源工具",
+        "AI智能体"
+      ],
+      "models": [],
+      "detailZh": "Simon Willison 发布了 datasette-charts 0.3a0 版本，核心更新是为图表增加标注功能。用户现在可以先渲染图表，再在其上添加线条、阴影区域、标签，或将三者组合使用。\n\n标注可以在 Datasette Lite 的图表构建器界面中调整，方便用户交互式地修改标注内容。\n\n此外，如果用户同时安装 Datasette Agent，智能体可以根据自然语言提示自动构建带标注的图表。作者在 agent.datasette.io 演示中给出了示例提示：比较 Simon 标记的关于 LLM 的内容与关于 Datasette 的内容，并添加标注。\n\n该版本属于 0.3 系列的 alpha 预发布，相关标签包括 datasette、visualization 和 datasette-charts。",
+      "keyPointsZh": [
+        "datasette-charts 0.3a0 新增图表标注功能，支持线条、阴影区域和标签及其组合。",
+        "标注可在 Datasette Lite 的图表构建器界面中调整。",
+        "安装 Datasette Agent 后，智能体可根据提示自动生成带标注的图表。",
+        "该版本为 0.3 系列的 alpha 预发布版本。"
+      ],
+      "impactZh": "该更新让 Datasette 生态中的图表具备注释能力，用户可以在数据可视化中直接标出关键区间或说明，提升图表的信息表达力，并与 Datasette Agent 的自然语言生成流程衔接。",
+      "readerImpactZh": "",
+      "userImpactZh": "使用 datasette-charts 的用户升级后可在图表上添加线条、阴影和标签，并在 Datasette Lite 中交互调整；同时使用 Datasette Agent 的团队可通过自然语言提示直接生成带标注的图表，减少手动配置。",
+      "howItWorksZh": "工作流程为：先渲染图表，再通过图表构建器界面添加标注，标注类型包括线条、阴影区域和标签，可组合使用。在 Datasette Lite 中可直接调整标注；若安装了 Datasette Agent，智能体可根据自然语言提示自动完成图表与标注的构建。",
+      "interpretationZh": "已报道的事实是 0.3a0 新增了标注功能并支持 Datasette Lite 与 Datasette Agent 两种使用方式。可以合理推断，该功能面向需要在图表上突出特定数据区间的用户，但作为 alpha 版本，其稳定性尚未在来源中说明。",
+      "limitationsZh": "来源为发布公告，未提供标注的具体配置语法、API 细节或兼容性说明；0.3a0 为 alpha 预发布版本，可能存在不稳定或后续变更。",
+      "actionStepsZh": [
+        "升级到 datasette-charts 0.3a0 以使用图表标注功能。",
+        "在 Datasette Lite 的图表构建器界面中尝试添加线条、阴影区域和标签。",
+        "如需自动生成带标注图表，可安装 Datasette Agent 并用自然语言提示描述需求。"
+      ],
+      "detailCompleteness": "summary",
+      "visual": null,
+      "processingError": null,
+      "reportCount": 1,
+      "reportTimeline": [
+        {
+          "id": "simon-willison",
+          "name": "Simon Willison",
+          "type": "practitioner",
+          "url": "https://simonwillison.net/2026/Nov/25/datasette-charts/",
+          "publishedAt": "2026-11-25T18:16:50.000Z",
+          "title": "datasette-charts 0.3a0",
+          "authority": 90,
+          "sourcePriority": 90,
+          "publishedPrecision": "minute",
+          "images": [
+            "https://static.simonwillison.net/static/2026/chart-with-annotations.webp",
+            "https://static.simonwillison.net/static/2026/chart-annotate.gif",
+            "https://static.simonwillison.net/static/2026/annotations-agent.webp"
+          ],
+          "resourceLinks": [
+            "https://github.com/datasette/datasette-charts/releases/tag/0.3a0",
+            "https://github.com/datasette/datasette-charts",
+            "https://lite.datasette.io/?install=datasette-charts&url=https://datasette.io/global-power-plants.db#/global-power-plants/-/query?sql=SELECT+CAST%28commissioning_year+%2F+10+AS+INTEGER%29+%2A+10+AS+decade%2C+capacity_mw+FROM+%22global-power-plants%22+WHERE+commissioning_year+BETWEEN+1950+AND+2019+AND+capacity_mw+IS+NOT+NULL#chart=%7B%22v%22%3A1%2C%22type%22%3A%22bar%22%2C%22encoding%22%3A%7B%22x%22%3A%7B%22column%22%3A%22decade%22%2C%22sort%22%3A%22key%22%2C%22limit%22%3A20%2C%22other%22%3Afalse%7D%2C%22y%22%3A%7B%22column%22%3A%22capacity_mw%22%2C%22aggregate%22%3A%22sum%22%7D%7D%2C%22options%22%3A%7B%22orientation%22%3A%22vertical%22%7D%2C%22annotations%22%3A%5B%7B%22type%22%3A%22point%22%2C%22x%22%3A2000%2C%22text%22%3A%22Largest%20decade%20total%20in%20these%20records%3A%201.157%20million%20MW%22%7D%2C%7B%22type%22%3A%22range%22%2C%22x%22%3A1950%2C%22x2%22%3A1990%2C%22text%22%3A%22Much%20smaller%20summed%20capacity%20in%20earlier%20decades%22%7D%2C%7B%22type%22%3A%22line%22%2C%22y%22%3A1000000%2C%22text%22%3A%221%2C000%2C000%20MW%20reference%22%7D%2C%7B%22type%22%3A%22text%22%2C%22left%22%3A0.02%2C%22top%22%3A0.04%2C%22text%22%3A%22Global%20plant%20records%20with%20commissioning%20years%201950–2019%3B%20coverage%20and%20missing%20years%20may%20affect%20comparisons.%22%7D%5D%7D",
+            "https://agent.datasette.io/",
+            "https://simonwillison.net/tags/datasette",
+            "https://simonwillison.net/tags/visualization",
+            "https://simonwillison.net/tags/datasette-charts"
+          ]
+        }
+      ],
+      "heat": {
+        "startedAt": "2026-11-25T18:16:50.000Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
+        "current": 55,
+        "peak": 55,
+        "history": [
+          {
+            "at": "2026-11-25T18:16:50.000Z",
+            "label": "11/26 02:16",
+            "value": 0,
+            "reports": 0
+          },
+          {
+            "at": "2026-11-25T19:36:30.033Z",
+            "label": "11/26 03:36",
+            "value": 18,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-25T20:56:10.067Z",
+            "label": "11/26 04:56",
+            "value": 22,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-25T22:15:50.100Z",
+            "label": "11/26 06:15",
+            "value": 25,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-25T23:35:30.134Z",
+            "label": "11/26 07:35",
             "value": 29,
             "reports": 1
           },
           {
-            "at": "2026-11-25T21:18:42.011Z",
-            "label": "11/26 05:18",
+            "at": "2026-11-26T00:55:10.168Z",
+            "label": "11/26 08:55",
+            "value": 33,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T02:14:50.201Z",
+            "label": "11/26 10:14",
             "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-25T22:17:35.348Z",
-            "label": "11/26 06:17",
+            "at": "2026-11-26T03:34:30.235Z",
+            "label": "11/26 11:34",
+            "value": 40,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:54:10.269Z",
+            "label": "11/26 12:54",
             "value": 44,
             "reports": 1
           },
           {
-            "at": "2026-11-25T23:16:28.685Z",
-            "label": "11/26 07:16",
+            "at": "2026-11-26T06:13:50.302Z",
+            "label": "11/26 14:13",
+            "value": 48,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:33:30.336Z",
+            "label": "11/26 15:33",
             "value": 52,
             "reports": 1
           },
           {
-            "at": "2026-11-26T00:15:22.023Z",
-            "label": "11/26 08:15",
-            "value": 59,
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
+            "value": 55,
             "reports": 1
           }
         ],
@@ -863,7 +2001,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-25T18:11:46.000Z",
-        "endedAt": "2026-11-26T00:15:22.023Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
         "current": 65,
         "peak": 65,
         "history": [
@@ -874,44 +2012,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-25T19:03:42.574Z",
-            "label": "11/26 03:03",
-            "value": 21,
+            "at": "2026-11-25T19:31:53.670Z",
+            "label": "11/26 03:31",
+            "value": 19,
             "reports": 1
           },
           {
-            "at": "2026-11-25T19:55:39.149Z",
-            "label": "11/26 03:55",
-            "value": 29,
+            "at": "2026-11-25T20:52:01.340Z",
+            "label": "11/26 04:52",
+            "value": 23,
             "reports": 1
           },
           {
-            "at": "2026-11-25T20:47:35.724Z",
-            "label": "11/26 04:47",
-            "value": 36,
+            "at": "2026-11-25T22:12:09.010Z",
+            "label": "11/26 06:12",
+            "value": 28,
             "reports": 1
           },
           {
-            "at": "2026-11-25T21:39:32.298Z",
-            "label": "11/26 05:39",
-            "value": 43,
+            "at": "2026-11-25T23:32:16.680Z",
+            "label": "11/26 07:32",
+            "value": 32,
             "reports": 1
           },
           {
-            "at": "2026-11-25T22:31:28.873Z",
-            "label": "11/26 06:31",
-            "value": 50,
+            "at": "2026-11-26T00:52:24.350Z",
+            "label": "11/26 08:52",
+            "value": 37,
             "reports": 1
           },
           {
-            "at": "2026-11-25T23:23:25.448Z",
-            "label": "11/26 07:23",
-            "value": 58,
+            "at": "2026-11-26T02:12:32.020Z",
+            "label": "11/26 10:12",
+            "value": 42,
             "reports": 1
           },
           {
-            "at": "2026-11-26T00:15:22.023Z",
-            "label": "11/26 08:15",
+            "at": "2026-11-26T03:32:39.690Z",
+            "label": "11/26 11:32",
+            "value": 46,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:52:47.360Z",
+            "label": "11/26 12:52",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:12:55.030Z",
+            "label": "11/26 14:12",
+            "value": 56,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:33:02.700Z",
+            "label": "11/26 15:33",
+            "value": 60,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
             "value": 65,
             "reports": 1
           }
@@ -1028,7 +2190,7 @@
       ],
       "heat": {
         "startedAt": "2026-11-25T17:31:32.000Z",
-        "endedAt": "2026-11-26T00:15:22.023Z",
+        "endedAt": "2026-11-26T08:53:10.370Z",
         "current": 59,
         "peak": 59,
         "history": [
@@ -1039,44 +2201,68 @@
             "reports": 0
           },
           {
-            "at": "2026-11-25T18:29:13.431Z",
-            "label": "11/26 02:29",
-            "value": 20,
+            "at": "2026-11-25T18:55:19.124Z",
+            "label": "11/26 02:55",
+            "value": 18,
             "reports": 1
           },
           {
-            "at": "2026-11-25T19:26:54.863Z",
-            "label": "11/26 03:26",
-            "value": 27,
+            "at": "2026-11-25T20:19:06.249Z",
+            "label": "11/26 04:19",
+            "value": 22,
             "reports": 1
           },
           {
-            "at": "2026-11-25T20:24:36.295Z",
-            "label": "11/26 04:24",
-            "value": 33,
+            "at": "2026-11-25T21:42:53.373Z",
+            "label": "11/26 05:42",
+            "value": 26,
             "reports": 1
           },
           {
-            "at": "2026-11-25T21:22:17.727Z",
-            "label": "11/26 05:22",
-            "value": 40,
+            "at": "2026-11-25T23:06:40.498Z",
+            "label": "11/26 07:06",
+            "value": 30,
             "reports": 1
           },
           {
-            "at": "2026-11-25T22:19:59.159Z",
-            "label": "11/26 06:19",
-            "value": 46,
+            "at": "2026-11-26T00:30:27.622Z",
+            "label": "11/26 08:30",
+            "value": 35,
             "reports": 1
           },
           {
-            "at": "2026-11-25T23:17:40.591Z",
-            "label": "11/26 07:17",
-            "value": 53,
+            "at": "2026-11-26T01:54:14.747Z",
+            "label": "11/26 09:54",
+            "value": 39,
             "reports": 1
           },
           {
-            "at": "2026-11-26T00:15:22.023Z",
-            "label": "11/26 08:15",
+            "at": "2026-11-26T03:18:01.871Z",
+            "label": "11/26 11:18",
+            "value": 43,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T04:41:48.996Z",
+            "label": "11/26 12:41",
+            "value": 47,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T06:05:36.120Z",
+            "label": "11/26 14:05",
+            "value": 51,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T07:29:23.245Z",
+            "label": "11/26 15:29",
+            "value": 55,
+            "reports": 1
+          },
+          {
+            "at": "2026-11-26T08:53:10.370Z",
+            "label": "11/26 16:53",
             "value": 59,
             "reports": 1
           }
